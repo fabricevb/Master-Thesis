@@ -1,0 +1,1616 @@
+% cite JDemetra+
+% find more about survey
+    % sampling
+    % questions (no change?)
+    %
+
+
+% ----------- Cover Master Thesis Faculty of Sciences ---------------
+% This document should be compiled with pdflatex.  If you want to use
+% latex to compile to dvi/ps, you have to convert the images to (e)ps
+%                           -- December 2012
+% -------------------------------------------------------------------
+\RequirePackage{fix-cm}
+\documentclass[12pt,a4paper,oneside]{book}
+
+% ------------------------- Load packages ---------------------------
+% You can eventually add these while you load other packages
+% in case you want to integrate the titlepage with the rest of your thesis
+% -------------------------------------------------------------------
+\usepackage{graphicx,xcolor,textpos}
+\usepackage{helvet}
+\usepackage{multirow}
+
+\usepackage[colorlinks=true ,citecolor=blue, linkcolor=black]{hyperref}
+\usepackage{csquotes}
+\usepackage[comma]{natbib}
+%\bibliographystyle{apa}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\usepackage{lipsum}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1}
+
+%\setcounter{tocdepth}{2}% Allow only \chapter in ToC
+
+\usepackage[Sonny]{fncychap} % chapter style
+
+\usepackage{listings} % cite R code
+
+\usepackage{graphicx} 
+\usepackage{fancyvrb} 
+
+\lstset{% setup listings 
+        language=R,% set programming language 
+        basicstyle=\small,% basic font style 
+        keywordstyle=\bfseries,% keyword style 
+        commentstyle=\ttfamily\itshape,% comment style 
+        numbers=left,% display line numbers on the left side 
+        numberstyle=\scriptsize,% use small line numbers 
+        numbersep=10pt,% space between line numbers and code 
+        tabsize=3,% sizes of tabs 
+        showstringspaces=false,% do not replace spaces in strings by a certain character 
+        captionpos=b,% positioning of the caption below 
+        breaklines=true,% automatic line breaking 
+        escapeinside={(*}{*)},% escaping to LaTeX 
+        fancyvrb=true,% verbatim code is typset by listings 
+        extendedchars=false,% prohibit extended chars (chars of codes 128--255) 
+        literate={"}{{\texttt{"}}}1{<-}{{$\leftarrow$}}1{<<-}{{$\twoheadleftarrow$}}1 
+        {~}{{$\sim$}}1{<=}{{$\le$}}1{>=}{{$\ge$}}1{!=}{{$\neq$}}1{^}{{$^\wedge$}}1,% item to replace, text, length of chars 
+        alsoletter={.<-},% becomes a letter 
+        deletekeywords={c}% remove keywords 
+}
+
+    % sections \FloatBarrier
+
+
+\let\subsectionautorefname\sectionautorefname % if \autoref subsection -> section
+\let\subsubsectionautorefname\sectionautorefname % if \autoref subsubsection -> section
+
+% ------------------------ Page settings -----------------------------
+% If you change these, the cover layout will also change.  In that
+% case you have to adjust the latter manually.
+% --------------------------------------------------------------------
+
+\topmargin -10mm
+\textwidth 160truemm
+\textheight 240truemm
+\oddsidemargin 0mm
+\evensidemargin 0mm
+
+% ---------------------- textpos settings ----------------------------
+% Some additional settings for the cover
+% --------------------------------------------------------------------
+
+\definecolor{green}{RGB}{172,196,0}
+\definecolor{bluetitle}{RGB}{29,141,176}
+\definecolor{blueaff}{RGB}{0,0,128}
+\definecolor{blueline}{RGB}{82,189,236}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+\begin{document}
+
+% ----------------------- Cover --------------------------------------
+% Please fill in:
+% - The title and subtitle (if applicable)
+%         to include a formula in the title or subtitle
+%         use  \form{$...$}
+% - Your name
+% - Your (co)supervisor, mentor (if applicable)
+% - Your master
+% - The academic year
+% --------------------------------------------------------------------
+\thispagestyle{empty}
+\newcommand{\form}[1]{\scalebox{1.087}{\boldmath{#1}}}
+\sffamily
+%
+\begin{textblock}{191}(-24,-11)
+\colorbox{green}{\hspace{139mm}\ \parbox[c][18truemm]{52mm}{\textcolor{white}{FACULTY OF SCIENCE}}}
+\end{textblock}
+%
+\begin{textblock}{70}(-18,-19)
+\textblockcolour{}
+\includegraphics*[height=19.8truemm]{LogoKULeuven}
+\end{textblock}
+%
+\begin{textblock}{160}(-6,63)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushleft
+\fontsize{40}{42}\selectfont \textcolor{bluetitle}{The Variability of the Belgian Business Survey Indicator and its Predictive Power}\\[1.5mm]
+%\fontsize{20}{22}\selectfont Subtitle \form{$S=\pi r^2$\textsl{(optional)}}
+\end{textblock}
+%
+%\begin{textblock}{82}(50,103)
+%\textblockcolour{}
+%\vspace{-\parskip}
+%\flushleft
+%\fbox{\parbox{79mm}{The background can be left blank or you can insert an image (maximum height 10 cm, width variable, mind author’s rights…). NO logos (you can use the logos inside the manuscript, but not on front or back cover). \textit{Delete this textbox.}}}
+%\end{textblock}
+%
+\begin{textblock}{160}(8,153)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+\fontsize{14}{16}\selectfont \textbf{Fabrice VAN BOECKEL}
+\end{textblock}
+%
+\begin{textblock}{70}(-6,191)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushleft
+Co-Supervisor: Prof. G. Molenberghs\\[-2pt]
+\textcolor{blueaff}{KU Leuven}\\[5pt]
+Co-Supervisor: L. Van Belle\\[-2pt]
+\textcolor{blueaff}{National Bank of Belgium}\\[5pt]
+%Mentor: \textsl{(optional)}\\[-2pt]
+%\textcolor{blueaff}{Affiliation \textsl{(optional)}}\\
+\end{textblock}
+%
+\begin{textblock}{160}(8,191)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+Thesis presented in\\[4.5pt]
+fulfillment of the requirements\\[4.5pt]
+for the degree of Master of Science\\[4.5pt]
+in Statistics\\
+\end{textblock}
+%
+\begin{textblock}{160}(8,232)
+\textblockcolour{}
+\vspace{-\parskip}
+\flushright
+Academic year 2018-2019
+\end{textblock}
+%
+\begin{textblock}{191}(-24,248)
+{\color{blueline}\rule{550pt}{5.5pt}}
+\end{textblock}
+%
+\vfill
+\newpage
+
+% In case you want to integrate the TeX-file for the titlepage
+% with the rest of your thesis, you cab continue below
+% ------------------------- First pages ---------------------------
+% For table of contents, acknowlegments, ...
+% -----------------------------------------------------------------
+\rmfamily
+\setcounter{page}{0}
+\pagenumbering{roman}
+\pagestyle{plain}
+
+
+
+\chapter*{Acknowledgement}
+Thanks my family and friends - the National Bank of Belgium Laurent, ... - \\
+
+\textit{"Statistics are the heart of democracy." }\\
+- Simeon Strunsky
+
+\chapter*{Abstract}
+
+This Master Thesis explores the Variance of the Belgian Business Survey. 
+Several finding concerning the nature and properties of the Variance are found as the bounds and relation with the mean.
+
+In a second part, the predictive power of the variance is examined and it's found that ...
+
+It's also the first time that à Markov Switching model is used in this context. It was showed that ...
+
+
+\section*{Keywords}
+Business Surveys - 
+Business Barometer -
+Survey Variance - 
+Markov Switching - 
+
+\tableofcontents
+
+\newpage
+% -------------------------- Proper text --------------------------
+% Introduction, chapters, ...
+% -----------------------------------------------------------------
+\setcounter{page}{0}
+\pagenumbering{arabic}
+
+
+\chapter{Introduction}
+
+\cite{lemasson_enquete_2017}
+
+Business Survey Indicator / Business Barometer / Business Confidence Indicator
+
+A widespread method to predict the evolution of National Economies is the survey-based Business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
+
+- Talk about tradition of improving BSB
+
+This Thesis is included in the continuity of a long tradition of papers proposing improvement and ways to add value to the Business Barometer (.......) will propose ways to add information to the Belgian Business Barometer, that could also be applied to others
+
+Since 1968, the National Bank of Belgium publishes each month the national 
+
+
+
+%%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is surveybased indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo Business Survey Christian Seiler Christian Heumann)
+
+
+
+
+\chapter{The Business Survey Indicator}
+
+This first chapter is a more general description of the Belgian Business Survey Indicator, that we will also call the Business Barometer.
+We will present it different calculations, the weighting that are applied and 
+
+explain the two types of weightings
+
+\section{History}
+
+This year, the Belgian Business Survey is celebrating its 65th anniversary. \\
+In 1954, the National Bank of Belgium started this indicator, that since then 
+
+- 1972 results are synthesised in an indicator; the business survey indicator
+
+- Wall Street Journal article "Euroland Discovers A Surprise Indicator: Belgian Confidence" \citep{rhoads_euroland_1999}
+
+- predictive power for the EU \cite{vanhaelen_belgian_2000}
+
+changes in 2009 see later (\autoref{section:Objective and Methodology})
+
+\subsection{A Business Cycle}
+
+
+
+
+\section{Sampling Method}
+
+
+
+
+\section{Objective and Methodology}
+\label{section:Objective and Methodology}
+\sectionautorefname{Objective and Methodology}
+In 2009 was published "The National Bank of Belgium’s new business survey indicator" 
+(\citeauthor{de_greef_national_2009})
+
+
+
+- only take a limited amount of questions into account, the most relevant ones (3-4 questions) \\
+- inclusion of the services in the global indicator \\
+- lighten smoothing method
+
+
+
+\subsubsection{Quality Criterion}
+- high correlation with GDP \\
+- fluctuation that's mostly explained by the conjuncture\\
+- predictive power for the futur months 
+
+
+
+
+
+more information can be found in \cite{de_greef_national_2009}
+
+
+
+...
+
+\section{Questionnaire}
+.... questionnaire can be found in appendix %\ref{}
+
+
+Questions taken into account for RS975:
+....
+
+originally question Q18, 27, 32 and 33, for simplicity numbered here as 1, 2, 3 and 4.
+
+
+
+
+\section{Calculation of the Indicator}
+
+This section ...
+
+The calculation of the indicator for a specific question at a specific time can be written as follow;
+
+\subsection{Unweighted Indicator}
+
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^n x_i}{n}
+\end{equation} 
+where 
+
+$x_i$ is the answer of the respondent i and can each take value -1, 0 and 1 
+
+$n$ is the total of respondents
+
+Since x can only take three different values, we can decompose it into 
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^n x_{+i} + \sum_{i=1}^n x_{Ni} + \sum_{i=1}^n x_{-i}}{n}
+\end{equation} 
+
+where 
+$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive(+), neutral (N) and negative (-) answers of the respondent i \\
+$n$ is the total of respondents\\
+
+We know that $\sum_{i=1}^n x_{Ni} = 0$ so we can write
+
+\begin{equation}
+    E(X) = \frac{\sum_{i=1}^n x_{+i}}{n}  + \frac{\sum_{i=1}^n x_{-i}}{n}
+\end{equation} 
+
+${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=1}^n x_{-i}}/{n}$ is the negative proportion of negative answer so for simplicity we write it 
+
+\begin{equation}
+    E(X) = \pi_+ - \pi_-
+\end{equation}
+where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
+
+
+\subsection{Weighted Indicator}
+
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^n \left(\omega_i p_i x_i \right)}{\sum_{i=1}^n \omega_i p_i}
+\end{equation} 
+where \\
+$x_i$ is the answer of the respondent i and can each take value -1, 0 and 1 \\
+$p_i$ is the weight of the globalisation of the company i \\
+$\omega_i$ is the weight of the company i
+
+\subsubsection{Globalisation procedure}
+
+
+
+\subsubsection{Weighting procedure}
+
+
+
+
+
+
+\subsection{Properties}
+
+E(X) has -1 as lower bound and 1 as upper bound
+
+
+
+
+
+
+\subsection{Take different questions into account}
+
+The previous calculations where specific to each question. The published indicators are usually taking different survey questions into account. For example the Industry indicator that we will be interested in is composed of four questions that have all the same weight:
+
+\begin{equation}
+    \mbox{Industry Business Indicator}\ = \frac{E(X_{Q18}) + E(X_{Q27}) + E(X_{Q32}) + E(X_{Q33})}{4}
+\end{equation}
+
+where 
+$E(X_{Q18})$, $E(X_{Q27})$, $E(X_{Q32})$ and $E(X_{Q33})$ are the different averages for question 18, 27, 32 and 33 (can be weighted or unweighted)
+
+
+\chapter{Variance of the Indicator}
+
+The variance is, with the mean, one of the first tool for Statisticians to study a certain variable.
+
+In the context of the Business Survey, the variance haven't been used much
+
+\subsubsection{difference sampling error and variance}
+
+here variance is a measure of the "dispersion" of the answers.
+
+\subsubsection{difference between nominal and continuous variable variance}
+
+\section{Presentation}
+
+The (Cochran, 1977) 
+
+
+\begin{equation}
+    E(X) = \pi_+ - \pi_-
+\end{equation}
+ 
+As done for the Indicator, two different variance will be take into account here, the weighted and the unweighted variance of the indicator.
+
+
+\subsection{Variance of the Unweighted Indicator}
+
+The main variance
+
+cite
+
+\begin{eqnarray}
+     Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] \nonumber \\ \nonumber \\
+     &=& E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
+     &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2  \nonumber \\ \nonumber \\
+     &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 
+\end{eqnarray}
+
+Since $\left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) = 0$ ,
+$x_{+i}^2 = x_{+i}$, $x_{-i}^2 = x_{-i}$
+and $E(X) = \pi_+ - \pi_-$
+
+
+We then have several different ways to write the previous equation;
+\begin{eqnarray}
+Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var1} \\
+	&=& \pi_+ + \pi_- - E ( X )^2 \label{var2} \\
+	&=& 1 - \pi_n - E(X)^2 \label{var3}
+\end{eqnarray}
+
+Equation \ref{var1} is interesting 
+Equation \ref{var2}
+
+
+
+
+
+
+\subsection{Variance of the Weighted Indicator}
+
+\begin{equation}
+Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
+\end{equation}
+
+
+\begin{eqnarray}
+Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
+	&=& \pi_+ + \pi_- - E ( X )^2 \\
+	&=& 1 - \pi_0 - E(X)^2
+\end{eqnarray}
+
+
+\subsection{Properties}
+
+\subsubsection{Property 1: The variance of X is bounded between -1 and 1}
+
+\subsubsection{Property 2: The variance = A5 and E(X)}
+
+
+\subsubsection{Property 3: .....}
+
+
+\section{Take different questions into account}
+
+
+
+
+
+\section{Discussion regarding the 'true variance'}
+
+There is another way to calculate the variance that have been ignored for, that is calculating the variance for each lowest group of globalisation, and then combine those calculated variances.
+
+
+Interestingly, it have been calculated for several Questions of the business barometer, and it is approximately 10 times smaller than the variance based on all the answer a ones.
+
+
+
+The reasons why it will not be used here
+- losing information
+- weight of globalisation taken into account in the weighted variance
+
+
+
+
+\chapter{Indicator of the Evolution of Individual Responses}
+
+Best name for this indicator
+\begin{enumerate}
+    \item Z indicator
+    \item Indicator of the Changes in individual answers between t-1 and t
+\end{enumerate}
+
+
+brainstorm
+ evolution
+ volatility
+ change \\
+ 
+ An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number. \\
+
+\begin{center}
+\begin{tabular}{|c|r|r|r|}
+Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
+$\pi_{--}$    &  -1  & -1    & 0 \\
+$\pi_{-0}$    &  -1  & 0     & 1 \\
+$\pi_{-+}$    &  -1  & 1     & 2 \\
+$\pi_{0-}$    &  0   & -1    & -1 \\
+$\pi_{00}$    &  0   & 0     & 0 \\
+$\pi_{0+}$    &  0   & 1     & 1 \\
+$\pi_{+-}$    &  1   & -1    & -2 \\
+$\pi_{+0}$    &  1   & 0     & -1 \\
+$\pi_{++}$    &  1   & 1     & 0 \\
+\end{tabular}  
+\end{center}
+
+\begin{center}
+\begin{tabular}{r | r | c c c | }
+\multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+\multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+		&    \textbf{-} & $\pi_{--}$	& $\pi_{-0}$	& $\pi_{-+}$ \\ 
+$t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
+		&    \textbf{+} & $\pi_{+-}$	& $\pi_{+0}$	& $\pi_{++}$ \\ \cline{2-5}
+\end{tabular}    
+\end{center}
+
+
+
+The Indicator of the evolution of the individual responses can be obtained by
+
+\begin{equation}
+E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
+\end{equation}
+
+where \\
+$\pi$ is the proportion/probability of respondent answering (-,0,+) at $t-1$ and (-,0,+) at time $t$ 
+\\
+
+\begin{equation}
+E(Z) =  
+\begin{tabular}{r|r r r}
+    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-} 	& 0		& +1	& +2	\\
+    \textbf{0} 	& -1	& 0		& +1	\\
+    \textbf{+} 	& -2	& -1	& 0		\\
+\end{tabular}
+\end{equation}
+
+
+
+
+
+
+
+
+\begin{equation}
+\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
+\end{equation}
+
+
+
+
+
+\chapter{Variance of the Evolution of Individual Responses / Volatility of Responses} \label{Chapter:Z}
+
+That we will also call the \textbf{volatility of the indicator}, in the sens that the variance of the evolution of the indicator account for the dispersion of the difference in answers over a two times period.
+
+In this case, the highers variance of Z, will be obtained when half of the companies went from a negative answer to a positive answer and the other half did the opposite and changed from a positive answer at t-1 to a negative answer at t. 
+
+waza see Chapter \ref{Chapter:Z}
+
+The idea is that this variance of Z is complementary to the estimation of Z since they have two very interesting but different interpretations.
+Further interpretation will be 
+
+\section{Presentation}
+
+
+
+\begin{equation}
+\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1 
+\end{equation}
+
+\begin{eqnarray}
+Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
+&&	- (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2 \nonumber \\
+&=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2 \nonumber \\
+&=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
+\end{eqnarray}
+
+\begin{eqnarray*}
+Var(Z) &=& 
+\left(\begin{tabular}{r|r r r}
+    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-} 	& 0		& +1	& +4	\\
+    \textbf{0} 	& +1	& 0		& +1	\\
+    \textbf{+} 	& +4	& +1	& 0		\\
+\end{tabular} \right)
+- \left(
+\begin{tabular}{r|r r r}
+    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-} 	& 0		& +1	& +2	\\
+    \textbf{0} 	& -1	& 0		& +1	\\
+    \textbf{+} 	& -2	& -1	& 0		\\
+\end{tabular}
+\right)^2  \\
+&=& \left( \begin{tabular}{r|r r r}
+    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-} 	& 0		& +1	& +4	\\
+    \textbf{0} 	& +1	& 0		& +1	\\
+    \textbf{+} 	& +4	& +1	& 0		\\
+\end{tabular} \right)
+- \left(E(Z)\right)^2 	\\
+&=& 1 +  \left(\begin{tabular}{r|r r r}
+    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-} 	& -1	& 0		& +3	\\
+    \textbf{0} 	& 0		& -1	& 0	\\
+    \textbf{+} 	& +3	& 0		& -1		\\
+\end{tabular} \right)
+ - \left(E(Z)\right)^2	\\
+\end{eqnarray*}
+
+
+
+\subsection{Properties}
+
+\subsubsection{Property 1: the variance of Z is bounded between -1 and 1}
+
+
+\subsubsection{Property 2: }
+
+
+
+
+
+\chapter{Seasonal Effects}
+The National Bank, before publishing the Business Survey Indicator, applies a X11 seasonal correction
+
+The literature about seasonal effects is very rich and variate
+
+- NBB developed JDemetra+ and has since been recommended by the ECB and Eurostat for all NSI in Europe.
+
+
+at the same time the department of Business Survey uses as a X11 adapted method to correct for seasonality because don't want to correct for previous publications.
+
+
+Methodology \\
+- test for seasonality \\
+- run the analysis without corrections \\
+- apply corrections and see if more accurate \\
+
+
+\section{JDemetra+}
+
+\section{X11}
+
+\subsection{Seasonal correction of the Indicator}
+
+\subsection{Seasonal correction of the Variance}
+
+\subsection{Seasonal correction of the Indicator of the Evolution}
+
+\subsection{Seasonal correction of the Variance of Z}
+
+\subsection{Seasonal correction of the Proportions}
+
+\section{Limitations}
+
+explain the issue of seasonal correction on "future data" 
+
+
+
+\chapter{Non-Response, Dropout and Attrition}
+
+Aside of Seasonal effect, there are three main biases that could arise in the context of the BSI; non-reponse, dropout and attrition
+
+- cor(time, var) = 0.5
+
+
+\section{Non-Response}
+
+\section{Dropout}
+
+\section{Attrition}
+
+
+
+
+\chapter{Exploratory Analysis}
+
+
+\section{Small vs Large}
+
+
+\section{By Sector}
+
+
+\section{New vs Old participants}
+
+
+\section{Correlation between questions}
+ 
+
+\section{Correlation with GDP}
+
+Belgian industry claims 25\% of the labour force in Belgium and have been shown as been the best indicator to predict cite{Alain Quartier and Isabelle}
+
+
+\subsection{lag testing}
+
+
+
+\chapter{Linear (Auto-Regressive) Models}
+
+
+
+lag
+
+\section{Models}
+
+\subsection{Month vs Quarterly data}
+
+Linear Model
+\begin{eqnarray}
+    GDP_{t} = \mu + \sum^n_{i = 1} \sum^q_{j = 0}
+       \beta_{1,j} X_{i,t-j} + \epsilon_t 
+\end{eqnarray}
+
+Auto-Regressive model
+\begin{eqnarray}
+    GDP_{t} = \mu + \sum^p_{j = 1} \phi_j GDP_{t-j} +         \sum^n_{i = 1} \sum^q_{j = 0}
+       \beta_{1,j} X_{i,t-j} + \epsilon_t 
+\end{eqnarray}
+
+where   \\
+\begin{tabular}{l l}
+    $GDP_t$     & GDP growth over the last semester \\
+    $X_{i,t}$   & monthly predictors \\
+    $\mu$       & constant \\
+    $\phi_j$    & auto-regressive coefficients \\
+    $\beta_{i,j}$ & regression coefficients \\
+\end{tabular}
+
+
+
+\section{Evaluation}
+
+\subsection{$\mathbf{R^2}$}
+
+\subsection{Mean Square Prediction Error}
+
+
+\subsection{blabla see slides}
+
+
+\chapter{Markov Switching Models}
+
+
+
+\subsubsection{Small Introduction + why are we using it}
+
+Since the pioneer work by \cite{hamilton_new_1989}, Markov Switching models have been largely used to model business cycles.
+
+
+Markov Switching models have been very popular since \cite{hamilton_new_1989} to model business cycles and predict Turning points (see \cite{duprey_how_2017}, ...).
+
+Able to predict the 2008 financial crisis if used MS-VAR model \cite{gadea_rivas_failure_2015}
+
+
+
+
+\section{Model(s) Specification}
+
+\subsection{Notation}
+
+\begin{tabular}{l l}
+    $S_t = \{0, 1\}$&   states        \\
+    $N = 2$         &   number of states (2) \\
+    $T = 372 $            & 	number of observations  \\
+    $x_{t=1\dots T}$ & (hidden) state at time t \\
+    $y_{t=1\dots T}$ 	& Change of the Industrial production indices at time t \\
+    $p_{i=1\dots n,j=1\dots n}$ & probability of transition from state $i$ to state $j$ \\
+    $F(y|\theta )$	&  probability distribution of an observation, parametrized on $\theta$ \\
+%    $\theta_{i=1\dots N}$ & emission parameter for an observation associated with state $i$     \\
+\end{tabular}
+
+
+
+\subsection{Model}
+
+\subsubsection{Model}
+
+
+
+%%%\begin{equation*}
+%%%    \varepsilon \sim iid(0,1)
+%%%\end{equation*}
+
+\begin{equation}
+y_{t} =   
+  \begin{cases}
+    \mu_{0} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 0 \\
+    \mu_{1} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 1
+  \end{cases}
+\end{equation}
+
+where $\epsilon \text{ is } N(0,\sigma_s)$
+
+
+\begin{tabular}{l l}
+    $\mu_{s} = \beta_0 = c_s = \alpha_s $    & regime-specific mean    \\
+    $\beta_{s} = \phi_s$ & regime-specific  auto-regressive parameter \\
+    $\sigma_{s}$ & regime-specific variance    \\
+
+\end{tabular}
+
+\subsubsection{Transition equation/probability}
+
+\begin{equation}
+    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
+\left[ \begin{tabular}{c c}
+            $1 - p_{t}$	& $p_{t}$ \\ 
+            $q_{t}$	& $1 - q_{t}$ \\ 
+\end{tabular} \right]
+\end{equation}
+
+We have then,
+
+$P(S_t = 1 \mid S_{t-1} = 1) = p_t$   \\ 
+$P(S_t = 0 \mid S_{t-1} = 1) = 1 - p_t$ \\
+$P(S_t = 0 \mid S_{t-1} = 0) = q_t$   \\
+$P(S_t = 1 \mid S_{t-1} = 0) = 1- q_t$ \\
+
+or 
+
+\begin{equation}
+    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
+\left[ \begin{tabular}{c c}
+            $1 - p_{t}$	& $p_{t} ..............$ \\ 
+            $q_{t} ............$	& $1 - q_{t}$ \\ 
+\end{tabular} \right]
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+\chapter{Conclusion}
+
+
+\chapter{Discussion}
+
+\section*{Recruitment procedure and panel data}
+not real sampling theory
+
+
+
+\section*{Z that takes more periods into account}
+
+
+
+\section*{Limitations}
+
+
+\section*{Further Research}
+
+Combine mixed models and Markov Chain \citep{de_haan-rietdijk_use_2017} 
+
+
+%\nocite{*}
+\bibliographystyle{apa}
+\bibliography{references.bib}
+
+\newpage
+
+\chapter*{Appendix}
+
+
+
+
+\chapter*{List of Abbreviations}
+
+\begin{appendix}
+  \listoffigures
+  \listoftables
+\end{appendix}
+
+\chapter*{Code}
+\section*{R code for Seasonal Adjustment}
+
+ \begin{lstlisting}
+
+# install.packages("devtools")
+
+# Install rjdemetra and rjdqa
+# devtools::install_github("jdemetraéé/rjdemetra", args = "--no-multiarch")
+# devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
+
+
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.2/")
+
+#import libraries
+library(rJava)
+library(RJDemetra)
+library(tidyverse)
+library(readxl)
+library(xlsx)
+# library(rjdqa)
+library(ggplot2)
+library(ggfortify)
+library(zoo)
+library(xts)
+
+
+# Import all datasets
+MI018 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+                 sheet="MI018")
+
+MI027 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+                   sheet="MI027")
+
+MI032 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+                   sheet="MI032")
+
+MI033 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+                   sheet="MI033")
+
+
+# question 18 has to be interpreted the other way
+MI018$Solde_UW <- - MI018$Solde_UW
+
+# save period in a vector
+period <- MI018$period
+
+
+# create time series 
+MI018_ts = ts(MI018, start=c(1988,1), frequency=12)
+MI027_ts = ts(MI027, start=c(1988,1), frequency=12)
+MI032_ts = ts(MI032, start=c(1988,1), frequency=12)
+MI033_ts = ts(MI033, start=c(1988,1), frequency=12)
+
+
+  #################################
+  # apply seasonal correction X13 #
+  #################################
+
+# for E(X)
+MI018_E <- MI018_ts[, "Solde_UW"]
+MI027_E <- MI027_ts[, "Solde_UW"]
+MI032_E <- MI032_ts[, "Solde_UW"]
+MI033_E <- MI033_ts[, "Solde_UW"]
+
+
+MI018_E_model <- x13_def(MI018_E) # X-13ARIMA method
+MI027_E_model <- x13_def(MI027_E) # X-13ARIMA method
+MI032_E_model <- x13_def(MI032_E) # X-13ARIMA method
+MI033_E_model <- x13_def(MI033_E) # X-13ARIMA method
+
+MI018_E_model_ts <- tramoseats_def(MI018_E) # X-13ARIMA method
+MI027_E_model_ts <- tramoseats_def(MI027_E) # X-13ARIMA method
+MI032_E_model_ts <- tramoseats_def(MI032_E) # X-13ARIMA method
+MI033_E_model_ts <- tramoseats_def(MI033_E) # X-13ARIMA method
+
+# for Var(X)
+MI018_Var <- MI018_ts[, "var_UW"]
+MI027_Var <- MI027_ts[, "var_UW"]
+MI032_Var <- MI032_ts[, "var_UW"]
+MI033_Var <- MI033_ts[, "var_UW"]
+
+MI018_Var_model <- x13_def(MI018_Var) # X-13ARIMA method
+MI027_Var_model <- x13_def(MI027_Var) # X-13ARIMA method
+MI032_Var_model <- x13_def(MI032_Var) # X-13ARIMA method
+MI033_Var_model <- x13_def(MI033_Var) # X-13ARIMA method
+
+# for E(Z)
+MI018_EZ <- MI018_ts[, "Solde_Z_UW"]
+MI027_EZ <- MI027_ts[, "Solde_Z_UW"]
+MI032_EZ <- MI032_ts[, "Solde_Z_UW"]
+MI033_EZ <- MI033_ts[, "Solde_Z_UW"]
+
+MI018_EZ_model <- x13_def(MI018_EZ) # X-13ARIMA method
+MI027_EZ_model <- x13_def(MI027_EZ) # X-13ARIMA method
+MI032_EZ_model <- x13_def(MI032_EZ) # X-13ARIMA method
+MI033_EZ_model <- x13_def(MI033_EZ) # X-13ARIMA method
+
+# for Var(Z)
+MI018_VarZ <- MI018_ts[, "Var_Z_UW"]
+MI027_VarZ <- MI027_ts[, "Var_Z_UW"]
+MI032_VarZ <- MI032_ts[, "Var_Z_UW"]
+MI033_VarZ <- MI033_ts[, "Var_Z_UW"]
+
+MI018_VarZ_model <- x13_def(MI018_VarZ) # X-13ARIMA method
+MI027_VarZ_model <- x13_def(MI027_VarZ) # X-13ARIMA method
+MI032_VarZ_model <- x13_def(MI032_VarZ) # X-13ARIMA method
+MI033_VarZ_model <- x13_def(MI033_VarZ) # X-13ARIMA method
+
+
+# for Ap_p A0_p An_p
+
+# positive answers
+MI018_Ap_p <- MI018_ts[, "Ap_p"]
+MI027_Ap_p <- MI027_ts[, "Ap_p"]
+MI032_Ap_p <- MI032_ts[, "Ap_p"]
+MI033_Ap_p <- MI033_ts[, "Ap_p"]
+
+MI018_Ap_model <- x13_def(MI018_Ap_p) # X-13ARIMA method
+MI027_Ap_model <- x13_def(MI027_Ap_p) # X-13ARIMA method
+MI032_Ap_model <- x13_def(MI032_Ap_p) # X-13ARIMA method
+MI033_Ap_model <- x13_def(MI033_Ap_p) # X-13ARIMA method
+
+# neutral answers
+MI018_A0_p <- MI018_ts[, "A0_p"]
+MI027_A0_p <- MI027_ts[, "A0_p"]
+MI032_A0_p <- MI032_ts[, "A0_p"]
+MI033_A0_p <- MI033_ts[, "A0_p"]
+
+MI018_A0_model <- x13_def(MI018_A0_p) # X-13ARIMA method
+MI027_A0_model <- x13_def(MI027_A0_p) # X-13ARIMA method
+MI032_A0_model <- x13_def(MI032_A0_p) # X-13ARIMA method
+MI033_A0_model <- x13_def(MI033_A0_p) # X-13ARIMA method
+
+# negative answers
+MI018_An_p <- MI018_ts[, "An_p"]
+MI027_An_p <- MI027_ts[, "An_p"]
+MI032_An_p <- MI032_ts[, "An_p"]
+MI033_An_p <- MI033_ts[, "An_p"]
+
+MI018_An_model <- x13_def(MI018_An_p) # X-13ARIMA method
+MI027_An_model <- x13_def(MI027_An_p) # X-13ARIMA method
+MI032_An_model <- x13_def(MI032_An_p) # X-13ARIMA method
+MI033_An_model <- x13_def(MI033_An_p) # X-13ARIMA method
+
+
+#############
+# correction so that proportions add up to 1
+
+
+################################
+# plot seasonal corrected data #
+################################
+
+par(mfrow=c(2,2))
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_E_model, type_chart = "sa-trend")
+plot(MI027_E_model, type_chart = "sa-trend")
+plot(MI032_E_model, type_chart = "sa-trend")
+plot(MI033_E_model, type_chart = "sa-trend")
+
+plot(MI018_E_model_ts, type_chart = "sa-trend")
+plot(MI027_E_model_ts, type_chart = "sa-trend")
+plot(MI032_E_model_ts, type_chart = "sa-trend")
+plot(MI033_E_model_ts, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_E_model$decomposition)
+plot(MI027_E_model$decomposition)
+plot(MI032_E_model$decomposition)
+plot(MI033_E_model$decomposition)
+
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_Var_model, type_chart = "sa-trend")
+plot(MI027_Var_model, type_chart = "sa-trend")
+plot(MI032_Var_model, type_chart = "sa-trend")
+plot(MI033_Var_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_Var_model$decomposition)
+plot(MI027_Var_model$decomposition)
+plot(MI032_Var_model$decomposition)
+plot(MI033_Var_model$decomposition)
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_EZ_model, type_chart = "sa-trend")
+plot(MI027_EZ_model, type_chart = "sa-trend")
+plot(MI032_EZ_model, type_chart = "sa-trend")
+plot(MI033_EZ_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_EZ_model$decomposition)
+plot(MI027_EZ_model$decomposition)
+plot(MI032_EZ_model$decomposition)
+plot(MI033_EZ_model$decomposition)
+
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_VarZ_model, type_chart = "sa-trend")
+plot(MI027_VarZ_model, type_chart = "sa-trend")
+plot(MI032_VarZ_model, type_chart = "sa-trend")
+plot(MI033_VarZ_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_EZ_model$decomposition)
+plot(MI027_EZ_model$decomposition)
+plot(MI032_EZ_model$decomposition)
+plot(MI033_EZ_model$decomposition)
+
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_Ap_model, type_chart = "sa-trend")
+plot(MI027_Ap_model, type_chart = "sa-trend")
+plot(MI032_Ap_model, type_chart = "sa-trend")
+plot(MI033_Ap_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_Ap_model$decomposition)
+plot(MI027_Ap_model$decomposition)
+plot(MI032_Ap_model$decomposition)
+plot(MI033_Ap_model$decomposition)
+
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_A0_model, type_chart = "sa-trend")
+plot(MI027_A0_model, type_chart = "sa-trend")
+plot(MI032_A0_model, type_chart = "sa-trend")
+plot(MI033_A0_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_A0_model$decomposition)
+plot(MI027_A0_model$decomposition)
+plot(MI032_A0_model$decomposition)
+plot(MI033_A0_model$decomposition)
+
+
+# Basic plot with the original series, the trend and the SA series
+plot(MI018_An_model, type_chart = "sa-trend")
+plot(MI027_An_model, type_chart = "sa-trend")
+plot(MI032_An_model, type_chart = "sa-trend")
+plot(MI033_An_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(MI018_An_model$decomposition)
+plot(MI027_An_model$decomposition)
+plot(MI032_An_model$decomposition)
+plot(MI033_An_model$decomposition)
+
+
+par(mfrow=c(1,1))
+
+##########
+# OUTPUT #
+##########
+
+
+# create one table with all four questions
+##########################################
+
+# with seasonal correction
+
+# Question 1
+E_1 <- MI018_E_model$final$series[, "sa"]
+Var_1 <- MI018_Var_model$final$series[, "sa"]
+Z_1 <- MI018_EZ_model$final$series[, "sa"]
+Z_1 <- append(Z_1, NA, 0)
+Var_Z_1 <- MI018_VarZ_model$final$series[, "sa"]
+Var_Z_1 <- append(Var_Z_1, NA, 0)
+Ap_1 <- MI018_Ap_model$final$series[, "sa"]
+A0_1 <- MI018_A0_model$final$series[, "sa"]
+An_1 <- MI018_An_model$final$series[, "sa"]
+Z_pp_1 <- MI018$Z_pp_p
+Z_p0_1 <- MI018$Z_p0_p
+Z_pn_1 <- MI018$Z_pn_p
+Z_0p_1 <- MI018$Z_0p_p
+Z_00_1 <- MI018$Z_00_p
+Z_0n_1 <- MI018$Z_0n_p
+Z_np_1 <- MI018$Z_np_p
+Z_n0_1 <- MI018$Z_n0_p
+Z_nn_1 <- MI018$Z_nn_p
+
+
+# Question 2
+E_2 <- MI027_E_model$final$series[, "sa"]
+Var_2 <- MI027_Var_model$final$series[, "sa"]
+Z_2 <- MI027_EZ_model$final$series[, "sa"]
+Z_2 <- append(Z_2, NA, 0)
+Var_Z_2 <- MI027_VarZ_model$final$series[, "sa"]
+Var_Z_2 <- append(Var_Z_2, NA, 0)
+Ap_2 <- MI027_Ap_model$final$series[, "sa"]
+A0_2 <- MI027_A0_model$final$series[, "sa"]
+An_2 <- MI027_An_model$final$series[, "sa"]
+Z_pp_2 <- MI027$Z_pp_p
+Z_p0_2 <- MI027$Z_p0_p
+Z_pn_2 <- MI027$Z_pn_p
+Z_0p_2 <- MI027$Z_0p_p
+Z_00_2 <- MI027$Z_00_p
+Z_0n_2 <- MI027$Z_0n_p
+Z_np_2 <- MI027$Z_np_p
+Z_n0_2 <- MI027$Z_n0_p
+Z_nn_2 <- MI027$Z_nn_p  
+
+# Question 3
+E_3 <- MI032_E_model$final$series[, "sa"]
+Var_3 <- MI032_Var_model$final$series[, "sa"]
+Z_3 <- MI032_EZ_model$final$series[, "sa"]
+Z_3 <- append(Z_3, NA, 0)
+Var_Z_3 <- MI032_VarZ_model$final$series[, "sa"]
+Var_Z_3 <- append(Var_Z_3, NA, 0)
+Ap_3 <- MI032_Ap_model$final$series[, "sa"]
+A0_3 <- MI032_A0_model$final$series[, "sa"]
+An_3 <- MI032_An_model$final$series[, "sa"]
+Z_pp_3 <- MI032$Z_pp_p
+Z_p0_3 <- MI032$Z_p0_p
+Z_pn_3 <- MI032$Z_pn_p
+Z_0p_3 <- MI032$Z_0p_p
+Z_00_3 <- MI032$Z_00_p
+Z_0n_3 <- MI032$Z_0n_p
+Z_np_3 <- MI032$Z_np_p
+Z_n0_3 <- MI032$Z_n0_p
+Z_nn_3 <- MI032$Z_nn_p    
+
+
+# Question 4
+E_4 <- MI033_E_model$final$series[, "sa"]
+Var_4 <- MI033_Var_model$final$series[, "sa"]
+Z_4 <- MI033_EZ_model$final$series[, "sa"]
+Z_4 <- append(Z_4, NA, 0)
+Var_Z_4 <- MI033_VarZ_model$final$series[, "sa"]
+Var_Z_4 <- append(Var_Z_4, NA, 0)
+Ap_4 <- MI033_Ap_model$final$series[, "sa"]
+A0_4 <- MI033_A0_model$final$series[, "sa"]
+An_4 <- MI033_An_model$final$series[, "sa"]
+Z_pp_4 <- MI033$Z_pp_p
+Z_p0_4 <- MI033$Z_p0_p
+Z_pn_4 <- MI033$Z_pn_p
+Z_0p_4 <- MI033$Z_0p_p
+Z_00_4 <- MI033$Z_00_p
+Z_0n_4 <- MI033$Z_0n_p
+Z_np_4 <- MI033$Z_np_p
+Z_n0_4 <- MI033$Z_n0_p
+Z_nn_4 <- MI033$Z_nn_p    
+
+data_sa <- data.frame(period, 
+    E_1, Var_1, Z_1, Var_Z_1, Ap_1, A0_1, An_1, Z_pp_1, Z_p0_1, Z_pn_1, Z_0p_1, Z_00_1, Z_0n_1, Z_np_1, Z_n0_1, Z_nn_1,
+    E_2, Var_2, Z_2, Var_Z_2, Ap_2, A0_2, An_2, Z_pp_2, Z_p0_2, Z_pn_2, Z_0p_2, Z_00_2, Z_0n_2, Z_np_2, Z_n0_2, Z_nn_2,
+    E_3, Var_3, Z_3, Var_Z_3, Ap_3, A0_3, An_3, Z_pp_3, Z_p0_3, Z_pn_3, Z_0p_3, Z_00_3, Z_0n_3, Z_np_3, Z_n0_3, Z_nn_3,
+    E_4, Var_4, Z_4, Var_Z_4, Ap_4, A0_4, An_4, Z_pp_4, Z_p0_4, Z_pn_4, Z_0p_4, Z_00_4, Z_0n_4, Z_np_4, Z_n0_4, Z_nn_4)
+
+write.xlsx(data_sa, "C:/Users/Fabrice/Documents/KULeuven/RS975_sa.xlsx") 
+
+
+
+# without seasonal correction
+# Question 1
+E_1 <- MI018$Solde_UW
+Var_1 <- MI018$var_UW
+Z_1 <- MI018$Solde_Z_UW
+Var_Z_1 <- MI018$Var_Z_UW
+Ap_1 <- MI018$Ap_p
+A0_1 <- MI018$A0_p
+An_1 <- MI018$An_p
+Z_pp_1 <- MI018$Z_pp_p
+Z_p0_1 <- MI018$Z_p0_p
+Z_pn_1 <- MI018$Z_pn_p
+Z_0p_1 <- MI018$Z_0p_p
+Z_00_1 <- MI018$Z_00_p
+Z_0n_1 <- MI018$Z_0n_p
+Z_np_1 <- MI018$Z_np_p
+Z_n0_1 <- MI018$Z_n0_p
+Z_nn_1 <- MI018$Z_nn_p
+
+
+# Question 2
+E_2 <- MI027$Solde_UW
+Var_2 <- MI027$var_UW
+Z_2 <- MI027$Solde_Z_UW
+Var_Z_2 <- MI027$Var_Z_UW
+Ap_2 <- MI027$Ap_p
+A0_2 <- MI027$A0_p
+An_2 <- MI027$An_p
+Z_pp_2 <- MI027$Z_pp_p
+Z_p0_2 <- MI027$Z_p0_p
+Z_pn_2 <- MI027$Z_pn_p
+Z_0p_2 <- MI027$Z_0p_p
+Z_00_2 <- MI027$Z_00_p
+Z_0n_2 <- MI027$Z_0n_p
+Z_np_2 <- MI027$Z_np_p
+Z_n0_2 <- MI027$Z_n0_p
+Z_nn_2 <- MI027$Z_nn_p  
+
+# Question 3
+E_3 <- MI032$Solde_UW
+Var_3 <- MI032$var_UW
+Z_3 <- MI032$Solde_Z_UW
+Var_Z_3 <- MI032$Var_Z_UW
+Ap_3 <- MI032$Ap_p
+A0_3 <- MI032$A0_p
+An_3 <- MI032$An_p
+Z_pp_3 <- MI032$Z_pp_p
+Z_p0_3 <- MI032$Z_p0_p
+Z_pn_3 <- MI032$Z_pn_p
+Z_0p_3 <- MI032$Z_0p_p
+Z_00_3 <- MI032$Z_00_p
+Z_0n_3 <- MI032$Z_0n_p
+Z_np_3 <- MI032$Z_np_p
+Z_n0_3 <- MI032$Z_n0_p
+Z_nn_3 <- MI032$Z_nn_p    
+
+
+# Question 4
+E_4 <- MI033$Solde_UW
+Var_4 <- MI033$var_UW
+Z_4 <- MI033$Solde_Z_UW
+Var_Z_4 <- MI033$Var_Z_UW
+Ap_4 <- MI033$Ap_p
+A0_4 <- MI033$A0_p
+An_4 <- MI033$An_p
+Z_pp_4 <- MI033$Z_pp_p
+Z_p0_4 <- MI033$Z_p0_p
+Z_pn_4 <- MI033$Z_pn_p
+Z_0p_4 <- MI033$Z_0p_p
+Z_00_4 <- MI033$Z_00_p
+Z_0n_4 <- MI033$Z_0n_p
+Z_np_4 <- MI033$Z_np_p
+Z_n0_4 <- MI033$Z_n0_p
+Z_nn_4 <- MI033$Z_nn_p    
+
+data <- data.frame(period, 
+                   E_1, Var_1, Z_1, Var_Z_1, Ap_1, A0_1, An_1, Z_pp_1, Z_p0_1, Z_pn_1, Z_0p_1, Z_00_1, Z_0n_1, Z_np_1, Z_n0_1, Z_nn_1,
+                   E_2, Var_2, Z_2, Var_Z_2, Ap_2, A0_2, An_2, Z_pp_2, Z_p0_2, Z_pn_2, Z_0p_2, Z_00_2, Z_0n_2, Z_np_2, Z_n0_2, Z_nn_2,
+                   E_3, Var_3, Z_3, Var_Z_3, Ap_3, A0_3, An_3, Z_pp_3, Z_p0_3, Z_pn_3, Z_0p_3, Z_00_3, Z_0n_3, Z_np_3, Z_n0_3, Z_nn_3,
+                   E_4, Var_4, Z_4, Var_Z_4, Ap_4, A0_4, An_4, Z_pp_4, Z_p0_4, Z_pn_4, Z_0p_4, Z_00_4, Z_0n_4, Z_np_4, Z_n0_4, Z_nn_4)
+
+write.xlsx(data, "C:/Users/Fabrice/Documents/KULeuven/RS975.xlsx") 
+
+
+\end{lstlisting}
+
+\newpage
+\section*{R code for Linear (Auto-Regressive) Models}
+
+\begin{lstlisting}
+#################
+# Linear Models #
+#################
+
+
+
+# load libraries
+library(readxl)
+library(shiny)
+library(ggplot2)
+library(GGally)
+
+# upload data
+MI027 <- read_excel("//vsrres010.nbb.local/ressources_p/TRICONAT/EMOS/Stage2018/Datasets/RS_975.xlsx",
+                 sheet="MI027")
+
+
+###############
+# Correlation #
+###############
+
+cor(MI027)
+
+ggpairs(MI027[, 1:5])
+
+ggpairs(MI027[, 2:4], lower=list(continuous="smooth", params=c(colour="blue")),
+        diag=list(continuous="bar"))
+
+library("GGally")
+data(iris)
+ggpairs(iris[, 1:4], lower=list(continuous="smooth", params=c(colour="blue")),
+        diag=list(continuous="bar", params=c(colour="blue")), 
+        upper=list(params=list(corSize=6)), axisLabels='show')
+#################
+# Linear Models #
+#################
+attach(MI027)
+
+#model <- lm(GDP ~ solde_UW, MI027)
+
+model <- lm(Value ~ ind, MI027)
+
+model <- lm(Value ~ ind + var + ind_Z + var_Z, MI027)
+
+summary(model)
+
+plot(Solde_UW, var_UW)
+
+
+################################
+# Linear Autoregressive Models #
+################################
+
+
+\end{lstlisting}
+
+
+
+
+
+
+
+
+\newpage
+\section*{R code for Markov Switching Models}
+
+
+\begin{lstlisting}
+    
+
+library(depmixS4)
+library(tidyverse)
+library(readxl)
+library(ggplot2)
+library(gridExtra)
+library(reshape2)
+library(tseries)
+library(MSwM)
+# TEST
+
+data<-read_excel("//vsrres010.nbb.local/ressources_p/TRICONAT/EMOS/Stage2018/Datasets/RS_975.xlsx",
+                 sheet="MI027")
+
+mod <- depmix(list(Solde_UW ~ 1,Increase ~ 1), data = data, nstates = 2,
+          family = list(gaussian(), multinomial("identity")),
+          transition = ~ scale(var_UW), instart = runif(2))
+fm <- fit(mod, verbose = FALSE, emc=em.control(rand=FALSE))
+hmm1 <- fm
+summary(fm)
+
+
+
+
+
+
+
+attach(data)
+
+library(MSwM)
+help(MSwM)
+
+#Model with only intercept
+mod<-lm(Solde_UW ~ 1)
+
+#Fit regime-switching model
+mod.mswm=msmFit(mod, k=2, sw=c(T,T), p=0)
+plot(mod.mswm)
+
+
+
+
+
+
+
+
+
+
+
+#####################################################
+
+
+
+
+
+
+
+olsBI <- lm(Solde_UW ~ 1)
+
+summary(olsBI)
+
+# MS for Value Stocks (k is number of regimes, 6 is for means of 5 variables
+# + 1 for volatility)
+msBI = msmFit(olsBI, k = 2, sw = rep(TRUE, 3), p=1)
+
+# p= 1 is the number of AR coefficients that the MS model has to have.
+
+msBIAR = msmFit(olsBI, k = 2, sw = rep(TRUE, 6), p=1)
+
+summary(msBI)
+
+
+par(mar=c(3,3,3,3))
+plotProb(msBI, which=1)
+
+plotProb(msBI, which=2)
+
+
+par(mar=c(3,3,3,3))
+plotDiag(msBI, regime=1, which=1)
+
+plotDiag(msBI, regime=1, which=2)
+
+plotDiag(msBI, regime=1, which=3)
+
+
+
+
+
+
+#####################################################
+
+
+
+
+
+
+
+olsBI <- lm(Solde_UW_diff ~ 1)
+
+summary(olsBI)
+
+# MS for Value Stocks (k is number of regimes, 6 is for means of 5 variables
+# + 1 for volatility)
+msBI = msmFit(olsBI, k = 2, sw = rep(TRUE, 2))
+
+summary(msBI)
+
+dates <- seq(as.Date("01/01/1988", format = "%d/%m/%Y"),
+             by = "months", length = length(372))
+
+plot(dates, msBI)
+
+plot(MSM.fitted)
+
+msBI.msm
+
+
+par(mar=c(3,3,3,3))
+plotProb(msBI, which=1)
+
+plotProb(msBI, which=2)
+
+
+par(mar=c(3,3,3,3))
+plotDiag(msBI, regime=1, which=1)
+
+plotDiag(msBI, regime=1, which=2)
+
+plotDiag(msBI, regime=1, which=3)
+
+\end{lstlisting}
+
+
+\newpage
+
+
+
+
+\newpage
+% ----------------------- Back cover ------------------------------
+% Please fill in:
+% - Department
+% - Department's address
+% - Telephone number and fax number
+% -----------------------------------------------------------------
+\thispagestyle{empty}
+\sffamily
+%
+\begin{textblock}{191}(113,-11)
+{\color{blueline}\rule{160pt}{5.5pt}}
+\end{textblock}
+%
+\begin{textblock}{191}(168,-11)
+{\color{blueline}\rule{5.5pt}{59pt}}
+\end{textblock}
+%
+\begin{textblock}{183}(-24,-11)
+\textblockcolour{}
+\flushright
+\fontsize{7}{7.5}\selectfont
+\textbf{AFDELING}\\
+Straat nr bus 0000\\
+3000 LEUVEN, BELGI\"{E}\\
+tel. + 32 16 00 00 00\\
+fax + 32 16 00 00 00\\
+www.kuleuven.be\\
+\end{textblock}
+%
+\begin{textblock}{191}(154,-7)
+\textblockcolour{}
+\includegraphics*[height=16.5truemm]{sedes}
+\end{textblock}
+%
+\begin{textblock}{191}(-20,235)
+{\color{bluetitle}\rule{544pt}{55pt}}
+\end{textblock}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
