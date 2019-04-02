@@ -44,6 +44,8 @@
 \usepackage{import}
 \usepackage{subfiles}
 
+\usepackage{float}
+
 \lstset{% setup listings 
         language=R,% set programming language 
         basicstyle=\small,% basic font style 
@@ -922,12 +924,6 @@ State Space Model
 \bibliographystyle{apa}
 \bibliography{references}
  
-\newpage
-
-\chapter*{Appendix}
-
-
-
 
 \chapter*{List of Abbreviations}
   BSI Business Survey Indicator \\
@@ -937,6 +933,24 @@ State Space Model
   \listoffigures
   \listoftables
 \end{appendix}
+
+
+\chapter*{Appendix}
+
+
+
+\newpage
+\begin{figure}[H]
+    \centering
+%    \captionsetup{justification=centering}
+    \includegraphics[scale=0.75]{Images/IndustryN.pdf}
+    \caption{WAZAZAZAZA}
+    \label{B_pred}
+\end{figure}
+
+
+
+
 
 \chapter*{Code}
 \section*{R code for Seasonal Adjustment}
