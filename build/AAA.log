@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  2 APR 2019 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  2 APR 2019 15:34
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -629,6 +629,14 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks24
 \verbatim@in@stream=\read3
 ))
+("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count291
+\float@exts=\toks25
+\float@box=\box51
+\@float@everytoks=\toks26
+\@floatcapt=\box52
+)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
@@ -640,44 +648,47 @@ File: lstlang3.sty 2019/02/27 1.8b listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\lstFV@gtempboxa=\box51
+\lstFV@gtempboxa=\box53
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
-(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `AAA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-
-("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
+\scratchcounter=\count292
 \scratchdimen=\dimen170
-\scratchbox=\box52
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count294
+\scratchbox=\box54
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen171
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -691,8 +702,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring ON on input line 96.
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring ON on input line 98.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -700,45 +711,45 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count297
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 96.
-LaTeX Info: Redefining \pageref on input line 96.
-LaTeX Info: Redefining \nameref on input line 96.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 \@outlinefile=\write4
 \openout4 = `AAA.out'.
 
-\c@lstlisting=\count298
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 110.
+\c@lstlisting=\count299
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 112.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 113--114
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 115--116
 [][][][][][][] 
  []
 
-<LogoKULeuven.png, id=239, 401.5pt x 143.53625pt>
-File: LogoKULeuven.png Graphic file (type png)
-<use LogoKULeuven.png>
-Package pdftex.def Info: LogoKULeuven.png  used on input line 118.
+<Images/LogoKULeuven.png, id=231, 401.5pt x 143.53625pt>
+File: Images/LogoKULeuven.png Graphic file (type png)
+<use Images/LogoKULeuven.png>
+Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 120.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 173--174
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 175--176
 [][][] 
  []
 
 [1
 
-{C:/Users/Fabrice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./LogoKUL
-euven.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+{C:/Users/Fabrice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Images/
+LogoKULeuven.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
@@ -757,59 +768,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
 Chapter 1.
 
 Package natbib Warning: Citation `lemasson_enquete_2017' on page 1 undefined on
- input line 225.
+ input line 227.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.244 \chapter
+l.246 \chapter
               {The Business Survey Indicator} [1
 
 ]
 Chapter 2.
 
 Package natbib Warning: Citation `rhoads_euroland_1999' on page 2 undefined on 
-input line 258.
+input line 263.
 
 
 Package natbib Warning: Citation `vanhaelen_belgian_2000' on page 2 undefined o
-n input line 260.
+n input line 265.
 
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 2 undefined o
-n input line 278.
+n input line 280.
 
 [2
 
 ]
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 3 undefined o
-n input line 297.
+n input line 301.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--340
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
 
  []
 
 [3] [4]
 Chapter 3.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 417.
+
 [5
 
 ] [6]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--513
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 549--552
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
 
  []
 
@@ -822,7 +832,7 @@ Chapter 5.
 ] [10]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--664
+Underfull \hbox (badness 10000) in paragraph at lines 642--646
 
  []
 
@@ -832,15 +842,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 660--664
 Chapter 7.
 
 Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
-on input line 699.
+on input line 681.
 
 
 Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
-on page 12 undefined on input line 703.
+on page 12 undefined on input line 685.
 
 
 Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
-on input line 705.
+on input line 687.
 
 [12
 
@@ -848,52 +858,71 @@ on input line 705.
 Chapter 8.
 [13
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{table.8.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.733 \chapter
+              {Linear (Auto-Regressive) Models}]
 Chapter 9.
+
+Overfull \hbox (53.46611pt too wide) in paragraph at lines 790--833
+ [][] 
+ []
+
 [14
 
-] [15]
+] [15pdfTeX warning (ext4): destination with the same identifier (name{table.9.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.852 \chapter
+              {Markov Switching Models}] [16]
 Chapter 10.
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 16 undefined on in
-put line 804.
+Package natbib Warning: Citation `hamilton_new_1989' on page 17 undefined on in
+put line 858.
 
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 16 undefined on in
-put line 807.
+Package natbib Warning: Citation `hamilton_new_1989' on page 17 undefined on in
+put line 861.
 
 
-Package natbib Warning: Citation `duprey_how_2017' on page 16 undefined on inpu
-t line 807.
+Package natbib Warning: Citation `duprey_how_2017' on page 17 undefined on inpu
+t line 861.
 
 
-Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 16 undefine
-d on input line 809.
+Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 17 undefine
+d on input line 863.
 
-[16
+[17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 871--875
+Underfull \hbox (badness 10000) in paragraph at lines 925--929
 
  []
 
-[17]
+[18]
 Chapter 11.
-[18
+[19
 
 ]
 Chapter 12.
 
-Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 19 undefin
-ed on input line 916.
+Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 20 undefin
+ed on input line 970.
+
+
+Package natbib Warning: Citation `hlavac_stargazer:_2018' undefined on input li
+ne 977.
 
 No file AAA.bbl.
-[19
-
-] [20
+[20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 934--936
+Underfull \hbox (badness 10000) in paragraph at lines 983--985
 
  []
 
@@ -915,38 +944,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 934--936
 ] [24
 
 ]
+
+pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<Images/IndustryN.pdf, id=483, 597.55246pt x 845.19763pt>
+File: Images/IndustryN.pdf Graphic file (type pdf)
+<use Images/IndustryN.pdf>
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 1015.
+(pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1024 \chapter
+               *{Code} <./Images/IndustryN.pdf>] [26
+
+]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 977.
-<sedes.png, id=487, 402.5439pt x 683.6742pt>
-File: sedes.png Graphic file (type png)
-<use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 987.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1059.
+<Images/sedes.png, id=521, 402.5439pt x 683.6742pt>
+File: Images/sedes.png Graphic file (type png)
+<use Images/sedes.png>
+Package pdftex.def Info: Images/sedes.png  used on input line 1069.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 991--992
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 1073--1074
 [][][] 
  []
 
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1008.
-[25 <./sedes.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1008.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1090.
+[27 <./Images/sedes.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1090.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1008.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1008.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1090.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1090.
 
 Package rerunfilecheck Info: File `AAA.out' has not changed.
-(rerunfilecheck)             Checksum: 682D188CB97D6FB711495591324D13C1;4118.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1008.
+(rerunfilecheck)             Checksum: DC63E90741B1C8236A87D440FDFBFF26;4041.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1090.
  ) 
 Here is how much of TeX's memory you used:
- 20103 strings out of 492946
- 346085 string characters out of 3135521
- 699640 words of memory out of 3000000
- 23693 multiletter control sequences out of 15000+200000
+ 20170 strings out of 492946
+ 347020 string characters out of 3135521
+ 704958 words of memory out of 3000000
+ 23749 multiletter control sequences out of 15000+200000
  550285 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,12n,63p,936b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -965,9 +1015,9 @@ s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
 hvr8a.pfb>
 Output written on C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.pdf
- (30 pages, 348319 bytes).
+ (32 pages, 375199 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 134 named destinations out of 1000 (max. 500000)
- 495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
