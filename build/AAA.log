@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  2 APR 2019 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  2 APR 2019 13:27
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -644,7 +644,8 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (AAA.aux)
+
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
 \openout1 = `AAA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
@@ -705,14 +706,16 @@ LaTeX Info: Redefining \ref on input line 96.
 LaTeX Info: Redefining \pageref on input line 96.
 LaTeX Info: Redefining \nameref on input line 96.
 
-(AAA.out) (AAA.out)
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 \@outlinefile=\write4
 \openout4 = `AAA.out'.
 
 \c@lstlisting=\count298
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 110.
 
- ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 Overfull \hbox (26.96355pt too wide) in paragraph at lines 113--114
@@ -743,14 +746,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
 ] [2
 
-] (AAA.toc [3
+] (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.toc [3
 
 ])
 \tf@toc=\write5
 \openout5 = `AAA.toc'.
 
- [4]
+
+[4]
 Chapter 1.
+
+Package natbib Warning: Citation `lemasson_enquete_2017' on page 1 undefined on
+ input line 225.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -760,9 +768,26 @@ l.244 \chapter
 
 ]
 Chapter 2.
+
+Package natbib Warning: Citation `rhoads_euroland_1999' on page 2 undefined on 
+input line 258.
+
+
+Package natbib Warning: Citation `vanhaelen_belgian_2000' on page 2 undefined o
+n input line 260.
+
+
+Package natbib Warning: Citation `de_greef_national_2009' on page 2 undefined o
+n input line 278.
+
 [2
 
 ]
+
+Package natbib Warning: Citation `de_greef_national_2009' on page 3 undefined o
+n input line 297.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 337--340
 
  []
@@ -805,6 +830,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 660--664
 
 ]
 Chapter 7.
+
+Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
+on input line 699.
+
+
+Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
+on page 12 undefined on input line 703.
+
+
+Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
+on input line 705.
+
 [12
 
 ]
@@ -817,6 +854,22 @@ Chapter 9.
 
 ] [15]
 Chapter 10.
+
+Package natbib Warning: Citation `hamilton_new_1989' on page 16 undefined on in
+put line 804.
+
+
+Package natbib Warning: Citation `hamilton_new_1989' on page 16 undefined on in
+put line 807.
+
+
+Package natbib Warning: Citation `duprey_how_2017' on page 16 undefined on inpu
+t line 807.
+
+
+Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 16 undefine
+d on input line 809.
+
 [16
 
 ]
@@ -830,37 +883,41 @@ Chapter 11.
 
 ]
 Chapter 12.
-(AAA.bbl [19
 
-]) [20
+Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 19 undefin
+ed on input line 916.
 
-] [21
+No file AAA.bbl.
+[19
+
+] [20
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 934--936
 
  []
 
-[22
+[21
 
-] (AAA.lof)
+] (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lof)
 \tf@lof=\write6
 \openout6 = `AAA.lof'.
 
- [23
+ [22
 
-] (AAA.lot)
+]
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lot)
 \tf@lot=\write7
 \openout7 = `AAA.lot'.
 
- [24
+ [23
 
-] [25
+] [24
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 977.
-<sedes.png, id=527, 402.5439pt x 683.6742pt>
+<sedes.png, id=487, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 987.
@@ -870,10 +927,14 @@ Overfull \hbox (18.18004pt too wide) in paragraph at lines 991--992
 [][][] 
  []
 
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1008.
-[26 <./sedes.png>]
+[25 <./sedes.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1008.
- (AAA.aux)
+
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1008.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1008.
 
@@ -882,10 +943,10 @@ Package rerunfilecheck Info: File `AAA.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1008.
  ) 
 Here is how much of TeX's memory you used:
- 20147 strings out of 492946
- 346802 string characters out of 3135521
+ 20103 strings out of 492946
+ 346085 string characters out of 3135521
  699640 words of memory out of 3000000
- 23725 multiletter control sequences out of 15000+200000
+ 23693 multiletter control sequences out of 15000+200000
  550285 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,12n,63p,936b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -903,9 +964,10 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
 s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
 hvr8a.pfb>
-Output written on AAA.pdf (31 pages, 363836 bytes).
+Output written on C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.pdf
+ (30 pages, 348319 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
- 145 named destinations out of 1000 (max. 500000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
  495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
