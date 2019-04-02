@@ -1,0 +1,62 @@
+
+\begin{lstlisting}
+
+
+
+
+
+# load libraries
+library(xlsx)
+library(ggplot2)
+library(GGally)
+library(ggfortify)
+library(readxl)
+library(shiny)
+library(KFAS)
+library(stargazer)
+
+# upload data
+data <- read_excel("Y:/TRICONAT/EMOS/Stage2018/Datasets/RS975_sa.xlsx",
+                   sheet="Sheet1")
+
+
+# summary table
+
+
+stargazer(data[, 1:5])
+
+stargazer(data[1:4,], summary=FALSE, rownames=FALSE)
+
+
+
+Q1_est <- c("period", "E_1", "Var_1", "Z_1", "Var_Z_1")
+Q2_est <- c("period", "E_2", "Var_2", "Z_2", "Var_Z_2")
+Q3_est <- c("period", "E_3", "Var_3", "Z_3", "Var_Z_3")
+Q4_est <- c("period", "E_4", "Var_4", "Z_4", "Var_Z_4")
+
+ggpairs(data[Q1_est])
+ggpairs(data[Q2_est])
+ggpairs(data[Q3_est])
+ggpairs(data[Q4_est])
+
+ggpairs(data[c("GDP", "indicator", "E_1", "E_2", "E_3", "E_4")])
+
+plot(data$GDP, type="o", col = "black")
+lines(data$indicator,  col = "blue")
+
+
+
+
+
+
+
+
+
+
+
+
+correlation.matrix <- cor(data[,c("E_1","E_2","E_3","E_4")])
+stargazer(correlation.matrix, title="Correlation Matrix")
+
+
+\end{lstlisting}
