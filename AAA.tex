@@ -402,7 +402,7 @@ $E(X_{Q18})$, $E(X_{Q27})$, $E(X_{Q32})$ and $E(X_{Q33})$ are the different aver
 
 The variance is, with the mean, one of the first tool for Statisticians to study a certain variable.
 
-In the context of the Business Survey, the variance haven't been used much
+In the context of the Business Survey, the variance haven't been used much.
 
 \subsubsection{difference sampling error and variance}
 
@@ -410,16 +410,8 @@ here variance is a measure of the "dispersion" of the answers.
 
 \subsubsection{difference between nominal and continuous variable variance}
 
-\section{Presentation}
 
-The (Cochran, 1977) 
-
-
-\begin{equation}
-    E(X) = \pi_+ - \pi_-
-\end{equation}
- 
-As done for the Indicator, two different variance will be take into account here, the weighted and the unweighted variance of the indicator.
+As done for the Indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
 
 
 \subsection{Variance of the Unweighted Indicator}
@@ -432,7 +424,7 @@ cite
      Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] \nonumber \\ \nonumber \\
      &=& E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
      &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2  \nonumber \\ \nonumber \\
-     &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 
+     &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var1}
 \end{eqnarray}
 
 Since $\left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) = 0$ ,
@@ -442,20 +434,21 @@ and $E(X) = \pi_+ - \pi_-$
 
 We then have several different ways to write the previous equation;
 \begin{eqnarray}
-Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var1} \\
+Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \nonumber \\
 	&=& \pi_+ + \pi_- - E ( X )^2 \label{var2} \\
 	&=& 1 - \pi_n - E(X)^2 \label{var3}
 \end{eqnarray}
 
 Equation \ref{var1} is interesting 
+
 Equation \ref{var2}
 
+Equation \ref{var3}
 
 
 
 
-
-\subsection{Variance of the Weighted Indicator}
+\subsection{Generalization for Weighted Indicators / Variance of the Weighted Indicator}
 
 \begin{equation}
 Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
@@ -503,34 +496,17 @@ The reasons why it will not be used here
 
 \chapter{Indicator of the Evolution of Individual Responses}
 
-Best name for this indicator
-\begin{enumerate}
-    \item Z indicator
-    \item Indicator of the Changes in individual answers between t-1 and t
-\end{enumerate}
+\subsubsection{Why this new indicator}
+
+Also Called Z indicator
+
+Can be better understood as the indicator of the Changes in individual answers between t-1 and t
 
 
-brainstorm
- evolution
- volatility
- change \\
- 
+
  An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number. \\
 
-\begin{center}
-\begin{tabular}{|c|r|r|r|}
-Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
-$\pi_{--}$    &  -1  & -1    & 0 \\
-$\pi_{-0}$    &  -1  & 0     & 1 \\
-$\pi_{-+}$    &  -1  & 1     & 2 \\
-$\pi_{0-}$    &  0   & -1    & -1 \\
-$\pi_{00}$    &  0   & 0     & 0 \\
-$\pi_{0+}$    &  0   & 1     & 1 \\
-$\pi_{+-}$    &  1   & -1    & -2 \\
-$\pi_{+0}$    &  1   & 0     & -1 \\
-$\pi_{++}$    &  1   & 1     & 0 \\
-\end{tabular}  
-\end{center}
+\subsubsection{Explain the new indicator}
 
 \begin{center}
 \begin{tabular}{r | r | c c c | }
@@ -568,12 +544,14 @@ E(Z) =
 
 
 
-
+\subsubsection{The Indicator of the Evolution of Individual Responses}
 
 
 \begin{equation}
 \pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
 \end{equation}
+
+
 
 
 
@@ -715,6 +693,9 @@ limitation: only some periods of
 \chapter{Exploratory Analysis}
 
 
+\section{Data At hand}
+
+
 \section{Small vs Large}
 
 
@@ -722,6 +703,22 @@ limitation: only some periods of
 
 
 \section{Correlation between questions}
+
+\begin{table}[!htbp] \centering 
+  \caption{Correlation Matrix} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & E\_1 & E\_2 & E\_3 & E\_4 \\ 
+\hline \\[-1.8ex] 
+E\_1 & $1$ & $0.262$ & $0.412$ & $0.416$ \\ 
+E\_2 & $0.262$ & $1$ & $0.939$ & $0.876$ \\ 
+E\_3 & $0.412$ & $0.939$ & $1$ & $0.938$ \\ 
+E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
  
 
 \section{Correlation with GDP}
@@ -743,7 +740,7 @@ lag
 
 \subsection{Month vs Quarterly data}
 
-Error to aggregate everything to quaterly -> lost of information
+Error to aggregate everything to quarterly - lost of information
 
 
 Linear Model
@@ -767,6 +764,8 @@ where   \\
     $\beta_{i,j}$ & regression coefficients \\
 \end{tabular}
 
+
+
 \section{Model}
 
 \begin{table}[ht]
@@ -783,9 +782,63 @@ where   \\
 \end{tabular}
 \end{table}
 
+
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{GDP\_year} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ GDP\_year\_lag1 & 6.114$^{**}$ & 10.866$^{**}$ & 9.624$^{***}$ \\ 
+  & (3.045) & (4.504) & (3.604) \\ 
+  & & & \\ 
+ E\_2 & 7.918$^{*}$ & 8.233$^{**}$ & 6.727$^{**}$ \\ 
+  & (4.053) & (4.042) & (3.311) \\ 
+  & & & \\ 
+ E\_2\_lag1 & $-$3.662 & 0.557 & 1.868 \\ 
+  & (5.664) & (6.368) & (5.087) \\ 
+  & & & \\ 
+ E\_2\_lag2 &  & $-$9.541 & $-$7.377 \\ 
+  &  & (6.686) & (5.391) \\ 
+  & & & \\ 
+ Var\_2 &  &  & 15.719$^{**}$ \\ 
+  &  &  & (6.317) \\ 
+  & & & \\ 
+ Var\_2\_lag1 &  &  & 3.540 \\ 
+  &  &  & (7.602) \\ 
+  & & & \\ 
+ Var\_2\_lag2 &  &  & 2.140 \\ 
+  &  &  & (6.105) \\ 
+  & & & \\ 
+ Constant & 4.265$^{***}$ & 4.202$^{***}$ & $-$3.499$^{***}$ \\ 
+  & (0.214) & (0.217) & (0.906) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 123 & 123 & 123 \\ 
+R$^{2}$ & 0.559 & 0.567 & 0.739 \\ 
+Adjusted R$^{2}$ & 0.548 & 0.552 & 0.723 \\ 
+Residual Std. Error & 1.102 (df = 119) & 1.098 (df = 118) & 0.863 (df = 115) \\ 
+F Statistic & 50.298$^{***}$ (df = 3; 119) & 38.561$^{***}$ (df = 4; 118) & 46.434$^{***}$ (df = 7; 115) \\ 
+Akaike Inf. Crit. & \multicolumn{1}{c}{378.961} & \multicolumn{1}{c}{378.856} & \multicolumn{1}{c}{322.629} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+
+
 \section{Evaluation}
 
 \subsection{R-square}
+
+\subsection{AIC and BIC}
 
 \subsection{Mean Square Prediction Error}
 
@@ -793,7 +846,7 @@ where   \\
 
 \subsection{Out-of-Sample performances}
 
-\subsection{blabla see slides}
+
 
 
 \chapter{Markov Switching Models}
@@ -921,6 +974,7 @@ State Space Model
 
 
 %\nocite{*}
+\nocite{hlavac_stargazer:_2018}
 \bibliographystyle{apa}
 \bibliography{references}
  
@@ -937,6 +991,21 @@ State Space Model
 
 \chapter*{Appendix}
 
+\section*{Further Explanation of the Evolution of the responses ...}
+\begin{center}
+\begin{tabular}{|c|r|r|r|}
+Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
+$\pi_{--}$    &  -1  & -1    & 0 \\
+$\pi_{-0}$    &  -1  & 0     & 1 \\
+$\pi_{-+}$    &  -1  & 1     & 2 \\
+$\pi_{0-}$    &  0   & -1    & -1 \\
+$\pi_{00}$    &  0   & 0     & 0 \\
+$\pi_{0+}$    &  0   & 1     & 1 \\
+$\pi_{+-}$    &  1   & -1    & -2 \\
+$\pi_{+0}$    &  1   & 0     & -1 \\
+$\pi_{++}$    &  1   & 1     & 0 \\
+\end{tabular}  
+\end{center}
 
 
 \newpage
