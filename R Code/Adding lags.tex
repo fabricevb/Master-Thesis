@@ -1,0 +1,33 @@
+\begin{lstlisting}
+    
+#########################################
+# Create lags for simplicity in dataset #
+#########################################
+
+attach(data)
+
+library(Hmisc)
+library(xtable)
+
+data$E_1_lag1 <- Lag(E_1, -1)
+data$E_1_lag2 <- Lag(E_1, -2)
+data$E_1_lag3 <- Lag(E_1, -3)
+data$E_1_lag4 <- Lag(E_1, -4)
+
+data$E_2_lag1 <- Lag(E_2, -1)
+data$E_2_lag2 <- Lag(E_2, -2)
+data$E_2_lag3 <- Lag(E_2, -3)
+data$E_2_lag4 <- Lag(E_2, -4)
+
+data$GDP_year_lag1 <- Lag(E_2, -3)
+data$GDP_year_lag2 <- Lag(E_2, -6)
+data$GDP_year_lag3 <- Lag(E_2, -9)
+data$GDP_year_lag4 <- Lag(E_2, -12)
+
+
+model <- lm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1, data = data)
+
+summary(model)
+
+xtable(model)
+\end{lstlisting}
