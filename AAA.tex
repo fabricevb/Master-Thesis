@@ -701,6 +701,9 @@ limitation: only some periods of
 
 \section{By Sector}
 
+\section{Correlations}
+
+There are three different correlations that need to be looked at
 
 \section{Correlation between questions}
 
@@ -721,15 +724,59 @@ E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\
 \end{table}
  
 
-\section{Correlation with GDP / lags}
+\section{Auto-Correlation}
 
-Belgian industry claims 25\% of the labour force in Belgium and have been shown as been the best indicator to predict cite{Alain Quartier and Isabelle}
+
+
+\begin{table}[H] \centering 
+  \caption{Correlation Matrix} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & E\_4 & E\_4\_lag1 & E\_4\_lag2 & E\_4\_lag3 & E\_4\_lag4 \\ 
+\hline \\[-1.8ex] 
+E\_4 & $1$ & $0.966$ & $0.928$ & $0.882$ & $0.829$ \\ 
+E\_4\_lag1 & $0.966$ & $1$ & $0.966$ & $0.928$ & $0.882$ \\ 
+E\_4\_lag2 & $0.928$ & $0.966$ & $1$ & $0.966$ & $0.928$ \\ 
+E\_4\_lag3 & $0.882$ & $0.928$ & $0.966$ & $1$ & $0.966$ \\ 
+E\_4\_lag4 & $0.829$ & $0.882$ & $0.928$ & $0.966$ & $1$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\section{Correlation with GDP}
+
+Belgian industry claims 25\% of the labour force in Belgium and have been shown as been the best indicator to predict the year to year GDP
+cite{Alain Quartier and Isabelle}
+
+\subsection{GDP vs GDP yoy}
+
+\begin{table}[!htbp] \centering 
+  \caption{Correlation Matrix} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & GDP & GDP\_year & E\_1 & E\_2 & E\_3 & E\_4 \\ 
+\hline \\[-1.8ex] 
+GDP & $1$ & $0.628$ & $0.222$ & $0.439$ & $0.473$ & $0.556$ \\ 
+GDP\_year & $0.628$ & $1$ & $0.092$ & $0.729$ & $0.703$ & $0.717$ \\ 
+E\_1 & $0.222$ & $0.092$ & $1$ & $0.266$ & $0.414$ & $0.406$ \\ 
+E\_2 & $0.439$ & $0.729$ & $0.266$ & $1$ & $0.942$ & $0.886$ \\ 
+E\_3 & $0.473$ & $0.703$ & $0.414$ & $0.942$ & $1$ & $0.938$ \\ 
+E\_4 & $0.556$ & $0.717$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
 
 \subsection{Specificity of question 3 and 4, are people correct ?}
 
-\section{Auto-correlation / Correlation over time}
 
-Corr Matrix lags for each questions
+
+
 
 \chapter{Linear (Auto-Regressive) Models}
 
@@ -743,8 +790,11 @@ lag
 
 Error to aggregate everything to quarterly - lost of information
 
+\section{Timing of the Data}
 
-Linear Model
+
+
+\section{Linear Model}
 \begin{eqnarray}
     GDP_{t} = \mu + \sum^n_{i = 1} \sum^q_{j = 0}
        \beta_{1,j} X_{i,t-j} + \epsilon_t 
