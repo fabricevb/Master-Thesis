@@ -3,6 +3,9 @@
 
 
 
+
+
+
 #########################################
 # Create lags for simplicity in dataset #
 #########################################
@@ -23,15 +26,30 @@ data$E_2_lag2 <- Lag(E_2, -2)
 data$E_2_lag3 <- Lag(E_2, -3)
 data$E_2_lag4 <- Lag(E_2, -4)
 
+data$E_3_lag1 <- Lag(E_3, -1)
+data$E_3_lag2 <- Lag(E_3, -2)
+data$E_3_lag3 <- Lag(E_3, -3)
+data$E_3_lag4 <- Lag(E_3, -4)
+
+data$E_4_lag1 <- Lag(E_4, -1)
+data$E_4_lag2 <- Lag(E_4, -2)
+data$E_4_lag3 <- Lag(E_4, -3)
+data$E_4_lag4 <- Lag(E_4, -4)
+
 data$Var_2_lag1 <- Lag(Var_2, -1)
 data$Var_2_lag2 <- Lag(Var_2, -2)
 data$Var_2_lag3 <- Lag(Var_2, -3)
 data$Var_2_lag4 <- Lag(Var_2, -4)
 
-data$GDP_year_lag1 <- Lag(E_2, -3)
-data$GDP_year_lag2 <- Lag(E_2, -6)
-data$GDP_year_lag3 <- Lag(E_2, -9)
-data$GDP_year_lag4 <- Lag(E_2, -12)
+data$GDP_year_lag1 <- Lag(GDP_year, -3)
+data$GDP_year_lag2 <- Lag(GDP_year, -6)
+data$GDP_year_lag3 <- Lag(GDP_year, -9)
+data$GDP_year_lag4 <- Lag(GDP_year, -12)
+
+data$GDP_lag1 <- Lag(GDP, -3)
+data$GDP_lag2 <- Lag(GDP, -6)
+data$GDP_lag3 <- Lag(GDP, -9)
+data$GDP_lag4 <- Lag(GDP, -12)
 
 
 model <- glm(GDP_year ~ E_2 + E_2_lag1 + E_2_lag2, data = data)
@@ -46,10 +64,10 @@ model4 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2 + Var_2 + Var
 
 stargazer(model1, model2, model4, align = TRUE)
 
-autoplot(model4, which = 1:6, ncol = 2, label.size = 3,
-         colour = "steelblue") + theme_bw()
+# autoplot(model4, which = 1:6, ncol = 2, label.size = 3, colour = "steelblue") + theme_bw()
 
 summary(model)
+
 
 
 

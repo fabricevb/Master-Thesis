@@ -46,6 +46,8 @@
 
 \usepackage{float}
 
+\usepackage{dcolumn}
+
 \lstset{% setup listings 
         language=R,% set programming language 
         basicstyle=\small,% basic font style 
@@ -68,6 +70,11 @@
 }
 
     % sections \FloatBarrier
+    
+\newcommand{\ImageWidth}{11cm}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,positioning, arrows.meta}
+
 
 
 \let\subsectionautorefname\sectionautorefname % if \autoref subsection -> section
@@ -782,7 +789,7 @@ E\_4 & $0.556$ & $0.717$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
 
 
 
-lag
+
 
 \section{Models}
 
@@ -793,6 +800,67 @@ Error to aggregate everything to quarterly - lost of information
 \section{Timing of the Data}
 
 
+\begin{tikzpicture}
+% draw horizontal line   
+\draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
+
+% draw vertical lines
+\foreach \x in {1,...,10}
+\draw (\x cm,3pt) -- (\x cm,-3pt);
+
+\foreach \x/\descr in {1.5/t-3, 2.5/t-2, 3.5/t-1,4.5/t,5.5/t+1,6.5/t+2}
+\node[font=\scriptsize, text height=1.75ex,
+text depth=.5ex] at (\x,-.3) {$\descr$};
+
+% colored bar up
+\foreach \x/\perccol in
+{2/75,3/25,4/0}
+\draw[lightgray, line width=4pt] 
+(\x,.3) -- +(1,0);
+
+% braces
+\draw [thick ,decorate,decoration={brace,amplitude=5pt}] (2,0.5)  -- +(3,0) 
+       node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
+%\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
+       node [black,midway,font=\scriptsize, below=4pt] {Publication};
+
+% time of publication
+\node[align=center] at (5.8,1.85) {publication};
+\draw [thick,->] (5.8,1.4) -- (5.8,0.15);
+\node[align=center] at (4.8,-1.3) {publication for time t};
+\draw [thick,->] (4.8,-0.85) -- (4.8,-0.15);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+% draw horizontal line   
+\draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
+
+% draw vertical lines
+\foreach \x in {1,...,10}
+\draw (\x cm,3pt) -- (\x cm,-3pt);
+
+\foreach \x/\descr in {1.5/Jan, 2.5/Feb, 3.5/Mar, 4.5/Apr, 5.5/May, 6.5/Jun, 7.5/Jul, 8.5/Aug,9.5/Sep}
+\node[font=\scriptsize, text height=1.75ex,
+text depth=.5ex] at (\x,-.3) {$\descr$};
+
+% colored bar up
+\foreach \x/\perccol in
+{1/100,2/75,3/25}
+\draw[lightgray, line width=4pt] 
+(\x,.3) -- +(1,0);
+
+% braces
+\draw [thick ,decorate,decoration={brace,amplitude=5pt}] (1,0.5)  -- +(3,0) 
+       node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
+%\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
+%       node [black,midway,font=\scriptsize, below=4pt] {Publication};
+
+% time of publication
+\node[align=center] at (4.8,1.85) {publication};
+\draw [thick,->] (4.8,1.4) -- (4.8,0.15);
+\node[align=center] at (3.8,-1.3) {publication for March};
+\draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
+\end{tikzpicture}
 
 \section{Linear Model}
 \begin{eqnarray}
@@ -834,54 +902,50 @@ where   \\
 \end{table}
 
 
-
 \begin{table}[!htbp] \centering 
   \caption{} 
   \label{} 
-\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-4} 
 \\[-1.8ex] & \multicolumn{3}{c}{GDP\_year} \\ 
-\\[-1.8ex] & (1) & (2) & (3)\\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
- Constant & 4.265$^{***}$ & 4.202$^{***}$ & $-$3.499$^{***}$ \\ 
-  & (0.214) & (0.217) & (0.906) \\ 
+ GDP\_year\_lag1 & 0.733^{***} & 0.775^{***} & 0.636^{***} \\ 
+  & (0.058) & (0.062) & (0.076) \\ 
   & & & \\ 
-  GDP\_year(-3) & 6.114$^{**}$ & 10.866$^{**}$ & 9.624$^{***}$ \\
-  & (3.045) & (4.504) & (3.604) \\ 
+ E\_2 & 15.230^{***} & 14.888^{***} & 13.796^{***} \\ 
+  & (2.950) & (2.926) & (2.917) \\ 
   & & & \\ 
- E & 7.918$^{*}$ & 8.233$^{**}$ & 6.727$^{**}$ \\ 
-  & (4.053) & (4.042) & (3.311) \\ 
+ E\_2\_lag1 & -12.226^{***} & -6.290 & -5.459 \\ 
+  & (3.197) & (4.490) & (4.487) \\ 
   & & & \\ 
- E(-1) & $-$3.662 & 0.557 & 1.868 \\ 
-  & (5.664) & (6.368) & (5.087) \\ 
+ E\_2\_lag2 &  & -5.923^{*} & -4.200 \\ 
+  &  & (3.178) & (3.210) \\ 
   & & & \\ 
- E(-2) &  & $-$9.541 & $-$7.377 \\ 
-  &  & (6.686) & (5.391) \\ 
+ Var\_2 &  &  & 8.168 \\ 
+  &  &  & (5.959) \\ 
   & & & \\ 
- Var &  &  & 15.719$^{**}$ \\ 
-  &  &  & (6.317) \\ 
+ Var\_2\_lag1 &  &  & -0.401 \\ 
+  &  &  & (6.007) \\ 
   & & & \\ 
- Var(-1) &  &  & 3.540 \\ 
-  &  &  & (7.602) \\ 
+ Var\_2\_lag2 &  &  & -0.043 \\ 
+  &  &  & (6.793) \\ 
   & & & \\ 
- Var(-2) &  &  & 2.140 \\ 
-  &  &  & (6.105) \\ 
+ Constant & 1.201^{***} & 1.047^{***} & -1.193 \\ 
+  & (0.281) & (0.291) & (0.784) \\ 
   & & & \\ 
 \hline \\[-1.8ex] 
-Observations & 123 & 123 & 123 \\ 
-R$^{2}$ & 0.559 & 0.567 & 0.739 \\ 
-Adjusted R$^{2}$ & 0.548 & 0.552 & 0.723 \\ 
-Residual Std. Error & 1.102 (df = 119) & 1.098 (df = 118) & 0.863 (df = 115) \\ 
-F Statistic & 50.298$^{***}$ (df = 3; 119) & 38.561$^{***}$ (df = 4; 118) & 46.434$^{***}$ (df = 7; 115) \\ 
-Akaike Inf. Crit. & \multicolumn{1}{c}{378.961} & \multicolumn{1}{c}{378.856} & \multicolumn{1}{c}{322.629} \\ 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} \\ 
+Log Likelihood & \multicolumn{1}{c}{-139.492} & \multicolumn{1}{c}{-137.709} & \multicolumn{1}{c}{-132.539} \\ 
+Akaike Inf. Crit. & \multicolumn{1}{c}{286.984} & \multicolumn{1}{c}{285.418} & \multicolumn{1}{c}{281.077} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
-\end{table}
+\end{table} 
 
 
 
