@@ -1,5 +1,61 @@
 
 
+
+library(ggplot2)
+
+
+
+ggplot(data, aes(x = period, y = E_2))+
+  geom_line(size = 1)+
+  theme_minimal()
+
+
+library(ggplot2)
+library(reshape2)
+
+test2 <- melt(test, id.var='YEAR')
+test2 <- na.omit(test2)
+
+ggplot(data, aes(x=period, y=GDP_year, color=GDP_year)) + 
+  geom_line() +
+  scale_color_manual(values=c('red', 'green')) +
+  xlab("Year") + ylab("Percent") +
+  scale_x_continuous( ) + 
+  scale_y_continuous( )
+
+
+
+
+
+
+
+
+dsq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 library(MSwM)
 
 
