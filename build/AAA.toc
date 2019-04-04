@@ -50,25 +50,30 @@
 \contentsline {section}{\numberline {8.1}Data At hand}{13}{section.8.1}% 
 \contentsline {section}{\numberline {8.2}Small vs Large}{13}{section.8.2}% 
 \contentsline {section}{\numberline {8.3}By Sector}{13}{section.8.3}% 
-\contentsline {section}{\numberline {8.4}Correlation between questions}{13}{section.8.4}% 
-\contentsline {section}{\numberline {8.5}Correlation with GDP}{13}{section.8.5}% 
-\contentsline {section}{\numberline {8.6}Auto-correlation / Correlation over time}{13}{section.8.6}% 
-\contentsline {chapter}{\numberline {9}Linear (Auto-Regressive) Models}{14}{chapter.9}% 
-\contentsline {section}{\numberline {9.1}Models}{14}{section.9.1}% 
-\contentsline {subsection}{\numberline {9.1.1}Month vs Quarterly data}{14}{subsection.9.1.1}% 
-\contentsline {section}{\numberline {9.2}Model}{16}{section.9.2}% 
-\contentsline {section}{\numberline {9.3}Evaluation}{16}{section.9.3}% 
-\contentsline {subsection}{\numberline {9.3.1}R-square}{16}{subsection.9.3.1}% 
-\contentsline {subsection}{\numberline {9.3.2}AIC and BIC}{16}{subsection.9.3.2}% 
-\contentsline {subsection}{\numberline {9.3.3}Mean Square Prediction Error}{16}{subsection.9.3.3}% 
-\contentsline {subsection}{\numberline {9.3.4}Diebold-Mariano Test}{16}{subsection.9.3.4}% 
-\contentsline {subsection}{\numberline {9.3.5}Out-of-Sample performances}{16}{subsection.9.3.5}% 
-\contentsline {chapter}{\numberline {10}Markov Switching Models}{17}{chapter.10}% 
-\contentsline {subsubsection}{Small Introduction + why are we using it}{17}{section*.16}% 
-\contentsline {section}{\numberline {10.1}Model(s) Specification}{17}{section.10.1}% 
-\contentsline {subsection}{\numberline {10.1.1}Notation}{17}{subsection.10.1.1}% 
-\contentsline {subsection}{\numberline {10.1.2}Model}{17}{subsection.10.1.2}% 
-\contentsline {subsubsection}{Model}{17}{section*.17}% 
-\contentsline {subsubsection}{Transition equation/probability}{18}{section*.18}% 
-\contentsline {chapter}{\numberline {11}Conclusion}{19}{chapter.11}% 
-\contentsline {chapter}{\numberline {12}Discussion}{20}{chapter.12}% 
+\contentsline {section}{\numberline {8.4}Correlations}{13}{section.8.4}% 
+\contentsline {section}{\numberline {8.5}Correlation between questions}{13}{section.8.5}% 
+\contentsline {section}{\numberline {8.6}Auto-Correlation}{14}{section.8.6}% 
+\contentsline {section}{\numberline {8.7}Correlation with GDP}{14}{section.8.7}% 
+\contentsline {subsection}{\numberline {8.7.1}GDP vs GDP yoy}{14}{subsection.8.7.1}% 
+\contentsline {subsection}{\numberline {8.7.2}Specificity of question 3 and 4, are people correct ?}{14}{subsection.8.7.2}% 
+\contentsline {chapter}{\numberline {9}Linear (Auto-Regressive) Models}{15}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Models}{15}{section.9.1}% 
+\contentsline {subsection}{\numberline {9.1.1}Month vs Quarterly data}{15}{subsection.9.1.1}% 
+\contentsline {section}{\numberline {9.2}Timing of the Data}{15}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}Linear Model}{15}{section.9.3}% 
+\contentsline {section}{\numberline {9.4}Model}{16}{section.9.4}% 
+\contentsline {section}{\numberline {9.5}Evaluation}{16}{section.9.5}% 
+\contentsline {subsection}{\numberline {9.5.1}R-square}{16}{subsection.9.5.1}% 
+\contentsline {subsection}{\numberline {9.5.2}AIC and BIC}{16}{subsection.9.5.2}% 
+\contentsline {subsection}{\numberline {9.5.3}Mean Square Prediction Error}{16}{subsection.9.5.3}% 
+\contentsline {subsection}{\numberline {9.5.4}Diebold-Mariano Test}{16}{subsection.9.5.4}% 
+\contentsline {subsection}{\numberline {9.5.5}Out-of-Sample performances}{16}{subsection.9.5.5}% 
+\contentsline {chapter}{\numberline {10}Markov Switching Models}{18}{chapter.10}% 
+\contentsline {subsubsection}{Small Introduction + why are we using it}{18}{section*.16}% 
+\contentsline {section}{\numberline {10.1}Model(s) Specification}{18}{section.10.1}% 
+\contentsline {subsection}{\numberline {10.1.1}Notation}{18}{subsection.10.1.1}% 
+\contentsline {subsection}{\numberline {10.1.2}Model}{18}{subsection.10.1.2}% 
+\contentsline {subsubsection}{Model}{18}{section*.17}% 
+\contentsline {subsubsection}{Transition equation/probability}{19}{section*.18}% 
+\contentsline {chapter}{\numberline {11}Conclusion}{20}{chapter.11}% 
+\contentsline {chapter}{\numberline {12}Discussion}{21}{chapter.12}% 

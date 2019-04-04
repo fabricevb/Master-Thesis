@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  2 APR 2019 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  4 APR 2019 10:11
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -637,6 +637,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box52
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\dcolumn.sty"
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box53
+\extrarowheight=\dimen171
+\NC@list=\toks27
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box54
+))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
@@ -648,47 +661,347 @@ File: lstlang3.sty 2019/02/27 1.8b listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\lstFV@gtempboxa=\box53
+\lstFV@gtempboxa=\box55
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box56
+("C:\Program Files\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count296
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+"
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
+ex"
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.t
+ex"
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen182
+\pgfmath@count=\count299
+\pgfmath@box=\box57
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count300
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+"
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen183
+\pgf@picmaxx=\dimen184
+\pgf@picminy=\dimen185
+\pgf@picmaxy=\dimen186
+\pgf@pathminx=\dimen187
+\pgf@pathmaxx=\dimen188
+\pgf@pathminy=\dimen189
+\pgf@pathmaxy=\dimen190
+\pgf@xx=\dimen191
+\pgf@xy=\dimen192
+\pgf@yx=\dimen193
+\pgf@yy=\dimen194
+\pgf@zx=\dimen195
+\pgf@zy=\dimen196
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.c
+ode.tex"
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen197
+\pgf@path@lasty=\dimen198
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.
+tex"
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen199
+\pgf@shorten@start@additional=\dimen256
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+"
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count301
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.co
+de.tex"
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen257
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations
+.code.tex"
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen258
+\pgf@pt@y=\dimen259
+\pgf@pt@temp=\dimen260
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.te
+x"
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.
+code.tex"
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+"
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen261
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen262
+\pgf@sys@shading@range@num=\count302
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.te
+x"
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.t
+ex"
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box61
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+"
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.co
+de.tex"
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.t
+ex"
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.
+tex"
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box62
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.
+sty"
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen263
+\pgf@nodesepend=\dimen264
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.
+sty"
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen265
+\pgffor@skip=\dimen266
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.
+code.tex"
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count303
+\pgfplotmarksize=\dimen267
+)
+\tikz@lastx=\dimen268
+\tikz@lasty=\dimen269
+\tikz@lastxsaved=\dimen270
+\tikz@lastysaved=\dimen271
+\tikzleveldistance=\dimen272
+\tikzsiblingdistance=\dimen273
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count304
+\tikznumberofchildren=\count305
+\tikznumberofcurrentchild=\count306
+\tikz@fig@count=\count307
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count308
+\pgfmatrixcurrentcolumn=\count309
+\pgf@matrix@numberofcolumns=\count310
+)
+\tikz@expandcount=\count311
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.pathreplacing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarydecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecorations.code
+.tex"
+\pgfdecoratedcompleteddistance=\dimen274
+\pgfdecoratedremainingdistance=\dimen275
+\pgfdecoratedinputsegmentcompleteddistance=\dimen276
+\pgfdecoratedinputsegmentremainingdistance=\dimen277
+\pgf@decorate@distancetomove=\dimen278
+\pgf@decorate@repeatstate=\count312
+\pgfdecorationsegmentamplitude=\dimen279
+\pgfdecorationsegmentlength=\dimen280
+)
+\tikz@lib@dec@box=\box67
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibraryd
+ecorations.pathreplacing.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryarrows.meta.c
+ode.tex"
+File: pgflibraryarrows.meta.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowinset=\dimen281
+\pgfarrowlength=\dimen282
+\pgfarrowwidth=\dimen283
+\pgfarrowlinewidth=\dimen284
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
+ (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux
 
-(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 
 LaTeX Warning: Label `' multiply defined.
 
 )
 \openout1 = `AAA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
  ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen170
-\scratchbox=\box54
-\nofMPsegments=\count293
-\nofMParguments=\count294
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen171
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count313
+\scratchdimen=\dimen285
+\scratchbox=\box68
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen286
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks41
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -702,8 +1015,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring ON on input line 98.
+\AtBeginShipoutBox=\box69
+Package hyperref Info: Link coloring ON on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -711,37 +1024,39 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count298
+\c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
-\@outlinefile=\write4
-\openout4 = `AAA.out'.
+\@outlinefile=\write5
+\openout5 = `AAA.out'.
 
-\c@lstlisting=\count299
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 112.
+\c@lstlisting=\count320
+
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 119.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 115--116
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 122--123
 [][][][][][][] 
  []
 
-<Images/LogoKULeuven.png, id=231, 401.5pt x 143.53625pt>
+<Images/LogoKULeuven.png, id=254, 401.5pt x 143.53625pt>
 File: Images/LogoKULeuven.png Graphic file (type png)
 <use Images/LogoKULeuven.png>
-Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 120.
+Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 127.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 149.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 175--176
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 182--183
 [][][] 
  []
 
@@ -749,7 +1064,7 @@ Overfull \hbox (24.18004pt too wide) in paragraph at lines 175--176
 
 {C:/Users/Fabrice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Images/
 LogoKULeuven.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
@@ -760,46 +1075,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
 ] (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.toc [3
 
 ])
-\tf@toc=\write5
-\openout5 = `AAA.toc'.
+\tf@toc=\write6
+\openout6 = `AAA.toc'.
 
 
 [4]
 Chapter 1.
 
 Package natbib Warning: Citation `lemasson_enquete_2017' on page 1 undefined on
- input line 227.
+ input line 234.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.246 \chapter
+l.253 \chapter
               {The Business Survey Indicator} [1
 
 ]
 Chapter 2.
 
 Package natbib Warning: Citation `rhoads_euroland_1999' on page 2 undefined on 
-input line 263.
+input line 270.
 
 
 Package natbib Warning: Citation `vanhaelen_belgian_2000' on page 2 undefined o
-n input line 265.
+n input line 272.
 
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 2 undefined o
-n input line 280.
+n input line 287.
 
 [2
 
 ]
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 3 undefined o
-n input line 301.
+n input line 308.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
  []
 
@@ -807,19 +1122,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--344
 Chapter 3.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 417.
+(hyperref)                than one, level fixed on input line 424.
 
 [5
 
 ] [6]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--532
+Underfull \hbox (badness 10000) in paragraph at lines 536--539
 
  []
 
@@ -832,7 +1147,7 @@ Chapter 5.
 ] [10]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--646
+Underfull \hbox (badness 10000) in paragraph at lines 649--653
 
  []
 
@@ -842,15 +1157,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--646
 Chapter 7.
 
 Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
-on input line 681.
+on input line 688.
 
 
 Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
-on page 12 undefined on input line 685.
+on page 12 undefined on input line 692.
 
 
 Package natbib Warning: Citation `das_nonparametric_2011' on page 12 undefined 
-on input line 687.
+on input line 694.
 
 [12
 
@@ -863,143 +1178,197 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.733 \chapter
-              {Linear (Auto-Regressive) Models}]
-Chapter 9.
-
-Overfull \hbox (53.46611pt too wide) in paragraph at lines 790--833
- [][] 
- []
-
-[14
-
-] [15pdfTeX warning (ext4): destination with the same identifier (name{table.9.
-1}) has been already used, duplicate ignored
+l.754 
+      ] [14pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.8.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.852 \chapter
-              {Markov Switching Models}] [16]
+l.788 \chapter
+              {Linear (Auto-Regressive) Models}pdfTeX warning (ext4): destinati
+on with the same identifier (name{table.8.3}) has been already used, duplicate 
+ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.788 \chapter
+              {Linear (Auto-Regressive) Models}]
+Chapter 9.
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+[15
+
+] [16] [17pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.9.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.967 \chapter
+              {Markov Switching Models}]
 Chapter 10.
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 17 undefined on in
-put line 858.
+Package natbib Warning: Citation `hamilton_new_1989' on page 18 undefined on in
+put line 973.
 
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 17 undefined on in
-put line 861.
+Package natbib Warning: Citation `hamilton_new_1989' on page 18 undefined on in
+put line 976.
 
 
-Package natbib Warning: Citation `duprey_how_2017' on page 17 undefined on inpu
-t line 861.
+Package natbib Warning: Citation `duprey_how_2017' on page 18 undefined on inpu
+t line 976.
 
 
-Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 17 undefine
-d on input line 863.
+Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 18 undefine
+d on input line 978.
 
-[17
+[18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 925--929
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1044
 
  []
 
-[18]
+[19]
 Chapter 11.
-[19
+[20
 
 ]
 Chapter 12.
 
-Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 20 undefin
-ed on input line 970.
+Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 21 undefin
+ed on input line 1085.
 
 
 Package natbib Warning: Citation `hlavac_stargazer:_2018' undefined on input li
-ne 977.
+ne 1092.
 
 No file AAA.bbl.
-[20
+[21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 983--985
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1100
 
  []
 
-[21
+[22
 
 ] (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lof)
-\tf@lof=\write6
-\openout6 = `AAA.lof'.
-
- [22
-
-]
-(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lot)
-\tf@lot=\write7
-\openout7 = `AAA.lot'.
+\tf@lof=\write7
+\openout7 = `AAA.lof'.
 
  [23
 
-] [24
+]
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lot)
+\tf@lot=\write8
+\openout8 = `AAA.lot'.
+
+ [24
+
+] [25
 
 ]
 
 pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<Images/IndustryN.pdf, id=483, 597.55246pt x 845.19763pt>
+<Images/IndustryN.pdf, id=519, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 1015.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 1130.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
-[25pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1024 \chapter
-               *{Code} <./Images/IndustryN.pdf>] [26
+l.1139 \chapter
+               *{Code} <./Images/IndustryN.pdf>] [27
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1059.
-<Images/sedes.png, id=521, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1174.
+<Images/sedes.png, id=557, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 1069.
+Package pdftex.def Info: Images/sedes.png  used on input line 1184.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 1073--1074
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 1188--1189
 [][][] 
  []
 
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1090.
-[27 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1090.
+[28 <./Images/sedes.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1205.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1205.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1090.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1090.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1205.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1205.
 
 Package rerunfilecheck Info: File `AAA.out' has not changed.
-(rerunfilecheck)             Checksum: DC63E90741B1C8236A87D440FDFBFF26;4041.
+(rerunfilecheck)             Checksum: DE2F2E325D8D5FC203B8E367F180352A;4380.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1090.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1205.
  ) 
 Here is how much of TeX's memory you used:
- 20170 strings out of 492946
- 347020 string characters out of 3135521
- 704958 words of memory out of 3000000
- 23749 multiletter control sequences out of 15000+200000
- 550285 words of font info for 57 fonts, out of 3000000 for 9000
+ 30747 strings out of 492946
+ 585150 string characters out of 3135521
+ 730588 words of memory out of 3000000
+ 34084 multiletter control sequences out of 15000+200000
+ 550512 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,63p,936b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,16n,71p,936b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1015,9 +1384,9 @@ s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
 hvr8a.pfb>
 Output written on C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.pdf
- (32 pages, 375199 bytes).
+ (33 pages, 390872 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 484 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
