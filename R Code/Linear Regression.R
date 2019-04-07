@@ -15,36 +15,49 @@ data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
 
 
 
-###############
-# Correlation #
-###############
-
-cor(MI027)
-
-ggpairs(data[, 1:2])
-
-ggpairs(MI027[, 2:4], lower=list(continuous="smooth", params=c(colour="blue")),
-        diag=list(continuous="bar"))
-
-library("GGally")
-data(iris)
-ggpairs(iris[, 1:4], lower=list(continuous="smooth", params=c(colour="blue")),
-        diag=list(continuous="bar", params=c(colour="blue")), 
-        upper=list(params=list(corSize=6)), axisLabels='show')
 #################
 # Linear Models #
 #################
-attach(MI027)
 
-#model <- lm(GDP ~ solde_UW, MI027)
+# GDP
+model1 <- lm(GDP ~ E_2, data = data)
+model2 <- lm(GDP ~ GDP_lag1 + E_2, data = data)
+model3 <- lm(GDP ~ GDP_lag1 + E_2 + Var_2, data = data)
+model4 <- lm(GDP ~ E_2 + Var_2, data = data)
 
-model <- lm(Value ~ ind, MI027)
+stargazer(model1, model2, model3, model4, align = TRUE)
 
-model <- lm(Value ~ ind + var + ind_Z + var_Z, MI027)
+
+# GDP YEAR  
+model1 <- lm(GDP_year ~ E_2, data = data)
+model2 <- lm(GDP_year ~ GDP_year_lag1 + E_2, data = data)
+model3 <- lm(GDP_year ~ GDP_year_lag1 + E_2 + Var_2, data = data)
+model4 <- lm(GDP_year ~ E_2 + Var_2, data = data)
+
+stargazer(model1, model2, model3, model4, align = TRUE)
+
+model1 <- glm(GDP_year ~ E_2 + E_2_diff, data = data)
+model2 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_diff, data = data)
+model3 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_diff + Var_2, data = data)
+model4 <- glm(GDP_year ~ E_2 + E_2_diff + Var_2, data = data)
+
+stargazer(model1, model2, model3, model4, align = TRUE)
+
+
+
+
+model <- glm(GDP_year ~ E_2 + E_2_lag1 + E_2_lag2, data = data)
+model1 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1, data = data)
+model2 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2, data = data)
+model3 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2, data = data)
+model4 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2 + Var_2 + Var_2_lag1 + Var_2_lag2, data = data)
+
+stargazer(model1, model2, model4, align = TRUE)
+
+# autoplot(model4, which = 1:6, ncol = 2, label.size = 3, colour = "steelblue") + theme_bw()
 
 summary(model)
 
-plot(Solde_UW, var_UW)
 
 
 ################################

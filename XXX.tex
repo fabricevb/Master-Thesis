@@ -22,11 +22,18 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 \draw[lightgray, line width=4pt] 
 (\x,.3) -- +(1,0);
 
+% colored bar down
+\foreach \x/\perccol in
+{3/25}
+\draw[lightgray, line width=4pt] 
+(\x,-.6) -- +(1,0);
+
+
 % braces
 \draw [thick ,decorate,decoration={brace,amplitude=5pt}] (1,0.5)  -- +(3,0) 
        node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
-%\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
-%       node [black,midway,font=\scriptsize, below=4pt] {Publication};
+\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-1.9) -- +(-1,0)
+      node [black,midway,font=\scriptsize, below=4pt] {Publication};
 
 % time of publication
 \node[align=center] at (4.8,1.85) {publication};

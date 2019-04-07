@@ -19,17 +19,7 @@ data_ts = ts(data, start=c(1988,1), frequency=12)
 #### Tables
 
 
-
-
-correlation.matrix <- cor(data[, c("E_1","E_2","E_3","E_4")])
-stargazer(correlation.matrix, title="Correlation Matrix")
-
-
-
-
 stargazer(cor(na.omit(data[c("GDP", "GDP_year", "E_1", "E_2","E_3","E_4")])), title="Correlation Matrix")
-
-
 
 
 # Correlation Matrix check Question 3 and 4 if true what they say
@@ -102,3 +92,20 @@ ggpairs(data[c("period", "E_4", "Var_4", "Z_4", "Var_Z_4")])
 ggpairs(data[c("GDP_year", "E_1", "E_2", "E_3", "E_4")])
 
 
+
+
+###############
+# Correlation #
+###############
+
+
+ggpairs(data[, 1:2])
+
+ggpairs(MI027[, 2:4], lower=list(continuous="smooth", params=c(colour="blue")),
+        diag=list(continuous="bar"))
+
+library("GGally")
+data(iris)
+ggpairs(iris[, 1:4], lower=list(continuous="smooth", params=c(colour="blue")),
+        diag=list(continuous="bar", params=c(colour="blue")), 
+        upper=list(params=list(corSize=6)), axisLabels='show')

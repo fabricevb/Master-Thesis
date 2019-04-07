@@ -12,6 +12,10 @@ attach(data)
 library(Hmisc)
 library(xtable)
 library(stargazer)
+library(xlsx)
+
+
+data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
 
 data$E_1_lag1 <- Lag(E_1, -1)
 data$E_1_lag2 <- Lag(E_1, -2)
@@ -33,10 +37,25 @@ data$E_4_lag2 <- Lag(E_4, -2)
 data$E_4_lag3 <- Lag(E_4, -3)
 data$E_4_lag4 <- Lag(E_4, -4)
 
+data$Var_1_lag1 <- Lag(Var_1, -1)
+data$Var_1_lag2 <- Lag(Var_1, -2)
+data$Var_1_lag3 <- Lag(Var_1, -3)
+data$Var_1_lag4 <- Lag(Var_1, -4)
+
 data$Var_2_lag1 <- Lag(Var_2, -1)
 data$Var_2_lag2 <- Lag(Var_2, -2)
 data$Var_2_lag3 <- Lag(Var_2, -3)
 data$Var_2_lag4 <- Lag(Var_2, -4)
+
+data$Var_3_lag1 <- Lag(Var_3, -1)
+data$Var_3_lag2 <- Lag(Var_3, -2)
+data$Var_3_lag3 <- Lag(Var_3, -3)
+data$Var_3_lag4 <- Lag(Var_3, -4)
+
+data$Var_4_lag1 <- Lag(Var_4, -1)
+data$Var_4_lag2 <- Lag(Var_4, -2)
+data$Var_4_lag3 <- Lag(Var_4, -3)
+data$Var_4_lag4 <- Lag(Var_4, -4)
 
 data$GDP_year_lag1 <- Lag(GDP_year, -3)
 data$GDP_year_lag2 <- Lag(GDP_year, -6)
@@ -52,44 +71,24 @@ data$GDP_lag4 <- Lag(GDP, -12)
 ### add difference with previous month
 
 # Indicator 
-
+data$E_1_diff <- data$E_1 - data$E_1_lag1
+data$E_2_diff <- data$E_2 - data$E_2_lag1
+data$E_3_diff <- data$E_3 - data$E_3_lag1
+data$E_4_diff <- data$E_4 - data$E_4_lag1
 
 # Variance
+data$Var_1_diff <- data$Var_1 - data$Var_1_lag1
+data$Var_2_diff <- data$Var_2 - data$Var_2_lag1
+data$Var_3_diff <- data$Var_3 - data$Var_3_lag1
+data$Var_4_diff <- data$Var_4 - data$Var_4_lag1
+
+
+
+######### SAVE DATASET IN EXCEL
+write.xlsx(data, "GitHub/Master-Thesis/Datasets/RS975_sa.xlsx") 
 
 
 
 
-
-
-
-model1 <- glm(GDP_year ~ E_2, data = data)
-
-model2 <- glm(GDP_year ~ GDP_year_lag1 + E_2, data = data)
-
-model3 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + Var_2, data = data)
-
-model4 <- glm(GDP_year ~ E_2 + Var_2, data = data)
-
-stargazer(model1, model2, model3, model4, align = TRUE)
-
-
-
-
-
-model <- glm(GDP_year ~ E_2 + E_2_lag1 + E_2_lag2, data = data)
-
-model1 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1, data = data)
-
-model2 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2, data = data)
-
-model3 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2, data = data)
-
-model4 <- glm(GDP_year ~ GDP_year_lag1 + E_2 + E_2_lag1 + E_2_lag2 + Var_2 + Var_2_lag1 + Var_2_lag2, data = data)
-
-stargazer(model1, model2, model4, align = TRUE)
-
-# autoplot(model4, which = 1:6, ncol = 2, label.size = 3, colour = "steelblue") + theme_bw()
-
-summary(model)
 
 
