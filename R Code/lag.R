@@ -17,6 +17,10 @@ library(xlsx)
 
 data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
 
+# add date formated column
+data$date <- as.Date(period)
+
+# add lags for E(x), Var(x), E(z) and Var(z)
 data$E_1_lag1 <- Lag(E_1, -1)
 data$E_1_lag2 <- Lag(E_1, -2)
 data$E_1_lag3 <- Lag(E_1, -3)
@@ -57,6 +61,10 @@ data$Var_4_lag2 <- Lag(Var_4, -2)
 data$Var_4_lag3 <- Lag(Var_4, -3)
 data$Var_4_lag4 <- Lag(Var_4, -4)
 
+
+# add lags for GDP and YoY GDP
+data$GDP_year_lag12 <- Lag(GDP_year, -1)
+data$GDP_year_lag13 <- Lag(GDP_year, -2)
 data$GDP_year_lag1 <- Lag(GDP_year, -3)
 data$GDP_year_lag2 <- Lag(GDP_year, -6)
 data$GDP_year_lag3 <- Lag(GDP_year, -9)
