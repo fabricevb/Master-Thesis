@@ -20,6 +20,10 @@ data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
 # add date formated column
 data$date <- as.Date(period)
 
+###################
+### Create lags ###
+###################
+
 # add lags for E(x), Var(x), E(z) and Var(z)
 data$E_1_lag1 <- Lag(E_1, -1)
 data$E_1_lag2 <- Lag(E_1, -2)
@@ -75,8 +79,9 @@ data$GDP_lag2 <- Lag(GDP, -6)
 data$GDP_lag3 <- Lag(GDP, -9)
 data$GDP_lag4 <- Lag(GDP, -12)
 
-
+######################################
 ### add difference with previous month
+######################################
 
 # Indicator 
 data$E_1_diff <- data$E_1 - data$E_1_lag1
@@ -91,8 +96,24 @@ data$Var_3_diff <- data$Var_3 - data$Var_3_lag1
 data$Var_4_diff <- data$Var_4 - data$Var_4_lag1
 
 
+######################################
+### Combine to arrive to the Indicator
+######################################
 
+data$E_I <- 
+data$Var_I <- 
+data$Z_I <- 
+data$Var_Z_I <-
+  
+# lags
+
+data$E_I_lag1 <- 
+
+
+###############################
 ######### SAVE DATASET IN EXCEL
+###############################
+
 write.xlsx(data, "GitHub/Master-Thesis/Datasets/RS975_sa.xlsx") 
 
 
