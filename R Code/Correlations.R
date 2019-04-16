@@ -73,14 +73,10 @@ acf(na.omit(data$Var_3), main = "Autocorrelation of the Variance of Question 3")
 acf(na.omit(data$Var_4), main = "Autocorrelation of the Variance of Question 4")
 par(mfrow=c(1,1))
 
+par(mfrow=c(2,1))
 acf(na.omit(data$GDP_year), main = "Autocorrelation of the GDP YoY")
-
 acf(na.omit(data$GDP), main = "Autocorrelation of the GDP")
-
-
-library(PerformanceAnalytics)
-chart.Correlation(data[, c("E_1","E_2","E_3","E_4")], histogram=TRUE, pch=19)
-
+par(mfrow=c(1,1))
 
 
 ### Correlation plots
@@ -99,13 +95,3 @@ ggpairs(data[c("GDP_year", "E_1", "E_2", "E_3", "E_4")])
 ###############
 
 
-ggpairs(data[, 1:2])
-
-ggpairs(MI027[, 2:4], lower=list(continuous="smooth", params=c(colour="blue")),
-        diag=list(continuous="bar"))
-
-library("GGally")
-data(iris)
-ggpairs(iris[, 1:4], lower=list(continuous="smooth", params=c(colour="blue")),
-        diag=list(continuous="bar", params=c(colour="blue")), 
-        upper=list(params=list(corSize=6)), axisLabels='show')

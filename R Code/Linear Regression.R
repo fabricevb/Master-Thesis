@@ -55,7 +55,7 @@ ggplot(data, aes(x=period, y=predicted_model1)) +
 data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
 data$predicted_model2_plot <- with(data, interp1(Obs, predicted_model2, Obs, "linear"))
 data$predicted_model3_plot <- with(data, interp1(Obs, predicted_model3, Obs, "linear"))
-data$date <- as.Date(period)
+data$date <- as.Date(data$period)
 
 tmp <- data[c("date", "GDP_year_plot", "predicted_model1", "predicted_model2_plot", 
                 "predicted_model3_plot", "predicted_model4")]
