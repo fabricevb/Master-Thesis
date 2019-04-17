@@ -100,14 +100,21 @@ data$Var_4_diff <- data$Var_4 - data$Var_4_lag1
 ### Combine to arrive to the Indicator
 ######################################
 
-data$E_I <- 
-data$Var_I <- 
-data$Z_I <- 
-data$Var_Z_I <-
+data$E_I <- (data$E_1 + data$E_2 + data$E_3 + data$E_4)/4 
+data$Var_I <- (data$Var_1 + data$Var_2 + data$Var_3 + data$Var_4)/4
+data$Z_I <- (data$Z_1 + data$Z_2 + data$Z_3 + data$Z_4)/4
+data$Var_Z_I <- (data$Var_Z_1 + data$Var_Z_2 + data$Var_Z_3 + data$Var_Z_4)/4
   
 # lags
 
-data$E_I_lag1 <- 
+data$E_I_lag1 <- Lag(E_I, -1)
+data$E_I_lag2 <- Lag(E_I, -2)
+data$E_I_lag3 <- Lag(E_I, -3)
+data$E_I_lag4 <- Lag(E_I, -4)
+
+
+# difference
+  data$E_I_diff <- data$E_I - data$E_I_lag1
 
 
 ###############################

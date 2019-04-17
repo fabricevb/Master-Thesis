@@ -20,7 +20,7 @@ data <- data[1:372,]
 data$datetime = ymd_hms(data$period)
 
 # Then you can create the xts format, and thus use dygraph
-don=xts(x = data$E_3, order.by = data$period)
+don=xts(x = data$E_I, order.by = data$period)
 dygraph(don) %>%
   dyOptions(labelsUTC = TRUE, fillGraph=TRUE, fillAlpha=0.1, drawGrid = FALSE, colors="#D8AE5A") %>%
   dyRangeSelector() %>%
@@ -33,10 +33,10 @@ library(ggfortify)
 
 E_3 <- data_ts[, "E_3"]
 
-autoplot(E_3)
+autoplot(E_I)
 
 datatmp <- data[1:372,]
-ggplot(data = datatmp, aes(x=period, y=E_2)) + geom_line(color = "steelblue") # +  theme_minimal()
+ggplot(data = datatmp, aes(x=period, y=E_I)) + geom_line(color = "steelblue") # +  theme_minimal()
 
 
 

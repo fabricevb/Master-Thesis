@@ -456,29 +456,3 @@ write.xlsx(data, "C:/Users/Fabrice/Documents/KULeuven/RS975.xlsx")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-plot(MI027_E)
-
-
-
-autoplot(MI027_E)
-
-autoplot(stl(MI027_E, s.window = 'periodic'), ts.colour = 'blue')
-autoplot(MI027_E, main = "QUESTION 27")
-
-
-
-
-
