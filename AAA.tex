@@ -51,6 +51,9 @@
 \usepackage{subcaption}
 
 \usepackage{pgfplots}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
 
 \lstset{% setup listings 
         language=R,% set programming language 
@@ -341,8 +344,13 @@ It can be included in what's now called nowcasting, which is now and short time 
 more information can be found in \cite{de_greef_national_2009}
 
 
+\subsection{Weighting procedure}
 
-...
+According to the size of the company, measured different ways depending on the sector ........
+
+\subsection{Globalisation procedure}
+
+
 
 \section{Questionnaire}
 .... questionnaire can be found in appendix %\ref{}
@@ -399,6 +407,8 @@ ${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=
 \end{equation}
 where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
 
+
+\newpage
 
 \subsection{Weighted Indicator}
 
@@ -462,6 +472,28 @@ The variance is, with the mean, one of the first tool for Statisticians to study
 
 In the context of the Business Survey, the variance haven't been used much.
 
+\subsubsection{variance as a measure of the dispersion of the responses}
+
+In statistics, the variance has two m
+
+Here we want to know to what extend respondents agree with each others.
+
+
+\begin{tikzpicture}
+\begin{axis}[every axis plot post/.append style={
+  mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+  axis x line*=bottom, % no box around the plot, only x and y axis
+  axis y line*=left, % the * suppresses the arrow tips
+  xtick=\empty, ytick=\empty,
+  width=16cm, height=8cm,
+  enlargelimits=upper] % extend the axes a bit to the right and top
+  \addplot {gauss(0,0.5)};
+  \addplot {gauss(0,1)};
+\end{axis}
+\end{tikzpicture}
+
+
+
 \subsubsection{difference sampling error and variance}
 
 here variance is a measure of the "dispersion" of the answers.
@@ -472,7 +504,7 @@ here variance is a measure of the "dispersion" of the answers.
 As done for the Indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
 
 
-\subsection{Variance of the Unweighted Indicator}
+\section{Variance of the Unweighted Indicator}
 
 The main variance
 
@@ -506,7 +538,7 @@ Equation \ref{var3}
 
 
 
-\subsection{Generalization for Weighted Indicators / Variance of the Weighted Indicator}
+\section{Generalization for Weighted Indicators / Variance of the Weighted Indicator}
 
 \begin{equation}
 Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
@@ -560,9 +592,15 @@ Also Called Z indicator
 
 Can be better understood as the indicator of the Changes in individual answers between t-1 and t
 
+cite the paper by INSEE % \cite{}
 
 
- An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number. \\
+ An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number.
+ 
+ 
+
+\subsubsection{The Indicator of the Evolution of Individual Responses}
+
 
 \subsubsection{Explain the new indicator}
 
@@ -576,7 +614,11 @@ $t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
 \end{tabular}    
 \end{center}
 
+where
 
+\begin{equation}
+\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
+\end{equation}
 
 The Indicator of the evolution of the individual responses can be obtained by
 
@@ -584,12 +626,12 @@ The Indicator of the evolution of the individual responses can be obtained by
 E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
 \end{equation}
 
-where \\
-$\pi$ is the proportion/probability of respondent answering (-,0,+) at $t-1$ and (-,0,+) at time $t$ 
-\\
+where
+$\pi$ is the proportion/probability of respondent answering (-,0,+) at $t-1$ and $t$ 
+
 
 \begin{equation}
-E(Z) =  
+E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} = 
 \begin{tabular}{r|r r r}
     			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
     \textbf{-} 	& 0		& +1	& +2	\\
@@ -598,18 +640,7 @@ E(Z) =
 \end{tabular}
 \end{equation}
 
-
-
-
-
-\subsubsection{The Indicator of the Evolution of Individual Responses}
-
-
-\begin{equation}
-\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
-\end{equation}
-
-
+\subsubsection{Interpretation}
 
 
 
@@ -727,28 +758,27 @@ explain the issue of seasonal correction on "future data"
 
 Aside of Seasonal effect, there are three main biases that could arise in the context of the BSI; non-reponse, dropout and attrition
 
-- cor(time, var) = 0.5
-
-Add period !
-
 \begin{table}[!htbp] \centering 
-  \caption{Correlation Matrix} 
+  \caption{Correlation Between Time and different variables} 
   \label{} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & E\_3 & Var\_3 & Z\_3 & Var\_Z\_3 & GDP & GDP\_year \\ 
+  & GDP & GDP\_year & E\_I & Var\_I & Z\_I & Var\_Z\_I \\ 
 \hline \\[-1.8ex] 
-E\_3 & $1$ & $-0.555$ & $0.231$ & $-0.487$ & $0.473$ & $0.703$ \\ 
-Var\_3 & $-0.555$ & $1$ & $-0.078$ & $0.847$ & $-0.196$ & $-0.167$ \\ 
-Z\_3 & $0.231$ & $-0.078$ & $1$ & $-0.053$ & $0.160$ & $0.011$ \\ 
-Var\_Z\_3 & $-0.487$ & $0.847$ & $-0.053$ & $1$ & $-0.031$ & $-0.056$ \\ 
-GDP & $0.473$ & $-0.196$ & $0.160$ & $-0.031$ & $1$ & $0.628$ \\ 
-GDP\_year & $0.703$ & $-0.167$ & $0.011$ & $-0.056$ & $0.628$ & $1$ \\ 
+Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
-\end{table} 
+\end{table}
 
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[scale=0.5]{Graphs/plot_var.pdf}
+    \caption{Plot }
+    \label{A_corplot}
+\end{figure}
 
 
 \section{Non-Response}
@@ -930,10 +960,10 @@ E\_3\_lag4 & $0.531$ & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
 GDP & $1$ & $0.628$ & $0.558$ & $0.555$ & $0.591$ & $0.566$ & $0.536$ \\ 
 GDP\_year & $0.628$ & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
 E\_4 & $0.558$ & $0.719$ & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
-E\_4\_lag1 & $0.555$ & $0.650$ & $0.959$ & $1$ & $0.970$ & $0.928$ & $0.863$ \\ 
-E\_4\_lag2 & $0.591$ & $0.647$ & $0.941$ & $0.970$ & $1$ & $0.970$ & $0.917$ \\ 
-E\_4\_lag3 & $0.566$ & $0.593$ & $0.890$ & $0.928$ & $0.970$ & $1$ & $0.959$ \\ 
-E\_4\_lag4 & $0.536$ & $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\ 
+E\_4\_lag1 & $0.555$ & $0.650$ & $0.959$ & $1$ & $0.970$ & $0.928$ & $0.863$ \\
+E\_4\_lag2 & $0.591$ & $0.647$ & $0.941$ & $0.970$ & $1$ & $0.970$ & $0.917$ \\
+E\_4\_lag3 & $0.566$ & $0.593$ & $0.890$ & $0.928$ & $0.970$ & $1$ & $0.959$ \\
+E\_4\_lag4 & $0.536$ & $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
@@ -1365,8 +1395,23 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \label{B_pred}
 \end{figure}
 
+\newpage
+\begin{figure}[H]
+    \centering
+%    \captionsetup{justification=centering}
+    \includegraphics[scale=0.1]{Images/tree.jpg}
+    \caption{ }
+    \label{ }
+\end{figure}
 
-
+\newpage
+\begin{figure}[H]
+    \centering
+%    \captionsetup{justification=centering}
+    \includegraphics[scale=0.1]{Images/tree2.jpg}
+    \caption{ }
+    \label{ }
+\end{figure}
 
 
 \chapter*{Code}
