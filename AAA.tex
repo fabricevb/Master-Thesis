@@ -50,6 +50,8 @@
 
 \usepackage{subcaption}
 
+\usepackage{pgfplots}
+
 \lstset{% setup listings 
         language=R,% set programming language 
         basicstyle=\small,% basic font style 
@@ -265,7 +267,12 @@ explain the two types of weightings
 
 \section{History}
 
-In 1954 started the Business Survey of the National Bank of Belgium. Almost 20 years later, in 1972, results where first synthesised in an indicator. It has since then been well known for been a very informative and useful indicator. For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy and of it predictions.
+In 1954 started the Business Survey of the National Bank of Belgium. 
+
+At the European level, in 1961, is launched the launched by the Commission decision of 15 November 1961. The first survey was the harmonised business survey in the manufacturing industry conducted in 1962. Since then, the sector coverage of the programme has widened considerably. The BCS programme was extended to the construction sector and to investment plans in the manufacturing sector in 1966, to consumers in 1972, to the retail trade in 1984, and to the services sector in 1996.
+More info see \citep{european_commission_joint_nodate}
+
+Almost 20 years later, in 1972, results where first synthesised in an indicator. It has since then been well known for been a very informative and useful indicator. For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy and of it predictions.
 
 Today Now-casting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
 
@@ -286,16 +293,44 @@ changes in 2009 see later (\autoref{section:Objective and Methodology})
 A large improvement of the indicator happened in 2009 which was explained in a working paper untitled "The National Bank of Belgium’s new business survey indicator" 
 (\citeauthor{de_greef_national_2009})
 
+Objectives : 
+
+Using specific questions to identify the business cycles and turning points
+
+It can be included in what's now called nowcasting, which is now and short time forecasting of the evolution of the economy.
+
 - only take a limited amount of questions into account, the most relevant ones (3-4 questions) \\
 - inclusion of the services in the global indicator \\
 - lighten smoothing method
 
-\subsubsection{A Business Cycle}
+\subsubsection{A Business Cycles theory}
+
+\begin{centering}
+\begin{tikzpicture}
+\begin{axis}[
+    domain=0:6*pi,
+    samples=100,
+    axis lines*=left,
+    xtick=\empty, ytick=\empty,
+    width=16cm, height=8cm
+]
+
+\addplot [thick, gray] {x};
+\addplot [thick, black] {x + 4*sin(deg(x)) * sin(deg(x/6))^0.5}
+    node [pos=0.1, anchor=south] {Peak}
+    node [pos=0.3, anchor=south, sloped] {Expansion}
+    node [pos=0.49, anchor=south, sloped] {Recession}
+% Add line to show end of and ... peak and ... line
+;
+\end{axis}
+\end{tikzpicture}
+\end{centering}
+
 
 
 
 \subsubsection{Quality Criterion}
-- high correlation with GDP \\
+- high correlation with Economical Indicators \\
 - fluctuation that's mostly explained by the conjuncture\\
 - predictive power for the future months 
 
@@ -367,6 +402,12 @@ where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive a
 
 \subsection{Weighted Indicator}
 
+\subsubsection{Globalisation procedure}
+
+\subsubsection{Weighting procedure}
+
+\subsubsection{Calculation}
+
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n \left(\omega_i p_i x_i \right)}{\sum_{i=1}^n \omega_i p_i}
 \end{equation} 
@@ -375,13 +416,21 @@ $x_i$ is the answer of the respondent i and can each take value -1, 0 and 1 \\
 $p_i$ is the weight of the globalisation of the company i \\
 $\omega_i$ is the weight of the company i
 
-\subsubsection{Globalisation procedure}
+
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i} + \sum_{i=1}^n \omega_{Ni} p_{Ni} x_{Ni} + \sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
+\end{equation} 
+
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i}}{n} + \frac{\sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
+\end{equation} 
 
 
+\begin{equation}
+    E(X) = \pi_+ - \pi_-
+\end{equation}
 
-\subsubsection{Weighting procedure}
-
-
+where $\pi_+$ and $\pi_-$ are the \textbf{weighted} proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
 
 
 
@@ -990,27 +1039,28 @@ where   \\
 \section{Model}
 
 \newpage
-\begin{table}[H] \centering 
+
+\begin{table}[!htbp] \centering 
 %  \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+ & \multicolumn{4}{c}{Linear Regression} \\ 
 \cline{2-5} 
-\\[-1.8ex] & \multicolumn{4}{c}{GDP\_year} \\ 
+\\[-1.8ex] & \multicolumn{4}{c}{Year on Year GDP (in \%)} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.434^{***} & 1.114^{***} & -1.829^{**} & -4.052^{***} \\ 
   & (0.170) & (0.255) & (0.867) & (0.922) \\ 
   & & & & \\ 
- GDP\_year\_lag1 &  & 0.690^{***} & 0.525^{***} &  \\ 
+ 3 months lag of YoY GDP &  & 0.690^{***} & 0.525^{***} &  \\ 
   &  & (0.066) & (0.078) &  \\ 
   & & & & \\ 
- E\_I & 15.053^{***} & 4.957^{***} & 10.621^{***} & 22.080^{***} \\ 
+ BSI & 15.053^{***} & 4.957^{***} & 10.621^{***} & 22.080^{***} \\ 
   & (1.364) & (1.387) & (2.079) & (1.392) \\ 
   & & & & \\ 
- Var\_I &  &  & 12.831^{***} & 27.506^{***} \\ 
+ Variance &  &  & 12.831^{***} & 27.506^{***} \\ 
   &  &  & (3.628) & (3.349) \\ 
   & & & & \\ 
 \hline \\[-1.8ex] 
@@ -1020,7 +1070,7 @@ Adjusted R$^{2}$ & \multicolumn{1}{c}{0.495} & \multicolumn{1}{c}{0.738} & \mult
 Residual Std. Error & \multicolumn{1}{c}{1.172} & \multicolumn{1}{c}{0.847} & \multicolumn{1}{c}{0.809} & \multicolumn{1}{c}{0.943} \\ 
 F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^{***}$} & \multicolumn{1}{c}{130.755$^{***}$} & \multicolumn{1}{c}{127.781$^{***}$} \\ 
 \end{tabular} 
-\end{table} 
+\end{table}
 
 \begin{figure}[H]
     \centering
@@ -1036,10 +1086,6 @@ F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^
 %  \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-5} 
 \\[-1.8ex] & \multicolumn{4}{c}{GDP\_year} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
@@ -1059,7 +1105,6 @@ F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^
   &  &  &  & (0.076) \\ 
   & & & & \\ 
 \hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.512} & \multicolumn{1}{c}{0.679} & \multicolumn{1}{c}{0.685} & \multicolumn{1}{c}{0.813} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.504} & \multicolumn{1}{c}{0.673} & \multicolumn{1}{c}{0.677} & \multicolumn{1}{c}{0.806} \\ 
 Residual Std. Error & \multicolumn{1}{c}{1.162} & \multicolumn{1}{c}{0.943} & \multicolumn{1}{c}{0.938} & \multicolumn{1}{c}{0.729} \\ 
@@ -1070,7 +1115,7 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[scale=0.45]{Graphs/pred2.pdf}
+    \includegraphics[scale=0.5]{Graphs/pred2.pdf}
     \caption{Plot }
     \label{A_corplot}
 \end{figure}
@@ -1082,9 +1127,6 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
 %  \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-
 \\[-1.8ex] & \multicolumn{2}{c}{GDP\_year} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
 \hline \\[-1.8ex] 
@@ -1104,7 +1146,6 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
   & (0.871) & (0.861) \\ 
   & & \\ 
 \hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.726} & \multicolumn{1}{c}{0.722} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.717} & \multicolumn{1}{c}{0.716} \\ 
 Residual Std. Error & \multicolumn{1}{c}{0.878 (df = 119)} & \multicolumn{1}{c}{0.880 (df = 120)} \\ 
@@ -1116,7 +1157,7 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[scale=0.45]{Graphs/pred3.pdf}
+    \includegraphics[scale=0.5]{Graphs/pred3.pdf}
     \caption{Plot }
     \label{A_corplot}
 \end{figure}
@@ -1137,6 +1178,10 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
 
 \subsection{Out-of-Sample performances}
 
+\section{log(GDP)}
+
+
+\section{Variance(X) VS Variance(Z)}
 
 \section{Take Question 1 out of the calculation of the Indicator}
 
