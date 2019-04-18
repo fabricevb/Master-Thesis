@@ -40,23 +40,26 @@
 \BOOKMARK [1][-]{section.8.5}{Correlation between questions}{chapter.8}% 40
 \BOOKMARK [1][-]{section.8.6}{Auto-Correlation}{chapter.8}% 41
 \BOOKMARK [1][-]{section.8.7}{Correlation with GDP}{chapter.8}% 42
-\BOOKMARK [2][-]{subsection.8.7.1}{GDP vs GDP YoY}{section.8.7}% 43
-\BOOKMARK [1][-]{section.8.8}{Specificity of question 3 and 4, are peoples predictions correct ?}{chapter.8}% 44
+\BOOKMARK [1][-]{section.8.8}{GDP vs Explanatory Indicators}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.9}{Specificity of question 3 and 4, are peoples predictions correct ?}{chapter.8}% 44
 \BOOKMARK [0][-]{chapter.9}{Linear \(Auto-Regressive\) Models}{}% 45
-\BOOKMARK [1][-]{section.9.1}{Models}{chapter.9}% 46
+\BOOKMARK [1][-]{section.9.1}{Method}{chapter.9}% 46
 \BOOKMARK [2][-]{subsection.9.1.1}{Month vs Quarterly data}{section.9.1}% 47
-\BOOKMARK [1][-]{section.9.2}{Timing of the Data}{chapter.9}% 48
-\BOOKMARK [1][-]{section.9.3}{Linear Model}{chapter.9}% 49
-\BOOKMARK [1][-]{section.9.4}{Model}{chapter.9}% 50
-\BOOKMARK [1][-]{section.9.5}{Evaluation}{chapter.9}% 51
-\BOOKMARK [2][-]{subsection.9.5.1}{R-square}{section.9.5}% 52
-\BOOKMARK [2][-]{subsection.9.5.2}{AIC and BIC}{section.9.5}% 53
-\BOOKMARK [2][-]{subsection.9.5.3}{Mean Square Prediction Error}{section.9.5}% 54
-\BOOKMARK [2][-]{subsection.9.5.4}{Diebold-Mariano Test}{section.9.5}% 55
-\BOOKMARK [2][-]{subsection.9.5.5}{Out-of-Sample performances}{section.9.5}% 56
-\BOOKMARK [0][-]{chapter.10}{Markov Switching Models}{}% 57
-\BOOKMARK [1][-]{section.10.1}{Model\(s\) Specification}{chapter.10}% 58
-\BOOKMARK [2][-]{subsection.10.1.1}{Notation}{section.10.1}% 59
-\BOOKMARK [2][-]{subsection.10.1.2}{Model}{section.10.1}% 60
-\BOOKMARK [0][-]{chapter.11}{Conclusion}{}% 61
-\BOOKMARK [0][-]{chapter.12}{Discussion}{}% 62
+\BOOKMARK [2][-]{subsection.9.1.2}{Timing of the Data}{section.9.1}% 48
+\BOOKMARK [1][-]{section.9.2}{Linear Model}{chapter.9}% 49
+\BOOKMARK [1][-]{section.9.3}{Model}{chapter.9}% 50
+\BOOKMARK [1][-]{section.9.4}{Evaluation}{chapter.9}% 51
+\BOOKMARK [2][-]{subsection.9.4.1}{R-square}{section.9.4}% 52
+\BOOKMARK [2][-]{subsection.9.4.2}{AIC and BIC}{section.9.4}% 53
+\BOOKMARK [2][-]{subsection.9.4.3}{Mean Square Prediction Error}{section.9.4}% 54
+\BOOKMARK [2][-]{subsection.9.4.4}{Diebold-Mariano Test}{section.9.4}% 55
+\BOOKMARK [2][-]{subsection.9.4.5}{Out-of-Sample performances}{section.9.4}% 56
+\BOOKMARK [1][-]{section.9.5}{log\(GDP\)}{chapter.9}% 57
+\BOOKMARK [1][-]{section.9.6}{Variance\(X\) VS Variance\(Z\)}{chapter.9}% 58
+\BOOKMARK [1][-]{section.9.7}{Take Question 1 out of the calculation of the Indicator}{chapter.9}% 59
+\BOOKMARK [0][-]{chapter.10}{Markov Switching Models}{}% 60
+\BOOKMARK [1][-]{section.10.1}{Model\(s\) Specification}{chapter.10}% 61
+\BOOKMARK [2][-]{subsection.10.1.1}{Notation}{section.10.1}% 62
+\BOOKMARK [2][-]{subsection.10.1.2}{Model}{section.10.1}% 63
+\BOOKMARK [0][-]{chapter.11}{Conclusion}{}% 64
+\BOOKMARK [0][-]{chapter.12}{Discussion}{}% 65
