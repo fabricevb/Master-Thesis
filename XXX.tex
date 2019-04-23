@@ -9,6 +9,8 @@
 \colorlet{myblue}{black!40!blue}
 \colorlet{myred}{black!40!red}
 
+\usepackage{dcolumn}
+
 \begin{document}         
 \begin{tikzpicture}
 % draw horizontal line   
@@ -147,6 +149,71 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
   }
  
 \end{tikzpicture}
+
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Linear Regression} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.434^{***} & 1.102^{***} & -0.920 & -1.403^{*} \\ 
+  & (0.170) & (0.254) & (0.589) & (0.725) \\ 
+  & & & & \\ 
+ 3 months lag of YoY GDP &  & 0.693^{***} & 0.575^{***} &  \\ 
+  &  & (0.065) & (0.070) &  \\ 
+  & & & & \\ 
+ BSI & 14.867^{***} & 4.834^{***} & 9.064^{***} & 19.938^{***} \\ 
+  & (1.351) & (1.367) & (1.717) & (1.373) \\ 
+  & & & & \\ 
+ Variance &  &  & 22.630^{***} & 45.301^{***} \\ 
+  &  &  & (6.016) & (6.652) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{124} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.498} & \multicolumn{1}{c}{0.742} & \multicolumn{1}{c}{0.770} & \multicolumn{1}{c}{0.637} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.494} & \multicolumn{1}{c}{0.738} & \multicolumn{1}{c}{0.764} & \multicolumn{1}{c}{0.631} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.174} & \multicolumn{1}{c}{0.848} & \multicolumn{1}{c}{0.805} & \multicolumn{1}{c}{1.002} \\ 
+F Statistic & \multicolumn{1}{c}{121.091$^{***}$} & \multicolumn{1}{c}{172.776$^{***}$} & \multicolumn{1}{c}{132.525$^{***}$} & \multicolumn{1}{c}{106.248$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+\newpage
+
+\begin{tikzpicture}
+\begin{axis}[
+    domain=0:6*pi,
+    samples=100,
+    axis lines*=left, 
+    axis line style={->},
+    xtick={2.2, 4.5, 8.1}, ytick=\empty,
+    xticklabels = {$Peak$, $Peak$, $Peak$},
+    width=14cm, height=8cm,
+    xlabel={time}, ylabel={GDP}
+]       
+\addplot[mark=none, dashed] coordinates {(2.2, -1) (2.2, 4)};
+\addplot[mark=none, dashed] coordinates {(4.5, -1) (4.5, 1)}; 
+\addplot[mark=none, dashed] coordinates {(8.1, -1) (8.1, 12)}; %\addplot [thick, gray] {x};
+\addplot [thick, black] {x + 4*sin(deg(x)) * sin(deg(x/6))^0.5}
+%    node [pos=0.1, anchor=south] {Peak}
+    node [pos=0.3, anchor=south, sloped] {Expansion}
+    node [pos=0.49, anchor=south, sloped] {Recession}
+% Add line to show end of and ... peak and ... line
+;
+\end{axis}
+\end{tikzpicture}
+
 
 
 
