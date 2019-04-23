@@ -51,12 +51,6 @@ plot(mod.mswm)
 
 
 
-
-
-olsE <- lm(Solde_UW ~ 1, MI027)
-olsVar <- lm(var_UW ~ 1, MI027)
-ols <- lm(Industry ~ 1, MI027)
-
 summary(olsE)
 
 
@@ -108,7 +102,13 @@ plotDiag(msVar, regime=1, which=3)
 #####################################################
 
 
+msp <- depmix(GDP_year ~ 1,nstates=2,data=data)
+set.seed(1)
+fmsp <- fit(msp)	
 
-
+# plot posterior state sequence for the 2-state model
+plot(ts(posterior(fmsp)[,2], start=c(1988,2),deltat=1/12),ylab="probability",
+     main="Posterior probability of state 1",
+     frame=FALSE)
 
 

@@ -5,6 +5,9 @@ library(ggplot2)
 library(tidyverse)
 library(stargazer)
 library(GGally)
+library(lattice)
+library(survival)
+library(Formula)
 library(Hmisc)
 library(corrplot)
 library(readxl)
@@ -19,12 +22,18 @@ data_ts = ts(data, start=c(1988,1), frequency=12)
 
 #### Tables
 
-
+#### GDP corr with the different indicators
 stargazer(cor(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")])), title="Correlation Matrix")
 
 ggpairs(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")], colour = "cyl", upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
 
-corrplot(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]), method="circle")
+# corrplot(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]), method="circle")
+
+
+#### GDP corr with the different indicators
+stargazer(cor(na.omit(data[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
+
+ggpairs(data[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
 
 
 

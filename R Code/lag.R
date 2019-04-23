@@ -13,12 +13,21 @@ library(Hmisc)
 library(xtable)
 library(stargazer)
 library(xlsx)
+library(readxl)
+library(pracma)
 
 
-data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
+data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
 
 # add date formated column
 data$date <- as.Date(period)
+
+# add an observation 
+data$Obs = 1:nrow(data)
+
+# create a plotable variable for GDP with a linearized filling of the NA's
+data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
+
 
 ###################
 ### Create lags ###
@@ -104,6 +113,16 @@ data$E_I <- (data$E_1 + data$E_2 + data$E_3 + data$E_4)/4
 data$Var_I <- (data$Var_1 + data$Var_2 + data$Var_3 + data$Var_4)/4
 data$Z_I <- (data$Z_1 + data$Z_2 + data$Z_3 + data$Z_4)/4
 data$Var_Z_I <- (data$Var_Z_1 + data$Var_Z_2 + data$Var_Z_3 + data$Var_Z_4)/4
+
+data$Ap_I <- (data$Ap_1 + data$Ap_2 + data$Ap_3 + data$Ap_4)/4
+data$A0_I <- (data$A0_1 + data$A0_2 + data$A0_3 + data$A0_4)/4
+data$An_I <- (data$An_1 + data$An_2 + data$An_3 + data$An_4)/4
+
+data$Z_pp_I <- (data$Z_pp_1 + data$Z_pp_2 + data$Z_pp_3 + data$Z_pp_4)/4
+
+###############
+
+###############
   
 # lags
 
@@ -121,7 +140,7 @@ data$E_I_lag4 <- Lag(E_I, -4)
 ######### SAVE DATASET IN EXCEL
 ###############################
 
-write.xlsx(data, "GitHub/Master-Thesis/Datasets/RS975_sa.xlsx") 
+write.xlsx(data, "GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx") 
 
 
 

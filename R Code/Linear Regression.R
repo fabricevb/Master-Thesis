@@ -137,7 +137,6 @@ data$predicted_model3 <- predict(model3, data)
 
 # plot the different models
 data$Obs = 1:nrow(data)
-data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
 
 data$date <- as.Date(data$period)
 tmp <- data[c("date", "GDP_year_plot", "predicted_model1", "predicted_model2", "predicted_model3")]
