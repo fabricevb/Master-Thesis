@@ -90,6 +90,12 @@
 \let\subsectionautorefname\sectionautorefname % if \autoref subsection -> section
 \let\subsubsectionautorefname\sectionautorefname % if \autoref subsubsection -> section
 
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\Corr}{Corr}
+
+
 % ------------------------ Page settings -----------------------------
 % If you change these, the cover layout will also change.  In that
 % case you have to adjust the latter manually.
@@ -534,7 +540,7 @@ The main variance
 cite
 
 \begin{eqnarray}
-     Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] \nonumber \\ \nonumber \\
+     \Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] \nonumber \\ \nonumber \\
      &=& E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
      &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2  \nonumber \\ \nonumber \\
      &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var1}
@@ -547,7 +553,7 @@ and $E(X) = \pi_+ - \pi_-$
 
 We then have several different ways to write the previous equation;
 \begin{eqnarray}
-Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \nonumber \\
+\Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \nonumber \\
 	&=& \pi_+ + \pi_- - E ( X )^2 \label{var2} \\
 	&=& 1 - \pi_n - E(X)^2 \label{var3}
 \end{eqnarray}
@@ -564,12 +570,12 @@ Equation \ref{var3}
 \section{Generalization for Weighted Indicators / Variance of the Weighted Indicator}
 
 \begin{equation}
-Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
+\Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
 \end{equation}
 
 
 \begin{eqnarray}
-Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
+\Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
 	&=& \pi_+ + \pi_- - E ( X )^2 \\
 	&=& 1 - \pi_0 - E(X)^2
 \end{eqnarray}
@@ -577,49 +583,80 @@ Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
 
 \subsection{Properties}
 
-\begin{tikzpicture}
-\begin{axis}[
-    domain=-1:1,
-    samples=100,
-    axis lines*=left, 
-    axis line style={->},
-    width=14cm, height=8cm,
-    xlabel={Business Survey Indicator}, ylabel={Variance}
-]       
-\addplot [thick, black, domain = -1:1] {1 - 0 - x^2};
-\addplot [thick, black, domain = -0.95:0.95] {1 - 0.05 - x^2};
-\addplot [thick, black, domain = -0.9:0.9] {1 - 0.1 - x^2};
-\addplot [thick, black, domain = -0.85:0.85] {1 - 0.15 - x^2};
-\addplot [thick, black, domain = -0.8:0.8] {1 - 0.2 - x^2};
-\addplot [thick, black, domain = -0.75:0.75] {1 - 0.25 - x^2};
-\addplot [thick, black, domain = -0.7:0.7] {1 - 0.3 - x^2};
-\addplot [thick, black, domain = -0.65:0.65] {1 - 0.35 - x^2};
-\addplot [thick, black, domain = -0.6:0.6] {1 - 0.4 - x^2};
-\addplot [thick, black, domain = -0.55:0.55] {1 - 0.45 - x^2};
-\addplot [thick, black, domain = -0.5:0.5] {1 - 0.5 - x^2};
-\addplot [thick, black, domain = -0.45:0.45] {1 - 0.55 - x^2};
-\addplot [thick, black, domain = -0.4:0.4] {1 - 0.6 - x^2};
-\addplot [thick, black, domain = -0.35:0.35] {1 - 0.65 - x^2};
-\addplot [thick, black, domain = -0.3:0.3] {1 - 0.7 - x^2};
-\addplot [thick, black, domain = -0.25:0.25] {1 - 0.75 - x^2};
-\addplot [thick, black, domain = -0.2:0.2] {1 - 0.8 - x^2};
-\addplot [thick, black, domain = -0.15:0.15] {1 - 0.85 - x^2};
-\addplot [thick, black, domain = -0.1:0.1] {1 - 0.9 - x^2};
-\addplot [thick, black, domain = -0.05:0.05] {1 - 0.95 - x^2};
-\addplot [thick, black, domain = -0.01:0.01] {1 - 0.99 - x^2};
-\end{axis}
-\end{tikzpicture}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    \tikzset{
+      legendmatrix/.style={% style for legends
+        draw,% draw a border for the legend
+        outer sep=.3333em,% additional space to the axis label
+        nodes={rotate=90,anchor=base west,outer sep=0pt},% rotate the nodes inside the matrix
+        /pgfplots/every crossref picture/.append style={yshift=.75ex}% rotate the legend images
+      }
+    }
+    \begin{axis}[
+        domain=-1:1,
+        samples=100,
+        axis lines*=left, 
+        axis line style={->},
+        width=14cm, height=10cm,
+        xlabel={Business Survey Indicator}, ylabel={Variance},
+    legend pos= outer north east, legend cell align=left,
+     legend style={font=\scriptsize}
+     ]       
+    \addplot [thick, bluetitle!100, domain = -1:1] {1 - 0 - x^2};
+    \addplot [thick, bluetitle!95, domain = -0.95:0.95] {1 - 0.05 - x^2};
+    \addplot [thick, bluetitle!90, domain = -0.9:0.9] {1 - 0.1 - x^2};
+    \addplot [thick, bluetitle!85, domain = -0.85:0.85] {1 - 0.15 - x^2};
+    \addplot [thick, bluetitle!80, domain = -0.8:0.8] {1 - 0.2 - x^2};
+    \addplot [thick, bluetitle!75, domain = -0.75:0.75] {1 - 0.25 - x^2};
+    \addplot [thick, bluetitle!70, domain = -0.7:0.7] {1 - 0.3 - x^2};
+    \addplot [thick, bluetitle!65, domain = -0.65:0.65] {1 - 0.35 - x^2};
+    \addplot [thick, bluetitle!60, domain = -0.6:0.6] {1 - 0.4 - x^2};
+    \addplot [thick, bluetitle!55, domain = -0.55:0.55] {1 - 0.45 - x^2};
+    \addplot [thick, bluetitle!50, domain = -0.5:0.5] {1 - 0.5 - x^2};
+    \addplot [thick, bluetitle!45, domain = -0.45:0.45] {1 - 0.55 - x^2};
+    \addplot [thick, bluetitle!40, domain = -0.4:0.4] {1 - 0.6 - x^2};
+    \addplot [thick, bluetitle!35, domain = -0.35:0.35] {1 - 0.65 - x^2};
+    \addplot [thick, bluetitle!30, domain = -0.3:0.3] {1 - 0.7 - x^2};
+    \addplot [thick, bluetitle!25, domain = -0.25:0.25] {1 - 0.75 - x^2};
+    \addplot [thick, bluetitle!20, domain = -0.2:0.2] {1 - 0.8 - x^2};
+    \addplot [thick, bluetitle!15, domain = -0.15:0.15] {1 - 0.85 - x^2};
+    \addplot [thick, bluetitle!10, domain = -0.1:0.1] {1 - 0.9 - x^2};
+    \addplot [thick, bluetitle!05, domain = -0.05:0.05] {1 - 0.95 - x^2};
+    \addplot [thick, bluetitle!03, domain = -0.01:0.01] {1 - 0.99 - x^2};
+     \addplot [thick, red, domain = -1:1] {1 - x^2};
+     \addplot [thick, red, domain = -1:0] { - ((x+0.5)^2) + 0.25};
+     \addplot [thick, red, domain = 0:1] { - ((x-0.5)^2) + 0.25};
+    \addlegendentry{$\pi_N = 0$}
+    \addlegendentry{$\pi_N = 0.05$}
+    \addlegendentry{$\pi_N = 0.1$}
+    \addlegendentry{$\pi_N = 0.15$}
+    \addlegendentry{$\pi_N = 0.20$}
+    \addlegendentry{$\pi_N = 0.25$}
+    \addlegendentry{$\pi_N = 0.3$}
+    \addlegendentry{$\pi_N = 0.35$}
+    \addlegendentry{$\pi_N = 0.4$}
+    \addlegendentry{$\pi_N = 0.45$}
+    \addlegendentry{$\pi_N = 0.5$}
+    \addlegendentry{$\pi_N = 0.55$}
+    \addlegendentry{$\pi_N = 0.6$}
+    \addlegendentry{$\pi_N = 0.65$}
+    \addlegendentry{$\pi_N = 0.7$}
+    \addlegendentry{$\pi_N = 0.75$}
+    \addlegendentry{$\pi_N = 0.8$}
+    \addlegendentry{$\pi_N = 0.85$}
+    \addlegendentry{$\pi_N = 0.9$}
+    \addlegendentry{$\pi_N = 0.95$}
+    \addlegendentry{$\pi_N = 0.99$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Graphical representation of the limits of the variance}
+    \label{fig:var properties}
+\end{figure}
 
 
-\begin{tikzpicture}
-\begin{axis}[domain=-1:1,
-    width=14cm, height=10cm]
-\addplot3[
-    surf,
-]
-{((1 - x^2) + (1 - y^2))/2};
-\end{axis}
-\end{tikzpicture}
 
 
 
@@ -633,6 +670,12 @@ Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
 
 
 \section{Take different questions into account}
+
+Since 
+
+\begin{equation}
+    \Var \left(\frac{X+Y}{2} \right) = \frac{1}{4} \left( \Var (X) + \Var(Y) + \Cov (X,Y) \right) 
+\end{equation}
 
 
 
