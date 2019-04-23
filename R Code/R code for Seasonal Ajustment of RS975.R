@@ -49,6 +49,8 @@ MI027_ts = ts(MI027, start=c(1988,1), frequency=12)
 MI032_ts = ts(MI032, start=c(1988,1), frequency=12)
 MI033_ts = ts(MI033, start=c(1988,1), frequency=12)
 
+data_ts
+
 
   #################################
   # apply seasonal correction X13 #
@@ -451,6 +453,51 @@ data <- data.frame(period,
 
 
 write.xlsx(data, "C:/Users/Fabrice/Documents/KULeuven/RS975.xlsx") 
+
+
+
+#### seasonal correction of the indicators 
+
+data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
+
+
+# create time series 
+data_ts = ts(data, start=c(1988,1), frequency=12)
+
+
+#################################
+# apply seasonal correction X13 #
+#################################
+
+# for E(X)
+E_I <- data_ts[, "E_I"]
+Var_I <- data_ts[, "Var_I"]
+Z_I <- data_ts[, "Z_I"]
+Var_Z_I <- data_ts[, "Var_Z_I"]
+
+
+E_I_model <- x13(E_I) # X-13ARIMA method
+Var_I_model <- x13(Var_I) # X-13ARIMA method
+Z_I_model <- x13(Z_I) # X-13ARIMA method
+Var_Z_I_model <- x13(Var_Z_I) # X-13ARIMA method
+
+
+par(mfrow=c(2,2))
+
+# Basic plot with the original series, the trend and the SA series
+plot(E_I_model, type_chart = "sa-trend")
+plot(Var_I_model, type_chart = "sa-trend")
+plot(Z_I_model, type_chart = "sa-trend")
+plot(Var_Z_I_model, type_chart = "sa-trend")
+
+# look at different results (plots)
+# S-I ratio
+plot(E_I_model$decomposition)
+plot(Var_I_model$decomposition)
+plot(Z_I_model$decomposition)
+plot(Var_Z_I_model$decomposition)
+
+
 
 
 

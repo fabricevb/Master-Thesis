@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  18 APR 2019 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.10)  23 APR 2019 16:21
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -1081,9 +1081,28 @@ File: pgflibraryarrows.meta.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfarrowwidth=\dimen297
 \pgfarrowlinewidth=\dimen298
 )
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+libraryintersections.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryintersections
+.code.tex"
+\pgf@intersect@solutions=\count324
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip70
+\f@nch@O@elh=\skip71
+\f@nch@O@erh=\skip72
+\f@nch@O@olh=\skip73
+\f@nch@O@orh=\skip74
+\f@nch@O@elf=\skip75
+\f@nch@O@erf=\skip76
+\f@nch@O@olf=\skip77
+\f@nch@O@orf=\skip78
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux
+
+(C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux
 
 LaTeX Warning: Label `' multiply defined.
 
@@ -1129,34 +1148,34 @@ LaTeX Warning: Label `A_corplot' multiply defined.
 )
 \openout1 = `AAA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
  ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
+\scratchcounter=\count325
 \scratchdimen=\dimen299
 \scratchbox=\box68
-\nofMPsegments=\count325
-\nofMParguments=\count326
+\nofMPsegments=\count326
+\nofMParguments=\count327
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count327
+\MPscratchCnt=\count328
 \MPscratchDim=\dimen300
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
 \everyMPtoPDFconversion=\toks45
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1172,7 +1191,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box69
-Package hyperref Info: Link coloring ON on input line 109.
+Package hyperref Info: Link coloring ON on input line 115.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1180,18 +1199,18 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.out)
 \@outlinefile=\write5
 \openout5 = `AAA.out'.
 
-\c@lstlisting=\count331
+\c@lstlisting=\count332
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1200,26 +1219,26 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 109.
+ on input line 115.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 123.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 129.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 126--127
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 132--133
 [][][][][][][] 
  []
 
 <Images/LogoKULeuven.png, id=266, 401.5pt x 143.53625pt>
 File: Images/LogoKULeuven.png Graphic file (type png)
 <use Images/LogoKULeuven.png>
-Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 131.
+Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 137.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 153.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 159.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 186--187
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 192--193
 [][][] 
  []
 
@@ -1241,334 +1260,349 @@ LogoKULeuven.png>] [1
 Chapter 1.
 
 Package natbib Warning: Citation `lemasson_enquete_2017' on page 1 undefined on
- input line 242.
+ input line 248.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.261 \chapter
+l.267 \chapter
               {The Business Survey Indicator} [1
 
 ]
 Chapter 2.
 
 Package natbib Warning: Citation `european_commission_joint_nodate' on page 2 u
-ndefined on input line 273.
+ndefined on input line 279.
 
 
 Package natbib Warning: Citation `rhoads_euroland_1999' on page 2 undefined on 
-input line 275.
+input line 281.
 
 
 Package natbib Warning: Citation `vanhaelen_belgian_2000' on page 2 undefined o
-n input line 281.
+n input line 287.
 
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 2 undefined o
-n input line 294.
+n input line 300.
 
 [2
 
 ]
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 3 undefined o
-n input line 341.
+n input line 358.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
-[4] [5]
+[5] [6]
 Chapter 3.
+[7
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 475.
-
-[6
-
-] [7]
+] [8] [9]
 Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 587--590
-
- []
-
-[8
-
-] [9]
-Chapter 5.
 [10
 
 ] [11]
+Chapter 5.
+[12
+
+] [13]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--704
+Underfull \hbox (badness 10000) in paragraph at lines 755--759
 
  []
 
-[12
-
-]
-Chapter 7.
-
-Package natbib Warning: Citation `das_nonparametric_2011' on page 13 undefined 
-on input line 760.
-
-
-Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
-on page 13 undefined on input line 764.
-
-
-Package natbib Warning: Citation `das_nonparametric_2011' on page 13 undefined 
-on input line 766.
-
-[13
-
-]
-Chapter 8.
 [14
 
 ]
-<Graphs/ACF.pdf, id=472, 844.15375pt x 597.23125pt>
+Chapter 7.
+<Graphs/plot_var.pdf, id=482, 844.15375pt x 597.23125pt>
+File: Graphs/plot_var.pdf Graphic file (type pdf)
+<use Graphs/plot_var.pdf>
+Package pdftex.def Info: Graphs/plot_var.pdf  used on input line 802.
+(pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
+[15
+
+]
+
+Package natbib Warning: Citation `das_nonparametric_2011' on page 16 undefined 
+on input line 816.
+
+
+Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
+on page 16 undefined on input line 820.
+
+
+Package natbib Warning: Citation `das_nonparametric_2011' on page 16 undefined 
+on input line 822.
+
+[16 <./Graphs/plot_var.pdf>]
+Chapter 8.
+[17
+
+]
+<Graphs/ACF.pdf, id=503, 844.15375pt x 597.23125pt>
 File: Graphs/ACF.pdf Graphic file (type pdf)
 <use Graphs/ACF.pdf>
-Package pdftex.def Info: Graphs/ACF.pdf  used on input line 811.
+Package pdftex.def Info: Graphs/ACF.pdf  used on input line 870.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
-<Graphs/ACF_GDP.pdf, id=473, 844.15375pt x 597.23125pt>
+<Graphs/ACF_GDP.pdf, id=504, 844.15375pt x 597.23125pt>
 File: Graphs/ACF_GDP.pdf Graphic file (type pdf)
 <use Graphs/ACF_GDP.pdf>
-Package pdftex.def Info: Graphs/ACF_GDP.pdf  used on input line 819.
+Package pdftex.def Info: Graphs/ACF_GDP.pdf  used on input line 878.
 (pdftex.def)             Requested size: 379.86568pt x 268.75157pt.
- [15 <./Graphs/ACF.pdf> <./Graphs/ACF_GDP.pdf>]
-<Graphs/ggpairs.pdf, id=492, 844.15375pt x 597.23125pt>
+ [18 <./Graphs/ACF.pdf> <./Graphs/ACF_GDP.pdf>]
+<Graphs/ggpairs.pdf, id=523, 844.15375pt x 597.23125pt>
 File: Graphs/ggpairs.pdf Graphic file (type pdf)
 <use Graphs/ggpairs.pdf>
-Package pdftex.def Info: Graphs/ggpairs.pdf  used on input line 856.
+Package pdftex.def Info: Graphs/ggpairs.pdf  used on input line 915.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
- [16 <./Graphs/ggpairs.pdf>]
-<Graphs/ggpairs2.pdf, id=505, 844.15375pt x 597.23125pt>
+ [19 <./Graphs/ggpairs.pdf>]
+<Graphs/ggpairs2.pdf, id=536, 844.15375pt x 597.23125pt>
 File: Graphs/ggpairs2.pdf Graphic file (type pdf)
 <use Graphs/ggpairs2.pdf>
-Package pdftex.def Info: Graphs/ggpairs2.pdf  used on input line 884.
+Package pdftex.def Info: Graphs/ggpairs2.pdf  used on input line 943.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
-[17 <./Graphs/ggpairs2.pdf>] [18]
+[20 <./Graphs/ggpairs2.pdf>] [21]
 Chapter 9.
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no P in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ; in font nullfont!
-[19
+[22
 
-] [20]
-Overfull \hbox (28.10295pt too wide) in paragraph at lines 1046--1073
+] [23]
+Overfull \hbox (28.10295pt too wide) in paragraph at lines 1080--1107
  [][] 
  []
 
-<Graphs/pred1.pdf, id=538, 844.15375pt x 597.23125pt>
+<Graphs/pred1.pdf, id=569, 844.15375pt x 597.23125pt>
 File: Graphs/pred1.pdf Graphic file (type pdf)
 <use Graphs/pred1.pdf>
-Package pdftex.def Info: Graphs/pred1.pdf  used on input line 1078.
+Package pdftex.def Info: Graphs/pred1.pdf  used on input line 1112.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
-[21 <./Graphs/pred1.pdf>]
-<Graphs/pred2.pdf, id=550, 844.15375pt x 597.23125pt>
+[24 <./Graphs/pred1.pdf>]
+<Graphs/pred2.pdf, id=581, 844.15375pt x 597.23125pt>
 File: Graphs/pred2.pdf Graphic file (type pdf)
 <use Graphs/pred2.pdf>
-Package pdftex.def Info: Graphs/pred2.pdf  used on input line 1118.
+Package pdftex.def Info: Graphs/pred2.pdf  used on input line 1152.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
- [22 <./Graphs/pred2.pdf>]
-<Graphs/pred3.pdf, id=562, 844.15375pt x 597.23125pt>
+ [25 <./Graphs/pred2.pdf>]
+<Graphs/pred3.pdf, id=593, 844.15375pt x 597.23125pt>
 File: Graphs/pred3.pdf Graphic file (type pdf)
 <use Graphs/pred3.pdf>
-Package pdftex.def Info: Graphs/pred3.pdf  used on input line 1160.
+Package pdftex.def Info: Graphs/pred3.pdf  used on input line 1194.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
- [23 <./Graphs/pred3.pdf>]
-[24]
+ [26 <./Graphs/pred3.pdf>]
+[27] [28]
 Chapter 10.
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 25 undefined on in
-put line 1193.
+Package natbib Warning: Citation `hamilton_new_1989' on page 29 undefined on in
+put line 1230.
 
 
-Package natbib Warning: Citation `hamilton_new_1989' on page 25 undefined on in
-put line 1196.
+Package natbib Warning: Citation `hamilton_new_1989' on page 29 undefined on in
+put line 1233.
 
 
-Package natbib Warning: Citation `duprey_how_2017' on page 25 undefined on inpu
-t line 1196.
+Package natbib Warning: Citation `duprey_how_2017' on page 29 undefined on inpu
+t line 1233.
 
 
-Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 25 undefine
-d on input line 1198.
+Package natbib Warning: Citation `gadea_rivas_failure_2015' on page 29 undefine
+d on input line 1235.
 
-[25
+[29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1264
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1301
 
  []
 
-[26]
+[30]
 Chapter 11.
-[27
+[31
 
 ]
 Chapter 12.
 
-Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 28 undefin
-ed on input line 1315.
+Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 32 undefin
+ed on input line 1352.
 
 
-Package natbib Warning: Citation `bialowolski_bayesian_nodate' on page 28 undef
-ined on input line 1319.
+Package natbib Warning: Citation `bialowolski_bayesian_nodate' on page 32 undef
+ined on input line 1356.
 
 
 Package natbib Warning: Citation `hlavac_stargazer:_2018' undefined on input li
-ne 1322.
+ne 1359.
 
 No file AAA.bbl.
-[28
+[32
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1328--1330
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1367
 
  []
 
-[29
+[33
 
 ] (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lof)
 \tf@lof=\write7
 \openout7 = `AAA.lof'.
 
- [30
+ [34
 
 ]
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.lot)
 \tf@lot=\write8
 \openout8 = `AAA.lot'.
 
- [31
+ [35
 
-] [32
+] [36
 
 ]
-[33]
+[37]
 
 pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<Images/IndustryN.pdf, id=647, 597.55246pt x 845.19763pt>
+<Images/IndustryN.pdf, id=694, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 1363.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 1400.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
-[34 <./Images/IndustryN.pdf>] [35
+[38 <./Images/IndustryN.pdf>]
+<Images/tree.jpg, id=724, 1564.6455pt x 5706.31876pt>
+File: Images/tree.jpg Graphic file (type jpg)
+<use Images/tree.jpg>
+Package pdftex.def Info: Images/tree.jpg  used on input line 1409.
+(pdftex.def)             Requested size: 156.47371pt x 570.66531pt.
+ [39 <./Images/tree.jpg>]
+<Images/tree2.jpg, id=730, 2845.029pt x 5691.86475pt>
+File: Images/tree2.jpg Graphic file (type jpg)
+<use Images/tree2.jpg>
+Package pdftex.def Info: Images/tree2.jpg  used on input line 1418.
+(pdftex.def)             Requested size: 284.51956pt x 569.21983pt.
+ [40 <./Images/tree2.jpg>] [41
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1407.
-<Images/sedes.png, id=684, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1459.
+<Images/sedes.png, id=744, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 1417.
+Package pdftex.def Info: Images/sedes.png  used on input line 1469.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 1421--1422
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 1473--1474
 [][][] 
  []
 
 
 Package natbib Warning: There were undefined citations.
 
-[36 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1438.
+[42 <./Images/sedes.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1490.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1490.
 
 (C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1438.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1490.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1490.
 
-Package rerunfilecheck Info: File `AAA.out' has not changed.
-(rerunfilecheck)             Checksum: B57B513CB61291D5EBD5A91489049F04;4640.
 
+
+Package rerunfilecheck Warning: File `AAA.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `AAA.out':
+(rerunfilecheck)             Before: B57B513CB61291D5EBD5A91489049F04;4640
+(rerunfilecheck)             After:  2742ED042823D72CE969453BF766B34E;5148.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1438.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1490.
  ) 
 Here is how much of TeX's memory you used:
- 41674 strings out of 492946
- 934346 string characters out of 3135521
- 1334315 words of memory out of 3000000
- 44833 multiletter control sequences out of 15000+200000
+ 42089 strings out of 492946
+ 942785 string characters out of 3135521
+ 1334422 words of memory out of 3000000
+ 45201 multiletter control sequences out of 15000+200000
  550512 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,100p,936b,2053s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvr8a.pfb>
+ 62i,16n,103p,936b,2228s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{table.caption.31} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.30} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.24} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.22} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.18} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.17} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.33} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.23} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.19} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.3.0.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.3.0.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.0.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
+w/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+r8a.pfb>
 Output written on C:\Users\Fabrice\Documents\GitHub\Master-Thesis\build\AAA.pdf
- (41 pages, 1059966 bytes).
+ (47 pages, 4109580 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 184 named destinations out of 1000 (max. 500000)
- 595 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 847 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
+ 610 words of extra memory for PDF output out of 10000 (max. 10000000)
 

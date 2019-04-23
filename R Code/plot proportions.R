@@ -16,7 +16,7 @@ library(corrplot)
 library(reshape2)
 
 
-data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
+data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
 
 
 # 

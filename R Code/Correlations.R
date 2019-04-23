@@ -12,7 +12,7 @@ library(Hmisc)
 library(corrplot)
 library(readxl)
 library(corrplot)
-
+ 
 
 data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_sa.xlsx")
 

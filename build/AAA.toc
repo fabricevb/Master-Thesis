@@ -4,80 +4,90 @@
 \contentsline {section}{\numberline {2.2}Sampling Method}{2}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Objective and Methodology}{3}{section.2.3}% 
 \contentsline {subsubsection}{A Business Cycles theory}{3}{section*.2}% 
-\contentsline {subsubsection}{Quality Criterion}{3}{section*.3}% 
-\contentsline {section}{\numberline {2.4}Questionnaire}{3}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Calculation of the Indicator}{4}{section.2.5}% 
-\contentsline {subsection}{\numberline {2.5.1}Unweighted Indicator}{4}{subsection.2.5.1}% 
-\contentsline {subsection}{\numberline {2.5.2}Weighted Indicator}{4}{subsection.2.5.2}% 
-\contentsline {subsubsection}{Globalisation procedure}{4}{section*.4}% 
-\contentsline {subsubsection}{Weighting procedure}{4}{section*.5}% 
-\contentsline {subsubsection}{Calculation}{4}{section*.6}% 
-\contentsline {subsection}{\numberline {2.5.3}Properties}{5}{subsection.2.5.3}% 
-\contentsline {subsection}{\numberline {2.5.4}Take different questions into account}{5}{subsection.2.5.4}% 
-\contentsline {chapter}{\numberline {3}Variance of the Indicator}{6}{chapter.3}% 
-\contentsline {subsubsection}{difference sampling error and variance}{6}{section*.7}% 
-\contentsline {subsubsection}{difference between nominal and continuous variable variance}{6}{section*.8}% 
-\contentsline {subsection}{\numberline {3.0.1}Variance of the Unweighted Indicator}{6}{subsection.3.0.1}% 
-\contentsline {subsection}{\numberline {3.0.2}Generalization for Weighted Indicators / Variance of the Weighted Indicator}{7}{subsection.3.0.2}% 
-\contentsline {subsection}{\numberline {3.0.3}Properties}{7}{subsection.3.0.3}% 
-\contentsline {subsubsection}{Property 1: The variance of X is bounded between -1 and 1}{7}{section*.9}% 
-\contentsline {subsubsection}{Property 2: The variance = A5 and E(X)}{7}{section*.10}% 
-\contentsline {subsubsection}{Property 3: .....}{7}{section*.11}% 
-\contentsline {section}{\numberline {3.1}Take different questions into account}{7}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Discussion regarding the 'true variance'}{7}{section.3.2}% 
-\contentsline {chapter}{\numberline {4}Indicator of the Evolution of Individual Responses}{8}{chapter.4}% 
-\contentsline {subsubsection}{Why this new indicator}{8}{section*.12}% 
-\contentsline {subsubsection}{Explain the new indicator}{8}{section*.13}% 
-\contentsline {subsubsection}{The Indicator of the Evolution of Individual Responses}{9}{section*.14}% 
-\contentsline {chapter}{\numberline {5}Variance of the Evolution of Individual Responses / Volatility of Responses}{10}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Presentation}{10}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Properties}{11}{subsection.5.1.1}% 
-\contentsline {subsubsection}{Property 1: the variance of Z is bounded between -1 and 1}{11}{section*.15}% 
-\contentsline {subsubsection}{Property 2: }{11}{section*.16}% 
-\contentsline {chapter}{\numberline {6}Seasonal Effects}{12}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}JDemetra+}{12}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}X11}{12}{section.6.2}% 
-\contentsline {subsection}{\numberline {6.2.1}Seasonal correction of the Indicator}{12}{subsection.6.2.1}% 
-\contentsline {subsection}{\numberline {6.2.2}Seasonal correction of the Variance}{12}{subsection.6.2.2}% 
-\contentsline {subsection}{\numberline {6.2.3}Seasonal correction of the Indicator of the Evolution}{12}{subsection.6.2.3}% 
-\contentsline {subsection}{\numberline {6.2.4}Seasonal correction of the Variance of Z}{12}{subsection.6.2.4}% 
-\contentsline {subsection}{\numberline {6.2.5}Seasonal correction of the Proportions}{12}{subsection.6.2.5}% 
-\contentsline {section}{\numberline {6.3}Limitations}{12}{section.6.3}% 
-\contentsline {chapter}{\numberline {7}Non-Response, Dropout and Attrition}{13}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Non-Response}{13}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Dropout}{13}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}Attrition}{13}{section.7.3}% 
-\contentsline {chapter}{\numberline {8}Exploratory Analysis}{14}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}Data At hand}{14}{section.8.1}% 
-\contentsline {section}{\numberline {8.2}Small vs Large}{14}{section.8.2}% 
-\contentsline {section}{\numberline {8.3}By Sector}{14}{section.8.3}% 
-\contentsline {section}{\numberline {8.4}Correlations}{14}{section.8.4}% 
-\contentsline {section}{\numberline {8.5}Correlation between questions}{14}{section.8.5}% 
-\contentsline {section}{\numberline {8.6}Auto-Correlation}{15}{section.8.6}% 
-\contentsline {section}{\numberline {8.7}Correlation with GDP}{16}{section.8.7}% 
-\contentsline {section}{\numberline {8.8}GDP vs Explanatory Indicators}{17}{section.8.8}% 
-\contentsline {section}{\numberline {8.9}Specificity of question 3 and 4, are peoples predictions correct ?}{18}{section.8.9}% 
-\contentsline {chapter}{\numberline {9}Linear (Auto-Regressive) Models}{19}{chapter.9}% 
-\contentsline {section}{\numberline {9.1}Method}{19}{section.9.1}% 
-\contentsline {subsection}{\numberline {9.1.1}Month vs Quarterly data}{19}{subsection.9.1.1}% 
-\contentsline {subsection}{\numberline {9.1.2}Timing of the Data}{19}{subsection.9.1.2}% 
-\contentsline {section}{\numberline {9.2}Linear Model}{20}{section.9.2}% 
-\contentsline {section}{\numberline {9.3}Model}{20}{section.9.3}% 
-\contentsline {section}{\numberline {9.4}Evaluation}{24}{section.9.4}% 
-\contentsline {subsection}{\numberline {9.4.1}R-square}{24}{subsection.9.4.1}% 
-\contentsline {subsection}{\numberline {9.4.2}AIC and BIC}{24}{subsection.9.4.2}% 
-\contentsline {subsection}{\numberline {9.4.3}Mean Square Prediction Error}{24}{subsection.9.4.3}% 
-\contentsline {subsection}{\numberline {9.4.4}Diebold-Mariano Test}{24}{subsection.9.4.4}% 
-\contentsline {subsection}{\numberline {9.4.5}Out-of-Sample performances}{24}{subsection.9.4.5}% 
-\contentsline {section}{\numberline {9.5}log(GDP)}{24}{section.9.5}% 
-\contentsline {section}{\numberline {9.6}Variance(X) VS Variance(Z)}{24}{section.9.6}% 
-\contentsline {section}{\numberline {9.7}Take Question 1 out of the calculation of the Indicator}{24}{section.9.7}% 
-\contentsline {chapter}{\numberline {10}Markov Switching Models}{25}{chapter.10}% 
-\contentsline {subsubsection}{Small Introduction + why are we using it}{25}{section*.38}% 
-\contentsline {section}{\numberline {10.1}Model(s) Specification}{25}{section.10.1}% 
-\contentsline {subsection}{\numberline {10.1.1}Notation}{25}{subsection.10.1.1}% 
-\contentsline {subsection}{\numberline {10.1.2}Model}{25}{subsection.10.1.2}% 
-\contentsline {subsubsection}{Model}{25}{section*.39}% 
-\contentsline {subsubsection}{Transition equation/probability}{26}{section*.40}% 
-\contentsline {chapter}{\numberline {11}Conclusion}{27}{chapter.11}% 
-\contentsline {chapter}{\numberline {12}Discussion}{28}{chapter.12}% 
+\contentsline {subsubsection}{Quality Criterion}{3}{section*.4}% 
+\contentsline {subsection}{\numberline {2.3.1}Weighting procedure}{4}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Globalisation procedure}{4}{subsection.2.3.2}% 
+\contentsline {section}{\numberline {2.4}Questionnaire}{4}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Calculation of the Indicator}{5}{section.2.5}% 
+\contentsline {subsection}{\numberline {2.5.1}Unweighted Indicator}{5}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.2}Weighted Indicator}{6}{subsection.2.5.2}% 
+\contentsline {subsubsection}{Globalisation procedure}{6}{section*.5}% 
+\contentsline {subsubsection}{Weighting procedure}{6}{section*.6}% 
+\contentsline {subsubsection}{Calculation}{6}{section*.7}% 
+\contentsline {subsection}{\numberline {2.5.3}Properties}{6}{subsection.2.5.3}% 
+\contentsline {subsection}{\numberline {2.5.4}Take different questions into account}{6}{subsection.2.5.4}% 
+\contentsline {chapter}{\numberline {3}Variance of the Indicator}{7}{chapter.3}% 
+\contentsline {subsubsection}{The added info of the variance}{7}{section*.8}% 
+\contentsline {subsubsection}{variance as a measure of the dispersion of the responses}{7}{section*.9}% 
+\contentsline {subsubsection}{difference sampling error and variance}{7}{section*.10}% 
+\contentsline {subsubsection}{difference between nominal and continuous variable variance}{7}{section*.11}% 
+\contentsline {section}{\numberline {3.1}Variance of the Unweighted Indicator}{8}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Generalization for Weighted Indicators / Variance of the Weighted Indicator}{8}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Properties}{9}{subsection.3.2.1}% 
+\contentsline {subsubsection}{Property 1: The variance of X is bounded between -1 and 1}{9}{section*.12}% 
+\contentsline {subsubsection}{Property 2: The variance = A5 and E(X)}{9}{section*.13}% 
+\contentsline {subsubsection}{Property 3: .....}{9}{section*.14}% 
+\contentsline {section}{\numberline {3.3}Take different questions into account}{9}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Discussion regarding the 'true variance'}{9}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}Indicator of the Evolution of Individual Responses}{10}{chapter.4}% 
+\contentsline {subsubsection}{Why this new indicator}{10}{section*.15}% 
+\contentsline {subsubsection}{The Indicator of the Evolution of Individual Responses}{10}{section*.16}% 
+\contentsline {subsubsection}{Explain the new indicator}{10}{section*.17}% 
+\contentsline {subsubsection}{Interpretation}{11}{section*.18}% 
+\contentsline {chapter}{\numberline {5}Variance of the Evolution of Individual Responses / Volatility of Responses}{12}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Presentation}{12}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Properties}{13}{subsection.5.1.1}% 
+\contentsline {subsubsection}{Property 1: the variance of Z is bounded between -1 and 1}{13}{section*.19}% 
+\contentsline {subsubsection}{Property 2: }{13}{section*.20}% 
+\contentsline {chapter}{\numberline {6}Seasonal Effects}{14}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}JDemetra+}{14}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}X11}{14}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Seasonal correction of the Indicator}{14}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}Seasonal correction of the Variance}{14}{subsection.6.2.2}% 
+\contentsline {subsection}{\numberline {6.2.3}Seasonal correction of the Indicator of the Evolution}{14}{subsection.6.2.3}% 
+\contentsline {subsection}{\numberline {6.2.4}Seasonal correction of the Variance of Z}{14}{subsection.6.2.4}% 
+\contentsline {subsection}{\numberline {6.2.5}Seasonal correction of the Proportions}{14}{subsection.6.2.5}% 
+\contentsline {section}{\numberline {6.3}Limitations}{14}{section.6.3}% 
+\contentsline {chapter}{\numberline {7}Non-Response, Dropout and Attrition}{15}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Non-Response}{16}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Dropout}{16}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}Attrition}{16}{section.7.3}% 
+\contentsline {chapter}{\numberline {8}Exploratory Analysis}{17}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Data At hand}{17}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Small vs Large}{17}{section.8.2}% 
+\contentsline {section}{\numberline {8.3}By Sector}{17}{section.8.3}% 
+\contentsline {section}{\numberline {8.4}Correlations}{17}{section.8.4}% 
+\contentsline {section}{\numberline {8.5}Correlation between questions}{17}{section.8.5}% 
+\contentsline {section}{\numberline {8.6}Auto-Correlation}{18}{section.8.6}% 
+\contentsline {section}{\numberline {8.7}Correlation with GDP}{19}{section.8.7}% 
+\contentsline {section}{\numberline {8.8}GDP vs Explanatory Indicators}{20}{section.8.8}% 
+\contentsline {section}{\numberline {8.9}Specificity of question 3 and 4, are peoples predictions correct ?}{21}{section.8.9}% 
+\contentsline {chapter}{\numberline {9}Linear (Auto-Regressive) Models}{22}{chapter.9}% 
+\contentsline {section}{\numberline {9.1}Method}{22}{section.9.1}% 
+\contentsline {subsection}{\numberline {9.1.1}Month vs Quarterly data}{22}{subsection.9.1.1}% 
+\contentsline {subsection}{\numberline {9.1.2}Timing of the Data}{22}{subsection.9.1.2}% 
+\contentsline {section}{\numberline {9.2}Linear Model}{22}{section.9.2}% 
+\contentsline {section}{\numberline {9.3}Model}{23}{section.9.3}% 
+\contentsline {section}{\numberline {9.4}Evaluation}{27}{section.9.4}% 
+\contentsline {subsection}{\numberline {9.4.1}R-square}{27}{subsection.9.4.1}% 
+\contentsline {subsection}{\numberline {9.4.2}AIC and BIC}{27}{subsection.9.4.2}% 
+\contentsline {subsection}{\numberline {9.4.3}Mean Square Prediction Error}{27}{subsection.9.4.3}% 
+\contentsline {subsection}{\numberline {9.4.4}Diebold-Mariano Test}{27}{subsection.9.4.4}% 
+\contentsline {subsection}{\numberline {9.4.5}Out-of-Sample performances}{27}{subsection.9.4.5}% 
+\contentsline {section}{\numberline {9.5}log(GDP)}{28}{section.9.5}% 
+\contentsline {section}{\numberline {9.6}Variance(X) VS Variance(Z)}{28}{section.9.6}% 
+\contentsline {section}{\numberline {9.7}Take Question 1 out of the calculation of the Indicator}{28}{section.9.7}% 
+\contentsline {chapter}{\numberline {10}Markov Switching Models}{29}{chapter.10}% 
+\contentsline {subsubsection}{Small Introduction + why are we using it}{29}{section*.43}% 
+\contentsline {section}{\numberline {10.1}Model(s) Specification}{29}{section.10.1}% 
+\contentsline {subsection}{\numberline {10.1.1}Notation}{29}{subsection.10.1.1}% 
+\contentsline {subsection}{\numberline {10.1.2}Model}{29}{subsection.10.1.2}% 
+\contentsline {subsubsection}{Model}{29}{section*.44}% 
+\contentsline {subsubsection}{Transition equation/probability}{30}{section*.45}% 
+\contentsline {chapter}{\numberline {11}Conclusion}{31}{chapter.11}% 
+\contentsline {chapter}{\numberline {12}Discussion}{32}{chapter.12}% 
+\contentsline {section}{\numberline {12.1}Recruitment procedure and panel data}{32}{section.12.1}% 
+\contentsline {section}{\numberline {12.2}Z that takes more periods into account}{32}{section.12.2}% 
+\contentsline {section}{\numberline {12.3}Limitations}{32}{section.12.3}% 
+\contentsline {section}{\numberline {12.4}Improve the Business Survey}{32}{section.12.4}% 
+\contentsline {section}{\numberline {12.5}Further Research}{32}{section.12.5}% 
