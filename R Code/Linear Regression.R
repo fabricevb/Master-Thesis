@@ -38,20 +38,37 @@ data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
 # Linear Models #
 #################
 
+tmp <- forecast(model2, data, h = 10, level = c(80, 95),
+         fan = FALSE, biasadj = NULL, ts = TRUE)
+
+plot.ts(tmp)
+
 # GDP YoY
 model1 <- lm(GDP_year ~ E_I_sa, data = data)
-model2 <- lm(GDP_year ~ E_I_sa + Var_I_sa, data = data)
-model3 <- lm(GDP_year ~ E_I_sa + Var_I_sa + Z_I_sa, data = data)
-model4 <- lm(GDP_year ~ E_I_sa + Var_I_sa + Z_I_sa, data = data)
+model2 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff, data = data)
+model3 <- lm(GDP_year ~ E_I_sa + Var_I_sa, data = data)
+model4 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Var_I_sa, data = data)
+model5 <- lm(GDP_year ~ E_I_sa + Var_I_sa + Z_I_sa, data = data)
+model6 <- lm(GDP_year ~ E_I_sa + Z_I_sa, data = data)
+model7 <- lm(GDP_year ~ E_I_sa + Z_I_sa + Var_Z_I_sa, data = data)
+model8 <- lm(GDP_year ~ E_I_sa + Var_Z_I_sa, data = data)
+model9 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Z_I_sa, data = data)
+model10 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Z_I_sa + Var_Z_I_sa, data = data)
+model11 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Var_Z_I_sa, data = data)
+model12 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Var_I_sa + Z_I_sa + Var_Z_I_sa, data = data)
+
+AIC(model1, model3)
+AIC(model2, model4, model5, model6, model7, model8, model9, model10, model11, model12)$AIC
+
+BIC(model1, model3)
+BIC(model2, model4, model5, model6, model7, model8, model9, model10, model11, model12)$BIC
 
 
-
-
-stargazer(model1, model2, model3, model4, align = TRUE,
+stargazer(model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, align = TRUE,
           intercept.bottom = FALSE,
           single.row = FALSE, 
           df = FALSE,
-          covariate.labels = c("Constant","3 months lag of YoY GDP", "BSI", "Variance"),
+          covariate.labels = c("Constant","BSI", "diff BSI", "Variance", "Z", "Volatility"),
           dep.var.caption  = "Linear Regression",
           dep.var.labels   = "Year on Year GDP (in \\%)")
 
@@ -175,9 +192,8 @@ library(forecast)
 accuracy(model1)
 accuracy(model2)
 
-fore <- forecast(model1, data)
-
-plot(fore)
+fore <- forecast(model1, data, h=24)
+plot(fore$mean)
 
 
 
@@ -219,5 +235,31 @@ plotForecastErrors <- function(forecasterrors)
 plotForecastErrors(model1$residuals)
 fore <- forecast(model1, data)
 plotForecastErrors(fore$residuals)
+
+##############################################
+
+dm.test(model1$residuals, model3$residuals)
+
+
+dm.test(model2$residuals, model4$residuals)
+
+##############################################
+
+# out of sample 
+
+#prepare train and test set
+train <- data[1:144,]
+test <- data[145:372,]
+
+# fitting out of sample
+modelpred1 <- lm(GDP_year ~ E_I_sa + E_I_sa_diff + Var_I_sa + Z_I_sa + Var_Z_I_sa, data = train)
+plot(predict(train.fit, data))
+plot(predict(modelpred1, data))
+
+
+tests$fitted
+plot(tests$fitted)
+
+
 
 

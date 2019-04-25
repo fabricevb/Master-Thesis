@@ -120,6 +120,9 @@ data$An_I <- (data$An_1 + data$An_2 + data$An_3 + data$An_4)/4
 
 data$Z_pp_I <- (data$Z_pp_1 + data$Z_pp_2 + data$Z_pp_3 + data$Z_pp_4)/4
 
+data$E_I_sa_lag1 <- Lag(E_I_sa, 1)
+data$E_I_sa_diff <- data$E_I_sa - data$E_I_sa_lag1
+
 ###############
 
 ###############
