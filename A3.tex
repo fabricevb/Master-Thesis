@@ -1,0 +1,50 @@
+\documentclass[12pt,landscape]{article}
+\usepackage[a3paper]{geometry}
+
+\geometry{margin=0.1in}
+
+
+\usepackage{dcolumn}
+
+\begin{document}
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{12}{c}{Linear Regression} \\ 
+\cline{2-13} 
+\\[-1.8ex] & \multicolumn{12}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)} & \multicolumn{1}{c}{(7)} & \multicolumn{1}{c}{(8)} & \multicolumn{1}{c}{(9)} & \multicolumn{1}{c}{(10)} & \multicolumn{1}{c}{(11)} & \multicolumn{1}{c}{(12)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.453^{***} & 3.478^{***} & -3.862^{***} & -4.013^{***} & -4.009^{***} & 3.476^{***} & -1.990^{***} & -2.034^{***} & 3.481^{***} & -1.989^{***} & -1.994^{***} & -3.931^{***} \\ 
+  & (0.170) & (0.166) & (0.899) & (0.841) & (0.845) & (0.166) & (0.712) & (0.741) & (0.166) & (0.711) & (0.709) & (0.847) \\ 
+  & & & & & & & & & & & & \\ 
+ BSI & 15.186^{***} & 15.406^{***} & 22.166^{***} & 22.696^{***} & 23.078^{***} & 15.717^{***} & 20.501^{***} & 19.851^{***} & 15.566^{***} & 20.349^{***} & 20.194^{***} & 22.695^{***} \\ 
+  & (1.365) & (1.323) & (1.387) & (1.306) & (1.327) & (1.343) & (1.255) & (1.290) & (1.352) & (1.259) & (1.239) & (1.345) \\ 
+  & & & & & & & & & & & & \\ 
+ diff BSI &  & -17.924^{***} &  & -21.927^{***} &  &  &  &  & -11.670 & -12.055 & -18.145^{***} & -13.415 \\ 
+  &  & (6.422) &  & (4.993) &  &  &  &  & (12.004) & (9.775) & (5.233) & (9.274) \\ 
+  & & & & & & & & & & & & \\ 
+ Variance &  &  & 26.936^{***} & 27.669^{***} & 27.650^{***} &  &  &  &  &  &  & 22.626^{***} \\ 
+  &  &  & (3.272) & (3.072) & (3.086) &  &  &  &  &  &  & (5.985) \\ 
+  & & & & & & & & & & & & \\ 
+ Z &  &  &  &  & -25.284^{***} & -20.478^{***} & -20.633^{***} &  & -8.792 & -8.561 &  & -11.014 \\ 
+  &  &  &  &  & (5.951) & (7.638) & (6.234) &  & (14.243) & (11.598) &  & (11.014) \\ 
+  & & & & & & & & & & & & \\ 
+ Volatility &  &  &  &  &  &  & 23.291^{***} & 23.260^{***} &  & 23.309^{***} & 23.315^{***} & 5.489 \\ 
+  &  &  &  &  &  &  & (2.980) & (3.101) &  & (2.973) & (2.967) & (5.492) \\ 
+  & & & & & & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.504} & \multicolumn{1}{c}{0.536} & \multicolumn{1}{c}{0.682} & \multicolumn{1}{c}{0.724} & \multicolumn{1}{c}{0.722} & \multicolumn{1}{c}{0.534} & \multicolumn{1}{c}{0.692} & \multicolumn{1}{c}{0.664} & \multicolumn{1}{c}{0.538} & \multicolumn{1}{c}{0.696} & \multicolumn{1}{c}{0.695} & \multicolumn{1}{c}{0.729} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.500} & \multicolumn{1}{c}{0.528} & \multicolumn{1}{c}{0.677} & \multicolumn{1}{c}{0.717} & \multicolumn{1}{c}{0.715} & \multicolumn{1}{c}{0.526} & \multicolumn{1}{c}{0.684} & \multicolumn{1}{c}{0.658} & \multicolumn{1}{c}{0.526} & \multicolumn{1}{c}{0.686} & \multicolumn{1}{c}{0.687} & \multicolumn{1}{c}{0.717} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.167} & \multicolumn{1}{c}{1.126} & \multicolumn{1}{c}{0.938} & \multicolumn{1}{c}{0.872} & \multicolumn{1}{c}{0.876} & \multicolumn{1}{c}{1.129} & \multicolumn{1}{c}{0.921} & \multicolumn{1}{c}{0.959} & \multicolumn{1}{c}{1.129} & \multicolumn{1}{c}{0.919} & \multicolumn{1}{c}{0.918} & \multicolumn{1}{c}{0.872} \\ 
+F Statistic & \multicolumn{1}{c}{123.760$^{***}$} & \multicolumn{1}{c}{69.317$^{***}$} & \multicolumn{1}{c}{129.635$^{***}$} & \multicolumn{1}{c}{104.119$^{***}$} & \multicolumn{1}{c}{102.833$^{***}$} & \multicolumn{1}{c}{68.709$^{***}$} & \multicolumn{1}{c}{89.116$^{***}$} & \multicolumn{1}{c}{118.379$^{***}$} & \multicolumn{1}{c}{46.100$^{***}$} & \multicolumn{1}{c}{67.510$^{***}$} & \multicolumn{1}{c}{90.176$^{***}$} & \multicolumn{1}{c}{62.950$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{12}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+\end{document}
