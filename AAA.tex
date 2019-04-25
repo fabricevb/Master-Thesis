@@ -51,6 +51,8 @@
 
 \usepackage{subcaption}
 
+\usepackage{pdflscape}
+
 \usepackage{pgfplots}
 \pgfmathdeclarefunction{gauss}{2}{%
   \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
@@ -236,6 +238,7 @@ It's also the first time that à Markov Switching model is used in this context.
 \section*{Keywords}
 Business Surveys - 
 Business Barometer -
+Trichotomous Observations -
 Survey Variance - 
 Markov Switching - 
 
@@ -330,13 +333,17 @@ A business cycle is
     axis lines*=left, 
     axis line style={->},
     xtick={2.2, 4.5, 8.1}, ytick=\empty,
-    xticklabels = {$Peak$, $Peak$, $Peak$},
+    xticklabels = {$Peak$, $Bottom$, $Peak$},
     width=14cm, height=8cm,
     xlabel={time}, ylabel={GDP}
 ]       
 \addplot[mark=none, dashed] coordinates {(2.2, -1) (2.2, 4)};
 \addplot[mark=none, dashed] coordinates {(4.5, -1) (4.5, 1)}; 
-\addplot[mark=none, dashed] coordinates {(8.1, -1) (8.1, 12)}; %\addplot [thick, gray] {x};
+\addplot[mark=none, dashed] coordinates {(8.1, -1) (8.1, 12)}; 
+\addplot[mark=none, dashed] coordinates {(10.9, -1) (10.9, 6.6)}; 
+\addplot[mark=none, dashed] coordinates {(14.3, -1) (14.3, 17.5)}; 
+\addplot[mark=none, dashed] coordinates {(16.7, -1) (16.7, 14.9)}; 
+\addplot [thick, gray] {x};
 \addplot [thick, black] {x + 4*sin(deg(x)) * sin(deg(x/6))^0.5}
 %    node [pos=0.1, anchor=south] {Peak}
     node [pos=0.3, anchor=south, sloped] {Expansion}
@@ -345,7 +352,7 @@ A business cycle is
 ;
 \end{axis}
 \end{tikzpicture}
-    \caption{The GDP}
+    \caption{The Business Cycle of GDP}
     \label{fig:Business Cycle}
 \end{figure}
 
@@ -573,18 +580,16 @@ Equation \ref{var3}
 \Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
 \end{equation}
 
-
 \begin{eqnarray}
 \Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
 	&=& \pi_+ + \pi_- - E ( X )^2 \\
 	&=& 1 - \pi_0 - E(X)^2
 \end{eqnarray}
 
-
+\newpage
 \subsection{Properties}
 
-
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
     \tikzset{
@@ -605,31 +610,32 @@ Equation \ref{var3}
     legend pos= outer north east, legend cell align=left,
      legend style={font=\scriptsize}
      ]       
-    \addplot [thick, bluetitle!100, domain = -1:1] {1 - 0 - x^2};
-    \addplot [thick, bluetitle!95, domain = -0.95:0.95] {1 - 0.05 - x^2};
-    \addplot [thick, bluetitle!90, domain = -0.9:0.9] {1 - 0.1 - x^2};
-    \addplot [thick, bluetitle!85, domain = -0.85:0.85] {1 - 0.15 - x^2};
-    \addplot [thick, bluetitle!80, domain = -0.8:0.8] {1 - 0.2 - x^2};
-    \addplot [thick, bluetitle!75, domain = -0.75:0.75] {1 - 0.25 - x^2};
-    \addplot [thick, bluetitle!70, domain = -0.7:0.7] {1 - 0.3 - x^2};
-    \addplot [thick, bluetitle!65, domain = -0.65:0.65] {1 - 0.35 - x^2};
-    \addplot [thick, bluetitle!60, domain = -0.6:0.6] {1 - 0.4 - x^2};
-    \addplot [thick, bluetitle!55, domain = -0.55:0.55] {1 - 0.45 - x^2};
-    \addplot [thick, bluetitle!50, domain = -0.5:0.5] {1 - 0.5 - x^2};
-    \addplot [thick, bluetitle!45, domain = -0.45:0.45] {1 - 0.55 - x^2};
-    \addplot [thick, bluetitle!40, domain = -0.4:0.4] {1 - 0.6 - x^2};
-    \addplot [thick, bluetitle!35, domain = -0.35:0.35] {1 - 0.65 - x^2};
-    \addplot [thick, bluetitle!30, domain = -0.3:0.3] {1 - 0.7 - x^2};
-    \addplot [thick, bluetitle!25, domain = -0.25:0.25] {1 - 0.75 - x^2};
-    \addplot [thick, bluetitle!20, domain = -0.2:0.2] {1 - 0.8 - x^2};
-    \addplot [thick, bluetitle!15, domain = -0.15:0.15] {1 - 0.85 - x^2};
-    \addplot [thick, bluetitle!10, domain = -0.1:0.1] {1 - 0.9 - x^2};
-    \addplot [thick, bluetitle!05, domain = -0.05:0.05] {1 - 0.95 - x^2};
-    \addplot [thick, bluetitle!03, domain = -0.01:0.01] {1 - 0.99 - x^2};
-     \addplot [thick, red, domain = -1:1] {1 - x^2};
-     \addplot [thick, red, domain = -1:0] { - ((x+0.5)^2) + 0.25};
-     \addplot [thick, red, domain = 0:1] { - ((x-0.5)^2) + 0.25};
-    \addlegendentry{$\pi_N = 0$}
+    \addplot [thick, red, domain = -1:1] {1 - x^2};
+    \addplot [thick, bluetitle!100, domain = -0.95:0.95] {1 - 0.05 - x^2};
+    \addplot [thick, bluetitle!95, domain = -0.9:0.9] {1 - 0.1 - x^2};
+    \addplot [thick, bluetitle!90, domain = -0.85:0.85] {1 - 0.15 - x^2};
+    \addplot [thick, bluetitle!85, domain = -0.8:0.8] {1 - 0.2 - x^2};
+    \addplot [thick, bluetitle!80, domain = -0.75:0.75] {1 - 0.25 - x^2};
+    \addplot [thick, bluetitle!75, domain = -0.7:0.7] {1 - 0.3 - x^2};
+    \addplot [thick, bluetitle!70, domain = -0.65:0.65] {1 - 0.35 - x^2};
+    \addplot [thick, bluetitle!65, domain = -0.6:0.6] {1 - 0.4 - x^2};
+    \addplot [thick, bluetitle!60, domain = -0.55:0.55] {1 - 0.45 - x^2};
+    \addplot [thick, bluetitle!55, domain = -0.5:0.5] {1 - 0.5 - x^2};
+    \addplot [thick, bluetitle!50, domain = -0.45:0.45] {1 - 0.55 - x^2};
+    \addplot [thick, bluetitle!45, domain = -0.4:0.4] {1 - 0.6 - x^2};
+    \addplot [thick, bluetitle!40, domain = -0.35:0.35] {1 - 0.65 - x^2};
+    \addplot [thick, bluetitle!35, domain = -0.3:0.3] {1 - 0.7 - x^2};
+    \addplot [thick, bluetitle!30, domain = -0.25:0.25] {1 - 0.75 - x^2};
+    \addplot [thick, bluetitle!25, domain = -0.2:0.2] {1 - 0.8 - x^2};
+    \addplot [thick, bluetitle!20, domain = -0.15:0.15] {1 - 0.85 - x^2};
+    \addplot [thick, bluetitle!15, domain = -0.1:0.1] {1 - 0.9 - x^2};
+    \addplot [thick, bluetitle!10, domain = -0.05:0.05] {1 - 0.95 - x^2};
+    \addplot [thick, bluetitle!05, domain = -0.01:0.01] {1 - 0.99 - x^2};
+ %    \addplot [thick, black, domain = -1:0] { - ((x+0.5)^2) + 0.25};
+ %    \addplot [thick, black, domain = 0:1] { - ((x-0.5)^2) + 0.25};
+     \addplot [thick, black, domain = -1:0] {-x-x^2};
+     \addplot [thick, black, domain = 0:1] {x-x^2};
+%     \addplot [thick, black, domain = -1:1] {(x^2)*(-y)-(y^2)/2 + y};    \addlegendentry{$\pi_N = 0$}
     \addlegendentry{$\pi_N = 0.05$}
     \addlegendentry{$\pi_N = 0.1$}
     \addlegendentry{$\pi_N = 0.15$}
@@ -652,7 +658,7 @@ Equation \ref{var3}
     \addlegendentry{$\pi_N = 0.99$}
     \end{axis}
     \end{tikzpicture}
-    \caption{Graphical representation of the limits of the variance}
+    \caption{Plot of the BSI on it's variance for different values of $\pi_N$ ($\pi_N = 1 - \pi_+ - \pi_-$)}
     \label{fig:var properties}
 \end{figure}
 
@@ -668,19 +674,73 @@ Equation \ref{var3}
 
 \subsubsection{Property 3: .....}
 
+upper bound : 
+\begin{equation}
+    \Var(X) = 1 - 0 - \E(X)^2
+\end{equation}
 
+lower bound : 
+\begin{eqnarray}
+\Var(X) &=& - (\E(X) + 0,5)^2 + 0,25 \quad \text{where } \Var(X) \text{ is between -1 and 0} \\
+    &=& X - X^2 
+\end{eqnarray}
+
+\begin{eqnarray}
+    \Var(X) &=& - (\E(X) - 0,5)^2 + 0,25 \quad \text{where } \Var(X) \text{ is between 0 and 1} \\
+        &=& - X - X^2
+\end{eqnarray}
+    
+\newpage
 \section{Take different questions into account}
 
 Since 
 
-\begin{equation}
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &\neq&
+    \frac{\Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4})}{16} \nonumber
+\end{eqnarray}
+
+
+\begin{eqnarray}
     \Var \left(\frac{X+Y}{2} \right) = \frac{1}{4} \left( \Var (X) + \Var(Y) + \Cov (X,Y) \right) 
-\end{equation}
+\end{eqnarray}
+
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
+    && + \Cov (X_{Q1},X_{Q2}) + \Cov (X_{Q1},X_{Q3}) + \Cov (X_{Q1},X_{Q4}) \nonumber \\
+    &&  + \Cov (X_{Q2},X_{Q3}) + \Cov (X_{Q2},X_{Q4}) + \Cov (X_{Q3},X_{Q4}) \large] \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
+    &=& \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n} \right) \nonumber \\
+    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} }{4} \right) \nonumber \\
+    &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
+    &=& \frac{1}{16} [ (\pi_{1+} + \pi_{1-} - ( \pi_{1+} - \pi_{1-} )^2) \nonumber
+        + (\pi_{2+} + \pi_{2-} - ( \pi_{2+} - \pi_{2-} )^2) \nonumber \\
+    &&   + (\pi_{3+} + \pi_{3-} - ( \pi_{3+} - \pi_{3-} )^2) \nonumber 
+        + (\pi_{4+} + \pi_{4-} - ( \pi_{4+} - \pi_{4-} )^2) ] \nonumber \\
+    &=& \frac{1}{16} [  (1 - \pi_{1N} - E(X_1)^2) \nonumber 
+     + (1 - \pi_{2N} - E(X_2)^2) \nonumber \\
+    && + (1 - \pi_{3N} - E(X_3)^2) \nonumber 
+     + (1 - \pi_{4N} - E(X_4)^2)] \nonumber \\
+    &=& \frac{1}{16} [ 4 - \pi_{1N} - \pi_{2N} - \pi_{3N} - \pi_{4N} \\
+    &&  - E(X_1)^2) - E(X_2)^2) - E(X_3)^2) - E(X_4)^2)
+        ]
+\end{eqnarray}
+
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
+    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
+    &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
+    &=& \frac{1}{n} [ (\pi_{1+} + \pi_{1-} - ( \pi_{1+} - \pi_{1-} )^2) \nonumber \\
+    &&    + (\pi_{2+} + \pi_{2-} - ( \pi_{2+} - \pi_{2-} )^2) \nonumber \\
+    &&    + \ldots \nonumber \\
+    &&    + (\pi_{n+} + \pi_{n-} - ( \pi_{n+} - \pi_{n-} )^2) ]
+\end{eqnarray}
 
 
-
-
-
+\newpage
 \section{Discussion regarding the 'true variance'}
 
 There is another way to calculate the variance that have been ignored for, that is calculating the variance for each lowest group of globalisation, and then combine those calculated variances.
@@ -830,46 +890,8 @@ Var(Z) &=&
 
 
 
-\chapter{Seasonal Effects}
-The National Bank, before publishing the Business Survey Indicator, applies a X11 seasonal correction
 
-The literature about seasonal effects is very rich and variate
-
-- NBB developed JDemetra+ and has since been recommended by the ECB and Eurostat for all NSI in Europe.
-
-
-at the same time the department of Business Survey uses as a X11 adapted method to correct for seasonality because don't want to correct for previous publications.
-
-
-Methodology \\
-- test for seasonality \\
-- run the analysis without corrections \\
-- apply corrections and see if more accurate \\
-
-
-\section{JDemetra+}
-
-\section{X11}
-
-\subsection{Seasonal correction of the Indicator}
-
-\subsection{Seasonal correction of the Variance}
-
-\subsection{Seasonal correction of the Indicator of the Evolution}
-
-\subsection{Seasonal correction of the Variance of Z}
-
-\subsection{Seasonal correction of the Proportions}
-
-\section{Limitations}
-
-explain the issue of seasonal correction on "future data" 
-
-
-
-\chapter{Non-Response, Dropout and Attrition}
-
-Aside of Seasonal effect, there are three main biases that could arise in the context of the BSI; non-reponse, dropout and attrition
+\chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Between Time and different variables} 
@@ -888,7 +910,7 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[scale=0.5]{Graphs/plot_var.pdf}
+    \includegraphics[scale=0.55]{Graphs/plot_var.pdf}
     \caption{Plot }
     \label{A_corplot}
 \end{figure}
@@ -899,11 +921,13 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
 plot non-response
 
 
-
+\newpage
 \section{Dropout}
 
 Non parametric test \cite{das_nonparametric_2011}
 
+
+\newpage
 \section{Attrition}
 Attrition / Panel Conditioning 
 Master Thesis done about the Belgian Labor Force Survey, where  attrition was studied \cite{priyana_hardjawidjaksana_investigating_2019}
@@ -912,6 +936,39 @@ Non parametric test \cite{das_nonparametric_2011}
 
 
 limitation: only some periods of 
+
+
+\newpage
+\section{Seasonal Effects}
+The National Bank, before publishing the Business Survey Indicator, applies a X11 seasonal correction
+
+The literature about seasonal effects is very rich and variate
+
+- NBB developed JDemetra+ and has since been recommended by the ECB and Eurostat for all NSI in Europe.
+
+
+at the same time the department of Business Survey uses as a X11 adapted method to correct for seasonality because don't want to correct for previous publications.
+
+
+Methodology \\
+- test for seasonality \\
+- run the analysis without corrections \\
+- apply corrections and see if more accurate \\
+
+\subsection{Seasonal correction of the Indicator}
+
+\subsection{Seasonal correction of the Variance}
+
+\subsection{Seasonal correction of the Indicator of the Evolution}
+
+\subsection{Seasonal correction of the Variance of Z}
+
+\subsection{Seasonal correction of the Proportions}
+
+\section{Limitations}
+
+explain the issue of seasonal correction on "future data" 
+
 
 
 \chapter{Exploratory Analysis}
@@ -978,6 +1035,15 @@ cite{Alain Quartier and Isabelle}
 
 
 \subsection*{GDP vs GDP YoY}
+
+\subsection*{What's Year on Year GDP}
+
+\begin{eqnarray}
+    YoY GDP = \frac{GDP_t - GDP_{t-12}}{GDP_{t-12}} 
+\end{eqnarray}
+
+
+\subsection*{Correlation}
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Matrix} 
@@ -1286,6 +1352,11 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
 \end{figure}
 
 
+\begin{landscape}
+    
+\end{landscape}
+
+
 
 \section{Evaluation}
 
@@ -1300,6 +1371,22 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
 
 
 \subsection{Out-of-Sample performances}
+
+
+ME: Mean Error
+
+RMSE: Root Mean Squared Error
+
+MAE: Mean Absolute Error
+
+MPE: Mean Percentage Error
+
+MAPE: Mean Absolute Percentage Error
+
+MASE: Mean Absolute Scaled Error
+
+ACF1: Autocorrelation of errors at lag 1.
+
 
 
 \newpage
