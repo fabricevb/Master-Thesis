@@ -1,3 +1,16 @@
+attach(data)
+
+data$test = (- Ap_1 + Ap_2 + Ap_3 + Ap_4 + An_1 - An_2 - An_3 - An_4)/4
+test
+
+
+
+
+
+
+
+
+
 #################
 # Linear Models #
 #################
@@ -26,10 +39,13 @@ data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
 #################
 
 # GDP YoY
-model1 <- lm(GDP_year ~ E_I, data = data)
-model2 <- lm(GDP_year ~ GDP_year_lag1 + E_I, data = data)
-model3 <- lm(GDP_year ~ GDP_year_lag1 + E_I + Var_I, data = data)
-model4 <- lm(GDP_year ~ E_I + Var_I, data = data)
+model1 <- lm(GDP_year ~ E_I_sa, data = data)
+model2 <- lm(GDP_year ~ E_I_sa + Var_I_sa, data = data)
+model3 <- lm(GDP_year ~ E_I_sa + Var_I_sa + Z_I_sa, data = data)
+model4 <- lm(GDP_year ~ E_I_sa + Var_I_sa + Z_I_sa, data = data)
+
+
+
 
 stargazer(model1, model2, model3, model4, align = TRUE,
           intercept.bottom = FALSE,
@@ -152,4 +168,56 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 
 ggnostic(model1)
+
+
+library(forecast)
+
+accuracy(model1)
+accuracy(model2)
+
+fore <- forecast(model1, data)
+
+plot(fore)
+
+
+
+
+
+
+
+
+
+
+
+# autocorrelation of the residuals
+acf(model2$residuals)
+
+
+plotForecastErrors <- function(forecasterrors)
+{
+  # make a histogram of the forecast errors:
+  mybinsize <- IQR(forecasterrors)/4
+  mysd   <- sd(forecasterrors)
+  mymin  <- min(forecasterrors) - mysd*5
+  mymax  <- max(forecasterrors) + mysd*3
+  # generate normally distributed data with mean 0 and standard deviation mysd
+  mynorm <- rnorm(10000, mean=0, sd=mysd)
+  mymin2 <- min(mynorm)
+  mymax2 <- max(mynorm)
+  if (mymin2 < mymin) { mymin <- mymin2 }
+  if (mymax2 > mymax) { mymax <- mymax2 }
+  # make a red histogram of the forecast errors, with the normally distributed data overlaid:
+  mybins <- seq(mymin, mymax, mybinsize)
+  hist(forecasterrors, col="red", freq=FALSE, breaks=mybins)
+  # freq=FALSE ensures the area under the histogram = 1
+  # generate normally distributed data with mean 0 and standard deviation mysd
+  myhist <- hist(mynorm, plot=FALSE, breaks=mybins)
+  # plot the normal curve as a blue line on top of the histogram of forecast errors:
+  points(myhist$mids, myhist$density, type="l", col="blue", lwd=2)
+}
+
+plotForecastErrors(model1$residuals)
+fore <- forecast(model1, data)
+plotForecastErrors(fore$residuals)
+
 

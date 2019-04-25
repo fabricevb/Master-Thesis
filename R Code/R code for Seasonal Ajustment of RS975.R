@@ -481,6 +481,11 @@ Var_I_model <- x13(Var_I) # X-13ARIMA method
 Z_I_model <- x13(Z_I) # X-13ARIMA method
 Var_Z_I_model <- x13(Var_Z_I) # X-13ARIMA method
 
+data$E_I_sa <- E_I_model$final$series[, "sa"]
+data$Var_I_sa <- Var_I_model$final$series[, "sa"]
+data$Z_I_sa <- append(Z_I_model$final$series[, "sa"], NA, 0)
+data$Var_I_sa <- append(Var_Z_I_model$final$series[, "sa"], NA, 0)
+
 
 par(mfrow=c(2,2))
 
