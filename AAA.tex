@@ -218,15 +218,21 @@ Academic year 2018-2019
 \chapter*{Acknowledgement}
 Thanks my family and friends - 
 
-the National Bank of Belgium Laurent, ... - 
+the National Bank of Belgium Laurent Van Belle, Jean Palate, David ... and all the members of the Department of Research and Development who where always there to answer any of my questions.
+
+... - 
 
 KULeuven
 
 \textit{"Statistics are the heart of democracy." }\\
 - Simeon Strunsky
 
+
 \chapter*{Abstract}
 
+\section*{Samenvatting}
+
+\section*{Abstract}
 This Master Thesis explores the Variance of the Belgian Business Survey. 
 Several finding concerning the nature and properties of the Variance are found as the bounds and relation with the mean.
 
@@ -516,17 +522,45 @@ Here we want to know to what extend respondents agree with each others.
 
 
 \begin{tikzpicture}
-\begin{axis}[every axis plot post/.append style={
-  mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
-  axis x line*=bottom, % no box around the plot, only x and y axis
-  axis y line*=left, % the * suppresses the arrow tips
-  xtick=\empty, ytick=\empty,
-  width=16cm, height=8cm,
-  enlargelimits=upper] % extend the axes a bit to the right and top
-  \addplot {gauss(0,0.5)};
-  \addplot {gauss(0,1)};
-\end{axis}
+    \begin{axis}[every axis plot post/.append style={
+        mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+          axis x line*=bottom, % no box around the plot, only x and y axis
+          axis y line*=left, % the * suppresses the arrow tips
+          xtick=\empty, ytick=\empty,
+          width=16cm, height=8cm,
+          enlargelimits=upper] % extend the axes a bit to the right and top
+          \addplot {gauss(0,0.5)};
+          \addplot {gauss(0,1)};
+        %  \addplot [ybar, bar width=5pt] coordinates { (-1, 1) (0, 3)};
+    \end{axis}
 \end{tikzpicture}
+
+
+
+
+  \begin{tikzpicture} %[font=\small]
+    \begin{axis}[
+      ybar,
+      bar width=20pt,
+      xlabel={Answers},
+      ylabel={Proportion},
+      ymin=0,
+      ytick=\empty,
+      xtick=data,
+      axis x line=bottom,
+      axis y line=left,
+      enlarge x limits=0.2,
+      symbolic x coords={negative,neutral,positive},
+      xticklabel style={anchor=base,yshift=-\baselineskip},
+      nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%}
+    ]
+      \addplot[fill=white] coordinates {
+        (negative,30)
+        (neutral,50)
+        (positive,20)
+      };
+    \end{axis}
+  \end{tikzpicture}
 
 
 
@@ -1379,7 +1413,8 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
  Z &  &  &  &  & -11.584 & -11.014 \\ 
   &  &  &  &  & (10.999) & (11.014) \\ 
   & & & & & & \\ 
- Volatility &  &  &  &  &  & 5.489 \\ 
+ Volatility &  &  &  &  &  & 
+ 5.489 \\ 
   &  &  &  &  &  & (5.492) \\ 
   & & & & & & \\ 
 \hline \\[-1.8ex] 
