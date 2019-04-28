@@ -18,55 +18,53 @@
 \BOOKMARK [1][-]{section.3.3}{Take different questions into account}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.4}{Discussion regarding the 'true variance'}{chapter.3}% 19
 \BOOKMARK [0][-]{chapter.4}{Indicator of the Evolution of Individual Responses}{}% 20
-\BOOKMARK [0][-]{chapter.5}{Variance of the Evolution of Individual Responses / Volatility of Responses}{}% 21
+\BOOKMARK [0][-]{chapter.5}{Variance of the Evolution of Individual Responses \( Volatility of Responses\)}{}% 21
 \BOOKMARK [1][-]{section.5.1}{Presentation}{chapter.5}% 22
 \BOOKMARK [2][-]{subsection.5.1.1}{Properties}{section.5.1}% 23
-\BOOKMARK [0][-]{chapter.6}{Seasonal Effects}{}% 24
-\BOOKMARK [1][-]{section.6.1}{JDemetra+}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.2}{X11}{chapter.6}% 26
-\BOOKMARK [2][-]{subsection.6.2.1}{Seasonal correction of the Indicator}{section.6.2}% 27
-\BOOKMARK [2][-]{subsection.6.2.2}{Seasonal correction of the Variance}{section.6.2}% 28
-\BOOKMARK [2][-]{subsection.6.2.3}{Seasonal correction of the Indicator of the Evolution}{section.6.2}% 29
-\BOOKMARK [2][-]{subsection.6.2.4}{Seasonal correction of the Variance of Z}{section.6.2}% 30
-\BOOKMARK [2][-]{subsection.6.2.5}{Seasonal correction of the Proportions}{section.6.2}% 31
-\BOOKMARK [1][-]{section.6.3}{Limitations}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Non-Response, Dropout and Attrition}{}% 33
-\BOOKMARK [1][-]{section.7.1}{Non-Response}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.2}{Dropout}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.3}{Attrition}{chapter.7}% 36
-\BOOKMARK [0][-]{chapter.8}{Exploratory Analysis}{}% 37
-\BOOKMARK [1][-]{section.8.1}{Data At hand}{chapter.8}% 38
-\BOOKMARK [1][-]{section.8.2}{Small vs Large}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.3}{By Sector}{chapter.8}% 40
-\BOOKMARK [1][-]{section.8.4}{Correlations}{chapter.8}% 41
-\BOOKMARK [1][-]{section.8.5}{Correlation between questions}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.6}{Auto-Correlation}{chapter.8}% 43
-\BOOKMARK [1][-]{section.8.7}{Correlation with GDP}{chapter.8}% 44
-\BOOKMARK [1][-]{section.8.8}{GDP vs Explanatory Indicators}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.9}{Specificity of question 3 and 4, are peoples predictions correct ?}{chapter.8}% 46
-\BOOKMARK [0][-]{chapter.9}{Linear \(Auto-Regressive\) Models}{}% 47
-\BOOKMARK [1][-]{section.9.1}{Method}{chapter.9}% 48
-\BOOKMARK [2][-]{subsection.9.1.1}{Month vs Quarterly data}{section.9.1}% 49
-\BOOKMARK [2][-]{subsection.9.1.2}{Timing of the Data}{section.9.1}% 50
-\BOOKMARK [1][-]{section.9.2}{Linear Model}{chapter.9}% 51
-\BOOKMARK [1][-]{section.9.3}{Model}{chapter.9}% 52
-\BOOKMARK [1][-]{section.9.4}{Evaluation}{chapter.9}% 53
-\BOOKMARK [2][-]{subsection.9.4.1}{R-square}{section.9.4}% 54
-\BOOKMARK [2][-]{subsection.9.4.2}{AIC and BIC}{section.9.4}% 55
-\BOOKMARK [2][-]{subsection.9.4.3}{Mean Square Prediction Error}{section.9.4}% 56
-\BOOKMARK [2][-]{subsection.9.4.4}{Diebold-Mariano Test}{section.9.4}% 57
-\BOOKMARK [2][-]{subsection.9.4.5}{Out-of-Sample performances}{section.9.4}% 58
-\BOOKMARK [1][-]{section.9.5}{log\(GDP\)}{chapter.9}% 59
-\BOOKMARK [1][-]{section.9.6}{Variance\(X\) VS Variance\(Z\)}{chapter.9}% 60
-\BOOKMARK [1][-]{section.9.7}{Take Question 1 out of the calculation of the Indicator}{chapter.9}% 61
-\BOOKMARK [0][-]{chapter.10}{Markov Switching Models}{}% 62
-\BOOKMARK [1][-]{section.10.1}{Model\(s\) Specification}{chapter.10}% 63
-\BOOKMARK [2][-]{subsection.10.1.1}{Notation}{section.10.1}% 64
-\BOOKMARK [2][-]{subsection.10.1.2}{Model}{section.10.1}% 65
-\BOOKMARK [0][-]{chapter.11}{Conclusion}{}% 66
-\BOOKMARK [0][-]{chapter.12}{Discussion}{}% 67
-\BOOKMARK [1][-]{section.12.1}{Recruitment procedure and panel data}{chapter.12}% 68
-\BOOKMARK [1][-]{section.12.2}{Z that takes more periods into account}{chapter.12}% 69
-\BOOKMARK [1][-]{section.12.3}{Limitations}{chapter.12}% 70
-\BOOKMARK [1][-]{section.12.4}{Improve the Business Survey}{chapter.12}% 71
-\BOOKMARK [1][-]{section.12.5}{Further Research}{chapter.12}% 72
+\BOOKMARK [0][-]{chapter.6}{Non-Response, Dropout, Attrition and Seasonal Effects}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Non-Response}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.2}{Dropout}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.3}{Attrition}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.4}{Seasonal Effects}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.4.1}{Seasonal correction of the Indicator}{section.6.4}% 29
+\BOOKMARK [2][-]{subsection.6.4.2}{Seasonal correction of the Variance}{section.6.4}% 30
+\BOOKMARK [2][-]{subsection.6.4.3}{Seasonal correction of the Indicator of the Evolution}{section.6.4}% 31
+\BOOKMARK [2][-]{subsection.6.4.4}{Seasonal correction of the Variance of Z}{section.6.4}% 32
+\BOOKMARK [2][-]{subsection.6.4.5}{Seasonal correction of the Proportions}{section.6.4}% 33
+\BOOKMARK [1][-]{section.6.5}{Limitations}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Exploratory Analysis}{}% 35
+\BOOKMARK [1][-]{section.7.1}{Data At hand}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.2}{Small vs Large}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.3}{By Sector}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.4}{Correlations}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.5}{Correlation between questions}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.6}{Auto-Correlation}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.7}{Correlation with GDP}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.8}{GDP vs Explanatory Indicators}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.9}{Specificity of question 3 and 4, are peoples predictions correct ?}{chapter.7}% 44
+\BOOKMARK [0][-]{chapter.8}{Linear \(Auto-Regressive\) Models}{}% 45
+\BOOKMARK [1][-]{section.8.1}{Method}{chapter.8}% 46
+\BOOKMARK [2][-]{subsection.8.1.1}{Month vs Quarterly data}{section.8.1}% 47
+\BOOKMARK [2][-]{subsection.8.1.2}{Timing of the Data}{section.8.1}% 48
+\BOOKMARK [1][-]{section.8.2}{Linear Model}{chapter.8}% 49
+\BOOKMARK [1][-]{section.8.3}{Model}{chapter.8}% 50
+\BOOKMARK [1][-]{section.8.4}{Evaluation}{chapter.8}% 51
+\BOOKMARK [2][-]{subsection.8.4.1}{R-square}{section.8.4}% 52
+\BOOKMARK [2][-]{subsection.8.4.2}{AIC and BIC}{section.8.4}% 53
+\BOOKMARK [2][-]{subsection.8.4.3}{Mean Square Prediction Error}{section.8.4}% 54
+\BOOKMARK [2][-]{subsection.8.4.4}{Diebold-Mariano Test}{section.8.4}% 55
+\BOOKMARK [2][-]{subsection.8.4.5}{Out-of-Sample performances}{section.8.4}% 56
+\BOOKMARK [1][-]{section.8.5}{log\(GDP\)}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.6}{Variance\(X\) VS Variance\(Z\)}{chapter.8}% 58
+\BOOKMARK [1][-]{section.8.7}{Take Question 1 out of the calculation of the Indicator}{chapter.8}% 59
+\BOOKMARK [0][-]{chapter.9}{Markov Switching Models}{}% 60
+\BOOKMARK [1][-]{section.9.1}{Model\(s\) Specification}{chapter.9}% 61
+\BOOKMARK [2][-]{subsection.9.1.1}{Notation}{section.9.1}% 62
+\BOOKMARK [2][-]{subsection.9.1.2}{Model}{section.9.1}% 63
+\BOOKMARK [0][-]{chapter.10}{Conclusion}{}% 64
+\BOOKMARK [0][-]{chapter.11}{Discussion}{}% 65
+\BOOKMARK [1][-]{section.11.1}{Recruitment procedure and panel data}{chapter.11}% 66
+\BOOKMARK [1][-]{section.11.2}{Z that takes more periods into account}{chapter.11}% 67
+\BOOKMARK [1][-]{section.11.3}{Limitations}{chapter.11}% 68
+\BOOKMARK [1][-]{section.11.4}{Improve the Business Survey}{chapter.11}% 69
+\BOOKMARK [1][-]{section.11.5}{Further Research}{chapter.11}% 70

@@ -224,13 +224,14 @@ the National Bank of Belgium Laurent Van Belle, Jean Palate, David ... and all t
 
 KULeuven
 
+
+
 \textit{"Statistics are the heart of democracy." }\\
 - Simeon Strunsky
 
 
 \chapter*{Abstract}
 
-\section*{Samenvatting}
 
 \section*{Abstract}
 This Master Thesis explores the Variance of the Belgian Business Survey. 
@@ -241,11 +242,17 @@ In a second part, the predictive power of the variance is examined and it's foun
 It's also the first time that à Markov Switching model is used in this context. It was showed that ...
 
 
+\section*{Samenvatting}
+
+Deze master
+
+
 \section*{Keywords}
 Business Surveys - 
 Business Barometer -
 Trichotomous Observations -
 Survey Variance - 
+Survey Volatility -
 Markov Switching - 
 
 \tableofcontents
@@ -259,8 +266,6 @@ Markov Switching -
 
 
 \chapter{Introduction}
-
-\cite{lemasson_enquete_2017}
 
 Business Survey Indicator / Business Barometer / Business Confidence Indicator
 
@@ -308,11 +313,16 @@ changes in 2009 see later (\autoref{section:Objective and Methodology})
 
 ...
 
+
+\newpage
+
 \section{Objective and Methodology}
 \label{section:Objective and Methodology}
 
 A large improvement of the indicator happened in 2009 which was explained in a working paper untitled "The National Bank of Belgium’s new business survey indicator" 
 (\citeauthor{de_greef_national_2009})
+
+
 
 Objectives : 
 
@@ -324,13 +334,22 @@ It can be included in what's now called nowcasting, which is now and short time 
 - inclusion of the services in the global indicator \\
 - lighten smoothing method
 
-\subsubsection{A Business Cycles theory}
+\subsubsection{The Business Cycles Theory}
+
+Before going further, a small summary of business cycle theory. 
 
 As already said, an important role of the Business Survey Indicator, is to identify business cycles.
 
-A business cycle is 
 
-\begin{figure}
+The domain is very wide and a lot of books and articles where published about the subject. 
+
+cite burns 1946
+
+see citations from De Greef
+
+
+
+\begin{figure}[H]
     \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -338,10 +357,11 @@ A business cycle is
     samples=100,
     axis lines*=left, 
     axis line style={->},
-    xtick={2.2, 4.5, 8.1}, ytick=\empty,
-    xticklabels = {$Peak$, $Bottom$, $Peak$},
-    width=14cm, height=8cm,
-    xlabel={time}, ylabel={GDP}
+    xtick={2.2, 4.5, 8.1, 10.9, 14.3, 16.7}, ytick=\empty,
+    xticklabels = {$Peak$, $Bottom$, $Peak$, $Bottom$, $Peak$, $Bottom$},
+    width=14cm, height=6cm,
+%    xlabel={time}, 
+    ylabel={GDP}
 ]       
 \addplot[mark=none, dashed] coordinates {(2.2, -1) (2.2, 4)};
 \addplot[mark=none, dashed] coordinates {(4.5, -1) (4.5, 1)}; 
@@ -358,10 +378,36 @@ A business cycle is
 ;
 \end{axis}
 \end{tikzpicture}
-    \caption{The Business Cycle of GDP}
+
+\begin{tikzpicture}
+\begin{axis}[
+    domain=0:6*pi,
+    samples=100,
+    axis lines*=left, 
+    axis line style={->},
+    xtick={1.6, 4.8, 7.9, 11, 14.1, 17.3}, ytick=\empty,
+    xticklabels = {$Peak$, $Bottom$, $Peak$, $Bottom$, $Peak$, $Bottom$},
+    width=14cm, height=6cm,
+    xlabel={time}, 
+    ylabel={YoY GDP}
+]       
+\addplot [thick, black] {sin(deg(x))}
+%    node [pos=0.1, anchor=south] {Peak}
+    node [pos=0.33, anchor=south, sloped] {Expansion}
+    node [pos=0.5, anchor=south, sloped] {Recession}
+;
+\addplot [thick, black] {0};
+\addplot[mark=none, dashed] coordinates {(1.6, -1.5) (1.6, 1)};
+\addplot[mark=none, dashed] coordinates {(4.8, -1.5) (4.8, -1)}; 
+\addplot[mark=none, dashed] coordinates {(7.9, -1.5) (7.9, 1)}; 
+\addplot[mark=none, dashed] coordinates {(11, -1.5) (11,-1)}; 
+\addplot[mark=none, dashed] coordinates {(14.1, -1.5) (14.1, 1)}; 
+\addplot[mark=none, dashed] coordinates {(17.3, -1.5) (17.3, -1)}; 
+\end{axis}
+\end{tikzpicture}
+    \caption{The Business Cycle theory of GDP and Year on Year GDP}
     \label{fig:Business Cycle}
 \end{figure}
-
 
 
 \subsubsection{Quality Criterion}
@@ -382,16 +428,21 @@ According to the size of the company, measured different ways depending on the s
 
 \subsection{Globalisation procedure}
 
-
+\newpage
 
 \section{Questionnaire}
+
+\subsection*{General presentation}
 .... questionnaire can be found in appendix %\ref{}
 
 
+\subsection*{Questions RS975}
 Questions taken into account for RS975:
 ....
 
 originally question Q18, 27, 32 and 33, for simplicity numbered here as 1, 2, 3 and 4.
+
+see appendix \autopageref{Questionnaire}
 
 
 \newpage
@@ -521,6 +572,7 @@ In statistics, the variance has two m
 Here we want to know to what extend respondents agree with each others.
 
 
+
 \begin{tikzpicture}
     \begin{axis}[every axis plot post/.append style={
         mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
@@ -541,9 +593,9 @@ Here we want to know to what extend respondents agree with each others.
   \begin{tikzpicture} %[font=\small]
     \begin{axis}[
       ybar,
-      bar width=20pt,
-      xlabel={Answers},
-      ylabel={Proportion},
+      bar width=40pt,
+      xlabel={answers},
+      ylabel={proportion},
       ymin=0,
       ytick=\empty,
       xtick=data,
@@ -669,7 +721,8 @@ Equation \ref{var3}
  %    \addplot [thick, black, domain = 0:1] { - ((x-0.5)^2) + 0.25};
      \addplot [thick, black, domain = -1:0] {-x-x^2};
      \addplot [thick, black, domain = 0:1] {x-x^2};
-%     \addplot [thick, black, domain = -1:1] {(x^2)*(-y)-(y^2)/2 + y};    \addlegendentry{$\pi_N = 0$}
+%     \addplot [thick, black, domain = -1:1] {(x^2)*(-y)-(y^2)/2 + y};    
+	\addlegendentry{$\pi_N = 0$}
     \addlegendentry{$\pi_N = 0.05$}
     \addlegendentry{$\pi_N = 0.1$}
     \addlegendentry{$\pi_N = 0.15$}
@@ -750,27 +803,12 @@ Since
     &=& \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n} \right) \nonumber \\
     &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} }{4} \right) \nonumber \\
     &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
-    &=& \frac{1}{16} [ (\pi_{1+} + \pi_{1-} - ( \pi_{1+} - \pi_{1-} )^2) \nonumber
-        + (\pi_{2+} + \pi_{2-} - ( \pi_{2+} - \pi_{2-} )^2) \nonumber \\
-    &&   + (\pi_{3+} + \pi_{3-} - ( \pi_{3+} - \pi_{3-} )^2) \nonumber 
-        + (\pi_{4+} + \pi_{4-} - ( \pi_{4+} - \pi_{4-} )^2) ] \nonumber \\
-    &=& \frac{1}{16} [  (1 - \pi_{1N} - E(X_1)^2) \nonumber 
-     + (1 - \pi_{2N} - E(X_2)^2) \nonumber \\
-    && + (1 - \pi_{3N} - E(X_3)^2) \nonumber 
-     + (1 - \pi_{4N} - E(X_4)^2)] \nonumber \\
-    &=& \frac{1}{16} [ 4 - \pi_{1N} - \pi_{2N} - \pi_{3N} - \pi_{4N} \\
-    &&  - E(X_1)^2) - E(X_2)^2) - E(X_3)^2) - E(X_4)^2)
-        ]
 \end{eqnarray}
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
     &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
     &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
-    &=& \frac{1}{n} [ (\pi_{1+} + \pi_{1-} - ( \pi_{1+} - \pi_{1-} )^2) \nonumber \\
-    &&    + (\pi_{2+} + \pi_{2-} - ( \pi_{2+} - \pi_{2-} )^2) \nonumber \\
-    &&    + \ldots \nonumber \\
-    &&    + (\pi_{n+} + \pi_{n-} - ( \pi_{n+} - \pi_{n-} )^2) ]
 \end{eqnarray}
 
 
@@ -853,7 +891,7 @@ E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} =
 
 
 
-\chapter{Variance of the Evolution of Individual Responses / Volatility of Responses} \label{Chapter:Z}
+\chapter{Variance of the Evolution of Individual Responses (Volatility of Responses)} \label{Chapter:Z}
 
 That we will also call the \textbf{volatility of the indicator}, in the sens that the variance of the evolution of the indicator account for the dispersion of the difference in answers over a two times period.
 
@@ -946,7 +984,7 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.55]{Graphs/plot_var.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{XXXX}
 \end{figure}
 
 
@@ -989,15 +1027,15 @@ Methodology \\
 - run the analysis without corrections \\
 - apply corrections and see if more accurate \\
 
-\subsection{Seasonal correction of the Indicator}
+\subsection*{Seasonal correction of the Indicator}
 
-\subsection{Seasonal correction of the Variance}
+\subsection*{Seasonal correction of the Variance}
 
-\subsection{Seasonal correction of the Indicator of the Evolution}
+\subsection*{Seasonal correction of the Indicator of the Evolution}
 
-\subsection{Seasonal correction of the Variance of Z}
+\subsection*{Seasonal correction of the Variance of Z}
 
-\subsection{Seasonal correction of the Proportions}
+\subsection*{Seasonal correction of the Proportions}
 
 \section{Limitations}
 
@@ -1049,7 +1087,7 @@ E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/ACF.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{ACF}
 \end{figure}
 
 \begin{figure}[H]
@@ -1057,7 +1095,7 @@ E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.45]{Graphs/ACF_GDP.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{ACF_GDP}
 \end{figure}
 
 
@@ -1103,7 +1141,7 @@ E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
     \centering
     \includegraphics[scale=0.5]{Graphs/ggpairs.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{ggpairs}
 \end{figure}
 
 
@@ -1131,7 +1169,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
     \centering
     \includegraphics[scale=0.5]{Graphs/ggpairs2.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{ggpairs2}
 \end{figure}
 
 \subsection*{GDP vs Indicator}
@@ -1300,7 +1338,7 @@ F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/pred1.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{pred1}
 \end{figure}
 
 
@@ -1340,7 +1378,7 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/pred2.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{pred2}
 \end{figure}
 
 
@@ -1382,7 +1420,7 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/pred3.pdf}
     \caption{Plot }
-    \label{A_corplot}
+    \label{pred3}
 \end{figure}
 
 
@@ -1649,7 +1687,7 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 %    \captionsetup{justification=centering}
     \includegraphics[scale=0.75]{Images/IndustryN.pdf}
     \caption{The Business Survey Questionnaire in Dutch for the Industrial Sector}
-    \label{B_pred}
+    \label{Questionnaire}
 \end{figure}
 
 \newpage
