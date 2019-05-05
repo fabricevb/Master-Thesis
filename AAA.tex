@@ -51,7 +51,11 @@
 
 \usepackage{subcaption}
 
+\usepackage{wrapfig}
+
 \usepackage{pdflscape}
+
+\usepackage{wasysym}
 
 \usepackage{pgfplots}
 \pgfmathdeclarefunction{gauss}{2}{%
@@ -225,7 +229,7 @@ the National Bank of Belgium Laurent Van Belle, Jean Palate, David ... and all t
 KULeuven
 
 
-
+\vfill
 \textit{"Statistics are the heart of democracy." }\\
 - Simeon Strunsky
 
@@ -281,37 +285,80 @@ Since 1968, the National Bank of Belgium publishes each month the national
 
 %%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is surveybased indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo Business Survey Christian Seiler Christian Heumann)
 
-
+\lipsum[5]
 
 
 \chapter{The Business Survey Indicator}
 
-This first chapter is a more general description of the Belgian Business Survey Indicator, that we will also call the Business Barometer.
-We will present it different calculations, the weighting that are applied and 
-
-explain the two types of weightings
+%This first chapter is a more general description of the Belgian Business Survey %Indicator, that we will also call the Business Barometer.
+%We will first go thought the evolution of the barometer since it was born, 
+%then look into the sampling method,
+%and finally the calculation methods will be explained.
 
 \section{History}
 
 In 1954 started the Business Survey of the National Bank of Belgium. 
+Some years later, in 1961, the European Commission launched an harmonisation program of the business survey in the manufacturing industry. 
+Since then, the sector coverage of the programme has widened considerably. The Business Survey programme was extended to the construction sector and the investment plans in the manufacturing sector in 1966, to consumers in 1972, to the retail trade in 1984, and to the services sector in 1996.
+More information ca be found in the "The Joint Harmonised EU Programme of Business and Consumer Surveys User Guide" \cite{european_commission_joint_2016}.
 
-At the European level, in 1961, is launched the launched by the Commission decision of 15 November 1961. The first survey was the harmonised business survey in the manufacturing industry conducted in 1962. Since then, the sector coverage of the programme has widened considerably. The BCS programme was extended to the construction sector and to investment plans in the manufacturing sector in 1966, to consumers in 1972, to the retail trade in 1984, and to the services sector in 1996.
-More info see \citep{european_commission_joint_nodate}
+At the Belgian level, it was in 1972, that results where first synthesised in an indicator.
+The Business Survey Barometer started by including only the industrial sector. It was then small by small unlarged to other sectors: construction (19XX), trade (19XX) and services (19XX).
 
-Almost 20 years later, in 1972, results where first synthesised in an indicator. It has since then been well known for been a very informative and useful indicator. For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy and of it predictions.
-
-Today, Nowcasting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
-
-With the study of business cycles, that will be looked at more in details in part ...., nowcasting are two important objectives that will be looked at in this work.
+It has since then been well known for been a very informative and useful indicator. For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy of its predictions.
 
 Due to the structure of Belgian economy and ... it was also shown as been a good predictor for the European economy \cite{vanhaelen_belgian_2000}
 
-changes in 2009 see later (\autoref{section:Objective and Methodology})
+Today, Nowcasting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
+
+Several improvement where proposed and applied over time. The last time was in 2009, they will be discussed in detail in \autoref{section:Objective and Methodology}.
+
+\newpage
+
+\section{Recruitment of participants Method}
+
+The Belgian business survey Barometer (as most of the business survey around the world), has the particularity of putting aside the theory regarding random sampling.
+Indeed, The selection of participants is quite complex and a lot of decision made are "human decisions". Never is a statistical program or a looting system used to select new participants.
+
+Without going to much into details. The selections of new participants is done by "waves" when the department of "indice de conjoncture" decide that there aren't enough participants anymore. 
+The decision is then made, there are some discussion to decide for an optimal amount of new participants needed, regarding 
+
+An important side of Business Survey is that people are staying as long as possible in the survey.
 
 
-\section{Sampling Method}
 
-...
+We will speak here rather of prospecting than sampling. indeed the Business Survey 
+
+$><$ Household survey where random sampling / stratified sampling is used
+
+\subsubsection*{Why not a problem that RS isn't used}
+
+From a statistical point of view, it can be rather problematic to draw general conclusions over a populations when Random Sampling is not in use.
+
+There are two main objections to this.
+The method used tries to represent as good as possible the population that it wants to represent. Therefor stratification is used at a quite advanced level. 
+ 
+Indeed each sector is composed of a quite advanced stratification, for example the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. A representation of the classification ca be seen in \autoref{fig:tree}.
+
+When a new recruitment procedure is started, it's looked at those branches to see, based on there importance in Belgian economy, which could take advantage of having more respondents. For example, if in the sector of brewery represents 1 \% of Belgian GDP but only 0.1 \% of respondents
+
+This is by also taking into account the size of companies in each branch. 
+
+Therefor this procedure is quite complex and contains a lot human decisions.
+
+As will seen in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure}, the companies are look at which sector/branch they are part, it
+ 
+ We could call this recruitment method: non-random stratification.
+ 
+ 
+ The Business Survey Indicator has the particularity of having no interest on its own. Indeed having a BSI equal to 0.5 or 0.1 don't mean anything, what's important is the evolution of the indicator, if it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand if it's now equal to 0.1, it means a decrease in economical confidence among businesses and we can anticipate a deceleration/decrease of GDP over that period.
+
+This means that people participate for a long time to the survey
+will be discussed in chapter .... and ....
+
+\subsubsection*{Leaving the Survey}
+
+One  people get in the Survey
 
 
 \newpage
@@ -319,10 +366,8 @@ changes in 2009 see later (\autoref{section:Objective and Methodology})
 \section{Objective and Methodology}
 \label{section:Objective and Methodology}
 
-A large improvement of the indicator happened in 2009 which was explained in a working paper untitled "The National Bank of Belgium’s new business survey indicator" 
+A large improvement of the indicator happened in 2009 which was explained in a working paper titled "The National Bank of Belgium’s new business survey indicator" 
 (\citeauthor{de_greef_national_2009})
-
-
 
 Objectives : 
 
@@ -334,7 +379,21 @@ It can be included in what's now called nowcasting, which is now and short time 
 - inclusion of the services in the global indicator \\
 - lighten smoothing method
 
-\subsubsection{The Business Cycles Theory}
+Qualitative information
+
+
+\subsection{Quality Criterion}
+- high correlation with Economical Indicators \\
+- fluctuation that's mostly explained by the conjuncture\\
+- predictive power for the future months 
+
+
+
+
+\newpage
+
+\subsection{Business Cycles}
+\label{sec:Business Cycles}
 
 Before going further, a small summary of business cycle theory. 
 
@@ -343,9 +402,35 @@ As already said, an important role of the Business Survey Indicator, is to ident
 
 The domain is very wide and a lot of books and articles where published about the subject. 
 
-cite burns 1946
+Already in 1946, \citeauthor{mitchell_measuring_1946} published the book "\textit{Measuring Business Cycles}". They 
+Business cycles where described as recursive fluctuations, affecting macroeconomics variables.
 
-see citations from De Greef
+Business cycles are putting aside other effects like seasonal variation and other small variations. It is taking into account a larger trend in the economy.
+
+\subsection*{Duration of a Business Cycle}
+
+\autoref{fig:Business Cycle} can give the false impression that business cycles are of the same length, this is, in real life, not so simple.
+
+\cite{mitchell_measuring_1946} stated a minimum duration of 16-22 months and a maximum duration of 100-106 months. 
+
+Interesting data to look at regarding 
+
+
+
+\subsection*{What's GDP and Year on Year GDP}
+
+As seen, business cycles are defined by several macroeconomic variables. 
+Gross domestic income (GDI), unemployment, ...
+
+But the main indicator, is the GDP
+
+Later on we will also use YoY GDP, for x reasons
+
+\begin{eqnarray}
+    YoY GDP = \frac{GDP_t - GDP_{t-12}}{GDP_{t-12}} 
+\end{eqnarray}
+
+\autoref{fig:Business Cycle} shows a simplified version of the theory
 
 
 
@@ -358,7 +443,7 @@ see citations from De Greef
     axis lines*=left, 
     axis line style={->},
     xtick={2.2, 4.5, 8.1, 10.9, 14.3, 16.7}, ytick=\empty,
-    xticklabels = {$Peak$, $Bottom$, $Peak$, $Bottom$, $Peak$, $Bottom$},
+    xticklabels = {$Peak$, $Trough$, $Peak$, $Trough$, $Peak$, $Trough$},
     width=14cm, height=6cm,
 %    xlabel={time}, 
     ylabel={GDP}
@@ -386,7 +471,7 @@ see citations from De Greef
     axis lines*=left, 
     axis line style={->},
     xtick={1.6, 4.8, 7.9, 11, 14.1, 17.3}, ytick=\empty,
-    xticklabels = {$Peak$, $Bottom$, $Peak$, $Bottom$, $Peak$, $Bottom$},
+    xticklabels = {$Peak$, $Trough$, $Peak$, $Trough$, $Peak$, $Trough$},
     width=14cm, height=6cm,
     xlabel={time}, 
     ylabel={YoY GDP}
@@ -409,12 +494,44 @@ see citations from De Greef
     \label{fig:Business Cycle}
 \end{figure}
 
-
-\subsubsection{Quality Criterion}
-- high correlation with Economical Indicators \\
-- fluctuation that's mostly explained by the conjuncture\\
-- predictive power for the future months 
-
+\begin{figure}
+    \centering
+\begin{tikzpicture}
+\begin{axis}[
+    domain=0:6*pi,
+    samples=100,
+    axis lines*=left, 
+    axis line style={->},
+    xtick={2103, 2161, 2167, 2179, 2195, 2287, 2300, 2415,2430, 2496, 2514}, ytick=\empty,
+    xticklabels = {$1975$, $1980$,  , , $1982$, $1990$, , $2001$, , ,$2007-2009$},
+    width=14cm, height=6cm
+%    xlabel={time} 
+%    ylabel={YoY GDP}
+]       
+    \addplot[smooth, mark=*,black] plot coordinates {
+	(2103,-1)
+    (2161,1)	(2167,-1)
+    (2179,1)	(2195,-1)
+    (2287,1)	(2300,-1)
+    (2415,1)	(2430,-1)
+    (2496,1)	(2514,-1)
+    };
+\addplot[mark=none, dashed] coordinates {(2103, -1.5) (2103, -1)};
+\addplot[mark=none, dashed] coordinates {(2161, -1.5) (2161, 1)}; 
+\addplot[mark=none, dashed] coordinates {(2167, -1.5) (2167, -1)}; 
+\addplot[mark=none, dashed] coordinates {(2179, -1.5) (2179, 1)}; 
+\addplot[mark=none, dashed] coordinates {(2195, -1.5) (2195,-1)}; 
+\addplot[mark=none, dashed] coordinates {(2287, -1.5) (2287, 1)}; 
+\addplot[mark=none, dashed] coordinates {(2300, -1.5) (2300,-1)}; 
+\addplot[mark=none, dashed] coordinates {(2415, -1.5) (2415, 1)}; 
+\addplot[mark=none, dashed] coordinates {(2430, -1.5) (2430, -1)}; 
+\addplot[mark=none, dashed] coordinates {(2496, -1.5) (2496, 1)}; 
+\addplot[mark=none, dashed] coordinates {(2514, -1.5) (2514, -1)}; 
+\end{axis}
+\end{tikzpicture}
+    \caption{Business cycles from 1975 to 2009 of the American Economy according to the NBER}
+    \label{fig:NBER BS}
+\end{figure}
 
 
 
@@ -422,30 +539,67 @@ see citations from De Greef
 more information can be found in \cite{de_greef_national_2009}
 
 
-\subsection{Weighting procedure}
-
-According to the size of the company, measured different ways depending on the sector ........
-
-\subsection{Globalisation procedure}
-
 \newpage
 
-\section{Questionnaire}
+\subsection{Questionnaire}
+\label{sec:Questionnaire}
 
 \subsection*{General presentation}
-.... questionnaire can be found in appendix %\ref{}
+
+Almost the same for everyone, some differences depending on the sector (Industry $\neq$ Services)
 
 
-\subsection*{Questions RS975}
-Questions taken into account for RS975:
+Answers are giving by mail, email, on the phone or by fax.
+
+
+\subsection*{Questions NS975}
+Questions taken into account for NS975:
 ....
 
 originally question Q18, 27, 32 and 33, for simplicity numbered here as 1, 2, 3 and 4.
 
-see appendix \autopageref{Questionnaire}
+\subsubsection*{Verloop en beoordeling}
+\begin{enumerate}
+    \item Uw huidige voorraad van dit product beschouwt u, voor het seizoen, als: \\
+	$\Square$	hoger dan normaal (te hoog)	$\Square$	normaal (voldoende)	$\Square$ lager dan normaal (te laag)
+	
+    \item Uw huidige gezamenlijke orderpositie voor dit product beschouwt u als: \\
+	$\Square$ hoger dan normaal $\Square$ normaal $\Square$ lager dan normaal
+\end{enumerate}
+
+\subsubsection*{Vooruitzichten voor de volgende drie maanden} 
+\begin{enumerate}
+\setcounter{enumi}{2}
+    \item Het personeel (arbeiders en technici) tewerkgesteld voor de fabricatie van dit product zal volgens u: \\
+	$\Square$ worden uitgebreid $\Square$ onveranderd blijven $\Square$ worden verminderd
+						
+    \item De vraag van uw klanten naar dit product zal volgens u:  \\
+	$\Square$ belangrijker $\Square$ even belangrijk $\Square$ minder belangrijk \\	
+	zijn dan gewoonlijk tijdens die periode van het jaar.
+\end{enumerate}
+
+The first question has to be interpreted the opposite way as of the three other questions. ...
 
 
-\newpage
+\subsubsection*{Changes over time}
+
+Questionnaire in 1990 (\autoref{Questionnaire1990}) almost same as today
+
+
+see appendix \autopageref{Questionnaire2018} for the full questionnaire
+
+
+\subsection{Weighting procedure}
+\label{sec:Weighting procedure}
+
+According to the size of the company, measured different ways depending on the sector ........
+
+\subsection{Globalisation procedure}
+\label{sec:Globalisation procedure}
+Based on the size of the sector in which the company is.
+The globalisation procedure got quite complex over time. See the globalisation tree for the Industry survey \autopageref{fig:tree}
+
+
 
 \section{Calculation of the Indicator}
 
@@ -491,7 +645,6 @@ ${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=
 where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
 
 
-\newpage
 
 \subsection{Weighted Indicator}
 
@@ -555,7 +708,7 @@ can also been seen as the mean of the answers for each participant at each perio
 \end{equation}
 
 
-\chapter{Variance of the Indicator}
+\chapter{The Variance of the Indicator}
 
 The variance is, with the mean, one of the first tool for Statisticians to study a certain variable.
 
@@ -571,25 +724,27 @@ In statistics, the variance has two m
 
 Here we want to know to what extend respondents agree with each others.
 
-
-
+\begin{figure}
+    \centering
 \begin{tikzpicture}
     \begin{axis}[every axis plot post/.append style={
         mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
           axis x line*=bottom, % no box around the plot, only x and y axis
           axis y line*=left, % the * suppresses the arrow tips
           xtick=\empty, ytick=\empty,
-          width=16cm, height=8cm,
+          width=10cm, height=4cm,
           enlargelimits=upper] % extend the axes a bit to the right and top
           \addplot {gauss(0,0.5)};
           \addplot {gauss(0,1)};
         %  \addplot [ybar, bar width=5pt] coordinates { (-1, 1) (0, 3)};
     \end{axis}
 \end{tikzpicture}
+    \caption{The Variance}
+    \label{fig:var_explanation}
+\end{figure}
 
-
-
-
+\begin{figure}
+    \centering
   \begin{tikzpicture} %[font=\small]
     \begin{axis}[
       ybar,
@@ -613,10 +768,16 @@ Here we want to know to what extend respondents agree with each others.
       };
     \end{axis}
   \end{tikzpicture}
+    \caption{Caption}
+    \label{fig:hist_example}
+\end{figure}
+
 
 
 
 \subsubsection{difference sampling error and variance}
+
+precision
 
 here variance is a measure of the "dispersion" of the answers.
 
@@ -660,7 +821,7 @@ Equation \ref{var3}
 
 
 
-\section{Generalization for Weighted Indicators / Variance of the Weighted Indicator}
+\section{Variance of the Weighted Indicator}
 
 \begin{equation}
 \Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
@@ -672,10 +833,10 @@ Equation \ref{var3}
 	&=& 1 - \pi_0 - E(X)^2
 \end{eqnarray}
 
-\newpage
+
 \subsection{Properties}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{tikzpicture}
     \tikzset{
@@ -777,7 +938,7 @@ lower bound :
         &=& - X - X^2
 \end{eqnarray}
     
-\newpage
+
 \section{Take different questions into account}
 
 Since 
@@ -813,6 +974,7 @@ Since
 
 
 \newpage
+
 \section{Discussion regarding the 'true variance'}
 
 There is another way to calculate the variance that have been ignored for, that is calculating the variance for each lowest group of globalisation, and then combine those calculated variances.
@@ -829,7 +991,7 @@ The reasons why it will not be used here
 
 
 
-\chapter{Indicator of the Evolution of Individual Responses}
+\chapter{The Indicator of the Evolution of Individual Responses}
 
  \subsubsection{Why this new indicator}
 
@@ -889,9 +1051,28 @@ E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} =
 
 
 
+\section{Generalisation for n time frames}
+
+Changes in the economy are usually taking several months to 
+
+Therefor it's interesting to take a larger period into account.
+
+There are mainly to ways to generalise this method. \\ A simple generalisation is to use t-n rather than t-1. You compare then that period t-n with the the answer at t, without taking the between answers into account.
+
+Another generalisation is as follow
 
 
-\chapter{Variance of the Evolution of Individual Responses (Volatility of Responses)} \label{Chapter:Z}
+\subsection{Take the evolution from t-n to t}
+
+To keep it simple, rather than comparing the answers at t with t-1, we can also look at t vs t-2 and so on
+
+
+
+
+
+
+
+\chapter{The Variance of the Evolution of Individual Responses (Volatility of Responses)} \label{Chapter:Z}
 
 That we will also call the \textbf{volatility of the indicator}, in the sens that the variance of the evolution of the indicator account for the dispersion of the difference in answers over a two times period.
 
@@ -982,7 +1163,7 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[scale=0.55]{Graphs/plot_var.pdf}
+    \includegraphics[scale=0.5]{Graphs/plot_var.pdf}
     \caption{Plot }
     \label{XXXX}
 \end{figure}
@@ -1038,7 +1219,8 @@ Methodology \\
 \subsection*{Seasonal correction of the Proportions}
 
 \section{Limitations}
-
+ ?? 
+ 
 explain the issue of seasonal correction on "future data" 
 
 
@@ -1107,12 +1289,6 @@ cite{Alain Quartier and Isabelle}
 
 
 \subsection*{GDP vs GDP YoY}
-
-\subsection*{What's Year on Year GDP}
-
-\begin{eqnarray}
-    YoY GDP = \frac{GDP_t - GDP_{t-12}}{GDP_{t-12}} 
-\end{eqnarray}
 
 
 \subsection*{Correlation}
@@ -1510,6 +1686,10 @@ ACF1: Autocorrelation of errors at lag 1.
 
 \section{Take Question 1 out of the calculation of the Indicator}
 
+\section{until 2012 to see if variance still significant, not attrition creating effect}
+
+
+
 \chapter{Markov Switching Models}
 
 
@@ -1650,8 +1830,12 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
  
 
 \chapter*{List of Abbreviations}
-  BSI Business Survey Indicator \\
-  GDP   \\
+
+\begin{tabular}{l l}
+  BSI  & Business Survey Indicator \\
+  GDP & Gross Domestic Product 
+\end{tabular}
+
   
 \begin{appendix}
   \listoffigures
@@ -1686,8 +1870,16 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \centering
 %    \captionsetup{justification=centering}
     \includegraphics[scale=0.75]{Images/IndustryN.pdf}
-    \caption{The Business Survey Questionnaire in Dutch for the Industrial Sector}
-    \label{Questionnaire}
+    \caption{The Business Survey Questionnaire in Dutch for the Industrial Sector in 2018}
+    \label{Questionnaire2018}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+%    \captionsetup{justification=centering}
+    \includegraphics[scale=0.75]{Images/4100N_v1990.pdf}
+    \caption{The Business Survey Questionnaire in Dutch for the Industrial Sector in 1990}
+    \label{Questionnaire1990}
 \end{figure}
 
 \newpage
@@ -1704,8 +1896,8 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \centering
 %    \captionsetup{justification=centering}
     \includegraphics[scale=0.1]{Images/tree2.jpg}
-    \caption{ }
-    \label{ }
+    \caption{XXXX}
+    \label{fig:tree}
 \end{figure}
 
 
