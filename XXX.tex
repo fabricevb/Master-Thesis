@@ -264,6 +264,54 @@ F Statistic & \multicolumn{1}{c}{121.091$^{***}$} & \multicolumn{1}{c}{172.776$^
 \end{tikzpicture}
 
 
+\begin{figure}
+    \centering
+\begin{tikzpicture}
+    \begin{axis}[every axis plot post/.append style={
+        mark=none,domain=-3:3,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+          axis x line*=bottom, % no box around the plot, only x and y axis
+          axis y line*=left, % the * suppresses the arrow tips
+          xtick=\empty, ytick=\empty,
+          width=10cm, height=4cm,
+          enlargelimits=upper] % extend the axes a bit to the right and top
+          \addplot {gauss(0,0.5)};
+          \addplot {gauss(0,1)};
+        %  \addplot [ybar, bar width=5pt] coordinates { (-1, 1) (0, 3)};
+    \end{axis}
+\end{tikzpicture}
+    \caption{The Variance}
+    \label{fig:var_explanation}
+\end{figure}
+
+\begin{figure}
+    \centering
+  \begin{tikzpicture} %[font=\small]
+    \begin{axis}[
+      ybar,
+      bar width=40pt,
+      xlabel={answers},
+      ylabel={proportion},
+      ymin=0,
+      ytick=\empty,
+      xtick=data,
+      axis x line=bottom,
+      axis y line=left,
+      enlarge x limits=0.2,
+      symbolic x coords={negative,neutral,positive},
+      xticklabel style={anchor=base,yshift=-\baselineskip},
+      nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%}
+    ]
+      \addplot[fill=white] coordinates {
+        (negative,30)
+        (neutral,50)
+        (positive,20)
+      };
+    \end{axis}
+  \end{tikzpicture}
+    \caption{Caption}
+    \label{fig:hist_example}
+\end{figure}
+
 
 
 \end{document}
