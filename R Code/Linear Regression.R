@@ -17,6 +17,8 @@ library(tidyr)
 library(reshape2)
 library(pracma)
 library(scales)
+library(ggfortify)
+library(forecast)
 
 # upload data
 data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
@@ -248,7 +250,3 @@ plot(predict(modelpred1, data))
 
 tests$fitted
 plot(tests$fitted)
-
-
-
-

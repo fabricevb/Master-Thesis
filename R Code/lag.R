@@ -1,14 +1,5 @@
 
-
-
-
-
-#########################################
-# Create lags for simplicity in dataset #
-#########################################
-
-attach(data)
-
+# upload packages
 library(Hmisc)
 library(xtable)
 library(stargazer)
@@ -17,16 +8,22 @@ library(readxl)
 library(pracma)
 
 
+#########################################
+# Create lags for simplicity in dataset #
+#########################################
+
+# upload data from the "datasets" folder
 data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
 
 # add date formated column
 data$date <- as.Date(period)
 
-# add an observation 
+# add an observation column 
 data$Obs = 1:nrow(data)
 
 # create a plotable variable for GDP with a linearized filling of the NA's
 data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
+data$GDP_plot <- with(data, interp1(Obs, GDP, Obs, "linear"))
 
 
 ###################
@@ -133,10 +130,15 @@ data$E_I_lag1 <- Lag(E_I, -1)
 data$E_I_lag2 <- Lag(E_I, -2)
 data$E_I_lag3 <- Lag(E_I, -3)
 data$E_I_lag4 <- Lag(E_I, -4)
-
+data$E_I_lag1 <- Lag(E_I, -1)
+data$Var_I_lag1 <- Lag(Var_I, -2)
+data$Z_I_lag1 <- Lag(Z_I, -3)
+data$Var_Z_I_lag1 <- Lag(Var_Z_I, -4)
 
 # difference
   data$E_I_diff <- data$E_I - data$E_I_lag1
+  
+  
 
 
 ###############################

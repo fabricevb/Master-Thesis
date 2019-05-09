@@ -25,26 +25,23 @@ data_ts = ts(data, start=c(1988,1), frequency=12)
 #### GDP corr with the different indicators
 stargazer(cor(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")])), title="Correlation Matrix")
 
-ggpairs(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")], colour = "cyl", upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
-
-# corrplot(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]), method="circle")
+ggpairs(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")], 
+        colour = "cyl", upper = list(continuous = wrap("cor", size = 6)))  + theme_bw()
 
 
 #### GDP corr with the different indicators
 stargazer(cor(na.omit(data[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
 
-ggpairs(data[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
+ggpairs(data[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], 
+        upper = list(continuous = wrap("cor", size = 6)))  + theme_bw()
 
 
 
 ###### Correlation with indicators
 stargazer(cor(na.omit(data[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
 
-ggpairs(data[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
-
-
-
-
+ggpairs(data[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], 
+        upper = list(continuous = wrap("cor", size = 6)))  + theme_bw()
 
 
 
@@ -118,13 +115,4 @@ par(mfrow=c(1,1))
 #ggpairs(data[c("period", "E_4", "Var_4", "Z_4", "Var_Z_4")])
 
 #ggpairs(data[c("GDP_year", "E_1", "E_2", "E_3", "E_4")])
-
-ggpairs(data[c("period", "E_I", "Var_I", "Z_I", "Var_Z_I")])
-
-
-
-###############
-# Correlation #
-###############
-
 
