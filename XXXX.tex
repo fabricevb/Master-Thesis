@@ -107,6 +107,52 @@
 
 
 \newpage
+\begin{tikzpicture}[every node/.style={minimum size=1cm},on grid]
+\begin{scope}[every node/.append style={yslant=-0.5},yslant=-0.5]
+  \shade[right color=gray!10, left color=black!50] (0,0) rectangle +(3,3);
+  \node at (0.5,2.5) {0};
+  \node at (1.5,2.5) {0};
+  \node at (2.5,2.5) {-1};
+  \node at (0.5,1.5) {-1};
+  \node at (1.5,1.5) {-1};
+  \node at (2.5,1.5) {-2};
+  \node at (0.5,0.5) {-1};
+  \node at (1.5,0.5) {-2};
+  \node at (2.5,0.5) {-3};
+  \draw (0,0) grid (3,3);
+\end{scope}
+\begin{scope}[every node/.append style={yslant=0.5},yslant=0.5]
+  \shade[right color=gray!70,left color=gray!10] (3,-3) rectangle +(3,3);
+  \node at (3.5,-0.5) {-1};
+  \node at (4.5,-0.5) {0};
+  \node at (5.5,-0.5) {1};
+  \node at (3.5,-1.5) {-2};
+  \node at (4.5,-1.5) {-1};
+  \node at (5.5,-1.5) {1};
+  \node at (3.5,-2.5) {-3};
+  \node at (4.5,-2.5) {-2};
+  \node at (5.5,-2.5) {-1};
+  \draw (3,-3) grid (6,0);
+\end{scope}
+\begin{scope}[every node/.append style={
+    yslant=0.5,xslant=-1},yslant=0.5,xslant=-1
+  ]
+  \shade[bottom color=gray!10, top color=black!50] (6,3) rectangle +(-3,-3);
+  \node at (3.5,2.5) {0};
+  \node at (3.5,1.5) {0};
+  \node at (3.5,0.5) {-1};
+  \node at (4.5,2.5) {2};
+  \node at (4.5,1.5) {1};
+  \node at (4.5,0.5) {0};
+  \node at (5.5,2.5) {3};
+  \node at (5.5,1.5) {2};
+  \node at (5.5,0.5) {1};
+  \draw (3,0) grid (6,3);
+\end{scope}
+\end{tikzpicture}
+
+
+\newpage
 
 \begin{center}
 \begin{tabular}{r | r | r | r | c c c | }
@@ -284,6 +330,34 @@ $t-3$ & $0$ & $t-2$ & $0$   &$t-1$ & \textbf{0} & $-1$	& $0$	& $1$	\\
 
 
 \newpage
+
+
+\begin{tikzpicture}[scale=.9,every node/.style={minimum size=1cm},on grid]
+		
+    %slanting: production of a set of n 'laminae' to be piled up. N=number of grids.
+    	
+    \begin{scope}[
+    	yshift=90,every node/.append style={
+    	yslant=0.5,xslant=-1},yslant=0.5,xslant=-1
+    	             ]
+    	\fill[white,fill opacity=.9] (0,0) rectangle (5,5);
+    	\draw[step=10mm, black] (1,1) grid (4,4);
+    	\draw[black,very thick] (1,1) rectangle (4,4);
+    	\draw[black,dashed] (0,0) rectangle (5,5);
+    \end{scope}
+    	
+    \begin{scope}[
+    	yshift=170,every node/.append style={
+    	    yslant=0.5,xslant=-1},yslant=0.5,xslant=-1
+    	  ]
+        \fill[white,fill opacity=0.6] (0,0) rectangle (5,5);
+        \draw[step=10mm, black] (2,2) grid (5,5);
+        \draw[step=2mm, green] (2,2) grid (3,3);
+        \draw[black,very thick] (2,2) rectangle (5,5);
+        \draw[black,dashed] (0,0) rectangle (5,5);
+    \end{scope}
+    	
+\end{tikzpicture}
 
 
 

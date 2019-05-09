@@ -22,7 +22,7 @@
 \usepackage{helvet}
 \usepackage{multirow}
 
-\usepackage[colorlinks=true ,citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[colorlinks=true ,citecolor=blue, linkcolor=black, urlcolor=blue]{hyperref}
 \usepackage{csquotes}
 \usepackage[comma]{natbib}
 %\bibliographystyle{apa}
@@ -302,17 +302,17 @@ and finally the calculation methods of the indicator will be explained.
 \section{History}
 
 In 1954 started the Business Survey of the National Bank of Belgium, and it was in 1972, that results where first synthesised in an indicator.
-The Business Survey Barometer started by including only the industrial sector. It was then small by small enlarged to other sectors: construction (19XX), trade (19XX) and services (19XX).
+The Business Survey Barometer started by including only the industrial sector. It was then small by small enlarged to other sectors: construction, trade and services (1994).
 
 At the European level, it was in 1961 that the European Commission launched an harmonisation program of the business survey in the manufacturing industry. 
 Since then, the sector coverage of the programme has widened considerably. The Business Survey programme was extended to the construction sector and the investment plans in the manufacturing sector in 1966, to consumers in 1972, to the retail trade in 1984, and to the services sector in 1996.
-The harmonisation only concerns some questions ... and doesn't say anything about ...
+The harmonisation only concerns the type of questions, the possible answers and the method to calculate the indicator. ...
 
 More information ca be found in the "The Joint Harmonised EU Programme of Business and Consumer Surveys User Guide" \cite{european_commission_joint_2016}.
 
 Over the time, the business survey barometer has been well known for been a very informative and useful indicator. For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy of its predictions.
 
-Due to the structure of Belgian economy and ... it was also shown as been a good predictor for the European economy \cite{vanhaelen_belgian_2000}
+Due to the structure of Belgian economy it was also shown as been a good predictor for the European economy \cite{vanhaelen_belgian_2000}
 
 Today, Nowcasting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
 
@@ -402,36 +402,38 @@ it consists in the short term estimation of the economy, mostly the GDP.
 it is, as we will see later, a fundamental approach since the business survey indicator is published monthly who are you other indicator's GDP are published quarterly 
 the lag between the observation and publication is even greater since the Business Survey Indicator is published only  
 
-\begin{tikzpicture}
-% draw horizontal line   
-\draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
+\begin{figure}
+    \centering
+    \small
+    \begin{tikzpicture}
+        % draw horizontal line   
+        \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
+        % draw vertical lines
+        \foreach \x in {1,...,10}
+        \draw (\x cm,3pt) -- (\x cm,-3pt);
+        \foreach \x/\descr in {1.5/Jan, 2.5/Feb, 3.5/Mar, 4.5/Apr, 5.5/May, 6.5/Jun, 7.5/Jul, 8.5/Aug,9.5/Sep}
+        \node[font=\scriptsize, text height=1.75ex,
+        text depth=.5ex] at (\x,-.3) {$\descr$};
+        % colored bar up
+        \foreach \x/\perccol in
+        {1/100,2/75,3/25}
+        \draw[lightgray, line width=4pt] 
+        (\x,.3) -- +(1,0);
+        % braces
+        \draw [thick ,decorate,decoration={brace,amplitude=5pt}] (1,0.5)  -- +(3,0) 
+               node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
+        %\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
+        %       node [black,midway,font=\scriptsize, below=4pt] {Publication};
+        % time of publication
+        \node[align=center] at (4.8,1.85) {publication GDP Q1};
+        \draw [thick,->] (4.8,1.4) -- (4.8,0.15);
+        \node[align=center] at (3.8,-1.3) {publication BSI of March};
+        \draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
+    \end{tikzpicture}
+    \caption{Timeline of the publication of the Business Survey Indicator (BSI) and the Gross Domestic Product (GDP)}
+    \label{fig:timeline}
+\end{figure}
 
-% draw vertical lines
-\foreach \x in {1,...,10}
-\draw (\x cm,3pt) -- (\x cm,-3pt);
-
-\foreach \x/\descr in {1.5/Jan, 2.5/Feb, 3.5/Mar, 4.5/Apr, 5.5/May, 6.5/Jun, 7.5/Jul, 8.5/Aug,9.5/Sep}
-\node[font=\scriptsize, text height=1.75ex,
-text depth=.5ex] at (\x,-.3) {$\descr$};
-
-% colored bar up
-\foreach \x/\perccol in
-{1/100,2/75,3/25}
-\draw[lightgray, line width=4pt] 
-(\x,.3) -- +(1,0);
-
-% braces
-\draw [thick ,decorate,decoration={brace,amplitude=5pt}] (1,0.5)  -- +(3,0) 
-       node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
-%\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
-%       node [black,midway,font=\scriptsize, below=4pt] {Publication};
-
-% time of publication
-\node[align=center] at (4.8,1.85) {publication GDP Q1};
-\draw [thick,->] (4.8,1.4) -- (4.8,0.15);
-\node[align=center] at (3.8,-1.3) {publication BSI of March};
-\draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
-\end{tikzpicture}
 
 
 
@@ -460,7 +462,7 @@ But the main indicator, is the GDP
 Later on we will also use YoY GDP, for x reasons
 
 \begin{eqnarray}
-    YoY GDP = \frac{GDP_t - GDP_{t-12}}{GDP_{t-12}} 
+   \mbox{YoY GDP} = \frac{\mbox{GDP}_t - \mbox{GDP}_{t-12}}{\mbox{GDP}_{t-12}} 
 \end{eqnarray}
 
 \autoref{fig:Business Cycle} shows a simplified version of the theory
@@ -587,6 +589,10 @@ The national bank use those information for more in depth analysis of Belgian Ec
 
 \subsection{Methodology}
 \label{section:Methodology}
+
+1954 begin
+1972 results are synthesised in an indicator
+1983 \& 1990 methodological changes
 
 The latest large improvement of the Business Survey Indicator happened in 2009 which was explained in a working paper titled \textit{"The National Bank of Belgium’s new business survey indicator"} 
 (\citeauthor{de_greef_national_2009})
@@ -825,7 +831,7 @@ Equation \ref{var3}
 
 \subsection{Properties}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{tikzpicture}
     \tikzset{
@@ -1051,12 +1057,167 @@ There are mainly to ways to generalise this method. \\ A simple generalisation i
 
 Another generalisation is as follow
 
+\subsection{t-n vs t}
+
+come up to the same except that you use a larger period into account
 
 \subsection{Take the evolution from t-n to t}
 
-To keep it simple, rather than comparing the answers at t with t-1, we can also look at t vs t-2 and so on
+\newpage
+\subsubsection{t-2 vs t-1 vs t}
+
+\begin{center}
+\begin{tabular}{r | r | r | r | c c c | }
+ \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
+ \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-} & $\pi_{---}$ & $\pi_{--0}$ & $\pi_{--+}$ \\ 
+&  $-$ &$t-1$ & \textbf{0} & $\pi_{-0-}$	& $\pi_{-00}$ & $\pi_{-0+}$	\\
+&&&\textbf{+} & $\pi_{-+-}$	& $\pi_{-+0}$	& $\pi_{-++}$ \\ \cline{2-2} \cline{4-7}
+&&&\textbf{-} & $\pi_{0--}$	& $\pi_{0-0}$	& $\pi_{0-+}$ \\ 
+$t-2$ & $0$   &$t-1$ & \textbf{0} & $\pi_{00-}$	& $\pi_{000}$	& $\pi_{00+}$	\\
+&&&\textbf{+} & $\pi_{0+-}$	& $\pi_{0+0}$	& $\pi_{0++}$ \\ \cline{2-2} \cline{4-7}
+&&&\textbf{-} & $\pi_{+--}$	& $\pi_{+-0}$	& $\pi_{+-+}$ \\ 
+&$+$   &$t-1$ & \textbf{0} & $\pi_{+0-}$	& $\pi_{+00}$	& $\pi_{+0+}$	\\
+&&&\textbf{+} & $\pi_{++-}$	& $\pi_{++0}$	& $\pi_{+++}$ \\ \cline{2-2} \cline{4-7}
+		
+\end{tabular}    
+\end{center}
+
+\begin{center}
+\begin{tabular}{r | r | r | r | c c c | }
+ \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
+ \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-}              & $\pi_{---}=0$ & $\pi_{--0}=2$ & $\pi_{--+}=3$ \\ 
+&$-$ &$t-1$&\textbf{0}      & $\pi_{-0-}=0$	& $\pi_{-00}=1$ & $\pi_{-0+}=2$	\\
+&&&\textbf{+}               & $\pi_{-+-}=-1$& $\pi_{-+0}=0$	& $\pi_{-++}=1$ \\ \cline{2-2} \cline{4-7}
+&&&\textbf{-}               & $\pi_{0--}=-1$	& $\pi_{0-0}=1$	    & $\pi_{0-+}=2$ \\ 
+$t-2$&$0$&$t-1$&\textbf{0}  & $\pi_{00-}=-1$	& $\pi_{000}=0$	    & $\pi_{00+}=1$	\\
+&&&\textbf{+}               & $\pi_{0+-}=-2$	& $\pi_{0+0}=-1$    & $\pi_{0++}=0$ \\ \cline{2-2} \cline{4-7}
+&&&\textbf{-}               & $\pi_{+--}=-1$	& $\pi_{+-0}=0$	    & $\pi_{+-+}=1$ \\ 
+&$+$   &$t-1$ & \textbf{0}  & $\pi_{+0-}=-2$	& $\pi_{+00}=-1$    & $\pi_{+0+}=0$	\\
+&&&\textbf{+}               & $\pi_{++-}=-3$	& $\pi_{++0}=-2$    & $\pi_{+++}=0$ \\ \cline{2-2} \cline{4-7}
+		
+\end{tabular}    
+\end{center}
 
 
+\begin{center}
+\begin{tabular}{r | r | r | r | c c c | }
+ \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
+ \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-} & $1$	& $2$	& $3$ \\ 
+& $-$ &$t-1$ & \textbf{0} & $0$	& $1$	& $2$	\\
+&&& \textbf{+} & $-1$ & $0$	& $1$ \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-} & $0$ & $1$	& $2$ \\ 
+$t-2$ & $0$   &$t-1$ & \textbf{0} & $-1$	& $0$	& $1$	\\
+&&&    \textbf{+} & $-2$ & $-1$	& $0$ \\ \cline{2-2} \cline{4-7}
+&&&    \textbf{-} & $-1$ & $0$	& $1$ \\ 
+&$+$   &$t-1$ & \textbf{0} & $-2$	& $-1$	& $0$	\\
+&&& \textbf{+} & $-3$	& $-2$	& $-1$ \\ \cline{2-2} \cline{4-7}
+\end{tabular}    
+\end{center}
+
+\begin{center}
+\begin{tabular}{r | r | r | r | c c c | }
+ \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
+ \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-}              & $0$	& $2$	& $3$ \\ 
+& $-$ &$t-1$ & \textbf{0}   & $0$	& $1$	& $2$	\\
+&&& \textbf{+}              & $-1$ & $0$	& $1$ \\ \cline{2-2} \cline{4-7}
+&&& \textbf{-}              & $-1$ & $1$	& $2$ \\ 
+$t-2$&$0$&$t-1$&\textbf{0}  & $-1$	& $0$	& $1$	\\
+&&&    \textbf{+}           & $-2$ & $-1$	& $1$ \\ \cline{2-2} \cline{4-7}
+&&&    \textbf{-}           & $-1$ & $0$	& $1$ \\ 
+&$+$   &$t-1$ & \textbf{0}  & $-2$	& $-1$	& $0$	\\
+&&& \textbf{+}              & $-3$	& $-2$	& $0$ \\ \cline{2-2} \cline{4-7}
+\end{tabular}    
+\end{center}
+
+
+\newpage
+\subsubsection{t-3 vs t-2 vs t-1 vs t}
+
+\begin{center}
+\begin{tabular}{r | r | r | r | r | r | c c c | }
+ \multicolumn{5}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{7-9}
+ \multicolumn{5}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-4} \cline{6-9}
+&&&&&   \textbf{-} & $\pi_{----}$	& $\pi_{---0}$	& $\pi_{---+}$ \\ 
+&&&  $-$ &$t-1$ & \textbf{0} & $\pi_{--0-}$	& $\pi_{--00}$	& $\pi_{--0+}$	\\
+&&&&&    \textbf{+} & $\pi_{--+-}$	& $\pi_{--+0}$	& $\pi_{--++}$ \\ \cline{4-4} \cline{6-9}
+&&&&&    \textbf{-} & $\pi_{-0--}$	& $\pi_{-0-0}$	& $\pi_{-0-+}$ \\ 
+& $-$ & $t-2$ & $0$   &$t-1$ & \textbf{0} & $\pi_{-00-}$	& $\pi_{-000}$	& $\pi_{-00+}$	\\
+&&&&&    \textbf{+} & $\pi_{-0+-}$	& $\pi_{-0+0}$	& $\pi_{-0++}$ \\  \cline{4-4} \cline{6-9}
+&&&&&    \textbf{-} & $\pi_{-+--}$	& $\pi_{-+-0}$	& $\pi_{-+-+}$ \\ 
+&&&$+$   &$t-1$ & \textbf{0} & $\pi_{-+0-}$	& $\pi_{-+00}$	& $\pi_{-+0+}$	\\
+&&&&&    \textbf{+} & $\pi_{-++-}$	& $\pi_{-++0}$	& $\pi_{-+++}$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+
+&&&&&    \textbf{-} & $\pi_{0---}$	& $\pi_{0--0}$	& $\pi_{0--+}$ \\ 
+&&& $-$ &$t-1$ & \textbf{0} & $\pi_{0-0-}$	& $\pi_{0-00}$	& $\pi_{0-0+}$	\\
+&&&&& \textbf{+} & $\pi_{0-+-}$	& $\pi_{0-+0}$	& $\pi_{0-++}$ \\ \cline{4-4} \cline{6-9}
+&&&&&    \textbf{-} & $\pi_{00--}$	& $\pi_{00-0}$	& $\pi_{00-+}$ \\ 
+$t-3$ & $0$ & $t-2$ & $0$   &$t-1$ & \textbf{0} & $\pi_{000-}$	& $\pi_{0000}$	& $\pi_{000+}$	\\
+&&&&&    \textbf{+} & $\pi_{00+-}$	& $\pi_{00+0}$	& $\pi_{00++}$ \\ \cline{4-4} \cline{6-9}
+&&&&& \textbf{-} & $\pi_{++--}$	& $\pi_{++-0}$	& $\pi_{++-+}$ \\ 
+& & &$+$   &$t-1$ & \textbf{0} & $\pi_{++0-}$	& $\pi_{++00}$	& $\pi_{++0+}$	\\
+&&&&& \textbf{+} & $\pi_{+++-}$	& $\pi_{+++0}$	& $\pi_{++++}$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+
+&&&&& \textbf{-} & $\pi_{+---}$	& $\pi_{+--0}$	& $\pi_{+--+}$ \\ 
+&&& $-$ &$t-1$ & \textbf{0} & $\pi_{+-0-}$	& $\pi_{+-00}$	& $\pi_{+-0+}$	\\
+&&&&& \textbf{+} & $\pi_{+-+-}$	& $\pi_{+-+0}$	& $\pi_{+-++}$ \\ \cline{4-4} \cline{6-9}
+&&&&& \textbf{-} & $\pi_{+0--}$	& $\pi_{+0-0}$	& $\pi_{+0-+}$ \\ 
+& $+$  & $t-2$ & $0$   &$t-1$ & \textbf{0} & $\pi_{+00-}$	& $\pi_{+000}$	& $\pi_{+00+}$	\\
+&&&&& \textbf{+} & $\pi_{+0+-}$ & $\pi_{+0+0}$	& $\pi_{+0++}$ \\ \cline{4-4} \cline{6-9}
+&&&&& \textbf{-} & $\pi_{++--}$ & $\pi_{++-0}$	& $\pi_{++-+}$ \\ 
+&&&$+$   &$t-1$ & \textbf{0} & $\pi_{++0-}$	& $\pi_{++00}$	& $\pi_{++0+}$	\\
+&&&&& \textbf{+} & $\pi_{+++-}$	& $\pi_{+++0}$	& $\pi_{++++}$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+\end{tabular}    
+\end{center}
+
+
+
+
+\begin{center}
+\begin{tabular}{r | r | r | r | r | r | c c c | }
+ \multicolumn{5}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{7-9}
+ \multicolumn{5}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-4} \cline{6-9}
+
+&&&&& \textbf{-}            & $0$	& $3$	& $4$ \\ 
+&&&$-$&$t-1$& \textbf{0}    & $1$	& $2$	& $3$	\\
+&&&&&\textbf{+}             & $0$	& $1$	& $2$ \\ \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}             & $0$	& $0$	& $1$ \\ 
+&$-$&$t-2$&$0$&$t-1$&\textbf{0} & $0$	& $1$	& $2$	\\
+&&&&&\textbf{+}                 & $-1$	& $0$	& $1$ \\  \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}                 & $0$	& $1$	& $2$ \\ 
+&&&$+$   &$t-1$ & \textbf{0}    & $-1$	& $0$	& $1$	\\
+&&&&&\textbf{+}                 & $-2$	& $-1$	& $0$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+
+&&&&& \textbf{-}                    & $1$	& $2$	& $3$ \\ 
+&&&$-$&$t-1$&\textbf{0}             & $0$	& $0$	& $2$	\\
+&&&&&\textbf{+}                     & $-1$	& $0$	& $1$ \\ \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}                     & $0$	& $1$	& $2$ \\ 
+$t-3$&$0$&$t-2$&$0$&$t-1$&\textbf{0}& $-1$	& $0$	& $1$	\\
+&&&&&\textbf{+}                     & $-2$	& $-1$	& $0$ \\ \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}                     & $-1$	& $0$	& $1$ \\ 
+&&&$+$   &$t-1$ & \textbf{0}        & $-2$	& $0$	& $0$	\\
+&&&&&\textbf{+}                     & $-3$	& $-2$	& $-1$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+
+& &     &	&	&    \textbf{-}     & $0$	& $1$	& $2$ \\ 
+&&&  $-$ &$t-1$ & \textbf{0}        & $-1$	& $0$	& $1$	\\
+&&&&&\textbf{+}                     & $-2$	& $-1$	& $0$ \\ \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}                     & $-1$	& $0$	& $1$ \\ 
+&$+$&$t-2$&$0$&$t-1$&\textbf{0}     & $-2$	& $-1$	& $0$	\\
+&&&&&\textbf{+}                     & $-3$	& $-2$	& $0$ \\ \cline{4-4} \cline{6-9}
+
+&&&&&\textbf{-}                     & $-2$	& $-1$	& $0$ \\ 
+&&&$+$   &$t-1$ & \textbf{0}        & $-3$	& $-2$	& $-1$	\\
+&&&&&\textbf{+}                     & $-4$	& $-3$	& $0$ \\ \cline{2-2} \cline{4-4} \cline{6-9}
+\end{tabular}    
+\end{center}
 
 
 
@@ -1139,7 +1300,7 @@ Var(Z) &=&
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Between Time and different variables} 
-  \label{} 
+  \label{tab:corr time} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1156,7 +1317,7 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/plot_var.pdf}
     \caption{Plot }
-    \label{XXXX}
+    \label{plot:xxx}
 \end{figure}
 
 
@@ -1238,7 +1399,7 @@ There are three different correlations that need to be looked at
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Matrix} 
-  \label{} 
+  \label{tab:corr questions} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1265,7 +1426,7 @@ cite{Alain Quartier and Isabelle}
 
 \begin{table}[H] \centering 
   \caption{Correlation Matrix} 
-  \label{} 
+  \label{tab:corr gdp} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1287,7 +1448,7 @@ E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
     \centering
     \includegraphics[scale=0.5]{Graphs/ggpairs.pdf}
     \caption{Plot }
-    \label{ggpairs}
+    \label{fig:ggpairs}
 \end{figure}
 
 
@@ -1295,7 +1456,7 @@ E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
 
 \begin{table}[H] \centering 
   \caption{Correlation Matrix} 
-  \label{} 
+  \label{tab:corr variables} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1315,7 +1476,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
     \centering
     \includegraphics[scale=0.5]{Graphs/ggpairs2.pdf}
     \caption{Plot }
-    \label{ggpairs2}
+    \label{fig:ggpairs2}
 \end{figure}
 
 \subsubsection{GDP vs Indicator}
@@ -1336,7 +1497,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/ACF.pdf}
     \caption{Plot }
-    \label{ACF}
+    \label{fig:ACF}
 \end{figure}
 
 \begin{figure}[H]
@@ -1344,7 +1505,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.45]{Graphs/ACF_GDP.pdf}
     \caption{Plot }
-    \label{ACF_GDP}
+    \label{fig:ACF_GDP}
 \end{figure}
 
 \newpage
@@ -1353,7 +1514,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Matrix} 
-  \label{} 
+  \label{tab:corr question3} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1373,7 +1534,7 @@ E\_3\_lag4 & $0.531$ & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
 
 \begin{table}[!htbp] \centering 
   \caption{Correlation Matrix} 
-  \label{} 
+  \label{tab:corr question4} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1476,7 +1637,7 @@ where   \\
 
 \begin{table}[!htbp] \centering 
 %  \caption{} 
-  \label{} 
+  \label{tab:model} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1487,16 +1648,16 @@ where   \\
 \hline \\[-1.8ex] 
  Constant & 3.434^{***} & 1.114^{***} & -1.829^{**} & -4.052^{***} \\ 
   & (0.170) & (0.255) & (0.867) & (0.922) \\ 
-  & & & & \\ 
+  &&&& \\ 
  3 months lag of YoY GDP &  & 0.690^{***} & 0.525^{***} &  \\ 
   &  & (0.066) & (0.078) &  \\ 
-  & & & & \\ 
+  &&&& \\ 
  BSI & 15.053^{***} & 4.957^{***} & 10.621^{***} & 22.080^{***} \\ 
   & (1.364) & (1.387) & (2.079) & (1.392) \\ 
-  & & & & \\ 
+  &&&& \\ 
  Variance &  &  & 12.831^{***} & 27.506^{***} \\ 
   &  &  & (3.628) & (3.349) \\ 
-  & & & & \\ 
+  &&&& \\ 
 \hline \\[-1.8ex] 
 Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{124} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.499} & \multicolumn{1}{c}{0.743} & \multicolumn{1}{c}{0.767} & \multicolumn{1}{c}{0.679} \\ 
@@ -1511,33 +1672,33 @@ F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^
     \captionsetup{justification=centering}
     \includegraphics[scale=0.5]{Graphs/pred1.pdf}
     \caption{Plot }
-    \label{pred1}
+    \label{fig:pred1}
 \end{figure}
 
 
 
 \begin{table}[H] \centering 
 %  \caption{} 
-  \label{} 
+%  \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex] & \multicolumn{4}{c}{GDP\_year} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.364^{***} & -4.052^{***} & -3.993^{***} & -0.985 \\ 
   & (0.173) & (0.922) & (0.917) & (0.797) \\ 
-  & & & & \\ 
+  &&&& \\ 
  E\_I & 14.491^{***} & 22.080^{***} & 21.579^{***} & 5.629^{***} \\ 
   & (1.390) & (1.392) & (1.421) & (2.091) \\ 
-  & & & & \\ 
+  &&&& \\ 
  E\_I\_diff & 11.538^{*} &  & 8.181 & 24.063^{***} \\ 
   & (6.560) &  & (5.309) & (4.488) \\ 
-  & & & & \\ 
+  &&&& \\ 
  Var\_I &  & 27.506^{***} & 27.105^{***} & 7.179^{**} \\ 
   &  & (3.349) & (3.340) & (3.433) \\ 
-  & & & & \\ 
+  &&&& \\ 
  GDP\_year\_lag1 &  &  &  & 0.687^{***} \\ 
   &  &  &  & (0.076) \\ 
-  & & & & \\ 
+  &&&& \\ 
 \hline \\[-1.8ex] 
 R$^{2}$ & \multicolumn{1}{c}{0.512} & \multicolumn{1}{c}{0.679} & \multicolumn{1}{c}{0.685} & \multicolumn{1}{c}{0.813} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.504} & \multicolumn{1}{c}{0.673} & \multicolumn{1}{c}{0.677} & \multicolumn{1}{c}{0.806} \\ 
@@ -1559,7 +1720,7 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
 
 \begin{table}[!htbp] \centering 
 %  \caption{} 
-  \label{} 
+%  \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex] & \multicolumn{2}{c}{GDP\_year} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
@@ -1602,7 +1763,7 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
     \centering 
     \small %\tiny \scriptsize \footnotesize 
   \caption{} 
-  \label{} 
+%  \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1613,23 +1774,23 @@ F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}
 \hline \\[-1.8ex] 
  Constant & 3.453^{***} & 3.478^{***} & -3.862^{***} & -4.013^{***} & -4.033^{***} & -3.931^{***} \\ 
   & (0.170) & (0.166) & (0.899) & (0.841) & (0.841) & (0.847) \\ 
-  & & & & & & \\ 
+  &&&& & & \\ 
  BSI & 15.186^{***} & 15.406^{***} & 22.166^{***} & 22.696^{***} & 22.930^{***} & 22.695^{***} \\ 
   & (1.365) & (1.323) & (1.387) & (1.306) & (1.324) & (1.345) \\ 
-  & & & & & & \\ 
+  &&&&&& \\ 
  diff BSI &  & -17.924^{***} &  & -21.927^{***} & -13.699 & -13.415 \\ 
-  &  & (6.422) &  & (4.993) & (9.270) & (9.274) \\ 
-  & & & & & & \\ 
+  && (6.422) &  & (4.993) & (9.270) & (9.274) \\ 
+  &&&&&& \\ 
  Variance &  &  & 26.936^{***} & 27.669^{***} & 27.760^{***} & 22.626^{***} \\ 
   &  &  & (3.272) & (3.072) & (3.071) & (5.985) \\ 
-  & & & & & & \\ 
+  &&&& & & \\ 
  Z &  &  &  &  & -11.584 & -11.014 \\ 
   &  &  &  &  & (10.999) & (11.014) \\ 
-  & & & & & & \\ 
+  &&&& & & \\ 
  Volatility &  &  &  &  &  & 
  5.489 \\ 
   &  &  &  &  &  & (5.492) \\ 
-  & & & & & & \\ 
+  &&&& & & \\ 
 \hline \\[-1.8ex] 
 Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.504} & \multicolumn{1}{c}{0.536} & \multicolumn{1}{c}{0.682} & \multicolumn{1}{c}{0.724} & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.729} \\ 
@@ -1673,6 +1834,8 @@ MAPE: Mean Absolute Percentage Error
 MASE: Mean Absolute Scaled Error
 
 ACF1: Autocorrelation of errors at lag 1.
+
+\subsection{Relative Importance}
 
 
 
@@ -1911,14 +2074,6 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \label{Questionnaire1990}
 \end{figure}
 
-\newpage
-\begin{figure}[H]
-    \centering
-%    \captionsetup{justification=centering}
-    \includegraphics[scale=0.1]{Images/tree.jpg}
-    \caption{ }
-    \label{ }
-\end{figure}
 
 \newpage
 \begin{figure}[H]
@@ -1938,6 +2093,10 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 
 
 \section*{R code for Linear (Auto-Regressive) Models}
+
+% \href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}{Code for Linear Models} :
+
+\url{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}
 
 
 \section*{R code for Markov Switching Models}
