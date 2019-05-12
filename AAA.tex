@@ -324,6 +324,7 @@ Several improvement of the business survey where proposed and applied over time.
 
 
 \section{Recruitment of participants}
+\label{sec:Recruitment of participants}
 
 The Belgian business survey Barometer (as most of the business survey around the world), has the particularity of not using random sampling.
 
@@ -383,6 +384,11 @@ The second reason ,the most import one, is that the Business Survey Indicator ha
 
 The main objective of the Business Survey Barometer is to have a feeling of how the economy is now and how it will evolve in the short term. Therefore we will first speak about nowcasting, its explanation and its implications.
 
+
+average weekly work hours in manufacturing, factory orders for goods, housing permits and stock prices
+ index of consumer expectations, average weekly claims for unemployment insurance and the interest rate
+ 
+
 \subsubsection{fluctuation that's mostly explained by the conjuncture}
 The second objective of the Business Confidence Barometer, is to make prevision as less as possible influenced by short terms variation, but the capture the more long run evolution of the economy, more precisely, business cycles. Therefor we will here discuss business cycles.
 
@@ -438,6 +444,8 @@ Nowcasting got by the time a catch all word and include predictive models going 
 
 \subsection{Business Cycles}
 \label{sec:Business Cycles}
+
+
 
 Before going further, a small summary of business cycle theory. 
 
@@ -996,7 +1004,7 @@ Also Called Z indicator
 
 Can be better understood as the indicator of the changes in individual answers between t-1 and t
 
-cite the paper by INSEE 1996 %\cite{caron_estimation_nodate}
+cite the paper by INSEE 1996 \cite{caron_estimation_1996}
 
 An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number.
  
@@ -1199,6 +1207,9 @@ Var(Z) &=&
 \chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
 \label{chap:nonresponse dropout}
 
+Before we model the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, there are four effects that could mislead the results. Three are due to the survey and one to external effects, seasonal effects. We will first look into the three survey based issues; non-response, dropout and attrition, and will then explain the seasonal correction applied to the data.
+
+
 \begin{table}[!htbp] \centering 
   \caption{Correlation Between Time and different variables} 
   \label{tab:corr time} 
@@ -1216,7 +1227,7 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
-    \includegraphics[scale=0.5]{Graphs/plot_var.pdf}
+    \includegraphics[scale=0.8]{Graphs/variables.pdf}
     \caption{Plot }
     \label{plot:xxx}
 \end{figure}
@@ -1224,29 +1235,64 @@ Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\
 
 \section{Non-Response}
 
+Non-response is one of the most studied issues in Surveying. Indeed it is a large issue
+
+two ways 
+- non participation to the survey
+- participating but not answering 
+
+- non participation to the survey
+has already been mentioned before, the stratified procedure should avoid as much as possible it, and in the main time, since the importance is the evolution of the Indicator.
+
+- participating but not answering 
+ solved by the National Bank by filling the non-answering by the previous response of the participant. 
+The response rate is usually around 95\% for the Business Survey. We could from there say that non-response is not very important. 
+Before concluding it, since the mean study is the evolution rather than the indicator in it self, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example we could expect more or less non-response during crises or in certain economy situations. Since the main interest of the BSI is to explain Business cycles,
+this could be an issue.
+
 plot non-response
 
 
-\newpage
-\section{Dropout}
+
+\section{Dropout and Attrition}
+
+Those two issues are related to the structure and organisation of the survey. As explain in \autoref{sec:Recruitment of participants}, ones participants are recruited to participate in the Business Survey, they stay as long as they want. This brings to major potential issues: dropout and attrition
+
+\subsection{Dropout}
+
+Participants leaving the survey, are they different from 
+
+The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the employees at the NBB, the two mean reasons are (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job there and the new responsible person doesn't see the interest in participating anymore.
+This is an issue, since it means that it's a certain type of profiles that leave the survey. If this type of profile have a different opinion or respond differently than the remaining companies this will create bias. 
+
+This is the case
+
+It could be argued that the bias is very diffused due to the small amount of companies leaving the survey each month. Again the fact that the evolution is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the Business Survey is published, the 3-4 last year are showed.
+
+It's not the subject of this work, so will not dive more into this bias, but we would recommend to have a closer look into this.
+
+\subsection{Attrition}
+Attrition, also called Panel Conditioning, is present when participants change there behaviour between different rounds of sampling. 
+A very interesting master thesis was done about the Belgian Labour Force Survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}. 
+The Belgian Labour Force Survey was convenient to test for attrition, since it's a survey where respondents reply four times to the same survey with a lag of six months.
+
+In the case of the Business Industry Survey it's a harder to test for it since we have only two major periods of recruitment between 1988 and 2018; in the early 1900 and between XXX and XXXX with some company 
+
+plot of the amount of recruited over time
+
+Two possible indicators to show the presence of Attrition, is the correlation between time and variance(BSI) and the correlation between time and variance(EIR).
+
+corr(time,var(BSI))
+
+corr(time,var(EIR))
+
+
 
 Non parametric test \cite{das_nonparametric_2011}
 
 
-\newpage
-\section{Attrition}
-Attrition / Panel Conditioning 
-Master Thesis done about the Belgian Labor Force Survey, where  attrition was studied \cite{priyana_hardjawidjaksana_investigating_2019}
-
-Non parametric test \cite{das_nonparametric_2011}
-
-
-limitation: only some periods of 
-
-
-\newpage
 \section{Seasonal Effects}
-The National Bank, before publishing the Business Survey Indicator, applies a X11 seasonal correction
+The National Bank, before publishing the Business Survey Indicator, applies a X11 seasonal correction.
 
 The literature about seasonal effects is very rich and variate
 
@@ -1256,25 +1302,20 @@ The literature about seasonal effects is very rich and variate
 at the same time the department of Business Survey uses as a X11 adapted method to correct for seasonality because don't want to correct for previous publications.
 
 
-Methodology \\
-- test for seasonality \\
-- run the analysis without corrections \\
-- apply corrections and see if more accurate \\
+- test for seasonality (see appendix \autopageref{sec:test for seasonality})
 
-\subsection*{Seasonal correction of the Indicator}
 
-\subsection*{Seasonal correction of the Variance}
 
-\subsection*{Seasonal correction of the Indicator of the Evolution}
+\subsubsection{Seasonal correction of the Indicator}
 
-\subsection*{Seasonal correction of the Variance of Z}
+\subsubsection{Seasonal correction of the Variance}
 
-\subsection*{Seasonal correction of the Proportions}
+\subsubsection{Seasonal correction of the Indicator of the Evolution}
 
-\section{Limitations}
- ?? 
- 
-explain the issue of seasonal correction on "future data" 
+\subsubsection{Seasonal correction of the Variance of Z}
+
+
+
 
 
 
@@ -1410,7 +1451,9 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
 \end{figure}
 
 \newpage
+\section{Correlation between Z and Z2 and var(Z) and var(Z2)}
 
+\newpage
 \section{Specificity of question 3 and 4, are peoples predictions correct ?}
 
 \begin{table}[!htbp] \centering 
@@ -1490,7 +1533,7 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 (\x,.3) -- +(1,0);
 
 % braces
-\draw [thick ,decorate,decoration={brace,amplitude=5pt}] (1,0.5)  -- +(3,0) 
+\draw [thick ,decorate,decoration={brace,amplitude=5pt}] (3,0.5)  -- +(1,0) 
        node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
 %\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
 %       node [black,midway,font=\scriptsize, below=4pt] {Publication};
@@ -1707,7 +1750,7 @@ F Statistic & \multicolumn{1}{c}{123.760$^{***}$} & \multicolumn{1}{c}{69.317$^{
 
 
 
-\section{Evaluation}
+\section{Evaluation / Model selection}
 
 \subsection{R-square}
 
@@ -1736,7 +1779,7 @@ MASE: Mean Absolute Scaled Error
 
 ACF1: Autocorrelation of errors at lag 1.
 
-\subsection{Relative Importance}
+\section{Relative Importance}
 
 
 
@@ -1745,7 +1788,10 @@ ACF1: Autocorrelation of errors at lag 1.
 % \section{log(GDP)}
 
 
-\section{Variance(X) VS Variance(Z)}
+\section{Variance(X) VS Variance(Z) VS Variance(Z2)}
+
+\section{E(Z) VS E(Z2)}
+
 
 \section{Take Question 1 out of the calculation of the Indicator}
 
@@ -1937,8 +1983,9 @@ originally question Q18, 27, 32 and 33, for simplicity numbered here as 1, 2, 3 
 \end{enumerate}
 
 \newpage
-
 \section*{Further Explanation of the Evolution of the responses ...}
+\label{sec:appendix explanations EIR}
+
 \begin{center}
 \begin{tabular}{|c|r|r|r|}
 Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
@@ -1953,6 +2000,11 @@ $\pi_{+0}$    &  1   & 0     & -1 \\
 $\pi_{++}$    &  1   & 1     & 0 \\
 \end{tabular}  
 \end{center}
+
+\newpage
+
+\section*{Test for seasonality}
+\label{sec:test for seasonality}
 
 \newpage
 \section*{Further Explanation of the Markov Switching model ...}
@@ -1983,6 +2035,15 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \includegraphics[scale=0.1]{Images/tree2.jpg}
     \caption{XXXX}
     \label{fig:tree}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[scale=0.8]{Graphs/variables.pdf}
+    \caption{Plot }
+    \label{plot:appendix all variabless}
 \end{figure}
 
 
