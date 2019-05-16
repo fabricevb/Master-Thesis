@@ -3,6 +3,11 @@
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing,positioning, arrows.meta}
 
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+
+
 \usepackage{amsmath} % for \text
 \tikzset{>=latex} % for LaTeX arrow head
 \usepackage{xcolor}
@@ -312,6 +317,127 @@ F Statistic & \multicolumn{1}{c}{121.091$^{***}$} & \multicolumn{1}{c}{172.776$^
     \label{fig:hist_example}
 \end{figure}
 
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+%  \caption{} 
+  \label{tab:model} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{Linear Regression} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.434^{***} & 1.114^{***} & -1.829^{**} & -4.052^{***} \\ 
+  & (0.170) & (0.255) & (0.867) & (0.922) \\ 
+  &&&& \\ 
+ 3 months lag of YoY GDP &  & 0.690^{***} & 0.525^{***} &  \\ 
+  &  & (0.066) & (0.078) &  \\ 
+  &&&& \\ 
+ BSI & 15.053^{***} & 4.957^{***} & 10.621^{***} & 22.080^{***} \\ 
+  & (1.364) & (1.387) & (2.079) & (1.392) \\ 
+  &&&& \\ 
+ Variance &  &  & 12.831^{***} & 27.506^{***} \\ 
+  &  &  & (3.628) & (3.349) \\ 
+  &&&& \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{123} & \multicolumn{1}{c}{124} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.499} & \multicolumn{1}{c}{0.743} & \multicolumn{1}{c}{0.767} & \multicolumn{1}{c}{0.679} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.495} & \multicolumn{1}{c}{0.738} & \multicolumn{1}{c}{0.761} & \multicolumn{1}{c}{0.673} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.172} & \multicolumn{1}{c}{0.847} & \multicolumn{1}{c}{0.809} & \multicolumn{1}{c}{0.943} \\ 
+F Statistic & \multicolumn{1}{c}{121.753$^{***}$} & \multicolumn{1}{c}{173.266$^{***}$} & \multicolumn{1}{c}{130.755$^{***}$} & \multicolumn{1}{c}{127.781$^{***}$} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/pred1.pdf}
+    \caption{Plot }
+    \label{fig:pred1}
+\end{figure}
+
+
+
+\begin{table}[H] \centering 
+%  \caption{} 
+%  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex] & \multicolumn{4}{c}{GDP\_year} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.364^{***} & -4.052^{***} & -3.993^{***} & -0.985 \\ 
+  & (0.173) & (0.922) & (0.917) & (0.797) \\ 
+  &&&& \\ 
+ E\_I & 14.491^{***} & 22.080^{***} & 21.579^{***} & 5.629^{***} \\ 
+  & (1.390) & (1.392) & (1.421) & (2.091) \\ 
+  &&&& \\ 
+ E\_I\_diff & 11.538^{*} &  & 8.181 & 24.063^{***} \\ 
+  & (6.560) &  & (5.309) & (4.488) \\ 
+  &&&& \\ 
+ Var\_I &  & 27.506^{***} & 27.105^{***} & 7.179^{**} \\ 
+  &  & (3.349) & (3.340) & (3.433) \\ 
+  &&&& \\ 
+ GDP\_year\_lag1 &  &  &  & 0.687^{***} \\ 
+  &  &  &  & (0.076) \\ 
+  &&&& \\ 
+\hline \\[-1.8ex] 
+R$^{2}$ & \multicolumn{1}{c}{0.512} & \multicolumn{1}{c}{0.679} & \multicolumn{1}{c}{0.685} & \multicolumn{1}{c}{0.813} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.504} & \multicolumn{1}{c}{0.673} & \multicolumn{1}{c}{0.677} & \multicolumn{1}{c}{0.806} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.162} & \multicolumn{1}{c}{0.943} & \multicolumn{1}{c}{0.938} & \multicolumn{1}{c}{0.729} \\ 
+F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{***}$} & \multicolumn{1}{c}{86.947$^{***}$} & \multicolumn{1}{c}{128.113$^{***}$} \\
+\end{tabular} 
+\end{table} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/pred2.pdf}
+    \caption{Plot }
+    \label{pred2}
+\end{figure}
+
+
+\newpage
+
+\begin{table}[!htbp] \centering 
+%  \caption{} 
+%  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex] & \multicolumn{2}{c}{GDP\_year} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ E\_I & 22.783^{***} & 23.088^{***} \\ 
+  & (1.340) & (1.319) \\ 
+  & & \\ 
+ Var\_I & 22.151^{***} & 28.508^{***} \\ 
+  & (6.050) & (3.133) \\ 
+  & & \\ 
+ Z\_I & -24.279^{***} & -25.008^{***} \\ 
+  & (5.765) & (5.746) \\ 
+  & & \\ 
+ Var\_Z\_I & 6.609 &  \\ 
+  & (5.383) &  \\ 
+  & & \\ 
+ Constant & -4.090^{***} & -4.265^{***} \\ 
+  & (0.871) & (0.861) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+R$^{2}$ & \multicolumn{1}{c}{0.726} & \multicolumn{1}{c}{0.722} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.717} & \multicolumn{1}{c}{0.716} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.878 (df = 119)} & \multicolumn{1}{c}{0.880 (df = 120)} \\ 
+F Statistic & \multicolumn{1}{c}{78.806$^{***}$ (df = 4; 119)} & \multicolumn{1}{c}{104.133$^{***}$ (df = 3; 120)} \\ 
+
+\end{tabular} 
+\end{table} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/pred3.pdf}
+    \caption{Plot }
+    \label{pred3}
+\end{figure}
 
 
 \end{document}
