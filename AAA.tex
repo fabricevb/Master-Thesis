@@ -94,6 +94,9 @@
 
 \pagestyle{fancy}
 
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+
 \let\subsectionautorefname\sectionautorefname % if \autoref subsection -> section
 \let\subsubsectionautorefname\sectionautorefname % if \autoref subsubsection -> section
 
@@ -214,11 +217,20 @@ Academic year 2018-2019
 % For table of contents, acknowlegments, ...
 % -----------------------------------------------------------------
 \rmfamily
-\setcounter{page}{0}
-\pagenumbering{roman}
 \pagestyle{plain}
 
 
+\newpage
+
+\begin{bottompar}
+\copyright Copyright by KU Leuven \\ \\
+Without written permission of the promotors and the authors it is forbidden to reproduce or adapt in any form or by any means any part of this publication. Requests for obtaining the right to reproduce or utilize parts of this publication should be addressed to KU Leuven, Faculteit Wetenschappen, Geel Huis, Kasteelpark Arenberg 11 bus 2100, 3001 Leuven (Heverlee), Telephone +32 16 32 14 01. \\
+A written permission of the promotor is also required to use the methods, products, schematics and programs described in this work for industrial or commercial use, and for submitting this publication in scientific contests.
+\end{bottompar}
+
+
+\setcounter{page}{0}
+\pagenumbering{roman}
 
 \chapter*{Acknowledgement}
 
@@ -300,6 +312,21 @@ Chapter 2
 4
 
 5
+
+
+Algemeen
+Conjunctuurenquêtes
+
+Sinds 1954 houdt de Nationale Bank bij een panel van ongeveer 3000 bedrijfsleiders een maandelijkse enquête naar hun appreciatie van de economische toestand. De resultaten worden rond de 21e van elke maand gepubliceerd en bevatten naast globale indicatoren tevens resultaten per bedrijfstak. Deelnemers aan de enquête ontvangen bovendien nog resultaten per product. Conjunctuurenquêtes leveren waardevolle informatie over het economisch verloop vóór de traditionele statistieken beschikbaar komen. Hun waarde wordt verhoogd door de internationale vergelijkbaarheid.
+
+Op verzoek van de beroepsorganisaties van de Belgische ondernemingen, heeft de Nationale Bank in 1954 maandelijkse enquêtes naar het ondernemersvertrouwen opgezet. Deze enquêtes, die zijn ontstaan in de Verenigde Staten in de jaren dertig en die in 1949 werden geïntroduceerd in Europa (in Duitsland), hebben tot doel de mening van de ondernemers omtrent het economische conjunctuurklimaat en omtrent de op de korte termijn te verwachten ontwikkelingen, nauwkeurig en snel in te zamelen. Zij vormen een uiterst waardevol instrument met het oog op de conjunctuuranalyse, omdat hun resultaten - die beschikbaar zijn voor de lopende maand - veel vroeger beschikbaar zijn dan de informatie van de kwantitatieve indicatoren.
+
+De conjunctuurenquêtes die bij de ondernemers worden uitgevoerd, vormen het voorwerp van een harmonisatieprogramma van de Europese Commissie. Dankzij dit programma zijn de gehanteerde methoden en de verkregen resultaten in de diverse Europese landen geheel en al vergelijkbaar.
+
+De maandelijkse resultaten van de conjunctuurenquêtes worden verspreid en becommentarieerd in een beknopt perscommuniqué, tussen de 21e en de 25e van elke maand. De precieze datum wordt aangekondigd in een kalender die kan worden geraadpleegd op de internetsite.
+
+De industriële ondernemingen worden daarnaast ook één keer per kwartaal bevraagd omtrent de benuttingsgraad van het productievermogen, en één keer om de zes maanden omtrent de investeringen. De resultaten van de enquête naar de benuttingsgraad van het productievermogen worden opgenomen in het maandelijkse perscommuniqué, terwijl die van de enquête naar de investeringen het voorwerp uitmaken van een speciaal communiqué.
+
 
 \chapter{The Business Survey Indicator}
 
@@ -383,7 +410,7 @@ The second reason ,the most import one, is that the business survey Indicator ha
 % This means that people participate for a long time to the survey will be discussed in chapter .... and ....
 
 
-\section{Objective and Methodology}
+\section{Objectives of the Business Survey}
 \label{section:Objective}
 
 \subsubsection{predictive power for the future months - high correlation with Economical Indicators}
@@ -398,22 +425,15 @@ average weekly work hours in manufacturing, factory orders for goods, housing pe
 \subsubsection{fluctuation that's mostly explained by the conjuncture}
 The second objective of the Business Confidence Barometer, is to make prevision as less as possible influenced by short terms variation, but the capture the more long run evolution of the economy, more precisely, business cycles. Therefor we will here discuss business cycles.
 
-In \autoref{chap:nonresponse dropout}, we will discuss most of the small, short-term variation that can influence the BSI while those aren't relevant. Those can be due to the responses to the survey (Attrition, non- response and ...) but also to "real" effects (seasonal effects) that shouldn't be captured by the BSI.
+In \autoref{chap:nonresponse dropout}, we will discuss most of the small, short-term variation that can influence the BSI and that aren't relevant. Those can be due to the responses to the survey (non- response, dropout and Attrition) but also to "real" effects (seasonal effects) that shouldn't be captured by the BSI.
 
-
-
-
-\subsection{Belgian economy and sector specific evolution short term evolution}
+\subsection{Belgian economy and sector specific short term evolution}
 
 %This will be less prominent in this paper, but is important to mention, each month a quite long report is done based on the BSI for each sector and sub-sector.
 
+The business survey indicators are published at the end of each month (around the 21-25 of the month) and give fast captures of the 
 
-
-
-
-
-
-
+The monthly data can be found in \url{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en} and the press release can be found find the link for press releases
 
 The national bank use those information for more in depth analysis of Belgian Economy.
 
@@ -454,8 +474,12 @@ the lag between the observation and publication is even greater since the busine
         \draw [thick,->] (0.8,1.4) -- (0.8,0.15);
         \node[align=center] at (4.8,1.85) {publication GDP Q1};
         \draw [thick,->] (4.8,1.4) -- (4.8,0.15);
-        \node[align=center] at (3.8,-1.3) {publication BSI of March};
+        \node[align=center] at (2.8,-1.3) {publication BSI};
+        \draw [thick,->] (0.8,-0.85) -- (0.8,-0.15);
+        \draw [thick,->] (1.8,-0.85) -- (1.8,-0.15);
+        \draw [thick,->] (2.8,-0.85) -- (2.8,-0.15);
         \draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
+        \draw [thick,->] (4.8,-0.85) -- (4.8,-0.15);
     \end{tikzpicture}
     \caption{Timeline of the publication of the business survey Indicator (BSI) and the Gross Domestic Product (GDP)}
     \label{fig:timeline}
@@ -494,7 +518,6 @@ Later on we will also use YoY GDP, for x reasons
 \end{eqnarray}
 
 \autoref{fig:Business Cycle} shows a simplified version of the Business Cycles theory.
-
 
 \begin{figure}[H]
     \centering
@@ -563,11 +586,11 @@ Later on we will also use YoY GDP, for x reasons
 
 \cite{mitchell_measuring_1946} stated a minimum duration of 16-22 months and a maximum duration of 100-106 months. This is a quite large range and since then several researches worked on this topic. There is no clear 
 
-The empirical research , mostly done by the National Bureau of Economic Research (NBER), showed that the time from one economic peak to the next is on average 5 and a halve years (for the period 1945-2009)
+As a lot of research argues, business cycles are mainly empirically defined. 
+If we look for example at the United States, a big work was done by the National Bureau of Economic Research (NBER) to date turning points for the American economy. The empirical evidence that comes out of this work, is that the time from one economic peak to the next is on average 5 and a halve years (for the period 1945-2009)
 
-As we can see from \autoref{fig:NBER BS}, which represent the different though and peak of business cycles identified by the NBER from 1975 to 2009, there business cycles, even though they seems to have some ..., their is no symmetry of the Business Cycle.
-
-Interesting data to look at regarding 
+We can see from \autoref{fig:NBER BS}, which represent the different though and peak of business cycles identified by the NBER from 1975 to 2009, that their is no symmetry of the Business Cycle. Some business cycles are very short while other last more than ten years.
+We can notice that periods of economical growth, usually last longer than economical decrease. ....
 
 
 \begin{figure}[H]
@@ -613,7 +636,7 @@ Interesting data to look at regarding
 
 
 
-\subsection{Methodology}
+\section{Methodology of the Business Survey}
 \label{section:Methodology}
 
 1954 begin
@@ -634,24 +657,32 @@ The latest large improvement of the business survey Indicator happened in 2009 w
 \subsection{Questionnaire}
 \label{sec:Questionnaire}
 
-\subsubsection{General presentation}
+The questionnaire exists in two languages, french and dutch. And can be answered by mail, email, over the phone or by fax.
 
-Almost the same for everyone, some differences depending on the sector (Industry $\neq$ Services)
-
-Answers are giving by mail, email, on the phone or by fax.
-
-The questionnaire exists in Dutch and French
-
-The first question has to be interpreted the opposite way as of the three other questions. ...
+The questionnaire has XX questions that can be grouped in two type of questions. 
+(1) questions concerning there current production and level of activity.
+(2) questions concerning there prediction, how they expect there level of activity to evolve over the next three months.
+It's therefore that the business survey indicator, is also called the confidence indicator, since its a measure of how confidence companies are in the Belgian economy.
 
 
 \subsubsection{Changes over time}
 
-Questionnaire in 1990 (See Appendix \autopageref{Questionnaire1990}) almost same as today  (See Appendix \autopageref{Questionnaire2018}). 
+In this paper, the answers and results of the business survey barometer will be used since 1988. Therefore it's very important to see if the answers changed over time.
 
-The difference is in the way of asking the question
+A questionnaire from 1990 was found (See Appendix \autopageref{Questionnaire1990}) and can be compared to a more recent version (See Appendix \autopageref{Questionnaire2018}).
 
-Smaller influence of this since same people answering, slight changes in phrasing should have smaller consequences
+It can be seen that the layout was modified, and that the questions phrasing changed over this long period. It was before asked in the first person while it's now phrased in the third person. Aside from those small changes, the survey kept the same questions
+
+It would be interesting to have a closer look in the potential consequences of those changes over time. The layout, the phrasing and the method of answering can potentially have an influence on the answers. Nevertheless, since it's not the subject of this paper, we will leave this study to future research.
+What we  can say is that the influence of those changes are limited since the respondents where mostly the same when the changes happened, so the interpretation they made from 
+one version to the other one should have stayed quite similar.
+
+\subsubsection{Questions taken into account for the NS975}
+
+
+The first question has to be interpreted the opposite way as of the three other questions. ...
+
+
 
 see appendix \autopageref{Questionnaire2018} for the full questionnaire
 
@@ -659,15 +690,26 @@ see appendix \autopageref{Questionnaire2018} for the full questionnaire
 \subsection{Weighting procedure}
 \label{sec:Weighting procedure}
 
+Each company that is part of the panel of respondents, has a weight according to it's size, the profit the company is making, the capital it's owning and other characteristics. The calculation is quite complex since it's specific to each sector. For example in the industry the ...
+
+cite working papers
+
 According to the size of the company, measured different ways depending on the sector ........
+
+Adapted over time, with a smoothing effect over time
 
 \subsection{Globalisation procedure}
 \label{sec:Globalisation procedure}
+
+
 Based on the size of the sector in which the company is.
-The globalisation procedure got quite complex over time. See the globalisation tree for the Industry survey \autopageref{fig:tree}
+
+The National Bank of Belgium developed a quite elaborate division of the Belgian economical activity. This means that for example, the Industry is subdivided into different sub-sectors, that them self contain sub-sectors that contain sub-sectors and so on six times. All those divisions have a percentage according to the size of those subdivision inside the division.
+
+%The globalisation procedure got quite complex over time. See the globalisation tree for the Industry survey \autopageref{fig:tree}
 
 
-
+\newpage
 \section{Calculation of the Indicator}
 
 This section presents the method for calculating the indicator. 
@@ -680,10 +722,10 @@ The calculation of the unweighted indicator for a specific question at a specifi
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n x_i}{n}
 \end{equation} 
-where 
 
-$x_i$ is the answer of the respondent i and can each take value -1 (negative), 0 (neutral) and 1 (positive). 
-$n$ is the total of respondents
+where 
+$x_i$ is the answer of the respondent i and can take value -1 (negative answer), 0 (neutral answer) and 1 (positive answer). 
+$n$ is the amount of respondents.
 
 Since x can only take three different values, we can decompose it into 
 
@@ -692,25 +734,22 @@ Since x can only take three different values, we can decompose it into
 \end{equation} 
 
 where 
+$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent i.
 
-$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent i
-
-We know that $\sum_{i=1}^n x_{Ni} = 0$ so we can write
+Since we know that $\sum_{i=1}^n x_{Ni} = 0$, we can write
 
 \begin{equation}
     E(X) = \frac{\sum_{i=1}^n x_{+i}}{n}  + \frac{\sum_{i=1}^n x_{-i}}{n}
 \end{equation} 
 
-${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=1}^n x_{-i}}/{n}$ is the negative proportion of negative answer so for simplicity will write it 
+${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=1}^n x_{-i}}/{n}$ is the negative proportion of negative answer. We can write, for simplicity
 
 \begin{equation}
     E(X) = \pi_+ - \pi_-
 \end{equation}
 
-where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative. 
-$\pi$ can be interpreted as the probability that a respondent answers positive, negative or neutral to the question. 
-
-Where $\pi_+ + \pi_N + \pi_- =1$.
+where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative.
+$\pi$ was chosen as symbol here since it can be interpreted as a probability. Indeed if we assume that all the respondents have the same probability giving a certain answer. $\pi$ can be interpreted as the probability that a respondent answers positive, negative or neutral to the question. 
 
 
 \subsection{Weighted Indicator}
@@ -720,17 +759,21 @@ As described in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation
 Therefore we have now the following equation
 
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n \left(\omega_i p_i x_i \right)}{\sum_{i=1}^n \omega_i p_i}
+    E(X) = \frac{ \sum_{i=1}^n \left(\omega_i p_i x_i \right)}{\sum_{i=1}^n \omega_i p_i} \quad \text{  where  } \sum_{i=1}^n \omega_i = \sum_{i=1}^n p_i = 1
 \end{equation} 
-where \\
-$x_i$ is the answer of the respondent i and can take values -1, 0 and 1 \\
-$p_i$ is the weight of the globalisation of the company i \\
-$\omega_i$ is the weight of the company i \\
-where $\sum_{i=1}^n \omega_i = 1$ and $\sum_{i=1}^n p_i = 1$
+
+where
+$x_i$ is the answer of the respondent i and can take values -1, 0 and 1.
+$p_i$ is the weight of the globalisation of the company i and 
+$\omega_i$ weight according to its size.
+
+As for the unweighted indicator, we ca decompose the equation by the three possible answers with, in this case, their according weights.
 
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i} + \sum_{i=1}^n \omega_{Ni} p_{Ni} x_{Ni} + \sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
-\end{equation} 
+\end{equation}
+
+and again we know that $\sum_{i=1}^n \omega_{+i} p_{+i} x_{Ni} = 0$, so we can write
 
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i}}{n} + \frac{\sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
@@ -745,17 +788,10 @@ where $\pi_+$ and $\pi_-$ are the \textbf{weighted} proportion of respondents an
 
 
 
-
-\subsection{?Properties}
-
 \subsubsection{lower bound at -1 and upper bound at 1}
 
 The BSI is the smallest if everyone has a negative answer and then the BSI = -1. 
 And it's the largest when every answer is positive which means BSI = 1
-
-\subsubsection{???}
-
-
 
 
 \subsection{Take different questions into account}
@@ -775,76 +811,78 @@ can also been seen as the mean of the answers for each participant at each perio
     \mbox{Industry Business Indicator}\ = \frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n}
 \end{equation}
 
+\begin{equation}
+    \mbox{Industry BSI}\ = \frac{\pi_{Q1+} + \pi_{Q2+} + \pi_{Q3+} + \pi_{Q4+} - \pi_{Q1-} - \pi_{Q2-} - \pi_{Q3-} - \pi_{Q4-} }{4}
+\end{equation}
+
 
 \chapter{The Variance of the Indicator}
 
-The variance is, with the mean, one of the first tool for Statisticians to study a certain variable.
-In the context of the business survey, the variance haven't been used much. While it could be containing a lot of information.
+The variance is, with the mean, one of the first tool for Statisticians to study a certain variable. Next to the mean, that is the average value of a certain variable, the variance is the measure of the dispersion. 
+In the context of the business survey, the variance haven't been used much, while it can be seen as "how much people agree", an important information that we can extract from the survey.
+
+The variance will be interpreted as to what level respondents agreement about Belgian economy.
+
+?This different from the sampling error. The idea here is not the study accuracy or ...
+but rather to find new information hidden in the survey.
+
 
 This chapter will .........
 
-We will then, in later chapters, look at it correlations and its possible predictive power.
-
-
 As done for the Indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
-
-\section{Interpretation}
-Variance as a measure of the dispersion of the responses.
-
-The variance has the interest of been a measure of the dispersion of the observations. 
-
-Here we want to know to what extend respondents agree with each others. The variance will the the measure of it. 
-Measure of the "dispersion" of the answers.
-
-This means that 
-
-
-\subsubsection{?difference sampling error and variance}
-
-\subsubsection{difference between nominal and continuous variable variance}
 
 
 \section{Variance of the Unweighted Indicator}
 
-The main variance
+\cite{alcaniz_calculation_2006}
 
-cite
-
+The formula of the variance can be written as 
 \begin{eqnarray}
-     \Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] \nonumber \\ \nonumber \\
-     &=& E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-     &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2  \nonumber \\ \nonumber \\
-     &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var1}
+         \Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] =  E\left( X^2\right) - E\left( X\right)^2
 \end{eqnarray}
 
-Since $\left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) = 0$ ,
-$x_{+i}^2 = x_{+i}$, $x_{-i}^2 = x_{-i}$
-and $E(X) = \pi_+ - \pi_-$
+In the case of one question of the business survey indicator, we can write and develop the equation as follow
 
-
-We then have several different ways to write the previous equation;
 \begin{eqnarray}
-\Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \nonumber \\
-	&=& \pi_+ + \pi_- - E ( X )^2 \label{var2} \\
-	&=& 1 - \pi_n - E(X)^2 \label{var3}
+\Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
+    &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber 
 \end{eqnarray}
 
-I other words, the variance of the BSI is equal to the proportion of negati...
 
-\autoref{var1} is interesting 
+The positive and negative answers take value -1 and 1, which means that $x_{+i}^2 = x_{+i}$, $x_{-i}^2 = |x_{-i}|$. We also know that $\left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) = 0$. 
+With this information, we can further simplify the equation;
 
-Equation \ref{var2}
+\begin{eqnarray}
+\Var(X) &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
+\end{eqnarray}
 
-Equation \ref{var3}
+In other words, the variance of the BSI is equal to the sum of the proportion of positive and negative answers, minus the squared indicator. \\
+We can also replace $\E(X)$  by $\pi_+ - \pi_-$, and/or $\pi_+ + \pi_-$ by $ 1 - \pi_0$ (since $\pi_+ \pi_0 + \pi_- = 1$).
+Which means that we have several different ways to write the previous equation;
+
+\begin{eqnarray}
+\Var(X) &=& \pi_+ + \pi_- - E ( X )^2  \nonumber \\
+        &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var2} \\
+	    &=& 1 - \pi_0 - E(X)^2 \label{var3}
+\end{eqnarray}
 
 
 
 
 \section{Variance of the Weighted Indicator}
 
-\begin{equation}
-\Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i p_i (X_i - \bar{X})^2
-\end{equation}
+We can now do the same for the weighted indicator. The equation is very similar;
+
+%\begin{equation}
+%\Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i %p_i (X_i - \bar{X})^2
+%\end{equation}
+
+\begin{eqnarray}
+\Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
+    &=& \left( \frac{\sum_{i=1}^n \omega_i p_i x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber 
+\end{eqnarray}
+
+We can here, as we did for the indicator, take into account weighted proportion and write the equation the same way as for the unweighted variance but in this case, by taking the weighted proportions. Again the variance can be written in different ways, depending on the interpretation that fits best;
 
 \begin{eqnarray}
 \Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
@@ -855,7 +893,7 @@ Equation \ref{var3}
 
 \subsection{Properties}
 
-\begin{figure}[ht]
+\begin{figure}[hbt!]
     \centering
     \begin{tikzpicture}
     \tikzset{
@@ -925,21 +963,23 @@ Equation \ref{var3}
     \addlegendentry{$\pi_N = 0.99$}
     \end{axis}
     \end{tikzpicture}
-    \caption{Plot of the business survey Indicator on its variance for different values of $\pi_N$}
+    \caption{Plot of the business survey indicator on its variance for different values of $\pi_N$}
     \label{fig:var properties}
 \end{figure}
 
 
+Based on the previous development of the equation of the variance of the indicator, we can make some observations.
 
+First of all, the variance is bounded between 0 and 1. 
+A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. The most interesting approach is to take  \autoref{var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values. Since both the variables have a minus sine in front of them, to have the highest result they should both be equal to zero. 
+This means that the highest variance, $\Var(X)=1$, is obtained when no respondent answer "neutral" and the BSI is equal to 0, in other words, half of the respondents answer "positive" while the other half answer "negative". 
 
+On the other hand, the variance will be equal to zero if all the participant answer the same, that's "negative", "neutral" or "positive".
 
+Another approach is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{var3}. The results can be seen in \autoref{fig:var properties}.
 
-\subsubsection{Property 1: The variance of X is bounded between -1 and 1}
-
-\subsubsection{Property 2: The variance = A5 and E(X)}
-
-
-\subsubsection{Property 3: .....}
+Their are different observations that can be done from the plot;
+(1) there is a specific upper and lower bound for each BSI
 
 upper bound : 
 \begin{equation}
@@ -948,34 +988,28 @@ upper bound :
 
 lower bound : 
 \begin{eqnarray}
-\Var(X) &=& - (\E(X) + 0,5)^2 + 0,25 \quad \text{where } \Var(X) \text{ is between -1 and 0} \\
-    &=& X - X^2 
+\Var(X) &=& X - X^2 \quad \text{where } \Var(X) \text{ is between -1 and 0} \\
+    &=& - (\E(X) + 0,5)^2 + 0,25 
 \end{eqnarray}
 
 \begin{eqnarray}
-    \Var(X) &=& - (\E(X) - 0,5)^2 + 0,25 \quad \text{where } \Var(X) \text{ is between 0 and 1} \\
-        &=& - X - X^2
+    \Var(X) &=& - X - X^2 \quad \text{where } \Var(X) \text{ is between 0 and 1} \\
+        &=&  - (\E(X) - 0,5)^2 + 0,25
 \end{eqnarray}
     
 
 \section{Take different questions into account}
 
-Since 
+As already seen, the published indicator take different questions into account. 
+Variance is a little bit more complex to 
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &\neq&
     \frac{\Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4})}{16} \nonumber
 \end{eqnarray}
 
-
 \begin{eqnarray}
     \Var \left(\frac{X+Y}{2} \right) = \frac{1}{4} \left( \Var (X) + \Var(Y) + \Cov (X,Y) \right) 
-\end{eqnarray}
-
-\begin{eqnarray}
-    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
-    && + \Cov (X_{Q1},X_{Q2}) + \Cov (X_{Q1},X_{Q3}) + \Cov (X_{Q1},X_{Q4}) \nonumber \\
-    &&  + \Cov (X_{Q2},X_{Q3}) + \Cov (X_{Q2},X_{Q4}) + \Cov (X_{Q3},X_{Q4}) \large] \nonumber
 \end{eqnarray}
 
 \begin{eqnarray}
@@ -985,56 +1019,47 @@ Since
     &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
 \end{eqnarray}
 
-\begin{eqnarray}
-    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
-    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
-    &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
-\end{eqnarray}
-
-
-\section{Discussion regarding the 'true variance'}
-
-There is another way to calculate the variance that have been ignored for, that is calculating the variance for each lowest group of globalisation, and then combine those calculated variances.
-
-
-Interestingly, it have been calculated for several questions of the business barometer, and it is approximately 10 times smaller than the variance based on all the answer a ones.
-
-
-
-The reasons why it will not be used here
-- losing information
-- weight of globalisation taken into account in the weighted variance
-
-
 
 
 \chapter{The Indicator of the Evolution of Individual Responses}
 
- \subsubsection{Why this new indicator}
 
-Also Called Z indicator
+In the same logic as for the variance, a proposition is done here of a way to have more information out of the business survey. 
+As explained in the first chapter, the business survey has almost the same participants over time, which is called a panel survey.
+
+%In the BSIndicator, this is not taken into account. To show this lets take a simple example; let imagine that from a certain month to the other one, the BSI is the same, it will be interpreted as no changes in companies view. This is one explanation, but it is possible that 
+
+This means that we can see the individual evolution of each of the individual participants. A working paper \cite{caron_estimation_1996}, written by researchers at l'INSEE, proposed an indicator that take into account the responses at the previous survey and gave value to the evolution.
+We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
 
 Can be better understood as the indicator of the changes in individual answers between t-1 and t
 
-cite the paper by INSEE 1996 \cite{caron_estimation_1996}
+As for the variance, The EIR has no ambition of replacing the BSI but rather to propose an addition information.
 
-An issue for this indicator was to find an optimal name for it so that it would be easily understand by the largest number.
- 
+\subsubsection{Explanation}
+
+To understand this new indicator, it's important to see that if we take only one period into account, there are three different possibilities of answers; "negative", "neutral" and "positive". 
+When we take two periods into account, a month (t) and the previous one (t-1) for example, there are nine possible situations as represented in \autoref{tab:EIR explanation}. 
+We can again see that $\pi$ is used since we will speak about proportions and probabilities of been in a certain group, as done before.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+    		&    \textbf{-} & $\pi_{--}$	& $\pi_{-0}$	& $\pi_{-+}$ \\ 
+    $t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
+    		&    \textbf{+} & $\pi_{+-}$	& $\pi_{+0}$	& $\pi_{++}$ \\ \cline{2-5}
+    \end{tabular}    
+    \caption{Possible observation when taking t and t-1 into account}
+    \label{tab:EIR explanation}
+\end{table}{}
+
 
 \section{Indicator of the Unweighted Evolution of Individual Responses}
-\subsubsection{Explain the new indicator}
 
-\begin{center}
-\begin{tabular}{r | r | c c c | }
-\multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
-\multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
-		&    \textbf{-} & $\pi_{--}$	& $\pi_{-0}$	& $\pi_{-+}$ \\ 
-$t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
-		&    \textbf{+} & $\pi_{+-}$	& $\pi_{+0}$	& $\pi_{++}$ \\ \cline{2-5}
-\end{tabular}    
-\end{center}
 
-where
+
 
 \begin{equation}
 \pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
@@ -1063,7 +1088,7 @@ E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} =
 \subsubsection{Interpretation}
 
 
-\section{Indicator of the Unweighted Evolution of Individual Responses}
+\section{Indicator of the Weighted Evolution of Individual Responses}
 
 \section{Generalisation for n time frames}
 
@@ -1279,7 +1304,7 @@ Attrition, also called Panel Conditioning, is present when participants change t
 A very interesting master thesis was done about the Belgian Labour Force Survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}. 
 The Belgian Labour Force Survey was convenient to test for attrition, since it's a survey where respondents reply four times to the same survey with a lag of six months.
 
-In the case of the Business Industry Survey it's a harder to test for it since we have only two major periods of recruitment between 1988 and 2018; in the early 1900 and between XXX and XXXX with some company 
+In the case of the Business Industry Survey it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1900 and between XXX and XXXX with some company 
 
 plot of the amount of recruited over time
 
@@ -1353,7 +1378,9 @@ Small remember
 - 1988 - 2018
 - BSI, var BSI, EIR and EIR2
 
-Some things have to be looked at before starting the modeling process
+Some things have to be looked at before starting the modelling process
+
+NON Weighted ! to complicated
 
 \section{?Small vs Large}
 
@@ -1831,6 +1858,7 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
 \chapter*{Appendix}
 
 \section{Questions NS975}
+\label{Appendix: Question NS975 description}
 Questions taken into account for NS975:
 ....
 
@@ -1917,7 +1945,7 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \captionsetup{justification=centering}
     \includegraphics[scale=0.8]{Graphs/variables.pdf}
     \caption{Plot }
-    \label{plot:appendix all variabless}
+    \label{plot:appendix all variables}
 \end{figure}
 
 

@@ -398,6 +398,34 @@ F Statistic & \multicolumn{1}{c}{63.468$^{***}$} & \multicolumn{1}{c}{127.781$^{
     \label{pred2}
 \end{figure}
 
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
+    && + \Cov (X_{Q1},X_{Q2}) + \Cov (X_{Q1},X_{Q3}) + \Cov (X_{Q1},X_{Q4}) \nonumber \\
+    &&  + \Cov (X_{Q2},X_{Q3}) + \Cov (X_{Q2},X_{Q4}) + \Cov (X_{Q3},X_{Q4}) \large] \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
+    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
+    &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
+\end{eqnarray}
+
+
+
+
+\section{Discussion regarding the 'true variance'}
+
+There is another way to calculate the variance that have been ignored; the calculation of the variance for each lowest group of globalisation, and then combine those calculated variances.
+
+Interestingly, it have been calculated for several questions of the business barometer, and it is approximately 10 times smaller than the variance based on all the answer a ones.
+
+The reasons why it will not be used here
+- losing information
+- weight of globalisation taken into account in the weighted variance
+
+
+
+
 
 \newpage
 
