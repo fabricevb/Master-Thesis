@@ -15,7 +15,7 @@ library(RJDemetra)
 library(tidyverse)
 library(readxl)
 library(xlsx)
- # library(rjdqa)
+library(rjdqa)
 library(ggplot2)
 library(ggfortify)
 library(zoo)
@@ -23,16 +23,16 @@ library(xts)
 
 
 # Import all datasets
-MI018 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+MI018 <-read_excel("C:/Users/Fabrice/Documents/GitHub/Master-Thesis/Datasets/CALC FINAL.xlsx",
                  sheet="MI018")
 
-MI027 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+MI027 <-read_excel("C:/Users/Fabrice/Documents/GitHub/Master-Thesis/Datasets/CALC FINAL.xlsx",
                    sheet="MI027")
 
-MI032 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+MI032 <-read_excel("C:/Users/Fabrice/Documents/GitHub/Master-Thesis/Datasets/CALC FINAL.xlsx",
                    sheet="MI032")
 
-MI033 <-read_excel("C:/Users/Fabrice/Documents/RS_975.xlsx",
+MI033 <-read_excel("C:/Users/Fabrice/Documents/GitHub/Master-Thesis/Datasets/CALC FINAL.xlsx",
                    sheet="MI033")
 
 

@@ -21,7 +21,7 @@ library(ggfortify)
 library(forecast)
 
 # upload data
-data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
+data <- read_excel("GitHub/Master-Thesis/Datasets/data_model.xlsx")
 
 
 
