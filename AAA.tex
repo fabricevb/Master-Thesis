@@ -221,6 +221,8 @@ Academic year 2018-2019
 
 
 \newpage
+\setcounter{page}{0}
+\pagenumbering{roman}
 
 \begin{bottompar}
 \copyright Copyright by KU Leuven \\ \\
@@ -229,30 +231,39 @@ A written permission of the promotor is also required to use the methods, produc
 \end{bottompar}
 
 
-\setcounter{page}{0}
-\pagenumbering{roman}
 
 \chapter*{Acknowledgement}
 
 I'm grateful to Laurent Van Belle, my co-supervisor and ...
 the National Bank of Belgium \\
-Jean Palate, David ... 
+Jean Palate - David ... 
 and all the members of the Department of Research and Development who where always there to answer any of my questions.
+
+Isabelle - Marc Boumon
+
+Vanessa Baugnet - Rudi Acx 
 
 
 KULeuven
 
+Geert Molenberghs
 
-\vfill
-\textit{"Statistics are the heart of democracy." }\\
-- Simeon Strunsky
+All the professors of the Master of Statistics that made it possible for me to acquire the knowledge to write this thesis.
+
+
+
+\begin{bottompar}
+\textit{"Statistics are the heart of democracy." }
+
+    Simeon Strunsky
+\end{bottompar}
 
 
 \chapter*{Abstract}
 
 
 \section*{Abstract}
-This Master Thesis explores the Variance of the Belgian business survey. 
+This Master Thesis explores the variance of the Belgian business survey. 
 Several finding concerning the nature and properties of the Variance are found as the bounds and relation with the mean.
 
 In a second part, the predictive power of the variance is examined and it's found that ...
@@ -285,7 +296,7 @@ Markov Switching -
 
 \chapter{Introduction}
 
-business survey Indicator / Business Barometer / Business Confidence Indicator
+business survey indicator / business barometer / business confidence indicator
 
 A widespread method to predict the evolution of National Economies is the survey-based Business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
@@ -314,18 +325,18 @@ Chapter 2
 5
 
 
-Algemeen
-Conjunctuurenquêtes
+%Algemeen Conjunctuurenquêtes
 
-Sinds 1954 houdt de Nationale Bank bij een panel van ongeveer 3000 bedrijfsleiders een maandelijkse enquête naar hun appreciatie van de economische toestand. De resultaten worden rond de 21e van elke maand gepubliceerd en bevatten naast globale indicatoren tevens resultaten per bedrijfstak. Deelnemers aan de enquête ontvangen bovendien nog resultaten per product. Conjunctuurenquêtes leveren waardevolle informatie over het economisch verloop vóór de traditionele statistieken beschikbaar komen. Hun waarde wordt verhoogd door de internationale vergelijkbaarheid.
 
-Op verzoek van de beroepsorganisaties van de Belgische ondernemingen, heeft de Nationale Bank in 1954 maandelijkse enquêtes naar het ondernemersvertrouwen opgezet. Deze enquêtes, die zijn ontstaan in de Verenigde Staten in de jaren dertig en die in 1949 werden geïntroduceerd in Europa (in Duitsland), hebben tot doel de mening van de ondernemers omtrent het economische conjunctuurklimaat en omtrent de op de korte termijn te verwachten ontwikkelingen, nauwkeurig en snel in te zamelen. Zij vormen een uiterst waardevol instrument met het oog op de conjunctuuranalyse, omdat hun resultaten - die beschikbaar zijn voor de lopende maand - veel vroeger beschikbaar zijn dan de informatie van de kwantitatieve indicatoren.
+%Sinds 1954 houdt de Nationale Bank bij een panel van ongeveer 3000 bedrijfsleiders een maandelijkse enquête naar hun appreciatie van de economische toestand. De resultaten worden rond de 21e van elke maand gepubliceerd en bevatten naast globale indicatoren tevens resultaten per bedrijfstak. Deelnemers aan de enquête ontvangen bovendien nog resultaten per product. Conjunctuurenquêtes leveren waardevolle informatie over het economisch verloop vóór de traditionele statistieken beschikbaar komen. Hun waarde wordt verhoogd door de internationale vergelijkbaarheid.
 
-De conjunctuurenquêtes die bij de ondernemers worden uitgevoerd, vormen het voorwerp van een harmonisatieprogramma van de Europese Commissie. Dankzij dit programma zijn de gehanteerde methoden en de verkregen resultaten in de diverse Europese landen geheel en al vergelijkbaar.
+%Op verzoek van de beroepsorganisaties van de Belgische ondernemingen, heeft de Nationale Bank in 1954 maandelijkse enquêtes naar het ondernemersvertrouwen opgezet. Deze enquêtes, die zijn ontstaan in de Verenigde Staten in de jaren dertig en die in 1949 werden geïntroduceerd in Europa (in Duitsland), hebben tot doel de mening van de ondernemers omtrent het economische conjunctuurklimaat en omtrent de op de korte termijn te verwachten ontwikkelingen, nauwkeurig en snel in te zamelen. Zij vormen een uiterst waardevol instrument met het oog op de conjunctuuranalyse, omdat hun resultaten - die beschikbaar zijn voor de lopende maand - veel vroeger beschikbaar zijn dan de informatie van de kwantitatieve indicatoren.
 
-De maandelijkse resultaten van de conjunctuurenquêtes worden verspreid en becommentarieerd in een beknopt perscommuniqué, tussen de 21e en de 25e van elke maand. De precieze datum wordt aangekondigd in een kalender die kan worden geraadpleegd op de internetsite.
+%De conjunctuurenquêtes die bij de ondernemers worden uitgevoerd, vormen het voorwerp van een harmonisatieprogramma van de Europese Commissie. Dankzij dit programma zijn de gehanteerde methoden en de verkregen resultaten in de diverse Europese landen geheel en al vergelijkbaar.
 
-De industriële ondernemingen worden daarnaast ook één keer per kwartaal bevraagd omtrent de benuttingsgraad van het productievermogen, en één keer om de zes maanden omtrent de investeringen. De resultaten van de enquête naar de benuttingsgraad van het productievermogen worden opgenomen in het maandelijkse perscommuniqué, terwijl die van de enquête naar de investeringen het voorwerp uitmaken van een speciaal communiqué.
+%De maandelijkse resultaten van de conjunctuurenquêtes worden verspreid en becommentarieerd in een beknopt perscommuniqué, tussen de 21e en de 25e van elke maand. De precieze datum wordt aangekondigd in een kalender die kan worden geraadpleegd op de internetsite.
+
+%De industriële ondernemingen worden daarnaast ook één keer per kwartaal bevraagd omtrent de benuttingsgraad van het productievermogen, en één keer om de zes maanden omtrent de investeringen. De resultaten van de enquête naar de benuttingsgraad van het productievermogen worden opgenomen in het maandelijkse perscommuniqué, terwijl die van de enquête naar de investeringen het voorwerp uitmaken van een speciaal communiqué.
 
 
 \chapter{The Business Survey Indicator}
@@ -717,7 +728,7 @@ The calculation in itself is standard, but the different ways to write it are im
 
 \subsection{Unweighted Indicator}
 
-The calculation of the unweighted indicator for a specific question at a specific time can be written as follow;
+The calculation of the unweighted indicator for a specific question at a specific time is the mean of the responses and can be written as follow;
 
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n x_i}{n}
@@ -730,13 +741,13 @@ $n$ is the amount of respondents.
 Since x can only take three different values, we can decompose it into 
 
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n x_{+i} + \sum_{i=1}^n x_{Ni} + \sum_{i=1}^n x_{-i}}{n}
+    E(X) = \frac{ \sum_{i=1}^n x_{+i} + \sum_{i=1}^n x_{0i} + \sum_{i=1}^n x_{-i}}{n}
 \end{equation} 
 
 where 
 $x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent i.
 
-Since we know that $\sum_{i=1}^n x_{Ni} = 0$, we can write
+Since we know that $\sum_{i=1}^n x_{0i} = 0$, we can write
 
 \begin{equation}
     E(X) = \frac{\sum_{i=1}^n x_{+i}}{n}  + \frac{\sum_{i=1}^n x_{-i}}{n}
@@ -765,7 +776,7 @@ Therefore we have now the following equation
 where
 $x_i$ is the answer of the respondent i and can take values -1, 0 and 1.
 $p_i$ is the weight of the globalisation of the company i and 
-$\omega_i$ weight according to its size.
+$\omega_i$ weight according to its size. Both weights are relative weights which means that respective sum is equal to one.
 
 As for the unweighted indicator, we ca decompose the equation by the three possible answers with, in this case, their according weights.
 
@@ -782,6 +793,19 @@ and again we know that $\sum_{i=1}^n \omega_{+i} p_{+i} x_{Ni} = 0$, so we can w
 
 \begin{equation}
     E(X) = \pi_+ - \pi_-
+\end{equation}
+
+\begin{equation}
+    E(X) = \omega p \pi_+ - \omega p \pi_-
+\end{equation}
+
+\begin{equation}
+    E(X) = \Omega \pi_+ - \Omega \pi_-
+\end{equation}
+
+
+\begin{equation}
+    E(X) = \Omega P \pi_+ - \Omega P \pi_-
 \end{equation}
 
 where $\pi_+$ and $\pi_-$ are the \textbf{weighted} proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
@@ -808,7 +832,7 @@ $E(X_{Q1})$, $E(X_{Q2})$, $E(X_{Q3})$ and $E(X_{Q4})$ are the different averages
 can also been seen as the mean of the answers for each participant at each period then combined together
 
 \begin{equation}
-    \mbox{Industry Business Indicator}\ = \frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n}
+    \mbox{Industry business survey indicator}\ = \frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n}
 \end{equation}
 
 \begin{equation}
@@ -821,20 +845,21 @@ can also been seen as the mean of the answers for each participant at each perio
 The variance is, with the mean, one of the first tool for Statisticians to study a certain variable. Next to the mean, that is the average value of a certain variable, the variance is the measure of the dispersion. 
 In the context of the business survey, the variance haven't been used much, while it can be seen as "how much people agree", an important information that we can extract from the survey.
 
-The variance will be interpreted as to what level respondents agreement about Belgian economy.
+The variance will be interpreted as to what level respondents agree about the state of the Belgian economy.
 
-?This different from the sampling error. The idea here is not the study accuracy or ...
-but rather to find new information hidden in the survey.
+% A small comment can be written regarding the difference between the variance and sampling error. The idea here is not the study accuracy or ... but rather to find new information hidden in the survey.
 
+This chapter will present the calculation of the variance of the unweighted and weighted indicator.
+It will then look into the properties and specificities of the variance of the business survey indicator.
 
-This chapter will .........
-
-As done for the Indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
+% As done for the indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
 
 
 \section{Variance of the Unweighted Indicator}
 
-\cite{alcaniz_calculation_2006}
+% \cite{alcaniz_calculation_2006}
+
+\nocite{alcaniz_calculation_2006}
 
 The formula of the variance can be written as 
 \begin{eqnarray}
@@ -845,7 +870,7 @@ In the case of one question of the business survey indicator, we can write and d
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber 
+    &=& \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{0i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) - E(X)^2 \\ \nonumber 
 \end{eqnarray}
 
 
@@ -871,7 +896,7 @@ Which means that we have several different ways to write the previous equation;
 
 \section{Variance of the Weighted Indicator}
 
-We can now do the same for the weighted indicator. The equation is very similar;
+We can now do the same for the weighted indicator. The equation is very similar as for the variance of the unweighted variance;
 
 %\begin{equation}
 %\Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i %p_i (X_i - \bar{X})^2
@@ -879,7 +904,7 @@ We can now do the same for the weighted indicator. The equation is very similar;
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \left( \frac{\sum_{i=1}^n \omega_i p_i x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber 
+    &=& \left( \frac{\sum_{i=1}^n \omega_i p_i x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{-i}^2}{n} \right) - E(X)^2 \nonumber \\
 \end{eqnarray}
 
 We can here, as we did for the indicator, take into account weighted proportion and write the equation the same way as for the unweighted variance but in this case, by taking the weighted proportions. Again the variance can be written in different ways, depending on the interpretation that fits best;
@@ -888,6 +913,12 @@ We can here, as we did for the indicator, take into account weighted proportion 
 \Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
 	&=& \pi_+ + \pi_- - E ( X )^2 \\
 	&=& 1 - \pi_0 - E(X)^2
+\end{eqnarray}
+
+\begin{eqnarray}
+\Var(X) &=& \Omega \pi_+ + \Omega \pi_- - ( \Omega \pi_+ - \Omega \pi_- )^2 \\
+	&=& \Omega \pi_+ + \Omega \pi_- - E ( X )^2 \\
+	&=& 1 - \Omega \pi_{0} - E(X)^2
 \end{eqnarray}
 
 
@@ -1001,38 +1032,55 @@ lower bound :
 \section{Take different questions into account}
 
 As already seen, the published indicator take different questions into account. 
-Variance is a little bit more complex to 
+Variance is a little bit more complex to combine since
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &\neq&
     \frac{\Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4})}{16} \nonumber
 \end{eqnarray}
 
+The formula to combine different variance is the following
+
+\begin{equation}
+\Var \left(\sum_{i=1}^{n} X_{i}\right) = \sum_{i=1}^{n} \sum_{j=1}^{n} \Cov\left(X_{i}, X_{j}\right)
+= \sum_{i=1}^{n} \Var\left(X_{i}\right)+2 \sum_{1 \leq i<j \leq n} \Cov\left(X_{i}, X_{j}\right)
+\end{equation}
+
+In the case of combining the variances of four different questions of the business survey, it means this formula
+
 \begin{eqnarray}
-    \Var \left(\frac{X+Y}{2} \right) = \frac{1}{4} \left( \Var (X) + \Var(Y) + \Cov (X,Y) \right) 
+    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
+    && + 2 \Cov (X_{Q1},X_{Q2}) + 2 \Cov (X_{Q1},X_{Q3}) + 2 \Cov (X_{Q1},X_{Q4}) \nonumber \\
+    &&  + 2 \Cov (X_{Q2},X_{Q3}) + 2 \Cov (X_{Q2},X_{Q4}) + 2 \Cov (X_{Q3},X_{Q4}) \large] \nonumber
 \end{eqnarray}
+
+The complexity of the formula encourage to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator, we can write it as follow
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
     &=& \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n} \right) \nonumber \\
     &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} }{4} \right) \nonumber \\
-    &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
+ %   &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
 \end{eqnarray}
 
+This can be generalised with the following equation
 
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
+    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
+    &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
+\end{eqnarray}
 
 \chapter{The Indicator of the Evolution of Individual Responses}
-
 
 In the same logic as for the variance, a proposition is done here of a way to have more information out of the business survey. 
 As explained in the first chapter, the business survey has almost the same participants over time, which is called a panel survey.
 
 %In the BSIndicator, this is not taken into account. To show this lets take a simple example; let imagine that from a certain month to the other one, the BSI is the same, it will be interpreted as no changes in companies view. This is one explanation, but it is possible that 
 
-This means that we can see the individual evolution of each of the individual participants. A working paper \cite{caron_estimation_1996}, written by researchers at l'INSEE, proposed an indicator that take into account the responses at the previous survey and gave value to the evolution.
+This means that we can see the individual evolution of each of the individual participants. \cite{caron_estimation_1996} proposed an indicator that take into account the responses at the previous survey and gave value to the changes in response.
 We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
-
-Can be better understood as the indicator of the changes in individual answers between t-1 and t
+It can be understood as the indicator of the changes in individual answers between t-1 and t.
 
 As for the variance, The EIR has no ambition of replacing the BSI but rather to propose an addition information.
 
@@ -1047,145 +1095,122 @@ We can again see that $\pi$ is used since we will speak about proportions and pr
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+    		&    \textbf{-} & $x_{i--}$	& $x_{i-0}$	& $x_{i-+}$ \\ 
+    $t-1$ & \textbf{0} & $x_{i0-}$	& $x_{i00}$	& $x_{i0+}$	\\
+    		&    \textbf{+} & $x_{i+-}$	& $x_{i+0}$	& $x_{i++}$ \\ \cline{2-5}
+    \end{tabular}
+    \caption{Possible observation when taking t and t-1 into account}
+    \label{tab:EIR explanation}
+\end{table}{}
+
+The same as for the BSI, the EIR take different values. In the case of the BSI, if the answer was negative, it would take value "-1", neutral it would take value "0" and positive it would take value "1".
+
+The EIR defers in the sens that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and at the previous survey, $x=0$. 
+On the other hand, if a certain participant changes his answer for a more positive answer it will take value 1, except if it's a radical change from a "negative" to a "positive" answer, then it will take value 2.
+Same the other way around, if it decreases it will take value -1, except for a radical change from "positive" to "negative".
+We will here use $z$ rather than $x$ to make a clear distinction between the BSI and the EIR.
+
+A summary to better understand this new indicator can be seen in \autoref{tab:values EIR}. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+   		&    \textbf{-} & $z_{i--}=0$	& $z_{i-0}=1$	& $z_{i-+}=2$ \\ 
+    $t-1$ & \textbf{0}  & $z_{i0-}=-1$	& $z_{i00}=0$	& $z_{i0+}=1$	\\
+    		& \textbf{+}& $z_{i+-}=-2$	& $z_{i+0}=-1$	& $z_{i++}=0$ \\ \cline{2-5}
+\end{tabular}
+    \caption{Value given at each type of $z_i$}
+    \label{tab:values EIR}
+\end{table}{}
+
+\section{Indicator of the Unweighted Evolution of Individual Responses}
+
+% \begin{equation}
+%    \pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
+% \end{equation}
+
+The Indicator of the evolution of the individual responses can be obtained by taking the mean of the values, as defined in \autoref{tab:values EIR}, the formula is then
+
+\begin{eqnarray}
+    \E(Z) &=&  \frac{ \sum_{i=1}^n z_i}{n} \\ \nonumber \\
+        &=& \left( \frac{ \sum_{i=1}^n z_{--i}}{n} \right)
+     + \left( \frac{\sum_{i=1}^n z_{-0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{-+i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{0-i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{00i} }{n} \right) \nonumber  \\
+    &&  + \left( \frac{\sum_{i=1}^n z_{0+i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{+-i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{+0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^n z_{+-i}}{n} \right)
+\end{eqnarray}
+
+As for the indicator, we will now move from individual responses, to proportions, that can be seen in \autoref{tab:EIR proportions}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
     		&    \textbf{-} & $\pi_{--}$	& $\pi_{-0}$	& $\pi_{-+}$ \\ 
     $t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
     		&    \textbf{+} & $\pi_{+-}$	& $\pi_{+0}$	& $\pi_{++}$ \\ \cline{2-5}
     \end{tabular}    
     \caption{Possible observation when taking t and t-1 into account}
-    \label{tab:EIR explanation}
-\end{table}{}
+    \label{tab:EIR proportions}
+\end{table}
 
-
-\section{Indicator of the Unweighted Evolution of Individual Responses}
-
-
-
+The EIR can now be calculated with the following expression after taking out $\pi_{--}$, $\pi_{00}$ and $\pi_{++}$ since $z_{--}$, $z_{00}$ and $z_{++}$ have value zero.
 
 \begin{equation}
-\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1
+    \E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
 \end{equation}
 
-The Indicator of the evolution of the individual responses can be obtained by
-
-\begin{equation}
-E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
-\end{equation}
-
-where
-$\pi$ is the proportion/probability of respondent answering (-,0,+) at $t-1$ and $t$ 
+where $\pi$ is the proportion/probability of respondent answering negative(-), neutral (0) and positive (+) at $t-1$ and $t$. 
 
 
-\begin{equation}
-E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} = 
-\begin{tabular}{r|r r r}
-    			& \textbf{-} & \textbf{0} & \textbf{+} \\\hline
-    \textbf{-} 	& 0		& +1	& +2	\\
-    \textbf{0} 	& -1	& 0		& +1	\\
-    \textbf{+} 	& -2	& -1	& 0		\\
-\end{tabular}
-\end{equation}
-
-\subsubsection{Interpretation}
+\subsubsection{?Interpretation}
 
 
 \section{Indicator of the Weighted Evolution of Individual Responses}
 
+bla bla bla
+
 \section{Generalisation for n time frames}
 
-Changes in the economy are usually taking several months to 
+Changes in the economy are usually taking several months to influence all the companies. There can be some lag of effects on for example larger companies, of a very specific sector.
+The idea of only taking a certain month and the previous month can seems non-sufficient, it's relevant to take a larger period into account. 
 
-Therefore it's interesting to take a larger period into account.
-
-There are mainly to ways to generalise this method. \\ A simple generalisation is to use t-n rather than t-1. You compare then that period t-n with the the answer at t, without taking the between answers into account.
-
-Another generalisation is as follow
+Different methods where explored to take more than two periods into account, but it was found as been flawed and very complex to interpret.
+We rather propose here a simple generalisation; use t-n rather than t-1. You compare then that period t-n with the the answer at t, without taking the between answers into account.
 
 \subsection{t-n vs t}
 
 come up to the same except that you use a larger period into account
 
 
-\subsection{Take the evolution from t-n to t}
-
-
-\subsubsection{t-2 vs t-1 vs t}
-
-\begin{center}
-\begin{tabular}{r | r | r | r | c c c | }
- \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
- \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
-&&& \textbf{-} & $\pi_{---}$ & $\pi_{--0}$ & $\pi_{--+}$ \\ 
-&  $-$ &$t-1$ & \textbf{0} & $\pi_{-0-}$	& $\pi_{-00}$ & $\pi_{-0+}$	\\
-&&&\textbf{+} & $\pi_{-+-}$	& $\pi_{-+0}$	& $\pi_{-++}$ \\ \cline{2-2} \cline{4-7}
-&&&\textbf{-} & $\pi_{0--}$	& $\pi_{0-0}$	& $\pi_{0-+}$ \\ 
-$t-2$ & $0$   &$t-1$ & \textbf{0} & $\pi_{00-}$	& $\pi_{000}$	& $\pi_{00+}$	\\
-&&&\textbf{+} & $\pi_{0+-}$	& $\pi_{0+0}$	& $\pi_{0++}$ \\ \cline{2-2} \cline{4-7}
-&&&\textbf{-} & $\pi_{+--}$	& $\pi_{+-0}$	& $\pi_{+-+}$ \\ 
-&$+$   &$t-1$ & \textbf{0} & $\pi_{+0-}$	& $\pi_{+00}$	& $\pi_{+0+}$	\\
-&&&\textbf{+} & $\pi_{++-}$	& $\pi_{++0}$	& $\pi_{+++}$ \\ \cline{2-2} \cline{4-7}
-		
-\end{tabular}    
-\end{center}
-
-\begin{center}
-\begin{tabular}{r | r | r | r | c c c | }
- \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
- \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
-&&& \textbf{-}              & $\pi_{---}=0$ & $\pi_{--0}=2$ & $\pi_{--+}=3$ \\ 
-&$-$ &$t-1$&\textbf{0}      & $\pi_{-0-}=0$	& $\pi_{-00}=1$ & $\pi_{-0+}=2$	\\
-&&&\textbf{+}               & $\pi_{-+-}=-1$& $\pi_{-+0}=0$	& $\pi_{-++}=1$ \\ \cline{2-2} \cline{4-7}
-&&&\textbf{-}               & $\pi_{0--}=-1$	& $\pi_{0-0}=1$	    & $\pi_{0-+}=2$ \\ 
-$t-2$&$0$&$t-1$&\textbf{0}  & $\pi_{00-}=-1$	& $\pi_{000}=0$	    & $\pi_{00+}=1$	\\
-&&&\textbf{+}               & $\pi_{0+-}=-2$	& $\pi_{0+0}=-1$    & $\pi_{0++}=0$ \\ \cline{2-2} \cline{4-7}
-&&&\textbf{-}               & $\pi_{+--}=-1$	& $\pi_{+-0}=0$	    & $\pi_{+-+}=1$ \\ 
-&$+$   &$t-1$ & \textbf{0}  & $\pi_{+0-}=-2$	& $\pi_{+00}=-1$    & $\pi_{+0+}=0$	\\
-&&&\textbf{+}               & $\pi_{++-}=-3$	& $\pi_{++0}=-2$    & $\pi_{+++}=0$ \\ \cline{2-2} \cline{4-7}
-		
-\end{tabular}    
-\end{center}
-
-
-
-\begin{center}
-\begin{tabular}{r | r | r | r | c c c | }
- \multicolumn{3}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{5-7}
- \multicolumn{3}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-2} \cline{4-7}
-&&& \textbf{-}              & $0$	& $2$	& $3$ \\ 
-& $-$ &$t-1$ & \textbf{0}   & $0$	& $1$	& $2$	\\
-&&& \textbf{+}              & $-1$ & $0$	& $1$ \\ \cline{2-2} \cline{4-7}
-&&& \textbf{-}              & $-1$ & $1$	& $2$ \\ 
-$t-2$&$0$&$t-1$&\textbf{0}  & $-1$	& $0$	& $1$	\\
-&&&    \textbf{+}           & $-2$ & $-1$	& $1$ \\ \cline{2-2} \cline{4-7}
-&&&    \textbf{-}           & $-1$ & $0$	& $1$ \\ 
-&$+$   &$t-1$ & \textbf{0}  & $-2$	& $-1$	& $0$	\\
-&&& \textbf{+}              & $-3$	& $-2$	& $0$ \\ \cline{2-2} \cline{4-7}
-\end{tabular}    
-\end{center}
-
-
-
-
-
-
-
 \chapter{The Variance of the Evolution of Individual Responses (Volatility of Responses)} \label{Chapter:Z}
 
-That we will also call the \textbf{volatility of the indicator}, in the sens that the variance of the evolution of the indicator account for the dispersion of the difference in answers over a two times period.
+The new indicator, the evolution of individual responses, also has a variance that has some interpretation interest. 
+While the EIR is a measure of in which direction companies change there answer, the variance of the EIR can be understood as the measure of changes in answers. Therefore the Var(EIR) can be seen as the volatility of the indicator, in the sens that the variance of the EIR account for the dispersion of the difference in answers over a two times period.
 
-In this case, the highers variance of Z, will be obtained when half of the companies went from a negative answer to a positive answer and the other half did the opposite and changed from a positive answer at t-1 to a negative answer at t. 
+\subsubsection{difference var(BSI) \& var(EIR)}
 
-waza see Chapter \ref{Chapter:Z}
+That we will also call the volatility of the indicator, in the sens that the variance of the evolution of the indicator account for the dispersion of the difference in answers over a two times period.
 
-The idea is that this variance of Z is complementary to the estimation of Z since they have two very interesting but different interpretations.
+% In this case, the highest the variance of EIR, will be obtained when half of the companies went from a negative answer to a positive answer and the other half did the opposite and changed from a positive answer at t-1 to a negative answer at t. 
+
+The idea is that this variance of EIR is complementary to the estimation of Z since they have two very interesting but different interpretations.
 Further interpretation will be 
 
 \section{Presentation}
 
 
 
-\begin{equation}
-\pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1 
-\end{equation}
+%\begin{equation}
+%    \pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1 
+%\end{equation}
 
 \begin{eqnarray}
 Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
@@ -1339,9 +1364,9 @@ Test for seasonality where done with JDemetra (see appendix \autopageref{sec:tes
 bla bla
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{l|c|c|c|c|c|c}
-\textbf{Seasonality Test} & BSI & Var(BSI) & EIR & Var(EIR) & EIR2 & Var(EIR2) \\ \hline
+    \centering \small
+    \begin{tabular}{l|c|c|c|c|c|c|c|c}
+\textbf{Seasonality Test} & BSI & Var(BSI) & EIR & Var(EIR) & EIR2 & Var(EIR2) & EIR3 & Var(EIR3) \\ \hline
 Auto-correlations at seasonal lags& YES & YES & YES & YES & YES & YES \\
 Friedman (non parametric)       & YES   & YES & YES & YES & YES & YES \\
 Kruskall-Wallis (non parametric)& YES   & YES & YES & YES & YES & YES \\
@@ -1368,7 +1393,20 @@ add var after JDemetra
 
 YoY GDP is already, by nature, seasonally corrected.
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.75]{Graphs/RJDemetra_plots.pdf}
+    \caption{Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months  earlier (EIR3), with for each of them, their variance. The yellow lines are the raw data, the blue lines the seasonally corrected data and the green line is the trend of the variable.}
+    \label{fig:seasonal ajusted rjdemetra}
+\end{figure}{}
+
 \chapter{Exploratory Analysis}
+
+The previous chapter already did some of the exploratory analysis.
+
+We will here have some further observations based on the time trends of the different variables at hand.
+In a second time w
 
 
 \subsubsection{Data At hand}
@@ -1382,12 +1420,12 @@ Some things have to be looked at before starting the modelling process
 
 NON Weighted ! to complicated
 
-\section{?Small vs Large}
+\section{The industry business survey indicator, the individual evolution in responses and their variances}
+
+ \textbf{plot of the different variables}
 
 
-\section{?By Sector}
-
-\section{Correlations}
+\section{Correlations Analysis}
 
 There are three different correlations that need to be looked at
 
@@ -1409,7 +1447,21 @@ E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\
 \end{tabular} 
 \end{table}
  
-
+\begin{table}[H] \centering 
+  \caption{Correlation Matrix} 
+  \label{tab:corr questions} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & E\_1 & E\_2 & E\_3 & E\_4 \\ 
+\hline \\[-1.8ex] 
+E\_1 & $1$ & $0.262$ & $0.412$ & $0.416$ \\ 
+E\_2 &  & $1$ & $0.939$ & $0.876$ \\ 
+E\_3 &  &  & $1$ & $0.938$ \\ 
+E\_4 &  &  &  & $1$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table}
 
 \subsection{Correlation with GDP}
 
@@ -1438,6 +1490,7 @@ E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
+
 
 \begin{figure}[H]
     \centering
@@ -1487,6 +1540,15 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
 
 \subsection{Auto-Correlation}
 
+Test stationarity of the time series (ADF)
+In order to test the stationarity of the time series, let’s run the Augmented Dickey-Fuller Test using the adf.test() function from the tseries R package.
+
+First set the hypothesis test:
+
+The null hypothesis H0 : that the time series is non stationary The alternative hypothesis HA : that the time series is stationary
+
+adf.test(candyts)
+
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
@@ -1523,7 +1585,7 @@ E\_3 & $0.477$ & $0.707$ & $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
 E\_3\_lag1 & $0.520$ & $0.679$ & $0.969$ & $1$ & $0.975$ & $0.940$ & $0.892$ \\
 E\_3\_lag2 & $0.545$ & $0.673$ & $0.948$ & $0.975$ & $1$ & $0.974$ & $0.933$ \\
 E\_3\_lag3 & $0.546$ & $0.628$ & $0.906$ & $0.940$ & $0.974$ & $1$ & $0.969$ \\
-E\_3\_lag4 & $0.531$ & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\ 
+E\_3\_lag4 & $0.531$ & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
@@ -1636,10 +1698,56 @@ where   \\
 \section{Model}
 
 
+\begin{table}[!htbp] \centering \footnotesize
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{Linear Regression} \\ 
+\cline{2-6} 
+\\[-1.8ex] & \multicolumn{5}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & -1.756^{***} & -1.761^{***} \\ 
+  & (0.160) & (0.631) & (0.615) & (0.635) & (0.634) \\ 
+  & & & & & \\ 
+ BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 21.310^{***} & 21.116^{***} \\ 
+  & (1.317) & (1.252) & (1.224) & (1.306) & (1.310) \\ 
+  & & & & & \\ 
+ Var(BSI) &  & 49.102^{***} & 36.477^{***} & 40.631^{***} & 39.874^{***} \\ 
+  &  & (5.869) & (8.089) & (11.895) & (11.844) \\ 
+  & & & & & \\ 
+ EIR1 &  &  & -28.718^{**} &  &  \\ 
+  &  &  & (13.792) &  &  \\ 
+  & & & & & \\ 
+ Var(EIR1) &  &  & 78.555^{**} &  &  \\ 
+  &  &  & (35.187) &  &  \\ 
+  & & & & & \\ 
+ EIR2 &  &  &  & -0.709 &  \\ 
+  &  &  &  & (3.878) &  \\ 
+  & & & & & \\ 
+ Var(EIR2) &  &  &  & 9.213 &  \\ 
+  &  &  &  & (11.207) &  \\ 
+  & & & & & \\ 
+ EIR3 &  &  &  &  & 1.248 \\ 
+  &  &  &  &  & (2.615) \\ 
+  & & & & & \\ 
+ Var(EIR3) &  &  &  &  & 9.944 \\ 
+  &  &  &  &  & (11.141) \\ 
+  & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.711} & \multicolumn{1}{c}{0.711} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.701} & \multicolumn{1}{c}{0.701} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.894} & \multicolumn{1}{c}{0.893} \\ 
+F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{73.079$^{***}$} & \multicolumn{1}{c}{73.247$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
 
-
-%\begin{landscape}
-%\end{landscape}
 
 
 
@@ -1790,7 +1898,8 @@ A large
 
 It was seen that
 
-\lipsum[1]
+
+High correlation between var(BSI) and var(EIR) -> people seems to change in the same direction
 
 
 \chapter{Discussion}
