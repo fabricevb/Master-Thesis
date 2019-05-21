@@ -28,7 +28,7 @@ library(forecast)
 
 
 # upload data
-data <- read_excel("GitHub/Master-Thesis/Datasets/data_model.xlsx")
+# data <- read_excel("GitHub/Master-Thesis/Datasets/data_model.xlsx")
 
 
 #data$E_lag1 <- Lag(data$E, 1)
@@ -68,32 +68,26 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 # GDP YoY
 model1 <- lm(GDP_year ~ E_sa, data = data)
-model2 <- lm(GDP_year ~ E_sa + E_sa_diff, data = data)
-model3 <- lm(GDP_year ~ E_sa + Var_sa, data = data)
-model4 <- lm(GDP_year ~ E_sa + E_sa_diff + Var_sa, data = data)
-model5 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa, data = data)
-model6 <- lm(GDP_year ~ E_sa + Z_sa, data = data)
-model7 <- lm(GDP_year ~ E_sa + Z_sa + Var_Z_sa, data = data)
-model8 <- lm(GDP_year ~ E_sa + Var_Z_sa, data = data)
-model9 <- lm(GDP_year ~ E_sa + E_sa_diff + Z_sa, data = data)
-model10 <- lm(GDP_year ~ E_sa + E_sa_diff + Z_sa + Var_Z_sa, data = data)
-model11 <- lm(GDP_year ~ E_sa + E_sa_diff + Var_Z_sa, data = data)
-model12 <- lm(GDP_year ~ E_sa + E_sa_diff + Var_sa + Z_sa + Var_Z_sa, data = data)
+model2 <- lm(GDP_year ~ E_sa + Var_sa, data = data)
+model3 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = data)
+model4 <- lm(GDP_year ~ E_sa + Var_sa + Z2_sa + Var_Z2_sa, data = data)
+model5 <- lm(GDP_year ~ E_sa + Var_sa + Z3_sa + Var_Z3_sa, data = data)
 
-modelfull <- lm(GDP_year ~ E_sa + E_sa_diff + Var_sa + Z_sa + Var_Z_sa + Z2_sa + Var_Z2_sa, data = data)
+
+modelfull <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa + Z2_sa + Var_Z2_sa  + Z3_sa + Var_Z3_sa, data = data)
 
 modelempty <- lm(GDP_year ~ 1, data=data)
 
-AIC(model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12)$AIC
+AIC(model1, model2, model3, model4, model5)$AIC
 
-BIC(model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12)$AIC
+BIC(model1, model2, model3, model4, model5)$AIC
 
 
-stargazer(model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, modelfull, align = TRUE,
+stargazer(model1, model2, model3, model4, model5, align = TRUE,
           intercept.bottom = FALSE,
           single.row = FALSE, 
           df = FALSE,
-          covariate.labels = c("Constant","BSI", "diff BSI", "Var(BSI)", "EIR", "Var(EIR)", "EIR2", "Var(EIR2)"),
+          covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"),
           dep.var.caption  = "Linear Regression",
           dep.var.labels   = "Year on Year GDP (in \\%)")
 
@@ -135,7 +129,7 @@ shortlistedVars
 library(Boruta)
 library(mlbench)
 # Decide if a variable is important or not using Boruta
-boruta_output <- Boruta(GDP_year ~ E_sa + Z_sa + Z2_sa + Var_sa + Var_Z_sa + Var_Z2_sa, data=na.omit(data), doTrace=2)  # perform Boruta search
+boruta_output <- Boruta(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data), doTrace=2)  # perform Boruta search
 
 boruta_signif <- names(boruta_output$finalDecision[boruta_output$finalDecision %in% c("Confirmed", "Tentative")])  # collect Confirmed and Tentative variables
 print(boruta_signif)  # significant variables
@@ -145,7 +139,7 @@ plot(boruta_output, cex.axis=.7, las=2, xlab="", main="Variable Importance")  # 
 
 
 library(earth)
-marsModel <- earth(GDP_year ~ E_sa + Z_sa + Z2_sa + Var_sa + Var_Z_sa + Var_Z2_sa, data=na.omit(data)) # build model
+marsModel <- earth(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data)) # build model
 ev <- evimp (marsModel) # estimate variable importance
 
 ev
@@ -155,12 +149,12 @@ plot(ev)
 
 
 library(party)
-cf1 <- cforest(GDP_year ~ E_sa + Z_sa + Z2_sa + Var_sa + Var_Z_sa + Var_Z2_sa, data=na.omit(data), control=cforest_unbiased(mtry=2,ntree=50)) # fit the random forest
+cf1 <- cforest(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data), control=cforest_unbiased(mtry=2,ntree=50)) # fit the random forest
 varimp(cf1) # get variable importance, based on mean decrease in accuracy
 varimp(cf1, conditional=TRUE)  # conditional=True, adjusts for correlations between predictors
 
 library(relaimpo)
-lmMod <- lm(GDP_year ~ E_sa + Z_sa + Z2_sa + Var_sa + Var_Z_sa + Var_Z2_sa, data=na.omit(data))  # fit lm() model
+lmMod <- lm(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data))  # fit lm() model
 relImportance <- calc.relimp(lmMod, type = "lmg", rela = TRUE)  # calculate relative importance scaled to 100
 sort(relImportance$lmg, decreasing=TRUE)  # relative importance
 
@@ -265,6 +259,7 @@ train <- data[1:144,]
 test <- data[145:372,]
 
 # fitting out of sample
-modelpred1 <- lm(GDP_year ~ E_sa + E_sa_diff + Var_sa + Z_sa + Var_Z_sa, data = train)
+modelpred1 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = train)
 
 plot(predict(modelpred1, data))
+lolo

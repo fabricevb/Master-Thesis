@@ -23,7 +23,7 @@ data <- read_excel("GitHub/Master-Thesis/Datasets/RS975_not_sa.xlsx")
   #data_ts = ts(data, start=c(1988,1), frequency=12)
 
 # add date formated column
-data$date <- as.Date(period)
+data$date <- as.Date(data$period)
 
 # add an observation column 
 data$Obs = 1:nrow(data)
@@ -78,9 +78,13 @@ data$E_I_diff <- data$E_I - data$E_I_lag1
 #### GDP corr with the different indicators
 stargazer(cor(na.omit(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")])), title="Correlation Matrix")
 
-ggpairs(data[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")], colour = "cyl", upper = list(continuous = wrap("cor", size = 8)))  + theme_bw()
+ggpairs(data2[c("GDP_year", "E_1", "E_2","E_3","E_4")], 
+        colour = "cyl", upper = list(continuous = wrap("cor", size = 6)), columnLabels = c("YoY GDP", "BSI Q1", "BSI Q2", "BSI Q3", "BSI Q4"))  + theme_bw()
 
 
+ggpairs(data[c("GDP_year", "E", "Var", "Z","Var_Z", "Z2","Var_Z2", "Z3","Var_Z3")], 
+        upper = list(continuous = wrap("cor", size = 6)), 
+        columnLabels = c("YoY GDP", "BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"))  + theme_bw()
 
 
 

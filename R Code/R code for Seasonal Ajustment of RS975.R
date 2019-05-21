@@ -7,7 +7,7 @@
 # devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
 
 
-Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.2/")
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-12.0.1/")
 
 #import libraries
 library(rJava)
