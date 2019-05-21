@@ -98,17 +98,28 @@ plot(data_VarZ2_model, type_chart = "sa-trend", caption="Var(EIR2)")
 plot(data_EZ3_model, type_chart = "sa-trend", caption="EIR3")
 plot(data_VarZ3_model, type_chart = "sa-trend", caption="Var(EIR3)")
 
+par(mfrow=c(1,1))
 
 
 # look at different results (plots)
 # S-I ratio
 plot(data_E_model$decomposition)
+dev.print(device = pdf, file="S-I_1.pdf", width=11, height=8)
 plot(data_Var_model$decomposition)
+dev.print(device = pdf, file="S-I_2.pdf", width=11, height=8)
 plot(data_EZ_model$decomposition)
+dev.print(device = pdf, file="S-I_3.pdf", width=11, height=8)
 plot(data_VarZ_model$decomposition)
+dev.print(device = pdf, file="S-I_4.pdf", width=11, height=8)
 plot(data_EZ2_model$decomposition)
+dev.print(device = pdf, file="S-I_5.pdf", width=11, height=8)
 plot(data_VarZ2_model$decomposition)
-par(mfrow=c(1,1))
+dev.print(device = pdf, file="S-I_6.pdf", width=11, height=8)
+plot(data_EZ3_model$decomposition)
+dev.print(device = pdf, file="S-I_7.pdf", width=11, height=8)
+plot(data_VarZ3_model$decomposition)
+dev.print(device = pdf, file="S-I_8.pdf", width=11, height=8)
+
 
 plot(sa_dashboard(data_E_model), main = "Seasonal Adjustment Dashboard",
      subtitle = "", raw_color = "#33A02C", sa_color = "#E31A1C",
