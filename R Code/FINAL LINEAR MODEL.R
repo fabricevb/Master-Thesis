@@ -80,7 +80,7 @@ modelempty <- lm(GDP_year ~ 1, data=data)
 
 AIC(model1, model2, model3, model4, model5)$AIC
 
-BIC(model1, model2, model3, model4, model5)$AIC
+BIC(model1, model2, model3, model4, model5)$BIC
 
 
 stargazer(model1, model2, model3, model4, model5, align = TRUE,
@@ -162,18 +162,12 @@ sort(relImportance$lmg, decreasing=TRUE)  # relative importance
 
 ######################### ALL INDICATORS
 
-# GDP YEAR  with difference previous month
-model1 <- lm(GDP_year ~ E + Var + Z + Var_Z, data = data)
-model2 <- lm(GDP_year ~ E + Var + Z, data = data)
-model3 <- lm(GDP_year ~ E + Z + Var_Z, data = data)
-
-stargazer(model1, model2, model3, align = TRUE)
-#, model2, model3, model4
-
 # plot different predictions
 data$predicted_model1 <- predict(model1, data)
 data$predicted_model2 <- predict(model2, data)
 data$predicted_model3 <- predict(model3, data)
+data$predicted_model4 <- predict(model4, data)
+data$predicted_model5 <- predict(model5, data)
 
 # plot the different models
 data$Obs = 1:nrow(data)

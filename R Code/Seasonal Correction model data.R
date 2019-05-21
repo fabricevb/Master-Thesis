@@ -129,4 +129,7 @@ autoplot(decompose(data_E))
 
 write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx") 
 
+library(xlsx)
 
+data_quat <- drop_na(data, cols="GDP_year")
+write.xlsx(data_quat, "Master-Thesis/Datasets/data_quat.xlsx") 

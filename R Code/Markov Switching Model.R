@@ -11,37 +11,64 @@ library(MSwM)
 # TEST
 
 
-mod <- depmix(list(Solde_UW ~ 1), data = MI027, nstates = 2,
-              family = list(gaussian(), multinomial("identity")),
-              transition = ~ scale(var_UW), instart = runif(2))
+mod <- depmix(list(GDP_year ~ 1), data = data, nstates = 2,
+              family = list(gaussian()),
+              transition = ~ scale(E_sa), instart = runif(2))
 fm <- fit(mod, verbose = FALSE, emc=em.control(rand=FALSE))
-hmm1 <- fm
 summary(fm)
 
+est.states <- posterior(fm)
+head(est.states)
 
 
+plot.hmm.output <- function(model.output){
+  g0 <- (ggplot(model.output$draws, aes(x = roll, y = obs)) + geom_line() +
+           theme(axis.ticks = element_blank(), axis.title.y = element_blank())) %>% ggplotGrob
+  g1 <- (ggplot(model.output$draws, aes(x = roll, y = state, fill = state, col = state)) + 
+           geom_bar(stat = "identity", alpha = I(0.7)) + 
+           scale_fill_manual(values = mycols, name = "State:\nPerson that\nrolled the\ndice", labels = c("Alice", "Bob")) +
+           scale_color_manual(values = mycols, name = "State:\nPerson that\nrolled the\ndice", labels = c("Alice", "Bob")) +
+           theme(axis.ticks = element_blank(), axis.text.y = element_blank()) +
+           labs(y = "Actual State")) %>% ggplotGrob
+  g2 <- (ggplot(model.output$draws, aes(x = roll, y = est.state.labels, fill = est.state.labels, col = est.state.labels)) + 
+           geom_bar(stat = "identity", alpha = I(0.7)) +
+           scale_fill_manual(values = mycols, name = "State:\nPerson that\nrolled the\ndice", labels = c("Alice", "Bob")) +
+           scale_color_manual(values = mycols, name = "State:\nPerson that\nrolled the\ndice", labels = c("Alice", "Bob")) +
+           theme(axis.ticks = element_blank(), axis.text.y = element_blank()) + 
+           labs(y = "Estimated State")) %>% ggplotGrob
+  g3 <- (ggplot(model.output$hmm.post.df, aes(x = roll, y = value, col = variable)) + geom_line() +
+           scale_color_manual(values = mycols, name = "State:\nPerson that\nrolled the\ndice", labels = c("Alice", "Bob")) +
+           theme(axis.ticks = element_blank(), axis.text.y = element_blank()) + 
+           labs(y = "Posterior Prob.")) %>%
+    ggplotGrob()
+  g0$widths <- g1$widths
+  return(grid.arrange(g0, g1, g2, g3, widths = 1, nrow = 4))
+}
+plot.hmm.output(hmm1)
 
-
+plot.hmm.output(fm)
 
 
 attach(data)
 
 help(MSwM)
 
-#Model with only intercept
-mod<-lm(Solde_UW ~ 1, MI018)
 
 #Fit regime-switching model
-mod.mswm=msmFit(mod, k=2, sw=c(T,T), p=0)
-plot(mod.mswm)
+mod.mswm=msmFit(model1, k=2, sw=c(T,T,T,T), p=1)
+mod.mswm=msmFit(model2, k=2, sw=c(F,F,F,F,F), p=1)
+
+plotProb(mod.mswm, which = 2)
+plotProb(mod.mswm, which = 1)
+plotDiag(mod.mswm)
 
 
 
-
-
-
-
-
+autoplot(model1)
+autoplot(model2)
+autoplot(model3)
+autoplot(model4)
+autoplot(model5)
 
 
 
@@ -56,7 +83,8 @@ summary(olsE)
 
 # MS for Value Stocks (k is number of regimes, 6 is for means of 5 variables
 # + 1 for volatility)
-msE = msmFit(olsE, k = 2, sw = rep(TRUE, 4), p=2)
+msE = msmFit(model2, k = 2, sw = rep(TRUE, 4), p=0)
+plotProb(msE)
 
 msVar = msmFit(olsVar, k = 2, sw = rep(TRUE, 3), p=1)
 
