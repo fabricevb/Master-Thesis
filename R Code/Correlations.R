@@ -17,6 +17,24 @@ library(corrplot)
 data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
 
 
+### ATTRITION
+
+data$date <- as.Date(data$period)
+tmp <- data[c("date", "GDP_year_plot", "predicted_model1", "predicted_model2", "predicted_model3")]
+
+
+meltdf <- melt(tmp,id="date")
+meltdf$GDP_year <- data$GDP_year
+ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
+        geom_line(na.rm=FALSE) + 
+        scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
+        theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+        geom_point(aes(y = GDP_year))
+
+
+
+
+
 #### Tables
 
 #### GDP corr with the different indicators

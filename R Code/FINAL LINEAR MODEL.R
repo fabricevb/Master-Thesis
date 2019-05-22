@@ -62,6 +62,8 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
   ylab(" ") +
   xlab(" ")
 
+
+
 #################
 # Linear Models #
 #################
@@ -150,8 +152,8 @@ plot(ev)
 
 library(party)
 cf1 <- cforest(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data), control=cforest_unbiased(mtry=2,ntree=50)) # fit the random forest
-varimp(cf1) # get variable importance, based on mean decrease in accuracy
-varimp(cf1, conditional=TRUE)  # conditional=True, adjusts for correlations between predictors
+sort(varimp(cf1)) # get variable importance, based on mean decrease in accuracy
+sort(varimp(cf1, conditional=TRUE))  # conditional=True, adjusts for correlations between predictors
 
 library(relaimpo)
 lmMod <- lm(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data))  # fit lm() model
@@ -183,6 +185,45 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
   theme(axis.text.x = element_text(angle=45, hjust = 1)) +
   geom_point(aes(y = GDP_year))
+
+
+data$date <- as.Date(data$period)
+tmp <- data[c("date", "GDP_year_plot", "Respondents", "Var", "Var_Z")]
+
+
+meltdf <- melt(tmp,id="date")
+meltdf$GDP_year <- data$GDP_year
+ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
+  geom_line(na.rm=FALSE) + 
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  geom_point(aes(y = GDP_year))
+
+
+
+scaleFactor <- max(data$Respondents) / max(data$Var)
+
+ggplot(data, aes(x=period)) +
+  geom_line(aes(y=Respondents), col="blue") +
+  geom_line(aes(y=Var * scaleFactor), col="red") +
+  scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Variance"))
+
+
+scaleFactor <- max(data$Respondents) / max(data$Var_Z)
+
+ggplot(data, aes(x=period)) +
+  geom_line(aes(y=Respondents), col="blue") +
+  geom_line(aes(y=Var_Z * scaleFactor), col="red") +
+  scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Volatility"))
+
+
+scaleFactor <- max(data$Respondents) / max(0.3 +data$E)
+
+ggplot(data, aes(x=period)) +
+  geom_line(aes(y=Respondents), col="blue") +
+  geom_line(aes(y=E * scaleFactor), col="red") +
+  scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="BSI"))
+
 
 
 ggnostic(model1)
@@ -245,7 +286,7 @@ dm.test(model1$residuals, model3$residuals)
 dm.test(model2$residuals, model4$residuals)
 
 ##############################################
-
+mean(data$E)
 # out of sample 
 
 #prepare train and test set
@@ -256,4 +297,6 @@ test <- data[145:372,]
 modelpred1 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = train)
 
 plot(predict(modelpred1, data))
-lolo
+
+
+
