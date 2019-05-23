@@ -16,7 +16,24 @@
 
 \usepackage{dcolumn}
 
-\begin{document}         
+\begin{document}      
+
+
+
+
+
+
+Auto-Regressive model
+\begin{eqnarray}
+    GDP_{t} = \mu + \sum^p_{j = 1} \phi_j GDP_{t-j} +         \sum^n_{i = 1} \sum^q_{j = 0}
+       \beta_{1,j} X_{i,t-j} + \epsilon_t 
+\end{eqnarray}
+
+where   \\
+
+
+
+
 \begin{tikzpicture}
 % draw horizontal line   
 \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
@@ -526,6 +543,96 @@ $t-2$&$0$&$t-1$&\textbf{0}  & $-1$	& $0$	& $1$	\\
 &&& \textbf{+}              & $-3$	& $-2$	& $0$ \\ \cline{2-2} \cline{4-7}
 \end{tabular}    
 \end{center}
+
+
+
+\chapter{Markov Switching Models}
+
+
+\subsubsection{Small Introduction + why are we using it}
+
+Since the pioneer work by \cite{hamilton_new_1989}, Markov Switching models have been largely used to model business cycles.
+
+
+Markov Switching models have been very popular since \cite{hamilton_new_1989} to model business cycles and predict Turning points (see \cite{duprey_how_2017}, ...).
+
+Able to predict the 2008 financial crisis if used MS-VAR model \cite{gadea_rivas_failure_2015}
+
+
+
+
+\section{Model(s) Specification}
+
+\subsection{Notation}
+
+\begin{tabular}{l l}
+    $S_t = \{0, 1\}$&   states        \\
+    $N = 2$         &   number of states (2) \\
+    $T = 372 $            & 	number of observations  \\
+    $x_{t=1\dots T}$ & (hidden) state at time t \\
+    $y_{t=1\dots T}$ 	& Change of the Industrial production indices at time t \\
+    $p_{i=1\dots n,j=1\dots n}$ & probability of transition from state $i$ to state $j$ \\
+    $F(y|\theta )$	&  probability distribution of an observation, parametrized on $\theta$ \\
+%    $\theta_{i=1\dots N}$ & emission parameter for an observation associated with state $i$     \\
+\end{tabular}
+
+
+
+\subsection{Model}
+
+\subsubsection{Model}
+
+
+
+%%%\begin{equation*}
+%%%    \varepsilon \sim iid(0,1)
+%%%\end{equation*}
+
+\begin{equation}
+y_{t} =   
+  \begin{cases}
+    \mu_{0} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 0 \\
+    \mu_{1} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 1
+  \end{cases}
+\end{equation}
+
+where $\epsilon \text{ is } N(0,\sigma_s)$
+
+
+\begin{tabular}{l l}
+    $\mu_{s} = \beta_0 = c_s = \alpha_s $    & regime-specific mean    \\
+    $\beta_{s} = \phi_s$ & regime-specific  auto-regressive parameter \\
+    $\sigma_{s}$ & regime-specific variance    \\
+
+\end{tabular}
+
+\subsubsection{Transition equation/probability}
+
+\begin{equation}
+    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
+\left[ \begin{tabular}{c c}
+            $1 - p_{t}$	& $p_{t}$ \\ 
+            $q_{t}$	& $1 - q_{t}$ \\ 
+\end{tabular} \right]
+\end{equation}
+
+We have then,
+
+$P(S_t = 1 \mid S_{t-1} = 1) = p_t$   \\ 
+$P(S_t = 0 \mid S_{t-1} = 1) = 1 - p_t$ \\
+$P(S_t = 0 \mid S_{t-1} = 0) = q_t$   \\
+$P(S_t = 1 \mid S_{t-1} = 0) = 1- q_t$ \\
+
+or 
+
+\begin{equation}
+    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
+\left[ \begin{tabular}{c c}
+            $1 - p_{t}$	& $p_{t} ..............$ \\ 
+            $q_{t} ............$	& $1 - q_{t}$ \\ 
+\end{tabular} \right]
+\end{equation}
+
 
 
 

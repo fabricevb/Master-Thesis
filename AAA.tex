@@ -1,8 +1,9 @@
 % cite JDemetra+
-% find more about survey
-    % sampling
-    % questions (no change?)
-    % 
+
+% https://en.wikipedia.org/wiki/Nowcasting_(economics)
+
+% plot all variables +EIR with theme_bw
+
 % Add  \cite everywhere it's needed by looking at Zotero
 
 
@@ -341,7 +342,7 @@ Chapter 2
 
 \chapter{The Business Survey Indicator}
 
-This chapter is a presentation of the Belgian business survey and the business survey indicator, also referred to as the business survey barometer or business confidence barometer/indicator.
+This first chapter is a presentation of the Belgian business survey and the business survey indicator, also referred to as the business survey barometer or business confidence barometer/indicator.
 We will first go thought the evolution of the barometer since it started. Then present the recruitment method, the objectives and methodology of they survey. 
 In the last part of the chapter, we will present the calculation method of the business survey indicator (BSI).
 
@@ -442,11 +443,10 @@ In \autoref{chap:nonresponse dropout}, we will discuss most of the small, short-
 
 %This will be less prominent in this paper, but is important to mention, each month a quite long report is done based on the BSI for each sector and sub-sector.
 
-The business survey indicators are published at the end of each month (around the 21-25 of the month) and give fast captures of the 
-
-The monthly data can be found in \url{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en} and the press release can be found find the link for press releases
-
-The national bank use those information for more in depth analysis of Belgian Economy.
+The business survey indicators are published at the end of each month (around the 21-25 of the month) and give a fast capture of the evolution of the Belgian economy over the past months.
+The data is available on \href{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en}{stat.nbb.be} and a press release is published on \href{http://www.nbb.be/doc/dq/e/conj.htm}{nbb.be}. 
+It contains a short summary and interpretation of the BSI followed by graphs to show the evolution of the BSI over the two last years for the sector specific and overall indicator.
+The public can use those information to have a snapshot of the economy, while other indicators, as GDP or unemployment, can take a very long time before been obtained and published.
 
 
 \subsection{Nowcasting}
@@ -497,7 +497,7 @@ the lag between the observation and publication is even greater since the busine
 \end{figure}
 
 Nowcasting got by the time a catch all word and include predictive models going from Linear models to space-space models and also including ARIMA or MIDAS and much more different models.
-...
+
 
 
 \subsection{Business Cycles}
@@ -769,8 +769,9 @@ As described in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation
 
 Therefore we have now the following equation
 
+
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n \left(\omega_i p_i x_i \right)}{\sum_{i=1}^n \omega_i p_i} \quad \text{  where  } \sum_{i=1}^n \omega_i = \sum_{i=1}^n p_i = 1
+    E(X) = \sum_{i=1}^n \left(\omega_i p_i x_i \right) \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
 \end{equation} 
 
 where
@@ -781,34 +782,20 @@ $\omega_i$ weight according to its size. Both weights are relative weights which
 As for the unweighted indicator, we ca decompose the equation by the three possible answers with, in this case, their according weights.
 
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i} + \sum_{i=1}^n \omega_{Ni} p_{Ni} x_{Ni} + \sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
+    E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{0i} x_{0i} + \sum_{i=1}^n \omega_{-i} x_{-i}
 \end{equation}
 
-and again we know that $\sum_{i=1}^n \omega_{+i} p_{+i} x_{Ni} = 0$, so we can write
+and again we know that $\sum_{i=1}^n \omega_{0i} x_{0i} = 0$, so we can write
 
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n \omega_{+i} p_{+i} x_{+i}}{n} + \frac{\sum_{i=1}^n \omega_{-i} p_{-i} x_{-i}}{n}
+    E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{-i} x_{-i}
 \end{equation} 
-
-
-\begin{equation}
-    E(X) = \pi_+ - \pi_-
-\end{equation}
-
-\begin{equation}
-    E(X) = \omega p \pi_+ - \omega p \pi_-
-\end{equation}
 
 \begin{equation}
     E(X) = \Omega \pi_+ - \Omega \pi_-
 \end{equation}
 
-
-\begin{equation}
-    E(X) = \Omega P \pi_+ - \Omega P \pi_-
-\end{equation}
-
-where $\pi_+$ and $\pi_-$ are the \textbf{weighted} proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
+where $\Omega \pi_+$ and $\Omega \pi_-$ are the \textbf{weighted} proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
 
 
 
@@ -823,7 +810,7 @@ And it's the largest when every answer is positive which means BSI = 1
 The previous calculations where specific to each question. The published indicators are usually taking different survey questions into account. For example the Industry indicator that we will be interested in is composed of four questions that have all the same weight:
 
 \begin{equation}
-    \mbox{Industry Business Indicator}\ = \frac{E(X_{Q1}) + E(X_{Q2}) + E(X_{Q3}) + E(X_{Q4})}{4}
+    \mbox{Industry business indicator}\ = \frac{E(X_{Q1}) + E(X_{Q2}) + E(X_{Q3}) + E(X_{Q4})}{4}
 \end{equation}
 
 where 
@@ -904,16 +891,10 @@ We can now do the same for the weighted indicator. The equation is very similar 
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \left( \frac{\sum_{i=1}^n \omega_i p_i x_{+i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{Ni}^2}{n} \right) + \left( \frac{\sum_{i=1}^n \omega_i p_i x_{-i}^2}{n} \right) - E(X)^2 \nonumber \\
+    &=& \sum_{i=1}^n \omega_i x_{+i}^2 + \sum_{i=1}^n \omega_i x_{0i}^2  + \sum_{i=1}^n \omega_i x_{-i}^2 - E(X)^2 \nonumber \\
 \end{eqnarray}
 
 We can here, as we did for the indicator, take into account weighted proportion and write the equation the same way as for the unweighted variance but in this case, by taking the weighted proportions. Again the variance can be written in different ways, depending on the interpretation that fits best;
-
-\begin{eqnarray}
-\Var(X) &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \\
-	&=& \pi_+ + \pi_- - E ( X )^2 \\
-	&=& 1 - \pi_0 - E(X)^2
-\end{eqnarray}
 
 \begin{eqnarray}
 \Var(X) &=& \Omega \pi_+ + \Omega \pi_- - ( \Omega \pi_+ - \Omega \pi_- )^2 \\
@@ -922,7 +903,7 @@ We can here, as we did for the indicator, take into account weighted proportion 
 \end{eqnarray}
 
 
-\subsection{Properties}
+\section{Properties}
 
 \begin{figure}[hbt!]
     \centering
@@ -1073,8 +1054,8 @@ This can be generalised with the following equation
 
 \chapter{The Indicator of the Evolution of Individual Responses}
 
-In the same logic as for the variance, a proposition is done here of a way to have more information out of the business survey. 
-As explained in the first chapter, the business survey has almost the same participants over time, which is called a panel survey.
+In the same logic as for the variance, a proposition is done here of a way to extract more information out of the business survey. 
+As explained in the first chapter, the business survey has almost the same participants over time, which can be referred to as a panel survey.
 
 %In the BSIndicator, this is not taken into account. To show this lets take a simple example; let imagine that from a certain month to the other one, the BSI is the same, it will be interpreted as no changes in companies view. This is one explanation, but it is possible that 
 
@@ -1095,9 +1076,9 @@ We can again see that $\pi$ is used since we will speak about proportions and pr
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
-    		&    \textbf{-} & $x_{i--}$	& $x_{i-0}$	& $x_{i-+}$ \\ 
-    $t-1$ & \textbf{0} & $x_{i0-}$	& $x_{i00}$	& $x_{i0+}$	\\
-    		&    \textbf{+} & $x_{i+-}$	& $x_{i+0}$	& $x_{i++}$ \\ \cline{2-5}
+    		&    \textbf{-} & $z_{i--}$	& $z_{i-0}$	& $z_{i-+}$ \\ 
+    $t-1$ & \textbf{0} & $z_{i0-}$	& $z_{i00}$	& $z_{i0+}$	\\
+    		&    \textbf{+} & $z_{i+-}$	& $z_{i+0}$	& $z_{i++}$ \\ \cline{2-5}
     \end{tabular}
     \caption{Possible observation when taking t and t-1 into account}
     \label{tab:EIR explanation}
@@ -1190,7 +1171,7 @@ We rather propose here a simple generalisation; use t-n rather than t-1. You com
 come up to the same except that you use a larger period into account
 
 
-\chapter{The Variance of the Evolution of Individual Responses (Volatility of Responses)} \label{Chapter:Z}
+\chapter{The Variance of the Evolution of Individual Responses} \label{Chapter:Var Z}
 
 The new indicator, the evolution of individual responses, also has a variance that has some interpretation interest. 
 While the EIR is a measure of in which direction companies change there answer, the variance of the EIR can be understood as the measure of changes in answers. Therefore the Var(EIR) can be seen as the volatility of the indicator, in the sens that the variance of the EIR account for the dispersion of the difference in answers over a two times period.
@@ -1364,16 +1345,16 @@ Test for seasonality where done with JDemetra (see appendix \autopageref{sec:tes
 bla bla
 
 \begin{table}[H]
-    \centering \small
+    \centering \footnotesize
     \begin{tabular}{l|c|c|c|c|c|c|c|c}
 \textbf{Seasonality Test} & BSI & Var(BSI) & EIR & Var(EIR) & EIR2 & Var(EIR2) & EIR3 & Var(EIR3) \\ \hline
-Auto-correlations at seasonal lags& YES & YES & YES & YES & YES & YES \\
-Friedman (non parametric)       & YES   & YES & YES & YES & YES & YES \\
-Kruskall-Wallis (non parametric)& YES   & YES & YES & YES & YES & YES \\
-Spectral peaks                  & YES   & YES & YES & YES & ?   & NO \\
-Periodogram                     & YES   & YES & YES & YES & YES & YES \\
-Seasonal dummies                & YES   & YES & YES & YES & YES & YES \\
-Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES \\
+Auto-correlations at seasonal lags& YES & YES & YES & YES & YES & YES & YES & YES \\
+Friedman (non parametric)       & YES   & YES & YES & YES & YES & YES & YES & YES \\
+Kruskall-Wallis (non parametric)& YES   & YES & YES & YES & YES & YES & YES & YES \\
+Spectral peaks                  & YES   & YES & YES & ? & YES & ? & YES & YES \\
+Periodogram                     & YES   & YES & YES & YES & YES & YES & YES & YES \\
+Seasonal dummies                & YES   & YES & YES & YES & YES & YES & YES & YES \\
+Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YES \\
     \end{tabular}
     \caption{Seasonality Tests}
     \label{tab:Seasonality Tests}
@@ -1399,7 +1380,57 @@ YoY GDP is already, by nature, seasonally corrected.
     \includegraphics[scale=0.75]{Graphs/RJDemetra_plots.pdf}
     \caption{Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months  earlier (EIR3), with for each of them, their variance. The yellow lines are the raw data, the blue lines the seasonally corrected data and the green line is the trend of the variable.}
     \label{fig:seasonal ajusted rjdemetra}
-\end{figure}{}
+\end{figure}
+
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_1.pdf}
+  \caption{BSI}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_2.pdf}
+  \caption{Var(BSI)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_3.pdf}
+  \caption{EIR1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_4.pdf}
+  \caption{Var(EIR1)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_5.pdf}
+  \caption{EIR2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_6.pdf}
+  \caption{Var(EIR2)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_7.pdf}
+  \caption{EIR3}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_8.pdf}
+  \caption{Var(EIR3)}
+\end{subfigure}
+\caption{plots of....}
+\label{fig:S-I seasonal correction RJDemetra}
+\end{figure}
+
+
+
+
 
 \chapter{Exploratory Analysis}
 
@@ -1500,8 +1531,6 @@ E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\
 \end{figure}
 
 
-\section{GDP vs Explanatory Indicators}
-
 \begin{table}[H] \centering 
   \caption{Correlation Matrix} 
   \label{tab:corr variables} 
@@ -1538,7 +1567,7 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
 
 
 
-\subsection{Auto-Correlation}
+\section{Auto-Correlation}
 
 Test stationarity of the time series (ADF)
 In order to test the stationarity of the time series, let’s run the Augmented Dickey-Fuller Test using the adf.test() function from the tseries R package.
@@ -1616,8 +1645,17 @@ E\_4\_lag4 & $0.536$ & $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
 
 \chapter{Linear Models}
 
+In the process of deciding which modelling technique to use, a
+
+The interest of this paper is to study the variance of the business survey indicator and explore the possible interest of the indicator of the evolution in individual responses. To achieve this objective, it's important to chose a model that account easily for the interest of each model
+
+
+Better model could be used; Linear Autoregressive, ARIMA, State Space Models, ... but here interest is to ...
 
 \section{Method}
+
+\subsubsection{Why we are doing this}
+
 
 \subsection{Month vs Quarterly data}
 
@@ -1625,9 +1663,7 @@ Error to aggregate everything to quarterly - lost of information
 
 \subsection{Timing of the Data}
 
-
-The quaterly GDP and the Quaterly YoY GDP is set at t. This is the common way to go..
-
+The quaterly GDP and the Quaterly YoY GDP is set at the last month of the quarter. This is the common way to go since 
 
 \begin{tikzpicture}
 % draw horizontal line   
@@ -1636,7 +1672,6 @@ The quaterly GDP and the Quaterly YoY GDP is set at t. This is the common way to
 % draw vertical lines
 \foreach \x in {1,...,10}
 \draw (\x cm,3pt) -- (\x cm,-3pt);
-
 \foreach \x/\descr in {1.5/Jan, 2.5/Feb, 3.5/Mar, 4.5/Apr, 5.5/May, 6.5/Jun, 7.5/Jul, 8.5/Aug,9.5/Sep}
 \node[font=\scriptsize, text height=1.75ex,
 text depth=.5ex] at (\x,-.3) {$\descr$};
@@ -1650,9 +1685,6 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 % braces
 \draw [thick ,decorate,decoration={brace,amplitude=5pt}] (3,0.5)  -- +(1,0) 
        node [black,midway,above=4pt, font=\scriptsize] {Quaterly GDP};
-%\draw [thick,decorate,decoration={brace,amplitude=5pt}] (6,-.9) -- +(-1,0)
-%       node [black,midway,font=\scriptsize, below=4pt] {Publication};
-
 % time of publication
 \node[align=center] at (4.8,1.85) {publication GDP Q1};
 \draw [thick,->] (4.8,1.4) -- (4.8,0.15);
@@ -1660,45 +1692,25 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 \draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
 \end{tikzpicture}
 
-\subsubsection{Why we are doing this}
-
-Better model could be used; linear autoregressive, ARIMA, State Space Models, ... but here interest is to ...
 
 
 \section{Linear Model}
+
 \begin{eqnarray}
-    GDP_{t} = \mu + \sum^n_{i = 1} \sum^q_{j = 0}
-       \beta_{1,j} X_{i,t-j} + \epsilon_t 
+    YoY \text{ } GDP_{t} = \beta_0 + \sum^n_{i = 1}
+       \beta_{i} X_{t} + \epsilon_t 
 \end{eqnarray}
 
 \begin{tabular}{l l}
-    Ind & business survey Indicator \\
-    
-    Volatility & Variance of the Evolution of Individual Responses \\
-    
+    $GDP_t$         & GDP growth over the last semester \\
+    $X_{t}$         & monthly predictors \\
+    $\beta_{0}$     & constant \\
+    $\beta_{i}$     & regression coefficients \\
 \end{tabular}
 
-Auto-Regressive model
-\begin{eqnarray}
-    GDP_{t} = \mu + \sum^p_{j = 1} \phi_j GDP_{t-j} +         \sum^n_{i = 1} \sum^q_{j = 0}
-       \beta_{1,j} X_{i,t-j} + \epsilon_t 
-\end{eqnarray}
+bla bla bla
 
-where   \\
-\begin{tabular}{l l}
-    $GDP_t$     & GDP growth over the last semester \\
-    $X_{i,t}$   & monthly predictors \\
-    $\mu$       & constant \\
-    $\phi_j$    & auto-regressive coefficients \\
-    $\beta_{i,j}$ & regression coefficients \\
-\end{tabular}
-
-
-
-\section{Model}
-
-
-\begin{table}[!htbp] \centering \footnotesize
+\begin{table}[H] \centering \footnotesize
   \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -1798,94 +1810,6 @@ ACF1: Autocorrelation of errors at lag 1.
 
 \section{until 2012 to see if variance still significant, not attrition creating effect}
 
-
-
-\chapter{Markov Switching Models}
-
-
-\subsubsection{Small Introduction + why are we using it}
-
-Since the pioneer work by \cite{hamilton_new_1989}, Markov Switching models have been largely used to model business cycles.
-
-
-Markov Switching models have been very popular since \cite{hamilton_new_1989} to model business cycles and predict Turning points (see \cite{duprey_how_2017}, ...).
-
-Able to predict the 2008 financial crisis if used MS-VAR model \cite{gadea_rivas_failure_2015}
-
-
-
-
-\section{Model(s) Specification}
-
-\subsection{Notation}
-
-\begin{tabular}{l l}
-    $S_t = \{0, 1\}$&   states        \\
-    $N = 2$         &   number of states (2) \\
-    $T = 372 $            & 	number of observations  \\
-    $x_{t=1\dots T}$ & (hidden) state at time t \\
-    $y_{t=1\dots T}$ 	& Change of the Industrial production indices at time t \\
-    $p_{i=1\dots n,j=1\dots n}$ & probability of transition from state $i$ to state $j$ \\
-    $F(y|\theta )$	&  probability distribution of an observation, parametrized on $\theta$ \\
-%    $\theta_{i=1\dots N}$ & emission parameter for an observation associated with state $i$     \\
-\end{tabular}
-
-
-
-\subsection{Model}
-
-\subsubsection{Model}
-
-
-
-%%%\begin{equation*}
-%%%    \varepsilon \sim iid(0,1)
-%%%\end{equation*}
-
-\begin{equation}
-y_{t} =   
-  \begin{cases}
-    \mu_{0} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 0 \\
-    \mu_{1} + \sum^p_{j = 1} \phi_j GDP_{t-j} + \epsilon_t      & \quad \text{if } S_t = 1
-  \end{cases}
-\end{equation}
-
-where $\epsilon \text{ is } N(0,\sigma_s)$
-
-
-\begin{tabular}{l l}
-    $\mu_{s} = \beta_0 = c_s = \alpha_s $    & regime-specific mean    \\
-    $\beta_{s} = \phi_s$ & regime-specific  auto-regressive parameter \\
-    $\sigma_{s}$ & regime-specific variance    \\
-
-\end{tabular}
-
-\subsubsection{Transition equation/probability}
-
-\begin{equation}
-    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
-\left[ \begin{tabular}{c c}
-            $1 - p_{t}$	& $p_{t}$ \\ 
-            $q_{t}$	& $1 - q_{t}$ \\ 
-\end{tabular} \right]
-\end{equation}
-
-We have then,
-
-$P(S_t = 1 \mid S_{t-1} = 1) = p_t$   \\ 
-$P(S_t = 0 \mid S_{t-1} = 1) = 1 - p_t$ \\
-$P(S_t = 0 \mid S_{t-1} = 0) = q_t$   \\
-$P(S_t = 1 \mid S_{t-1} = 0) = 1- q_t$ \\
-
-or 
-
-\begin{equation}
-    P = P(S_t = s_t \mid S_{t-1} = s_{t-1}) = 
-\left[ \begin{tabular}{c c}
-            $1 - p_{t}$	& $p_{t} ..............$ \\ 
-            $q_{t} ............$	& $1 - q_{t}$ \\ 
-\end{tabular} \right]
-\end{equation}
 
 
 
