@@ -1,5 +1,5 @@
 
-
+# Podgorica54
 #################
 # Linear Models #
 #################
@@ -152,8 +152,13 @@ plot(ev)
 
 library(party)
 cf1 <- cforest(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data), control=cforest_unbiased(mtry=2,ntree=50)) # fit the random forest
-sort(varimp(cf1)) # get variable importance, based on mean decrease in accuracy
-sort(varimp(cf1, conditional=TRUE))  # conditional=True, adjusts for correlations between predictors
+tb <- sort(varimp(cf1)) # get variable importance, based on mean decrease in accuracy
+
+stargazer(tb)
+
+
+tb2 <- sort(varimp(cf1, conditional=TRUE))  # conditional=True, adjusts for correlations between predictors
+stargazer(tb2)
 
 library(relaimpo)
 lmMod <- lm(GDP_year ~ E_sa + Z_sa + Z2_sa + Z3_sa + Var_sa + Var_Z_sa + Var_Z2_sa + Var_Z3_sa, data=na.omit(data))  # fit lm() model
@@ -286,15 +291,29 @@ dm.test(model1$residuals, model3$residuals)
 dm.test(model2$residuals, model4$residuals)
 
 ##############################################
-mean(data$E)
+##############################################
 # out of sample 
 
-#prepare train and test set
-train <- data[1:144,]
-test <- data[145:372,]
+# select data before 2000
+subset <- data[1:144,]
 
 # fitting out of sample
-modelpred1 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = train)
+modelsubset1 <- lm(GDP_year ~ E_sa + Var_sa, data = subset)
+modelsubset2 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = subset)
+
+
+stargazer(model1, model2, model3, modelsubset1, modelsubset2, align = TRUE,
+          intercept.bottom = FALSE,
+          single.row = FALSE, 
+          df = FALSE,
+          covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"),
+          dep.var.caption  = "Linear Regression",
+          dep.var.labels   = "Year on Year GDP (in \\%)")
+
+
+
+
+
 
 plot(predict(modelpred1, data))
 
