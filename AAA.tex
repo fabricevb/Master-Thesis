@@ -99,7 +99,7 @@
 
 
 \let\subsectionautorefname\sectionautorefname % if \autoref subsection -> section
-\let\subsubsectionautorefname\sectionautorefname % if \autoref subsubsection -> section
+\let\subsubsectionautorefname\Sectionautorefname % if \autoref subsubsection -> section
 
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Cov}{Cov}
@@ -227,7 +227,7 @@ Academic year 2018-2019
 
 \begin{bottompar}
 \copyright Copyright by KU Leuven \\ \\
-Without written permission of the promotors and the authors it is forbidden to reproduce or adapt in any form or by any means any part of this publication. Requests for obtaining the right to reproduce or utilize parts of this publication should be addressed to KU Leuven, Faculteit Wetenschappen, Geel Huis, Kasteelpark Arenberg 11 bus 2100, 3001 Leuven (Heverlee), Telephone +32 16 32 14 01. \\
+Without written permission of the promotors and the authors, it is forbidden to reproduce or adapt in any form or by any means any part of this publication. Requests for obtaining the right to reproduce or utilize parts of this publication should be addressed to KU Leuven, Faculteit Wetenschappen, Geel Huis, Kasteelpark Arenberg 11 bus 2100, 3001 Leuven (Heverlee), Telephone +32 16 32 14 01. \\
 A written permission of the promotor is also required to use the methods, products, schematics and programs described in this work for industrial or commercial use, and for submitting this publication in scientific contests.
 \end{bottompar}
 
@@ -235,8 +235,12 @@ A written permission of the promotor is also required to use the methods, produc
 
 \chapter*{Acknowledgement}
 
-I'm grateful to Laurent Van Belle, my co-supervisor and ...
+I'm grateful to my co-supervisor, Laurent Van Belle, for his guidance and his precious help.
+
+I'm thankful to ..... that where always available to answer my questions and whose imputs during meeting where crucial to give the best direction to my work.
+
 the National Bank of Belgium \\
+
 Jean Palate - David ... 
 and all the members of the Department of Research and Development who where always there to answer any of my questions.
 
@@ -244,13 +248,11 @@ Isabelle - Marc Boumon
 
 Vanessa Baugnet - Rudi Acx 
 
+for their time and advise during the writing of master thesis. 
 
-KULeuven
+I'm grateful to my co-promotor Geert Molenberghs for the guidance and feedback. Geert Loosveldt and Stephan Moens for their input during the Mid-term presentation.
 
-Geert Molenberghs
-
-All the professors of the Master of Statistics that made it possible for me to acquire the knowledge to write this thesis.
-
+Last but not least, I would like to thank all the professors of the Master of Statistics that made it possible for me to acquire the knowledge and passion of statistics, needed to write this thesis.
 
 
 \begin{bottompar}
@@ -375,7 +377,7 @@ Several improvement of the business survey where proposed and applied over time 
 \label{sec:Recruitment of participants}
 
 The Belgian business survey barometer (as most of the business survey around the world), has the particularity of not using random sampling.
-The selection of participants is quite complex and a lot of decision are "human decisions". Never is a statistical program or a random sampling system used to select new participants.
+The selection of participants is quite complex and a lot of decision are human, never is a statistical program or a random sampling system used to select new participants.
 
 \subsubsection{Procedure of selection}
 
@@ -723,8 +725,11 @@ The National Bank of Belgium developed a quite elaborate division of the Belgian
 \newpage
 \section{Calculation of the Indicator}
 
-This section presents the method for calculating the indicator. 
-The calculation in itself is standard, but the different ways to write it are important for interpretation and to better understand the following chapters.
+This section presents the method for calculating the business survey indicator. 
+The calculation in itself is standard, but the different ways to write it are important for interpretation and to better understand the following chapters. 
+We first present the calculation taking into account one question  unweighted and then weighted. 
+After we will present how the indicator of different questions are combined together.
+
 
 \subsection{Unweighted Indicator}
 
@@ -735,17 +740,22 @@ The calculation of the unweighted indicator for a specific question at a specifi
 \end{equation} 
 
 where 
-$x_i$ is the answer of the respondent i and can take value -1 (negative answer), 0 (neutral answer) and 1 (positive answer). 
-$n$ is the amount of respondents.
+$x_i$ is the answer of the respondent $i$ and can take value $-1$ (negative answer), $0$ (neutral answer) and $1$ (positive answer). 
+$n$ is the number of respondents.
 
-Since x can only take three different values, we can decompose it into 
+Since $x_i$ can only take three different values, we can decompose it into 
 
 \begin{equation}
     E(X) = \frac{ \sum_{i=1}^n x_{+i} + \sum_{i=1}^n x_{0i} + \sum_{i=1}^n x_{-i}}{n}
 \end{equation} 
 
+\begin{equation}
+    E(X) = \frac{ \sum_{i=1}^{n_+} x_{+i} + \sum_{i=1}^{n_0} x_{0i} + \sum_{i=1}^{n_-} x_{-i}}{n}
+\end{equation} 
+
+
 where 
-$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent i.
+$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent $i$.
 
 Since we know that $\sum_{i=1}^n x_{0i} = 0$, we can write
 
@@ -756,54 +766,53 @@ Since we know that $\sum_{i=1}^n x_{0i} = 0$, we can write
 ${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=1}^n x_{-i}}/{n}$ is the negative proportion of negative answer. We can write, for simplicity
 
 \begin{equation}
-    E(X) = \pi_+ - \pi_-
+    E(X) = \pi_+ - \pi_-  \label{eq: BSI Unweighted}
 \end{equation}
 
-where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative.
-$\pi$ was chosen as symbol here since it can be interpreted as a probability. Indeed if we assume that all the respondents have the same probability giving a certain answer. $\pi$ can be interpreted as the probability that a respondent answers positive, negative or neutral to the question. 
+where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive and negative to the specific question.
+$\pi$ was chosen as symbol here,  since it can be interpreted as a probability: if we assume that all the respondents have the same probability giving a certain answer, $\pi$ is the probability that a respondent answers positive, negative or neutral to the question. 
 
 
 \subsection{Weighted Indicator}
 
-As described in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure}, each respondent has two different weights: one according to its size, one according to the size of the sector it's part of.
-
-Therefore we have now the following equation
-
+As described in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure}, each respondent has two different weights: one according to its size, one according to the size of the sector it's part of. Those weight are then combined and we end up with a specific weight.
+We have now the following equation for the indicator
 
 \begin{equation}
-    E(X) = \sum_{i=1}^n \left(\omega_i p_i x_i \right) \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
+    E(X) = \sum_{i=1}^n \left(\omega_i x_i \right) \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
 \end{equation} 
 
 where
-$x_i$ is the answer of the respondent i and can take values -1, 0 and 1.
-$p_i$ is the weight of the globalisation of the company i and 
-$\omega_i$ weight according to its size. Both weights are relative weights which means that respective sum is equal to one.
+$x_i$ is the answer of the respondent $i$ and can take values -1, 0 and 1.
+$\omega_i$ is the weight of respondent $i$. 
+The weights are here standardised so there sum is equal to one.
 
-As for the unweighted indicator, we ca decompose the equation by the three possible answers with, in this case, their according weights.
+As for the unweighted indicator, we can decompose the equation by the three possible answers with, in this case, their according weights.
 
 \begin{equation}
     E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{0i} x_{0i} + \sum_{i=1}^n \omega_{-i} x_{-i}
-\end{equation}
-
+ \end{equation}
 and again we know that $\sum_{i=1}^n \omega_{0i} x_{0i} = 0$, so we can write
 
 \begin{equation}
     E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{-i} x_{-i}
 \end{equation} 
-
+We also know that $x_{+i} = 1$  and $x_{-i}=-1$  
 \begin{equation}
-    E(X) = \Omega \pi_+ - \Omega \pi_-
+    E(X) = \sum_{i=1}^n \omega_{+i}  - \sum_{i=1}^n \omega_{-i}
+\end{equation}
+That will be written as follow
+\begin{equation}
+    E(X) = \Omega \pi_+ - \Omega \pi_- \label{eq: BSI Weighted}
 \end{equation}
 
-where $\Omega \pi_+$ and $\Omega \pi_-$ are the \textbf{weighted} proportion of respondents answering positive and negative. $\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
+where $\Omega \pi_+$ and $\Omega \pi_-$ are the weighted proportion of respondents answering positive and negative. this equation will be used for the same reasons as for the unweighted indicator. 
+Same explanation also works here
+
+$\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
 
 
-
-\subsubsection{lower bound at -1 and upper bound at 1}
-
-The BSI is the smallest if everyone has a negative answer and then the BSI = -1. 
-And it's the largest when every answer is positive which means BSI = 1
-
+From \autoref{eq: BSI Unweighted} and \autoref{eq: BSI Weighted} it can be seen that the weighted and unweighted indicators are bounded between -1 and 1. In the two cases, the indicator is the smallest if everyone has a negative answer, and is the largest when every answer is positive.
 
 \subsection{Take different questions into account}
 
@@ -825,6 +834,14 @@ can also been seen as the mean of the answers for each participant at each perio
 \begin{equation}
     \mbox{Industry BSI}\ = \frac{\pi_{Q1+} + \pi_{Q2+} + \pi_{Q3+} + \pi_{Q4+} - \pi_{Q1-} - \pi_{Q2-} - \pi_{Q3-} - \pi_{Q4-} }{4}
 \end{equation}
+
+
+\begin{eqnarray}
+    \mbox{ Weighted Industry BSI}\ &=& 1/4 ( \pi_{Q1+} + \Omega \pi_{Q2+} + \Omega \pi_{Q3+} + \Omega \pi_{Q4+} \\
+    && - \Omega \pi_{Q1-} - \Omega \pi_{Q2-} - \Omega \pi_{Q3-} - \Omega \pi_{Q4-} \Large) 
+\end{eqnarray}
+
+Generalisation !
 
 
 \chapter{The Variance of the Indicator}
@@ -865,7 +882,7 @@ The positive and negative answers take value -1 and 1, which means that $x_{+i}^
 With this information, we can further simplify the equation;
 
 \begin{eqnarray}
-\Var(X) &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
+	\Var(X) &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
 \end{eqnarray}
 
 In other words, the variance of the BSI is equal to the sum of the proportion of positive and negative answers, minus the squared indicator. \\
@@ -885,9 +902,7 @@ Which means that we have several different ways to write the previous equation;
 
 We can now do the same for the weighted indicator. The equation is very similar as for the variance of the unweighted variance;
 
-%\begin{equation}
-%\Var(X) = \frac{1}{\sum \omega_i p_i } \sum^N _{i=1} \omega_i %p_i (X_i - \bar{X})^2
-%\end{equation}
+
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
@@ -922,7 +937,7 @@ We can here, as we did for the indicator, take into account weighted proportion 
         axis lines*=left, 
         axis line style={->},
         width=14cm, height=10cm,
-        xlabel={business survey Indicator}, ylabel={Variance},
+        xlabel={business survey indicator}, ylabel={variance},
     legend pos= outer north east, legend cell align=left,
      legend style={font=\scriptsize}
      ]       
@@ -975,7 +990,7 @@ We can here, as we did for the indicator, take into account weighted proportion 
     \addlegendentry{$\pi_N = 0.99$}
     \end{axis}
     \end{tikzpicture}
-    \caption{Plot of the business survey indicator on its variance for different values of $\pi_N$}
+    \caption{Plot of the possible values of the business survey indicator (X axis) and variance (Y axis) for different values of $\pi_N$ }
     \label{fig:var properties}
 \end{figure}
 
@@ -983,12 +998,11 @@ We can here, as we did for the indicator, take into account weighted proportion 
 Based on the previous development of the equation of the variance of the indicator, we can make some observations.
 
 First of all, the variance is bounded between 0 and 1. 
-A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. The most interesting approach is to take  \autoref{var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values. Since both the variables have a minus sine in front of them, to have the highest result they should both be equal to zero. 
+A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. The most interesting approach is to take  \autoref{var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values. Since both the variables have a minus sign in front of them, to have the highest result they should both be equal to zero. 
 This means that the highest variance, $\Var(X)=1$, is obtained when no respondent answer "neutral" and the BSI is equal to 0, in other words, half of the respondents answer "positive" while the other half answer "negative". 
-
 On the other hand, the variance will be equal to zero if all the participant answer the same, that's "negative", "neutral" or "positive".
 
-Another approach is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{var3}. The results can be seen in \autoref{fig:var properties}.
+Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{var3}. The results can be seen in \autoref{fig:var properties}.
 
 Their are different observations that can be done from the plot;
 (1) there is a specific upper and lower bound for each BSI
@@ -1013,21 +1027,16 @@ lower bound :
 \section{Take different questions into account}
 
 As already seen, the published indicator take different questions into account. 
-Variance is a little bit more complex to combine since
+The combination of the variance of different questions is slightly more complex than the combination of different indicators since the questions are correlated, which means that covariance has to be taken into account.
 
-\begin{eqnarray}
-    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &\neq&
-    \frac{\Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4})}{16} \nonumber
-\end{eqnarray}
-
-The formula to combine different variance is the following
+The formula to combine different variances is the following
 
 \begin{equation}
 \Var \left(\sum_{i=1}^{n} X_{i}\right) = \sum_{i=1}^{n} \sum_{j=1}^{n} \Cov\left(X_{i}, X_{j}\right)
 = \sum_{i=1}^{n} \Var\left(X_{i}\right)+2 \sum_{1 \leq i<j \leq n} \Cov\left(X_{i}, X_{j}\right)
 \end{equation}
 
-In the case of combining the variances of four different questions of the business survey, it means this formula
+In the case of combining the variances of four different questions of the business survey, we have the following equation
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
@@ -1039,27 +1048,30 @@ The complexity of the formula encourage to rather calculate the indicator (takin
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
-    &=& \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4n} \right) \nonumber \\
-    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} }{4} \right) \nonumber \\
+    &=& \frac{1}{16} \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{n} \right) \nonumber \\
+    &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-}  \right) \nonumber \\
  %   &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
 \end{eqnarray}
 
-This can be generalised with the following equation
+The generalisation of the previous equation can be written as follow
 
 \begin{eqnarray}
-    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n} \right) 
-    &=& \Var \left(\frac{\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} }{n} \right) \nonumber \\
-    &=& \frac{1}{n^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
+    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n_Q} \right) 
+    &=& \frac{1}{n_Q^2} \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + ... + x_{i Qn} \right)}{n} \right) \nonumber \\
+    &=& \frac{1}{n_Q^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
 \end{eqnarray}
 
 \chapter{The Indicator of the Evolution of Individual Responses}
 
 In the same logic as for the variance, a proposition is done here of a way to extract more information out of the business survey. 
-As explained in the first chapter, the business survey has almost the same participants over time, which can be referred to as a panel survey.
+As explained in the first chapter, the business survey is answered by the same companies over time, there are some new recruits and companies leaving the survey, but the survey can be referred to as a panel survey.
+Is it possible to have more information by taking taking the evolution of the individual respondents into account ? 
 
-%In the BSIndicator, this is not taken into account. To show this lets take a simple example; let imagine that from a certain month to the other one, the BSI is the same, it will be interpreted as no changes in companies view. This is one explanation, but it is possible that 
+This chapter will address this question by applying a method proposed by \cite{caron_estimation_1996} that, by taking all the individual evolution of responses into account, offers a method to calculate an indicator that will be called the indicator of the evolution of individual responses (EIR).
 
-This means that we can see the individual evolution of each of the individual participants. \cite{caron_estimation_1996} proposed an indicator that take into account the responses at the previous survey and gave value to the changes in response.
+First the calculation will be described for the and the intuition will be developed .
+
+
 We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
 It can be understood as the indicator of the changes in individual answers between t-1 and t.
 
@@ -1158,6 +1170,10 @@ where $\pi$ is the proportion/probability of respondent answering negative(-), n
 
 bla bla bla
 
+\section{Take different questions into account}
+
+bla bla bla
+
 \section{Generalisation for n time frames}
 
 Changes in the economy are usually taking several months to influence all the companies. There can be some lag of effects on for example larger companies, of a very specific sector.
@@ -1166,7 +1182,7 @@ The idea of only taking a certain month and the previous month can seems non-suf
 Different methods where explored to take more than two periods into account, but it was found as been flawed and very complex to interpret.
 We rather propose here a simple generalisation; use t-n rather than t-1. You compare then that period t-n with the the answer at t, without taking the between answers into account.
 
-\subsection{t-n vs t}
+\subsubsection{t-n vs t}
 
 come up to the same except that you use a larger period into account
 
@@ -1185,7 +1201,7 @@ That we will also call the volatility of the indicator, in the sens that the var
 The idea is that this variance of EIR is complementary to the estimation of Z since they have two very interesting but different interpretations.
 Further interpretation will be 
 
-\section{Presentation}
+\section{Variance of the Unweighted Evolution of Individual Responses}
 
 
 
@@ -1234,14 +1250,24 @@ Var(Z) &=&
 
 
 
-\subsection{Properties}
+
+
+
+
+\section{Variance of the Weighted EIR}
+
+
+\section{Properties}
+
+quite similar to Var(BSI)
+
 
 \subsubsection{Property 1: the variance of Z is bounded between -1 and 1}
 
 
 \subsubsection{Property 2: }
 
-
+\section{Take different questions into account}
 
 
 
@@ -1794,7 +1820,32 @@ ACF1: Autocorrelation of errors at lag 1.
 
 \section{Relative Importance}
 
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Z3\_sa & Z2\_sa & Z\_sa & Var\_Z2\_sa & Var\_Z3\_sa & Var\_Z\_sa & Var\_sa & E\_sa \\ 
+\hline \\[-1.8ex] 
+$0.010$ & $0.018$ & $0.027$ & $0.029$ & $0.039$ & $0.094$ & $0.095$ & $1.006$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
 
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Z2\_sa & Z3\_sa & Z\_sa & Var\_Z2\_sa & Var\_Z3\_sa & Var\_sa & Var\_Z\_sa & E\_sa \\ 
+\hline \\[-1.8ex] 
+$-0.003$ & $-0.002$ & $0.0003$ & $0.002$ & $0.035$ & $0.038$ & $0.046$ & $0.882$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
 
 
 
@@ -1810,11 +1861,88 @@ ACF1: Autocorrelation of errors at lag 1.
 
 \section{until 2012 to see if variance still significant, not attrition creating effect}
 
+\begin{landscape}
+    \section{Model with before 2000 data}
 
+\begin{table}[!htbp] \centering \footnotesize
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{Linear Regression} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 4.437^{***} & 0.660 & -0.519 \\ 
+  & (0.160) & (0.631) & (0.615) & (0.211) & (1.899) & (2.041) \\ 
+  & & & & & & \\ 
+ BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 17.374^{***} & 19.212^{***} & 20.327^{***} \\ 
+  & (1.317) & (1.252) & (1.224) & (1.547) & (1.758) & (1.813) \\ 
+  & & & & & & \\ 
+ Var(BSI) &  & 49.102^{***} & 36.477^{***} &  & 30.545^{*} & 31.371^{**} \\ 
+  &  & (5.869) & (8.089) &  & (15.269) & (14.992) \\ 
+  & & & & & & \\ 
+ EIR1 &  &  & -28.718^{**} &  &  & -37.120^{**} \\ 
+  &  &  & (13.792) &  &  & (17.899) \\ 
+  & & & & & & \\ 
+ Var(EIR1) &  &  & 78.555^{**} &  &  & 53.535 \\ 
+  &  &  & (35.187) &  &  & (52.433) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
+Res. Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
+F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{126.060$^{***}$} & \multicolumn{1}{c}{69.144$^{***}$} & \multicolumn{1}{c}{37.845$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
 
+\end{landscape}
 
-
-
+\begin{landscape}
+    \begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{Linear Regression} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 3.903^{***} & -1.068 & -1.764 \\ 
+  & (0.160) & (0.631) & (0.615) & (0.180) & (1.102) & (1.163) \\ 
+  & & & & & & \\ 
+ BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 17.494^{***} & 21.469^{***} & 22.103^{***} \\ 
+  & (1.317) & (1.252) & (1.224) & (1.379) & (1.518) & (1.505) \\ 
+  & & & & & & \\ 
+ Var(BSI) &  & 49.102^{***} & 36.477^{***} &  & 43.809^{***} & 38.891^{***} \\ 
+  &  & (5.869) & (8.089) &  & (9.608) & (10.307) \\ 
+  & & & & & & \\ 
+ EIR1 &  &  & -28.718^{**} &  &  & -38.430^{**} \\ 
+  &  &  & (13.792) &  &  & (17.020) \\ 
+  & & & & & & \\ 
+ Var(EIR1) &  &  & 78.555^{**} &  &  & 63.393 \\ 
+  &  &  & (35.187) &  &  & (46.225) \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{88} & \multicolumn{1}{c}{88} & \multicolumn{1}{c}{88} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.652} & \multicolumn{1}{c}{0.720} & \multicolumn{1}{c}{0.740} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.648} & \multicolumn{1}{c}{0.714} & \multicolumn{1}{c}{0.727} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{1.083} & \multicolumn{1}{c}{0.977} & \multicolumn{1}{c}{0.954} \\ 
+F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{161.027$^{***}$} & \multicolumn{1}{c}{109.438$^{***}$} & \multicolumn{1}{c}{58.910$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+\end{landscape}{}
 
 \chapter{Conclusion}
 
