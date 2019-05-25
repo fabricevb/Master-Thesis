@@ -1,13 +1,18 @@
-# Master-Thesis
+# Master Thesis: The Variability of the Belgian Business Survey Indicator - analysis and predictive power
 
-Master Thesis for the "European Master of Official Statistics" at KU Leuven done at the National Bank of Belgium.
+Thesis presented in fulfillment of the requirements for the degree of Master of Science in Statistics
 
-*Abstract*
+Co-supervisor: Geert Molenberghs - KU Leuven 
+
+Co-supervisor: Laurent Van Belle - National Bank of Belgium
+
+# Abstract
 
 bla bla bla bla bla
 copie/paste from Master Thesis
 
-*R Code*
+# R Code
+
 The code used for the processing, analysing and modelling of the data can be found in the folder "R code".
 
 
