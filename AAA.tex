@@ -1073,7 +1073,8 @@ This chapter will address this question by applying a method proposed by \cite{c
 When we take only one period into account, there are three different possibilities of answers; "negative", "neutral" and "positive".
 When we take two periods into account, a month (t) and the previous one (t-1) for example, there are nine possible situations as represented in \autoref{tab:EIR explanation}. 
 
-\begin{table}[H]
+
+\begin{table}[htp!]
     \centering
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
@@ -1082,18 +1083,22 @@ When we take two periods into account, a month (t) and the previous one (t-1) fo
     $t-1$ & \textbf{0} & $z_{i0-}$	& $z_{i00}$	& $z_{i0+}$	\\
     		&    \textbf{+} & $z_{i+-}$	& $z_{i+0}$	& $z_{i++}$ \\ \cline{2-5}
     \end{tabular}
-    \caption{Possible observation when taking t and t-1 into account}
+    \caption{Possible observations when taking t and t-1 into account}
     \label{tab:EIR explanation}
 \end{table}{}
 
-The same as for the BSI, the EIR take different values. In the case of the BSI, if the answer was negative, it would take value "-1", neutral it would take value "0" and positive it would take value "1".
+The same as for the business survey indicator, the evolution of individual responses take different values. In the case of the BSI, $x_i$ can take value -1, 0 and 1. In the case of the EIR, $z_i$ can take values -2, -1, 0, 1 and 2.
 
-The EIR defers in the sens that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and at the previous survey, $x=0$. 
+The EIR defers also from the BSI in the sens that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and at the previous survey, $z_i=0$. What's measured here is the difference in answer.
 On the other hand, if a certain participant changes his answer for a more positive answer it will take value 1, except if it's a radical change from a "negative" to a "positive" answer, then it will take value 2.
 Same the other way around, if it decreases it will take value -1, except for a radical change from "positive" to "negative".
 We will here use $z$ rather than $x$ to make a clear distinction between the BSI and the EIR.
 
-A summary to better understand this new indicator can be seen in \autoref{tab:values EIR}. 
+\begin{equation}
+	????????????\text{voir article INSEE   }  z_i = x_{t} - x_{t-1}
+\end{equation}
+
+the value of the different observations of $z_i$ can be seen in \autoref{tab:values EIR}. 
 
 \begin{table}[H]
     \centering
@@ -1104,7 +1109,7 @@ A summary to better understand this new indicator can be seen in \autoref{tab:va
     $t-1$ & \textbf{0}  & $z_{i0-}=-1$	& $z_{i00}=0$	& $z_{i0+}=1$	\\
     		& \textbf{+}& $z_{i+-}=-2$	& $z_{i+0}=-1$	& $z_{i++}=0$ \\ \cline{2-5}
 \end{tabular}
-    \caption{Value given at each type of $z_i$}
+    \caption{Values of the different observations of $z_i$}
     \label{tab:values EIR}
 \end{table}{}
 
@@ -1158,7 +1163,41 @@ where $\pi$ is the proportion/probability of respondent answering negative(-), n
 
 \section{Indicator of the Weighted Evolution of Individual Responses}
 
-bla bla bla
+\begin{eqnarray}
+    \E(Z) &=&  \sum_{i=1}^n \omega_i z_i \\ \nonumber \\
+        &=& \sum_{i=1}^n \omega_i z_{--i} 
+     + \sum_{i=1}^n \omega_i z_{-0i}  
+    + \sum_{i=1}^n \omega_i z_{-+i} 
+    + \sum_{i=1}^n \omega_i z_{0-i}  
+    + \sum_{i=1}^n \omega_i z_{00i}   \nonumber  \\
+    &&  + \sum_{i=1}^n \omega_i z_{0+i} 
+    + \sum_{i=1}^n \omega_i z_{+-i} 
+    + \sum_{i=1}^n \omega_i z_{+0i} 
+    + \sum_{i=1}^n \omega_i z_{+-i} 
+\end{eqnarray}
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+    		&    \textbf{-} & $\Omega \pi_{--}$	& $\Omega \pi_{-0}$	& $\Omega \pi_{-+}$ \\ 
+    $t-1$ & \textbf{0} & $\Omega \pi_{0-}$	& $\Omega \pi_{00}$	& $\Omega \pi_{0+}$	\\
+    		&    \textbf{+} & $\Omega \pi_{+-}$	& $\Omega \pi_{+0}$	& $\Omega \pi_{++}$ \\ \cline{2-5}
+    \end{tabular}    
+    \caption{Possible observation when taking t and t-1 into account}
+    \label{tab:EIR proportions}
+\end{table}
+
+The EIR can now be calculated with the following expression after taking out $\Omega \pi_{--}$, $\Omega \pi_{00}$ and $\Omega \pi_{++}$ since $z_{--}$, $z_{00}$ and $z_{++}$ have value zero.
+
+\begin{equation}
+    \E(Z) = \Omega \pi_{0+} + \Omega \pi_{-0} - \Omega \pi_{+0} - \Omega \pi_{0-} +2\Omega \pi_{-+} -2\Omega \pi_{+-} 
+\end{equation}
+
+
 
 \section{Take different questions into account}
 
