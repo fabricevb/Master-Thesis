@@ -239,7 +239,7 @@ ggnostic(model1)
 accuracy(model1)
 accuracy(model2)
 
-fore <- forecast(model1, data, h=24)
+fore <- forecast(modelsubset1, data, h=24)
 plot(fore$mean)
 
 
@@ -294,15 +294,16 @@ dm.test(model2$residuals, model4$residuals)
 ##############################################
 # out of sample 
 
-# select data before 2000
-subset <- data[1:144,]
+# select data before 2000 (obs 145)
+subset <- data[1:264,]
 
 # fitting out of sample
-modelsubset1 <- lm(GDP_year ~ E_sa + Var_sa, data = subset)
-modelsubset2 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = subset)
+modelsubset1 <- lm(GDP_year ~ E_sa, data = subset)
+modelsubset2 <- lm(GDP_year ~ E_sa + Var_sa, data = subset)
+modelsubset3 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = subset)
 
 
-stargazer(model1, model2, model3, modelsubset1, modelsubset2, align = TRUE,
+stargazer(model1, model2, model3, modelsubset1, modelsubset2, modelsubset3, align = TRUE,
           intercept.bottom = FALSE,
           single.row = FALSE, 
           df = FALSE,
@@ -310,8 +311,35 @@ stargazer(model1, model2, model3, modelsubset1, modelsubset2, align = TRUE,
           dep.var.caption  = "Linear Regression",
           dep.var.labels   = "Year on Year GDP (in \\%)")
 
+fore1 <- forecast(modelsubset1, data)
+fore2 <- forecast(modelsubset2, data)
+fore3 <- forecast(modelsubset3, data)
+data$fore1 <- fore1$mean 
+data$fore2 <- fore2$mean 
+data$fore3 <- fore3$mean 
+
+data$date <- as.Date(data$period)
+tmp <- data[c("date", "GDP_year_plot", "fore1", "fore2", "fore3")]
+meltdf <- melt(tmp,id="date")
+meltdf$GDP_year <- data$GDP_year
+ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
+  geom_line(na.rm=FALSE) + 
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  geom_point(aes(y = GDP_year))
 
 
+data$date <- as.Date(data$period)
+tmp <- data[c("date", "GDP_year_plot", "Respondents", "Var", "Var_Z")]
+
+
+meltdf <- melt(tmp,id="date")
+meltdf$GDP_year <- data$GDP_year
+ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
+  geom_line(na.rm=FALSE) + 
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  geom_point(aes(y = GDP_year))
 
 
 

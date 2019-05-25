@@ -50,9 +50,9 @@ corrplot.mixed(cor(na.omit(data2[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3",
                ,lower = "circle", upper = "number")
 
 #### GDP corr with the different indicators
-stargazer(cor(na.omit(data2[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
+stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
 
-ggpairs(data2[c("Obs", "GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], 
+ggpairs(data2[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], 
         upper = list(continuous = wrap("cor", size = 6)))  + theme_bw()
 
 ggpairs(data[c("GDP_year", "E", "Var", "Z","Var_Z", "Z2","Var_Z2", "Z3","Var_Z3")], 
