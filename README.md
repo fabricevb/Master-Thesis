@@ -1,6 +1,6 @@
 # Master Thesis: The Variability of the Belgian Business Survey Indicator - analysis and predictive power
 
-Thesis presented in fulfillment of the requirements for the degree of Master of Science in Statistics
+Thesis presented in fulfillment of the requirements for the degree of Master of Science in Statistics, 2018 - 2019.
 
 Co-supervisor: Geert Molenberghs - KU Leuven 
 
