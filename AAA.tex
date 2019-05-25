@@ -287,6 +287,27 @@ Survey Variance -
 Survey Volatility -
 Markov Switching - 
 
+
+
+\chapter*{List of Abbreviations}
+
+\begin{tabular}{l l}
+  BSI   	& Business Survey Indicator/Barometer \\
+  ECB   	& European Central Bank \\
+  EIR   	& Evolution in individual Responses \\
+  Eurostat & The European Statistical Office \\
+  GDP   	& Gross Domestic Product \\
+  NBB   	& The National Bank of Belgium \\
+  NBER  	& The National Bureau of Economic Research (US) \\
+  NSI   	& National Statistics Institutes \\
+  Var 		& Variance \\
+  Cor 		& Correlation \\
+  Cov 	  & Covariance \\
+  INSEE 	& \\
+  YoY & Year on Year
+  
+\end{tabular}
+
 \tableofcontents
 
 \newpage
@@ -300,6 +321,10 @@ Markov Switching -
 \chapter{Introduction}
 
 business survey indicator / business barometer / business confidence indicator
+
+3000 participants
+
+Panel survey
 
 A widespread method to predict the evolution of National Economies is the survey-based Business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
@@ -328,118 +353,108 @@ Chapter 2
 5
 
 
-%Algemeen Conjunctuurenquêtes
 
-
-%Sinds 1954 houdt de Nationale Bank bij een panel van ongeveer 3000 bedrijfsleiders een maandelijkse enquête naar hun appreciatie van de economische toestand. De resultaten worden rond de 21e van elke maand gepubliceerd en bevatten naast globale indicatoren tevens resultaten per bedrijfstak. Deelnemers aan de enquête ontvangen bovendien nog resultaten per product. Conjunctuurenquêtes leveren waardevolle informatie over het economisch verloop vóór de traditionele statistieken beschikbaar komen. Hun waarde wordt verhoogd door de internationale vergelijkbaarheid.
-
-%Op verzoek van de beroepsorganisaties van de Belgische ondernemingen, heeft de Nationale Bank in 1954 maandelijkse enquêtes naar het ondernemersvertrouwen opgezet. Deze enquêtes, die zijn ontstaan in de Verenigde Staten in de jaren dertig en die in 1949 werden geïntroduceerd in Europa (in Duitsland), hebben tot doel de mening van de ondernemers omtrent het economische conjunctuurklimaat en omtrent de op de korte termijn te verwachten ontwikkelingen, nauwkeurig en snel in te zamelen. Zij vormen een uiterst waardevol instrument met het oog op de conjunctuuranalyse, omdat hun resultaten - die beschikbaar zijn voor de lopende maand - veel vroeger beschikbaar zijn dan de informatie van de kwantitatieve indicatoren.
-
-%De conjunctuurenquêtes die bij de ondernemers worden uitgevoerd, vormen het voorwerp van een harmonisatieprogramma van de Europese Commissie. Dankzij dit programma zijn de gehanteerde methoden en de verkregen resultaten in de diverse Europese landen geheel en al vergelijkbaar.
-
-%De maandelijkse resultaten van de conjunctuurenquêtes worden verspreid en becommentarieerd in een beknopt perscommuniqué, tussen de 21e en de 25e van elke maand. De precieze datum wordt aangekondigd in een kalender die kan worden geraadpleegd op de internetsite.
-
-%De industriële ondernemingen worden daarnaast ook één keer per kwartaal bevraagd omtrent de benuttingsgraad van het productievermogen, en één keer om de zes maanden omtrent de investeringen. De resultaten van de enquête naar de benuttingsgraad van het productievermogen worden opgenomen in het maandelijkse perscommuniqué, terwijl die van de enquête naar de investeringen het voorwerp uitmaken van een speciaal communiqué.
 
 
 \chapter{The Business Survey Indicator}
 
-This first chapter is a presentation of the Belgian business survey and the business survey indicator, also referred to as the business survey barometer or business confidence barometer/indicator.
-We will first go thought the evolution of the barometer since it started. Then present the recruitment method, the objectives and methodology of they survey. 
-In the last part of the chapter, we will present the calculation method of the business survey indicator (BSI).
+This first chapter is a presentation of the Belgian business survey and the business survey indicator (BSI), also referred to as the business survey barometer or business confidence indicator/barometer.
+
+First, a brief history of the business survey indicator will be presented.
+The second section will discuss the sampling method while the third section will discuss the objectives of the business survey, which are (1) understanding the short term evolution by sector of the Belgian economy, (2) nowcasting and (3) the analysis of business cycles.
+The next part will discuss the methodology regarding the questions and the weighting procedure(s).
+In the last section of the chapter, the calculation method of the business survey indicator will be discussed.
 
 \section{History}
 
-The Belgian Business Survey celebrates this year it's 65\textsuperscript{th} anniversary, since the Survey was launched by the National Bank of Belgium in 1954. 
-Belgium was part of the pioneers since only the United States (1930) and West Germany (1949) had a business survey.
+The Belgian business survey celebrates this year its 65\textsuperscript{th} anniversary, since the survey was launched by the National Bank of Belgium in 1954. 
+Belgium was part of the pioneers since only the United States (1930) and West Germany (1949) had a business survey at the time. 
 
-In 1972, the results where first synthesised in an indicator.
-The Business Survey Barometer started by including only the industrial sector. It was then small by small enlarged to other sectors: construction, trade and services. % (1970 - 1994)
+In 1972, the results were first synthesised in an indicator.
+The Business Survey Barometer started by including only the industrial sector. It was then from 1970 on, small by small enlarged to other sectors: construction, trade and services. 
 
-At the European level, it was in 1961 that the European Commission launched an harmonisation program of the Business Survey in the manufacturing industry. 
-Since then, the sector coverage of the programme has widened considerably. The Business Survey programme was extended to the construction sector and the investment plans in the manufacturing sector in 1966, to consumers in 1972, to the retail trade in 1984, and to the services sector in 1996.
-The harmonisation only concerns the type of questions, the possible answers and the method to calculate the indicator. ...
-More information ca be found in the "The Joint Harmonised EU Programme of Business and Consumer Surveys User Guide" \cite{european_commission_joint_2016}.
+Over time, several improvements of the business survey where proposed and applied (1983, 1990 and 2009). The last improvements will be discussed in detail in \autoref{section:Methodology}.
 
-Over the time, the business survey barometer has been well known for been a very informative and useful indicator. 
-It was noticed in a paper by the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that acknowledged its importance and accuracy in understanding the evolution of the Belgian economy.
+At the European level, it was in 1961 that the European Commission (EC) launched a harmonisation program of the business survey in the manufacturing industry. 
+Since then, the sector coverage of the program has widened to account for the different sectors.
+The harmonisation program and the large implication of the EC, make it possible to compare BSI around the European Union.
+More information can be found in the "The Joint Harmonised EU Programme of Business and Consumer Surveys User Guide" \cite{european_commission_joint_2016}.
 
-% For example in 1999 an article was published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999} that noted the accuracy of its predictions.
+Over time, the business survey barometer got well known for being a very informative and useful indicator. 
 
-Due to the structure of Belgian economy ... it was also shown as been a good predictor for the European economy \cite{vanhaelen_belgian_2000}
+In an article published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999}, the BSI is described as an important and accurate measure of the evolution of the Belgian economy. 
+It also suggested that it could be a good indicator for the European Union. 
+This hypothesis was test for the period of 1985-2000 in \cite{vanhaelen_belgian_2000} and the conclusion were very flattering for the BSI. 
+It was shown that the BSI was indeed a leading indicator of the evolution of European economy and could quite accurately forecast turning points. 
+The explanation proposed by the authors is, first of all, that the Belgian economy, in itself, had some predictive power for the European Area, since it is specialised  in  intermediate  goods and is an very open economy. 
+The other potential explanation pointed out, is the high  representation  of  small and medium-sized enterprises in the business survey.
 
-Today, Nowcasting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
+The results can't be extrapolated to the present time and some
 
-Several improvement of the business survey where proposed and applied over time (1983, 1990 and 2009). The last ?improvements will be discussed in detail in \autoref{section:Methodology}.
+
+%Today, Nowcasting is a well studied subject and very important for public and private organisation to have an as clear as possible view of the state of the economy.
+
+
 
 
 \section{Sampling Method}
 \label{sec:Recruitment of participants}
 
-The Belgian business survey barometer (as most of the business survey around the world), has the particularity of not using random sampling.
-The selection of participants is quite complex and a lot of decision are human, never is a statistical program or a random sampling system used to select new participants.
+The Belgian business survey - as most of the business survey around the world - has the particularity of not using random sampling. 
+ The selection of participants is quite complex and a lot of decision are human, never is a statistical program or a random sampling system used to select new participants.
 
 \subsubsection{Procedure of selection}
 
-% Without going to much into details. 
-The selections of new participants is done by "waves". When the department responsible for the business survey at the NBB decides that there aren't enough participants in a specific sector anymore, the recruitment of new participants is launched. 
+The selection of new participants is done by waves. When the department responsible for the business survey at the NBB decides that their aren't enough participants in a specific sector anymore, the recruitment of new participants is launched.
 
-To find the new participants, the first step is to decided for an optimal amount of new participants needed, regarding the different stratification of the sector.
-Each sector is composed of a quite advanced trees of sub-sectors, sub-sub-sectors, ... . for example the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. A representation of the classification ca be seen in \autoref{fig:tree}.
+To find the new respondents, the first step is to decided for an optimal amount of new participants needed, regarding the different stratification of the sector.
+Each sector is composed of a quite advanced trees of sub-sectors, sub-sub-sectors,  and more. For example, the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. 
 
-% When a new recruitment procedure is started, it's looked at those branches to see, based on there importance in Belgian economy, which could take advantage of having more respondents. For example, if a certain sub-sector represents 1 \% of Belgian GDP but its respondents only present 0.1 \% of the respondents of the survey. It will be decided to look for more respondents for this sub-sector. This is a very simplified version of how this is done since there is also the size of the company that has to be taken into account, next to the size of the sub-sector. Therefore this procedure is quite complex and contains a lot human decisions.
-
-As will be seen in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure} more in details, companies are weighted by there size (profit, number of employees, ...) and the size of the sector/branch they are part of. 
-Based on those information, it's looked at which branches, size of companies, new respondents should be looked for. 
-This makes the procedure quite complex and therefore contains a lot of human decisions.
+It could be that some sub division of a certain sector only has 1 or 2 respondents while it account for a significant part of Belgian economy, the Department of the business survey of the National Bank of Belgium will then look into which company, from that specific part of the economy, could be a good fit as new respondent of the business survey, considering it's activity, it's size, region and other characteristics.
+As will be seen in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure} more in detail, companies are weighted by there size (profit, number of employees, ...) and the size of the sector/branch they are part of. Those information are crucial for selecting new participants.
+The procedure is quite complex and therefore contains a lot of human decisions.
  
 Out of this process comes a list of potential new participants. This list is then send to the communication department that takes  contact with those potential new participants. 
-Not always, but it happens quite often, a representative of the National Bank visits the new participant to explain the survey and have a contact.
+Not always, but usually, a representative of the National Bank visits the new participant to explain the survey and have a contact.
 As a reward for participating at the survey, the companies receive privileged information. Each month they receive access to sub-sector indicators information that aren't publicly distributed. This can give them economical information regarding there specific economical activity.
 
-At the National Bank of Belgium, this procedure is usually referred to as "prospecting" rather than selecting or sampling. Since it is mostly based on recruiting new companies that will work with them, by looking at the Belgian economy and find participants willing to collaborate. For example, it's possible that the responsible person for the Horeca business survey, goes to  restaurant et get acquainted with the owner, sees the interest of including him in the business survey and recruits him this way. This is a less common way, the main of the recruitment happens to the process explained above.
+At the National Bank of Belgium, this procedure is usually referred to as prospecting, rather than selecting or sampling. Since it is mostly based on recruiting new companies that will work/collaborate with them. 
+
+% For example, it's possible that the responsible person for the Horeca business survey, goes to  restaurant and get acquainted with the owner, sees the interest of including him in the business survey and recruits him this way. This is a less common way, the main of the recruitment happens to the process explained above.
 
 
 \subsubsection{Leaving the Survey}
 
 An important side of business survey is that people are staying as long as possible in the survey.
-Ones  companies are part of the survey, they stay in it until they decide to leave. There are no participants removed from the survey by the national Bank, what can happen is that if participants don't answer for three months, contact will be taken with the company to see if they want to continue to participate.
+Ones  companies are part of the survey, they stay in it until they decide to leave, their are no participants removed from the survey by the National Bank, what can happen is that if participants don't answer for three months, contact will be taken with the company to see if they want to continue to participate.
 
-There is a real work done by the National Bank to make sure companies answer to the survey, and stay in the survey.
+There is a real work done by the National Bank to make sure companies answer to the survey, and stay in it.
 This means that some companies are part of the survey for a very long time.
-To have an idea, if we look at the Survey for the Industry, trace respondents back to 1988, we can see that today, approximately one third of the respondents where already in the survey in 1988. 
+To have an idea, if we look at the survey for the industry and trace respondents back to 30 year ago (1989), we can see that today, approximately one third of the respondents where already in the survey in 1988. 
 
 \subsubsection{Why not a problem that Random Sampling isn't used}
 
 % The National Bank of Belgium is using random or stratified sampling for other survey. So why isn't it the case here ?
 
-From a statistical point of view, it can be rather problematic to draw general conclusions over a populations when Random Sampling is not use.
-Without undermining one of the most important pillars of statistics, there are two main reasons why in this case, having a non-random selection of participants is not too problematic.
+From a statistical point of view, it can seem rather problematic to draw general conclusions over a population when not  using random sampling.
+Without undermining one of the most important pillars of statistics, there are two main reasons why in this case, having a non-random selection of participants is not truly problematic.
 
-The first reason is that the method used tries to represent as good as possible the population that it wants to represent. Therefore stratification is used at a quite advanced level as explained before. 
+The first reason is that the sampling method used, is trying to represent as good as possible the population that it is representing. Therefore stratification is used at a quite advanced level as explained before. 
 We could call this recruitment method: non-random stratification, as opposed to random stratification. Since it's not using sampling but takes into account the stratification of the population it's studying.
 
-The second reason ,the most import one, is that the business survey Indicator has no interest on its own. Indeed having a BSI equal to 0.5 or 0.1 don't mean anything, what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand if it's now equal to 0.1, it means a decrease in economical confidence among businesses and we can anticipate a deceleration/decrease of GDP over that period.
-
-% This means that people participate for a long time to the survey will be discussed in chapter .... and ....
+The second reason ,the most import one, is that the value of the business survey indicator doesn't have interest on its own. Indeed having a BSI equal to 0.5 or 0.1 don't mean much, what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand if it's now equal to 0.1, it means a decrease in economical confidence among businesses and we can anticipate a deceleration or decline of the economy over the month.
 
 
 \section{Objectives of the Business Survey}
 \label{section:Objective}
 
-\subsubsection{predictive power for the future months - high correlation with Economical Indicators}
 
-The main objective of the business survey Barometer is to have a feeling of how the economy is now and how it will evolve in the short term. Therefore we will first speak about nowcasting, its explanation and its implications.
+The main objective of the business survey barometer is to have a feeling of how the economy is now and how it will evolve in the short term.
+We will here decompose the main objectives of the business survey into three subjects; (1) the direct information of the Belgian economy that can be delivered by the global and sector specific BSI, (2) Nowcasting which refers to the now and short term prediction of the economy growth and (3) the long term analysis of the business cycles and the importance of identifying turning points.
 
+The three objectives have in common the importance, the need,  of only capturing the real evolution of the economy, without taking into account short term noise/variation as seasonal effects or bias that could erupt due to the survey method.
+This will be looked into in \autoref{chap:nonresponse dropout} where seasonal effects, dropout, non-response and attrition will be discussed.
 
-average weekly work hours in manufacturing, factory orders for goods, housing permits and stock prices
- index of consumer expectations, average weekly claims for unemployment insurance and the interest rate
- 
-
-\subsubsection{fluctuation that's mostly explained by the conjuncture}
-The second objective of the Business Confidence Barometer, is to make prevision as less as possible influenced by short terms variation, but the capture the more long run evolution of the economy, more precisely, business cycles. Therefor we will here discuss business cycles.
-
-In \autoref{chap:nonresponse dropout}, we will discuss most of the small, short-term variation that can influence the BSI and that aren't relevant. Those can be due to the responses to the survey (non- response, dropout and Attrition) but also to "real" effects (seasonal effects) that shouldn't be captured by the BSI.
 
 \subsection{Belgian economy and sector specific short term evolution}
 
@@ -447,8 +462,12 @@ In \autoref{chap:nonresponse dropout}, we will discuss most of the small, short-
 
 The business survey indicators are published at the end of each month (around the 21-25 of the month) and give a fast capture of the evolution of the Belgian economy over the past months.
 The data is available on \href{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en}{stat.nbb.be} and a press release is published on \href{http://www.nbb.be/doc/dq/e/conj.htm}{nbb.be}. 
-It contains a short summary and interpretation of the BSI followed by graphs to show the evolution of the BSI over the two last years for the sector specific and overall indicator.
-The public can use those information to have a snapshot of the economy, while other indicators, as GDP or unemployment, can take a very long time before been obtained and published.
+The press release contains a short summary and interpretation of the BSI followed by graphs to show the evolution of the BSI over the 4-5 last years for the sector specific and overall indicator.
+The public can use those information to have a snapshot of the economy, while other indicators, as GDP or unemployment, can take a very long time before been published.
+
+It's know ....................................
+
+
 
 
 \subsection{Nowcasting}
@@ -458,9 +477,9 @@ it consists in the short term estimation of the economy, mostly the GDP.
 It is a fundamental approach since the business survey indicator is published monthly while other indicator's like GDP are published quarterly.
 
 As can be seen in \autoref{fig:timeline}, 
-the lag between the observation and publication is even greater since the business survey Indicator is published at the end of each month (around the 24-25\textsuperscript{th} of each month, will the GDP is published with a lag of 3-4 weeks ????
+the lag between the observation and publication is even greater since the business survey indicator is published at the end of each month (around the 24-25\textsuperscript{th} of each month, will the GDP is published with a lag of 3 to 4 weeks and is subject to revision.
 
-\begin{figure}[H]
+\begin{figure}[htp!]
     \centering
     \small
     \begin{tikzpicture}
@@ -494,45 +513,39 @@ the lag between the observation and publication is even greater since the busine
         \draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
         \draw [thick,->] (4.8,-0.85) -- (4.8,-0.15);
     \end{tikzpicture}
-    \caption{Timeline of the publication of the business survey Indicator (BSI) and the Gross Domestic Product (GDP)}
+    \caption{Timeline of the publication of the business survey indicator (BSI) and the Gross Domestic Product (GDP)}
     \label{fig:timeline}
 \end{figure}
 
 Nowcasting got by the time a catch all word and include predictive models going from Linear models to space-space models and also including ARIMA or MIDAS and much more different models.
 
+A good example is the State-Space model developed at the NBB to predict GDP growth \cite{de_antonio_liedo_nowcasting_2014}.
+
+Indicators that can be used aside from the business survey are average weekly work hours, factory orders for goods, housing permits and stock prices index of consumer expectations, average weekly claims for unemployment insurance and the interest rate and more.
+
+The advantage that the business survey indicator has over all the other indicators is that's published very fast, there is a very small gap between the companies answering the survey, and the publication of the BSI. 
+Quantitative indicators take time to be collected and can be revised after been published.
 
 
 \subsection{Business Cycles}
 \label{sec:Business Cycles}
 
-Before going further, a small summary of business cycle theory. 
+The theory regarding business cycles is very wide and a lot of books and articles where published on the subject. 
 
-As already said, an important role of the business survey Indicator, is to identify business cycles.
+In 1946, \citeauthor{mitchell_measuring_1946} published the book "\textit{Measuring Business Cycles}" which is, until today, widely used as basis of business cycles theory.
+In the book, business cycles are defined as recursive fluctuations, affecting macroeconomics variables.
 
+There are a lot of variables that account the business cycles but it's commonly admitted that Growth Domestic Product (GDP) is the most important of them.
 
-The domain is very wide and a lot of books and articles where published about the subject. 
-
-Already in 1946, \citeauthor{mitchell_measuring_1946} published the book "\textit{Measuring Business Cycles}". They 
-Business cycles where described as recursive fluctuations, affecting macroeconomics variables.
-
-Business cycles are putting aside other effects like seasonal variation and other small variations. It is taking into account a larger trend in the economy.
-
-\subsubsection{What's GDP and Year on Year GDP}
-
-As seen, business cycles are defined by several macroeconomic variables. 
-Gross domestic income (GDI), unemployment, ...
-
-But the main indicator, is the GDP
-
-Later on we will also use YoY GDP, for x reasons
+A good indicator of the growth of GDP, is Year on Year GDP that is obtained as follow
 
 \begin{eqnarray}
    \mbox{YoY GDP} = \frac{\mbox{GDP}_t - \mbox{GDP}_{t-12}}{\mbox{GDP}_{t-12}} 
 \end{eqnarray}
 
-\autoref{fig:Business Cycle} shows a simplified version of the Business Cycles theory.
+\autoref{fig:Business Cycle} shows a simplified version of the Business Cycles theory when using as measure GDP or YoY GDP.
 
-\begin{figure}[H]
+\begin{figure}[htp!]
     \centering
     \small
     \begin{tikzpicture}
@@ -595,18 +608,22 @@ Later on we will also use YoY GDP, for x reasons
 
 \subsubsection{Duration of a Business Cycle}
 
-\autoref{fig:Business Cycle} can give the false impression that business cycles are of the same length, this is, in real life, not so simple.
+A very important question considering business cycles is their duration.
+\autoref{fig:Business Cycle} can give the false impression that business cycles are all of the same length, this is, in real life, not so simple.
 
-\cite{mitchell_measuring_1946} stated a minimum duration of 16-22 months and a maximum duration of 100-106 months. This is a quite large range and since then several researches worked on this topic. There is no clear 
+Probably the first person to explore the duration of a business cycle was a french statistician,  \cite{juglar_crises_1862}, who set the business cycles to have a duration of 7 to 11 years.
 
-As a lot of research argues, business cycles are mainly empirically defined. 
-If we look for example at the United States, a big work was done by the National Bureau of Economic Research (NBER) to date turning points for the American economy. The empirical evidence that comes out of this work, is that the time from one economic peak to the next is on average 5 and a halve years (for the period 1945-2009)
+\cite{mitchell_measuring_1946} proposed a minimum duration of 16-22 months and a maximum duration of 100-106 months (a quite large range). 
 
-We can see from \autoref{fig:NBER BS}, which represent the different though and peak of business cycles identified by the NBER from 1975 to 2009, that their is no symmetry of the Business Cycle. Some business cycles are very short while other last more than ten years.
-We can notice that periods of economical growth, usually last longer than economical decrease. ....
+An entire book could be written about the different theories. even though business cycles are rather empirically defined than theory based.  
+Therefore let put the theory aside and look into real data.
+The example of the United States is interesting since the National Bureau of Economic Research (NBER) dated precisely and methodologically the turning points for the American economy. The empirical evidence that comes out of this work, is that the time from one economic peak to the next is on average 5 and a halve years for the period 1945-2009.
+
+We can see from \autoref{fig:NBER BS}, which represent the different though and peak of business cycles identified by the NBER from 1975 to 2009, that their is no symmetry of the business cycles. Some business cycles are very short while other last more than ten years.
+We can notice that periods of economical growth, usually last longer than economical decrease.
 
 
-\begin{figure}[H]
+\begin{figure}[htp!]
     \centering
     \small
     \begin{tikzpicture}
@@ -647,24 +664,18 @@ We can notice that periods of economical growth, usually last longer than econom
 \end{figure}
 
 
-
-
 \section{Methodology of the Business Survey}
 \label{section:Methodology}
 
-1954 begin
-1972 results are synthesised in an indicator
-1983 \& 1990 methodological changes
+%The latest large improvement of the business survey is explained in detail in \textit{"The National Bank of Belgium’s new business survey indicator"} (\citeauthor{de_greef_national_2009}).
 
-The latest large improvement of the business survey Indicator happened in 2009 which was explained in a working paper titled \textit{"The National Bank of Belgium’s new business survey indicator"} 
-(\citeauthor{de_greef_national_2009})
+Since 65 years of existence, the business survey ? was able to stay quite stable ?
 
-- only take a limited amount of questions into account, the most relevant ones (3-4 questions) \\
-- inclusion of the services in the global indicator \\
-- lighten smoothing method
+Three main methodology revisions since the launch of the business survey, in 1983, 1990 and 2009 (see \cite{de_greef_national_2009}).
 
-% Qualitative information
+The most significant changes brought in 2009 were the amount of questions taken into the calculation of the BSI, that were reduced to 3-4 questions, depending on the sector, for more simplicity and accuracy.
 
+Other improvements where the inclusion of services in the calculation of the global indicator and a  lighten smoothing method.
 
 
 \subsection{Questionnaire}
@@ -1996,18 +2007,6 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
 \bibliography{references}
  
 
-\chapter*{List of Abbreviations}
-
-\begin{tabular}{l l}
-  BSI   & Business Survey Indicator \\
-  ECB   & European Central Bank \\
-  EIR   & Evolution in individual Responses \\
-  Eurostat & The European Statistical Office \\
-  GDP   & Gross Domestic Product \\
-  NBB   & The National Bank of Belgium \\
-  NBER  & The National Bureau of Economic Research (US) \\
-  NSI   & National Statistics Institutes
-\end{tabular}
 
   
 \begin{appendix}
@@ -2091,16 +2090,6 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 \end{figure}
 
 
-\newpage
-\begin{figure}[H]
-    \centering
-%    \captionsetup{justification=centering}
-    \includegraphics[scale=0.1]{Images/tree2.jpg}
-    \caption{XXXX}
-    \label{fig:tree}
-\end{figure}
-
-
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
@@ -2119,9 +2108,7 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 
 \section*{R code for Linear (Auto-Regressive) Models}
 
-% \href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}{Code for Linear Models} :
-
-\url{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}{Code for Linear Models on https://github.com/fabricevb/Master-Thesis}
 
 
 \section*{R code for Markov Switching Models}
