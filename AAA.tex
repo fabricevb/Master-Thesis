@@ -271,8 +271,6 @@ Several finding concerning the nature and properties of the Variance are found a
 
 In a second part, the predictive power of the variance is examined and it's found that ...
 
-It's also the first time that à Markov Switching model is used in this context. It was showed that ...
-
 
 \section*{Samenvatting}
 
@@ -850,27 +848,22 @@ can also been seen as the mean of the answers for each participant at each perio
     && - \Omega \pi_{Q1-} - \Omega \pi_{Q2-} - \Omega \pi_{Q3-} - \Omega \pi_{Q4-} \Large) 
 \end{eqnarray}
 
-Generalisation !
-
+? Generalisation 
 
 \chapter{The Variance of the Indicator}
 
-The variance is, with the mean, one of the first tool for Statisticians to study a certain variable. Next to the mean, that is the average value of a certain variable, the variance is the measure of the dispersion. 
+The variance is, with the mean, one of the first tool for statisticians to study a certain variable. 
+Next to the mean, that is the average value of a certain variable, the variance is the measure of the dispersion. 
 In the context of the business survey, the variance haven't been used much, while it can be seen as "how much people agree", an important information that we can extract from the survey.
 
 The variance will be interpreted as to what level respondents agree about the state of the Belgian economy.
 
 % A small comment can be written regarding the difference between the variance and sampling error. The idea here is not the study accuracy or ... but rather to find new information hidden in the survey.
 
-This chapter will present the calculation of the variance of the unweighted and weighted indicator.
-It will then look into the properties and specificities of the variance of the business survey indicator.
-
-% As done for the indicator, two different variances will be take into account here, the weighted and the unweighted variance of the indicator.
-
+This chapter will present the calculation of the variance of the unweighted and weighted indicator for one question of the business survey. It will then be looked into its properties and specificities.
+The last section will present the method of calculation when different questions are taken into account.
 
 \section{Variance of the Unweighted Indicator}
-
-% \cite{alcaniz_calculation_2006}
 
 \nocite{alcaniz_calculation_2006}
 
@@ -883,25 +876,28 @@ In the case of one question of the business survey indicator, we can write and d
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \left( \frac{\sum_{i=1}^n x_{-i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{0i}^2}{n} \right) + \left( \frac{\sum_{i=1}^n x_{+i}^2}{n} \right) - E(X)^2 \\ \nonumber 
+    &=& \left( \frac{\sum_{i=1}^{n_+} x_{+i}^2}{n} \right)  + \left( \frac{\sum_{i=1}^{n_0} x_{0i}^2}{n} \right) + \left( \frac{\sum_{i=1}^{n_-} x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber 
 \end{eqnarray}
 
 
-The positive and negative answers take value -1 and 1, which means that $x_{+i}^2 = x_{+i}$, $x_{-i}^2 = |x_{-i}|$. We also know that $\left( \frac{\sum_{i=1}^n x_{Ni}^2}{n} \right) = 0$. 
-With this information, we can further simplify the equation;
+The positive and negative answers take value -1 and 1, which means that $x_{+i}^2 = x_{+i}$ and $x_{-i}^2 = |x_{-i}|$. We also know that $\left( \frac{\sum_{i=1}^{n_0} x_{0i}^2}{n} \right) = 0$. 
+With this information, we can further simplify the equation to
 
 \begin{eqnarray}
 	\Var(X) &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
 \end{eqnarray}
 
-In other words, the variance of the BSI is equal to the sum of the proportion of positive and negative answers, minus the squared indicator. \\
-We can also replace $\E(X)$  by $\pi_+ - \pi_-$, and/or $\pi_+ + \pi_-$ by $ 1 - \pi_0$ (since $\pi_+ \pi_0 + \pi_- = 1$).
-Which means that we have several different ways to write the previous equation;
+In other words, the variance of the BSI is equal to the sum of the proportion of positive and negative answers, minus the squared indicator.
+
+Since $\E(X)=\pi_+ - \pi_-$, and $\pi_+ + \pi_- = 1 - \pi_0$ (from $\pi_+ \pi_0 + \pi_- = 1$).
+It's possible to write the variance several different ways;
+
+%We can also replace $\E(X)$  by $\pi_+ - \pi_-$, and/or $\pi_+ + \pi_-$ by $ 1 - \pi_0$ (since $\pi_+ \pi_0 + \pi_- = 1$). Which means that we have several different ways to write the previous equation;
 
 \begin{eqnarray}
 \Var(X) &=& \pi_+ + \pi_- - E ( X )^2  \nonumber \\
-        &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{var2} \\
-	    &=& 1 - \pi_0 - E(X)^2 \label{var3}
+        &=& \pi_+ + \pi_- - ( \pi_+ - \pi_- )^2 \label{eq:var2} \\
+	    &=& 1 - \pi_0 - E(X)^2 \label{eq:var3}
 \end{eqnarray}
 
 
@@ -915,7 +911,7 @@ We can now do the same for the weighted indicator. The equation is very similar 
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \sum_{i=1}^n \omega_i x_{+i}^2 + \sum_{i=1}^n \omega_i x_{0i}^2  + \sum_{i=1}^n \omega_i x_{-i}^2 - E(X)^2 \nonumber \\
+    &=& \sum_{i=1}^{n_+} \omega_i x_{+i}^2 + \sum_{i=1}^{n_0} \omega_i x_{0i}^2  + \sum_{i=1}^{n_-} \omega_i x_{-i}^2 - E(X)^2 \nonumber \\
 \end{eqnarray}
 
 We can here, as we did for the indicator, take into account weighted proportion and write the equation the same way as for the unweighted variance but in this case, by taking the weighted proportions. Again the variance can be written in different ways, depending on the interpretation that fits best;
@@ -923,7 +919,7 @@ We can here, as we did for the indicator, take into account weighted proportion 
 \begin{eqnarray}
 \Var(X) &=& \Omega \pi_+ + \Omega \pi_- - ( \Omega \pi_+ - \Omega \pi_- )^2 \\
 	&=& \Omega \pi_+ + \Omega \pi_- - E ( X )^2 \\
-	&=& 1 - \Omega \pi_{0} - E(X)^2
+	&=& 1 - \Omega \pi_{0} - E(X)^2 \label{eq:var3 weighted}
 \end{eqnarray}
 
 
@@ -976,30 +972,30 @@ We can here, as we did for the indicator, take into account weighted proportion 
 %     \addplot [thick, black, domain = -1:0] {-x-x^2};
 %     \addplot [thick, black, domain = 0:1] {x-x^2};
 %     \addplot [thick, black, domain = -1:1] {(x^2)*(-y)-(y^2)/2 + y};    
-	\addlegendentry{$\pi_N = 0$}
-    \addlegendentry{$\pi_N = 0.05$}
-    \addlegendentry{$\pi_N = 0.1$}
-    \addlegendentry{$\pi_N = 0.15$}
-    \addlegendentry{$\pi_N = 0.20$}
-    \addlegendentry{$\pi_N = 0.25$}
-    \addlegendentry{$\pi_N = 0.3$}
-    \addlegendentry{$\pi_N = 0.35$}
-    \addlegendentry{$\pi_N = 0.4$}
-    \addlegendentry{$\pi_N = 0.45$}
-    \addlegendentry{$\pi_N = 0.5$}
-    \addlegendentry{$\pi_N = 0.55$}
-    \addlegendentry{$\pi_N = 0.6$}
-    \addlegendentry{$\pi_N = 0.65$}
-    \addlegendentry{$\pi_N = 0.7$}
-    \addlegendentry{$\pi_N = 0.75$}
-    \addlegendentry{$\pi_N = 0.8$}
-    \addlegendentry{$\pi_N = 0.85$}
-    \addlegendentry{$\pi_N = 0.9$}
-    \addlegendentry{$\pi_N = 0.95$}
-    \addlegendentry{$\pi_N = 0.99$}
+	\addlegendentry{$\pi_0 = 0$}
+    \addlegendentry{$\pi_0 = 0.05$}
+    \addlegendentry{$\pi_0 = 0.1$}
+    \addlegendentry{$\pi_0 = 0.15$}
+    \addlegendentry{$\pi_0 = 0.20$}
+    \addlegendentry{$\pi_0 = 0.25$}
+    \addlegendentry{$\pi_0 = 0.3$}
+    \addlegendentry{$\pi_0 = 0.35$}
+    \addlegendentry{$\pi_0 = 0.4$}
+    \addlegendentry{$\pi_0 = 0.45$}
+    \addlegendentry{$\pi_0 = 0.5$}
+    \addlegendentry{$\pi_0 = 0.55$}
+    \addlegendentry{$\pi_0 = 0.6$}
+    \addlegendentry{$\pi_0 = 0.65$}
+    \addlegendentry{$\pi_0 = 0.7$}
+    \addlegendentry{$\pi_0 = 0.75$}
+    \addlegendentry{$\pi_0 = 0.8$}
+    \addlegendentry{$\pi_0 = 0.85$}
+    \addlegendentry{$\pi_0 = 0.9$}
+    \addlegendentry{$\pi_0 = 0.95$}
+    \addlegendentry{$\pi_0 = 0.99$}
     \end{axis}
     \end{tikzpicture}
-    \caption{Plot of the possible values of the business survey indicator (X axis) and variance (Y axis) for different values of $\pi_N$ }
+    \caption{Plot of the possible values of the business survey indicator (X axis) and variance (Y axis) for different values of $\pi_0$ }
     \label{fig:var properties}
 \end{figure}
 
@@ -1007,31 +1003,21 @@ We can here, as we did for the indicator, take into account weighted proportion 
 Based on the previous development of the equation of the variance of the indicator, we can make some observations.
 
 First of all, the variance is bounded between 0 and 1. 
-A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. The most interesting approach is to take  \autoref{var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values. Since both the variables have a minus sign in front of them, to have the highest result they should both be equal to zero. 
-This means that the highest variance, $\Var(X)=1$, is obtained when no respondent answer "neutral" and the BSI is equal to 0, in other words, half of the respondents answer "positive" while the other half answer "negative". 
-On the other hand, the variance will be equal to zero if all the participant answer the same, that's "negative", "neutral" or "positive".
+A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. 
+An interesting approach is to take  \autoref{eq:var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values, $\pi_0$ because it's a proportion and $\E(X)^2$ since it's squared. 
+Both variables have a minus sign in in the equation, so the highest results is obtained when both variables are equal to zero., the variance is the equal to one.
+In other words, the highest variance, is obtained when no respondent answer "neutral" and the BSI is equal to 0. 
+This only happens if half of the respondents answers "positive", and the other half "negative".
+It corresponds to the interpretation, since it's the situation with the most disagreement among respondents.
 
-Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{var3}. The results can be seen in \autoref{fig:var properties}.
+On the other hand, the variance will be equal to zero if all the participants answer the same. If all participants answer "negative", "neutral" or "positive", the variance is equal to zero and it's also the situation where the agreement among respondents is the highest.
+
+Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{eq:var3} or \autoref{eq:var3 weighted}. The results can be seen in \autoref{fig:var properties}.
 
 Their are different observations that can be done from the plot;
 (1) there is a specific upper and lower bound for each BSI
 
-upper bound : 
-\begin{equation}
-    \Var(X) = 1 - 0 - \E(X)^2
-\end{equation}
 
-lower bound : 
-\begin{eqnarray}
-\Var(X) &=& X - X^2 \quad \text{where } \Var(X) \text{ is between -1 and 0} \\
-    &=& - (\E(X) + 0,5)^2 + 0,25 
-\end{eqnarray}
-
-\begin{eqnarray}
-    \Var(X) &=& - X - X^2 \quad \text{where } \Var(X) \text{ is between 0 and 1} \\
-        &=&  - (\E(X) - 0,5)^2 + 0,25
-\end{eqnarray}
-    
 
 \section{Take different questions into account}
 
@@ -1043,7 +1029,7 @@ The formula to combine different variances is the following
 \begin{equation}
 \Var \left(\sum_{i=1}^{n} X_{i}\right) = \sum_{i=1}^{n} \sum_{j=1}^{n} \Cov\left(X_{i}, X_{j}\right)
 = \sum_{i=1}^{n} \Var\left(X_{i}\right)+2 \sum_{1 \leq i<j \leq n} \Cov\left(X_{i}, X_{j}\right)
-\end{equation}
+\end{equation} 
 
 In the case of combining the variances of four different questions of the business survey, we have the following equation
 
@@ -1076,21 +1062,16 @@ In the same logic as for the variance, a proposition is done here of a way to ex
 As explained in the first chapter, the business survey is answered by the same companies over time, there are some new recruits and companies leaving the survey, but the survey can be referred to as a panel survey.
 Is it possible to have more information by taking taking the evolution of the individual respondents into account ? 
 
-This chapter will address this question by applying a method proposed by \cite{caron_estimation_1996} that, by taking all the individual evolution of responses into account, offers a method to calculate an indicator that will be called the indicator of the evolution of individual responses (EIR).
+This chapter will address this question by applying a method proposed by \cite{caron_estimation_1996} that, by taking all the individual evolution of responses into account, offers a method to calculate an indicator that will be referred to as the indicator of the evolution of individual responses (EIR).
 
-First the calculation will be described for the and the intuition will be developed .
+% We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
+% It can be understood as the indicator of the changes in individual answers between t-1 and t.
 
-
-We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
-It can be understood as the indicator of the changes in individual answers between t-1 and t.
-
-As for the variance, The EIR has no ambition of replacing the BSI but rather to propose an addition information.
 
 \subsubsection{Explanation}
 
-To understand this new indicator, it's important to see that if we take only one period into account, there are three different possibilities of answers; "negative", "neutral" and "positive". 
+When we take only one period into account, there are three different possibilities of answers; "negative", "neutral" and "positive".
 When we take two periods into account, a month (t) and the previous one (t-1) for example, there are nine possible situations as represented in \autoref{tab:EIR explanation}. 
-We can again see that $\pi$ is used since we will speak about proportions and probabilities of been in a certain group, as done before.
 
 \begin{table}[H]
     \centering
