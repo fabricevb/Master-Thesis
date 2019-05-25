@@ -606,6 +606,8 @@ A good indicator of the growth of GDP, is Year on Year GDP that is obtained as f
     \label{fig:Business Cycle}
 \end{figure}
 
+
+
 \subsubsection{Duration of a Business Cycle}
 
 A very important question considering business cycles is their duration.
@@ -683,57 +685,58 @@ Other improvements where the inclusion of services in the calculation of the glo
 
 The questionnaire exists in two languages, french and dutch. And can be answered by mail, email, over the phone or by fax.
 
-The questionnaire has XX questions that can be grouped in two type of questions. 
-(1) questions concerning there current production and level of activity.
-(2) questions concerning there prediction, how they expect there level of activity to evolve over the next three months.
+The questionnaire is divided into two part; 
+(1) questions concerning there current production and level of activity (\textit{"verloop en beoordeling"}).
+(2) questions concerning their predictions, how they expect there level of activity to evolve over the next three months ("\textit{vooruitzichten voor de volgende drie maanden}").
 It's therefore that the business survey indicator, is also called the confidence indicator, since its a measure of how confidence companies are in the Belgian economy.
 
+Almost all the questions have only three possible answers. Each time the answers can be interpreted as a negative, neutral or positive and are later treated so as will be seen when calculating the indicator.
 
-\subsubsection{Changes over time}
+% \subsubsection{Changes over time}
 
-In this paper, the answers and results of the business survey barometer will be used since 1988. Therefore it's very important to see if the answers changed over time.
+In this paper, the answers and results of the industry business survey barometer will be used since 1988. Therefore it's very important to see if modifications where applied over time to the questionnaire.
+A questionnaire from 1990 can be seen in appendix (see \autopageref{Questionnaire1990}) and can be compared to a more recent version (see appendix \autopageref{Questionnaire2018}).
 
-A questionnaire from 1990 was found (See Appendix \autopageref{Questionnaire1990}) and can be compared to a more recent version (See Appendix \autopageref{Questionnaire2018}).
-
-It can be seen that the layout was modified, and that the questions phrasing changed over this long period. It was before asked in the first person while it's now phrased in the third person. Aside from those small changes, the survey kept the same questions
+The layout was modified, and the questions phrasing changed over this long period. It was before asked in the first person while it's now phrased in the third person. Aside from those small changes, the survey kept the same questions, order and .
 
 It would be interesting to have a closer look in the potential consequences of those changes over time. The layout, the phrasing and the method of answering can potentially have an influence on the answers. Nevertheless, since it's not the subject of this paper, we will leave this study to future research.
-What we  can say is that the influence of those changes are limited since the respondents where mostly the same when the changes happened, so the interpretation they made from 
-one version to the other one should have stayed quite similar.
+What we can say, is that the influence of those changes are limited since the respondents where mostly the same when the changes happened, so the interpretation they made from the questions could have a smaller impact.
 
-\subsubsection{Questions taken into account for the NS975}
-
-
-The first question has to be interpreted the opposite way as of the three other questions. ...
-
-
-
-see appendix \autopageref{Questionnaire2018} for the full questionnaire
+A further look into the four questions taken into account for the calculation of the industry business survey indicator (the NS975) can be found in appendix.
 
 
 \subsection{Weighting procedure}
 \label{sec:Weighting procedure}
 
-Each company that is part of the panel of respondents, has a weight according to it's size, the profit the company is making, the capital it's owning and other characteristics. The calculation is quite complex since it's specific to each sector. For example in the industry the ...
+The different companies participating in the business survey have each two weights; (1) according to the size of the company and (2) according to the size of the sector branch the company is part of.
+
+\subsubsection{Size weighting procedure}
+
+The weight size is calculated based on the profit the company is making, the capital it's owning, the number of employees and other characteristics. 
+The calculation is quite complex and is specific to each sector. 
+For example the companies having an industrial activity have a different calculation than a restaurant or a financial services company.
 
 cite working papers
 
-According to the size of the company, measured different ways depending on the sector ........
+Since the characteristics taken into account during the calculation of the weight of each company aren't fixed, the weight of the companies are corrected periodically. 
+Ones the new weight is calculated, the transition between the old and new weight is smoothen over a year.
 
-Adapted over time, with a smoothing effect over time
+\subsubsection{Globalisation procedure}
 
-\subsection{Globalisation procedure}
-\label{sec:Globalisation procedure}
-
-
-Based on the size of the sector in which the company is.
-
-The National Bank of Belgium developed a quite elaborate division of the Belgian economical activity. This means that for example, the Industry is subdivided into different sub-sectors, that them self contain sub-sectors that contain sub-sectors and so on six times. All those divisions have a percentage according to the size of those subdivision inside the division.
-
-%The globalisation procedure got quite complex over time. See the globalisation tree for the Industry survey \autopageref{fig:tree}
+The National Bank of Belgium developed an elaborate division of the Belgian economical activity. This means that for example, the industry is subdivided into different sub-sectors, that them self contain sub-sectors that contain sub-sectors and so on for a total of six levels. 
+All those divisions have a percentage according to the size of those subdivision inside the division.
 
 
-\newpage
+The procedure of weighting is as follow
+
+\begin{equation}
+	\omega_i = \frac{ \text{weight company $i$} }{ \sum\text{company weights within globalisation} } * \text{globalisation weight} 
+\end{equation}
+
+The specific weight for each company taking the two weighting procedures into account ($\omega_i$), is obtained by dividing its weight coefficient by the total of weight coefficients within the lowest level of globalisation, and multiply it with the weight of globalisation it's part of. 
+The globalisation weight is obtained by multiplying all the branches specific weights.
+
+
 \section{Calculation of the Indicator}
 
 This section presents the method for calculating the business survey indicator. 
@@ -757,21 +760,17 @@ $n$ is the number of respondents.
 Since $x_i$ can only take three different values, we can decompose it into 
 
 \begin{equation}
-    E(X) = \frac{ \sum_{i=1}^n x_{+i} + \sum_{i=1}^n x_{0i} + \sum_{i=1}^n x_{-i}}{n}
-\end{equation} 
-
-\begin{equation}
     E(X) = \frac{ \sum_{i=1}^{n_+} x_{+i} + \sum_{i=1}^{n_0} x_{0i} + \sum_{i=1}^{n_-} x_{-i}}{n}
 \end{equation} 
 
 
 where 
-$x_{+i}$, $x_{Ni}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent $i$.
+$x_{+i}$, $x_{0i}$ and $x_{-i}$ are the positive (+), neutral (N) and negative (-) answers of the respondent $i$.
 
 Since we know that $\sum_{i=1}^n x_{0i} = 0$, we can write
 
 \begin{equation}
-    E(X) = \frac{\sum_{i=1}^n x_{+i}}{n}  + \frac{\sum_{i=1}^n x_{-i}}{n}
+    E(X) = \frac{\sum_{i=1}^{n_+} x_{+i}}{n}  + \frac{\sum_{i=1}^{n_-} x_{-i}}{n}
 \end{equation} 
 
 ${\sum_{i=1}^n x_{+i}}/{n}$ is the proportion of positive answers and ${\sum_{i=1}^n x_{-i}}/{n}$ is the negative proportion of negative answer. We can write, for simplicity
@@ -786,11 +785,11 @@ $\pi$ was chosen as symbol here,  since it can be interpreted as a probability: 
 
 \subsection{Weighted Indicator}
 
-As described in \autoref{sec:Weighting procedure} and \autoref{sec:Globalisation procedure}, each respondent has two different weights: one according to its size, one according to the size of the sector it's part of. Those weight are then combined and we end up with a specific weight.
+As described in \autoref{sec:Weighting procedure}, each respondent has two different weights: one according to its size, one according to the size of the sector it's part of. Those weight are then combined and we end up with a specific weight $\omega_i$.
 We have now the following equation for the indicator
 
 \begin{equation}
-    E(X) = \sum_{i=1}^n \left(\omega_i x_i \right) \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
+    E(X) = \sum_{i=1}^n \omega_i x_i  \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
 \end{equation} 
 
 where
@@ -801,27 +800,26 @@ The weights are here standardised so there sum is equal to one.
 As for the unweighted indicator, we can decompose the equation by the three possible answers with, in this case, their according weights.
 
 \begin{equation}
-    E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{0i} x_{0i} + \sum_{i=1}^n \omega_{-i} x_{-i}
+    E(X) = \sum_{i=1}^{n_+} \omega_{+i} x_{+i} + \sum_{i=1}^{0_+} \omega_{0i} x_{0i} + \sum_{i=1}^{n_-} \omega_{-i} x_{-i}
  \end{equation}
 and again we know that $\sum_{i=1}^n \omega_{0i} x_{0i} = 0$, so we can write
 
 \begin{equation}
-    E(X) = \sum_{i=1}^n \omega_{+i} x_{+i} + \sum_{i=1}^n \omega_{-i} x_{-i}
+    E(X) = \sum_{i=1}^{n_+} \omega_{+i} x_{+i} + \sum_{i=1}^{n_-} \omega_{-i} x_{-i}
 \end{equation} 
 We also know that $x_{+i} = 1$  and $x_{-i}=-1$  
 \begin{equation}
-    E(X) = \sum_{i=1}^n \omega_{+i}  - \sum_{i=1}^n \omega_{-i}
+    E(X) = \sum_{i=1}^{n_+} \omega_{+i}  - \sum_{i=1}^{n_-} \omega_{-i}
 \end{equation}
 That will be written as follow
 \begin{equation}
     E(X) = \Omega \pi_+ - \Omega \pi_- \label{eq: BSI Weighted}
 \end{equation}
 
-where $\Omega \pi_+$ and $\Omega \pi_-$ are the weighted proportion of respondents answering positive and negative. this equation will be used for the same reasons as for the unweighted indicator. 
-Same explanation also works here
+where $\Omega \pi_+$ and $\Omega \pi_-$ are the sum of weights of positive and negative respondents. 
+In other words, $\Omega \pi_+$ and $\Omega \pi_-$ are the weighted proportion of respondents answering positive and negative. 
 
-$\pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\pi_0$) with $\pi_+ + \pi_0 + \pi_- =1$.
-
+$\Omega \pi$ is use here also in the probabilistic way as it can also be seen as the probability that a respondent answers positive, negative or neutral ($\Omega \pi_0$) with $\Omega \pi_+ + \Omega \pi_0 + \Omega \pi_- =1$. Here we speak of weighted proportions/probabilities.
 
 From \autoref{eq: BSI Unweighted} and \autoref{eq: BSI Weighted} it can be seen that the weighted and unweighted indicators are bounded between -1 and 1. In the two cases, the indicator is the smallest if everyone has a negative answer, and is the largest when every answer is positive.
 
