@@ -284,18 +284,18 @@ Survey Volatility -
 \chapter*{List of Abbreviations}
 
 \begin{tabular}{l l}
-  BSI   	& Business Survey Indicator/Barometer \\
-  Cor 		& Correlation \\
-  Cov 	    & Covariance \\
-  ECB   	& European Central Bank \\
-  EIR   	& Evolution in individual Responses \\
+  BSI       & Business Survey Indicator/Barometer \\
+  Cor         & Correlation \\
+  Cov         & Covariance \\
+  ECB       & European Central Bank \\
+  EIR       & Evolution in individual Responses \\
   Eurostat & The European Statistical Office \\
-  GDP   	& Gross Domestic Product \\
-  INSEE 	& Institut national de la statistique et des études économiques (France) \\
-  NBB   	& The National Bank of Belgium \\
-  NBER  	& The National Bureau of Economic Research (US) \\
-  NSI   	& National Statistics Institutes \\
-  Var 		& Variance \\
+  GDP       & Gross Domestic Product \\
+  INSEE     & Institut national de la statistique et des études économiques (France) \\
+  NBB       & The National Bank of Belgium \\
+  NBER      & The National Bureau of Economic Research (US) \\
+  NSI       & National Statistics Institutes \\
+  Var         & Variance \\
   YoY       & Year on Year
 \end{tabular}
 
@@ -391,7 +391,7 @@ The selection of new participants is done by waves. When the department responsi
 To find the new respondents, the first step is to decide for an optimal amount of new participants needed, regarding the different stratification of the sector.
 Each sector is composed of quite advanced trees of sub-sectors, sub-sub-sectors,  and more. For example, the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. 
 
-It could be that some subdivision of a certain sector only has 1 or 2 respondents while it accounts for a significant part of the Belgian economy. The Department of the business survey of the NBB will then look into which company, from that specific part of the economy, could be a good fit as new respondent of the business survey, considering it's activity, it's size, region, and other characteristics.
+It could be that some subdivision of a certain sector only has 1 or 2 respondents while it accounts for a significant part of the Belgian economy. The Department of the business survey of the NBB will then look into which company, from that specific part of the economy, could be a good fit as new respondent of the business survey, considering its activity, it's size, region, and other characteristics.
 As will be seen in \autoref{sec:Weighting procedure} more in detail, companies are weighted by there size (profit, number of employees, ...) and the size of the sector/branch they are part of. That information is crucial for selecting new participants.
 The procedure is quite complex and therefore contains a lot of human decisions.
  
@@ -399,7 +399,7 @@ Out of this process comes a list of potential new participants. This list is the
 Not always, but usually, a representative of the National Bank visits the new participant to explain the survey and have a contact.
 As a reward for participating in the survey, the companies receive privileged information. Each month they receive access to sub-sector indicators information that aren't publicly distributed. This can give them economical information regarding there specific sector of economic activity.
 
-At the National Bank of Belgium, this procedure is usually referred to as prospecting, rather than selecting or sampling, since it is mostly based on recruiting new companies that will work/collaborate with them. New companies can be included in the survey outside of this procedure but this happen more occasionally.
+At the National Bank of Belgium, this procedure is usually referred to as prospecting, rather than selecting or sampling, since it is mostly based on recruiting new companies that will work/collaborate with them. New companies can be included in the survey outside of this procedure but this happens more occasionally.
 
 
 An important side of the business survey is that people are staying as long as possible in the survey.
@@ -492,9 +492,9 @@ If we look at \autoref{fig:timeline} we can see that at the end of the month of 
     \label{fig:timeline}
 \end{figure}
 
-Nowcasting became a catch-all word and includes a variety of predictive models as Linear regression, ARIMA models, State-Space models, MIDAS and much more.
+Nowcasting became a catch-all word and includes a variety of predictive models as Linear regression, ARIMA models, State-Space models, Mixed-data sampling (MIDAS) regressions, Autoregressive Distributed Lag (ARDL) models  and much more.
 
-A good example of nowcasting is the model explained in \cite{de_antonio_liedo_nowcasting_2014} which is a State-Space model developed at the NBB. It takes into account a lot of different predictive variables.........
+A good example of nowcasting is the model explained in \cite{de_antonio_liedo_nowcasting_2014} which is a State-Space model developed at the NBB. It takes into account a lot of different predictive variables to predict the actual state of
 
 Indicators that can be used aside from the business survey are average weekly work hours, factory orders for goods, housing permits and stock prices index of consumer expectations, average weekly claims for unemployment insurance and the interest rate and more.
 
@@ -602,12 +602,12 @@ We can notice that periods of economic growth, usually last longer than economic
         %    ylabel={YoY GDP}
         ]       
             \addplot[smooth, mark=*,black] plot coordinates {
-        	(2103,-1)
-            (2161,1)	(2167,-1)
-            (2179,1)	(2195,-1)
-            (2287,1)	(2305,-1)
-            (2415,1)	(2430,-1)
-            (2496,1)	(2514,-1)
+            (2103,-1)
+            (2161,1)    (2167,-1)
+            (2179,1)    (2195,-1)
+            (2287,1)    (2305,-1)
+            (2415,1)    (2430,-1)
+            (2496,1)    (2514,-1)
             };
         \addplot[mark=none, dashed] coordinates {(2103, -1.5) (2103, -1)};
         \addplot[mark=none, dashed] coordinates {(2161, -1.5) (2161, 1)}; 
@@ -813,8 +813,7 @@ While the formula for the weighted business survey indicator when taking several
 
 The variance is, with the mean, one of the first tool for statisticians to study a certain variable. 
 Next, to the mean, that is the average value of a certain variable, the variance is the measure of the dispersion. 
-In the context of the business survey, the variance can be seen as "how much people agree", a piece of important information that we can extract from the survey.
-The variance will be interpreted as to what level respondents agree about the state of the Belgian economy.
+In the context of the business survey, the variance can be seen as "how much people (dis)agree on the present state of the Belgian economy", a piece of important information that we can extract from the survey.
 
 % A small comment can be written regarding the difference between the variance and sampling error. The idea here is not the study accuracy or ... but rather to find new information hidden in the survey.
 
@@ -830,7 +829,7 @@ The formula of the variance can be written as
          \Var(X) &=& E \left[ \left(X-E(X) \right)^2 \right] =  E\left( X^2\right) - E\left( X\right)^2
 \end{eqnarray}
 
-In the case of one question of the business survey indicator, we can write and develop the equation as follow
+In the case of one question of the business survey indicator, we decompose and develop the equation as follow
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
@@ -838,12 +837,14 @@ In the case of one question of the business survey indicator, we can write and d
 \end{eqnarray}
 
 
-The positive and negative answers take value -1 and 1, which means that $x_{+i}^2 = x_{+i}$ and $x_{-i}^2 = |x_{-i}|$. We also know that $\left( \frac{\sum_{i=1}^{n_0} x_{0i}^2}{n} \right) = 0$. 
+Since the positive and negative answers take value -1 and 1, which means that $x_{+i}^2 = x_{+i}$ and $x_{-i}^2 = |x_{-i}|$. We also know that $\left( \frac{\sum_{i=1}^{n_0} x_{0i}^2}{n} \right) = 0$. 
 With this information, we can further simplify the equation to
 
 \begin{eqnarray}
     \Var(X) &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
 \end{eqnarray}
+
+Where $\pi_+$ and $\pi_-$ are the proportions of positive and negative answers.
 
 In other words, the variance of the BSI is equal to the sum of the proportion of positive and negative answers, minus the squared indicator.
 
@@ -872,7 +873,8 @@ We can now do the same for the weighted indicator. The equation is very similar 
     &=& \sum_{i=1}^{n_+} \omega_i x_{+i}^2 + \sum_{i=1}^{n_0} \omega_i x_{0i}^2  + \sum_{i=1}^{n_-} \omega_i x_{-i}^2 - E(X)^2 \nonumber \\
 \end{eqnarray}
 
-As we did for the indicator, we will develop the equation by taking into account weighted proportion and write the equation the same way as for the unweighted variance but in this case, by taking the weighted proportions. Again the variance can be written in different ways, depending on the interpretation that fits best;
+As we did for the indicator, we will develop the equation by taking into account weighted proportion and write the equation the same way as for the unweighted variance. 
+Again the variance can be written in different ways;
 
 \begin{eqnarray}
 \Var(X) &=& \Omega \pi_+ + \Omega \pi_- - ( \Omega \pi_+ - \Omega \pi_- )^2 \\
@@ -900,7 +902,7 @@ As we did for the indicator, we will develop the equation by taking into account
         axis lines*=left, 
         axis line style={->},
         width=14cm, height=10cm,
-        xlabel={business survey indicator}, ylabel={variance},
+        xlabel={$\E(X)$}, ylabel={variance},
     legend pos= outer north east, legend cell align=left,
      legend style={font=\scriptsize}
      ]       
@@ -953,7 +955,7 @@ As we did for the indicator, we will develop the equation by taking into account
     \addlegendentry{$\pi_0 = 0.99$}
     \end{axis}
     \end{tikzpicture}
-    \caption{Plot of the possible values of the business survey indicator (X axis) and variance (Y axis) for different values of $\pi_0$ }
+    \caption{Plot of the possible values of the indicator (X axis) and variance (Y axis) for different values of $\pi_0$ }
     \label{fig:var properties}
 \end{figure}
 
@@ -963,19 +965,16 @@ Based on the previous development of the equation of the variance of the indicat
 First of all, the variance is bounded between 0 and 1. 
 A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. 
 An interesting approach is to take  \autoref{eq:var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values, $\pi_0$ because it's a proportion and $\E(X)^2$ since it's squared. 
-Both variables have a minus sign in in the equation, so the highest results are obtained when both variables are equal to zero., the variance is equal to one.
+Both variables have a minus sign in the equation, so the highest results are obtained when both variables are equal to zero.
 In other words, the highest variance is obtained when no respondent answer "neutral" and the BSI is equal to 0. 
 This only happens if half of the respondent's answers "positive", and the other half "negative".
 It corresponds to the interpretation since it's the situation with the most disagreement among respondents.
-
-On the other hand, the variance will be equal to zero if all the participants answer the same. If all participants answer "negative", "neutral" or "positive", the variance is equal to zero and it's also the situation where the agreement among respondents is the highest.
+In the other hand, if all participants answer the same ("negative", "neutral" or "positive"), the variance is equal to zero.
+It corresponds to the situation where the agreement among respondents is the highest.
 
 Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{eq:var3} or \autoref{eq:var3 weighted}. The results can be seen in \autoref{fig:var properties}.
-
-Different observations can be done from the plot;
-(1) there is a specific upper and lower bound for each BSI
-
-
+It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example an indicator of 0.5 can only have a variance between 0.25 and 0.75.
+It's also interesting to notice that to know that with two of the three indicators ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. This means that the three variables are correlated.
 
 \section{Take different questions into account}
 
@@ -989,12 +988,12 @@ The formula to combine different variances is the following
 = \sum_{i=1}^{n} \Var\left(X_{i}\right)+2 \sum_{1 \leq i<j \leq n} \Cov\left(X_{i}, X_{j}\right)
 \end{equation} 
 
-In the case of combining the variances of four different questions of the business survey, we have the following equation
+In the case of combining the variances of the four different questions of the industry business survey, we have the following equation
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) &=& \frac{1}{16} \large[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
     && + 2 \Cov (X_{Q1},X_{Q2}) + 2 \Cov (X_{Q1},X_{Q3}) + 2 \Cov (X_{Q1},X_{Q4}) \nonumber \\
-    &&  + 2 \Cov (X_{Q2},X_{Q3}) + 2 \Cov (X_{Q2},X_{Q4}) + 2 \Cov (X_{Q3},X_{Q4}) \large] \nonumber
+    &&  + 2 \Cov (X_{Q2},X_{Q3}) + 2 \Cov (X_{Q2},X_{Q4}) + 2 \Cov (X_{Q3},X_{Q4}) \large] \nonumber \\
 \end{eqnarray}
 
 The complexity of the formula encourages to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator, we can write it as follow
@@ -1006,7 +1005,7 @@ The complexity of the formula encourages to rather calculate the indicator (taki
  %   &=& \frac{1}{16} \Var \left(\pi_{1+} + \pi_{2+} + \pi_{3+} + \pi_{4+} - \pi_{1-} - \pi_{2-} - \pi_{3-} - \pi_{4-} \right) \nonumber \\
 \end{eqnarray}
 
-The generalisation of the previous equation can be written as follow
+The generalisation of the previous equation can be written as follow for the variance of the unweighted indicator
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n_Q} \right) 
@@ -1014,12 +1013,24 @@ The generalisation of the previous equation can be written as follow
     &=& \frac{1}{n_Q^2} \Var \left(\pi_{1+} + \pi_{2+} + \ldots + \pi_{n+} - \pi_{1-} - \pi_{2-} - \ldots - \pi_{n-} \right) \nonumber \\
 \end{eqnarray}
 
+and as follow for the variance of the weighted indicator
+
+\begin{eqnarray}
+    \Var \left(\frac{X_{Q1} + X_{Q2} + \ldots + X_{Qn}}{n_Q} \right) 
+    &=& \frac{1}{n_Q^2} \Var \left( \sum_{i=1}^n \omega_i \left(x_{i Q1} + x_{i Q2} + ... + x_{i Qn} \right) \right) \nonumber \\
+    &=& \frac{1}{n_Q^2} \Var \Large(\Omega \pi_{1+} + \Omega \pi_{2+} + \ldots + \Omega \pi_{n+} \nonumber \\
+    && - \Omega \pi_{1-} - \Omega \pi_{2-} - \ldots - \Omega \pi_{n-} \Large)
+\end{eqnarray}
+
+
+
+
 \chapter{The Indicator of the Evolution of Individual Responses}
 
 In the same logic as for the variance, a proposition is done here of a way to extract more information out of the business survey. 
-As explained in the first chapter, the business survey is answered by the same companies over time, there are some new participants and some companies leaving the survey, but the survey can be referred to as a panel survey.
-Is it possible to have more information by taking the evolution of the individual respondents into account? 
+As explained in the first chapter, the business survey is answered by the same companies over time. Some new participants join and some companies leaving the survey, but the survey can be referred to and treated as a panel survey.
 
+Is it possible to have more information by taking the evolution of the individual respondents into account? 
 This chapter will address this question by applying a method proposed by \cite{caron_estimation_1996} that, by taking all the individual evolution of responses into account, offers a method to calculate an indicator that will be referred to as the indicator of the evolution of individual responses (EIR).
 
 % We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
@@ -1028,7 +1039,7 @@ This chapter will address this question by applying a method proposed by \cite{c
 
 \subsubsection{Explanation}
 
-When we take only one period into account, there are three different possibilities of answers; "negative", "neutral" and "positive".
+When we take only one period into account, there are three possible answers; "negative", "neutral" and "positive".
 When we take two periods into account, a month (t) and the previous one (t-1) for example, there are nine possible situations as represented in \autoref{tab:EIR explanation}. 
 
 
@@ -1037,17 +1048,18 @@ When we take two periods into account, a month (t) and the previous one (t-1) fo
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} &         & \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
-            &    \textbf{-} & $z_{i--}$    & $z_{i-0}$    & $z_{i-+}$ \\ 
-    $t-1$ & \textbf{0} & $z_{i0-}$    & $z_{i00}$    & $z_{i0+}$    \\
-            &    \textbf{+} & $z_{i+-}$    & $z_{i+0}$    & $z_{i++}$ \\ \cline{2-5}
+          &    \textbf{-} & $z_{i--}$    & $z_{i-0}$    & $z_{i-+}$ \\ 
+    $t-1$ & \textbf{0}  & $z_{i0-}$    & $z_{i00}$    & $z_{i0+}$ \\
+          &    \textbf{+} & $z_{i+-}$    & $z_{i+0}$    & $z_{i++}$ \\ \cline{2-5}
     \end{tabular}
     \caption{Possible observations when taking t and t-1 into account}
     \label{tab:EIR explanation}
-\end{table}{}
+\end{table}
 
 The same as for the business survey indicator, the evolution of individual responses take different values. In the case of the BSI, $x_i$ can take value -1, 0 and 1. In the case of the EIR, $z_i$ can take values -2, -1, 0, 1 and 2.
 
-The EIR defers also from the BSI in the sense that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and the previous answer, $z_i=0$. What's measured here is the difference in the answer.
+The EIR defers also from the BSI in the sense that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and the previous answer, $z_i=0$. 
+% What's measured here is the difference in the answer.
 On the other hand, if a certain participant changes his answer for a more positive answer it will take value 1, except if it's a radical change from a "negative" to a "positive" answer, then it will take value 2.
 Same the other way around, if it decreases it will take value -1, except for a radical change from "positive" to "negative".
 We will here use $z$ rather than $x$ to make a clear distinction between the BSI and the EIR.
@@ -1107,7 +1119,7 @@ As for the indicator, we will now move from individual responses to proportions,
     \label{tab:EIR proportions}
 \end{table}
 
-The EIR can now be calculated with the following expression after taking out $\pi_{--}$, $\pi_{00}$ and $\pi_{++}$ since $z_{--}$, $z_{00}$ and $z_{++}$ have value zero.
+The EIR can now be calculated with the following expression after taking out $\pi_{--}$, $\pi_{00}$ and $\pi_{++}$ (since $z_{--} = z_{00} = z_{++} = 0$).
 
 \begin{equation}
     \E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
@@ -1531,9 +1543,11 @@ adf.test(candyts)
     \centering
     \captionsetup{justification=centering}
     \includegraphics[scale=0.45]{Graphs/ACF_GDP.pdf}
-    \caption{Plot }
+    \caption{Autocorrelation plots for the BSI, Var(BSI), EIR and Var(EIR)}
     \label{fig:ACF_GDP}
 \end{figure}
+
+add AR plots of EIR2 ... in appendix
 
 
 
@@ -1546,14 +1560,14 @@ adf.test(candyts)
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & YoY GDP & E\_3 & E\_3\_lag1 & E\_3\_lag2 & E\_3\_lag3 & E\_3\_lag4 \\ 
+& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
 \hline \\[-1.8ex] 
 YoY GDP & $1$ & $0.707$ & $0.679$ & $0.673$ & $0.628$ & $0.560$ \\
-BSI  & $0.707$ & $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
-lag1(BSI)  & $0.679$ & $0.969$ & $1$ & $0.975$ & $0.940$ & $0.892$ \\
-lag2(BSI) & $0.673$ & $0.948$ & $0.975$ & $1$ & $0.974$ & $0.933$ \\
-lag3(BSI)  & $0.628$ & $0.906$ & $0.940$ & $0.974$ & $1$ & $0.969$ \\
-lag4(BSI)  & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
+BSI     &    &  $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
+lag1(BSI) &  &  & $1$ & $0.975$ & $0.940$ & $0.892$ \\
+lag2(BSI) &  &  &  & $1$ & $0.974$ & $0.933$ \\
+lag3(BSI)  &  &  &  &  & $1$ & $0.969$ \\
+lag4(BSI)  &  &  &  &  &  & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
@@ -1565,14 +1579,14 @@ lag4(BSI)  & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
-& YoY GDP & E\_4 & E\_4\_lag1 & E\_4\_lag2 & E\_4\_lag3 & E\_4\_lag4 \\ 
+& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
 \hline \\[-1.8ex] 
 YoY GDP  & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
-BSI &  $0.719$ & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
-lag1(BSI) &  $0.650$ & $0.959$ & $1$ & $0.970$ & $0.928$ & $0.863$ \\
-lag2(BSI) &  $0.647$ & $0.941$ & $0.970$ & $1$ & $0.970$ & $0.917$ \\
-lag3(BSI) &  $0.593$ & $0.890$ & $0.928$ & $0.970$ & $1$ & $0.959$ \\
-lag4(BSI) &  $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
+BSI       &   & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
+lag1(BSI) &   &  & $1$ & $0.970$ & $0.928$ & $0.863$ \\
+lag2(BSI) &   &  &  & $1$ & $0.970$ & $0.917$ \\
+lag3(BSI) &   &  &  &  & $1$ & $0.959$ \\
+lag4(BSI) &   &  &  &  &  & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
