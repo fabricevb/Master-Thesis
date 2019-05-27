@@ -16,7 +16,22 @@
 
 \usepackage{dcolumn}
 
-\begin{document}      
+\begin{document}   
+
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &	\multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} & 		& \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+    		&    \textbf{-} & $\Omega \pi_{--}$	& $\Omega \pi_{-0}$	& $\Omega \pi_{-+}$ \\ 
+    $t-1$ & \textbf{0} & $\Omega \pi_{0-}$	& $\Omega \pi_{00}$	& $\Omega \pi_{0+}$	\\
+    		&    \textbf{+} & $\Omega \pi_{+-}$	& $\Omega \pi_{+0}$	& $\Omega \pi_{++}$ \\ \cline{2-5}
+    \end{tabular}    
+    \caption{Proportion of answers for each of the possible combination of answers at time t and t-1}
+    \label{tab:EIR proportions weighted}
+\end{table}
 
 
 upper bound : 
