@@ -318,15 +318,15 @@ Markov Switching -
 
 \chapter{Introduction}
 
-business survey indicator / business barometer / business confidence indicator
+The business survey is organised within the National Bank of Belgium.
+Each month the business survey indicator is published based on around 3000 respondents who are part of a large panel of companies.
 
-3000 participants
+The publication is important for public and private organisation to have a direct idea of the evolution of the Belgian economy since most of the quantitative macroeconomic indicators are published with a lag of at least a month.
 
-Panel survey
+A widespread method to predict the evolution of National Economies is the survey-based business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
-A widespread method to predict the evolution of National Economies is the survey-based Business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
-- Talk about tradition of improving BSB
+- Talk about tradition of improving BSI
 
 This Thesis is included in the continuity of a long tradition of papers proposing improvement and ways to add value to the Business Barometer (.......) will propose ways to add information to the Belgian Business Barometer, that could also be applied to others
 
@@ -469,6 +469,7 @@ It's know ....................................
 
 
 \subsection{Nowcasting}
+\label{sec:nowcasting}
 
 Also called "flash" estimation, nowcasting has increasingly gain importance in the last decade (see \cite{foroni_comparison_2014}, \cite{de_antonio_liedo_nowcasting_2014}, ...).
 it consists in the short term estimation of the economy, mostly the GDP.
@@ -843,6 +844,11 @@ can also been seen as the mean of the answers for each participant at each perio
 \end{equation}
 
 
+\begin{equation}
+    \mbox{Weighted Industry BSI}\ = \frac{\sum_{i=1}^n \omega \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{4}
+\end{equation}
+
+
 \begin{eqnarray}
     \mbox{ Weighted Industry BSI}\ &=& 1/4 ( \pi_{Q1+} + \Omega \pi_{Q2+} + \Omega \pi_{Q3+} + \Omega \pi_{Q4+} \\
     && - \Omega \pi_{Q1-} - \Omega \pi_{Q2-} - \Omega \pi_{Q3-} - \Omega \pi_{Q4-} \Large) 
@@ -1145,7 +1151,7 @@ As for the indicator, we will now move from individual responses, to proportions
     $t-1$ & \textbf{0} & $\pi_{0-}$	& $\pi_{00}$	& $\pi_{0+}$	\\
     		&    \textbf{+} & $\pi_{+-}$	& $\pi_{+0}$	& $\pi_{++}$ \\ \cline{2-5}
     \end{tabular}    
-    \caption{Possible observation when taking t and t-1 into account}
+    \caption{Proportion of answers for each of the possible combination of answers at time t and t-1}
     \label{tab:EIR proportions}
 \end{table}
 
@@ -1187,21 +1193,52 @@ where $\pi$ is the proportion/probability of respondent answering negative(-), n
     $t-1$ & \textbf{0} & $\Omega \pi_{0-}$	& $\Omega \pi_{00}$	& $\Omega \pi_{0+}$	\\
     		&    \textbf{+} & $\Omega \pi_{+-}$	& $\Omega \pi_{+0}$	& $\Omega \pi_{++}$ \\ \cline{2-5}
     \end{tabular}    
-    \caption{Possible observation when taking t and t-1 into account}
-    \label{tab:EIR proportions}
+    \caption{Proportion of answers for each of the possible combination of answers at time t and t-1}
+    \label{tab:EIR proportions weighted}
 \end{table}
 
 The EIR can now be calculated with the following expression after taking out $\Omega \pi_{--}$, $\Omega \pi_{00}$ and $\Omega \pi_{++}$ since $z_{--}$, $z_{00}$ and $z_{++}$ have value zero.
-
-\begin{equation}
-    \E(Z) = \Omega \pi_{0+} + \Omega \pi_{-0} - \Omega \pi_{+0} - \Omega \pi_{0-} +2\Omega \pi_{-+} -2\Omega \pi_{+-} 
-\end{equation}
 
 
 
 \section{Take different questions into account}
 
-bla bla bla
+
+\begin{equation}
+    \mbox{Industry evolution of individual responses}\ = \frac{\sum_{i=1}^n \left(z_{i Q1} + z_{i Q2} + z_{i Q3} + z_{i Q4} \right)}{4n}
+\end{equation}
+
+
+
+
+
+\subsubsection{weighted}
+
+\begin{equation}
+    \mbox{Weighted Industry EIR}\ = \frac{ \sum_{i=1}^n \omega_i \left(z_{i Q1} + z_{i Q2} + z_{i Q3} + z_{i Q4} \right)}{4}
+\end{equation}
+
+
+\begin{equation}
+	\text{Industry evolution of individual responses} = \Omega \pi_{0+} + \Omega \pi_{-0} - \Omega \pi_{+0} - \Omega \pi_{0-} +2\Omega \pi_{-+} -2\Omega \pi_{+-} 
+\end{equation}
+
+
+\begin{equation}
+    \E(Z) = \Omega \pi_{Q1 0+} + \Omega \pi_{-0} - \Omega \pi_{+0} - \Omega \pi_{0-} +2\Omega \pi_{-+} -2\Omega \pi_{+-} 
+\end{equation}
+
+
+
+\begin{equation}
+    \mbox{Industry BSI}\ = \frac{\pi_{Q1+} + \pi_{Q2+} + \pi_{Q3+} + \pi_{Q4+} - \pi_{Q1-} - \pi_{Q2-} - \pi_{Q3-} - \pi_{Q4-} }{4}
+\end{equation}
+
+
+\begin{eqnarray}
+    \mbox{ Weighted Industry BSI}\ &=& 1/4 ( \pi_{Q1+} + \Omega \pi_{Q2+} + \Omega \pi_{Q3+} + \Omega \pi_{Q4+} \\
+    && - \Omega \pi_{Q1-} - \Omega \pi_{Q2-} - \Omega \pi_{Q3-} - \Omega \pi_{Q4-} \Large) 
+\end{eqnarray}
 
 \section{Generalisation for n time frames}
 
@@ -1304,102 +1341,31 @@ quite similar to Var(BSI)
 \chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
 \label{chap:nonresponse dropout}
 
-Before we model the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, there are four effects that could mislead the results. Three are due to the survey and one to external effects, seasonal effects. We will first look into the three survey based issues; non-response, dropout and attrition, and will then explain the seasonal correction applied to the data.
+Before we model the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, there are four main effects that could mislead the results. Three are due to the survey and one to external effects; seasonal effects. We will first look into seasonal effects and apply a well know correction to the data to eliminate, as good as possible, the seasonal effects from the data.
+It will then be looked into the three survey based issues; non-response, dropout and attrition.
 
+As already mentioned before, for this analysis the data at hand is the unweighted indicators of the business survey, for the period of 1988 to 2018. 
 
-\begin{table}[!htbp] \centering 
-  \caption{Correlation Between Time and different variables} 
-  \label{tab:corr time} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-  & GDP & YoY GDP & BSI & Var & Z\_I & Var\_Z\_I \\ 
-\hline \\[-1.8ex] 
-Time & $-0.223$ & $-0.352$ & $0.148$ & $-0.775$ & $0.060$ & $-0.728$ \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table}
+Eight variables will be used for the analysis. First the BSI, Var(BSI), .......
 
-
-
-\section{Non-Response}
-
-Non-response is one of the most studied issues in Surveying. Indeed it is a large issue
-
-two ways 
-- non participation to the survey
-- participating but not answering 
-
-- non participation to the survey
-has already been mentioned before, the stratified procedure should avoid as much as possible it, and in the main time, since the importance is the evolution of the Indicator.
-
-- participating but not answering 
- solved by the National Bank by filling the non-answering by the previous response of the participant. 
-The response rate is usually around 95\% for the business survey. We could from there say that non-response is not very important. 
-Before concluding it, since the mean study is the evolution rather than the indicator in it self, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example we could expect more or less non-response during crises or in certain economy situations. Since the main interest of the BSI is to explain Business cycles,
-this could be an issue.
-
-plot non-response
-
-
-
-\section{Dropout and Attrition}
-
-Those two issues are related to the structure and organisation of the survey. As explain in \autoref{sec:Recruitment of participants}, ones participants are recruited to participate in the business survey, they stay as long as they want. This brings to major potential issues: dropout and attrition
-
-\subsection{Dropout}
-
-Participants leaving the survey, are they different from 
-
-The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the employees at the NBB, the two mean reasons are (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job there and the new responsible person doesn't see the interest in participating anymore.
-This is an issue, since it means that it's a certain type of profiles that leave the survey. If this type of profile have a different opinion or respond differently than the remaining companies this will create bias. 
-
-This is the case
-
-It could be argued that the bias is very diffused due to the small amount of companies leaving the survey each month. Again the fact that the evolution is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
-
-It's not the subject of this work, so will not dive more into this bias, but we would recommend to have a closer look into this.
-
-\subsection{Attrition}
-Attrition, also called Panel Conditioning, is present when participants change there behaviour between different rounds of sampling. 
-A very interesting master thesis was done about the Belgian Labour Force Survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}. 
-The Belgian Labour Force Survey was convenient to test for attrition, since it's a survey where respondents reply four times to the same survey with a lag of six months.
-
-In the case of the Business Industry Survey it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1900 and between XXX and XXXX with some company 
-
-plot of the amount of recruited over time
-
-Two possible indicators to show the presence of Attrition, is the correlation between time and variance(BSI) and the correlation between time and variance(EIR).
-
-corr(time,var(BSI))
-
-corr(time,var(EIR))
-
-
-
-Non parametric test \cite{das_nonparametric_2011}
-
-
-\section{Seasonal Effects and Correction}
+\section{Seasonal Effects}
 The National Bank, before publishing the business survey indicator, applies a X11 seasonal correction.
 
-The literature about seasonal effects is very rich and variate
+The literature about seasonal effects is very rich and variate. Without going to much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA (XXXXX) developed by the US Census Bureau and TRAMO/SEATS (Gómez y Maravall, 1996) developed by the Bank of Spain. The two methods are divide in two part, first ..........
+
+% most widely used and recommended -12-ARIMA2/X-13ARIMA-SEATS3 developed at the U.S. Census Bureau and TRAMO/SEATS4 developed by Victor Gómez and Agustín Maravall, from the Bank of Spain. Both methods are divided into two main parts. The first part is called pre-adjustment and removes deterministic effects from the series by means of a regression model with ARIMA noise. The second part is the decomposition of the time series to estimate and re-move a seasonal component. TRAMO/SEATS and X-12-ARIMA/X-13ARIMA-SEATS use a very similar approach in the first part to estimate the same model on the processing step, but they differ completely in the decomposition step. Therefore, comparing results from decomposition is often difficult. Furthermore, their diagnostics focus on different aspects and their outputs take completely different forms.  
 
 
 \subsubsection{JDemetra+}
 
-% most widely used and recommended -12-ARIMA2/X-13ARIMA-SEATS3 developed at the U.S. Census Bureau and TRAMO/SEATS4 developed by Victor Gómez and Agustín Maravall, from the Bank of Spain. Both methods are divided into two main parts. The first part is called pre-adjustment and removes deterministic effects from the series by means of a regression model with ARIMA noise. The second part is the decomposition of the time series to estimate and re-move a seasonal component. TRAMO/SEATS and X-12-ARIMA/X-13ARIMA-SEATS use a very similar approach in the first part to estimate the same model on the processing step, but they differ completely in the decomposition step. Therefore, comparing results from decomposition is often difficult. Furthermore, their diagnostics focus on different aspects and their outputs take completely different forms.  
+The department of Research and development of the NBB developed JDemetra+ which is recommended by the European Central Bank (ECB) and the European Statistical Office (Eurostat) for all National Statistics Institutes (NSI) of the European Union. 
 
-The department of Research and development of the NBB developed JDemetra+ and has since been recommended by the European Central Bank (ECB) and the European Statistical Office (Eurostat) for all National Statistics Institutes (NSI) of the European Union. 
+JDemetra+ is used by the National Bank to apply seasonal corrections to the business survey indicator. it will be used here, to test for seasonality and apply corrections to the data.
+
+Test for seasonality where done with JDemetra+ (see appendix \autopageref{sec:test for seasonality}) and it was concluded that there was seasonal effect for each of the variables at hand (see \autoref{tab:Seasonality Tests})
 
 
-Test for seasonality where done with JDemetra (see appendix \autopageref{sec:test for seasonality}) and it was concluded that there was seasonal effect for each of the variables at hand.
-
-\subsubsection{Seasonality Tests}
-
-bla bla
-
-\begin{table}[H]
+\begin{table}[htp!]
     \centering \footnotesize
     \begin{tabular}{l|c|c|c|c|c|c|c|c}
 \textbf{Seasonality Test} & BSI & Var(BSI) & EIR & Var(EIR) & EIR2 & Var(EIR2) & EIR3 & Var(EIR3) \\ \hline
@@ -1415,22 +1381,18 @@ Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YE
     \label{tab:Seasonality Tests}
 \end{table}{}
 
+
+
 More details in Appendix
 
 \subsubsection{Seasonal Correction}
 
-The Seasonal Correction is done with RJDemetra, the R package based on JDemetra+. 
+The Seasonal Correction is done with RJDemetra, the R package based on JDemetra+.
+The results can be seen in \autoref{fig:seasonal ajusted rjdemetra}
 
-The results can be seen in 
+It's interesting here to notice that there is no need for Year on Year GDP of been seasonally corrected, since by definition, it's eliminating all it's seasonality.
 
-add var after JDemetra
-
-
-
-YoY GDP is already, by nature, seasonally corrected.
-
-
-\begin{figure}[H]
+\begin{figure}[htp!]
     \centering
     \includegraphics[scale=0.75]{Graphs/RJDemetra_plots.pdf}
     \caption{Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months  earlier (EIR3), with for each of them, their variance. The yellow lines are the raw data, the blue lines the seasonally corrected data and the green line is the trend of the variable.}
@@ -1438,61 +1400,85 @@ YoY GDP is already, by nature, seasonally corrected.
 \end{figure}
 
 
-\begin{figure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_1.pdf}
-  \caption{BSI}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_2.pdf}
-  \caption{Var(BSI)}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_3.pdf}
-  \caption{EIR1}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_4.pdf}
-  \caption{Var(EIR1)}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_5.pdf}
-  \caption{EIR2}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_6.pdf}
-  \caption{Var(EIR2)}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_7.pdf}
-  \caption{EIR3}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{Graphs/S-I_8.pdf}
-  \caption{Var(EIR3)}
-\end{subfigure}
-\caption{plots of....}
-\label{fig:S-I seasonal correction RJDemetra}
-\end{figure}
+\section{Non-Response}
+
+Non-response is a large domain of research when it comes to surveys. 
+The theory converges to agree that there are three different ways non-response can be present. Responses can be missing completely at random, missing at random, or missing not at random.
+
+Missing completely at random is usually hard to assume while missing not at random can be hard solve.
+
+% Considering the business survey, the non-response was explored, but since it's not the subject of the thesis, it will not be looked into more in dept.
+
+The non-response of the business survey can be decomposed into two; non participation to the survey and participating but not answering.
+
+Non participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants tries the best it can to take into account the population at study. Also the fact that we have panel data limits the bias created by non-participant.
+
+Non-response of participants is another issue. 
+The solution applied in case of non-response is assuming that the respondent would have answered the same as previous month, the method is called "Last Observation Carried Forward" (LOCF).
+
+The response rate is usually around 95\% for the business survey. We could from there say that non-response is not very important. 
+Before concluding it, since the mean study is the evolution rather than the indicator in it self, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example we could expect more or less non-response during crises or in certain economy situations. Since the main interest of the BSI is to explain business cycles,
+
+plot non-response
 
 
+\section{Dropout and Attrition}
+
+Those two issues are related to the structure and organisation of the survey. As explain in \autoref{sec:Recruitment of participants}, ones participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: dropout and attrition.
+
+\subsection{Dropout}
+
+The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the responsible persons for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job there and the new responsible person doesn't see the interest in participating anymore.
+This is an issue, since it means that it's a certain type of companies that leave the survey. If this type of profile have a different opinion or respond differently than the remaining companies this will create bias. 
+
+Participants leaving the survey, are they different from 
+
+This is the case
+
+plot of 
+
+It could be argued that the bias is very diffused due to the small amount of companies leaving the survey each month. Again the fact that the evolution is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
+
+It's not the subject of this work, so will not dive more into this bias, but we would recommend to have a closer look into this.
+
+\subsection{Attrition}
+
+Attrition, also called Panel Conditioning, is present when participants change there behaviour between different rounds of surveys. 
+A very interesting master thesis was done about the Belgian Labour Force survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}. 
+The Belgian Labour Force Survey was convenient to test for attrition, since the survey is answered by participants exactly four times with a lag of six months.
+
+In the case of the business survey it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. 
+
+plot of the amount of recruited over time participation = 1
+
+\begin{table}[htp!] \centering 
+  \caption{Correlation of time with different indicators } 
+  \label{tab:corr attrition} 
+\begin{tabular}{@{\extracolsep{5pt}} cccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & GDP\_year & BSI & Var(BSI) & EIR & Var(EIR) \\ \hline \\[-1.8ex] 
+Time & $-0.339$ & $0.121$ & $-0.811$ & $0.040$ & $-0.733$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+An interesting way to explore attrition, is by looking at correlation of the variance over time. 
+In \autoref{tab:corr attrition} it can be seen that 
+
+Same can be observed if we look at the evolution of the variance over time in \autoref{fig:seasonal ajusted rjdemetra} where, aside of the peak of variance during the economical crises of 2008, there is a general tendency of decreasing of 
+
+It would be very interesting to dive more into deep of this issues, but this will be left for further research. In the context of this paper, it's important to notice the potential importance of attrition and dropout.
+It's also interesting to notice that the variance of the BSI and the variance the EIR can be a good indicator of those potential issues.
 
 
 
 \chapter{Exploratory Analysis}
 
 The previous chapter already did some of the exploratory analysis.
-
 We will here have some further observations based on the time trends of the different variables at hand.
-In a second time w
+In a second time it will be looked into the correlations among the questions taken into account in the .......................
 
 
 \subsubsection{Data At hand}
@@ -1501,6 +1487,7 @@ Small remember
 - Four questions summarized together from the industry survey
 - 1988 - 2018
 - BSI, var BSI, EIR and EIR2
+- seasonally corrected
 
 Some things have to be looked at before starting the modelling process
 
@@ -1508,106 +1495,53 @@ NON Weighted ! to complicated
 
 \section{The industry business survey indicator, the individual evolution in responses and their variances}
 
- \textbf{plot of the different variables}
 
 
 \section{Correlations Analysis}
 
-There are three different correlations that need to be looked at
+There are three different correlations that need to be looked at; (1) between questions of the industry BSI, (2) between YoY GDP and the different indicators and there variance and (3) the autocorrelation.
 
 \subsection{Correlation between questions}
 
-\begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
-  \label{tab:corr questions} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & E\_1 & E\_2 & E\_3 & E\_4 \\ 
-\hline \\[-1.8ex] 
-E\_1 & $1$ & $0.262$ & $0.412$ & $0.416$ \\ 
-E\_2 & $0.262$ & $1$ & $0.939$ & $0.876$ \\ 
-E\_3 & $0.412$ & $0.939$ & $1$ & $0.938$ \\ 
-E\_4 & $0.416$ & $0.876$ & $0.938$ & $1$ \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table}
  
-\begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
-  \label{tab:corr questions} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\begin{table}[!htbp] \centering 
+  \caption{Descriptive Statistics} 
+  \label{tab:descriptive stats} 
+\begin{tabular}{@{\extracolsep{5pt}}lrrrrrrr} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & E\_1 & E\_2 & E\_3 & E\_4 \\ 
+Variables & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
 \hline \\[-1.8ex] 
-E\_1 & $1$ & $0.262$ & $0.412$ & $0.416$ \\ 
-E\_2 &  & $1$ & $0.939$ & $0.876$ \\ 
-E\_3 &  &  & $1$ & $0.938$ \\ 
-E\_4 &  &  &  & $1$ \\ 
+BSI & $-$0.094 & 0.075 & $-$0.321 & $-$0.141 & $-$0.033 & 0.037 \\ 
+Var(BSI) & 0.116 & 0.017 & 0.076 & 0.107 & 0.129 & 0.154 \\ 
+EIR1 & $-$0.0003 & 0.006 & $-$0.034 & $-$0.004 & 0.003 & 0.030 \\ 
+Var(EIR1) & 0.020 & 0.003 & 0.012 & 0.017 & 0.022 & 0.031 \\ 
+EIR2 & $-$0.001 & 0.024 & $-$0.116 & $-$0.013 & 0.013 & 0.064 \\ 
+Var(EIR2) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\ 
+EIR3 & $-$0.002 & 0.031 & $-$0.163 & $-$0.018 & 0.018 & 0.103 \\ 
+Var(EIR3) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
-\end{table}
+\end{table} 
 
 \subsection{Correlation with GDP}
 
 Belgian industry claims 25\% of the labour force in Belgium and have been shown as been the best indicator to predict the year to year GDP
-cite{Alain Quartier and Isabelle}
+\cite{de_greef_national_2009}
 
-
-\subsubsection*{GDP vs GDP YoY}
-
-\begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
-  \label{tab:corr gdp} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & GDP & GDP\_year & E\_I & E\_1 & E\_2 & E\_3 & E\_4 \\ 
-\hline \\[-1.8ex] 
-GDP & $1$ & $0.628$ & $0.502$ & $0.222$ & $0.439$ & $0.473$ & $0.556$ \\ 
-GDP\_year & $0.628$ & $1$ & $0.707$ & $0.092$ & $0.729$ & $0.703$ & $0.717$ \\ 
-E\_I & $0.502$ & $0.707$ & $1$ & $0.483$ & $0.952$ & $0.982$ & $0.963$ \\ 
-E\_1 & $0.222$ & $0.092$ & $0.483$ & $1$ & $0.266$ & $0.414$ & $0.406$ \\ 
-E\_2 & $0.439$ & $0.729$ & $0.952$ & $0.266$ & $1$ & $0.942$ & $0.886$ \\ 
-E\_3 & $0.473$ & $0.703$ & $0.982$ & $0.414$ & $0.942$ & $1$ & $0.938$ \\ 
-E\_4 & $0.556$ & $0.717$ & $0.963$ & $0.406$ & $0.886$ & $0.938$ & $1$ \\ 
-%\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
-
-
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[scale=0.5]{Graphs/Corr_GDP_Questions.pdf}
-    \caption{Plot }
+    \caption{Correlation plot of YoY GDP and the indicator of the different questions taken into account in the calculation of the industry BSI}
     \label{fig:ggpairs}
 \end{figure}
 
 
-\begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
-  \label{tab:corr variables} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & GDP & GDP\_year & E\_I & Var\_I & Z\_I & Var\_Z\_I \\ 
-\hline \\[-1.8ex] 
-GDP & $1$ & $0.628$ & $0.502$ & $-0.074$ & $0.151$ & $0.021$ \\ 
-GDP\_year & $0.628$ & $1$ & $0.707$ & $-0.101$ & $-0.058$ & $0.011$ \\ 
-E\_I & $0.502$ & $0.707$ & $1$ & $-0.615$ & $0.166$ & $-0.484$ \\ 
-Var\_I & $-0.074$ & $-0.101$ & $-0.615$ & $1$ & $-0.045$ & $0.887$ \\ 
-Z\_I & $0.151$ & $-0.058$ & $0.166$ & $-0.045$ & $1$ & $-0.072$ \\ 
-Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Graphs/corr_indicators.pdf}
-    \caption{Plot }
+    \caption{Correlation plot of the YoY GDP, the business survey indicator and its variance, and the evolution of individual responses for 1,2 and three months lag and its according variances}
     \label{fig:corr indicators}
 \end{figure}
 
@@ -1618,6 +1552,9 @@ Var\_Z\_I & $0.021$ & $0.011$ & $-0.484$ & $0.887$ & $-0.072$ & $1$ \\
 \subsubsection{GDP vs Z}
 
 \subsubsection{GDP vs Var Z}
+
+\subsubsection{Correlation between Z, Z2, Z3 and var(Z) and var(Z2)}
+
 
 
 
@@ -1650,46 +1587,43 @@ adf.test(candyts)
 \end{figure}
 
 
-\section{Correlation between Z and Z2 and var(Z) and var(Z2)}
 
 
 \section{Specificity of question 3 and 4, are peoples predictions correct ?}
 
 \begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
+  \caption{Correlation Matrix of different lags of the BSI of \textbf{question 3} with YoY GDP} 
   \label{tab:corr question3} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & GDP & GDP\_year & E\_3 & E\_3\_lag1 & E\_3\_lag2 & E\_3\_lag3 & E\_3\_lag4 \\ 
+ & YoY GDP & E\_3 & E\_3\_lag1 & E\_3\_lag2 & E\_3\_lag3 & E\_3\_lag4 \\ 
 \hline \\[-1.8ex] 
-GDP & $1$ & $0.628$ & $0.477$ & $0.520$ & $0.545$ & $0.546$ & $0.531$ \\
-GDP\_year & $0.628$ & $1$ & $0.707$ & $0.679$ & $0.673$ & $0.628$ & $0.560$ \\
-E\_3 & $0.477$ & $0.707$ & $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
-E\_3\_lag1 & $0.520$ & $0.679$ & $0.969$ & $1$ & $0.975$ & $0.940$ & $0.892$ \\
-E\_3\_lag2 & $0.545$ & $0.673$ & $0.948$ & $0.975$ & $1$ & $0.974$ & $0.933$ \\
-E\_3\_lag3 & $0.546$ & $0.628$ & $0.906$ & $0.940$ & $0.974$ & $1$ & $0.969$ \\
-E\_3\_lag4 & $0.531$ & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
+YoY GDP & $1$ & $0.707$ & $0.679$ & $0.673$ & $0.628$ & $0.560$ \\
+BSI  & $0.707$ & $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
+lag1(BSI)  & $0.679$ & $0.969$ & $1$ & $0.975$ & $0.940$ & $0.892$ \\
+lag2(BSI) & $0.673$ & $0.948$ & $0.975$ & $1$ & $0.974$ & $0.933$ \\
+lag3(BSI)  & $0.628$ & $0.906$ & $0.940$ & $0.974$ & $1$ & $0.969$ \\
+lag4(BSI)  & $0.560$ & $0.846$ & $0.892$ & $0.933$ & $0.969$ & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
 
 
 \begin{table}[H] \centering 
-  \caption{Correlation Matrix} 
+    \caption{Correlation Matrix of different lags of the BSI of \textbf{question 4} with YoY GDP} 
   \label{tab:corr question4} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & GDP & GDP\_year & E\_4 & E\_4\_lag1 & E\_4\_lag2 & E\_4\_lag3 & E\_4\_lag4 \\ 
+& YoY GDP & E\_4 & E\_4\_lag1 & E\_4\_lag2 & E\_4\_lag3 & E\_4\_lag4 \\ 
 \hline \\[-1.8ex] 
-GDP & $1$ & $0.628$ & $0.558$ & $0.555$ & $0.591$ & $0.566$ & $0.536$ \\ 
-GDP\_year & $0.628$ & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
-E\_4 & $0.558$ & $0.719$ & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
-E\_4\_lag1 & $0.555$ & $0.650$ & $0.959$ & $1$ & $0.970$ & $0.928$ & $0.863$ \\
-E\_4\_lag2 & $0.591$ & $0.647$ & $0.941$ & $0.970$ & $1$ & $0.970$ & $0.917$ \\
-E\_4\_lag3 & $0.566$ & $0.593$ & $0.890$ & $0.928$ & $0.970$ & $1$ & $0.959$ \\
-E\_4\_lag4 & $0.536$ & $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
+YoY GDP  & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
+BSI &  $0.719$ & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
+lag1(BSI) &  $0.650$ & $0.959$ & $1$ & $0.970$ & $0.928$ & $0.863$ \\
+lag2(BSI) &  $0.647$ & $0.941$ & $0.970$ & $1$ & $0.970$ & $0.917$ \\
+lag3(BSI) &  $0.593$ & $0.890$ & $0.928$ & $0.970$ & $1$ & $0.959$ \\
+lag4(BSI) &  $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
@@ -1700,37 +1634,32 @@ E\_4\_lag4 & $0.536$ & $0.501$ & $0.804$ & $0.863$ & $0.917$ & $0.959$ & $1$ \\
 
 \chapter{Linear Models}
 
-In the process of deciding which modelling technique to use, a
+The interest of this chapter is to use a model to test the pertinence of the variance of the indicator, the evolution of the individual responses and it variance, in the short term prediction of the evolution of GDP.
 
-The interest of this paper is to study the variance of the business survey indicator and explore the possible interest of the indicator of the evolution in individual responses. To achieve this objective, it's important to chose a model that account easily for the interest of each model
+As mention in \autoref{sec:nowcasting}, were nowcasting was discussed, there exist a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 
+The National Bank of Belgium for example uses for example a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well known methods are ARIMA models, MIDAS and much more.
 
-Better model could be used; Linear Autoregressive, ARIMA, State Space Models, ... but here interest is to ...
+Better model could be used; Linear AR models, ARIMA, State Space Models, ... but here interest is to ...
+
+The interest of this paper is to study the variance of the business survey indicator and explore the possible interest of the indicator of the evolution in individual responses. To achieve this objective, it's important to chose a model that account easily for the interest of each variable. For those reasons, the Linear model is applied here.
 
 \section{Method}
 
-\subsubsection{Why we are doing this}
+The quarterly GDP and the Quarterly Year on Year GDP is set at the last month of the quarter. F
+This is the common way to go.
 
-
-\subsection{Month vs Quarterly data}
-
-Error to aggregate everything to quarterly - lost of information
-
-\subsection{Timing of the Data}
-
-The quaterly GDP and the Quaterly YoY GDP is set at the last month of the quarter. This is the common way to go since 
-
+\begin{figure}[H]
+    \centering
 \begin{tikzpicture}
 % draw horizontal line   
 \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
-
 % draw vertical lines
 \foreach \x in {1,...,10}
 \draw (\x cm,3pt) -- (\x cm,-3pt);
 \foreach \x/\descr in {1.5/Jan, 2.5/Feb, 3.5/Mar, 4.5/Apr, 5.5/May, 6.5/Jun, 7.5/Jul, 8.5/Aug,9.5/Sep}
 \node[font=\scriptsize, text height=1.75ex,
 text depth=.5ex] at (\x,-.3) {$\descr$};
-
 % colored bar up
 \foreach \x/\perccol in
 {1/100,2/75,3/25}
@@ -1746,6 +1675,10 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 \node[align=center] at (3.8,-1.3) {publication BSI of March};
 \draw [thick,->] (3.8,-0.85) -- (3.8,-0.15);
 \end{tikzpicture}
+    \caption{Timing of the observations}
+    \label{fig:time of the data}
+\end{figure}
+
 
 
 
@@ -2035,7 +1968,7 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
 
 \chapter*{Appendix}
 
-\section{Questions NS975}
+\section*{Questions NS975}
 \label{Appendix: Question NS975 description}
 Questions taken into account for NS975:
 ....
@@ -2105,6 +2038,52 @@ $\pi_{++}$    &  1   & 1     & 0 \\
     \includegraphics[scale=0.75]{Images/4100N_v1990.pdf}
     \caption{The Business Survey Questionnaire in Dutch for the Industrial Sector in 1990}
     \label{Questionnaire1990}
+\end{figure}
+
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_1.pdf}
+  \caption{BSI}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_2.pdf}
+  \caption{Var(BSI)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_3.pdf}
+  \caption{EIR1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_4.pdf}
+  \caption{Var(EIR1)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_5.pdf}
+  \caption{EIR2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_6.pdf}
+  \caption{Var(EIR2)}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_7.pdf}
+  \caption{EIR3}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Graphs/S-I_8.pdf}
+  \caption{Var(EIR3)}
+\end{subfigure}
+\caption{S-I plots for the different variables}
+\label{fig:S-I seasonal correction RJDemetra}
 \end{figure}
 
 
