@@ -290,17 +290,18 @@ Survey Volatility -
 
 \begin{tabular}{l l}
   BSI       & Business Survey Indicator/Barometer \\
-  Cor         & Correlation \\
-  Cov         & Covariance \\
+  Cor       & Correlation \\
+  Cov       & Covariance \\
   ECB       & European Central Bank \\
+  E         & Mean \\
   EIR       & Evolution in individual Responses \\
-  Eurostat & The European Statistical Office \\
+  Eurostat  & The European Statistical Office \\
   GDP       & Gross Domestic Product \\
   INSEE     & Institut national de la statistique et des études économiques (France) \\
   NBB       & The National Bank of Belgium \\
   NBER      & The National Bureau of Economic Research (US) \\
   NSI       & National Statistics Institutes \\
-  Var         & Variance \\
+  Var       & Variance \\
   YoY       & Year on Year
 \end{tabular}
 
@@ -330,7 +331,7 @@ This Thesis is included in the continuity of a long tradition of papers proposin
 
 Since 1968, the National Bank of Belgium publishes each month the national 
 
-
+Add European dimension !
 
 %%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is surveybased indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo business survey Christian Seiler Christian Heumann)
 
@@ -384,44 +385,6 @@ The other potential explanation pointed out, is the high representation of small
 Today the business survey indicator is a well-known indicator of the Belgian economy, it's indicator is on the homepage of the National Bank website and is used in several predictive models.
 
 
-\section{Sampling Method}
-\label{sec:Recruitment of participants}
-
-The Belgian business survey - as most of the business surveys around the world - has the particularity of not using random sampling. 
- The selection of participants is quite complex and a lot of decisions are human, never is a statistical program or a random sampling system used to select new participants.
-
-
-The selection of new participants is done by waves. When the department responsible for the business survey at the NBB decides that there aren't enough participants in a specific sector anymore, the recruitment of new participants is launched.
-
-To find the new respondents, the first step is to decide for an optimal amount of new participants needed, regarding the different stratification of the sector.
-Each sector is composed of quite advanced trees of sub-sectors, sub-sub-sectors,  and more. For example, the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. 
-
-It could be that some subdivision of a certain sector only has 1 or 2 respondents while it accounts for a significant part of the Belgian economy. The Department of the business survey of the NBB will then look into which company, from that specific part of the economy, could be a good fit as new respondent of the business survey, considering its activity, it's size, region, and other characteristics.
-As will be seen in \autoref{sec:Weighting procedure} more in detail, companies are weighted by there size (profit, number of employees, ...) and the size of the sector/branch they are part of. That information is crucial for selecting new participants.
-The procedure is quite complex and therefore contains a lot of human decisions.
- 
-Out of this process comes a list of potential new participants. This list is then sent to the Communication Department that makes contact with those potential new participants. 
-Not always, but usually, a representative of the National Bank visits the new participant to explain the survey and have a contact.
-As a reward for participating in the survey, the companies receive privileged information. Each month they receive access to sub-sector indicators information that aren't publicly distributed. This can give them economical information regarding there specific sector of economic activity.
-
-At the National Bank of Belgium, this procedure is usually referred to as prospecting, rather than selecting or sampling, since it is mostly based on recruiting new companies that will work/collaborate with them. New companies can be included in the survey outside of this procedure but this happens more occasionally.
-
-
-An important side of the business survey is that people are staying as long as possible in the survey.
-From the moment companies are part of the survey, they stay in it until they decide to leave, there are no participants removed from the survey by the National Bank, what can happen is that if participants don't answer for three months, contact will be taken with the company to see if they want to continue to participate.
-
-There are resources put by the National Bank to make sure companies answer to the survey, and stay in it.
-This means that some companies are part of the survey for a very long time.
-To have an idea, if we look at the survey for the industry and trace respondents back to 30 years ago (1989), we can see that today, approximately one-third of the respondents were already in the survey in 1988. 
-
-
-From a statistical point of view, it can seem rather problematic to draw general conclusions over a population when not using random sampling.
-Without undermining one of the most important pillars of statistics, there are two main reasons why in this case, having a non-random selection of participants is not truly problematic.
-
-The first reason is that the sampling method used is trying to represent as good as possible the population that it is representing. Therefore stratification is used at a quite advanced level as explained before. 
-We could call this recruitment method: non-random stratification, as opposed to random stratification. Since it's not using sampling but takes into account the stratification of the population it's studying.
-
-The second reason, the most import one, is that the value of the business survey indicator doesn't have interest on its own. Indeed having a BSI equal to 0.5 or 0.1 doesn't mean much, what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand, if it's now equal to 0.1, it means a decrease in economic confidence among businesses and we can anticipate a deceleration or decline of the economy over the month.
 
 
 \section{Objectives of the Business Survey}
@@ -442,20 +405,20 @@ This will be looked into in \autoref{chap:nonresponse dropout} where seasonal ef
 The business survey indicators are published at the end of each month (around the 21-25 of the month) and give a fast capture of the evolution of the Belgian economy over the past months.
 The data is available on \href{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en}{stat.nbb.be} and a press release is published on \href{http://www.nbb.be/doc/dq/e/conj.htm}{nbb.be}. 
 The press release contains a summary and interpretation of the BSI followed by graphs to show the evolution of the BSI over the 4-5 last years for the sector-specific and overall indicator.
-The public can use that information to have a snapshot of the economy, while other indicators, as GDP or unemployment, can take a very long time before been published.
+The public can use that information to have a snapshot of the economy, while other indicators, as GDP or unemployment, can take a very long time before being published.
 
 
 \subsection{Nowcasting}
 \label{sec:nowcasting}
 
-Also called "flash" estimation, nowcasting has increasingly gain importance in the last decade.
+Also called "flash" estimation, nowcasting has increasingly gained importance in the last decade.
 it consists of the short term estimation of the economy, Usually GDP growth.
 It is a fundamental approach since the business survey indicator is published monthly while other indicator's like GDP are published quarterly.
 
 As can be seen in \autoref{fig:timeline}, 
 the lag between the observation and publication is even greater since the business survey indicator is published at the end of each month (around the 24-25\textsuperscript{th} of each month), while the GDP is published with a lag of 3 to 4 weeks and is subject to revision.
 
-If we look at \autoref{fig:timeline} we can see that at the end of the month of January, the GDP is published for the last quarter of the previous month, so the information is already out-dated of some weeks, when the business survey indicator is published for the month of January around the same date. After the publication end of January, observers of the economy have to way three months to have new information about the GDP, while each month, the BSI is published and available for everyone.
+If we look at \autoref{fig:timeline} we can see that at the end of the month of January, the GDP is published for the last quarter of the previous year, so the information is already out-dated of some weeks, when the business survey indicator is published for the month of January around the same date. After the end of January publication, observers of the economy have to wait for three months to have new information about the GDP, while each month, the BSI is published and available for everyone.
 
 \begin{figure}[htp!]
     \centering
@@ -499,7 +462,7 @@ If we look at \autoref{fig:timeline} we can see that at the end of the month of 
 
 Nowcasting became a catch-all word and includes a variety of predictive models as Linear regression, ARIMA models, State-Space models, Mixed-data sampling (MIDAS) regressions, Autoregressive Distributed Lag (ARDL) models  and much more.
 
-A good example of nowcasting is the model explained in \cite{de_antonio_liedo_nowcasting_2014} which is a State-Space model developed at the NBB. It takes into account a lot of different predictive variables to predict the actual state of
+A good example of nowcasting is the model explained in \cite{de_antonio_liedo_nowcasting_2014} which is a State-Space model developed at the NBB. It takes into account a lot of different predictive variables to predict the actual state of .................................
 
 Indicators that can be used aside from the business survey are average weekly work hours, factory orders for goods, housing permits and stock prices index of consumer expectations, average weekly claims for unemployment insurance and the interest rate and more.
 
@@ -627,7 +590,7 @@ We can notice that periods of economic growth, usually last longer than economic
         \addplot[mark=none, dashed] coordinates {(2514, -1.5) (2514, -1)}; 
         \end{axis}
     \end{tikzpicture}
-    \caption{Business cycles from 1975 to 2009 of the American Economy according to the NBER}
+    \caption{Business cycles from 1975 to 2009 of the American Economy according to the NBER(cite)}
     \label{fig:NBER BS}
 \end{figure}
 
@@ -643,17 +606,60 @@ Three main methodology revisions since the launch of the business survey, in 198
 The most significant changes brought in 2009 where the number of questions taken into the calculation of the BSI, which was reduced to 3-4 questions, depending on the sector, for more simplicity and accuracy.
 Other improvements where the inclusion of the sector of services in the calculation of the global indicator and a new, simple method of smoothing the indicator.
 
+\subsection{Sampling Method}
+\label{sec:Recruitment of participants}
+
+The Belgian business survey - as most of the business surveys around the world - has the particularity of not using random sampling. 
+The selection of participants is quite complex and a lot of decisions are human, never is a statistical program or a random sampling system used to select new participants.
+Reasons 
+-> volutary basis
+-> Panel data with high involvement
+
+
+The selection of new participants is done by waves. When the department responsible for the business survey at the NBB decides that there aren't enough participants in a specific sector anymore, the recruitment of new participants is launched.
+
+To find the new respondents, the first step is to decide for an optimal amount of new participants needed, regarding the different stratification of the sector.
+Each sector is composed of quite advanced trees of sub-sectors, sub-sub-sectors,  and more. For example, the industry sector is divided into more than 300 sub-sectors / branches over 6 different levels. 
+
+It could be that some subdivision of a certain sector only has 1 or 2 respondents while it accounts for a significant part of the Belgian economy. The Department of the business survey of the NBB will then look into which company, from that specific part of the economy, could be a good fit as new respondent of the business survey, considering its activity, it's size, region, and other characteristics.
+As will be seen in \autoref{sec:Weighting procedure} more in detail, companies are weighted by there size (profit, number of employees, ...) and the size of the sector/branch they are part of. That information is crucial for selecting new participants.
+The procedure is quite complex and therefore contains a lot of human decisions.
+ 
+Out of this process comes a list of potential new participants. This list is then sent to the Communication Department that makes contact with those potential new participants. 
+Not always, but usually, a representative of the National Bank visits the new participant to explain the survey and have a contact.
+As a reward for participating in the survey, the companies receive privileged information. Each month they receive access to sub-sector indicators information that aren't publicly distributed. This can give them economical information regarding their specific sector of economic activity.
+
+At the National Bank of Belgium, this procedure is usually referred to as prospecting, rather than selecting or sampling, since it is mostly based on recruiting new companies that will work/collaborate with them. New companies can be included in the survey outside of this procedure but this happens more occasionally.
+
+
+An important side of the business survey is that people are staying as long as possible in the survey.
+From the moment companies are part of the survey, they stay in it until they decide to leave, there are no participants removed from the survey by the National Bank, what can happen is that if participants don't answer for three months, contact will be taken with the company to see if they want to continue to participate.
+
+There are resources put by the National Bank to make sure companies answer to the survey, and stay in it.
+This means that some companies are part of the survey for a very long time.
+To have an idea, if we look at the survey for the industry and trace respondents back to 30 years ago (1989), we can see that today, approximately one-third of the respondents were already in the survey in 1988. 
+
+
+From a statistical point of view, it can seem rather problematic to draw general conclusions over a population when not using random sampling.
+Without undermining one of the most important pillars of statistics, there are two main reasons why in this case, having a non-random selection of participants is not truly problematic.
+
+The first reason is that the sampling method used is trying to represent as good as possible the population that it is representing. Therefore stratification is used at a quite advanced level as explained before. 
+We could call this recruitment method: non-random stratification, as opposed to random stratification. Since it's not using sampling but takes into account the stratification of the population it's studying.
+
+The second reason, the most import one, is that the value of the business survey indicator doesn't have interest on its own. Indeed having a BSI equal to 0.5 or 0.1 doesn't mean much, what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand, if it's now equal to 0.1, it means a decrease in economic confidence among businesses and we can anticipate a deceleration or decline of the economy over the month.
+
+
 
 \subsection{Questionnaire}
 \label{sec:Questionnaire}
 
 The questionnaire exists in two languages, french and dutch (see Appendix \autopageref{Questionnaire2018}). It can be answered by mail, email, over the phone or by fax.
 It is divided into two part:
-(1) questions concerning there current production and level of activity (\textit{"verloop en beoordeling"}) and
-(2) questions concerning their predictions, how they expect their level of activity to evolve over the next three months ("\textit{vooruitzichten voor de volgende drie maanden}").
+(1) questions concerning current production and level of activity (\textit{"verloop en beoordeling"}) and
+(2) questions concerning predictions, expectation of the level of activity over the next three months ("\textit{vooruitzichten voor de volgende drie maanden}").
 
 The business survey indicator is also called the confidence indicator, since its a measure of how confidence companies are in the Belgian economy.
-Almost all the questions have only three possible answers. Each time the answers can be interpreted as a negative, neutral or positive and are later treated so as will be seen when calculating the indicator.
+Almost all the questions have only three possible answers that can be interpreted as a negative, neutral or positive answer.
 
 In this paper, the answers and results of the industry business survey barometer will be used since 1988. Therefore it's very important to see if modifications were applied over time to the questionnaire.
 A questionnaire from 1990 can be seen in appendix (see \autopageref{Questionnaire1990}) and can be compared to a more recent version (see appendix \autopageref{Questionnaire2018}).
@@ -663,6 +669,8 @@ It would be interesting to have a closer look at the potential consequences of t
 What we can say, is that the influence of those changes could be limited since the respondents where mostly the same when the changes happened, so the interpretation they made from the questions could have a smaller impact.
 
 A further look into the four questions taken into account for the calculation of the industry business survey indicator (the NS975) can be found in the appendix (see \autopageref{Appendix: Question NS975 description}).
+
+
 
 
 \subsection{Weighting procedure}
@@ -1001,7 +1009,7 @@ In the case of combining the variances of the four different questions of the in
     &&  + 2 \Cov (X_{Q2},X_{Q3}) + 2 \Cov (X_{Q2},X_{Q4}) + 2 \Cov (X_{Q3},X_{Q4}) \large] \nonumber \\
 \end{eqnarray}
 
-The complexity of the formula encourages to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator, we can write it as follow
+The complexity of the formula encourages to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator. It can be written as follow
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
@@ -1070,7 +1078,7 @@ Same the other way around, if it decreases it will take value -1, except for a r
 We will here use $z$ rather than $x$ to make a clear distinction between the BSI and the EIR.
 
 \begin{equation}
-    ????????????\text{voir article INSEE   }  z_i = x_{t} - x_{t-1}
+    z_i = x_{t-1} - x_{t}
 \end{equation}
 
 the value of the different observations of $z_i$ can be seen in \autoref{tab:values EIR}. 
@@ -2081,7 +2089,135 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 \chapter*{Code}
 \section*{R code for Seasonal Adjustment}
 
+\begin{lstlisting}[language=R]
+###########################
+### Preparing data        #
+###########################
 
+
+
+
+# install.packages("devtools")
+
+## Install rjdemetra and rjdqa
+# install.packages("devtools")
+# devtools::install_github("jdemetraéé/rjdemetra", args = "--no-multiarch")
+# devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
+
+Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
+
+
+#import libraries
+library(rJava)
+library(RJDemetra)
+library(rjdqa)
+library(tidyverse)
+library(readxl)
+library(xlsx)
+
+
+# upload data
+data <- read_excel("Master-Thesis/Datasets/data.xlsx")
+
+# create time series with the 
+data_ts = ts(data, start=c(1988,1), frequency=12)
+
+
+
+#################################
+# apply seasonal correction X13 #
+#################################
+
+# for E(X)
+data_E <- data_ts[, "E"]
+data_E_model <- x13(data_E, spec="RSA0") # X-13ARIMA method
+
+# for E(Z)
+data_EZ <- data_ts[, "Z"]
+data_EZ_model <- x13(data_EZ, spec="RSA0") # X-13ARIMA method
+
+# for E(Z2)
+data_EZ2 <- data_ts[, "Z2"]
+data_EZ2_model <- x13(data_EZ2, spec="RSA0") # X-13ARIMA method
+
+# for E(Z3)
+data_EZ3 <- data_ts[, "Z3"]
+data_EZ3_model <- x13(data_EZ3, spec="RSA0") # X-13ARIMA method
+
+# for Var(X)
+data_Var <- data_ts[, "Var"]
+data_Var_model <- x13(data_Var, spec="RSA0") # X-13ARIMA method
+
+# for Var(Z)
+data_VarZ <- data_ts[, "Var_Z"]
+data_VarZ_model <- x13(data_VarZ, spec="RSA0") # X-13ARIMA method
+
+# for Var(Z2)
+data_VarZ2 <- data_ts[, "Var_Z2"]
+data_VarZ2_model <- x13(data_VarZ2, spec="RSA0") # X-13ARIMA method
+
+# for Var(Z3)
+data_VarZ3 <- data_ts[, "Var_Z2"]
+data_VarZ3_model <- x13(data_VarZ3, spec="RSA0") # X-13ARIMA method
+
+data$E_sa <- data_E_model$final$series[, "sa"]
+data$Var_sa <- data_Var_model$final$series[, "sa"]
+data$Z_sa <- data_EZ_model$final$series[, "sa"]
+data$Z2_sa <- data_EZ2_model$final$series[, "sa"]
+data$Var_Z_sa <- data_VarZ_model$final$series[, "sa"]
+data$Var_Z2_sa <- data_VarZ2_model$final$series[, "sa"]
+data$Z3_sa <- data_EZ3_model$final$series[, "sa"]
+data$Var_Z3_sa <- data_VarZ3_model$final$series[, "sa"]
+
+
+################################
+# plot seasonal corrected data #
+################################
+
+par(mfrow=c(4,2))
+
+# Basic plot with the original series, the trend and the SA series
+plot(data_E_model, type_chart = "sa-trend", caption="BSI")
+plot(data_Var_model, type_chart = "sa-trend", caption="Var(BSI)")
+plot(data_EZ_model, type_chart = "sa-trend", caption="EIR1")
+plot(data_VarZ_model, type_chart = "sa-trend", caption="Var(EIR1)")
+plot(data_EZ2_model, type_chart = "sa-trend", caption="EIR2")
+plot(data_VarZ2_model, type_chart = "sa-trend", caption="Var(EIR2)")
+plot(data_EZ3_model, type_chart = "sa-trend", caption="EIR3")
+plot(data_VarZ3_model, type_chart = "sa-trend", caption="Var(EIR3)")
+
+par(mfrow=c(1,1))
+
+
+# look at different results (plots)
+# S-I ratio
+plot(data_E_model$decomposition)
+dev.print(device = pdf, file="S-I_1.pdf", width=11, height=8)
+plot(data_Var_model$decomposition)
+dev.print(device = pdf, file="S-I_2.pdf", width=11, height=8)
+plot(data_EZ_model$decomposition)
+dev.print(device = pdf, file="S-I_3.pdf", width=11, height=8)
+plot(data_VarZ_model$decomposition)
+dev.print(device = pdf, file="S-I_4.pdf", width=11, height=8)
+plot(data_EZ2_model$decomposition)
+dev.print(device = pdf, file="S-I_5.pdf", width=11, height=8)
+plot(data_VarZ2_model$decomposition)
+dev.print(device = pdf, file="S-I_6.pdf", width=11, height=8)
+plot(data_EZ3_model$decomposition)
+dev.print(device = pdf, file="S-I_7.pdf", width=11, height=8)
+plot(data_VarZ3_model$decomposition)
+dev.print(device = pdf, file="S-I_8.pdf", width=11, height=8)
+
+
+##########
+# OUTPUT #
+##########
+
+write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx") 
+\end{lstlisting}
+
+
+\newpage
 \section*{R code for Creating Lags}
 
 
