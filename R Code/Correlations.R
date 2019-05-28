@@ -68,8 +68,9 @@ stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_4", "E_4_lag1","E_4_lag2","E
 #####################
 
 ### Autocorrelation ACF plots
-par(mfrow=c(4,2))
 
+layout(matrix(c(1,1,2,3,4,5,6,7,8,9), 5, 2, byrow = TRUE))
+acf(na.omit(data$GDP_year), main = "Autocorrelation of the YoY GDP")
 acf(na.omit(data$E_sa), main = "Autocorrelation of the BSI")
 acf(na.omit(data$Var_sa), main = "Autocorrelation of Var(BSI)")
 acf(na.omit(data$Z_sa), main = "Autocorrelation of the EIR1")
@@ -80,4 +81,3 @@ acf(na.omit(data$Z3_sa), main = "Autocorrelation of the EIR3")
 acf(na.omit(data$Var_Z3_sa), main = "Autocorrelation of Var(EIR3)")
 
 par(mfrow=c(1,1))
-acf(na.omit(data$GDP_year), main = "Autocorrelation of the YoY GDP")
