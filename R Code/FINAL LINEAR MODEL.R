@@ -28,7 +28,7 @@ library(forecast)
 
 
 # upload data
-# data <- read_excel("GitHub/Master-Thesis/Datasets/data_model.xlsx")
+#data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
 
 #data$E_lag1 <- Lag(data$E, 1)

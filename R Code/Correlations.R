@@ -11,6 +11,7 @@ library(Formula)
 library(Hmisc)
 library(corrplot)
 library(readxl)
+library(corrplot)
 library(xtable)
 
  
@@ -64,13 +65,13 @@ corrplot.mixed(cor(na.omit(data2[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3",
                ,lower = "circle", upper = "number")
 
 #### GDP corr with the different indicators
-stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")])), title="Correlation Matrix")
+stargazer(cor(na.omit(data[c("GDP_year", "E", "Var", "Z","Var_Z", "Z2","Var_Z2", "Z3","Var_Z3")])), title="Correlation Matrix")
 
-ggpairs(data2[c("GDP", "GDP_year", "E_I", "Var_I", "Z_I","Var_Z_I")], 
-        upper = list(continuous = wrap("cor", size = 6)))  + theme_bw()
+ggpairs(as.data.frame(data[c("GDP_year", "E_sa", "Var_sa")])) 
 
-ggpairs(data[c("GDP_year", "E", "Var", "Z","Var_Z", "Z2","Var_Z2", "Z3","Var_Z3")], 
-        upper = list(continuous = wrap("cor", size = 6)), 
+tmp <- as.data.frame(data[c("GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")]) 
+
+ggpairs(tmp, upper = list(continuous = wrap("cor", size = 6)), 
         columnLabels = c("YoY GDP", "BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"))  + theme_bw()
 
 
