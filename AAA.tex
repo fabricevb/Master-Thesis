@@ -2077,35 +2077,18 @@ $\pi_{++}$    &  1   & 1     & 0 \\
 \end{figure}
 
 
-\begin{figure}[H]
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[scale=0.8]{Graphs/variables.pdf}
-    \caption{Plot }
-    \label{plot:appendix all variables}
-\end{figure}
-
 
 \chapter*{Code}
 \section*{R code for Seasonal Adjustment}
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R/20Code/Seasonal/20Correction%20model%20data.R}{Link of the R Code for Seasonal Adjustments on https://github.com/fabricevb/Master-Thesis}
+
 
 \begin{lstlisting}[language=R]
 ###########################
 ### Preparing data        #
 ###########################
 
-
-
-
-# install.packages("devtools")
-
-## Install rjdemetra and rjdqa
-# install.packages("devtools")
-# devtools::install_github("jdemetraéé/rjdemetra", args = "--no-multiarch")
-# devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
-
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
-
 
 #import libraries
 library(rJava)
@@ -2115,14 +2098,11 @@ library(tidyverse)
 library(readxl)
 library(xlsx)
 
-
 # upload data
 data <- read_excel("Master-Thesis/Datasets/data.xlsx")
 
 # create time series with the 
 data_ts = ts(data, start=c(1988,1), frequency=12)
-
-
 
 #################################
 # apply seasonal correction X13 #
@@ -2218,7 +2198,11 @@ write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx")
 
 
 \newpage
-\section*{R code for Creating Lags}
+\section*{R code for Correlation Analysis}
+
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Correlations.R}{Code for the correlation analysis on https://github.com/fabricevb/Master-Thesis}
+
+
 
 
 \section*{R code for Linear (Auto-Regressive) Models}
@@ -2226,7 +2210,6 @@ write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx")
 \href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}{Code for Linear Models on https://github.com/fabricevb/Master-Thesis}
 
 
-\section*{R code for Markov Switching Models}
 
 \newpage
 
