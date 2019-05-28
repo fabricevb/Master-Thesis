@@ -7,7 +7,6 @@ Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
 #import libraries
 library(rJava)
 library(RJDemetra)
-library(rjdqa)
 library(tidyverse)
 library(readxl)
 library(xlsx)
@@ -51,7 +50,7 @@ data_VarZ2 <- data_ts[, "Var_Z2"]
 data_VarZ2_model <- x13(data_VarZ2, spec="RSA0") # X-13ARIMA method
 
 # for Var(Z3)
-data_VarZ3 <- data_ts[, "Var_Z2"]
+data_VarZ3 <- data_ts[, "Var_Z3"]
 data_VarZ3_model <- x13(data_VarZ3, spec="RSA0") # X-13ARIMA method
 
 data$E_sa <- data_E_model$final$series[, "sa"]
