@@ -9,7 +9,7 @@
 
 ## Install rjdemetra and rjdqa
 # install.packages("devtools")
-# devtools::install_github("jdemetra/rjdemetra")
+# devtools::install_github("jdemetraéé/rjdemetra", args = "--no-multiarch")
 # devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
 
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
@@ -18,14 +18,9 @@ Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
 #import libraries
 library(rJava)
 library(RJDemetra)
-library(rjdqa)
 library(tidyverse)
 library(readxl)
 library(xlsx)
-library(ggplot2)
-library(ggfortify)
-library(zoo)
-library(xts)
 
 
 # upload data
@@ -121,18 +116,6 @@ plot(data_VarZ3_model$decomposition)
 dev.print(device = pdf, file="S-I_8.pdf", width=11, height=8)
 
 
-plot(sa_dashboard(data_E_model), main = "Seasonal Adjustment Dashboard",
-     subtitle = "", raw_color = "#33A02C", sa_color = "#E31A1C",
-     trend_color = "black")
-plot(sa_dashboard(data_Var_model))
-plot(sa_dashboard(data_EZ_model))
-plot(sa_dashboard(data_VarZ_model))
-plot(sa_dashboard(data_EZ2_model))
-plot(sa_dashboard(data_VarZ2_model))
-
-autoplot(decompose(data_E))
-
-
 ##########
 # OUTPUT #
 ##########
@@ -140,7 +123,3 @@ autoplot(decompose(data_E))
 
 write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx") 
 
-library(xlsx)
-
-data_quat <- drop_na(data, cols="GDP_year")
-write.xlsx(data_quat, "Master-Thesis/Datasets/data_quat.xlsx") 
