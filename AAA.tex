@@ -1563,13 +1563,6 @@ adf.test(candyts)
     \label{fig:ACF}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[scale=0.45]{Graphs/ACF_GDP.pdf}
-    \caption{Autocorrelation plot for YoY GDP}
-    \label{fig:ACF_GDP}
-\end{figure}
 
 add AR plots of EIR2 ... in appendix
 
@@ -2137,7 +2130,7 @@ data_VarZ2 <- data_ts[, "Var_Z2"]
 data_VarZ2_model <- x13(data_VarZ2, spec="RSA0") # X-13ARIMA method
 
 # for Var(Z3)
-data_VarZ3 <- data_ts[, "Var_Z2"]
+data_VarZ3 <- data_ts[, "Var_Z3"]
 data_VarZ3_model <- x13(data_VarZ3, spec="RSA0") # X-13ARIMA method
 
 data$E_sa <- data_E_model$final$series[, "sa"]
