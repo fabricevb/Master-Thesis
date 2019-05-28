@@ -2,34 +2,21 @@
 ### Preparing data        #
 ###########################
 
-
-
-
-# install.packages("devtools")
-
-## Install rjdemetra and rjdqa
-# install.packages("devtools")
-# devtools::install_github("jdemetraéé/rjdemetra", args = "--no-multiarch")
-# devtools::install_github("AQLT/rjdqa", args = "--no-multiarch")
-
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
-
 
 #import libraries
 library(rJava)
 library(RJDemetra)
+library(rjdqa)
 library(tidyverse)
 library(readxl)
 library(xlsx)
-
 
 # upload data
 data <- read_excel("Master-Thesis/Datasets/data.xlsx")
 
 # create time series with the 
 data_ts = ts(data, start=c(1988,1), frequency=12)
-
-
 
 #################################
 # apply seasonal correction X13 #
@@ -120,6 +107,4 @@ dev.print(device = pdf, file="S-I_8.pdf", width=11, height=8)
 # OUTPUT #
 ##########
 
-
 write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx") 
-

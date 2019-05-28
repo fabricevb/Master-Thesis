@@ -11,7 +11,8 @@ library(Formula)
 library(Hmisc)
 library(corrplot)
 library(readxl)
-library(corrplot)
+library(xtable)
+
  
 
 data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
@@ -19,8 +20,6 @@ data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
 
 data$Obs = 1:nrow(data)
-
-### ATTRITION
 
 data$date <- as.Date(data$period)
 tmp <- data[c("date", "GDP_year_plot", "predicted_model1", "predicted_model2", "predicted_model3")]
@@ -38,22 +37,17 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
         geom_point(aes(y = GDP_year))
 
 
-
-# Attrition and dropout
-
+###########################
+### Attrition and dropout #
+###########################
 
 stargazer(cor(na.omit(data[c("Obs", "GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa")]))
           , title="Correlation Matrix")
 
 tmp <- data[c("E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")]
 
-library(xtable)
-library(Hmisc)
-
-describe(tmp)
-
+# descriptive table
 stargazer(as.data.frame(tmp))
-typeof(data)
 
 #### Tables
 
