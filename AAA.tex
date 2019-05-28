@@ -245,7 +245,8 @@ I'm also tankful to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Lie
 
 and all the members of the Department of Research and Development who where always there to answer any of my questions.
 
-for their time and advise during the writing of master thesis. 
+% for their time and advise during the writing of master thesis. 
+
 
 I'm grateful to my co-promotor Geert Molenberghs for the guidance and feedback. Geert Loosveldt and Stephan Moens for their input during the Mid-term presentation.
 
@@ -263,13 +264,17 @@ Last but not least, I would like to thank all the professors of the Master of St
 
 
 \section*{Abstract}
-This Master Thesis explores the variance of the Belgian business survey. 
-Several finding concerning the nature and properties of the Variance are found as the bounds and relation with the mean.
 
-In a second part, the predictive power of the variance is examined and it's found that ...
+This Master Thesis explores the variance of the Belgian business survey.
+ 
+Several finding concerning the nature and properties of the variance wher found as the bounds and relation with the mean.
+
+An indicator, called the evolution of individual responses, was explored and developed.
+
+In a second part, the predictive power of the variance and the new indicator of evolution in individual responses is examined and it's found that, the variance of the indicator improves the fit of a linear model and it's predictions
 
 
-%\section*{Samenvatting}
+\section*{Samenvatting}
 
 
 \section*{Keywords}
@@ -1282,11 +1287,22 @@ Var(Z) &=&
 
 \section{Properties}
 
+The 
 quite similar to Var(BSI)
 
 
-\subsubsection{Property 1: the variance of Z is bounded between -1 and 1}
+\subsubsection{Property 1: the variance of Z is bounded between 0 and ?}
+upper bound:
 
+\begin{eqnarray}
+Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \nonumber \\
+	&=& 1 - 0 - 0 - 0 + 3*0.5 + 3*0.5 - 0 = 2.5 \nonumber
+\end{eqnarray}
+
+
+\begin{equation}
+	1+ 0.5*3 + 0.5*3 - 0 = 2.5
+\end{equation}
 
 \subsubsection{Property 2: }
 

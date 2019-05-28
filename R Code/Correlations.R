@@ -15,12 +15,18 @@ library(corrplot)
  
 
 data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
+data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
+
+data$Obs = 1:nrow(data)
 
 ### ATTRITION
 
 data$date <- as.Date(data$period)
 tmp <- data[c("date", "GDP_year_plot", "predicted_model1", "predicted_model2", "predicted_model3")]
+
+
+
 
 
 meltdf <- melt(tmp,id="date")
@@ -33,12 +39,26 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 
 
+# Attrition and dropout
 
+
+stargazer(cor(na.omit(data[c("Obs", "GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa")]))
+          , title="Correlation Matrix")
+
+tmp <- data[c("E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")]
+
+library(xtable)
+library(Hmisc)
+
+describe(tmp)
+
+stargazer(as.data.frame(tmp))
+typeof(data)
 
 #### Tables
 
 #### GDP corr with the different indicators
-stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]))
+stargazer(cor(na.omit(data2[c("GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]))
           , title="Correlation Matrix")
 
 ggpairs(data2[c("GDP_year", "E_1", "E_2","E_3","E_4")], 
