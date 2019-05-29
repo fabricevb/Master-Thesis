@@ -352,7 +352,7 @@ Chapter 2
 
 \chapter{The Business Survey Indicator}
 
-This first chapter is a presentation of the Belgian business survey and the business survey indicator (BSI), also referred to as the business survey barometer or business confidence indicator/barometer.
+This chapter is a presentation of the Belgian business survey and the business survey indicator (BSI), also referred to as the business survey barometer or business confidence indicator/barometer.
 
 First, a brief history of the business survey indicator will be presented.
 The second section will discuss the sampling method while the third section will discuss the objectives of the business survey, which are (1) understanding the short term evolution by sector of the Belgian economy, (2) nowcasting and (3) the analysis of business cycles.
@@ -890,9 +890,9 @@ As we did for the indicator, we will develop the equation by taking into account
 Again the variance can be written in different ways;
 
 \begin{eqnarray}
-\Var(X) &=& \Omega \pi_+ + \Omega \pi_- - ( \Omega \pi_+ - \Omega \pi_- )^2 \\
-    &=& \Omega \pi_+ + \Omega \pi_- - E ( X )^2 \\
-    &=& 1 - \Omega \pi_{0} - E(X)^2 \label{eq:var3 weighted}
+\Var(X) &=& \Omega_+ + \Omega_- - ( \Omega_+ - \Omega_- )^2 \\
+    &=& \Omega_+ + \Omega_- - E ( X )^2 \\
+    &=& 1 - \Omega_{0} - E(X)^2 \label{eq:var3 weighted}
 \end{eqnarray}
 
 
@@ -1040,7 +1040,7 @@ and as follow for the variance of the weighted indicator
 
 \chapter{The Indicator of the Evolution of Individual Responses}
 
-In the same logic as for the variance, a proposition is done here of a way to extract more information out of the business survey. 
+In the same logic as for the variance, a proposition is done here of a method to extract more information out of the business survey. 
 As explained in the first chapter, the business survey is answered by the same companies over time. Some new participants join and some companies leaving the survey, but the survey can be referred to and treated as a panel survey.
 
 Is it possible to have more information by taking the evolution of the individual respondents into account? 
@@ -1049,10 +1049,7 @@ This chapter will address this question by applying a method proposed by \cite{c
 % We will here describe and develop this indicator, that we will call Evolution of individual Responses (EIR).
 % It can be understood as the indicator of the changes in individual answers between t-1 and t.
 
-
-\subsubsection{Explanation}
-
-When we take only one period into account, there are three possible answers; "negative", "neutral" and "positive".
+When only one period is taken into account, there are three possible answers; "negative", "neutral" and "positive".
 When we take two periods into account, a month (t) and the previous one (t-1) for example, there are nine possible situations as represented in \autoref{tab:EIR explanation}. 
 
 
@@ -1077,11 +1074,13 @@ On the other hand, if a certain participant changes his answer for a more positi
 Same the other way around, if it decreases it will take value -1, except for a radical change from "positive" to "negative".
 We will here use $z$ rather than $x$ to make a clear distinction between the BSI and the EIR.
 
+The calculation of $z_i$ is the difference of $x_i$ at t-1 and $x_i$ at t
+
 \begin{equation}
-    z_i = x_{t-1} - x_{t}
+    z_i = x_{i,t-1} - x_{i,t}
 \end{equation}
 
-the value of the different observations of $z_i$ can be seen in \autoref{tab:values EIR}. 
+the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}. 
 
 \begin{table}[H]
     \centering
@@ -1114,35 +1113,35 @@ The indicator of the evolution of the individual responses can be obtained by ta
     &&  + \left( \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} \right)
     + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} \right)
     + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{++}} z_{++i}}{n} \right)
 \end{eqnarray}
 
-As for the indicator, we will now move from individual responses to proportions, that can be seen in \autoref{tab:EIR proportions}.
+The formula can further be simplified since $z_{--} = z_{00} = z_{++} = 0$).
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{r | r | c c c | }
-    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
-    \multicolumn{1}{r}{} &         & \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
-            &    \textbf{-} & $\pi_{--}$    & $\pi_{-0}$    & $\pi_{-+}$ \\ 
-    $t-1$ & \textbf{0} & $\pi_{0-}$    & $\pi_{00}$    & $\pi_{0+}$    \\
-            &    \textbf{+} & $\pi_{+-}$    & $\pi_{+0}$    & $\pi_{++}$ \\ \cline{2-5}
-    \end{tabular}    
-    \caption{Proportion of answers for each of the possible combination of answers at time t and t-1}
-    \label{tab:EIR proportions}
-\end{table}
+\begin{eqnarray}
+    \E(Z) &=&  
+     \left( \frac{\sum_{i=1}^{n_{-0}} z_{-0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{-+}} z_{-+i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} \right) \nonumber \\
+&&  + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right)
+\end{eqnarray}
 
-The EIR can now be calculated with the following expression after taking out $\pi_{--}$, $\pi_{00}$ and $\pi_{++}$ (since $z_{--} = z_{00} = z_{++} = 0$).
+
+
+
+As for the indicator, it's possible here to have a formula with proportions.
+
+% The EIR can now be calculated with the following expression after taking out $\pi_{--}$, $\pi_{00}$ and $\pi_{++}$ (since $z_{--} = z_{00} = z_{++} = 0$).
 
 \begin{equation}
-    \E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} 
+    \E(Z) = \pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-} \label{eq:unweighted proprotion EIR}
 \end{equation}
 
 where $\pi$ is the proportion/probability of respondent answering negative(-), neutral (0) and positive (+) at $t-1$ and $t$. 
 
-
-\subsubsection{?Interpretation}
-
+\autoref{eq:unweighted proprotion EIR} ...................
 
 \section{Indicator of the Weighted Evolution of Individual Responses}
 
@@ -1156,16 +1155,20 @@ where $\pi$ is the proportion/probability of respondent answering negative(-), n
     &&  + \sum_{i=1}^{n_{0+}} \omega_i z_{0+i} 
     + \sum_{i=1}^{n_{+-}} \omega_i z_{+-i} 
     + \sum_{i=1}^{n_{+0}} \omega_i z_{+0i} 
-    + \sum_{i=1}^{n_{+-}} \omega_i z_{+-i} 
+    + \sum_{i=1}^{n_{+-}} \omega_i z_{++i} \\
+&=&  \sum_{i=1}^{n_{-0}} \omega_i  
+    + 2 \sum_{i=1}^{n_{-+}} \omega_i  
+    - \sum_{i=1}^{n_{0-}} \omega_i         
+    + \sum_{i=1}^{n_{0+}} \omega_i  
+    - 2 \sum_{i=1}^{n_{+-}} \omega_i 
+    - \sum_{i=1}^{n_{+0}} - \omega_i  
 \end{eqnarray}
-
-
 
 
 The weighted EIR can, as for the unweighted EIR now be calculated with the following expression 
 
 \begin{equation}
-    \E(Z) = \Omega \pi_{0+} + \Omega \pi_{-0} - \Omega \pi_{+0} - \Omega \pi_{0-} +2\Omega \pi_{-+} -2\Omega \pi_{+-} 
+    \E(Z) = \Omega_{0+} + \Omega_{-0} - \Omega_{+0} - \Omega_{0-} +2\Omega_{-+} -2\Omega_{+-} \label{eq:weighted proprotion EIR}
 \end{equation}
 
 
@@ -1175,12 +1178,10 @@ Changes in the economy are usually taking several months to influence all the co
 The idea of only taking a certain month and the previous month can seem non-sufficient, it's relevant to take a larger period into account. 
 
 Different methods were explored to take more than two periods into account, but it was found to be flawed and very complex to interpret.
-We rather propose here a simple generalisation; use t-n rather than t-1. You compare than that period t-n with the answer at time t, without taking the between answers into account.
+We rather propose here a simple generalisation; use t-n rather than t-1. 
+The answer at t-n are compared with the answer at time t, without taking the between answers into account.
 
-\subsubsection{t-n vs t}
-
-come up to the same except that you use a larger period into account
-
+The calculation is then the same for the unweighted as \autoref{eq:unweighted proprotion EIR} and for the weighted as \autoref{eq:weighted proprotion EIR}.
 
 
 \section{Take different questions into account}
@@ -1227,15 +1228,12 @@ come up to the same except that you use a larger period into account
 \chapter{The Variance of the Evolution of Individual Responses} \label{Chapter:Var Z}
 
 The new indicator, the evolution of individual responses, also has a variance that has some interpretation interest. 
-While the EIR is a measure of the direction companies changes there answer(s), the variance of the EIR can be understood as the measure of changes in answers. Therefore the Variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
+While the EIR is a measure of the direction companies changes there answer(s), the variance of the EIR can be understood as the measure of changes in answers. 
+Therefore the variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
 
-\subsubsection{difference var(BSI) \& var(EIR)}
-
+While the variance of the business survey indicator is the measure  of disagreement among respondents, the variance of the evolution of individual responses is the measure of different changes of respondents.
 
 % In this case, the highest the variance of EIR, will be obtained when half of the companies went from a negative answer to a positive answer and the other half did the opposite and changed from a positive answer at time t-1 to a negative answer at time t. 
-
-The idea is that this variance of EIR is complementary to the estimation of Z since they have two very interesting but different interpretations.
-Further interpretation will be 
 
 \section{Variance of the Unweighted Evolution of Individual Responses}
 
@@ -1247,45 +1245,10 @@ Further interpretation will be
 
 \begin{eqnarray}
 Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
-&&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2 \nonumber \\
-&=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2 \nonumber \\
+&&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2  \\
+&=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2  \\
 &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
 \end{eqnarray}
-
-\begin{eqnarray*}
-Var(Z) &=& 
-\left(\begin{tabular}{r|r r r}
-                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
-    \textbf{-}     & 0        & +1    & +4    \\
-    \textbf{0}     & +1    & 0        & +1    \\
-    \textbf{+}     & +4    & +1    & 0        \\
-\end{tabular} \right)
-- \left(
-\begin{tabular}{r|r r r}
-                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
-    \textbf{-}     & 0        & +1    & +2    \\
-    \textbf{0}     & -1    & 0        & +1    \\
-    \textbf{+}     & -2    & -1    & 0        \\
-\end{tabular}
-\right)^2  \\
-&=& \left( \begin{tabular}{r|r r r}
-                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
-    \textbf{-}     & 0        & +1    & +4    \\
-    \textbf{0}     & +1    & 0        & +1    \\
-    \textbf{+}     & +4    & +1    & 0        \\
-\end{tabular} \right)
-- \left(E(Z)\right)^2     \\
-&=& 1 +  \left(\begin{tabular}{r|r r r}
-                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
-    \textbf{-}     & -1    & 0        & +3    \\
-    \textbf{0}     & 0        & -1    & 0    \\
-    \textbf{+}     & +3    & 0        & -1        \\
-\end{tabular} \right)
- - \left(E(Z)\right)^2    \\
-\end{eqnarray*}
-
-
-
 
 
 
@@ -1322,31 +1285,25 @@ Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \
 \chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
 \label{chap:nonresponse dropout}
 
-Before we model the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, four main effects could mislead the results. Three are due to the survey and one to external effects; seasonal effects. We will first look into seasonal effects and apply a well know correction to the data to eliminate, as good as possible, the seasonal effects from the data.
+Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, four main effects could mislead the results. Three are due to the survey and one to external effects; seasonal effects. We will first look into seasonal effects and apply a well know correction to the data to eliminate, as good as possible, the seasonal effects from the data.
 It will then be looked into the three survey based issues; non-response, dropout and attrition.
 
-As already mentioned before, for this analysis the data at hand is the unweighted indicators of the business survey, for the period of 1988 to 2018.
+As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, for the period of 1988 to 2018.
 
-Eight variables will be used for the analysis; the business survey indicator, Var(BSI), EIR, Var(EIR)
+Eight variables will be used for the analysis; the business survey indicator, the variance of the BSI, the evolution of individual responses and the variance of the EIR (three variations of the EIR and its variance; taking a 1, 2 or 3 months comparison) 
 
 \section{Seasonal Correction}
 \label{sec:seasonal correction}
 
 The National Bank, before publishing the business survey indicator, applies an X11 seasonal correction.
 
-The literature about seasonal effects is very rich and variate. Without going too much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA (XXXXX) developed by the US Census Bureau and TRAMO/SEATS (Gómez y Maravall, 1996) developed by the Bank of Spain. The two methods are divided into two part, first ..........
+The literature about seasonal effects is very rich and variate. Without going too much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA developed by the US Census Bureau and TRAMO/SEATS developed at the Bank of Spain. 
 
-% most widely used and recommended -12-ARIMA2/X-13ARIMA-SEATS3 developed at the U.S. Census Bureau and TRAMO/SEATS4 developed by Victor Gómez and Agustín Maravall, from the Bank of Spain. Both methods are divided into two main parts. The first part is called pre-adjustment and removes deterministic effects from the series using a regression model with ARIMA noise. The second part is the decomposition of the time series to estimate and remove a seasonal component. TRAMO/SEATS and X-12-ARIMA/X-13ARIMA-SEATS use a very similar approach in the first part to estimate the same model on the processing step, but they differ completely in the decomposition step. Therefore, comparing results from decomposition is often difficult. Furthermore, their diagnostics focus on different aspects and their outputs take completely different forms.  
+The Department of Research and Development of the NBB developed JDemetra+ which is recommended by the European Central Bank (ECB) and the European Statistical Office (Eurostat) for all National Statistics Institutes (NSI) of the European Union. 
 
+JDemetra+ is used by the National Bank to apply seasonal corrections to the business survey indicator before publication. It will be used here, to test for seasonality and apply corrections to the data.
 
-\subsubsection{JDemetra+}
-
-The Department of Research and development of the NBB developed JDemetra+ which is recommended by the European Central Bank (ECB) and the European Statistical Office (Eurostat) for all National Statistics Institutes (NSI) of the European Union. 
-
-JDemetra+ is used by the National Bank to apply seasonal corrections to the business survey indicator. it will be used here, to test for seasonality and apply corrections to the data.
-
-Tests for seasonality were done with JDemetra+ (see appendix \autopageref{sec:test for seasonality}) and it was concluded that there was seasonal effect for each of the variables at hand (see \autoref{tab:Seasonality Tests})
-
+Tests for seasonality are summarised in \autoref{tab:Seasonality Tests}. The results are clear, there is seasonality for all of the variables.
 
 \begin{table}[htp!]
     \centering \footnotesize
@@ -1362,13 +1319,18 @@ Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YE
     \end{tabular}
     \caption{Seasonality Tests}
     \label{tab:Seasonality Tests}
-\end{table}{}
+\end{table}
 
 
-The seasonal correction is done with RJDemetra, the R package based on JDemetra+.
-The results can be seen in \autoref{fig:seasonal ajusted rjdemetra}
+% Further explanations can be found in appendix \autopageref{sec:test for seasonality}.
 
-It's interesting here to notice that there is no need for Year on Year GDP of been seasonally corrected since by definition, it's eliminating all its seasonality.
+The different variables are seasonal correction using RJDemetra, the R package based on JDemetra+.
+The results are plotted in \autoref{fig:seasonal ajusted rjdemetra}.
+
+The method applied is is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction since it's not applying log/level, outliers and calendar corrections. 
+It was chosen since it's the closes to the X11 applied by the NBB to the business survey when monthly publishing the indicators.
+
+It's interesting here to notice here that there is no need for Year on Year GDP seasonal correction since  it's, by definition, eliminating all its seasonality.
 
 \begin{figure}[htp!]
     \centering
@@ -1383,51 +1345,52 @@ It's interesting here to notice that there is no need for Year on Year GDP of be
 Non-response is a large domain of research when it comes to surveys. 
 The theory converges to agree that there are three different ways non-response can be present. Responses can be missing completely at random, missing at random, or missing not at random.
 
-Missing completely at random is usually hard to assume while missing not at random can be hard solve.
+Missing completely at random is usually hard to assume while missing not at random can be hard to account for.
 
 % Considering the business survey, the non-response was explored, but since it's not the subject of the thesis, it will not be looked into more in dept.
 
-The non-response of the business survey can be decomposed into two; non-participation to the survey and participating but not answering.
+The non-response of the business survey can be decomposed into two; non-participation to the survey and participants not responding to the survey.
 
-Non-participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants tries the best it can to take into account the population at study. Also, the fact that we have panel data limits the bias created by non-participant.
+Non-participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study. 
+There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to not motivated companies, there could be an issue.
+The potential bias would be limited since the business survey is a panel survey and is interpreted as such.
 
 Non-response of participants is another issue. 
-The solution applied in case of non-response is assuming that the respondent would have answered the same as the previous month, the method is called "Last Observation Carried Forward" (LOCF).
+The solution applied by the NBB in case of non-response is assuming that the respondent would have answered the same as the previous month, the method is called "Last Observation Carried Forward" (LOCF). 
+It's widely used and can be understood in the case of the business survey, knowing that 
 
-The response rate is usually around 95\% for the business survey. We could from there say that non-response is not very important. 
-Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
+There is a large effort made by the NBB to contact respondents and send them reminders to make sure that non-response is as small as possible.
+The response rate is usually around 95\%, which is quite high for a survey, therefore it can be assumed that non-response is not very important in the business survey.
 
-plot non-response
+% Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
+
+
 
 
 \section{Dropout and Attrition}
 
-Those two issues are related to the structure and organisation of the survey. As explain in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: dropout and attrition.
+Dropout and Attrition are related to the structure and organisation of the survey. 
+As explain in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create bias (dropout) and companies change of answering behaviour over time (attrition).
 
 \subsection{Dropout}
 
 The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the responsible persons for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
 This is an issue since it means that it's a certain type of companies that leave the survey. If this type of profile has a different opinion or respond differently than the remaining companies this will create bias. 
 
-Participants leaving the survey, are they different from 
 
-This is the case
+It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
-plot of 
-
-It could be argued that the bias is very diffused due to the small number of companies leaving the survey each month. Again the fact that the evolution is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
-
-It's not the subject of this work, so will not dive more into this bias, but we would recommend having a closer look into this.
+It's not the subject of this work, so will not dive more into this bias, but we would recommend having a closer look into this for future researchers.
 
 \subsection{Attrition}
 
 Attrition, also called Panel Conditioning, is present when participants change there behaviour between different rounds of surveys. 
-A very interesting master thesis was done about the Belgian Labour Force survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}. 
-The Belgian Labour Force Survey was convenient to test for attrition since the survey is answered by participants exactly four times with a lag of six months.
+A very interesting master thesis was done about the Belgian labour force survey, where attrition was found to be significant \cite{priyana_hardjawidjaksana_investigating_2019}.
+The Belgian labour force survey was convenient to test for attrition since the survey is answered by participants exactly four times with a lag of six months.
+It was shown that indeed attrition was present in the survey.
 
-In the case of the business survey, it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. 
+In the case of the industry business survey, it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. Other sectors have the same issue.
 
-plot of the amount of recruited over time participation = 1
 
 \begin{table}[htp!] \centering 
   \caption{Correlation of time with different indicators } 
@@ -1441,29 +1404,35 @@ Time & $-0.339$ & $0.133$ & $-0.807$ & $0.039$ & $-0.705$ \\
 \end{tabular} 
 \end{table} 
 
+An interesting approach to explore attrition and dropout is by looking at the correlations of the variances over time.
+In \autoref{tab:corr attrition} it can be seen that there is a very large negative correlation between time and the variance of the BSI and the variance of the EIR. This can be interpreted as companies agreeing more and more over time and changing less and less there answers.
+Without making any conclusions, the variance of BSI and the variance of EIR seems to show the present of dropout bias and/or attrition.
 
-An interesting way to explore attrition is by looking at the correlations of the variances over time. 
-In \autoref{tab:corr attrition} it can be seen that 
+Same can be observed in Var(BSI) and Var(EIR) plots in \autoref{fig:seasonal ajusted rjdemetra} where, aside of the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of the variance of the BSI and the different variances of EIR after the beginning of the century, the last time there was a large recruitment done.
 
-Same can be observed if we look at the evolution of the variance over time in \autoref{fig:seasonal ajusted rjdemetra} where, aside of the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of 
+The variance shows here an interest that can be surprising since it help to better understand the survey and the behaviour of respondents. 
+When looking at only the evolution of the business survey indicator, it's not possible to measure the "vivacity" of the survey.
+Var(BSI) and Var(EIR) can measure the excitement among respondents
 
-It would be very interesting to dive more into deep of these issues, but this will be left for further research. In the context of this paper, it's important to notice the potential importance of attrition and dropout.
-It's also interesting to notice that the variance of the BSI and the variance the EIR can be a good indicator of those potential issues.
+!!!!!
 
+It would be very interesting to dive more into these issues, but this will be left for further research. 
+In the context of this paper, it's important to notice the potential importance of attrition and dropout and the importance of the different variances a hand ?????to account for it.
+
+% It's also interesting to notice that the variance of the BSI and the variance the EIR can be a good indicator of those potential issues.
 
 
 \chapter{Exploratory Analysis}
 
 The previous chapter already did some of the exploratory analysis.
-We will here have some further observations based on the time trends of the different variables at hand.
-In a second time, it will be looked into the correlations among the questions taken into account in the calculation of the industry BSI.
+Further observations of the different variables at hand will be done is a short descriptive statistics section.
+...............In a second part, correlations will be looked at; (1) correlation among the questions indicators (taken into account in the calculation of the industry BSI) and with the YoY GDP. (2) 
+.
 
 
 \subsection{Descriptive Statistics}
 
-
-It's important to have a little reminder of the data at hand.
-Some descriptive statistics can be seen in \autoref{tab:descriptive stats}.
+Descriptive statistics can be seen in \autoref{tab:descriptive stats}.
 
 The indicators come from the industry business survey and take into account the four questions explained on \autopageref{Appendix: Question NS975 description}.
 
@@ -1498,7 +1467,7 @@ Var(EIR3) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\
 \end{table} 
 
 \newpage
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
 %    \captionsetup{justification=centering}
     \includegraphics[scale=0.75]{Graphs/variables.pdf}
@@ -1523,7 +1492,7 @@ Belgian industry claims 25\% of the labour force in Belgium and was shown as a g
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[scale=0.5]{Graphs/Corr_GDP_Questions.pdf}
+    \includegraphics[scale=0.4]{Graphs/Corr_GDP_Questions.pdf}
     \caption{Correlation plot of YoY GDP and the indicator of the different questions taken into account in the calculation of the industry BSI}
     \label{fig:ggpairs}
 \end{figure}
@@ -1954,59 +1923,36 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
 
 \chapter*{Appendix}
 
-\section*{Questions NS975}
+\section*{Questions taken into account for the calculation of the industry business survey (NS975)}
 \label{Appendix: Question NS975 description}
-Questions taken into account for NS975:
-....
 
-originally question Q18, 27, 32 and 33, for simplicity numbered here as 1, 2, 3 and 4.
+originally numbered question 18, 27, 32 and 33 (see \autopageref{Questionnaire2018}), for simplicity numbered here as 1, 2, 3 and 4.
+Note that the first question is interpreted the opposite way from the three other. Having a higher stock than normal is considered a "negative" answer while lower stock is considered "positive".
 
-\subsubsection*{Verloop en beoordeling}
+
+\subsubsection*{Course and assessment}
 \begin{enumerate}
-    \item Uw huidige voorraad van dit product beschouwt u, voor het seizoen, als: \\
-	$\Square$	hoger dan normaal (te hoog)	$\Square$	normaal (voldoende)	$\Square$ lager dan normaal (te laag)
+    \item Your current stock of this product will you consider, for the season, as: \\
+	$\Square$ higher than normal (too high) $\Square$ normal (sufficient) $\Square$ lower than normal (too low)
 	
-    \item Uw huidige gezamenlijke orderpositie voor dit product beschouwt u als: \\
-	$\Square$ hoger dan normaal $\Square$ normaal $\Square$ lager dan normaal
+    \item Your current aggregate order position for this product is what you consider to be: \\
+	$\Square$ higher than normal $\Square$ normal $\Square$ lower than normal
 \end{enumerate}
 
-\subsubsection*{Vooruitzichten voor de volgende drie maanden} 
+\subsubsection*{Prospects for the next three months} 
 \begin{enumerate}
 \setcounter{enumi}{2}
-    \item Het personeel (arbeiders en technici) tewerkgesteld voor de fabricatie van dit product zal volgens u: \\
-	$\Square$ worden uitgebreid $\Square$ onveranderd blijven $\Square$ worden verminderd
+    \item The personnel (workers and technicians) employed for the manufacture of this product will, according to you: \\
+	$\Square$ be expanded $\Square$ remain unchanged $\Square$ be reduced
 						
-    \item De vraag van uw klanten naar dit product zal volgens u:  \\
-	$\Square$ belangrijker $\Square$ even belangrijk $\Square$ minder belangrijk \\	
-	zijn dan gewoonlijk tijdens die periode van het jaar.
+    \item The demand of your customers for this product will, in your opinion:  \\
+	$\Square$ be more important $\Square$ be equally important $\Square$ be less important \\\	
+	as usually at that time of the year.
 \end{enumerate}
 
-\newpage
-\section*{Further Explanation of the Evolution of the responses ...}
-\label{sec:appendix explanations EIR}
-
-\begin{center}
-\begin{tabular}{|c|r|r|r|}
-Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
-$\pi_{--}$    &  -1  & -1    & 0 \\
-$\pi_{-0}$    &  -1  & 0     & 1 \\
-$\pi_{-+}$    &  -1  & 1     & 2 \\
-$\pi_{0-}$    &  0   & -1    & -1 \\
-$\pi_{00}$    &  0   & 0     & 0 \\
-$\pi_{0+}$    &  0   & 1     & 1 \\
-$\pi_{+-}$    &  1   & -1    & -2 \\
-$\pi_{+0}$    &  1   & 0     & -1 \\
-$\pi_{++}$    &  1   & 1     & 0 \\
-\end{tabular}  
-\end{center}
 
 \newpage
 
-\section*{Test for seasonality}
-\label{sec:test for seasonality}
-
-\newpage
-\section*{Further Explanation of the Markov Switching model ...}
 
 
 \newpage

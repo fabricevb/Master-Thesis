@@ -19,6 +19,105 @@
 \begin{document}   
 
 
+\section*{Test for seasonality}
+\label{sec:test for seasonality}
+
+
+
+\subsubsection*{Verloop en beoordeling}
+\begin{enumerate}
+    \item Uw huidige voorraad van dit product beschouwt u, voor het seizoen, als: \\
+	$\Square$	hoger dan normaal (te hoog)	$\Square$	normaal (voldoende)	$\Square$ lager dan normaal (te laag)
+	
+    \item Uw huidige gezamenlijke orderpositie voor dit product beschouwt u als: \\
+	$\Square$ hoger dan normaal $\Square$ normaal $\Square$ lager dan normaal
+\end{enumerate}
+
+\subsubsection*{Vooruitzichten voor de volgende drie maanden} 
+\begin{enumerate}
+\setcounter{enumi}{2}
+    \item Het personeel (arbeiders en technici) tewerkgesteld voor de fabricatie van dit product zal volgens u: \\
+	$\Square$ worden uitgebreid $\Square$ onveranderd blijven $\Square$ worden verminderd
+						
+    \item De vraag van uw klanten naar dit product zal volgens u:  \\
+	$\Square$ belangrijker $\Square$ even belangrijk $\Square$ minder belangrijk \\	
+	zijn dan gewoonlijk tijdens die periode van het jaar.
+\end{enumerate}
+
+\section*{Further Explanation of the Evolution of the responses ...}
+\label{sec:appendix explanations EIR}
+
+\begin{center}
+\begin{tabular}{|c|r|r|r|}
+Notation    &  $x_{t-1}$ & $x_t$ & $z_t$ \\\hline
+$\pi_{--}$    &  -1  & -1    & 0 \\
+$\pi_{-0}$    &  -1  & 0     & 1 \\
+$\pi_{-+}$    &  -1  & 1     & 2 \\
+$\pi_{0-}$    &  0   & -1    & -1 \\
+$\pi_{00}$    &  0   & 0     & 0 \\
+$\pi_{0+}$    &  0   & 1     & 1 \\
+$\pi_{+-}$    &  1   & -1    & -2 \\
+$\pi_{+0}$    &  1   & 0     & -1 \\
+$\pi_{++}$    &  1   & 1     & 0 \\
+\end{tabular}  
+\end{center}
+
+\newpage
+
+
+
+
+\begin{eqnarray*}
+Var(Z) &=& 
+\left(\begin{tabular}{r|r r r}
+                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-}     & 0        & +1    & +4    \\
+    \textbf{0}     & +1    & 0        & +1    \\
+    \textbf{+}     & +4    & +1    & 0        \\
+\end{tabular} \right)
+- \left(
+\begin{tabular}{r|r r r}
+                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-}     & 0        & +1    & +2    \\
+    \textbf{0}     & -1    & 0        & +1    \\
+    \textbf{+}     & -2    & -1    & 0        \\
+\end{tabular}
+\right)^2  \\
+&=& \left( \begin{tabular}{r|r r r}
+                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-}     & 0        & +1    & +4    \\
+    \textbf{0}     & +1    & 0        & +1    \\
+    \textbf{+}     & +4    & +1    & 0        \\
+\end{tabular} \right)
+- \left(E(Z)\right)^2     \\
+&=& 1 +  \left(\begin{tabular}{r|r r r}
+                & \textbf{-} & \textbf{0} & \textbf{+} \\\hline
+    \textbf{-}     & -1    & 0        & +3    \\
+    \textbf{0}     & 0        & -1    & 0    \\
+    \textbf{+}     & +3    & 0        & -1        \\
+\end{tabular} \right)
+ - \left(E(Z)\right)^2    \\
+\end{eqnarray*}
+
+
+
+
+we will now move from individual responses to proportions, that can be seen in \autoref{tab:EIR proportions}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{r | r | c c c | }
+    \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
+    \multicolumn{1}{r}{} &         & \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
+            &    \textbf{-} & $\pi_{--}$    & $\pi_{-0}$    & $\pi_{-+}$ \\ 
+    $t-1$ & \textbf{0} & $\pi_{0-}$    & $\pi_{00}$    & $\pi_{0+}$    \\
+            &    \textbf{+} & $\pi_{+-}$    & $\pi_{+0}$    & $\pi_{++}$ \\ \cline{2-5}
+    \end{tabular}    
+    \caption{Proportion of answers for each of the possible combination of answers at time t and t-1}
+    \label{tab:EIR proportions}
+\end{table}
+
+
 
 \begin{table}[H]
     \centering
