@@ -30,37 +30,13 @@ library(forecast)
 # upload data
 #data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
+# create a lag variable for the indicator
+# data$E_sa_lag1 <- Lag(data$E_sa, 1)
 
-#data$E_lag1 <- Lag(data$E, 1)
-#data$E_diff <- data$E - data$E_lag1
-
-#data$E_sa_lag1 <- Lag(data$E_sa, 1)
-#data$E_sa_diff <- data$E_sa - data$E_sa_lag1
-
-# fill NA's by linear method for YoY GDP
+# fill NA's by linear method for YoY GDP, this will help to plot the data
 data$Obs <- as.numeric(data$Obs)
 data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
 
-
-###########################
-# Plot Variables          #
-###########################
-data$date <- as.Date(data$period)
-tmp <- data[c("date", "GDP_year_plot", "E", "Var", "Z", 
-              "Var_Z", "Z2", "Var_Z2")]
-
-meltdf <- melt(tmp,id="date")
-meltdf$GDP_year <- data$GDP_year
-meltdf$date <- as.Date(meltdf$date)
-levels(meltdf$variable) <- c("YoY GDP", "BSI", "Var(BSI)", "EIR", "Var(EIR)", "EIR2", "Var(EIR2)")
-ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
-  geom_line(na.rm=FALSE) + 
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
-  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
-  facet_grid(rows = vars(variable), scales="free") +
-  theme(legend.position = "none") +
-  ylab(" ") +
-  xlab(" ")
 
 
 
@@ -84,7 +60,7 @@ AIC(model1, model2, model3, model4, model5)$AIC
 
 BIC(model1, model2, model3, model4, model5)$BIC
 
-
+# create summary table to copare the 5 different models
 stargazer(model1, model2, model3, model4, model5, align = TRUE,
           intercept.bottom = FALSE,
           single.row = FALSE, 
@@ -93,13 +69,11 @@ stargazer(model1, model2, model3, model4, model5, align = TRUE,
           dep.var.caption  = "Linear Regression",
           dep.var.labels   = "Year on Year GDP (in \\%)")
 
-
-
 summary(modelfull)
 
-autoplot(modelfull, colour = 'blue')
+autoplot(model3, colour = 'blue')
 
-ggnostic(modelfull)
+ggnostic(model3)
 
 
 
@@ -222,15 +196,6 @@ ggplot(data, aes(x=period)) +
   scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Volatility"))
 
 
-scaleFactor <- max(data$Respondents) / max(0.3 +data$E)
-
-ggplot(data, aes(x=period)) +
-  geom_line(aes(y=Respondents), col="blue") +
-  geom_line(aes(y=E * scaleFactor), col="red") +
-  scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="BSI"))
-
-
-
 ggnostic(model1)
 
 
@@ -238,13 +203,9 @@ ggnostic(model1)
 
 accuracy(model1)
 accuracy(model2)
-
-fore <- forecast(modelsubset1, data, h=24)
-plot(fore$mean)
-
-
-
-
+accuracy(model3)
+accuracy(model4)
+accuracy(model5)
 
 
 
@@ -253,7 +214,7 @@ plot(fore$mean)
 
 
 # autocorrelation of the residuals
-acf(model2$residuals)
+acf(model3$residuals)
 
 
 plotForecastErrors <- function(forecasterrors)
@@ -322,28 +283,9 @@ data$date <- as.Date(data$period)
 tmp <- data[c("date", "GDP_year_plot", "fore1", "fore2", "fore3")]
 meltdf <- melt(tmp,id="date")
 meltdf$GDP_year <- data$GDP_year
+levels(meltdf$variable) <- c("period", "YoY GDP", "Predictions 1", "Predictions 2", "Predictions 3")
 ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
   geom_line(na.rm=FALSE) + 
   scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
-  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
-  geom_point(aes(y = GDP_year))
-
-
-data$date <- as.Date(data$period)
-tmp <- data[c("date", "GDP_year_plot", "Respondents", "Var", "Var_Z")]
-
-
-meltdf <- melt(tmp,id="date")
-meltdf$GDP_year <- data$GDP_year
-ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
-  geom_line(na.rm=FALSE) + 
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
-  theme(axis.text.x = element_text(angle=45, hjust = 1)) +
-  geom_point(aes(y = GDP_year))
-
-
-
-plot(predict(modelpred1, data))
-
-
+  geom_point(aes(y = GDP_year)) + theme_bw() +   theme(axis.text.x = element_text(angle=45, hjust = 1))
 

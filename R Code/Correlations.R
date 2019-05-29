@@ -21,6 +21,26 @@ data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 # number the columns
 data$Obs = 1:nrow(data)
 
+###########################
+# Plot Variables          #
+###########################
+data$date <- as.Date(data$period)
+tmp <- data[c("date", "GDP_year_plot", "E_sa", "Var_sa", "Z_sa", 
+              "Var_Z_sa", "Z2_sa", "Var_Z2_sa", "Z3_sa", "Var_Z3_sa")]
+
+meltdf <- melt(tmp,id="date")
+meltdf$GDP_year <- data$GDP_year
+meltdf$date <- as.Date(meltdf$date)
+levels(meltdf$variable) <- c("YoY GDP", "BSI", "Var(BSI)", "EIR", "Var(EIR)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)")
+ggplot(meltdf,aes(x=date,y=value,group=variable)) + 
+        geom_line(na.rm=FALSE,colour="black") + 
+        scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+        facet_grid(rows = vars(variable), scales="free") +
+        ylab(" ") +
+        xlab(" ") + theme_bw() +   theme(legend.position = "none",axis.text.x = element_text(angle=45, hjust = 1))
+
+
+
 
 ###########################
 ### Attrition and dropout #
