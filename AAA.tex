@@ -1459,8 +1459,8 @@ We will here have some further observations based on the time trends of the diff
 In a second time, it will be looked into the correlations among the questions taken into account in the calculation of the industry BSI.
 
 
+\subsection{Descriptive Statistics}
 
-\subsubsection{Data At hand}
 
 It's important to have a little reminder of the data at hand.
 Some descriptive statistics can be seen in \autoref{tab:descriptive stats}.
@@ -1513,8 +1513,6 @@ Var(EIR3) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\
 \section{Correlations Analysis}
 
 Three different correlations need to be looked at; (1) between questions of the industry BSI, (2) between YoY GDP and the different indicators and their variance and (3) the autocorrelation.
-
-\subsection{Correlation between questions}
 
  
 
@@ -1688,7 +1686,7 @@ The model proposed here is the simplest model possible.
 
 \begin{table}[H] \centering \footnotesize
   \caption{} 
-  \label{} 
+  \label{tab:models comparaison 1} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1697,14 +1695,14 @@ The model proposed here is the simplest model possible.
 \\[-1.8ex] & \multicolumn{5}{c}{Year on Year GDP (in \%)} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\ 
 \hline \\[-1.8ex] 
- Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & -1.756^{***} & -1.761^{***} \\ 
-  & (0.160) & (0.631) & (0.615) & (0.635) & (0.634) \\ 
+ Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & -1.756^{***} & -1.729^{***} \\ 
+  & (0.160) & (0.631) & (0.615) & (0.635) & (0.633) \\ 
   & & & & & \\ 
- BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 21.310^{***} & 21.116^{***} \\ 
-  & (1.317) & (1.252) & (1.224) & (1.306) & (1.310) \\ 
+ BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 21.310^{***} & 21.044^{***} \\ 
+  & (1.317) & (1.252) & (1.224) & (1.306) & (1.313) \\ 
   & & & & & \\ 
- Var(BSI) &  & 49.102^{***} & 36.477^{***} & 40.631^{***} & 39.874^{***} \\ 
-  &  & (5.869) & (8.089) & (11.895) & (11.844) \\ 
+ Var(BSI) &  & 49.102^{***} & 36.477^{***} & 40.631^{***} & 38.777^{***} \\ 
+  &  & (5.869) & (8.089) & (11.895) & (11.081) \\ 
   & & & & & \\ 
  EIR1 &  &  & -28.718^{**} &  &  \\ 
   &  &  & (13.792) &  &  \\ 
@@ -1718,18 +1716,18 @@ The model proposed here is the simplest model possible.
  Var(EIR2) &  &  &  & 9.213 &  \\ 
   &  &  &  & (11.207) &  \\ 
   & & & & & \\ 
- EIR3 &  &  &  &  & 1.248 \\ 
-  &  &  &  &  & (2.615) \\ 
+ EIR3 &  &  &  &  & 1.290 \\ 
+  &  &  &  &  & (2.610) \\ 
   & & & & & \\ 
- Var(EIR3) &  &  &  &  & 9.944 \\ 
-  &  &  &  &  & (11.141) \\ 
+ Var(EIR3) &  &  &  &  & 9.401 \\ 
+  &  &  &  &  & (8.598) \\ 
   & & & & & \\ 
 \hline \\[-1.8ex] 
 Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.711} & \multicolumn{1}{c}{0.711} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.701} & \multicolumn{1}{c}{0.701} \\ 
-Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.894} & \multicolumn{1}{c}{0.893} \\ 
-F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{73.079$^{***}$} & \multicolumn{1}{c}{73.247$^{***}$} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.711} & \multicolumn{1}{c}{0.712} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.701} & \multicolumn{1}{c}{0.702} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.894} & \multicolumn{1}{c}{0.891} \\ 
+F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{73.079$^{***}$} & \multicolumn{1}{c}{73.590$^{***}$} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
