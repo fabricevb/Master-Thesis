@@ -1825,6 +1825,60 @@ Following those results, there are two good candidates; \autoref{eq:model2} and 
 
 \subsection{Out-of-Sample Performances}
 
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{Linear Regression} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 4.437^{***} & 0.660 & -0.519 \\ 
+  & (0.211) & (1.899) & (2.041) \\ 
+  & & & \\ 
+ BSI & 17.374^{***} & 19.212^{***} & 20.327^{***} \\ 
+  & (1.547) & (1.758) & (1.813) \\ 
+  & & & \\ 
+ Var(BSI) &  & 30.545^{*} & 31.371^{**} \\ 
+  &  & (15.269) & (14.992) \\ 
+  & & & \\ 
+ EIR1 &  &  & -37.120^{**} \\ 
+  &  &  & (17.899) \\ 
+  & & & \\ 
+ Var(EIR1) &  &  & 53.535 \\ 
+  &  &  & (52.433) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
+F Statistic & \multicolumn{1}{c}{126.060$^{***}$} & \multicolumn{1}{c}{69.144$^{***}$} & \multicolumn{1}{c}{37.845$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale=0.6]{Graphs/predictions2.pdf}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
+    \label{fig:predictions1}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale=0.6]{Graphs/predictions3.pdf}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
+    \label{fig:predictions1}
+\end{figure}
+
 
 
 
