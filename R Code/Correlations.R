@@ -13,10 +13,13 @@ library(corrplot)
 library(readxl)
 library(corrplot)
 library(xtable)
+library(reshape2)
+library(tseries)
+
 
  
-data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
-data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
+# data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
+# data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
 # number the columns
 data$Obs = 1:nrow(data)
@@ -33,7 +36,7 @@ meltdf$GDP_year <- data$GDP_year
 meltdf$date <- as.Date(meltdf$date)
 levels(meltdf$variable) <- c("YoY GDP", "BSI", "Var(BSI)", "EIR", "Var(EIR)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)")
 ggplot(meltdf,aes(x=date,y=value,group=variable)) + 
-        geom_line(na.rm=FALSE,colour="black") + 
+        geom_line(na.rm=FALSE,colour="dodgerblue") + 
         scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
         facet_grid(rows = vars(variable), scales="free") +
         ylab(" ") +
@@ -61,7 +64,7 @@ stargazer(cor(na.omit(data2[c("GDP_year", "E_I", "E_1", "E_2","E_3","E_4")]))
           , title="Correlation Matrix")
 
 ggpairs(data2[c("GDP_year", "E_1", "E_2","E_3","E_4")], 
-        colour = "cyl", upper = list(continuous = wrap("cor", size = 6))
+         upper = list(continuous = wrap("cor", size = 6))
         , columnLabels = c("YoY GDP", "BSI Q1", "BSI Q2", "BSI Q3", "BSI Q4"))  + theme_bw()
 
 corrplot.mixed(cor(na.omit(data2[c("GDP", "GDP_year", "E_1", "E_2","E_3","E_4")]))
@@ -87,6 +90,23 @@ stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_4", "E_4_lag1","E_4_lag2","E
 ### Autocorrelation #
 #####################
 
+### ADF test
+
+# create time series with the 
+data_ts = ts(data, start=c(1988,1), frequency=12)
+E_sa <- data_ts[, "E_sa"]
+Var_sa <- data_ts[, "Var_sa"]
+Z_sa <- data_ts[, "Z_sa"]
+Var_Z_sa <- data_ts[, "Var_Z_sa"]
+Z2_sa <- data_ts[, "Z2_sa"]
+Var_Z2_sa <- data_ts[, "Var_Z2_sa"]
+Z3_sa <- data_ts[, "Z3_sa"]
+Var_Z3_sa <- data_ts[, "Var_Z3_sa"]
+
+# apply test
+c(adf.test(E_sa)$p.value, adf.test(Var_sa)$p.value, adf.test(Z_sa)$p.value, adf.test(Var_Z_sa)$p.value,
+        adf.test(Z2_sa)$p.value, adf.test(Var_Z2_sa)$p.value, adf.test(Z3_sa)$p.value, adf.test(Var_Z3_sa)$p.value)
+
 ### Autocorrelation ACF plots
 
 layout(matrix(c(1,1,2,3,4,5,6,7,8,9), 5, 2, byrow = TRUE))
@@ -101,3 +121,4 @@ acf(na.omit(data$Z3_sa), main = "Autocorrelation of the EIR3")
 acf(na.omit(data$Var_Z3_sa), main = "Autocorrelation of Var(EIR3)")
 
 par(mfrow=c(1,1))
+

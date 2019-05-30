@@ -44,7 +44,7 @@ data$GDP_year_plot <- with(data, interp1(Obs, GDP_year, Obs, "linear"))
 # Linear Models #
 #################
 
-# GDP YoY
+# First 5 models
 model1 <- lm(GDP_year ~ E_sa, data = data)
 model2 <- lm(GDP_year ~ E_sa + Var_sa, data = data)
 model3 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = data)
@@ -56,11 +56,7 @@ modelfull <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa + Z2_sa + Var_Z2_sa  
 
 modelempty <- lm(GDP_year ~ 1, data=data)
 
-AIC(model1, model2, model3, model4, model5)$AIC
-
-BIC(model1, model2, model3, model4, model5)$BIC
-
-# create summary table to copare the 5 different models
+# create summary table to compare the 5 different models
 stargazer(model1, model2, model3, model4, model5, align = TRUE,
           intercept.bottom = FALSE,
           single.row = FALSE, 
@@ -68,8 +64,9 @@ stargazer(model1, model2, model3, model4, model5, align = TRUE,
           covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"),
           dep.var.caption  = "Linear Regression",
           dep.var.labels   = "Year on Year GDP (in \\%)")
+AIC(model1, model2, model3, model4, model5)$AIC
+BIC(model1, model2, model3, model4, model5)$BIC
 
-summary(modelfull)
 
 autoplot(model3, colour = 'blue')
 
