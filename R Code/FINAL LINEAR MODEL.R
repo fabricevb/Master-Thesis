@@ -1,9 +1,8 @@
 
-# Podgorica54
+
 #################
 # Linear Models #
 #################
-
 
 
 # load libraries
@@ -63,7 +62,7 @@ stargazer(model1, model2, model3, model4, model5, align = TRUE,
           df = FALSE,
           covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"),
           dep.var.caption  = "Linear Regression",
-          dep.var.labels   = "Year on Year GDP (in \\%)")
+          dep.var.labels   = "Year on Year GDP")
 AIC(model1, model2, model3, model4, model5)$AIC
 BIC(model1, model2, model3, model4, model5)$BIC
 
@@ -93,9 +92,6 @@ dm.test(residuals(model2), residuals(model3))
 ### model selection       #
 ###########################
 
-# start with full model and take out non-signficant variables
-
-
 # step procedure
 stepMod <- step(modelempty, scope = list(lower = modelempty, upper = modelfull), direction = "forward", trace = 0, steps = 1000)  # perform step-wise algorithm
 shortlistedVars <- names(unlist(stepMod[[1]])) # get the shortlisted variable.
@@ -105,7 +101,6 @@ shortlistedVars
 step(modelfull, direction ="backward")
 
 step(modelfull, direction ="both")
-
 
 
 
@@ -134,9 +129,6 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 
 
-
-
-
 ##############################################
 # out of sample ###
 ##############################################
@@ -156,7 +148,9 @@ stargazer(modelsubset1, modelsubset2, modelsubset3, align = TRUE,
           df = FALSE,
           covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)"),
           dep.var.caption  = "Linear Regression",
-          dep.var.labels   = "Year on Year GDP (in \\%)")
+          dep.var.labels   = "Year on Year GDP")
+AIC(modelsubset1, modelsubset2, modelsubset3)$AIC
+BIC(modelsubset1, modelsubset2, modelsubset3)$BIC
 
 fore1 <- forecast(modelsubset1, data)
 fore2 <- forecast(modelsubset2, data)
@@ -169,7 +163,7 @@ data$date <- as.Date(data$period)
 tmp <- data[c("date", "GDP_year_plot", "fore1", "fore2", "fore3")]
 meltdf <- melt(tmp,id="date")
 meltdf$GDP_year <- data$GDP_year
-levels(meltdf$variable) <- c("period", "YoY GDP", "Model 1", "Model 2", "Model 3")
+levels(meltdf$variable) <- c("YoY GDP", "Model 1", "Model 2", "Model 3")
 ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
   geom_line(na.rm=FALSE) + 
   scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
@@ -179,14 +173,13 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 
 
-# select data before 2012 (obs 288)
-subset2 <- data[1:288,]
+# select data before 2012 (obs 289)
+subset2 <- data[1:289,]
 
 # fitting out of sample
 modelsubset21 <- lm(GDP_year ~ E_sa, data = subset2)
 modelsubset22 <- lm(GDP_year ~ E_sa + Var_sa, data = subset2)
 modelsubset23 <- lm(GDP_year ~ E_sa + Var_sa + Z_sa + Var_Z_sa, data = subset2)
-
 
 stargazer(modelsubset21, modelsubset22, modelsubset23, align = TRUE,
           intercept.bottom = FALSE,
@@ -194,24 +187,27 @@ stargazer(modelsubset21, modelsubset22, modelsubset23, align = TRUE,
           df = FALSE,
           covariate.labels = c("Constant","BSI", "Var(BSI)", "EIR1", "Var(EIR1)"),
           dep.var.caption  = "Linear Regression",
-          dep.var.labels   = "Year on Year GDP (in \\%)")
+          dep.var.labels   = "Year on Year GDP")
+AIC(modelsubset21, modelsubset22, modelsubset23)$AIC
+BIC(modelsubset21, modelsubset22, modelsubset23)$BIC
 
-fore1 <- forecast(modelsubset21, data)
-fore2 <- forecast(modelsubset22, data)
-fore3 <- forecast(modelsubset23, data)
-data$fore1 <- fore1$mean 
-data$fore2 <- fore2$mean 
-data$fore3 <- fore3$mean 
+
+fore21 <- forecast(modelsubset21, data)
+fore22 <- forecast(modelsubset22, data)
+fore23 <- forecast(modelsubset23, data)
+data$fore21 <- fore21$mean 
+data$fore22 <- fore22$mean 
+data$fore23 <- fore23$mean 
 
 data$date <- as.Date(data$period)
-tmp <- data[c("date", "GDP_year_plot", "fore1", "fore2", "fore3")]
+tmp <- data[c("date", "GDP_year_plot", "fore21", "fore22", "fore23")]
 meltdf <- melt(tmp,id="date")
 meltdf$GDP_year <- data$GDP_year
-levels(meltdf$variable) <- c("period", "YoY GDP", "Model 1", "Model 2", "Model 3")
+levels(meltdf$variable) <- c("YoY GDP", "Model 1", "Model 2", "Model 3")
 ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) + 
   geom_line(na.rm=FALSE) + 
   scale_x_date(date_breaks = "1 year", date_labels = "%Y")+
   ylab("YoY GDP") + 
-  geom_vline(aes(xintercept=as.numeric(date[288])), colour="black", size=0.5) +
+  geom_vline(aes(xintercept=as.numeric(date[289])), colour="black", size=0.5) +
   theme_bw() + theme(axis.text.x = element_text(angle=45, hjust = 1))
 
