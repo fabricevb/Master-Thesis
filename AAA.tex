@@ -1682,14 +1682,14 @@ And three different models where the three evolution of individual responses wit
 
 
 \begin{table}[H] \centering \footnotesize
-  \caption{Linear regressions} 
+  \caption{Linear Regression Results for the period 1988 to 2018} 
   \label{tab:models comparaison 1} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{5}{c}{Linear Regression} \\ 
 \cline{2-6} 
-\\[-1.8ex] & \multicolumn{5}{c}{year on year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{5}{c}{year on year GDP} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(\ref{eq:model1})} & \multicolumn{1}{c}{(\ref{eq:model2})} & \multicolumn{1}{c}{(\ref{eq:model3})} & \multicolumn{1}{c}{(\ref{eq:model4})} & \multicolumn{1}{c}{(\ref{eq:model5})}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & -1.756^{***} & -1.729^{***} \\ 
@@ -1750,7 +1750,7 @@ The other observation that can be done is that the interest of the variance in t
 \autoref{eq:model4} & 0.875 &0.699 & -12.757 & 62.707 & 0.574 \\
 \autoref{eq:model5} & 0.873 &0.689 & -9.83 & 59.311 & 0.566 \\ \hline
     \end{tabular}
-    \caption{Accuracy}
+    \caption{Accuracy Measures}
     \label{tab:accuracy measures}
 \end{table}
 
@@ -1788,7 +1788,7 @@ alternative hypothesis: two.sided
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[scale=0.6]{Graphs/predictions1.pdf}
+    \includegraphics[scale=0.5]{Graphs/predictions1.pdf}
     \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
     \label{fig:predictions1}
 \end{figure}
@@ -1814,26 +1814,22 @@ Following those results, there are two good candidates; \autoref{eq:model2} and 
 
 
 
-
-
-
-
-
-
-
-
-
 \subsection{Out-of-Sample Performances}
 
-\begin{table}[!htbp] \centering 
-  \caption{} 
+To know if the results from the linear model are robust, out-of-sample estimation will be performed.
+
+
+\newpage
+
+\begin{table}[H] \centering \scriptsize
+  \caption{Linear Regression results for the period 1988 to 2000}
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{Linear Regression} \\ 
 \cline{2-4} 
-\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
 \hline \\[-1.8ex] 
  Constant & 4.437^{***} & 0.660 & -0.519 \\ 
@@ -1856,7 +1852,8 @@ Observations & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}
 R$^{2}$ & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
 Residual Std. Error & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
-F Statistic & \multicolumn{1}{c}{126.060$^{***}$} & \multicolumn{1}{c}{69.144$^{***}$} & \multicolumn{1}{c}{37.845$^{***}$} \\ 
+AIC & \multicolumn{1}{c}{124.714} & \multicolumn{1}{c}{122.625} & \multicolumn{1}{c}{121.622} \\ 
+BIC & \multicolumn{1}{c}{130.327} & \multicolumn{1}{c}{130.109} & \multicolumn{1}{c}{132.849} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -1864,106 +1861,65 @@ F Statistic & \multicolumn{1}{c}{126.060$^{***}$} & \multicolumn{1}{c}{69.144$^{
 \end{table} 
 
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Graphs/predictions2.pdf}
-    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2000}}
     \label{fig:predictions1}
 \end{figure}
 
 
-\begin{figure}[!htbp]
+
+\begin{table}[H] \centering \scriptsize
+  \caption{Linear Regression results for the period 1988 to 2012}
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{Linear Regression} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 3.871^{***} & -0.686 & -1.349 \\ 
+  & (0.171) & (1.054) & (1.102) \\ 
+  & & & \\ 
+ BSI & 17.243^{***} & 20.939^{***} & 21.499^{***} \\ 
+  & (1.341) & (1.491) & (1.478) \\ 
+  & & & \\ 
+ Var(BSI) &  & 40.466^{***} & 33.997^{***} \\ 
+  &  & (9.256) & (10.062) \\ 
+  & & & \\ 
+ EIR1 &  &  & -33.401^{**} \\ 
+  &  &  & (16.292) \\ 
+  & & & \\ 
+ Var(EIR1) &  &  & 71.077 \\ 
+  &  &  & (44.449) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.637} & \multicolumn{1}{c}{0.699} & \multicolumn{1}{c}{0.718} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.634} & \multicolumn{1}{c}{0.693} & \multicolumn{1}{c}{0.705} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.064} & \multicolumn{1}{c}{0.974} & \multicolumn{1}{c}{0.954} \\ 
+AIC & \multicolumn{1}{c}{288.325} & \multicolumn{1}{c}{272.383} & \multicolumn{1}{c}{270.247} \\ 
+BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1}{c}{285.633} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+
+
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Graphs/predictions3.pdf}
-    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2012}}
     \label{fig:predictions1}
 \end{figure}
 
-
-
-
-\begin{landscape}
-    \section{Model with before 2000 data}
-
-\begin{table}[!htbp]  \centering \footnotesize
-  \caption{} 
-  \label{} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{6}{c}{Linear Regression} \\ 
-\cline{2-7} 
-\\[-1.8ex] & \multicolumn{6}{c}{year on year GDP (in \%)} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
-\hline \\[-1.8ex] 
- Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 4.437^{***} & 0.660 & -0.519 \\ 
-  & (0.160) & (0.631) & (0.615) & (0.211) & (1.899) & (2.041) \\ 
-  & & & & & & \\ 
- BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 17.374^{***} & 19.212^{***} & 20.327^{***} \\ 
-  & (1.317) & (1.252) & (1.224) & (1.547) & (1.758) & (1.813) \\ 
-  & & & & & & \\ 
- Var(BSI) &  & 49.102^{***} & 36.477^{***} &  & 30.545^{*} & 31.371^{**} \\ 
-  &  & (5.869) & (8.089) &  & (15.269) & (14.992) \\ 
-  & & & & & & \\ 
- EIR1 &  &  & -28.718^{**} &  &  & -37.120^{**} \\ 
-  &  &  & (13.792) &  &  & (17.899) \\ 
-  & & & & & & \\ 
- Var(EIR1) &  &  & 78.555^{**} &  &  & 53.535 \\ 
-  &  &  & (35.187) &  &  & (52.433) \\ 
-  & & & & & & \\ 
-\hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
-Res. Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
-F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{126.060$^{***}$} & \multicolumn{1}{c}{69.144$^{***}$} & \multicolumn{1}{c}{37.845$^{***}$} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
-\end{table} 
-
-\end{landscape}
-
-\begin{landscape}
-    \begin{table}[!htbp]  \centering \footnotesize 
-  \caption{} 
-  \label{} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{6}{c}{Linear Regression} \\ 
-\cline{2-7} 
-\\[-1.8ex] & \multicolumn{6}{c}{year on year GDP (in \%)} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
-\hline \\[-1.8ex] 
- Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 3.903^{***} & -1.068 & -1.764 \\ 
-  & (0.160) & (0.631) & (0.615) & (0.180) & (1.102) & (1.163) \\ 
-  & & & & & & \\ 
- BSI & 15.773^{***} & 21.443^{***} & 21.548^{***} & 17.494^{***} & 21.469^{***} & 22.103^{***} \\ 
-  & (1.317) & (1.252) & (1.224) & (1.379) & (1.518) & (1.505) \\ 
-  & & & & & & \\ 
- Var(BSI) &  & 49.102^{***} & 36.477^{***} &  & 43.809^{***} & 38.891^{***} \\ 
-  &  & (5.869) & (8.089) &  & (9.608) & (10.307) \\ 
-  & & & & & & \\ 
- EIR1 &  &  & -28.718^{**} &  &  & -38.430^{**} \\ 
-  &  &  & (13.792) &  &  & (17.020) \\ 
-  & & & & & & \\ 
- Var(EIR1) &  &  & 78.555^{**} &  &  & 63.393 \\ 
-  &  &  & (35.187) &  &  & (46.225) \\ 
-  & & & & & & \\ 
-\hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{88} & \multicolumn{1}{c}{88} & \multicolumn{1}{c}{88} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.652} & \multicolumn{1}{c}{0.720} & \multicolumn{1}{c}{0.740} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.648} & \multicolumn{1}{c}{0.714} & \multicolumn{1}{c}{0.727} \\ 
-Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{1.083} & \multicolumn{1}{c}{0.977} & \multicolumn{1}{c}{0.954} \\ 
-F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^{***}$} & \multicolumn{1}{c}{79.773$^{***}$} & \multicolumn{1}{c}{161.027$^{***}$} & \multicolumn{1}{c}{109.438$^{***}$} & \multicolumn{1}{c}{58.910$^{***}$} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
-\end{table} 
-\end{landscape}{}
 
 
 
@@ -2183,134 +2139,19 @@ lag4(BSI) &   &  &  &  &  & $1$ \\
 
 \chapter*{Code}
 \section*{R code for Seasonal Adjustments}
-\href{https://github.com/fabricevb/Master-Thesis/blob/master/R/20Code/Seasonal/20Correction%20model%20data.R}{Link of the R Code for Seasonal Adjustments on https://github.com/fabricevb/Master-Thesis}
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Seasonal Correction model data.R}{Code for Seasonal Adjustments on https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Seasonal Correction model data.R}
 
 
-\begin{lstlisting}[language=R]
-###########################
-### Preparing data        #
-###########################
-
-Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.3/")
-
-#import libraries
-library(rJava)
-library(RJDemetra)
-library(rjdqa)
-library(tidyverse)
-library(readxl)
-library(xlsx)
-
-# upload data
-data <- read_excel("Master-Thesis/Datasets/data.xlsx")
-
-# create time series with the 
-data_ts = ts(data, start=c(1988,1), frequency=12)
-
-#################################
-# apply seasonal correction X13 #
-#################################
-
-# for E(X)
-data_E <- data_ts[, "E"]
-data_E_model <- x13(data_E, spec="RSA0") # X-13ARIMA method
-
-# for E(Z)
-data_EZ <- data_ts[, "Z"]
-data_EZ_model <- x13(data_EZ, spec="RSA0") # X-13ARIMA method
-
-# for E(Z2)
-data_EZ2 <- data_ts[, "Z2"]
-data_EZ2_model <- x13(data_EZ2, spec="RSA0") # X-13ARIMA method
-
-# for E(Z3)
-data_EZ3 <- data_ts[, "Z3"]
-data_EZ3_model <- x13(data_EZ3, spec="RSA0") # X-13ARIMA method
-
-# for Var(X)
-data_Var <- data_ts[, "Var"]
-data_Var_model <- x13(data_Var, spec="RSA0") # X-13ARIMA method
-
-# for Var(Z)
-data_VarZ <- data_ts[, "Var_Z"]
-data_VarZ_model <- x13(data_VarZ, spec="RSA0") # X-13ARIMA method
-
-# for Var(Z2)
-data_VarZ2 <- data_ts[, "Var_Z2"]
-data_VarZ2_model <- x13(data_VarZ2, spec="RSA0") # X-13ARIMA method
-
-# for Var(Z3)
-data_VarZ3 <- data_ts[, "Var_Z3"]
-data_VarZ3_model <- x13(data_VarZ3, spec="RSA0") # X-13ARIMA method
-
-data$E_sa <- data_E_model$final$series[, "sa"]
-data$Var_sa <- data_Var_model$final$series[, "sa"]
-data$Z_sa <- data_EZ_model$final$series[, "sa"]
-data$Z2_sa <- data_EZ2_model$final$series[, "sa"]
-data$Var_Z_sa <- data_VarZ_model$final$series[, "sa"]
-data$Var_Z2_sa <- data_VarZ2_model$final$series[, "sa"]
-data$Z3_sa <- data_EZ3_model$final$series[, "sa"]
-data$Var_Z3_sa <- data_VarZ3_model$final$series[, "sa"]
-
-
-################################
-# plot seasonal corrected data #
-################################
-
-par(mfrow=c(4,2))
-
-# Basic plot with the original series, the trend and the SA series
-plot(data_E_model, type_chart = "sa-trend", caption="BSI")
-plot(data_Var_model, type_chart = "sa-trend", caption="Var(BSI)")
-plot(data_EZ_model, type_chart = "sa-trend", caption="EIR1")
-plot(data_VarZ_model, type_chart = "sa-trend", caption="Var(EIR1)")
-plot(data_EZ2_model, type_chart = "sa-trend", caption="EIR2")
-plot(data_VarZ2_model, type_chart = "sa-trend", caption="Var(EIR2)")
-plot(data_EZ3_model, type_chart = "sa-trend", caption="EIR3")
-plot(data_VarZ3_model, type_chart = "sa-trend", caption="Var(EIR3)")
-
-par(mfrow=c(1,1))
-
-
-# look at different results (plots)
-# S-I ratio
-plot(data_E_model$decomposition)
-dev.print(device = pdf, file="S-I_1.pdf", width=11, height=8)
-plot(data_Var_model$decomposition)
-dev.print(device = pdf, file="S-I_2.pdf", width=11, height=8)
-plot(data_EZ_model$decomposition)
-dev.print(device = pdf, file="S-I_3.pdf", width=11, height=8)
-plot(data_VarZ_model$decomposition)
-dev.print(device = pdf, file="S-I_4.pdf", width=11, height=8)
-plot(data_EZ2_model$decomposition)
-dev.print(device = pdf, file="S-I_5.pdf", width=11, height=8)
-plot(data_VarZ2_model$decomposition)
-dev.print(device = pdf, file="S-I_6.pdf", width=11, height=8)
-plot(data_EZ3_model$decomposition)
-dev.print(device = pdf, file="S-I_7.pdf", width=11, height=8)
-plot(data_VarZ3_model$decomposition)
-dev.print(device = pdf, file="S-I_8.pdf", width=11, height=8)
-
-
-##########
-# OUTPUT #
-##########
-
-write.xlsx(data, "Master-Thesis/Datasets/data_sa.xlsx") 
-\end{lstlisting}
-
-
-\newpage
 \section*{R code for Correlation Analysis}
 
-\href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Correlations.R}{Code for the correlation analysis on https://github.com/fabricevb/Master-Thesis}
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Correlations.R}{Code for the correlation analysis on https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Correlations.R}
 
 
 
 
-\section*{R code for Linear (Auto-Regressive) Models}
+\section*{R code for Linear Models}
 
-\href{https://github.com/fabricevb/Master-Thesis/blob/master/R%20Code/Linear%20Regression.R}{Code for Linear Models on https://github.com/fabricevb/Master-Thesis}
+\href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Linear Regression.R}{Code for the Linear Models on https://github.com/fabricevbMaster-Thesis/blob/master/R Code/Linear Regression.R}
 
 
 
