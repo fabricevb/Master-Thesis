@@ -19,6 +19,39 @@
 \begin{document}   
 
 
+In \autoref{fig:ggpairs1}, it can be seen that indeed the indicators for the different questions have a high correlation with Year on Year GDP, except for question 1 (Question 18 in the survey). This could have some harm 
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale=0.4]{Graphs/Corr_GDP_Questions.pdf}
+    \caption{Correlation plot of YoY GDP and the indicator of the different questions taken into account in the calculation of the industry BSI}
+    \label{fig:ggpairs1}
+\end{figure}
+
+
+
+\begin{table}[!htbp] \centering 
+  \caption{Descriptive Statistics} 
+  \label{tab:descriptive stats} 
+\begin{tabular}{@{\extracolsep{5pt}}lrcrrrrr} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Variables & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+BSI & $-$0.094 & 0.075 & $-$0.321 & $-$0.141 & $-$0.033 & 0.037 \\ 
+Var(BSI) & 0.116 & 0.017 & 0.076 & 0.107 & 0.129 & 0.154 \\ 
+EIR1 & $-$0.0003 & 0.006 & $-$0.034 & $-$0.004 & 0.003 & 0.030 \\ 
+Var(EIR1) & 0.020 & 0.003 & 0.012 & 0.017 & 0.022 & 0.031 \\ 
+EIR2 & $-$0.001 & 0.024 & $-$0.116 & $-$0.013 & 0.013 & 0.064 \\ 
+Var(EIR2) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\ 
+EIR3 & $-$0.002 & 0.031 & $-$0.163 & $-$0.018 & 0.018 & 0.103 \\ 
+Var(EIR3) & 0.107 & 0.016 & 0.067 & 0.095 & 0.119 & 0.151 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+
 \section*{Test for seasonality}
 \label{sec:test for seasonality}
 
