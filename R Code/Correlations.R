@@ -52,7 +52,7 @@ ggplot(meltdf,aes(x=date,y=value,group=variable)) +
 stargazer(cor(na.omit(data[c("Obs", "GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa")]))
           , title="Correlation Matrix")
 
-tmp <- data[c("E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")]
+tmp <- data[c("GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")]
 
 # descriptive table
 stargazer(as.data.frame(tmp))
