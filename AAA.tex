@@ -109,6 +109,8 @@
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\E}{E}
 \DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\BSI}{BSI}
+\DeclareMathOperator{\EIR}{EIR}
 
 
 % ------------------------ Page settings -----------------------------
@@ -293,6 +295,7 @@ Survey Volatility -
 \chapter*{List of Abbreviations}
 
 \begin{tabular}{l l}
+  AIC       & Akaike's information criterion \\
   BSI       & Business Survey Indicator/Barometer \\
   Cor       & Correlation \\
   Cov       & Covariance \\
@@ -306,7 +309,7 @@ Survey Volatility -
   NBER      & The National Bureau of Economic Research (US) \\
   NSI       & National Statistics Institutes \\
   Var       & Variance \\
-  YoY       & Year on Year
+  YoY       & Year on Year \\
 \end{tabular}
 
 \tableofcontents
@@ -425,7 +428,7 @@ the lag between the observation and publication is even greater since the busine
 If we look at \autoref{fig:timeline} we can see that at the end of the month of January, the GDP is published for the last quarter of the previous year, so the information is already out-dated of some weeks, when the business survey indicator is published for the month of January around the same date. After the end of January publication, observers of the economy have to wait for three months to have new information about the GDP, while each month, the BSI is published and available for everyone.
 
 \begin{figure}[htp!]
-    \centering
+     \centering \footnotesize
     \small
     \begin{tikzpicture}
         % draw horizontal line   
@@ -475,7 +478,7 @@ Indicators that can be used aside from the business survey are average weekly wo
 \label{sec:Business Cycles}
 
 In 1946, \citeauthor{mitchell_measuring_1946} defined a business cycle as a recursive fluctuations, affecting macroeconomics variables. Since then a lot of variables where used to model business cycles but it's commonly admitted that Growth Domestic Product (GDP) is the most important of them. 
-A good measure of the growth of GDP is Year on Year GDP that is obtained as follow
+A good measure of the growth of GDP is year on year GDP that is obtained as follow
 
 \begin{eqnarray}
    \mbox{YoY GDP} = \frac{\mbox{GDP}_t - \mbox{GDP}_{t-12}}{\mbox{GDP}_{t-12}}      \label{eq:YoY GDP}
@@ -485,7 +488,7 @@ A good measure of the growth of GDP is Year on Year GDP that is obtained as foll
 \autoref{fig:Business Cycle} shows a simplified version of business cycles theory when using as measure GDP or YoY GDP.
 
 \begin{figure}[htp!]
-    \centering
+     \centering \footnotesize
     \small
     \begin{tikzpicture}
         \begin{axis}[
@@ -541,7 +544,7 @@ A good measure of the growth of GDP is Year on Year GDP that is obtained as foll
         \addplot[mark=none, dashed] coordinates {(17.3, -1.5) (17.3, -1)}; 
         \end{axis}
         \end{tikzpicture}
-    \caption{The Business Cycle theory of GDP and Year on Year GDP}
+    \caption{The Business Cycle theory of GDP and year on year GDP}
     \label{fig:Business Cycle}
 \end{figure}
 
@@ -559,7 +562,7 @@ We can see from \autoref{fig:NBER BS}, which represent the different bottoms and
 We can notice that periods of economic growth, usually last longer than economical decrease.
 
 \begin{figure}[H]
-    \centering
+     \centering \footnotesize
     \small
     \begin{tikzpicture}
         \begin{axis}[
@@ -932,9 +935,10 @@ Again the variance can be written in different ways;
 
 
 \section{Properties}
+    \label{sec:properties variance}
 
 \begin{figure}[hbt!]
-    \centering
+     \centering \footnotesize
     \begin{tikzpicture}
     \tikzset{
       legendmatrix/.style={% style for legends
@@ -1090,7 +1094,7 @@ When we take two periods into account, a month (t) and the previous one (t-1) fo
 
 
 \begin{table}[htp!]
-    \centering
+     \centering \footnotesize
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} &         & \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
@@ -1119,7 +1123,7 @@ The calculation of $z_i$ is the difference of $x_i$ at t-1 and $x_i$ at t
 the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}. 
 
 \begin{table}[H]
-    \centering
+     \centering \footnotesize
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} &         & \textbf{-} & \textbf{0} & \textbf{+} \\ \cline{2-5}
@@ -1361,7 +1365,7 @@ The results are plotted in \autoref{fig:seasonal ajusted rjdemetra}.
 The method applied is is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction since it's not applying log/level, outliers and calendar corrections. 
 It was chosen since it's the closes to the X11 applied by the NBB to the business survey when monthly publishing the indicators.
 
-It's interesting here to notice here that there is no need for Year on Year GDP seasonal correction since  it's, by definition, eliminating all its seasonality.
+It's interesting here to notice here that there is no need for year on year GDP seasonal correction since  it's, by definition, eliminating all its seasonality.
 
 \begin{figure}[htp!]
     \centering
@@ -1393,7 +1397,7 @@ It's widely used and can be understood in the case of the business survey, knowi
 There is a large effort made by the NBB to contact respondents and send them reminders to make sure that non-response is as small as possible.
 The response rate is usually around 95\%, which is quite high for a survey, therefore it can be assumed that non-response is not very important in the business survey.
 
-% Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the Year on Year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
+% Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the year on year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
 
 
 
@@ -1423,7 +1427,7 @@ It was shown that indeed attrition was present in the survey.
 In the case of the industry business survey, it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. Other sectors have the same issue.
 
 
-\begin{table}[htp!] \centering 
+\begin{table}[htp!]  \centering \footnotesize 
   \caption{Correlation of time with different indicators } 
   \label{tab:corr attrition} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccc} 
@@ -1453,35 +1457,25 @@ In the context of this paper, it's important to notice the potential importance 
 
 The previous chapter already did some of the exploratory analysis.
 Further observations of the different variables at hand will be done is a short descriptive statistics section.
-...............In a second part, correlations will be looked at; (1) correlation among the questions indicators (taken into account in the calculation of the industry BSI) and with the YoY GDP. (2) 
-
+In a second part, correlations among the variables will be looked at, and the last part will test autocorrelation.
 
 
 \section{Descriptive Statistics}
 
 The variables at hand are for the industry business survey and takes into account the four questions available on \autopageref{Appendix: Question NS975 description}, as explained in \autoref{sec:Questionnaire}.
-The different variables are unweighted and seasonally corrected. 
-The data is taken over a 30 years period, from 1988 to 2018.
+The different variables are unweighted since the weights of the different respondents are only available for the surveys after 2008.
 
-The different variables at hand are summarised in \autoref{tab:descriptive statistics} and there time series are plotted in appendix, on \autopageref{plot:variables}.
+The data is seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for a 30 years period, from 1988 to 2018.
+The year on year GDP calculation was explained in \autoref{eq:YoY GDP} and is here calculated for the Belgian economy.
 
-The Year on Year GDP calculation was explained in \autoref{eq:YoY GDP}. It can be seen that it has a quite cyclical behaviour, with lower point during the 1994 and 2008 crisis.
+The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as much observations as the other variables since it's a quarterly measure, while the survey is monthly. 
+The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never goes higher than 0.037 and never lower than -0.321.
 
-- BSI
-The business survey indicator seems, from \autoref{plot:variables}, to follow quite well the evolution of YoY GDP. The other variables, seem to react to 2008 crises but are more volatile. It seems from those plots that the BSI is the most accurate
-
-
-
-EIR
+The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follow quite well the evolution of YoY GDP. 
+The other variables, seem to react to major changes in the economy but are more volatile. 
 
 
-var EIR
-
-The data that is used from now on is unweighted. Due to the long period, the weighted indicators could only be obtained 
-
-The data is also seasonally corrected as explained in \autoref{sec:seasonal correction}.
-
-\begin{table}[!htbp] \centering 
+\begin{table}[!htbp]  \centering \footnotesize 
   \caption{Descriptive Statistics} 
   \label{tab:descriptive statistics} 
 \begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
@@ -1514,12 +1508,6 @@ Var(EIR3)   & 372       & 0.123 & 0.019 & 0.075 & 0.109 & 0.137 & 0.166 \\
 
 \section{Correlation Analysis}
 
-Three different correlations need to be looked at; (1) between questions of the industry BSI, (2) between YoY GDP and the different indicators and their variance and (3) the autocorrelation.
-
- 
-
-\subsection{Correlation with GDP}
-
 Belgian industry claims 25\% of the labour force in Belgium and was shown as a good indicator of the year to year GDP
 \cite{de_greef_national_2009}.
 
@@ -1530,31 +1518,39 @@ Belgian industry claims 25\% of the labour force in Belgium and was shown as a g
     \label{fig:corr indicators}
 \end{figure}
 
-\autoref{fig:corr indicators} shows the correlation between Year on Year GDP and the different variables at hand. 
+\autoref{fig:corr indicators} shows the correlation matrix and plots of the different variables at hand. 
+Several observations can be done.
+First, it can be seen that the correlation between the business survey indicator and YoY GDP is very high while other variables have a rather small correlation with YoY GDP.
 
-- corr GDP  indicators
+The correlation between the BSI and its variance is also high, this can be explained to some extend by the different observations done in \autoref{sec:properties variance}.
+The same can not be said about the correlation between the EIR and its variance, since their correlation is small for the three different measures of EIR.
 
-The correlation between the business survey indicator and YoY GDP is very high while the other variables have a rather small correlation with YoY GDP.
+As could be forseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high.
 
-
-- corr BSI \& var
-
-Interesting to note is the quite large correlation between the indicator and the variance of the
-
-- corr EIR(1 2 3) \& var(EIR1 2 3)
-
-- corr BSI \& EIR
-
-- corr EIR \& var(EIR)
-
-- corr EIR(1 2 3) var(EIR1 2 3) \& corr EIR(1 2 3) var(EIR1 2 3)
-
-- corr Var
+The correlation between the different types of variances is also high, which can mean that they contain quite similar information.
+With this definition it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information, if this will help to model Belgian growth will be discussed in the next chapter.
 
 
+\section{Autocorrelation}
+
+Autocorrelation, also known as serial correlation, is the correlation between an observation at time t and previous observations.
+
+The method used here is to estimate the autocorrelation function and plot it, as can be seen in \autoref{fig:ACF}, where the correlation of a variables with its previous lags is shown. In the case of the YoY GDP, one lag means three months since the variables is quarterly, while for the other variables the lag corresponds to one month.
+Several variables have high autocorrelation. The variances are highly correlated over time, as is the BSI. 
+On the other hand, YoY GDP is slightly correlated with its three previous quarter values. 
+For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the amount of months taking into account for the EIR.
 
 
-\section{Auto-Correlation}
+\begin{figure}[!htbp]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[scale=0.75]{Graphs/ACF.pdf}
+    \caption{Autocorrelation plots for YoY GDP, the BSI, Var(BSI), EIR1, Var(EIR1), EIR2, Var(EIR2), EIR3 and Var(EIR3)}
+    \label{fig:ACF}
+\end{figure}
+
+
+\section{Stationarity}
 
 Test stationarity of the time series (ADF)
 To test the stationarity of the time series, let’s run the Augmented Dickey-Fuller Test using the adf.test() function from the tseries R package.
@@ -1564,7 +1560,7 @@ First set the hypothesis test:
 The null hypothesis H0 : that the time series is non-stationary The alternative hypothesis HA : that the time series is stationary
 
 \begin{table}[!htbp] 
-  \centering \small
+   \centering \footnotesize 
   \caption{ADF Test} 
   \label{tab:ADF Test} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccccccc} 
@@ -1577,79 +1573,30 @@ p-value  & $< 0.01$ & 0.06 & $< 0.01$ & 0.26 & $< 0.01$ & 0.21 & $< 0.01$ & 0.12
 \end{table} 
 
 
-\begin{figure}[!htbp]
-    \centering
-    \captionsetup{justification=centering}
-    \includegraphics[scale=0.75]{Graphs/ACF.pdf}
-    \caption{Autocorrelation plots for the BSI, Var(BSI), EIR and Var(EIR)}
-    \label{fig:ACF}
-\end{figure}
-
-
-
-\section{Specificity of question 3 and 4, are peoples predictions correct ?}
-
-\begin{table}[!htbp] 
-  \centering 
-  \caption{Correlation Matrix of different lags of the BSI of \textbf{question 3} with YoY GDP} 
-  \label{tab:corr question3} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
-\hline \\[-1.8ex] 
-YoY GDP & $1$ & $0.707$ & $0.679$ & $0.673$ & $0.628$ & $0.560$ \\
-BSI     &    &  $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
-lag1(BSI) &  &  & $1$ & $0.975$ & $0.940$ & $0.892$ \\
-lag2(BSI) &  &  &  & $1$ & $0.974$ & $0.933$ \\
-lag3(BSI)  &  &  &  &  & $1$ & $0.969$ \\
-lag4(BSI)  &  &  &  &  &  & $1$ \\
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
-
-
-\begin{table}[!htbp] \centering 
-    \caption{Correlation Matrix of different lags of the BSI of \textbf{question 4} with YoY GDP} 
-  \label{tab:corr question4} 
-\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
-\hline \\[-1.8ex] 
-YoY GDP  & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
-BSI       &   & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
-lag1(BSI) &   &  & $1$ & $0.970$ & $0.928$ & $0.863$ \\
-lag2(BSI) &   &  &  & $1$ & $0.970$ & $0.917$ \\
-lag3(BSI) &   &  &  &  & $1$ & $0.959$ \\
-lag4(BSI) &   &  &  &  &  & $1$ \\
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
-
 
 
 
 
 \chapter{Linear Models}
 
-The interest of this chapter is to use a model to test the pertinence of the variance of the indicator, the evolution of the individual responses and its variance, in the short term prediction of the evolution of GDP.
+The interest of this chapter is to use a model to test the pertinence of the variables in the short term prediction of the evolution of GDP.
 
 As mention in \autoref{sec:nowcasting}, were nowcasting was discussed, there exist a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 
-The National Bank of Belgium for example uses for example a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well-known methods are ARIMA models, MIDAS and much more.
+The National Bank of Belgium for example, developed a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well-known methods are ARIMA models, MIDAS and much more.
 
-
-The interest of this paper is to explore the utility of the variance of the business survey indicator and the evolution of individual responses and its variance. 
-To achieve this objective, it's important to use a model that account easily for the interest of each variable. For those reasons, the linear model is applied here.
+The interest of this paper is to explore the utility of the variance of the business survey indicator, the evolution of individual responses and its variance. 
+To achieve this objective, it's important to use a model that account easily for the interest of each variable. Therefore, the linear model is applied here.
 
 \section{Method}
 
-The quarterly GDP and the Quarterly Year on Year GDP are set in the last month of the quarter. F
-This is the common way to go.
+The quarterly year on year GDP are set in the last month of the quarter. This is the common way to go to take a reasonable approach and still have some predictive properties.
+Indeed of we look at \autoref{fig:time of the data}, it means that with the linear model it's possible to estimate quarterly YoY GDP one month before it's published. 
+This means that the model will be estimated only with the indicators of the last month of each quarter. One the model is estimated, it's then possible to make predictions or estimations of YoY GDP for each month.
+
 
 \begin{figure}[H]
-    \centering
+     \centering \footnotesize
 \begin{tikzpicture}
 % draw horizontal line   
 \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
@@ -1679,37 +1626,53 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 \end{figure}
 
 
-
-
 \section{Linear Model}
 
+The linear regression can be written as follow
+
 \begin{eqnarray}
-    YoY \text{ } GDP_{t} = \beta_0 + \sum^n_{i = 1}
+    \text{YoY GDP}_{t} = \beta_0 + \sum^n_{i = 1}
        \beta_{i} X_{t} + \epsilon_t 
 \end{eqnarray}
 
-Where 
+Where $\beta_{0}$ is a constant, $\beta_{i}$  are the different regression coefficients of the monthly predictors ( $X_{t}$) and $\epsilon_t$ is the error term.
 
-\begin{tabular}{l l}
-    $YoY \text{ } GDP_t$     & Year on Year GDP at time t \\
-    $X_{t}$         & monthly predictors \\
-    $\beta_{0}$     & constant \\
-    $\beta_{i}$     & regression coefficients \\
-    $\epsilon_t$    & error term \\
-\end{tabular}
+The first approach here is to propose five different models (\autoref{eq:model1}-\ref{eq:model5}) and compare them.
+The simple model takes as unique regressor the business survey indicator
 
-The model proposed here is the simplest model possible.
+\begin{eqnarray}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t} + \epsilon_t \label{eq:model1} 
+\end{eqnarray}
+
+The other model takes the business survey indicator and its variance as regressors
+
+\begin{eqnarray}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \epsilon_t \label{eq:model2}
+\end{eqnarray}
+
+And three different models where the three evolution of individual responses with their variances are each time added to the models including the business survey and its variance
+
+\begin{eqnarray}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{3} \EIR1_{t}  + \beta_{4} \Var(\EIR1)_{t} + \epsilon_t \label{eq:model3}
+\end{eqnarray}
+\begin{eqnarray}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{5} \EIR2_{t}  + \beta_{6} \Var(\EIR2)_{t} + \epsilon_t \label{eq:model4}
+\end{eqnarray}
+\begin{eqnarray}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{7} \EIR3_{t}  + \beta_{8} \Var(\EIR3)_{t} + \epsilon_t  \label{eq:model5}
+\end{eqnarray}
+
 
 \begin{table}[H] \centering \footnotesize
-  \caption{} 
+  \caption{Linear regressions} 
   \label{tab:models comparaison 1} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{5}{c}{Linear Regression} \\ 
 \cline{2-6} 
-\\[-1.8ex] & \multicolumn{5}{c}{Year on Year GDP (in \%)} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)}\\ 
+\\[-1.8ex] & \multicolumn{5}{c}{year on year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(\ref{eq:model1})} & \multicolumn{1}{c}{(\ref{eq:model2})} & \multicolumn{1}{c}{(\ref{eq:model3})} & \multicolumn{1}{c}{(\ref{eq:model4})} & \multicolumn{1}{c}{(\ref{eq:model5})}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & -1.756^{***} & -1.729^{***} \\ 
   & (0.160) & (0.631) & (0.615) & (0.635) & (0.633) \\ 
@@ -1752,17 +1715,34 @@ BIC & \multicolumn{1}{c}{390.753} & \multicolumn{1}{c}{338.980} & \multicolumn{1
 \end{table} 
 
 
+The estimates can be seen in \autoref{tab:models comparaison 1} for the five regressions. Some goodness of fit measures are also available. 
+Those first results show the limited interest of EIR2 and EIR3 since the model with EIR1 and its variance (\autoref{eq:model3}) is better performing according to all the results than the two other models (\autoref{eq:model4} and \autoref{eq:model5}).
+
+The other observation that can be done is that the interest of the variance in the prediction seems significant since adding, next to the information of the business survey, increases the Adjusted R$^2$ by 0.151. The model is also better according to AIC and BIC results.
 
 
-\section{Evaluation and Model selection}
+\section{Model selection}
 
-\subsection{R-square}
+Since there are a large among of different possible models when having eight different regressors, some procedure needs to be chosen to look for the best model.
 
-\subsection{AIC and BIC}
+The method applied here is a step procedure where AIC is used to select the best model.
+
+Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both. 
+The three methods are all based on Akaike's information criterion (AIC) as measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
+
+The results of the three different methods converge to the model already proposed in \autoref{eq:model3} that has BSI, Var(BSI), EIR1 and Var(EIR1) as regressors.
+
+
 
 \subsection{Mean Square Prediction Error}
 
 \subsection{Diebold-Mariano Test}
+
+
+
+
+
+
 
 
 
@@ -1783,9 +1763,9 @@ MASE: Mean Absolute Scaled Error
 
 ACF1: Autocorrelation of errors at lag 1.
 
-\section{Relative Importance}
+\chapter{Relative Importance}
 
-\begin{table}[!htbp] \centering 
+\begin{table}[!htbp]  \centering \footnotesize 
   \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
@@ -1799,7 +1779,7 @@ $0.010$ & $0.018$ & $0.027$ & $0.029$ & $0.039$ & $0.094$ & $0.095$ & $1.006$ \\
 \end{table} 
 
 
-\begin{table}[!htbp] \centering 
+\begin{table}[!htbp]  \centering \footnotesize 
   \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
@@ -1814,22 +1794,17 @@ $-0.003$ & $-0.002$ & $0.0003$ & $0.002$ & $0.035$ & $0.038$ & $0.046$ & $0.882$
 
 
 
-% \section{log(GDP)}
-
-
 \section{Variance(X) VS Variance(Z) VS Variance(Z2)}
 
-\section{E(Z) VS E(Z2)}
 
 
-\section{Take Question 1 out of the calculation of the Indicator}
 
 \section{until 2012 to see if variance still significant, not attrition creating effect}
 
 \begin{landscape}
     \section{Model with before 2000 data}
 
-\begin{table}[!htbp] \centering \footnotesize
+\begin{table}[!htbp]  \centering \footnotesize
   \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -1837,7 +1812,7 @@ $-0.003$ & $-0.002$ & $0.0003$ & $0.002$ & $0.035$ & $0.038$ & $0.046$ & $0.882$
 \hline \\[-1.8ex] 
  & \multicolumn{6}{c}{Linear Regression} \\ 
 \cline{2-7} 
-\\[-1.8ex] & \multicolumn{6}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{6}{c}{year on year GDP (in \%)} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 4.437^{***} & 0.660 & -0.519 \\ 
@@ -1870,7 +1845,7 @@ F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^
 \end{landscape}
 
 \begin{landscape}
-    \begin{table}[!htbp] \centering 
+    \begin{table}[!htbp]  \centering \footnotesize 
   \caption{} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -1878,7 +1853,7 @@ F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^
 \hline \\[-1.8ex] 
  & \multicolumn{6}{c}{Linear Regression} \\ 
 \cline{2-7} 
-\\[-1.8ex] & \multicolumn{6}{c}{Year on Year GDP (in \%)} \\ 
+\\[-1.8ex] & \multicolumn{6}{c}{year on year GDP (in \%)} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)}\\ 
 \hline \\[-1.8ex] 
  Constant & 3.429^{***} & -1.740^{***} & -1.821^{***} & 3.903^{***} & -1.068 & -1.764 \\ 
@@ -1997,6 +1972,53 @@ Note that the first question is interpreted the opposite way from the three othe
 	$\Square$ be more important $\Square$ be equally important $\Square$ be less important \\\	
 	as usually at that time of the year.
 \end{enumerate}
+
+
+\newpage
+\section*{Specificity of question 3 and 4, are peoples predictions correct ?}
+
+The difference between the two first question and the .................
+
+
+\begin{table}[!htbp] 
+   \centering \footnotesize 
+  \caption{Correlation Matrix of different lags of the BSI of \textbf{question 3} with YoY GDP} 
+  \label{tab:corr question3} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
+\hline \\[-1.8ex] 
+YoY GDP & $1$ & $0.707$ & $0.679$ & $0.673$ & $0.628$ & $0.560$ \\
+BSI     &    &  $1$ & $0.969$ & $0.948$ & $0.906$ & $0.846$ \\
+lag1(BSI) &  &  & $1$ & $0.975$ & $0.940$ & $0.892$ \\
+lag2(BSI) &  &  &  & $1$ & $0.974$ & $0.933$ \\
+lag3(BSI)  &  &  &  &  & $1$ & $0.969$ \\
+lag4(BSI)  &  &  &  &  &  & $1$ \\
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+\begin{table}[!htbp]  \centering \footnotesize 
+    \caption{Correlation Matrix of different lags of the BSI of \textbf{question 4} with YoY GDP} 
+  \label{tab:corr question4} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+& YoY GDP & BSI & lag1(BSI) & lag2(BSI) & lag3(BSI) & lag4(BSI) \\ 
+\hline \\[-1.8ex] 
+YoY GDP  & $1$ & $0.719$ & $0.650$ & $0.647$ & $0.593$ & $0.501$ \\ 
+BSI       &   & $1$ & $0.959$ & $0.941$ & $0.890$ & $0.804$ \\ 
+lag1(BSI) &   &  & $1$ & $0.970$ & $0.928$ & $0.863$ \\
+lag2(BSI) &   &  &  & $1$ & $0.970$ & $0.917$ \\
+lag3(BSI) &   &  &  &  & $1$ & $0.959$ \\
+lag4(BSI) &   &  &  &  &  & $1$ \\
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
 
 
 \newpage
