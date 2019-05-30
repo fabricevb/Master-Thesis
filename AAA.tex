@@ -112,6 +112,14 @@
 \DeclareMathOperator{\BSI}{BSI}
 \DeclareMathOperator{\EIR}{EIR}
 
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 
 % ------------------------ Page settings -----------------------------
 % If you change these, the cover layout will also change.  In that
@@ -223,6 +231,8 @@ Academic year 2018-2019
 % ------------------------- First pages ---------------------------
 % For table of contents, acknowlegments, ...
 % -----------------------------------------------------------------
+\blankpage
+
 \rmfamily
 \pagestyle{plain}
 
@@ -238,16 +248,20 @@ A written permission of the promotor is also required to use the methods, produc
 \end{bottompar}
 
 
+\blankpage
+
+
 
 \chapter*{Acknowledgement}
 
 
-I'm grateful to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master thesis would never be what it's without him.
+I'm grateful to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master Thesis would never be what it is without him.
 
 I'm thankful to Marc Boumon and Isabelle De Greef, who where always available to answer my questions regarding the business survey.
 
 I'm also tankful to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Liedo, ...
  whose remarks and inputs during meetings and in discussions where crucial to give the best direction to this paper.
+
 
 and all the members of the Department of Research and Development who where always there to answer any of my questions.
 
@@ -265,11 +279,15 @@ Last but not least, I would like to thank all the professors of the Master of St
     Simeon Strunsky
 \end{bottompar}
 
+\blankpage
+
 
 \chapter*{Abstract}
 
 
 \section*{Abstract}
+
+The variance is, next to the mean, a very important tool for statisticians
 
 This Master Thesis explores the variance of the Belgian business survey.
  
@@ -304,7 +322,7 @@ Survey Volatility -
   EIR       & Evolution in individual Responses \\
   Eurostat  & The European Statistical Office \\
   GDP       & Gross Domestic Product \\
-  INSEE     & Institut national de la statistique et des études économiques (France) \\
+  INSEE     & Institut National de la Statistique et des Etudes Economiques (France) \\
   NBB       & The National Bank of Belgium \\
   NBER      & The National Bureau of Economic Research (US) \\
   NSI       & National Statistics Institutes \\
@@ -405,7 +423,7 @@ The three objectives have in common the importance, the need,  of only capturing
 This will be looked into in \autoref{chap:nonresponse dropout} where seasonal effects, dropout, non-response, and attrition will be discussed.
 
 
-\subsection{Belgian economy and sector-specific short term evolution}
+\subsection{National and Sector-Specific Short-Term Information}
 
 %This will be less prominent in this paper but it is important to mention, each month a quite long report is done based on the BSI for each sector and sub-sector.
 
@@ -684,7 +702,7 @@ the third questions relate to the company's predictions of need of work forces
 and the last question ask their predictions regarding demand.
 
 
-\subsection{Weighting procedure}
+\subsection{Weighting Procedure}
 \label{sec:Weighting procedure}
 
 The different companies participating in the business survey have all two weights; (1) according to the size of the company and (2) according to the size of the sector branch which the company is part of.
@@ -795,7 +813,7 @@ $\Omega$ is used here also in the probabilistic way as it can also be seen as th
 
 From \autoref{eq: BSI Unweighted} and \autoref{eq: BSI Weighted} it can be seen that the weighted and unweighted indicators are bounded between -1 and 1. In the two cases, the indicator is the smallest if everyone has a negative answer, and is the largest when every answer is positive.
 
-\subsection{Take different questions into account}
+\subsection{Take Different Questions Into Account}
 
 The previous calculations were specific to one question. The published indicators are usually taking different survey questions into account. For example, the industry indicator that we will be interested in is composed of four questions:
 
@@ -1028,7 +1046,7 @@ Another approach to better understand the variance of the business survey barome
 It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example an indicator of 0.5 can only have a variance between 0.25 and 0.75.
 It's also interesting to notice that to know that with two of the three variables ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. This means that the three variables are related.
 
-\section{Take different questions into account}
+\section{Take Different Questions Into Account}
 
 As already seen, the published indicator take different questions into account. 
 The combination of the variance of different questions is slightly more complex than the combination of different indicators since the questions are correlated, which means that covariance has to be taken into account.
@@ -1212,7 +1230,7 @@ The weighted EIR can, as for the unweighted EIR now be calculated with the follo
 \end{equation}
 
 
-\section{Generalisation for n time frames}
+\section{Generalisation for Different Period Lags}
 
 Changes in the economy are usually taking several months to influence all the companies. There can be some lag of effects on for example larger companies, of a very specific sector.
 The idea of only taking a certain month and the previous month can seem non-sufficient, it's relevant to take a larger period into account. 
@@ -1224,7 +1242,7 @@ The answer at t-n are compared with the answer at time t, without taking the bet
 The calculation is then the same for the unweighted as \autoref{eq:unweighted proprotion EIR} and for the weighted as \autoref{eq:weighted proprotion EIR}.
 
 
-\section{Take different questions into account}
+\section{Take Different Questions Into Account}
 
 
 \begin{equation}
@@ -1312,7 +1330,7 @@ Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \
 
 \subsubsection{Property 2: }
 
-\section{Take different questions into account}
+\section{Take Different Questions Into Account}
 
 
 
@@ -1705,7 +1723,7 @@ And three different models where the three evolution of individual responses wit
 Observations & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} & \multicolumn{1}{c}{124} \\ 
 R$^{2}$ & \multicolumn{1}{c}{0.540} & \multicolumn{1}{c}{0.709} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.711} & \multicolumn{1}{c}{0.712} \\ 
 Adjusted R$^{2}$ & \multicolumn{1}{c}{0.537} & \multicolumn{1}{c}{0.704} & \multicolumn{1}{c}{0.719} & \multicolumn{1}{c}{0.701} & \multicolumn{1}{c}{0.702} \\ 
-Residual Std. Error & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.894} & \multicolumn{1}{c}{0.891} \\ 
+Resid. Std. Er. & \multicolumn{1}{c}{1.112} & \multicolumn{1}{c}{0.889} & \multicolumn{1}{c}{0.866} & \multicolumn{1}{c}{0.894} & \multicolumn{1}{c}{0.891} \\ 
 AIC & \multicolumn{1}{c}{382.292} & \multicolumn{1}{c}{327.699} & \multicolumn{1}{c}{323.086} & \multicolumn{1}{c}{330.907} & \multicolumn{1}{c}{330.293} \\ 
 BIC & \multicolumn{1}{c}{390.753} & \multicolumn{1}{c}{338.980} & \multicolumn{1}{c}{340.008} & \multicolumn{1}{c}{347.829} & \multicolumn{1}{c}{347.215} \\ 
 \hline 
@@ -1720,36 +1738,22 @@ Those first results show the limited interest of EIR2 and EIR3 since the model w
 
 The other observation that can be done is that the interest of the variance in the prediction seems significant since adding, next to the information of the business survey, increases the Adjusted R$^2$ by 0.151. The model is also better according to AIC and BIC results.
 
+\begin{table}[!htbp]
+    \centering \footnotesize
+\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+                 & RMSE & MAE & MPE & MAPE & MASE \\ \hline
+\autoref{eq:model1} & 1.103 &0.93 &-27.657 & 86.696 & 0.764 \\
+\autoref{eq:model2} & 0.878 &0.697 & -10.923 & 61.185 & 0.573 \\
+\autoref{eq:model3} & 0.848 &0.674 & -12.455 & 55.698 & 0.554 \\
+\autoref{eq:model4} & 0.875 &0.699 & -12.757 & 62.707 & 0.574 \\
+\autoref{eq:model5} & 0.873 &0.689 & -9.83 & 59.311 & 0.566 \\ \hline
+    \end{tabular}
+    \caption{Accuracy}
+    \label{tab:accuracy measures}
+\end{table}
 
-\section{Model selection}
-
-Since there are a large among of different possible models when having eight different regressors, some procedure needs to be chosen to look for the best model.
-
-The method applied here is a step procedure where AIC is used to select the best model.
-
-Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both. 
-The three methods are all based on Akaike's information criterion (AIC) as measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
-
-The results of the three different methods converge to the model already proposed in \autoref{eq:model3} that has BSI, Var(BSI), EIR1 and Var(EIR1) as regressors.
-
-
-
-\subsection{Mean Square Prediction Error}
-
-\subsection{Diebold-Mariano Test}
-
-
-
-
-
-
-
-
-
-\subsection{Out-of-Sample performances}
-
-
-ME: Mean Error
 
 RMSE: Root Mean Squared Error
 
@@ -1761,45 +1765,68 @@ MAPE: Mean Absolute Percentage Error
 
 MASE: Mean Absolute Scaled Error
 
-ACF1: Autocorrelation of errors at lag 1.
+\subsection{Diebold-Mariano Test}
 
-\chapter{Relative Importance}
+\cite{diebold_comparing_1995}
 
-\begin{table}[!htbp]  \centering \footnotesize 
-  \caption{} 
-  \label{} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-Z3\_sa & Z2\_sa & Z\_sa & Var\_Z2\_sa & Var\_Z3\_sa & Var\_Z\_sa & Var\_sa & E\_sa \\ 
-\hline \\[-1.8ex] 
-$0.010$ & $0.018$ & $0.027$ & $0.029$ & $0.039$ & $0.094$ & $0.095$ & $1.006$ \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
+DM = 1.2727, Forecast horizon = 1, Loss function power = 2, p-value = 0.2055
+alternative hypothesis: two.sided
 
 
-\begin{table}[!htbp]  \centering \footnotesize 
-  \caption{} 
-  \label{} 
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-Z2\_sa & Z3\_sa & Z\_sa & Var\_Z2\_sa & Var\_Z3\_sa & Var\_sa & Var\_Z\_sa & E\_sa \\ 
-\hline \\[-1.8ex] 
-$-0.003$ & $-0.002$ & $0.0003$ & $0.002$ & $0.035$ & $0.038$ & $0.046$ & $0.882$ \\ 
-\hline \\[-1.8ex] 
-\end{tabular} 
-\end{table} 
+\begin{table}[!htbp]
+    \centering \footnotesize
+    \begin{tabular}{c|c|c|c}
+        p-values & \autoref{eq:model1} & \autoref{eq:model2} & \autoref{eq:model3} \\ \hline
+        \autoref{eq:model1} &    & 0.00005126  & 0.00002586    \\
+        \autoref{eq:model2} &    &        & 0.2055        \\
+        \autoref{eq:model3} &    &        &      \\
+    \end{tabular}
+    \caption{Diebold-Mariano Tests}
+    \label{tab:Diebold-Mariano}
+\end{table}
+
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
 
 
 
-\section{Variance(X) VS Variance(Z) VS Variance(Z2)}
+\section{Model Selection}
+
+Since there are a large among of different possible models when having eight different regressors, some procedure needs to be chosen to look for the best model.
+
+The method applied here is a step procedure where AIC is used to select the best model.
+Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both. 
+The three methods are all based on Akaike's information criterion (AIC) as measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
+
+The results of the three different methods converge to the model already proposed in \autoref{eq:model3}, where BSI, Var(BSI), EIR1 and Var(EIR1) are the regressors.
+
+From the different results, it can already be stated that EIR1 and its variance are bringing more in the modelling of the YoY GDP than EIR2 and EIR3 with their variances.
+
+It was also seen that the variance of the BSI improves the model quite largely and that EIR1 and its variance can also add some information.
+
+
+Following those results, there are two good candidates; \autoref{eq:model2} and \ref{eq:model3}. Those are the two models that we will be further looked into and compared to the simplest model only including the BSI.
 
 
 
 
-\section{until 2012 to see if variance still significant, not attrition creating effect}
+
+
+
+
+
+
+
+
+\subsection{Out-of-Sample Performances}
+
+
+
 
 \begin{landscape}
     \section{Model with before 2000 data}
@@ -1884,6 +1911,17 @@ F Statistic & \multicolumn{1}{c}{143.463$^{***}$} & \multicolumn{1}{c}{147.283$^
 \end{table} 
 \end{landscape}{}
 
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Conclusion}
 
 A large 
@@ -1913,7 +1951,6 @@ not real sampling theory
 
 \subsubsection*{Change participants}
 
-\subsubsection*{Mo}
 From a statisticians point of view, a more sampling theory Including SRS or else would be more optimal
 
 \subsubsection{leave question 18 out of NS975}
