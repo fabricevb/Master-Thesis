@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  31 MAY 2019 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  31 MAY 2019 21:52
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -1149,33 +1149,27 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (AAA.aux
-
-LaTeX Warning: Label `fig:predictions1' multiply defined.
-
-
-LaTeX Warning: Label `fig:predictions1' multiply defined.
-
-)
+ (AAA.aux)
 \openout1 = `AAA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
-LaTeX Font Info:    ... okay on input line 146.
- ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count329
 \scratchdimen=\dimen304
@@ -1202,7 +1196,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box73
-Package hyperref Info: Link coloring ON on input line 146.
+Package hyperref Info: Link coloring ON on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1212,9 +1206,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count335
 )
-LaTeX Info: Redefining \ref on input line 146.
-LaTeX Info: Redefining \pageref on input line 146.
-LaTeX Info: Redefining \nameref on input line 146.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (AAA.out) (AAA.out)
 \@outlinefile=\write5
@@ -1229,31 +1223,31 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 146.
+ on input line 147.
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 160.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 161.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 163.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 164.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 163--164
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 164--165
 [][][][][][][] 
  []
 
-<Images/LogoKULeuven.png, id=202, 401.5pt x 143.53625pt>
+<Images/LogoKULeuven.png, id=198, 401.5pt x 143.53625pt>
 File: Images/LogoKULeuven.png Graphic file (type png)
 <use Images/LogoKULeuven.png>
-Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 168.
+Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 169.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 190.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 191.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 223--224
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 224--225
 [][][] 
  []
 
@@ -1261,55 +1255,55 @@ Overfull \hbox (24.18004pt too wide) in paragraph at lines 223--224
 
 {C:/Users/fabri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Images/Lo
 goKULeuven.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 244.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 245.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 244.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 245.
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--247
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--259
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--259
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
@@ -1332,147 +1326,136 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377 3
-        [1
+l.375 F
+       our questions are taken into account, since it are the four questions...
+[1
 
 ] [2]
 Chapter 2.
 [3
 
-] [4] [5] [6] [7] [8] [9] [10] [11]
+] [4] [5] [6] [7] [8] [9] [10]
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 866.
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 867.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 862.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 874.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 863.
+
+[11]
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 870.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 882.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 879.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 888.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 886.
 
 [12]
 Chapter 3.
 [13
 
 ]
-Overfull \hbox (14.12914pt too wide) in paragraph at lines 1040--1041
+Overfull \hbox (14.12914pt too wide) in paragraph at lines 1039--1040
  [][] 
  []
 
 [14] [15]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 1077.
+LaTeX Font Warning: Command \large invalid in math mode on input line 1076.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 1079.
+LaTeX Font Warning: Command \large invalid in math mode on input line 1078.
 
 
-Overfull \hbox (38.90106pt too wide) in alignment at lines 1076--1080
+Overfull \hbox (38.90106pt too wide) in alignment at lines 1075--1079
  [][][] []
  []
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1086.
 
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 1087.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1088.
-
-
-Overfull \hbox (10.16624pt too wide) in alignment at lines 1094--1098
+Overfull \hbox (24.33311pt too wide) in alignment at lines 1093--1097
  [][][] []
  []
 
 
+LaTeX Font Warning: Command \Large invalid in math mode on input line 1104.
+
+
 LaTeX Font Warning: Command \Large invalid in math mode on input line 1105.
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1106.
 
 [16]
 Chapter 4.
 [17
 
 ]
-Overfull \hbox (15.13383pt too wide) in alignment at lines 1177--1188
+Overfull \hbox (15.13383pt too wide) in alignment at lines 1185--1196
  [][][] []
  []
 
-[18]
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1289.
-
-[19] [20]
+[18] [19] [20]
 Chapter 5.
 [21
 
 ] [22pdfTeX warning (ext4): destination with the same identifier (name{equation
-.5.3.4}) has been already used, duplicate ignored
+.5.3.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1351 \chapter
+l.1375 \chapter
                {Non-Response, Dropout, Attrition and Seasonal Effects}]
 Chapter 6.
 
-Overfull \hbox (31.98451pt too wide) in paragraph at lines 1376--1386
+Overfull \hbox (31.98451pt too wide) in paragraph at lines 1399--1409
  [][] 
  []
 
 [23
 
 ]
-<Graphs/RJDemetra_plots.pdf, id=528, 614.295pt x 794.97pt>
+<Graphs/RJDemetra_plots.pdf, id=520, 614.295pt x 794.97pt>
 File: Graphs/RJDemetra_plots.pdf Graphic file (type pdf)
 <use Graphs/RJDemetra_plots.pdf>
-Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1403.
+Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1427.
 (pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
 
-Overfull \hbox (5.47603pt too wide) in paragraph at lines 1403--1404
+Overfull \hbox (5.47603pt too wide) in paragraph at lines 1427--1428
  [][] 
- []
-
-
-Overfull \hbox (0.62943pt too wide) in paragraph at lines 1418--1419
-[]\OT1/cmr/m/n/12 The non-response of the busi-ness sur-vey can be de-com-posed
- into two; non-participation
  []
 
 [24] [25 <./Graphs/RJDemetra_plots.pdf>] [26] [27]
 Chapter 7.
-<Graphs/variables.pdf, id=566, 597.23125pt x 844.15375pt>
-File: Graphs/variables.pdf Graphic file (type pdf)
-<use Graphs/variables.pdf>
-Package pdftex.def Info: Graphs/variables.pdf  used on input line 1532.
-(pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
-<Graphs/corr_indicators.pdf, id=569, 844.15375pt x 597.23125pt>
-File: Graphs/corr_indicators.pdf Graphic file (type pdf)
-<use Graphs/corr_indicators.pdf>
-Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1547.
-(pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
 [28
 
-] [29 <./Graphs/variables.pdf>] [30 <./Graphs/corr_indicators.pdf>]
-<Graphs/ACF.pdf, id=599, 597.23125pt x 844.15375pt>
+]
+<Graphs/variables.pdf, id=563, 597.23125pt x 844.15375pt>
+File: Graphs/variables.pdf Graphic file (type pdf)
+<use Graphs/variables.pdf>
+Package pdftex.def Info: Graphs/variables.pdf  used on input line 1553.
+(pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
+<Graphs/corr_indicators.pdf, id=566, 844.15375pt x 597.23125pt>
+File: Graphs/corr_indicators.pdf Graphic file (type pdf)
+<use Graphs/corr_indicators.pdf>
+Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1568.
+(pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
+ [29 <./Graphs/corr_indicators.pdf>] [30 <./Graphs/variables.pdf>]
+<Graphs/ACF.pdf, id=591, 597.23125pt x 844.15375pt>
 File: Graphs/ACF.pdf Graphic file (type pdf)
 <use Graphs/ACF.pdf>
-Package pdftex.def Info: Graphs/ACF.pdf  used on input line 1578.
+Package pdftex.def Info: Graphs/ACF.pdf  used on input line 1598.
 (pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
-
-Overfull \hbox (9.50653pt too wide) in paragraph at lines 1597--1604
- [][] 
- []
-
-[31] [32 <./Graphs/ACF.pdf>]
+ [31]
+[32 <./Graphs/ACF.pdf>]
 Chapter 8.
 [33
 
 ]
-Overfull \hbox (8.4791pt too wide) in paragraph at lines 1702--1748
+Overfull \hbox (8.4791pt too wide) in paragraph at lines 1698--1744
  [][] 
  []
 
@@ -1481,42 +1464,42 @@ Overfull \hbox (8.4791pt too wide) in paragraph at lines 1702--1748
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1749 
+l.1745 
        pdfTeX warning (ext4): destination with the same identifier (name{equati
 on.8.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1749 
+l.1745 
        pdfTeX warning (ext4): destination with the same identifier (name{equati
 on.8.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1749 
+l.1745 
        pdfTeX warning (ext4): destination with the same identifier (name{equati
 on.8.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1749 
+l.1745 
        ] [35]
-<Graphs/predictions1.pdf, id=662, 867.24pt x 433.62pt>
+<Graphs/predictions1.pdf, id=653, 867.24pt x 433.62pt>
 File: Graphs/predictions1.pdf Graphic file (type pdf)
 <use Graphs/predictions1.pdf>
-Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1806.
+Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1802.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [36 <./Graphs/predictions1.pdf>] [37]
-<Graphs/predictions2.pdf, id=685, 867.24pt x 433.62pt>
+<Graphs/predictions2.pdf, id=676, 867.24pt x 433.62pt>
 File: Graphs/predictions2.pdf Graphic file (type pdf)
 <use Graphs/predictions2.pdf>
-Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 1881.
+Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 1877.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [38 <./Graphs/predictions2.pdf>]
-<Graphs/predictions3.pdf, id=697, 867.24pt x 433.62pt>
+<Graphs/predictions3.pdf, id=688, 867.24pt x 433.62pt>
 File: Graphs/predictions3.pdf Graphic file (type pdf)
 <use Graphs/predictions3.pdf>
-Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 1933.
+Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 1929.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [39 <./Graphs/predictions3.pdf>]
 Chapter 9.
@@ -1546,88 +1529,88 @@ Chapter 10.
 
 pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<Images/IndustryN.pdf, id=816, 597.55246pt x 845.19763pt>
+<Images/IndustryN.pdf, id=806, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2092.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2100.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
-<Images/4100N_v1990.pdf, id=817, 597.432pt x 844.83629pt>
+<Images/4100N_v1990.pdf, id=807, 597.432pt x 844.83629pt>
 File: Images/4100N_v1990.pdf Graphic file (type pdf)
 <use Images/4100N_v1990.pdf>
-Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2099.
+Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2107.
 (pdftex.def)             Requested size: 448.0729pt x 633.62567pt.
 [49 <./Images/IndustryN.pdf>]
-<Graphs/S-I_1.pdf, id=846, 794.97pt x 578.16pt>
+<Graphs/S-I_1.pdf, id=836, 794.97pt x 578.16pt>
 File: Graphs/S-I_1.pdf Graphic file (type pdf)
 <use Graphs/S-I_1.pdf>
-Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2108.
+Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2116.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_2.pdf, id=847, 794.97pt x 578.16pt>
+<Graphs/S-I_2.pdf, id=837, 794.97pt x 578.16pt>
 File: Graphs/S-I_2.pdf Graphic file (type pdf)
 <use Graphs/S-I_2.pdf>
-Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2113.
+Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2121.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_3.pdf, id=848, 794.97pt x 578.16pt>
+<Graphs/S-I_3.pdf, id=838, 794.97pt x 578.16pt>
 File: Graphs/S-I_3.pdf Graphic file (type pdf)
 <use Graphs/S-I_3.pdf>
-Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2118.
+Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2126.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_4.pdf, id=849, 794.97pt x 578.16pt>
+<Graphs/S-I_4.pdf, id=839, 794.97pt x 578.16pt>
 File: Graphs/S-I_4.pdf Graphic file (type pdf)
 <use Graphs/S-I_4.pdf>
-Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2123.
+Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2131.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_5.pdf, id=850, 794.97pt x 578.16pt>
+<Graphs/S-I_5.pdf, id=840, 794.97pt x 578.16pt>
 File: Graphs/S-I_5.pdf Graphic file (type pdf)
 <use Graphs/S-I_5.pdf>
-Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2128.
+Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2136.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_6.pdf, id=851, 794.97pt x 578.16pt>
+<Graphs/S-I_6.pdf, id=841, 794.97pt x 578.16pt>
 File: Graphs/S-I_6.pdf Graphic file (type pdf)
 <use Graphs/S-I_6.pdf>
-Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2133.
+Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2141.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_7.pdf, id=852, 794.97pt x 578.16pt>
+<Graphs/S-I_7.pdf, id=842, 794.97pt x 578.16pt>
 File: Graphs/S-I_7.pdf Graphic file (type pdf)
 <use Graphs/S-I_7.pdf>
-Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2138.
+Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2146.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_8.pdf, id=853, 794.97pt x 578.16pt>
+<Graphs/S-I_8.pdf, id=843, 794.97pt x 578.16pt>
 File: Graphs/S-I_8.pdf Graphic file (type pdf)
 <use Graphs/S-I_8.pdf>
-Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2143.
+Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2151.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2106--2146
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2114--2154
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2106--2146
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2114--2154
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2106--2146
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2114--2154
 []$ $[]$ 
  []
 
 [50 <./Images/4100N_v1990.pdf>] [51 <./Graphs/S-I_1.pdf> <./Graphs/S-I_2.pdf> <
 ./Graphs/S-I_3.pdf> <./Graphs/S-I_4.pdf> <./Graphs/S-I_5.pdf> <./Graphs/S-I_6.p
 df> <./Graphs/S-I_7.pdf> <./Graphs/S-I_8.pdf>]
-Overfull \hbox (32.39809pt too wide) in paragraph at lines 2156--2157
+Overfull \hbox (32.39809pt too wide) in paragraph at lines 2164--2165
 [][]\OT1/cmr/m/n/12 Code for Sea-sonal Ad-just-ments on https://github.com/fabr
 icevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (37.55914pt too wide) in paragraph at lines 2161--2162
+Overfull \hbox (37.55914pt too wide) in paragraph at lines 2169--2170
 [][]\OT1/cmr/m/n/12 Code for the cor-re-la-tion anal-y-sis on https://github.co
 m/fabricevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (5.99142pt too wide) in paragraph at lines 2168--2169
+Overfull \hbox (5.99142pt too wide) in paragraph at lines 2176--2177
 [][]\OT1/cmr/m/n/12 Code for the Lin-ear Mod-els on https://github.com/fabricev
 bMaster-Thesis/blob/master/R
  []
@@ -1636,36 +1619,32 @@ bMaster-Thesis/blob/master/R
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2195.
-<Images/sedes.png, id=928, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2203.
+<Images/sedes.png, id=918, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 2205.
+Package pdftex.def Info: Images/sedes.png  used on input line 2213.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 2209--2210
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 2217--2218
 [][][] 
  []
 
 [53 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2226.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2226.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2234.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2234.
  (AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2226.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2226.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2234.
 
 Package rerunfilecheck Info: File `AAA.out' has not changed.
-(rerunfilecheck)             Checksum: 097E53B7FAADD76CA09233B6F31E711E;3604.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2226.
+(rerunfilecheck)             Checksum: BF902C3812972AA89CFEAEE6F5585910;3544.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2234.
  ) 
 Here is how much of TeX's memory you used:
- 42968 strings out of 492895
- 957583 string characters out of 3133479
- 1498092 words of memory out of 3000000
+ 42964 strings out of 492895
+ 957526 string characters out of 3133479
+ 1499285 words of memory out of 3000000
  46044 multiletter control sequences out of 15000+200000
  556264 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1701,9 +1680,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2
 /type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
 vr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
-Output written on AAA.pdf (60 pages, 1643402 bytes).
+Output written on AAA.pdf (60 pages, 1645086 bytes).
 PDF statistics:
- 1062 PDF objects out of 1200 (max. 8388607)
- 227 named destinations out of 1000 (max. 500000)
- 512 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1052 PDF objects out of 1200 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

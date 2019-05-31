@@ -19,6 +19,31 @@
 \begin{document}  
 
 
+\section{Stationarity}
+
+Test stationarity of the time series (ADF)
+To test the stationarity of the time series, let’s run the Augmented Dickey-Fuller Test using the adf.test() function from the tseries R package.
+
+First set the hypothesis test:
+
+The null hypothesis H0 : that the time series is non-stationary The alternative hypothesis HA : that the time series is stationary
+
+\begin{table}[!htbp] 
+   \centering \footnotesize 
+  \caption{Augmented Dickey-Fuller Test} 
+  \label{tab:ADF Test} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & BSI & Var(BSI) & EIR1 & Var(EIR1) & EIR2 & Var(EIR2) & EIR3 & Var(EIR3)  \\ \hline \\[-1.8ex] 
+p-value  & $< 0.01$ & 0.06 & $< 0.01$ & 0.26 & $< 0.01$ & 0.21 & $< 0.01$ & 0.12 \\
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+
+
 
 
 \chapter{Relative Importance}
