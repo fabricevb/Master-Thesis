@@ -53,9 +53,3 @@
 \contentsline {subsection}{\numberline {8.3.1}Out-of-Sample Performances}{37}{subsection.8.3.1}% 
 \contentsline {chapter}{\numberline {9}Conclusion}{40}{chapter.9}% 
 \contentsline {chapter}{\numberline {10}Discussion}{41}{chapter.10}% 
-\contentsline {section}{\numberline {10.1}Recruitment procedure and panel data}{41}{section.10.1}% 
-\contentsline {section}{\numberline {10.2}Z that takes more periods into account}{41}{section.10.2}% 
-\contentsline {section}{\numberline {10.3}Limitations}{41}{section.10.3}% 
-\contentsline {section}{\numberline {10.4}Improve the business survey}{41}{section.10.4}% 
-\contentsline {subsubsection}{leave question 18 out of NS975}{41}{section*.35}% 
-\contentsline {section}{\numberline {10.5}Further Research}{41}{section.10.5}% 

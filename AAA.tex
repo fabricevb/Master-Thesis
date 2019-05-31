@@ -296,18 +296,24 @@ Survey Volatility -
 
 \begin{tabular}{l l}
   AIC       & Akaike's Information Criterion \\
+  BIC		& Bayesian Information Criterion \\
   BSI       & Business Survey Indicator/Barometer \\
   Cor       & Correlation \\
   Cov       & Covariance \\
-  ECB       & European Central Bank \\
   E         & Mean \\
+  ECB       & European Central Bank \\
   EIR       & Evolution in individual Responses \\
   Eurostat  & The European Statistical Office \\
   GDP       & Gross Domestic Product \\
   INSEE     & Institut National de la Statistique et des Etudes Economiques (France) \\
+  MAE 		& Mean Absolute Error \\
+  MAPE		& Mean Absolute Percentage Error \\
+  MASE 		& Mean Absolute Scaled Error \\
+  MPE 		& Mean Percentage Error \\
   NBB       & The National Bank of Belgium \\
   NBER      & The National Bureau of Economic Research (US) \\
   NSI       & National Statistics Institutes \\
+  RMSE 		& Root Mean Squared Error \\
   Var       & Variance \\
   YoY       & Year on Year \\
 \end{tabular}
@@ -373,6 +379,13 @@ Chapter 2
 4
 
 5
+
+6
+
+7
+
+8
+
 
 
 \chapter{The Business Survey Indicator}
@@ -1309,6 +1322,14 @@ Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonu
 \section{Variance of the Weighted Evolution of Individual Responses}
 
 
+\begin{eqnarray}
+Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
+&&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2  \\
+&=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2  \\
+&=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
+\end{eqnarray}
+
+
 \section{Properties}
 
 The 
@@ -1946,28 +1967,27 @@ High correlation between var(BSI) and var(EIR) -> people seems to change in the 
 
 \chapter{Discussion}
 
-\section{Recruitment procedure and panel data}
+\section*{Recruitment procedure and panel data}
 not real sampling theory
 
 
 
-\section{Z that takes more periods into account}
+\section*{Z that takes more periods into account}
 
 
 
-\section{Limitations}
+\section*{Limitations}
 
 \subsection*{Variance influence by drop-out, attrition, ...}
 
-\section{Improve the business survey}
+\section*{Improve the business survey}
 
 \subsubsection*{Change participants}
 
 From a statisticians point of view, a more sampling theory Including SRS or else would be more optimal
 
-\subsubsection{leave question 18 out of NS975}
 
-\section{Further Research}
+\section*{Further Research}
 
 
 
