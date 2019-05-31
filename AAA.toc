@@ -31,10 +31,9 @@
 \contentsline {subsubsection}{Weighted}{20}{section*.15}% 
 \contentsline {chapter}{\numberline {5}The Variance of the Evolution of Individual Responses}{21}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Variance of the Unweighted Evolution of Individual Responses}{21}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Variance of the Weighted Evolution of Individual Responses}{21}{section.5.2}% 
+\contentsline {section}{\numberline {5.2}Variance of the Weighted Evolution of Individual Responses}{22}{section.5.2}% 
 \contentsline {section}{\numberline {5.3}Properties}{22}{section.5.3}% 
-\contentsline {subsubsection}{Property 1: the variance of Z is bounded between 0 and ?}{22}{section*.16}% 
-\contentsline {subsubsection}{Property 2: }{22}{section*.17}% 
+\contentsline {subsubsection}{Property 1: the variance of Z is bounded between 0 and 2.5}{22}{section*.16}% 
 \contentsline {section}{\numberline {5.4}Take Different Questions Into Account}{22}{section.5.4}% 
 \contentsline {chapter}{\numberline {6}Non-Response, Dropout, Attrition and Seasonal Effects}{23}{chapter.6}% 
 \contentsline {section}{\numberline {6.1}Seasonal Correction}{23}{section.6.1}% 

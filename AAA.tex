@@ -425,8 +425,7 @@ It was shown that the BSI was indeed a leading indicator of the evolution of the
 The explanation proposed by the authors is, first of all, that the Belgian economy, in itself, had some predictive power for the European Area for that period, since it is specialised in intermediate goods and is a very open economy. 
 The other potential explanation pointed out, is the high representation of small and medium-sized enterprises in the business survey.
 
-Today the business survey indicator is a well-known indicator of the Belgian economy, it's indicator is on the homepage of the National Bank website and is used in several predictive models.
-
+Today the business survey indicator is a well-known indicator of the Belgian economy, the indicator is on the homepage of the National Bank website and is used in several predictive models.
 
 
 
@@ -859,15 +858,15 @@ and as follow for the weighted indicator\footnote{Assuming all the respondents a
 Another way to write the unweighted business survey indicator is as follow
 
 \begin{eqnarray}
-    \mbox{Unweighted industry BSI}\ &=& \Large( \pi_{Q1,+} + \pi_{Q2,+} + \pi_{Q3,+} + \pi_{Q4,+} \nonumber \\
-    && - \pi_{Q1,-} - \pi_{Q2,-} - \pi_{Q3,-} - \pi_{Q4,-} \Large)
+    \mbox{Unweighted industry BSI}\ &=& \frac{1}{4} \big( \pi_{Q1,+} + \pi_{Q2,+} + \pi_{Q3,+} + \pi_{Q4,+} \nonumber \\
+    && - \pi_{Q1,-} - \pi_{Q2,-} - \pi_{Q3,-} - \pi_{Q4,-} \big)
 \end{eqnarray}
 
 and regarding the weighted indicator, it can be written as
 
 \begin{eqnarray}
-    \mbox{ Weighted Industry BSI}\ &=& 1/4 ( \Omega_{Q1,+} + \Omega_{Q2,+} + \Omega_{Q3,+} + \Omega_{Q4,+} \nonumber \\
-    && - \Omega_{Q1,-} - \Omega_{Q2,-} - \Omega_{Q3,-} - \Omega_{Q4,-} \Large) 
+    \mbox{ Weighted Industry BSI}\ &=& \frac{1}{4} \big( \Omega_{Q1,+} + \Omega_{Q2,+} + \Omega_{Q3,+} + \Omega_{Q4,+} \nonumber \\
+    && - \Omega_{Q1,-} - \Omega_{Q2,-} - \Omega_{Q3,-} - \Omega_{Q4,-} \big) 
 \end{eqnarray}
 
 \subsubsection{generalisation}
@@ -876,14 +875,15 @@ The general formula for the weighted business survey indicator when taking sever
 
 \begin{eqnarray}
     \mbox{Unweighted BSI} &=& \frac{\sum^n_{i=1}( x_{iQ1} + x_{iQ2} + \ldots + x_{iQq})}{nq} \\
-    &=& 1/q ( \pi_{Q1,+} +  \pi_{Q2,+} + \ldots +  \pi_{Qq,+}  -  \pi_{Q1,-} -  \pi_{Q2,-} - \ldots - \pi_{Qq,-} \Large) \nonumber\\
+    &=& \frac{1}{q} \big( \pi_{Q1,+} +  \pi_{Q2,+} + \ldots +  \pi_{Qq,+}  -  \pi_{Q1,-} -  \pi_{Q2,-} - \ldots - \pi_{Qq,-} \big) \nonumber\\
 \end{eqnarray}
 
 
 While the formula for the weighted business survey indicator when taking several questions into account is
 
 \begin{eqnarray}
-    \mbox{ Weighted BSI} &=& \frac{\sum^n_{i=1} \omega_i ( x_{iQ1} + x_{iQ2} +\ldots + x_{iQq})}{q} \\    &=& 1/n ( \pi_{Q1,+} + \Omega_{Q2,+} + \ldots + \Omega_{Qq,+} - \Omega_{Q1,-} - \Omega_{Q2,-} - \ldots - \Omega_{Qq,-} \Large) \nonumber\\
+    \mbox{ Weighted BSI} &=& \frac{\sum^n_{i=1} \omega_i \left( x_{iQ1} + x_{iQ2} +\ldots + x_{iQq} \right)}{q} \\    
+    &=& \frac{1}{q} \big( \Omega_{Q1,+} + \Omega_{Q2,+} + \ldots + \Omega_{Qq,+} - \Omega_{Q1,-} - \Omega_{Q2,-} - \ldots - \Omega_{Qq,-} \big) \nonumber\\
 \end{eqnarray}
 
 
@@ -1101,8 +1101,7 @@ and as follow for the variance of the weighted indicator
 \begin{eqnarray}
     \Var \left(\text{Weighted BSI} \right) 
     &=& \frac{1}{q^2} \Var \left( \sum_{i=1}^n \omega_i \left(x_{i Q1} + x_{i Q2} + ... + x_{i Qq} \right) \right) \nonumber \\
-    &=& \frac{1}{q^2} \Var \Large(\Omega_{Q1,+} + \Omega_{Q2,+} + \ldots + \Omega_{Qq,+} \nonumber \\
-    && - \Omega_{Q1,-} - \Omega_{Q2,-} - \ldots - \Omega_{Qq,-} \Large)
+    &=& \frac{1}{q^2} \Var \Large(\Omega_{Q1,+} + \Omega_{Q2,+} + \ldots + \Omega_{Qq,+} - \Omega_{Q1,-} - \Omega_{Q2,-} - \ldots - \Omega_{Qq,-} \Large) \nonumber \\
 \end{eqnarray}
 
 
@@ -1204,7 +1203,14 @@ The formula can further be simplified since $z_{--} = z_{00} = z_{++} = 0$.
     + \left( \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} \right)
     + \left( \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} \right) \nonumber \\
 &&  + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right) \\
+    &=&  
+        \left( \frac{n_{-0}}{n} \right)
+    + 2 \left( \frac{n_{-+}}{n} \right)
+    -   \left( \frac{n_{0-}}{n} \right)
+    +   \left( \frac{n_{0+}}{n} \right) 
+    - 2 \left( \frac{n_{+-}}{n} \right)
+    -   \left( \frac{n_{+0}}{n} \right)
 \end{eqnarray}
 
 
@@ -1309,9 +1315,9 @@ The calculation is then the same for the unweighted as \autoref{eq:unweighted pr
 
 \chapter{The Variance of the Evolution of Individual Responses} \label{Chapter:Var Z}
 
-The new indicator, the evolution of individual responses, also has a variance that has some  interesting interpretation. 
-While the EIR is a measure of the direction companies change their answer(s), the variance of the EIR can be understood as the measure of changes in answers. 
-Therefore the variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
+The evolution of individual responses has a variance that has some  interesting interpretation.
+While the EIR is a measure of the direction companies change their answer(s), the variance of the EIR can be understood as the measure of changes in answers.
+From there, the variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
 
 While the variance of the business survey indicator is the measure of disagreement among respondents, the variance of the evolution of individual responses is the measure of the magnitude of changes of respondents.
 
@@ -1325,6 +1331,38 @@ While the variance of the business survey indicator is the measure of disagreeme
 %    \pi_{++} + \pi_{+0} + \pi_{+-} + \pi_{0+} + \pi_{00} + \pi_{0-} + \pi_{-+} + \pi_{-0} + \pi_{--} = 1 
 %\end{equation}
 
+
+
+\begin{eqnarray}
+\Var(Z) &=&  
+	E\left( Z^2\right) - E\left( Z\right)^2 \nonumber \\ \nonumber \\
+	&=& \left( \frac{ \sum_{i=1}^{n_{--}} z^2_{--i}}{n} \right)
+     + \left( \frac{\sum_{i=1}^{n_{-0}} z^2_{-0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{-+}} z^2_{-+i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{0-}} z^2_{0-i} }{n} \right)\nonumber  \\
+    && + \left( \frac{\sum_{i=1}^{n_{00}} z^2_{00i} }{n} \right) 
+      + \left( \frac{\sum_{i=1}^{n_{0+}} z^2_{0+i}}{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{+-}} z^2_{+-i} }{n} \right) \nonumber \\
+    && + \left( \frac{\sum_{i=1}^{n_{+0}} z^2_{+0i} }{n} \right)
+    + \left( \frac{\sum_{i=1}^{n_{++}} z^2_{++i}}{n} \right)  
+     - \E(Z)^2 \\   
+     &=& \left(\frac{n_{-0}}{n} \right)
+    + 4 \left( \frac{n_{-+}}{n} \right)
+    + \left( \frac{n_{0-}}{n} \right) 
+    + \left(       \frac{n_{0+}}{n} \right)
+    + 4 \left( \frac{n_{+-}}{n} \right)  
+    + \left( \frac{n_{+0}}{n} \right) 
+     - \E(Z)^2 \nonumber \\
+\end{eqnarray}
+
+See \autoref{tab:EIR explanation} for the different values of $z$
+
+
+
+
+
+
+
 \begin{eqnarray}
 Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
 &&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2  \\
@@ -1332,6 +1370,7 @@ Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonu
 &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
 \end{eqnarray}
 
+In other words, the variance is ....
 
 
 
@@ -1352,8 +1391,9 @@ The
 quite similar to Var(BSI)
 
 
-\subsubsection{Property 1: the variance of Z is bounded between 0 and ?}
-upper bound:
+\subsubsection{Property 1: the variance of Z is bounded between 0 and 2.5}
+As for the variance of the BSI, the variance of the EIR can't take any value.
+Again the variance can go as low as 0 but in this case can go up to 2.5. One method to obtain this is by calculating the following. In this case the situation where no participant has the same answer to the question 
 
 \begin{eqnarray}
 Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \nonumber \\
@@ -1365,7 +1405,9 @@ Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \
     1+ 0.5*3 + 0.5*3 - 0 = 2.5
 \end{equation}
 
-\subsubsection{Property 2: }
+
+ 
+There are here more explanatory, therefore it's not possible to plot is a was done for the variance of the BSI. Some interpretation can still be done
 
 \section{Take Different Questions Into Account}
 
