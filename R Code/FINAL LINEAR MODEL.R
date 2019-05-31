@@ -211,3 +211,4 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
   geom_vline(aes(xintercept=as.numeric(date[289])), colour="black", size=0.5) +
   theme_bw() + theme(axis.text.x = element_text(angle=45, hjust = 1))
 
+
