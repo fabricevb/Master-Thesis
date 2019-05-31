@@ -1,70 +1,54 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{The Business Survey Indicator}{}% 2
 \BOOKMARK [1][-]{section.2.1}{History}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Sampling Method}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Objective and Methodology}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.3.1}{Weighting procedure}{section.2.3}% 6
-\BOOKMARK [2][-]{subsection.2.3.2}{Globalisation procedure}{section.2.3}% 7
-\BOOKMARK [1][-]{section.2.4}{Questionnaire}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.5}{Calculation of the Indicator}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.5.1}{Unweighted Indicator}{section.2.5}% 10
-\BOOKMARK [2][-]{subsection.2.5.2}{Weighted Indicator}{section.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.5.3}{Properties}{section.2.5}% 12
-\BOOKMARK [2][-]{subsection.2.5.4}{Take different questions into account}{section.2.5}% 13
-\BOOKMARK [0][-]{chapter.3}{Variance of the Indicator}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Variance of the Unweighted Indicator}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Generalization for Weighted Indicators / Variance of the Weighted Indicator}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.2.1}{Properties}{section.3.2}% 17
-\BOOKMARK [1][-]{section.3.3}{Take different questions into account}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.4}{Discussion regarding the 'true variance'}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter.4}{Indicator of the Evolution of Individual Responses}{}% 20
-\BOOKMARK [0][-]{chapter.5}{Variance of the Evolution of Individual Responses \( Volatility of Responses\)}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Presentation}{chapter.5}% 22
-\BOOKMARK [2][-]{subsection.5.1.1}{Properties}{section.5.1}% 23
-\BOOKMARK [0][-]{chapter.6}{Non-Response, Dropout, Attrition and Seasonal Effects}{}% 24
-\BOOKMARK [1][-]{section.6.1}{Non-Response}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.2}{Dropout}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.3}{Attrition}{chapter.6}% 27
-\BOOKMARK [1][-]{section.6.4}{Seasonal Effects}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.4.1}{Seasonal correction of the Indicator}{section.6.4}% 29
-\BOOKMARK [2][-]{subsection.6.4.2}{Seasonal correction of the Variance}{section.6.4}% 30
-\BOOKMARK [2][-]{subsection.6.4.3}{Seasonal correction of the Indicator of the Evolution}{section.6.4}% 31
-\BOOKMARK [2][-]{subsection.6.4.4}{Seasonal correction of the Variance of Z}{section.6.4}% 32
-\BOOKMARK [2][-]{subsection.6.4.5}{Seasonal correction of the Proportions}{section.6.4}% 33
-\BOOKMARK [1][-]{section.6.5}{Limitations}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter.7}{Exploratory Analysis}{}% 35
-\BOOKMARK [1][-]{section.7.1}{Data At hand}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.2}{Small vs Large}{chapter.7}% 37
-\BOOKMARK [1][-]{section.7.3}{By Sector}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.4}{Correlations}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.5}{Correlation between questions}{chapter.7}% 40
-\BOOKMARK [1][-]{section.7.6}{Auto-Correlation}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.7}{Correlation with GDP}{chapter.7}% 42
-\BOOKMARK [1][-]{section.7.8}{GDP vs Explanatory Indicators}{chapter.7}% 43
-\BOOKMARK [1][-]{section.7.9}{Specificity of question 3 and 4, are peoples predictions correct ?}{chapter.7}% 44
-\BOOKMARK [0][-]{chapter.8}{Linear \(Auto-Regressive\) Models}{}% 45
-\BOOKMARK [1][-]{section.8.1}{Method}{chapter.8}% 46
-\BOOKMARK [2][-]{subsection.8.1.1}{Month vs Quarterly data}{section.8.1}% 47
-\BOOKMARK [2][-]{subsection.8.1.2}{Timing of the Data}{section.8.1}% 48
-\BOOKMARK [1][-]{section.8.2}{Linear Model}{chapter.8}% 49
-\BOOKMARK [1][-]{section.8.3}{Model}{chapter.8}% 50
-\BOOKMARK [1][-]{section.8.4}{Evaluation}{chapter.8}% 51
-\BOOKMARK [2][-]{subsection.8.4.1}{R-square}{section.8.4}% 52
-\BOOKMARK [2][-]{subsection.8.4.2}{AIC and BIC}{section.8.4}% 53
-\BOOKMARK [2][-]{subsection.8.4.3}{Mean Square Prediction Error}{section.8.4}% 54
-\BOOKMARK [2][-]{subsection.8.4.4}{Diebold-Mariano Test}{section.8.4}% 55
-\BOOKMARK [2][-]{subsection.8.4.5}{Out-of-Sample performances}{section.8.4}% 56
-\BOOKMARK [1][-]{section.8.5}{log\(GDP\)}{chapter.8}% 57
-\BOOKMARK [1][-]{section.8.6}{Variance\(X\) VS Variance\(Z\)}{chapter.8}% 58
-\BOOKMARK [1][-]{section.8.7}{Take Question 1 out of the calculation of the Indicator}{chapter.8}% 59
-\BOOKMARK [0][-]{chapter.9}{Markov Switching Models}{}% 60
-\BOOKMARK [1][-]{section.9.1}{Model\(s\) Specification}{chapter.9}% 61
-\BOOKMARK [2][-]{subsection.9.1.1}{Notation}{section.9.1}% 62
-\BOOKMARK [2][-]{subsection.9.1.2}{Model}{section.9.1}% 63
-\BOOKMARK [0][-]{chapter.10}{Conclusion}{}% 64
-\BOOKMARK [0][-]{chapter.11}{Discussion}{}% 65
-\BOOKMARK [1][-]{section.11.1}{Recruitment procedure and panel data}{chapter.11}% 66
-\BOOKMARK [1][-]{section.11.2}{Z that takes more periods into account}{chapter.11}% 67
-\BOOKMARK [1][-]{section.11.3}{Limitations}{chapter.11}% 68
-\BOOKMARK [1][-]{section.11.4}{Improve the Business Survey}{chapter.11}% 69
-\BOOKMARK [1][-]{section.11.5}{Further Research}{chapter.11}% 70
+\BOOKMARK [1][-]{section.2.2}{Objectives of the Business Survey}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{National and Sector-Specific Short-Term Information}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Nowcasting}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.3}{Business Cycles}{section.2.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Methodology of the Business Survey}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.3.1}{Sampling Method}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{Questionnaire}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.3}{Weighting Procedure}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{Calculation of the Indicator}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{Unweighted Indicator}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{Weighted Indicator}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{Take Different Questions Into Account}{section.2.4}% 15
+\BOOKMARK [0][-]{chapter.3}{The Variance of the Indicator}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Variance of the Unweighted Indicator}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Variance of the Weighted Indicator}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Properties}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Take Different Questions Into Account}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{The Indicator of the Evolution of Individual Responses}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Indicator of the Unweighted Evolution of Individual Responses}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Indicator of the Weighted Evolution of Individual Responses}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Generalisation for Different Period Lags}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{Take Different Questions Into Account}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{The Variance of the Evolution of Individual Responses}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Variance of the Unweighted Evolution of Individual Responses}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Variance of the Weighted Evolution of Individual Responses}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Properties}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{Take Different Questions Into Account}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Non-Response, Dropout, Attrition and Seasonal Effects}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Seasonal Correction}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.2}{Non-Response}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.3}{Dropout and Attrition}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.3.1}{Dropout}{section.6.3}% 35
+\BOOKMARK [2][-]{subsection.6.3.2}{Attrition}{section.6.3}% 36
+\BOOKMARK [0][-]{chapter.7}{Exploratory Analysis}{}% 37
+\BOOKMARK [1][-]{section.7.1}{Descriptive Statistics}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.2}{Correlation Analysis}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.3}{Autocorrelation}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.4}{Stationarity}{chapter.7}% 41
+\BOOKMARK [0][-]{chapter.8}{Linear Models}{}% 42
+\BOOKMARK [1][-]{section.8.1}{Method}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.2}{Linear Models}{chapter.8}% 44
+\BOOKMARK [2][-]{subsection.8.2.1}{Diebold-Mariano Test}{section.8.2}% 45
+\BOOKMARK [1][-]{section.8.3}{Model Selection}{chapter.8}% 46
+\BOOKMARK [2][-]{subsection.8.3.1}{Out-of-Sample Performances}{section.8.3}% 47
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 48
+\BOOKMARK [0][-]{chapter.10}{Discussion}{}% 49
+\BOOKMARK [1][-]{section.10.1}{Recruitment procedure and panel data}{chapter.10}% 50
+\BOOKMARK [1][-]{section.10.2}{Z that takes more periods into account}{chapter.10}% 51
+\BOOKMARK [1][-]{section.10.3}{Limitations}{chapter.10}% 52
+\BOOKMARK [1][-]{section.10.4}{Improve the business survey}{chapter.10}% 53
+\BOOKMARK [1][-]{section.10.5}{Further Research}{chapter.10}% 54
