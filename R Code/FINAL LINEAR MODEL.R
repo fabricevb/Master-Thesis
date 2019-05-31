@@ -173,8 +173,8 @@ ggplot(meltdf,aes(x=date,y=value,colour=variable,group=variable)) +
 
 
 
-# select data before 2012 (obs 289)
-subset2 <- data[1:289,]
+# select data before 2012 (obs 288)
+subset2 <- data[1:288,]
 
 # fitting out of sample
 modelsubset21 <- lm(GDP_year ~ E_sa, data = subset2)

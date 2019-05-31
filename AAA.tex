@@ -296,18 +296,24 @@ Survey Volatility -
 
 \begin{tabular}{l l}
   AIC       & Akaike's Information Criterion \\
+  BIC		& Bayesian Information Criterion \\
   BSI       & Business Survey Indicator/Barometer \\
   Cor       & Correlation \\
   Cov       & Covariance \\
-  ECB       & European Central Bank \\
   E         & Mean \\
+  ECB       & European Central Bank \\
   EIR       & Evolution in individual Responses \\
   Eurostat  & The European Statistical Office \\
   GDP       & Gross Domestic Product \\
   INSEE     & Institut National de la Statistique et des Etudes Economiques (France) \\
+  MAE 		& Mean Absolute Error \\
+  MAPE		& Mean Absolute Percentage Error \\
+  MASE 		& Mean Absolute Scaled Error \\
+  MPE 		& Mean Percentage Error \\
   NBB       & The National Bank of Belgium \\
   NBER      & The National Bureau of Economic Research (US) \\
   NSI       & National Statistics Institutes \\
+  RMSE 		& Root Mean Squared Error \\
   Var       & Variance \\
   YoY       & Year on Year \\
 \end{tabular}
@@ -373,6 +379,13 @@ Chapter 2
 4
 
 5
+
+6
+
+7
+
+8
+
 
 
 \chapter{The Business Survey Indicator}
@@ -1309,6 +1322,14 @@ Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonu
 \section{Variance of the Weighted Evolution of Individual Responses}
 
 
+\begin{eqnarray}
+Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
+&&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2  \\
+&=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2  \\
+&=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
+\end{eqnarray}
+
+
 \section{Properties}
 
 The 
@@ -1658,28 +1679,30 @@ Where $\beta_{0}$ is a constant, $\beta_{i}$  are the different regression coeff
 The first approach here is to propose five different models (\autoref{eq:model1}-\ref{eq:model5}) and compare them.
 The simple model takes as unique regressor the business survey indicator
 
-\begin{eqnarray}
+\begin{equation} \tag{Model 1}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t} + \epsilon_t \label{eq:model1} 
-\end{eqnarray}
+\end{equation}
 
 The other model takes the business survey indicator and its variance as regressors
 
-\begin{eqnarray}
+\begin{equation} \tag{Model 2}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \epsilon_t \label{eq:model2}
-\end{eqnarray}
+\end{equation}
 
 And three different models where the three evolution of individual responses with their variances are each time added to the models including the business survey and its variance
 
-\begin{eqnarray}
+\begin{equation} \tag{Model 3}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{3} \EIR1_{t}  + \beta_{4} \Var(\EIR1)_{t} + \epsilon_t \label{eq:model3}
-\end{eqnarray}
-\begin{eqnarray}
-    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{5} \EIR2_{t}  + \beta_{6} \Var(\EIR2)_{t} + \epsilon_t \label{eq:model4}
-\end{eqnarray}
-\begin{eqnarray}
-    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{7} \EIR3_{t}  + \beta_{8} \Var(\EIR3)_{t} + \epsilon_t  \label{eq:model5}
-\end{eqnarray}
+\end{equation}
 
+\begin{equation} \tag{Model 4}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{5} \EIR2_{t}  + \beta_{6} \Var(\EIR2)_{t} + \epsilon_t \label{eq:model4}
+\end{equation}
+
+
+\begin{equation} \tag{Model 5}
+    \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{7} \EIR3_{t}  + \beta_{8} \Var(\EIR3)_{t} + \epsilon_t  \label{eq:model5}
+\end{equation}
 
 \begin{table}[H] \centering \footnotesize
   \caption{Linear Regression Results for the period 1988 to 2018} 
@@ -1821,9 +1844,9 @@ To know if the results from the linear model are robust, the out-of-sample estim
 
 \newpage
 
-\begin{table}[H] \centering \scriptsize
+\begin{table}[H] \centering \footnotesize
   \caption{Linear Regression results for the period 1988 to 2000}
-  \label{} 
+  \label{tab:model comparaison 2000} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1870,9 +1893,9 @@ BIC & \multicolumn{1}{c}{130.327} & \multicolumn{1}{c}{130.109} & \multicolumn{1
 
 
 
-\begin{table}[H] \centering \scriptsize
+\begin{table}[H] \centering \footnotesize
   \caption{Linear Regression results for the period 1988 to 2012}
-  \label{} 
+  \label{tab:model comparaison 2012} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1880,7 +1903,7 @@ BIC & \multicolumn{1}{c}{130.327} & \multicolumn{1}{c}{130.109} & \multicolumn{1
 \cline{2-4} 
 \\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
-\hline \\[-1.8ex] 
+\hline \\[-1.8ex]
  Constant & 3.871^{***} & -0.686 & -1.349 \\ 
   & (0.171) & (1.054) & (1.102) \\ 
   & & & \\ 
@@ -1944,28 +1967,27 @@ High correlation between var(BSI) and var(EIR) -> people seems to change in the 
 
 \chapter{Discussion}
 
-\section{Recruitment procedure and panel data}
+\section*{Recruitment procedure and panel data}
 not real sampling theory
 
 
 
-\section{Z that takes more periods into account}
+\section*{Z that takes more periods into account}
 
 
 
-\section{Limitations}
+\section*{Limitations}
 
 \subsection*{Variance influence by drop-out, attrition, ...}
 
-\section{Improve the business survey}
+\section*{Improve the business survey}
 
 \subsubsection*{Change participants}
 
 From a statisticians point of view, a more sampling theory Including SRS or else would be more optimal
 
-\subsubsection{leave question 18 out of NS975}
 
-\section{Further Research}
+\section*{Further Research}
 
 
 

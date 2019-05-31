@@ -1,0 +1,55 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {subsubsection}{Objectives}{1}{section*.4}% 
+\contentsline {subsubsection}{Methodology}{1}{section*.5}% 
+\contentsline {subsubsection}{Plan of this Paper}{1}{section*.6}% 
+\contentsline {chapter}{\numberline {2}The Business Survey Indicator}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}History}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Objectives of the Business Survey}{4}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}National and Sector-Specific Short-Term Information}{4}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Nowcasting}{4}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Business Cycles}{5}{subsection.2.2.3}% 
+\contentsline {section}{\numberline {2.3}Methodology of the Business Survey}{7}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Sampling Method}{7}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Questionnaire}{8}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Weighting Procedure}{9}{subsection.2.3.3}% 
+\contentsline {section}{\numberline {2.4}Calculation of the Indicator}{9}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Unweighted Indicator}{10}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Weighted Indicator}{10}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Take Different Questions Into Account}{11}{subsection.2.4.3}% 
+\contentsline {chapter}{\numberline {3}The Variance of the Indicator}{13}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Variance of the Unweighted Indicator}{13}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Variance of the Weighted Indicator}{14}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Properties}{14}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Take Different Questions Into Account}{15}{section.3.4}% 
+\contentsline {chapter}{\numberline {4}The Indicator of the Evolution of Individual Responses}{17}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Indicator of the Unweighted Evolution of Individual Responses}{18}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Indicator of the Weighted Evolution of Individual Responses}{19}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Generalisation for Different Period Lags}{19}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Take Different Questions Into Account}{19}{section.4.4}% 
+\contentsline {subsubsection}{weighted}{19}{section*.13}% 
+\contentsline {chapter}{\numberline {5}The Variance of the Evolution of Individual Responses}{21}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Variance of the Unweighted Evolution of Individual Responses}{21}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Variance of the Weighted Evolution of Individual Responses}{21}{section.5.2}% 
+\contentsline {section}{\numberline {5.3}Properties}{21}{section.5.3}% 
+\contentsline {subsubsection}{Property 1: the variance of Z is bounded between 0 and ?}{22}{section*.14}% 
+\contentsline {subsubsection}{Property 2: }{22}{section*.15}% 
+\contentsline {section}{\numberline {5.4}Take Different Questions Into Account}{22}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Non-Response, Dropout, Attrition and Seasonal Effects}{23}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Seasonal Correction}{23}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Non-Response}{24}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Dropout and Attrition}{26}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Dropout}{26}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Attrition}{26}{subsection.6.3.2}% 
+\contentsline {chapter}{\numberline {7}Exploratory Analysis}{28}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Descriptive Statistics}{28}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Correlation Analysis}{28}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}Autocorrelation}{31}{section.7.3}% 
+\contentsline {section}{\numberline {7.4}Stationarity}{31}{section.7.4}% 
+\contentsline {chapter}{\numberline {8}Linear Models}{33}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}Method}{33}{section.8.1}% 
+\contentsline {section}{\numberline {8.2}Linear Models}{34}{section.8.2}% 
+\contentsline {subsection}{\numberline {8.2.1}Diebold-Mariano Test}{36}{subsection.8.2.1}% 
+\contentsline {section}{\numberline {8.3}Model Selection}{37}{section.8.3}% 
+\contentsline {subsection}{\numberline {8.3.1}Out-of-Sample Performances}{37}{subsection.8.3.1}% 
+\contentsline {chapter}{\numberline {9}Conclusion}{40}{chapter.9}% 
+\contentsline {chapter}{\numberline {10}Discussion}{41}{chapter.10}% 
