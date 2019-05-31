@@ -231,7 +231,6 @@ Academic year 2018-2019
 % ------------------------- First pages ---------------------------
 % For table of contents, acknowlegments, ...
 % -----------------------------------------------------------------
-\blankpage
 
 \rmfamily
 \pagestyle{plain}
@@ -248,38 +247,19 @@ A written permission of the promotor is also required to use the methods, produc
 \end{bottompar}
 
 
-\blankpage
-
-
 
 \chapter*{Acknowledgement}
 
+Firstly, I would like to express my sincere gratitude to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master Thesis would never be what it is without him. \\~\\ 
 
-I'm grateful to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master Thesis would never be what it is without him.
+I want to thank the National Bank of Belgium for the data and all the facilities that were kindly offered to me to make this thesis possible. \\~\\
 
-I'm thankful to Marc Boumon and Isabelle De Greef, who where always available to answer my questions regarding the business survey.
+I'm grateful to Marc Boumon and Isabelle De Greef, who were always available to answer my questions regarding the business survey. 
+I also want to say thank you to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Liedo, ... and all the other people at the National Bank of Belgium whose remarks and inputs during meetings and in discussions were crucial to give the best direction to this paper. \\~\\
 
-I'm also tankful to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Liedo, ...
- whose remarks and inputs during meetings and in discussions where crucial to give the best direction to this paper.
+I thank my co-promotor, Professor Geert Molenberghs, for his guidance and feedback, and extend my gratitude to Geert Loosveldt and Stephan Moens for their important input during the Mid-term presentation. \\~\\
 
-
-and all the members of the Department of Research and Development who where always there to answer any of my questions.
-
-% for their time and advise during the writing of master thesis. 
-
-
-I'm grateful to my co-promotor Geert Molenberghs for the guidance and feedback. Geert Loosveldt and Stephan Moens for their input during the Mid-term presentation.
-
-Last but not least, I would like to thank all the professors of the Master of Statistics that made it possible for me to acquire the knowledge and passion of statistics, needed to write this thesis.
-
-
-\begin{bottompar}
-\textit{"Statistics are the heart of democracy." }
-
-    Simeon Strunsky
-\end{bottompar}
-
-\blankpage
+Last but not least, I would like to thank all the professors of the Master of Statistics that made it possible for me to acquire the knowledge and passion of statistics, needed to write this thesis. 
 
 
 \chapter*{Abstract}
@@ -287,11 +267,14 @@ Last but not least, I would like to thank all the professors of the Master of St
 
 \section*{Abstract}
 
-The variance is, next to the mean, a very important tool for statisticians
+The variance is, next to the mean, a very important information about a certain variable.
+
 
 This Master Thesis explores the variance of the Belgian business survey.
+
+Characteristics specific to the business survey
  
-Several finding concerning the nature and properties of the variance wher found as the bounds and relation with the mean.
+Several finding concerning the nature and properties of the variance where found as the bounds and relation with the mean.
 
 An indicator, called the evolution of individual responses, was explored and developed.
 
@@ -309,11 +292,10 @@ Survey Variance -
 Survey Volatility -
 
 
-
 \chapter*{List of Abbreviations}
 
 \begin{tabular}{l l}
-  AIC       & Akaike's information criterion \\
+  AIC       & Akaike's Information Criterion \\
   BSI       & Business Survey Indicator/Barometer \\
   Cor       & Correlation \\
   Cov       & Covariance \\
@@ -342,31 +324,49 @@ Survey Volatility -
 
 \chapter{Introduction}
 
-The business survey is organised within the National Bank of Belgium.
-Each month the business survey indicator is published based on around 3000 respondents who are part of a large panel of companies.
+%The business survey is organised within the National Bank of Belgium.
+% Each month the business survey indicator is published based on around 3000 respondents who are part of a large panel of companies.
 
-The publication is important for public and private organisation to have a direct idea of the evolution of the Belgian economy since most of the quantitative macroeconomic indicators are published with a lag of at least a month.
+Each month around 3000 companies reply to several questions of a survey that holds on one page and the questions have three possible answers.
+
+The results are then summarised and deliver a surprisingly accurate picture of the present state of the Belgian economy.
+
+
+% The results are then summarised in several business survey indicator (BSI); one general indicator taking all the responses into account, and sector specific indicators.
+
+The results are surprisingly accurate to capture the present state of the economy and make short term prediction.
+
+% The publication is important for public and private organisation to have a direct idea of the evolution of the Belgian economy since most of the quantitative macroeconomic indicators are published with a lag of at least a month.
 
 A widespread method to predict the evolution of National Economies is the survey-based business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
 
-- Talk about tradition of improving BSI
+
 
 This Thesis is included in the continuity of a long tradition of papers proposing improvement and ways to add value to the Business Barometer (.......) will propose ways to add information to the Belgian Business Barometer, that could also be applied to others
 
-Since 1968, the National Bank of Belgium publishes each month the national 
+The business surveys are today 
 
 Add European dimension !
 
-%%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is surveybased indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo business survey Christian Seiler Christian Heumann)
+%%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is survey-based indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo business survey Christian Seiler Christian Heumann)
 
 \subsubsection{Objectives}
+
+This study explores the variability and the possible interest of taking it into account to make future predictions.
+
+The variability will take two very different forms in this paper. 
+First it will be measured with the variance of the indicator, as a measure of the (di)agreement among respondents.
+
+The second variability measure will be called the evolution of Individual responses (EIR) and will account for the changes in responses of the different participants. This is possible since the business survey is a panel survey where respondents usually participate in the survey for a long period.
 
 \subsubsection{Methodology}
 
 \subsubsection{Plan of this Paper}
 
-Chapter 2
+This Master Thesis
+
+Chapter 2 
 
 3
 
@@ -777,7 +777,7 @@ $\pi$ was chosen as a symbol here since it can be interpreted as a probability: 
 \subsection{Weighted Indicator}
 
 As described in \autoref{sec:Weighting procedure}, each respondent has two different weights: one according to its size, one according to the size of the sector it's part of. Those weights are then combined and we end up with a specific weight $\omega_i$.
-We have now the following equation for the indicator
+We have then the following equation for the indicator
 
 \begin{equation}
     E(X) = \sum_{i=1}^n \omega_i x_i  \quad \text{  where  } \sum_{i=1}^n \omega_i =  1
@@ -785,7 +785,7 @@ We have now the following equation for the indicator
 
 $x_i$ is the answer of the respondent $i$ and can take values -1, 0 and 1.
 $\omega_i$ is the weight of respondents $i$. 
-The weights are here standardised so there sum is equal to one.
+The weights are standardised so their sum is equal to one.
 
 As for the unweighted indicator, we can decompose the equation by the three possible answers with, in this case, their according weights.
 
@@ -824,7 +824,7 @@ The previous calculations were specific to one question. The published indicator
 where 
 $E(X_{Q1})$, $E(X_{Q2})$, $E(X_{Q3})$ and $E(X_{Q4})$ are the different averages for question 18, 27, 32 and 33 (can be weighted or unweighted).
 
-The equation can also be written as follow for the unweighted indicator\footnote{Assuming all the respondents answered to all the questions.}
+The equation can also be written as follow for the unweighted indicator\footnote{Assuming all the respondents answered all the questions.}
 
 
 \begin{equation}
@@ -1036,19 +1036,19 @@ First of all, the variance is bounded between 0 and 1.
 A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. 
 An interesting approach is to take  \autoref{eq:var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values, $\pi_0$ because it's a proportion and $\E(X)^2$ since it's squared. 
 Both variables have a minus sign in the equation, so the highest results are obtained when both variables are equal to zero.
-In other words, the highest variance is obtained when no respondent answer "neutral" and the BSI is equal to 0. 
-This happens when their are as much negative as positive answers (50-50).
-This corresponds to the interpretation described before, since it's the situation with the most disagreement among respondents.
+In other words, the highest variance is obtained when no respondent answers "neutral" and the BSI is equal to 0. 
+This happens when there are as many negative as positive answers (50-50).
+This corresponds to the interpretation described before since it's the situation with the most disagreement among respondents.
 In the other hand, if all participants answer the same ("negative", "neutral" or "positive"), the variance is equal to zero.
 It corresponds to the situation where the agreement among respondents is the highest.
 
 Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{eq:var3} or \autoref{eq:var3 weighted}. The results can be seen in \autoref{fig:var properties}.
-It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example an indicator of 0.5 can only have a variance between 0.25 and 0.75.
+It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example, an indicator of 0.5 can only have a variance between 0.25 and 0.75.
 It's also interesting to notice that to know that with two of the three variables ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. This means that the three variables are related.
 
 \section{Take Different Questions Into Account}
 
-As already seen, the published indicator take different questions into account. 
+As already seen, the published indicator takes different questions into account. 
 The combination of the variance of different questions is slightly more complex than the combination of different indicators since the questions are correlated, which means that covariance has to be taken into account.
 
 The formula to combine different variances is the following
@@ -1237,7 +1237,7 @@ The idea of only taking a certain month and the previous month can seem non-suff
 
 Different methods were explored to take more than two periods into account, but it was found to be flawed and very complex to interpret.
 We rather propose here a simple generalisation; use t-n rather than t-1. 
-The answer at t-n are compared with the answer at time t, without taking the between answers into account.
+The answer at t-n is compared with the answer at time t, without taking the between answers into account.
 
 The calculation is then the same for the unweighted as \autoref{eq:unweighted proprotion EIR} and for the weighted as \autoref{eq:weighted proprotion EIR}.
 
@@ -1281,10 +1281,10 @@ The calculation is then the same for the unweighted as \autoref{eq:unweighted pr
 \chapter{The Variance of the Evolution of Individual Responses} \label{Chapter:Var Z}
 
 The new indicator, the evolution of individual responses, also has a variance that has some interpretation interest. 
-While the EIR is a measure of the direction companies changes there answer(s), the variance of the EIR can be understood as the measure of changes in answers. 
+While the EIR is a measure of the direction companies change their answer(s), the variance of the EIR can be understood as the measure of changes in answers. 
 Therefore the variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
 
-While the variance of the business survey indicator is the measure  of disagreement among respondents, the variance of the evolution of individual responses is the measure of different changes of respondents.
+While the variance of the business survey indicator is the measure of disagreement among respondents, the variance of the evolution of individual responses is the measure of different changes of respondents.
 
 % In this case, the highest the variance of EIR, will be obtained when half of the companies went from a negative answer to a positive answer and the other half did the opposite and changed from a positive answer at time t-1 to a negative answer at time t. 
 
@@ -1320,12 +1320,12 @@ upper bound:
 
 \begin{eqnarray}
 Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \nonumber \\
-	&=& 1 - 0 - 0 - 0 + 3*0.5 + 3*0.5 - 0 = 2.5 \nonumber
+    &=& 1 - 0 - 0 - 0 + 3*0.5 + 3*0.5 - 0 = 2.5 \nonumber
 \end{eqnarray}
 
 
 \begin{equation}
-	1+ 0.5*3 + 0.5*3 - 0 = 2.5
+    1+ 0.5*3 + 0.5*3 - 0 = 2.5
 \end{equation}
 
 \subsubsection{Property 2: }
@@ -1339,9 +1339,9 @@ Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \
 \label{chap:nonresponse dropout}
 
 Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and doing a literature review, four main effects could mislead the results. Three are due to the survey and one to external effects; seasonal effects. We will first look into seasonal effects and apply a well know correction to the data to eliminate, as good as possible, the seasonal effects from the data.
-It will then be looked into the three survey based issues; non-response, dropout and attrition.
+It will then be looked into the three survey based issues; non-response, dropout, and attrition.
 
-As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, for the period of 1988 to 2018.
+As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, from 1988 to 2018.
 
 Eight variables will be used for the analysis; the business survey indicator, the variance of the BSI, the evolution of individual responses and the variance of the EIR (three variations of the EIR and its variance; taking a 1, 2 or 3 months comparison) 
 
@@ -1380,10 +1380,10 @@ Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YE
 The different variables are seasonal correction using RJDemetra, the R package based on JDemetra+.
 The results are plotted in \autoref{fig:seasonal ajusted rjdemetra}.
 
-The method applied is is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction since it's not applying log/level, outliers and calendar corrections. 
-It was chosen since it's the closes to the X11 applied by the NBB to the business survey when monthly publishing the indicators.
+The method applied is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction since it's not applying log/level, outliers and calendar corrections. 
+It was chosen since it's the closest to the X11 applied by the NBB to the business survey when monthly publishing the indicators.
 
-It's interesting here to notice here that there is no need for year on year GDP seasonal correction since  it's, by definition, eliminating all its seasonality.
+It's interesting here to notice here that there is no need for year on year GDP seasonal correction since it's, by definition, eliminating all its seasonality.
 
 \begin{figure}[htp!]
     \centering
@@ -1423,17 +1423,17 @@ The response rate is usually around 95\%, which is quite high for a survey, ther
 \section{Dropout and Attrition}
 
 Dropout and Attrition are related to the structure and organisation of the survey. 
-As explain in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create bias (dropout) and companies change of answering behaviour over time (attrition).
+As explain in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create a bias (dropout) and companies change of answering behaviour over time (attrition).
 
 \subsection{Dropout}
 
 The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the responsible persons for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
-This is an issue since it means that it's a certain type of companies that leave the survey. If this type of profile has a different opinion or respond differently than the remaining companies this will create bias. 
+This is an issue since it means that it's a certain type of company that leaves the survey. If this type of profile has a different opinion or respond differently than the remaining companies this will create bias. 
 
 
 It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that we have a very small bias for each month (if we take a long period into account then the bias become larger) we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
-It's not the subject of this work, so will not dive more into this bias, but we would recommend having a closer look into this for future researchers.
+It's not the subject of this work, so we will not dive more into this bias, but we would recommend having a closer look into this for future researchers.
 
 \subsection{Attrition}
 
@@ -1442,7 +1442,7 @@ A very interesting master thesis was done about the Belgian labour force survey,
 The Belgian labour force survey was convenient to test for attrition since the survey is answered by participants exactly four times with a lag of six months.
 It was shown that indeed attrition was present in the survey.
 
-In the case of the industry business survey, it's a harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. Other sectors have the same issue.
+In the case of the industry business survey, it's harder to test for it since we have only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and between around 2000 with some companies been recruited. Other sectors have the same issue.
 
 
 \begin{table}[htp!]  \centering \footnotesize 
@@ -1459,7 +1459,7 @@ Time & $-0.339$ & $0.133$ & $-0.807$ & $0.039$ & $-0.705$ \\
 
 An interesting approach to explore attrition and dropout is by looking at the correlations of the variances over time.
 In \autoref{tab:corr attrition} it can be seen that there is a very large negative correlation between time and the variance of the BSI and the variance of the EIR. This can be interpreted as companies agreeing more and more over time and changing less and less there answers.
-Without making any conclusions, the variance of BSI and the variance of EIR seems to show the present of dropout bias and/or attrition.
+Without making any conclusions, the variance of BSI and the variance of EIR seems to show the presence of dropout bias and/or attrition.
 
 Same can be observed in Var(BSI) and Var(EIR) plots in \autoref{fig:seasonal ajusted rjdemetra} where, aside of the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of the variance of the BSI and the different variances of EIR after the beginning of the century, the last time there was a large recruitment done.
 
@@ -1475,21 +1475,21 @@ In the context of this paper, it's important to notice the potential importance 
 
 The previous chapter already did some of the exploratory analysis.
 Further observations of the different variables at hand will be done is a short descriptive statistics section.
-In a second part, correlations among the variables will be looked at, and the last part will test autocorrelation.
+In the second part, correlations among the variables will be looked at, and the last part will test autocorrelation.
 
 
 \section{Descriptive Statistics}
 
-The variables at hand are for the industry business survey and takes into account the four questions available on \autopageref{Appendix: Question NS975 description}, as explained in \autoref{sec:Questionnaire}.
+The variables at hand are obtained from the industry business survey and take into account the four questions available on \autopageref{Appendix: Question NS975 description}, as explained in \autoref{sec:Questionnaire}.
 The different variables are unweighted since the weights of the different respondents are only available for the surveys after 2008.
 
-The data is seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for a 30 years period, from 1988 to 2018.
+The data is seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for 30 years, from 1988 to 2018.
 The year on year GDP calculation was explained in \autoref{eq:YoY GDP} and is here calculated for the Belgian economy.
 
-The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as much observations as the other variables since it's a quarterly measure, while the survey is monthly. 
+The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as many observations as the other variables since it's a quarterly measure, while the survey is monthly. 
 The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never goes higher than 0.037 and never lower than -0.321.
 
-The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follow quite well the evolution of YoY GDP. 
+The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follows quite well the evolution of YoY GDP. 
 The other variables, seem to react to major changes in the economy but are more volatile. 
 
 
@@ -1540,23 +1540,23 @@ Belgian industry claims 25\% of the labour force in Belgium and was shown as a g
 Several observations can be done.
 First, it can be seen that the correlation between the business survey indicator and YoY GDP is very high while other variables have a rather small correlation with YoY GDP.
 
-The correlation between the BSI and its variance is also high, this can be explained to some extend by the different observations done in \autoref{sec:properties variance}.
-The same can not be said about the correlation between the EIR and its variance, since their correlation is small for the three different measures of EIR.
+The correlation between the BSI and its variance is also high, this can be explained to some extent by the different observations done in \autoref{sec:properties variance}.
+The same can not be said about the correlation between the EIR and its variance since their correlation is small for the three different measures of EIR.
 
-As could be forseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high.
+As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high.
 
 The correlation between the different types of variances is also high, which can mean that they contain quite similar information.
-With this definition it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information, if this will help to model Belgian growth will be discussed in the next chapter.
+With this definition, it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information if this will help to model Belgian growth will be discussed in the next chapter.
 
 
 \section{Autocorrelation}
 
 Autocorrelation, also known as serial correlation, is the correlation between an observation at time t and previous observations.
 
-The method used here is to estimate the autocorrelation function and plot it, as can be seen in \autoref{fig:ACF}, where the correlation of a variables with its previous lags is shown. In the case of the YoY GDP, one lag means three months since the variables is quarterly, while for the other variables the lag corresponds to one month.
+The method used here is to estimate the autocorrelation function and plot it, as can be seen in \autoref{fig:ACF}, where the correlation of a variable with its previous lags is shown. In the case of the YoY GDP, one lag means three months since the variable is quarterly, while for the other variables the lag corresponds to one month.
 Several variables have high autocorrelation. The variances are highly correlated over time, as is the BSI. 
 On the other hand, YoY GDP is slightly correlated with its three previous quarter values. 
-For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the amount of months taking into account for the EIR.
+For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the number of months taking into account for the EIR.
 
 
 \begin{figure}[!htbp]
@@ -1599,7 +1599,7 @@ p-value  & $< 0.01$ & 0.06 & $< 0.01$ & 0.26 & $< 0.01$ & 0.21 & $< 0.01$ & 0.12
 
 The interest of this chapter is to use a model to test the pertinence of the variables in the short term prediction of the evolution of GDP.
 
-As mention in \autoref{sec:nowcasting}, were nowcasting was discussed, there exist a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
+As mention in \autoref{sec:nowcasting}, were nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 
 The National Bank of Belgium for example, developed a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well-known methods are ARIMA models, MIDAS and much more.
 
@@ -1608,8 +1608,8 @@ To achieve this objective, it's important to use a model that account easily for
 
 \section{Method}
 
-The quarterly year on year GDP are set in the last month of the quarter. This is the common way to go to take a reasonable approach and still have some predictive properties.
-Indeed of we look at \autoref{fig:time of the data}, it means that with the linear model it's possible to estimate quarterly YoY GDP one month before it's published. 
+The quarterly year on year GDP is set in the last month of the quarter. This is the common way to go to take a reasonable approach and still have some predictive properties.
+Indeed if we look at \autoref{fig:time of the data}, it means that with the linear model it's possible to estimate quarterly YoY GDP one month before it's published. 
 This means that the model will be estimated only with the indicators of the last month of each quarter. One the model is estimated, it's then possible to make predictions or estimations of YoY GDP for each month.
 
 
@@ -1644,7 +1644,7 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 \end{figure}
 
 
-\section{Linear Model}
+\section{Linear Models}
 
 The linear regression can be written as follow
 
@@ -1801,7 +1801,7 @@ Since there are a large among of different possible models when having eight dif
 
 The method applied here is a step procedure where AIC is used to select the best model.
 Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both. 
-The three methods are all based on Akaike's information criterion (AIC) as measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
+The three methods are all based on Akaike's information criterion (AIC) as a measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
 
 The results of the three different methods converge to the model already proposed in \autoref{eq:model3}, where BSI, Var(BSI), EIR1 and Var(EIR1) are the regressors.
 
@@ -1816,7 +1816,7 @@ Following those results, there are two good candidates; \autoref{eq:model2} and 
 
 \subsection{Out-of-Sample Performances}
 
-To know if the results from the linear model are robust, out-of-sample estimation will be performed.
+To know if the results from the linear model are robust, the out-of-sample estimation will be performed.
 
 
 \newpage
@@ -1997,34 +1997,34 @@ Bayesian estimation \cite{bialowolski_bayesian_nodate}
 \label{Appendix: Question NS975 description}
 
 originally numbered question 18, 27, 32 and 33 (see \autopageref{Questionnaire2018}), for simplicity numbered here as 1, 2, 3 and 4.
-Note that the first question is interpreted the opposite way from the three other. Having a higher stock than normal is considered a "negative" answer while lower stock is considered "positive".
+Note that the first question is interpreted in the opposite way from the three other. Having a higher stock than normal is considered a "negative" answer while lower stock is considered "positive".
 
 
 \subsubsection*{Course and assessment}
 \begin{enumerate}
     \item Your current stock of this product will you consider, for the season, as: \\
-	$\Square$ higher than normal (too high) $\Square$ normal (sufficient) $\Square$ lower than normal (too low)
-	
+    $\Square$ higher than normal (too high) $\Square$ normal (sufficient) $\Square$ lower than normal (too low)
+    
     \item Your current aggregate order position for this product is what you consider to be: \\
-	$\Square$ higher than normal $\Square$ normal $\Square$ lower than normal
+    $\Square$ higher than normal $\Square$ normal $\Square$ lower than normal
 \end{enumerate}
 
 \subsubsection*{Prospects for the next three months} 
 \begin{enumerate}
 \setcounter{enumi}{2}
     \item The personnel (workers and technicians) employed for the manufacture of this product will, according to you: \\
-	$\Square$ be expanded $\Square$ remain unchanged $\Square$ be reduced
-						
+    $\Square$ be expanded $\Square$ remain unchanged $\Square$ be reduced
+                        
     \item The demand of your customers for this product will, in your opinion:  \\
-	$\Square$ be more important $\Square$ be equally important $\Square$ be less important \\\	
-	as usually at that time of the year.
+    $\Square$ be more important $\Square$ be equally important $\Square$ be less important \\\    
+    as usual at that time of the year.
 \end{enumerate}
 
 
 \newpage
 \section*{Specificity of question 3 and 4, are peoples predictions correct ?}
 
-The difference between the two first question and the .................
+The difference between the two first questions and the .................
 
 
 \begin{table}[!htbp] 
