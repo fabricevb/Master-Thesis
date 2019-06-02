@@ -86,6 +86,27 @@ stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_3", "E_3_lag1","E_3_lag2","E
 stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_4", "E_4_lag1","E_4_lag2","E_4_lag3","E_4_lag4")])), title="Correlation Matrix")
 
 
+################################
+### participants and variances #
+################################
+
+scaleFactor <- max(data$Respondents) / max(data$Var)
+ggplot(data, aes(x=date)) +
+        geom_line(aes(y=Respondents), col="dodgerblue") +
+        geom_line(aes(y=Var * scaleFactor), col="#D55E00") +
+        scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+        scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Var(BSI)")) + 
+        theme_bw() +   theme(legend.position = "none",axis.text.x = element_text(angle=45, hjust = 1))
+
+scaleFactor <- max(data$Respondents) / max(data$Var_Z)
+ggplot(data, aes(x=date)) +
+        geom_line(aes(y=Respondents), col="dodgerblue") +
+        geom_line(aes(y=Var_Z * scaleFactor), col="#D55E00") +
+        scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+        scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Var(EIR)")) +         
+        theme_bw() +   theme(legend.position = "none",axis.text.x = element_text(angle=45, hjust = 1))
+
+
 #####################
 ### Autocorrelation #
 #####################

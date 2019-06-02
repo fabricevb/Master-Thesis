@@ -1161,7 +1161,7 @@ The calculation of $z_i$ is the difference of $x_i$ at t-1 and $x_i$ at t
 
 the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}. 
 
-\begin{table}[H]
+\begin{table}[htp!]
      \centering \footnotesize
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
@@ -1172,7 +1172,7 @@ the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}.
 \end{tabular}
     \caption{Values of the different observations of $z_i$}
     \label{tab:values EIR}
-\end{table}{}
+\end{table}
 
 
 The limitation of this indicator is that the previous answer is determinant of the possible results of the indicator. 
@@ -1411,11 +1411,6 @@ Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \
 \end{eqnarray}
 
 
-\begin{equation}
-    1+ 0.5*3 + 0.5*3 - 0 = 2.5
-\end{equation}
-
-
  
 There are here more explanatory, therefore it's not possible to plot is a was done for the variance of the BSI. Some interpretation can still be done
 
@@ -1608,7 +1603,7 @@ In the context of this paper, it's important to notice the potential importance 
 
 The previous chapter already did some of the exploratory analysis.
 Further observations of the different variables at hand will be done is a short descriptive statistics section.
-In the second part, correlations among the variables will be looked at, and the last part will test autocorrelation.
+In the second part, correlations among the variables will be looked at, and the last part will focus on autocorrelation.
 
 
 \section{Descriptive Statistics}
@@ -1635,13 +1630,11 @@ Var(EIR3)   & 372       & 0.123 & 0.019 & 0.075 & 0.109 & 0.137 & 0.166 \\
 \end{table} 
 
 The variables at hand are obtained from the industry business survey and take into account the four questions available on \autopageref{Appendix: Question NS975 description}, as explained in \autoref{sec:Questionnaire}.
-The different variables are unweighted since the weights of the different respondents are only available for the surveys after 2008.
-
-The data is seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for 30 years, from 1988 to 2018.
-The year on year GDP calculation was explained in \autoref{eq:YoY GDP} and is here calculated for the Belgian economy.
+The different variables are unweighted, seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for 30 years, from 1988 to 2018.
+The year on year GDP calculation was explained from GDP byt the calculation in \autoref{eq:YoY GDP} and is here obtained for the Belgian economy.
 
 The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as many observations as the other variables since it's a quarterly measure, while the survey is monthly. 
-The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never goes higher than 0.037 and never lower than -0.321.
+The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never went higher than 0.037 and never lower than -0.321.
 
 The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follows quite well the evolution of YoY GDP. 
 The other variables, seem to react to major changes in GDP but are more volatile.
@@ -1676,20 +1669,22 @@ First, it can be seen that the correlation between the business survey indicator
 The correlation between the BSI and its variance is also high, this can be explained to some extent by the different observations done in \autoref{sec:properties variance}.
 The same can not be said about the correlation between the EIR and its variance since their correlation is small for the three different measures of EIR.
 
-As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high.
+As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high. There calculation and data used been quite close.
 
 The correlation between the different types of variances is also high, which can mean that they contain quite similar information.
-With this definition, it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information if this will help to model Belgian growth will be discussed in the next chapter.
-
+With this definition, it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information.
 
 \section{Autocorrelation}
 
 Autocorrelation, also known as serial correlation, is the correlation between an observation at time $t$ and previous observations.
 
-The method used here is to estimate the autocorrelation function and plot it, as can be seen in \autoref{fig:ACF}, where the correlation of a variable with its previous lags is shown. In the case of the YoY GDP, one lag means three months since the variable is quarterly, while for the other variables the lag corresponds to one month.
+The method used here is to estimate the autocorrelation function and plot it, the result can be seen in \autoref{fig:ACF}, where the correlation of a variable with its previous lags is shown. 
+In the case of the YoY GDP, one lag (X axis of the plot) is three months since the variable is quarterly, while for the other variables the lag corresponds to one month.
 Several variables have high autocorrelation. The variances are highly correlated over time, as is the BSI. 
 On the other hand, YoY GDP is slightly correlated with its three previous quarter values. 
 For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the number of months taking into account for the EIR.
+
+Influence for modelling ?
 
 
 \begin{figure}[!htbp]
@@ -1712,13 +1707,23 @@ The National Bank of Belgium for example, developed a State-Space model availabl
 The interest of the research at hand, is to explore the utility of the variance of the business survey indicator, the evolution of individual responses and its variance.
 
 To achieve this objective, it's better to use a model that account easily for the interest of each variable. The idea here is not to find the best model but rather to see if including the new indicators in a certain model will improve predictions.
-Therefore, the linear model is preferred here.
+Therefore, the linear model is preferred.
+
+This chapter will begin with proposing five different models, one simple model where only the BSI is used as regressor, and then four potential models that include other regressors.
+
+Several test statistics will be looked at and used to compare the different models and see if the new regressors added to the model, improve the model fit and the estimations.
+
+A method of model selection will then by applied to see if it decides to include the new regressors into the model aside from from the BSI.
+
+The last part will use out-of-sample estimation to check if the results from the previous tests are robust.
 
 \section{Method}
 
 The quarterly year on year GDP is set in the last month of the quarter. This is the common way to go to take a reasonable approach and still have some predictive properties.
 Indeed if we look at \autoref{fig:time of the data}, it means that with the linear model it's possible to estimate quarterly YoY GDP one month before it's published. 
 This means that the model will be estimated only with the indicators of the last month of each quarter. One the model is estimated, it's then possible to make predictions or estimations of YoY GDP for each month.
+
+
 
 
 \begin{figure}[H]
@@ -1761,22 +1766,30 @@ The linear regression can be written as follow
        \beta_{i} X_{t} + \epsilon_t 
 \end{eqnarray}
 
-Where $\beta_{0}$ is a constant, $\beta_{i}$  are the different regression coefficients of the monthly predictors ( $X_{t}$) and $\epsilon_t$ is the error term.
+Where $\beta_{0}$ is a constant, $\beta_{i}$  are the different regression coefficients of the monthly predictors ($X_{t}$) and $\epsilon_t$ is the error term.
 
-The first approach here is to propose five different models (\autoref{eq:model1}-\ref{eq:model5}) and compare them.
-The simple model takes as unique regressor the business survey indicator
+This model is quite a good example of basic nowcasting, since it's modelling data that's happening at the same time, but since there is a lag of a month in the publication of GDP, it can be used to predict a month in advance, the published GDP.
+
+It can also be used to estimate GDP monthly. Ones a linear model is obtained, based only on quarterly data, it can then be applied to all the available data, and a prediction can be done for each month.
+
+In real life, this means that at the end of January, when the results of GDP are published for the last semester of the previous year, the linear model can predict YoY growth for the month of January. Therefore it's not forecasting, since it doesn't predict the future, but predict what will be published
+
+The first approach here is to propose five different models and compare them.
+The simplest model takes as unique regressor, the business survey indicator
 
 \begin{equation} \tag{Model 1}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t} + \epsilon_t \label{eq:model1} 
 \end{equation}
 
-The other model takes the business survey indicator and its variance as regressors
+This will be the reference model. A model where only the BSI is used to predict GDP growth (YoY GDP). It will be compared to the following models.
+
+A model that takes the business survey indicator and its variance as regressors
 
 \begin{equation} \tag{Model 2}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \epsilon_t \label{eq:model2}
 \end{equation}
 
-And three different models where the three evolution of individual responses with their variances are each time added to the models including the business survey and its variance
+And three different models where the three evolution of individual responses with their variances are each time added to the previous model
 
 \begin{equation} \tag{Model 3}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{3} \EIR1_{t}  + \beta_{4} \Var(\EIR1)_{t} + \epsilon_t \label{eq:model3}
@@ -1786,12 +1799,11 @@ And three different models where the three evolution of individual responses wit
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{5} \EIR2_{t}  + \beta_{6} \Var(\EIR2)_{t} + \epsilon_t \label{eq:model4}
 \end{equation}
 
-
 \begin{equation} \tag{Model 5}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{7} \EIR3_{t}  + \beta_{8} \Var(\EIR3)_{t} + \epsilon_t  \label{eq:model5}
 \end{equation}
 
-\begin{table}[H] \centering \footnotesize
+\begin{table}[hb] \centering \footnotesize
   \caption{Linear Regression Results for the period 1988 to 2018} 
   \label{tab:models comparaison 1} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
@@ -1864,35 +1876,38 @@ The other observation that can be done is that the interest of the variance in t
     \label{tab:accuracy measures}
 \end{table}
 
+\autoref{tab:accuracy measures} shows some more measures of goodness-of- fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), Mean Absolute Percentage Error (MAPE) and Mean Absolute Scaled Error (MASE).
+All give similar result as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
 
-RMSE: Root Mean Squared Error
+The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}.
 
-MAE: Mean Absolute Error
+\subsubsection{Diebold-Mariano Test}
 
-MPE: Mean Percentage Error
+A statistical test, called Diebold-Mariano test \cite{diebold_comparing_1995}, is well known to compare forecast accuracy of different models. 
 
-MAPE: Mean Absolute Percentage Error
 
-MASE: Mean Absolute Scaled Error
+% The Diebold-Mariano test is applied to determine whether forecasts are significantly better.
 
-\subsection{Diebold-Mariano Test}
-
-\cite{diebold_comparing_1995}
-
+The test is comparing the residuals of different models in test if a model is significantly better than the another one.
+It's modelling 
 DM = 1.2727, Forecast horizon = 1, Loss function power = 2, p-value = 0.2055
 alternative hypothesis: two.sided
 
 
-\begin{table}[!htbp]
-    \centering \footnotesize
-    \begin{tabular}{c|c|c|c}
-        p-values & \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model3} \\ \hline
-        \ref{eq:model1} &    & 0.00005126  & 0.00002586    \\
-        \ref{eq:model2} &    &        & 0.2055        \\
-        \ref{eq:model3} &    &        &      \\
-    \end{tabular}
-    \caption{Diebold-Mariano Tests}
-    \label{tab:Diebold-Mariano}
+
+\begin{table}[htp!]
+     \centering \footnotesize
+    \begin{tabular}{| r | c c c c c |}
+    \cline{2-6}
+ \multicolumn{0}{r|}{p-values}	& \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model3} & \ref{eq:model4} & \ref{eq:model5} \\ \cline{1-6}
+ \ref{eq:model1} & 1 & 5.126e-06  & 2.586e-06 & 6.352e-06 & 5.602e-06\\ 
+ \ref{eq:model2} &   & 1  & 0.2055 & 0.6836 & 0.5147 \\
+ \ref{eq:model3} &   &   & 1 & &   \\
+ \ref{eq:model4} &   &   &  0.1613 & 1 & 0.7876 \\
+ \ref{eq:model5} &   &   & 0.3017 &   & 1 \\ \cline{1-6}
+\end{tabular}
+    \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1}}
+    \label{tab:Diebold Mariano 1}
 \end{table}
 
 
@@ -1905,12 +1920,12 @@ alternative hypothesis: two.sided
 
 
 
-\section{Model Selection}
+\subsubsection{Model Selection}
 
 Since there are a large among of different possible models when having eight different regressors, some procedure needs to be chosen to look for the best model.
 
 The method applied here is a step procedure where AIC is used to select the best model.
-Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both. 
+Three different selection algorithms will be applied; (1) forward, (2) backward and  (3) both of the step() procedure in R. 
 The three methods are all based on Akaike's information criterion (AIC) as a measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
 
 The results of the three different methods converge to the model already proposed in \autoref{eq:model3}, where BSI, Var(BSI), EIR1 and Var(EIR1) are the regressors.
@@ -1919,17 +1934,61 @@ From the different results, it can already be stated that EIR1 and its variance 
 
 It was also seen that the variance of the BSI improves the model quite largely and that EIR1 and its variance can also add some information.
 
-
-Following those results, there are two good candidates; \autoref{eq:model2} and \ref{eq:model3}. Those are the two models that we will be further looked into and compared to the simplest model only including the BSI.
-
-
-
-\subsection{Out-of-Sample Performances}
-
-To know if the results from the linear model are robust, the out-of-sample estimation will be performed.
+Following those results, there are two good candidates; \autoref{eq:model2} and \ref{eq:model3}. Those are the two models that will be further looked into and compared to the simplest model only including the BSI (\autoref{eq:model1}).
 
 
 
+\subsubsection{Out-of-Sample Performances}
+
+To know if the results from the linear model are robust, two out-of-sample estimation will be performed.
+
+The first will use the period 1988 to 2000 to estimate the model, and its predictions for that period and for 1988 to 2018 will be compared using Diebold-Mariano test.
+The period was chose since it's only 12 years long, and will have to be accurate for the next 18 years. The situation it's representing, is if, since January, each model was used to make prediction, which would deliver the best results.
+
+The same will then be done for the period 1988 until 2012. The year 2012 was chosen after having a closer look at \autoref{fig:predictions1}, where it seems that most of the improvement brought by the models including more than only the BSI, is from 2012 on. Therefore it's interesting to see how the different models perform without taking that period into account.
+
+% Without making any conclusions, a possible interpretation of this improvement brought by the variance of the BSI in the estimation for the period after 2012, could be explained by attrition or dropout.
+
+\begin{table}[htp!]
+     \centering \footnotesize
+    \begin{tabular}{| r | c c c | c c c |}
+ \multicolumn{1}{r}{} &    \multicolumn{3}{c}{\textbf{1988-2000}} &    \multicolumn{3}{c}{\textbf{1988-2018}} \\ \cline{2-7}
+ \multicolumn{0}{r|}{p-values}	& \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model1} & \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model3} \\ \cline{1-7}
+ \ref{eq:model1} & 1 & 0.2203 & 0.08282  & 1 & 1.867e-11 & 5.555e-11 \\ 
+ \ref{eq:model2} &   & 1  	& 0.2886  	&   & 1 & 0.000745 \\
+ \ref{eq:model3} &   &    & 1 &   &   & 1   \\ \cline{1-7}
+\end{tabular}
+    \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2000, applied to the data from 1988-2000 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2000}}
+    \label{tab:Diebold Mariano 2}
+\end{table}
+
+\autoref{tab:Diebold Mariano 2} shows that the models, estimated with the data from 1988 to 2000, there predictions aren't significantly different from each others, while if the model is applied to the whole period of 1988 to 2018, \ref{eq:model3} is significantly better than \ref{eq:model1} and \ref{eq:model2}.
+
+The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 2000}.
+It can be seen that for that period (1988-2000), \ref{eq:model2} and \ref{eq:model3} are only slightly better than \ref{eq:model1} for according to most of the statistics.
+It can then be seen, from the plot, and even more from the Diebold-Mariano tests, that \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model3} after that period, even if the data used for the estimation of the model only uses the data available before 2000.
+
+
+
+
+On the other hand, \autoref{tab:Diebold Mariano 3} shows the Diebold-Mariano test p-values for the model estimated with the data until 2012. The results for the period 1988-2012 and 1988-2018 are quite similar and come to the same conclusion, \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model1}. While \ref{eq:model3} is not significantly better than \ref{eq:model2}.
+
+The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 2012}. 
+
+
+
+\begin{table}[htp!]
+     \centering \footnotesize
+    \begin{tabular}{| r | c c c | c c c |}
+ \multicolumn{1}{r}{} &    \multicolumn{3}{c}{\textbf{1988-2012}} &    \multicolumn{3}{c}{\textbf{1988-2018}} \\ \cline{2-7}
+ \multicolumn{0}{r|}{p-values}	& \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model1} & \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model3} \\ \cline{1-7}
+ \ref{eq:model1} & 1 & 0.00956 & 0.007979 & 1 & 1.269e-07 & 1.751e-07 \\ 
+ \ref{eq:model2} &   & 1  & 0.2813 &   	  & 1 & 0.09632 \\
+ \ref{eq:model3} &   &    & 1 &   &   & 1   \\ \cline{1-7}
+\end{tabular}
+    \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2012, applied to the data from 1988-2012 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2012}}
+    \label{tab:Diebold Mariano 3}
+\end{table}
 
 
 
@@ -2063,6 +2122,11 @@ High correlation between var(BSI) and var(EIR) -> people seems to change in the 
 
 \chapter{Discussion}
 
+The Belgian industry business survey indicator is a very good indicator of the YoY GDP.
+
+
+
+
 \section*{Recruitment procedure and panel data}
 
 The recruitment procedure is not so usual for a survey. The particularity of the business survey, that has the ambition to capture the sentiment of companies considering the evolution is quite big, but it's realising it quite well.
@@ -2153,8 +2217,11 @@ Note that the first question is interpreted in the opposite way from the three o
 \newpage
 \section*{Specificity of question 3 and 4, are peoples predictions correct ?}
 
-The difference between the two first questions and the .................
+A discussion that needs 
 
+Question 1 and 2 are
+
+Question 3 and 4 as
 
 \begin{table}[!htbp] 
    \centering \footnotesize 
