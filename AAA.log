@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  2 JUN 2019 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  3 JUN 2019 09:34
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -1499,85 +1499,85 @@ F version <1.7>, but at most version <1.5> allowed
 <Images/IndustryN.pdf, id=884, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2274.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2275.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
 <Images/4100N_v1990.pdf, id=885, 597.432pt x 844.83629pt>
 File: Images/4100N_v1990.pdf Graphic file (type pdf)
 <use Images/4100N_v1990.pdf>
-Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2281.
+Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2282.
 (pdftex.def)             Requested size: 448.0729pt x 633.62567pt.
 [53 <./Images/IndustryN.pdf>]
 <Graphs/S-I_1.pdf, id=915, 794.97pt x 578.16pt>
 File: Graphs/S-I_1.pdf Graphic file (type pdf)
 <use Graphs/S-I_1.pdf>
-Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2290.
+Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2291.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_2.pdf, id=916, 794.97pt x 578.16pt>
 File: Graphs/S-I_2.pdf Graphic file (type pdf)
 <use Graphs/S-I_2.pdf>
-Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2295.
+Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2296.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_3.pdf, id=917, 794.97pt x 578.16pt>
 File: Graphs/S-I_3.pdf Graphic file (type pdf)
 <use Graphs/S-I_3.pdf>
-Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2300.
+Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2301.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_4.pdf, id=918, 794.97pt x 578.16pt>
 File: Graphs/S-I_4.pdf Graphic file (type pdf)
 <use Graphs/S-I_4.pdf>
-Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2305.
+Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2306.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_5.pdf, id=919, 794.97pt x 578.16pt>
 File: Graphs/S-I_5.pdf Graphic file (type pdf)
 <use Graphs/S-I_5.pdf>
-Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2310.
+Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2311.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_6.pdf, id=920, 794.97pt x 578.16pt>
 File: Graphs/S-I_6.pdf Graphic file (type pdf)
 <use Graphs/S-I_6.pdf>
-Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2315.
+Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2316.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_7.pdf, id=921, 794.97pt x 578.16pt>
 File: Graphs/S-I_7.pdf Graphic file (type pdf)
 <use Graphs/S-I_7.pdf>
-Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2320.
+Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2321.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 <Graphs/S-I_8.pdf, id=922, 794.97pt x 578.16pt>
 File: Graphs/S-I_8.pdf Graphic file (type pdf)
 <use Graphs/S-I_8.pdf>
-Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2325.
+Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2326.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2288--2328
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2289--2329
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2288--2328
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2289--2329
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2288--2328
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2289--2329
 []$ $[]$ 
  []
 
 [54 <./Images/4100N_v1990.pdf>] [55 <./Graphs/S-I_1.pdf> <./Graphs/S-I_2.pdf> <
 ./Graphs/S-I_3.pdf> <./Graphs/S-I_4.pdf> <./Graphs/S-I_5.pdf> <./Graphs/S-I_6.p
 df> <./Graphs/S-I_7.pdf> <./Graphs/S-I_8.pdf>]
-Overfull \hbox (32.39809pt too wide) in paragraph at lines 2338--2339
+Overfull \hbox (32.39809pt too wide) in paragraph at lines 2339--2340
 [][]\OT1/cmr/m/n/12 Code for Sea-sonal Ad-just-ments on https://github.com/fabr
 icevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (37.55914pt too wide) in paragraph at lines 2343--2344
+Overfull \hbox (37.55914pt too wide) in paragraph at lines 2344--2345
 [][]\OT1/cmr/m/n/12 Code for the cor-re-la-tion anal-y-sis on https://github.co
 m/fabricevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (5.99142pt too wide) in paragraph at lines 2350--2351
+Overfull \hbox (5.99142pt too wide) in paragraph at lines 2351--2352
 [][]\OT1/cmr/m/n/12 Code for the Lin-ear Mod-els on https://github.com/fabricev
 bMaster-Thesis/blob/master/R
  []
@@ -1586,27 +1586,27 @@ bMaster-Thesis/blob/master/R
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2377.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2378.
 <Images/sedes.png, id=997, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 2387.
+Package pdftex.def Info: Images/sedes.png  used on input line 2388.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 2391--2392
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 2392--2393
 [][][] 
  []
 
 [57 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2408.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2408.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2409.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2409.
  (AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2408.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2408.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2409.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2409.
 
 Package rerunfilecheck Info: File `AAA.out' has not changed.
 (rerunfilecheck)             Checksum: C6D9707FEE062DF93F2F20B03748736C;3404.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2408.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2409.
  ) 
 Here is how much of TeX's memory you used:
  42975 strings out of 492895
@@ -1647,7 +1647,7 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2
 /type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
 vr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
-Output written on AAA.pdf (65 pages, 1671508 bytes).
+Output written on AAA.pdf (65 pages, 1671529 bytes).
 PDF statistics:
  1133 PDF objects out of 1200 (max. 8388607)
  235 named destinations out of 1000 (max. 500000)
