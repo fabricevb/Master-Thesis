@@ -472,7 +472,7 @@ If we look at \autoref{fig:timeline} we can see that at the end of the month of 
 \begin{figure}[htp!]
      \centering \footnotesize
     \small
-    \begin{tikzpicture}
+    \begin{tikzpicture}  \footnotesize
         % draw horizontal line   
         \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
         % draw vertical lines
@@ -529,8 +529,7 @@ A good measure of the growth of GDP is year on year GDP that is obtained as foll
 
 \begin{figure}[htp!]
      \centering \footnotesize
-    \small
-    \begin{tikzpicture}
+    \begin{tikzpicture}  \footnotesize
         \begin{axis}[
             domain=0:6*pi,
             samples=100,
@@ -538,7 +537,7 @@ A good measure of the growth of GDP is year on year GDP that is obtained as foll
             axis line style={->},
             xtick={2.2, 4.5, 8.1, 10.9, 14.3, 16.7}, ytick=\empty,
             xticklabels = {$Peak$, $Trough$, $Peak$, $Trough$, $Peak$, $Trough$},
-            width=14cm, height=5cm,
+            width=14cm, height=4.5cm,
         %    xlabel={time}, 
             ylabel={GDP}
         ]       
@@ -558,7 +557,7 @@ A good measure of the growth of GDP is year on year GDP that is obtained as foll
         \end{axis}
     \end{tikzpicture}
         
-    \begin{tikzpicture}
+    \begin{tikzpicture}  \footnotesize
         \begin{axis}[
             domain=0:6*pi,
             samples=100,
@@ -566,7 +565,7 @@ A good measure of the growth of GDP is year on year GDP that is obtained as foll
             axis line style={->},
             xtick={1.6, 4.8, 7.9, 11, 14.1, 17.3}, ytick=\empty,
             xticklabels = {$Peak$, $Trough$, $Peak$, $Trough$, $Peak$, $Trough$},
-            width=14cm, height=5cm,
+            width=14cm, height=4.5cm,
             xlabel={time}, 
             ylabel={YoY GDP}
         ]       
@@ -604,7 +603,7 @@ We can notice that periods of economic growth, usually last longer than economic
 \begin{figure}[H]
      \centering \footnotesize
     \small
-    \begin{tikzpicture}
+    \begin{tikzpicture}  \footnotesize
         \begin{axis}[
             domain=0:6*pi,
             samples=100,
@@ -972,7 +971,7 @@ Again the variance can be written in different ways;
 
 \begin{figure}[hbt!]
      \centering \footnotesize
-    \begin{tikzpicture}
+    \begin{tikzpicture}  \footnotesize
     \tikzset{
       legendmatrix/.style={% style for legends
         draw,% draw a border for the legend
@@ -1723,7 +1722,7 @@ This means that the model will be estimated only with the indicators of the last
 
 \begin{figure}[H]
      \centering \footnotesize
-\begin{tikzpicture}
+\begin{tikzpicture}  \footnotesize
 % draw horizontal line   
 \draw[thick, -Triangle] (0,0) -- (\ImageWidth,0) node[font=\scriptsize,below left=3pt and -8pt]{ };
 % draw vertical lines
