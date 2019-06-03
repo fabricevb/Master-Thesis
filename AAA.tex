@@ -845,7 +845,7 @@ The previous calculations were specific to one question. The published indicator
 where 
 $E(X_{Q1})$, $E(X_{Q2})$, $E(X_{Q3})$ and $E(X_{Q4})$ are the different averages for question 18, 27, 32 and 33 (can be weighted or unweighted).
 
-The equation can also be written as follow for the unweighted indicator\footnote{Assuming all the respondents answered all the questions.}
+The equation can also be written as follow for the unweighted indicator\footnote{Assuming the respondents that answered, answered to all the questions.}
 
 
 \begin{equation}
@@ -853,7 +853,7 @@ The equation can also be written as follow for the unweighted indicator\footnote
 \end{equation} 
 
 
-and as follow for the weighted indicator\footnote{Assuming all the respondents answered to all the questions and that the weighting ($\omega_i$) is the same across all the questions.}
+and as follow for the weighted indicator\footnote{Assuming the respondents that answered, answered to all the questions and that the weighting ($\omega_i$) is the same across all the questions.}
 
 
 \begin{equation}
@@ -1290,6 +1290,7 @@ The calculation is then the same for the unweighted as \autoref{eq:unweighted pr
 
 \section{Take Different Questions Into Account}
 
+Formula \footnote{Assuming the respondents that answered, answered to all the questions}
 
 \begin{equation}
     \mbox{Industry EIR}\ = \frac{\sum_{i=1}^n \left(z_{i Q1} + z_{i Q2} + \ldots + z_{i Qq} \right)}{qn}
@@ -1472,7 +1473,7 @@ Eight variables will be used for the analysis; the business survey indicator, th
 The National Bank, before publishing the business survey indicator, applies an X11 seasonal correction.
 The literature about seasonal effects is very rich and variate. Without going too much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA developed by the US Census Bureau and TRAMO/SEATS developed at the Bank of Spain. 
 
-The Department of Research and Development of the NBB developed JDemetra+ which is recommended by the European Central Bank (ECB) and the European Statistical Office (Eurostat) for all National Statistics Institutes (NSI) of the European Union. 
+The Department of Research and Development of the NBB developed JDemetra+, a statistical program which is recommended by the European Central Bank (ECB) and Eurostat for analysing seasonal effect and applying seasonal corrections. 
 
 JDemetra+ is used by the National Bank to apply seasonal corrections to the business survey indicator before publication. It will be used here, to test for seasonality and apply corrections to the data.
 
@@ -1945,6 +1946,8 @@ To know if the results from the linear model are robust, two out-of-sample estim
 The first will use the period 1988 to 2000 to estimate the model, and its predictions for that period and for 1988 to 2018 will be compared using Diebold-Mariano test.
 The period was chose since it's only 12 years long, and will have to be accurate for the next 18 years. The situation it's representing, is if, since January, each model was used to make prediction, which would deliver the best results.
 
+See if attrition and dropout, who could be assumed as been more present after 2000, since that was the last recruitment period (see graphs appendix)
+
 The same will then be done for the period 1988 until 2012. The year 2012 was chosen after having a closer look at \autoref{fig:predictions1}, where it seems that most of the improvement brought by the models including more than only the BSI, is from 2012 on. Therefore it's interesting to see how the different models perform without taking that period into account.
 
 % Without making any conclusions, a possible interpretation of this improvement brought by the variance of the BSI in the estimation for the period after 2012, could be explained by attrition or dropout.
@@ -2222,6 +2225,28 @@ A discussion that needs
 Question 1 and 2 are
 
 Question 3 and 4 as
+
+\newpage
+\section*{Attrition}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/participants_var_bsi.pdf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/participants_var_eir.pdf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+
+
+
+
 
 \begin{table}[!htbp] 
    \centering \footnotesize 
