@@ -288,7 +288,7 @@ In a second part, the predictive power of the variance and the new indicator of 
 
 \section*{Samenvatting}
 
-\lipsum[1]
+
 
 
 \section*{Keywords}
@@ -511,8 +511,6 @@ If we look at \autoref{fig:timeline} we can see that at the end of the month of 
 
 Nowcasting became a catch-all word and includes a variety of predictive models as Linear regression, ARIMA models, State-Space models, Mixed-data sampling (MIDAS) regressions, Autoregressive Distributed Lag (ARDL) models  and much more.
 
-A good example of nowcasting is the model explained in \cite{de_antonio_liedo_nowcasting_2014} which is a State-Space model developed at the NBB. It takes into account a lot of different predictive variables to predict the actual state of .................................
-
 Indicators that can be used aside from the business survey are average weekly work hours, factory orders for goods, housing permits and stock prices index of consumer expectations, average weekly claims for unemployment insurance and the interest rate and more.
 
 
@@ -693,7 +691,6 @@ Without undermining one of the most important pillars of statistics, there are t
 
 The first reason is that the sampling method used is trying to represent as good as possible the population that it is representing. Therefore stratification is used at a quite advanced level as explained before. 
 We could call this recruitment method: non-random stratification, as opposed to random stratification. Since it's not using sampling but takes into account the stratification of the population it's studying.
-
 The second reason, the most import one, is that the value of the business survey indicator doesn't have interest on its own. Indeed having a BSI equal to 0.5 or 0.1 doesn't mean much, what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that we can forecast an increase of GDP over the month. On the other hand, if it's now equal to 0.1, it means a decrease in economic confidence among businesses and we can anticipate a deceleration or decline of the economy over the month.
 
 
@@ -728,16 +725,14 @@ and the last question ask their predictions regarding demand.
 \label{sec:Weighting procedure}
 
 The different companies participating in the business survey have all two weights; (1) according to the size of the company and (2) according to the size of the sector branch which the company is part of.
-
 The weight size is calculated based on the profit the company is making, the capital it's owning, the number of employees and other characteristics. 
 The calculation is quite complex and is specific to each sector. 
 For example, the companies having an industrial activity have a different calculation than a restaurant or a financial services company.
 
 Since the characteristics taken into account during the calculation of the weight of each company aren't fixed, the weight of the companies is corrected periodically. 
-Ones the new weight is calculated, the transition between the old and new weight is smoothened over a year.
+Ones the new weight is calculated, the transition between the old and new weight is smoothened over a year. The difference between the new and old weights is divided by 12 and is then adapted each month for a year.
 
 Regarding the globalisation weighting procedure, the National Bank of Belgium developed an elaborate division of the Belgian economic activity. This means that for example, the industry is subdivided into different sub-sectors, that they self contain sub-sectors that contain sub-sectors and so on for a total of six levels. 
-
 Each division has a percentage according to its size in the economy.
 To obtain the weight of the lowest globalisation, the weight of each subdivision need to be multiply. 
 
@@ -843,10 +838,9 @@ The previous calculations were specific to one question. The published indicator
 \end{equation}
 
 where 
-$E(X_{Q1})$, $E(X_{Q2})$, $E(X_{Q3})$ and $E(X_{Q4})$ are the different averages for question 18, 27, 32 and 33 (can be weighted or unweighted).
+$E(X_{Q1})$, $E(X_{Q2})$, $E(X_{Q3})$ and $E(X_{Q4})$ are the different averages for question 18, 27, 32 and 33 (weighted or unweighted).
 
 The equation can also be written as follow for the unweighted indicator\footnote{Assuming the respondents that answered, answered to all the questions.}
-
 
 \begin{equation}
     \mbox{Unweighted Industry BSI}\ = \frac{\sum^n_{i=1}(x_{iQ1} + x_{iQ2} + x_{iQ3} + x_{iQ4})}{4n} 
@@ -1082,13 +1076,17 @@ The formula to combine different variances is the following
 In the case of combining the variances of the four different questions of the industry business survey, we have the following equation
 
 \begin{eqnarray}
-    \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
+    \Var \left( \text{Industry BSI} \right) 
     &=& \frac{1}{16} \Big[ \Var(X_{Q1}) + \Var(X_{Q2}) + \Var(X_{Q3}) + \Var(X_{Q4}) \nonumber \\
     && + 2 \Cov (X_{Q1},X_{Q2}) + 2 \Cov (X_{Q1},X_{Q3}) + 2 \Cov (X_{Q1},X_{Q4}) \nonumber \\
     &&  + 2 \Cov (X_{Q2},X_{Q3}) + 2 \Cov (X_{Q2},X_{Q4}) + 2 \Cov (X_{Q3},X_{Q4}) \Big] \nonumber \\
 \end{eqnarray}
 
 The complexity of the formula encourages to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator. It can be written as follow
+
+\begin{eqnarray}
+         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  E\left( \text{BSI}^2\right) - E\left( \text{BSI}\right)^2 \\ \nonumber
+\end{eqnarray}
 
 \begin{eqnarray}
     \Var \left(\frac{X_{Q1} + X_{Q2} + X_{Q3} + X_{Q4}}{4} \right) 
@@ -1263,7 +1261,6 @@ As for the business survey indicator, the evolution of individual responses can 
     - 2 \sum_{i=1}^{n_{+-}} \omega_i 
     - \sum_{i=1}^{n_{+0}} - \omega_i  
 \end{eqnarray}
-
 
 The weighted EIR can, as for the unweighted EIR now be calculated with the following expression 
 
@@ -1711,11 +1708,8 @@ To achieve this objective, it's better to use a model that account easily for th
 Therefore, the linear model is preferred.
 
 This chapter will begin with proposing five different models, one simple model where only the BSI is used as regressor, and then four potential models that include other regressors.
-
 Several test statistics will be looked at and used to compare the different models and see if the new regressors added to the model, improve the model fit and the estimations.
-
 A method of model selection will then by applied to see if it decides to include the new regressors into the model aside from from the BSI.
-
 The last part will use out-of-sample estimation to check if the results from the previous tests are robust.
 
 \section{Method}
@@ -1772,7 +1766,6 @@ Where $\beta_{0}$ is a constant, $\beta_{i}$  are the different regression coeff
 This model is quite a good example of basic nowcasting, since it's modelling data that's happening at the same time, but since there is a lag of a month in the publication of GDP, it can be used to predict a month in advance, the published GDP.
 
 It can also be used to estimate GDP monthly. Ones a linear model is obtained, based only on quarterly data, it can then be applied to all the available data, and a prediction can be done for each month.
-
 In real life, this means that at the end of January, when the results of GDP are published for the last semester of the previous year, the linear model can predict YoY growth for the month of January. Therefore it's not forecasting, since it doesn't predict the future, but predict what will be published
 
 The first approach here is to propose five different models and compare them.
@@ -1881,6 +1874,7 @@ The other observation that can be done is that the interest of the variance in t
 All give similar result as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
 
 The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}.
+
 
 \subsubsection{Diebold-Mariano Test}
 
@@ -2095,6 +2089,8 @@ BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1
     \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2012}}
     \label{fig:predictions3}
 \end{figure}
+
+
 
 
 
