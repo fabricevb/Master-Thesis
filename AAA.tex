@@ -177,13 +177,6 @@
 \fontsize{20}{22}\selectfont Analysis and Predictive Power
 \end{textblock}
 %
-%\begin{textblock}{82}(50,103)
-%\textblockcolour{}
-%\vspace{-\parskip}
-%\flushleft
-%\fbox{\parbox{79mm}{The background can be left blank or you can insert an image (maximum height 10 cm, width variable, mind author’s rights…). NO logos (you can use the logos inside the manuscript, but not on front or back cover). \textit{Delete this textbox.}}}
-%\end{textblock}
-%
 \begin{textblock}{160}(8,153)
 \textblockcolour{}
 \vspace{-\parskip}
@@ -1130,6 +1123,8 @@ When we take two periods into account, a month (t) and the previous one (t-1) fo
 
 
 \begin{table}[htp!]
+    \caption{Possible observations when taking $t$ and $t-1$ into account}
+    \label{tab:EIR explanation}
      \centering \footnotesize
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
@@ -1138,8 +1133,6 @@ When we take two periods into account, a month (t) and the previous one (t-1) fo
     $t-1$ & \textbf{$x_{i0}$}  & $z_{i0-}$    & $z_{i00}$    & $z_{i0+}$ \\
           &    \textbf{$x_{i+}$} & $z_{i+-}$    & $z_{i+0}$    & $z_{i++}$ \\ \cline{2-5}
     \end{tabular}
-    \caption{Possible observations when taking $t$ and $t-1$ into account}
-    \label{tab:EIR explanation}
 \end{table}
 
 The same as for the business survey indicator, the evolution of individual responses take different values. In the case of the BSI, $x_i$ can take value -1, 0 and 1. In the case of the EIR, $z_i$ can take values -2, -1, 0, 1 and 2.
@@ -1159,7 +1152,9 @@ The calculation of $z_i$ is the difference of $x_i$ at t-1 and $x_i$ at t
 the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}. 
 
 \begin{table}[htp!]
-     \centering \footnotesize
+    \caption{Values of the different observations of $z_i$}
+    \label{tab:values EIR}
+    \centering \footnotesize
     \begin{tabular}{r | r | c c c | }
     \multicolumn{1}{r}{} & \multicolumn{1}{r}{} &    \multicolumn{3}{c}{$t$} \\ \cline{3-5}
     \multicolumn{1}{r}{} &         & \textbf{$x_{i-}$} & \textbf{$x_{i0}$} & \textbf{$x_{i+}$} \\ \cline{2-5}
@@ -1167,8 +1162,6 @@ the different possible values of $z_i$ can be seen in \autoref{tab:values EIR}.
     $t-1$ & \textbf{$x_{i0}$}  & $z_{i0-}=-1$    & $z_{i00}=0$    & $z_{i0+}=1$    \\
             & \textbf{$x_{i+}$}& $z_{i+-}=-2$    & $z_{i+0}=-1$    & $z_{i++}=0$ \\ \cline{2-5}
 \end{tabular}
-    \caption{Values of the different observations of $z_i$}
-    \label{tab:values EIR}
 \end{table}
 
 
@@ -1456,11 +1449,10 @@ The generalisation of the previous equation can be written as follow for the var
 \chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
 \label{chap:nonresponse dropout}
 
-Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After eploring the data and doing a literature review, four main effects could mislead the results. Three are due to the survey and one to external effects; seasonal effects. We will first look into seasonal effects and apply a well know correction to the data to eliminate, as good as possible, the seasonal effects from the data.
+Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and a literature review, four main effects where found as potential sources of bias. Three are due to the survey structure and organisation, and one to external effects; seasonal effects. First it will be looked into seasonal effects and a well know correction to the data will be applied to eliminate - as good as possible - the seasonal effects from the data.
 It will then be looked into the three survey based issues; non-response, dropout, and attrition.
 
 As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, from 1988 to 2018.
-
 Eight variables will be used for the analysis; the business survey indicator, the variance of the BSI, the evolution of individual responses and the variance of the EIR (three variations of the EIR and its variance; taking a 1, 2 or 3 months comparison) 
 
 \section{Seasonal Correction}
@@ -1472,11 +1464,12 @@ The literature about seasonal effects is very rich and variate. Without going to
 The Department of Research and Development of the NBB developed JDemetra+, a statistical program which is recommended by the European Central Bank (ECB) and Eurostat for analysing seasonal effect and applying seasonal corrections. 
 
 JDemetra+ is used by the National Bank to apply seasonal corrections to the business survey indicator before publication. It will be used here, to test for seasonality and apply corrections to the data.
-
 Tests for seasonality are summarised in \autoref{tab:Seasonality Tests}. The results are clear, there is seasonality in all the variables.
 
 
 \begin{table}[htp!]
+    \caption{Seasonality Tests}
+    \label{tab:Seasonality Tests}
     \centering \footnotesize
     \begin{tabular}{l|c|c|c|c|c|c|c|c}
 \textbf{Seasonality Test} & BSI & Var(BSI) & EIR & Var(EIR) & EIR2 & Var(EIR2) & EIR3 & Var(EIR3) \\ \hline
@@ -1488,8 +1481,6 @@ Periodogram                     & YES   & YES & YES & YES & YES & YES & YES & YE
 Seasonal dummies                & YES   & YES & YES & YES & YES & YES & YES & YES \\
 Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YES \\
     \end{tabular}
-    \caption{Seasonality Tests}
-    \label{tab:Seasonality Tests}
 \end{table}
 
 
@@ -1497,8 +1488,12 @@ Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YE
 
 The different variables are seasonal correction using RJDemetra, the R package based on JDemetra+.
 The results are plotted in \autoref{fig:seasonal ajusted rjdemetra}.
-The method applied is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction since it's not applying log/level, outliers and calendar corrections. 
+The method applied is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction; not applying log/level, outliers and calendar corrections.
 It was chosen since it's the closest to the X11 applied by the NBB to the business survey.
+
+% different results than published since future info here what wasn't available at the publication method.
+% correction here is "better" than the published
+%for constancy and simplicity, the observations for the 30 years is used 
 
 The S-I plots in appendix, see \autopageref{fig:S-I seasonal correction RJDemetra}, are interesting to look at to better understand the seasonal effect influencing the different variables.
 The business survey indicator is usually higher in August and September, and lowest in November and December. 
@@ -1698,7 +1693,7 @@ Influence for modelling ?
 
 This chapter uses a linear models to test the pertinence of the variables in the short term prediction of the evolution of GDP.
 
-As mention in \autoref{sec:nowcasting}, were nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
+As mention in \autoref{sec:nowcasting}, where nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 The National Bank of Belgium for example, developed a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well-known methods are ARIMA models, MIDAS and much more.
 
 The interest of the research at hand, is to explore the utility of the variance of the business survey indicator, the evolution of individual responses and its variance.
@@ -1855,6 +1850,8 @@ The other observation that can be done is that the interest of the variance in t
 
 \begin{table}[!htbp]
     \centering \footnotesize
+    \caption{Accuracy Measures}
+    \label{tab:accuracy measures}
 \begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -1865,8 +1862,6 @@ The other observation that can be done is that the interest of the variance in t
 \ref{eq:model4} & 0.875 &0.699 & -12.757 & 62.707 & 0.574 \\
 \ref{eq:model5} & 0.873 &0.689 & -9.83 & 59.311 & 0.566 \\ \hline
     \end{tabular}
-    \caption{Accuracy Measures}
-    \label{tab:accuracy measures}
 \end{table}
 
 \autoref{tab:accuracy measures} shows some more measures of goodness-of- fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), Mean Absolute Percentage Error (MAPE) and Mean Absolute Scaled Error (MASE).
@@ -1890,6 +1885,8 @@ alternative hypothesis: two.sided
 
 
 \begin{table}[htp!]
+    \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1}}
+    \label{tab:Diebold Mariano 1}
      \centering \footnotesize
     \begin{tabular}{| r | c c c c c |}
     \cline{2-6}
@@ -1900,8 +1897,6 @@ alternative hypothesis: two.sided
  \ref{eq:model4} &   &   &  0.1613 & 1 & 0.7876 \\
  \ref{eq:model5} &   &   & 0.3017 &   & 1 \\ \cline{1-6}
 \end{tabular}
-    \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1}}
-    \label{tab:Diebold Mariano 1}
 \end{table}
 
 
@@ -1946,7 +1941,9 @@ The same will then be done for the period 1988 until 2012. The year 2012 was cho
 % Without making any conclusions, a possible interpretation of this improvement brought by the variance of the BSI in the estimation for the period after 2012, could be explained by attrition or dropout.
 
 \begin{table}[htp!]
-     \centering \footnotesize
+     \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2000, applied to the data from 1988-2000 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2000}}
+    \label{tab:Diebold Mariano 2}
+    \centering \footnotesize
     \begin{tabular}{| r | c c c | c c c |}
  \multicolumn{1}{r}{} &    \multicolumn{3}{c}{\textbf{1988-2000}} &    \multicolumn{3}{c}{\textbf{1988-2018}} \\ \cline{2-7}
  \multicolumn{0}{r|}{p-values}	& \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model1} & \ref{eq:model1} & \ref{eq:model2} & \ref{eq:model3} \\ \cline{1-7}
@@ -1954,8 +1951,6 @@ The same will then be done for the period 1988 until 2012. The year 2012 was cho
  \ref{eq:model2} &   & 1  	& 0.2886  	&   & 1 & 0.000745 \\
  \ref{eq:model3} &   &    & 1 &   &   & 1   \\ \cline{1-7}
 \end{tabular}
-    \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2000, applied to the data from 1988-2000 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2000}}
-    \label{tab:Diebold Mariano 2}
 \end{table}
 
 \autoref{tab:Diebold Mariano 2} shows that the models, estimated with the data from 1988 to 2000, there predictions aren't significantly different from each others, while if the model is applied to the whole period of 1988 to 2018, \ref{eq:model3} is significantly better than \ref{eq:model1} and \ref{eq:model2}.
@@ -1974,6 +1969,8 @@ The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 
 
 
 \begin{table}[htp!]
+    \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2012, applied to the data from 1988-2012 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2012}}
+    \label{tab:Diebold Mariano 3}
      \centering \footnotesize
     \begin{tabular}{| r | c c c | c c c |}
  \multicolumn{1}{r}{} &    \multicolumn{3}{c}{\textbf{1988-2012}} &    \multicolumn{3}{c}{\textbf{1988-2018}} \\ \cline{2-7}
@@ -1982,8 +1979,6 @@ The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 
  \ref{eq:model2} &   & 1  & 0.2813 &   	  & 1 & 0.09632 \\
  \ref{eq:model3} &   &    & 1 &   &   & 1   \\ \cline{1-7}
 \end{tabular}
-    \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2012, applied to the data from 1988-2012 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2012}}
-    \label{tab:Diebold Mariano 3}
 \end{table}
 
 
