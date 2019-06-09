@@ -235,7 +235,7 @@ Academic year 2018-2019
 \pagenumbering{roman}
 
 \begin{bottompar}
-\copyright Copyright by KU Leuven \\ \\
+\copyright \ Copyright by KU Leuven \\ \\
 Without written permission of the promotors and the authors, it is forbidden to reproduce or adapt in any form or by any means any part of this publication. Requests for obtaining the right to reproduce or utilize parts of this publication should be addressed to KU Leuven, Faculteit Wetenschappen, Geel Huis, Kasteelpark Arenberg 11 bus 2100, 3001 Leuven (Heverlee), Telephone +32 16 32 14 01. \\
 A written permission of the promotor is also required to use the methods, products, schematics and programs described in this work for industrial or commercial use, and for submitting this publication in scientific contests.
 \end{bottompar}
@@ -244,14 +244,22 @@ A written permission of the promotor is also required to use the methods, produc
 
 \chapter*{Acknowledgement}
 
-Firstly, I would like to express my sincere gratitude to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master Thesis would never be what it is without him. \\~\\ 
+Firstly, I would like to express my sincere gratitude to my co-supervisor, Laurent Van Belle, for his guidance and his precious help. This Master Thesis would never be what it is without him. 
 
-I want to thank the National Bank of Belgium for the data and all the facilities that were kindly offered to me to make this thesis possible. \\~\\
+\ 
+
+I want to thank the National Bank of Belgium for the data and all the facilities that were kindly offered to me to make this thesis possible.
+
+\
 
 I'm grateful to Marc Boumon and Isabelle De Greef, who were always available to answer my questions regarding the business survey. 
-I also want to say thank you to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Liedo, ... and all the other people at the National Bank of Belgium whose remarks and inputs during meetings and in discussions were crucial to give the best direction to this paper. \\~\\
+I also want to say thank you to Rudi Acx, Vanessa Baugnet, Jean Palate, David De Antonio Liedo, ... and all the other people at the National Bank of Belgium whose remarks and inputs during meetings and in discussions were crucial to give the best direction to this paper. 
 
-I thank my co-promotor, Professor Geert Molenberghs, for his guidance and feedback, and extend my gratitude to Geert Loosveldt and Stephan Moens for their important input during the Mid-term presentation. \\~\\
+\
+
+I thank my co-promotor, Professor Geert Molenberghs, for his guidance and feedback, and extend my gratitude to Geert Loosveldt and Stephan Moens for their important input during the Mid-term presentation.
+
+\
 
 Last but not least, I would like to thank all the professors of the Master of Statistics that made it possible for me to acquire the knowledge and passion of statistics, needed to write this thesis. 
 
@@ -281,26 +289,19 @@ The variance was shown as been a good predictor of GDP when using a linear regre
 
 Aside from the predictive power, the variance of the BSI and the variance of the EIR can be used to diagnose potential bias occurring in a panel survey. A decrease of the variances is a sign of potential dropout or attrition bias.
 
-
+\newpage
 \section*{Samenvatting}
 
 Deze Master Thesis bestudeert de variabiliteit van de bedrijfsenquête aan de hand van drie verschillende benaderingen: 
-De variantie van de conjunctuurenquête-indicator (BSI), een nieuwe indicator die de evolutie van de individuele antwoorden (EIA) en de variantie ervan wordt genoemd.
+De variantie van de conjunctuurenquête-indicator (BSI), een nieuwe indicator die de evolutie van de individuele antwoorden (MER) en de variantie ervan wordt genoemd.
 De eerste wordt opgevat als de (di)overeenstemming tussen respondenten, de tweede komt overeen met de richting waarin de antwoorden veranderen en de derde is de richting waarin de antwoorden veranderen.
-
-In de context van de conjunctuurenquête heeft de indicator een variantie die geïnterpreteerd kan worden als de (on)overeenstemming tussen de respondenten.
-In de context van de conjunctuurenquête zijn de gegevens trichonoom, aangezien er slechts drie mogelijke antwoorden op de vragen van de enquête zijn. Dit komt met interessante eigenschappen als de gemiddelde-variantie relatie en het feit dat de variantie tussen 0 en 1 begrensd is.
 
 Het onderzoek is een panelonderzoek en de nieuwe indicator van de evolutie van de individuele antwoorden maakt er gebruik van. De informatie over de evolutie van elke deelnemer wordt vergeleken met zijn vorige antwoord.
 Dit gaat gepaard met nieuwe informatie die niet rechtstreeks in de BSI wordt verwerkt.
- 
-Hier wordt een maatregel voorgesteld, de evolutie van de individuele antwoorden, die rekening houdt met de veranderingen in de antwoorden van alle deelnemers.
 
 De variantie bleek een goede voorspeller van het BBP te zijn bij het gebruik van een lineaire regressie die de BSI omvat, terwijl de EIR en de variantie ervan potentiële belangstelling vertoonde.
 
-
 Naast de voorspellende kracht kunnen de variantie van de BSI en de variantie van de EIR worden gebruikt om een mogelijke vertekening in een panelonderzoek te diagnosticeren. Een afname van de varianties is een teken van mogelijke uitval of uitputting van de BSI.
-
 
 
 \section*{Keywords}
@@ -323,6 +324,7 @@ Survey Volatility -
   ECB       & European Central Bank \\
   EIR       & Evolution in individual Responses \\
   Eurostat  & The European Statistical Office \\
+  EU		& European Union \\
   GDP       & Gross Domestic Product \\
   INSEE     & Institut National de la Statistique et des Etudes Economiques (France) \\
   LOCF 		& Last Observation Carried Forward \\
@@ -351,48 +353,41 @@ Survey Volatility -
 \chapter{Introduction}
 
 
-The variability can be taken 
 
 %The business survey is organised within the National Bank of Belgium.
 % Each month the business survey indicator is published based on around 3000 respondents who are part of a large panel of companies.
 
-Each month around 3000 companies reply to several questions of a survey that holds on one page and the questions have three possible answers.
-
-The results are then summarised and deliver a surprisingly accurate picture of the present state of the Belgian economy.
-
-
-% The results are then summarised in several business survey indicator (BSI); one general indicator taking all the responses into account, and sector specific indicators.
-
-The results are surprisingly accurate to capture the present state of the economy and make short term prediction.
-
 % The publication is important for public and private organisation to have a direct idea of the evolution of the Belgian economy since most of the quantitative macroeconomic indicators are published with a lag of at least a month.
 
-A widespread method to predict the evolution of National Economies is the survey-based business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
+% A widespread method to predict the evolution of National Economies is the survey-based business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
+Each month, around 3000 companies reply to several questions of a survey that holds on one page and where questions can be answered three different ways.
+The answers are then summarised and deliver a surprisingly accurate picture of the present state of the Belgian economy and can be used in short term predictions.
 
+The Belgian business survey is 65 years old and business surveys are today widely used around the world. 
+At the European level, the European Commission started an harmonisation program in 1961 that makes it possible to compare business surveys results across the EU.
 
+This Thesis is part of a tradition of research proposing improvement and ways to add value to surveys. Different methods will be propose to add information to the Belgian business indicator, that could also be applied to others similar surveys.
 
-This Thesis is included in the continuity of a long tradition of papers proposing improvement and ways to add value to the Business Barometer (.......) will propose ways to add information to the Belgian Business Barometer, that could also be applied to others
+% This study explores the variability and the possible interest of taking it into account to make future predictions.
 
-The business surveys are today 
-
-Add European dimension !
-
-%%"A widespread method for forecasting economic macro level parameters such as GDP growth rates is survey-based indicators that contain early information in contrast to official data." (Microdata imputations and macrodata implications: Evidence from the Ifo business survey Christian Seiler Christian Heumann)
-
-\subsubsection{Objectives}
-
-This study explores the variability and the possible interest of taking it into account to make future predictions.
-
-The variability will take two very different forms in this paper. 
+The information looked at is the variability, that here takes two very different forms. 
 First it will be measured with the variance of the indicator, as a measure of the (di)agreement among respondents.
-
-The second variability measure will be called the evolution of individual responses (EIR) and will account for the changes in responses of the different participants. This is possible since the business survey is a panel survey where respondents usually participate in the survey for a long period.
+The second variability measure will be the variance of the so called evolution of individual responses (EIR) and will account for magnitude of the changes in responses of the different participants. This is possible since the business survey is a panel survey where respondents participate in the survey for a long period.
 
 \subsubsection{Methodology}
 
+The published business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sector/ activity they are in. The method will further be explained in \autoref{sec:Weighting procedure} and the calculation of the variance of the BSI, the EIR and its variance will be presented with weighting and without.
 
-To make it possible to have a long period of time to analyse, the decision is made to take only unweighted indicators. The weighting procedure been very complex and prone to some companies influencing largely the indicator. Also the weights are only available for the period after 2008, here the dataset obtained goes from 1988 to 2018
+In order to make it possible to have a long period of time to analyse, the decision is made to take only unweighted indicators for the empirical analysis since the weights are not available before 2008. The weighting procedure been very complex and prone to some companies influencing largely the indicator. Also the weights are only available for the period after 2008, here the dataset obtained goes from 1988 to 2018.
+
+For similar reasons, the BSI is obtained only for the industrial sector.
+It is the first sector that was taken into account in the business survey before it gets enlarged to Trade, .. and Services that was only included recently in the calculation of the published general indicator.
+
+Evidence shows that industry is the sector with the highest correlation with GDP 
+
+
+The calculation is defined as in the
 
 Four questions are taken into account, since it are the four questions that are taken today in the calculation of the industry BSI. 
 It has to be noted that before 2009, almost all the questions where taken into account for the calculation. In order to have the best comparability, only the four questions will be used for the whole period.

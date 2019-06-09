@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  8 JUN 2019 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  9 JUN 2019 12:42
 entering extended mode
 **./AAA.tex
 (AAA.tex
@@ -1270,56 +1270,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
+[1] [2
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-[2
-
-
-]
-Overfull \hbox (21.27458pt too wide) in paragraph at lines 291--293
-[]\OT1/cmr/m/n/12 In de con-text van de con-junc-tu-urenqu^ete heeft de in-di-c
-a-tor een vari-antie die genterpreteerd
- []
-
-[3
+] [3
 
 ] [4] [5
 
@@ -1331,11 +1285,17 @@ a-tor een vari-antie die genterpreteerd
 
  [7]
 Chapter 1.
+
+Overfull \hbox (9.55943pt too wide) in paragraph at lines 374--377
+\OT1/cmr/m/n/12 First it will be mea-sured with the vari-ance of the in-di-ca-t
+or, as a mea-sure of the (di)agreement
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396 
+l.386 
        [1
 
 ] [2]
@@ -1347,17 +1307,17 @@ Chapter 3.
 [13
 
 ]
-Overfull \hbox (14.12914pt too wide) in paragraph at lines 1058--1059
+Overfull \hbox (14.12914pt too wide) in paragraph at lines 1053--1054
  [][] 
  []
 
 [14] [15]
-Overfull \hbox (24.19441pt too wide) in alignment at lines 1117--1121
+Overfull \hbox (24.19441pt too wide) in alignment at lines 1112--1116
  [][][] []
  []
 
 
-Overfull \hbox (23.04295pt too wide) in alignment at lines 1125--1129
+Overfull \hbox (23.04295pt too wide) in alignment at lines 1120--1124
  [][][] []
  []
 
@@ -1366,7 +1326,7 @@ Chapter 4.
 [18
 
 ]
-Overfull \hbox (15.13383pt too wide) in alignment at lines 1208--1219
+Overfull \hbox (15.13383pt too wide) in alignment at lines 1203--1214
  [][][] []
  []
 
@@ -1375,27 +1335,27 @@ Chapter 5.
 [22
 
 ]
-Overfull \hbox (24.21039pt too wide) in alignment at lines 1444--1449
+Overfull \hbox (24.21039pt too wide) in alignment at lines 1439--1444
  [][][] []
  []
 
 [23] [24]
 Chapter 6.
 
-Overfull \hbox (31.98451pt too wide) in paragraph at lines 1498--1508
+Overfull \hbox (31.98451pt too wide) in paragraph at lines 1493--1503
  [][] 
  []
 
 [25
 
 ]
-<Graphs/RJDemetra_plots.pdf, id=526, 614.295pt x 794.97pt>
+<Graphs/RJDemetra_plots.pdf, id=529, 614.295pt x 794.97pt>
 File: Graphs/RJDemetra_plots.pdf Graphic file (type pdf)
 <use Graphs/RJDemetra_plots.pdf>
-Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1535.
+Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1530.
 (pdftex.def)             Requested size: 460.72011pt x 596.22604pt.
 
-Overfull \hbox (5.47603pt too wide) in paragraph at lines 1535--1536
+Overfull \hbox (5.47603pt too wide) in paragraph at lines 1530--1531
  [][] 
  []
 
@@ -1404,21 +1364,21 @@ Chapter 7.
 [30
 
 ]
-<Graphs/variables.pdf, id=570, 597.23125pt x 844.15375pt>
+<Graphs/variables.pdf, id=576, 597.23125pt x 844.15375pt>
 File: Graphs/variables.pdf Graphic file (type pdf)
 <use Graphs/variables.pdf>
-Package pdftex.def Info: Graphs/variables.pdf  used on input line 1661.
+Package pdftex.def Info: Graphs/variables.pdf  used on input line 1656.
 (pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
-<Graphs/corr_indicators.pdf, id=573, 844.15375pt x 597.23125pt>
+<Graphs/corr_indicators.pdf, id=579, 844.15375pt x 597.23125pt>
 File: Graphs/corr_indicators.pdf Graphic file (type pdf)
 <use Graphs/corr_indicators.pdf>
-Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1676.
+Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1671.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
  [31 <./Graphs/corr_indicators.pdf>] [32 <./Graphs/variables.pdf>]
-<Graphs/ACF.pdf, id=597, 597.23125pt x 844.15375pt>
+<Graphs/ACF.pdf, id=604, 597.23125pt x 844.15375pt>
 File: Graphs/ACF.pdf Graphic file (type pdf)
 <use Graphs/ACF.pdf>
-Package pdftex.def Info: Graphs/ACF.pdf  used on input line 1708.
+Package pdftex.def Info: Graphs/ACF.pdf  used on input line 1703.
 (pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
  [33]
 [34 <./Graphs/ACF.pdf>]
@@ -1430,15 +1390,15 @@ Chapter 8.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1816 \end{equation}
+l.1811 \end{equation}
                      pdfTeX warning (ext4): destination with the same identifie
 r (name{equation.8.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1816 \end{equation}
+l.1811 \end{equation}
                      ]
-Overfull \hbox (8.4791pt too wide) in paragraph at lines 1821--1867
+Overfull \hbox (8.4791pt too wide) in paragraph at lines 1816--1862
  [][] 
  []
 
@@ -1447,30 +1407,30 @@ Overfull \hbox (8.4791pt too wide) in paragraph at lines 1821--1867
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1874 
+l.1869 
        pdfTeX warning (ext4): destination with the same identifier (name{equati
 on.8.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1874 
+l.1869 
        ]
-<Graphs/predictions1.pdf, id=668, 867.24pt x 433.62pt>
+<Graphs/predictions1.pdf, id=676, 867.24pt x 433.62pt>
 File: Graphs/predictions1.pdf Graphic file (type pdf)
 <use Graphs/predictions1.pdf>
-Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1929.
+Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1924.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [38] [39 <./Graphs/predictions1.pdf>] [40]
-<Graphs/predictions2.pdf, id=744, 867.24pt x 433.62pt>
+<Graphs/predictions2.pdf, id=754, 867.24pt x 433.62pt>
 File: Graphs/predictions2.pdf Graphic file (type pdf)
 <use Graphs/predictions2.pdf>
-Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 2054.
+Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 2049.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [41 <./Graphs/predictions2.pdf>]
-<Graphs/predictions3.pdf, id=756, 867.24pt x 433.62pt>
+<Graphs/predictions3.pdf, id=766, 867.24pt x 433.62pt>
 File: Graphs/predictions3.pdf Graphic file (type pdf)
 <use Graphs/predictions3.pdf>
-Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 2106.
+Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 2101.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
  [42 <./Graphs/predictions3.pdf>]
 Chapter 9.
@@ -1497,105 +1457,105 @@ Chapter 10.
 ] [51
 
 ] [52]
-<Graphs/participants_var_bsi.pdf, id=889, 722.7pt x 433.62pt>
+<Graphs/participants_var_bsi.pdf, id=904, 722.7pt x 433.62pt>
 File: Graphs/participants_var_bsi.pdf Graphic file (type pdf)
 <use Graphs/participants_var_bsi.pdf>
 Package pdftex.def Info: Graphs/participants_var_bsi.pdf  used on input line 22
-94.
+89.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
-<Graphs/participants_var_eir.pdf, id=890, 722.7pt x 433.62pt>
+<Graphs/participants_var_eir.pdf, id=905, 722.7pt x 433.62pt>
 File: Graphs/participants_var_eir.pdf Graphic file (type pdf)
 <use Graphs/participants_var_eir.pdf>
-Package pdftex.def Info: Graphs/participants_var_eir.pdf  used on input line 23
-01.
+Package pdftex.def Info: Graphs/participants_var_eir.pdf  used on input line 22
+96.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
 [53 <./Graphs/participants_var_bsi.pdf> <./Graphs/participants_var_eir.pdf>]
 
 pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<Images/IndustryN.pdf, id=907, 597.55246pt x 845.19763pt>
+<Images/IndustryN.pdf, id=923, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2313.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2308.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
-<Images/4100N_v1990.pdf, id=908, 597.432pt x 844.83629pt>
+<Images/4100N_v1990.pdf, id=924, 597.432pt x 844.83629pt>
 File: Images/4100N_v1990.pdf Graphic file (type pdf)
 <use Images/4100N_v1990.pdf>
-Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2320.
+Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2315.
 (pdftex.def)             Requested size: 448.0729pt x 633.62567pt.
 [54 <./Images/IndustryN.pdf>]
-<Graphs/S-I_1.pdf, id=937, 794.97pt x 578.16pt>
+<Graphs/S-I_1.pdf, id=953, 794.97pt x 578.16pt>
 File: Graphs/S-I_1.pdf Graphic file (type pdf)
 <use Graphs/S-I_1.pdf>
-Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2329.
+Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2324.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_2.pdf, id=938, 794.97pt x 578.16pt>
+<Graphs/S-I_2.pdf, id=954, 794.97pt x 578.16pt>
 File: Graphs/S-I_2.pdf Graphic file (type pdf)
 <use Graphs/S-I_2.pdf>
-Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2334.
+Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2329.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_3.pdf, id=939, 794.97pt x 578.16pt>
+<Graphs/S-I_3.pdf, id=955, 794.97pt x 578.16pt>
 File: Graphs/S-I_3.pdf Graphic file (type pdf)
 <use Graphs/S-I_3.pdf>
-Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2339.
+Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2334.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_4.pdf, id=940, 794.97pt x 578.16pt>
+<Graphs/S-I_4.pdf, id=956, 794.97pt x 578.16pt>
 File: Graphs/S-I_4.pdf Graphic file (type pdf)
 <use Graphs/S-I_4.pdf>
-Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2344.
+Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2339.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_5.pdf, id=941, 794.97pt x 578.16pt>
+<Graphs/S-I_5.pdf, id=957, 794.97pt x 578.16pt>
 File: Graphs/S-I_5.pdf Graphic file (type pdf)
 <use Graphs/S-I_5.pdf>
-Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2349.
+Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2344.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_6.pdf, id=942, 794.97pt x 578.16pt>
+<Graphs/S-I_6.pdf, id=958, 794.97pt x 578.16pt>
 File: Graphs/S-I_6.pdf Graphic file (type pdf)
 <use Graphs/S-I_6.pdf>
-Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2354.
+Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2349.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_7.pdf, id=943, 794.97pt x 578.16pt>
+<Graphs/S-I_7.pdf, id=959, 794.97pt x 578.16pt>
 File: Graphs/S-I_7.pdf Graphic file (type pdf)
 <use Graphs/S-I_7.pdf>
-Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2359.
+Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2354.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_8.pdf, id=944, 794.97pt x 578.16pt>
+<Graphs/S-I_8.pdf, id=960, 794.97pt x 578.16pt>
 File: Graphs/S-I_8.pdf Graphic file (type pdf)
 <use Graphs/S-I_8.pdf>
-Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2364.
+Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2359.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2327--2367
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2322--2362
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2327--2367
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2322--2362
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2327--2367
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2322--2362
 []$ $[]$ 
  []
 
 [55 <./Images/4100N_v1990.pdf>] [56 <./Graphs/S-I_1.pdf> <./Graphs/S-I_2.pdf> <
 ./Graphs/S-I_3.pdf> <./Graphs/S-I_4.pdf> <./Graphs/S-I_5.pdf> <./Graphs/S-I_6.p
 df> <./Graphs/S-I_7.pdf> <./Graphs/S-I_8.pdf>]
-Overfull \hbox (32.39809pt too wide) in paragraph at lines 2377--2378
+Overfull \hbox (32.39809pt too wide) in paragraph at lines 2372--2373
 [][]\OT1/cmr/m/n/12 Code for Sea-sonal Ad-just-ments on https://github.com/fabr
 icevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (37.55914pt too wide) in paragraph at lines 2382--2383
+Overfull \hbox (37.55914pt too wide) in paragraph at lines 2377--2378
 [][]\OT1/cmr/m/n/12 Code for the cor-re-la-tion anal-y-sis on https://github.co
 m/fabricevb/Master-Thesis/blob/master/R
  []
 
 
-Overfull \hbox (5.99142pt too wide) in paragraph at lines 2389--2390
+Overfull \hbox (5.99142pt too wide) in paragraph at lines 2384--2385
 [][]\OT1/cmr/m/n/12 Code for the Lin-ear Mod-els on https://github.com/fabricev
 bMaster-Thesis/blob/master/R
  []
@@ -1604,23 +1564,23 @@ bMaster-Thesis/blob/master/R
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2416.
-<Images/sedes.png, id=1019, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2411.
+<Images/sedes.png, id=1035, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 2426.
+Package pdftex.def Info: Images/sedes.png  used on input line 2421.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 2430--2431
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 2425--2426
 [][][] 
  []
 
 [58 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2447.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2447.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2442.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2442.
  (AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2447.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2447.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2442.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2442.
 
 Package rerunfilecheck Info: File `AAA.out' has not changed.
 (rerunfilecheck)             Checksum: C6D9707FEE062DF93F2F20B03748736C;3404.
@@ -1628,18 +1588,63 @@ Package rerunfilecheck Info: File `AAA.out' has not changed.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2447.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2442.
  ) 
 Here is how much of TeX's memory you used:
- 42995 strings out of 492895
- 958288 string characters out of 3133479
- 1501601 words of memory out of 3000000
- 46054 multiletter control sequences out of 15000+200000
+ 43009 strings out of 492895
+ 958531 string characters out of 3133479
+ 1500600 words of memory out of 3000000
+ 46053 multiletter control sequences out of 15000+200000
  556264 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,19n,100p,936b,2287s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{table.caption.50} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.28} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.36} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.34} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.29} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.26} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.20} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.56} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.18} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.17} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.13} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
+ exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
@@ -1649,6 +1654,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
+exist, replaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/f
@@ -1673,9 +1681,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2
 rw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
 vr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
 Output written on C:\Users\fabri\Documents\Master-Thesis\build\AAA.pdf (66 page
-s, 1692843 bytes).
+s, 1694346 bytes).
 PDF statistics:
- 1156 PDF objects out of 1200 (max. 8388607)
- 241 named destinations out of 1000 (max. 500000)
+ 1175 PDF objects out of 1200 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
  490 words of extra memory for PDF output out of 10000 (max. 10000000)
 
