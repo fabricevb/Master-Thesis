@@ -18,7 +18,7 @@ library(tseries)
 
 
  
-# data2 <- read_excel("Master-Thesis/Datasets/RS975_sa.xlsx")
+# data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 # data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
 
 # number the columns
