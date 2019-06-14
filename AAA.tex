@@ -922,7 +922,7 @@ The variance of one question of the unweighted business survey indicator be deco
 
 \begin{eqnarray}
 \Var(X) &=&  E\left( X^2\right) - E\left( X\right)^2 \nonumber \\ \nonumber \\
-    &=& \left( \frac{\sum_{i=1}^{n_+} x_{+i}^2}{n} \right)  + \left( \frac{\sum_{i=1}^{n_0} x_{0i}^2}{n} \right) + \left( \frac{\sum_{i=1}^{n_-} x_{-i}^2}{n} \right) - E(X)^2 \\ \nonumber
+    &=&  \frac{\sum_{i=1}^{n_+} x_{+i}^2  +  \sum_{i=1}^{n_0} x_{0i}^2 + \sum_{i=1}^{n_-} x_{-i}^2}{n}  - E(X)^2 \\ \nonumber
 \end{eqnarray}
 
 
@@ -932,7 +932,7 @@ On the other hand, the neutral answers have value 0, and can therefore be taken 
 The equation can further be simplified to
 
 \begin{eqnarray}
-    \Var(X) &=& \left( \frac{n_+}{n} \right) + \left( \frac{n_-}{n} \right) - E(X)^2 \\
+    \Var(X) &=&  \frac{n_+}{n}  +  \frac{n_-}{n}  - E(X)^2 \\
     &=& \pi_+ + \pi_- - E ( X )^2 \label{var1} \\ \nonumber
 \end{eqnarray}
 
@@ -1093,31 +1093,46 @@ In the case of combining the variances of the four different questions of the in
 
 The complexity of the formula encourages to rather calculate the indicator (taking all the questions into account), and then calculate the variance of that indicator. It can be written as follow
 
+Unweighted BSI
+
 \begin{eqnarray}
-         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  E\left( \text{BSI}^2\right) - E\left( \text{BSI}\right)^2 \\ \nonumber
+         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  \E \left( \text{BSI}^2\right) - \E \left( \text{BSI}\right)^2 \\ 
+         &=&  \frac{\sum^n_{i=1}[(x_{iQ1} + x_{iQ2} + x_{iQ3} + x_{iQ4})/4]^2}{n} - \E (\BSI)^2 \\
+        &=&  \frac{\sum^n_{i=1}(x_{iQ1} + x_{iQ2} + x_{iQ3} + x_{iQ4})^2}{16n} - \E (\BSI)^2 \\
+        &=& \frac{1}{16} \left( \pi_{Q1,+} + \pi_{Q1,-} + \pi_{Q2,+} + \pi_{Q2,-} + \pi_{Q3,+} + \pi_{Q3,-} + \pi_{Q4,+} + \pi_{Q4,-} \right) - \E (\BSI)^2 \nonumber \\ 
+\end{eqnarray}
+
+Weighted BSI
+
+\begin{eqnarray}
+         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  \E \left( \text{BSI}^2\right) - \E \left( \text{BSI}\right)^2 \\ 
+         &=&  \sum^n_{i=1} \left[\omega_i (x_{iQ1} + x_{iQ2} + x_{iQ3} + x_{iQ4})/4 \right]^2 - \E (\BSI)^2 \\
+         &=& \frac{1}{16} \left( \Omega_{Q1,+} + \Omega_{Q1,-} + \Omega_{Q2,+} + \Omega_{Q2,-} + \Omega_{Q3,+} + \Omega_{Q3,-} + \Omega_{Q4,+} + \Omega_{Q4,-} \right) - \E (\BSI)^2 \nonumber \\ 
 \end{eqnarray}
 
 where $\BSI = \left(x_{i Q1} + x_{i Q2} + \ldots + x_{i Qq} \right) / q $ in the case of the unweighted indicator and $\BSI = \omega \left(x_{i Q1} + x_{i Q2} + \ldots + x_{i Qq} \right) / q $
 
-\begin{eqnarray}
-    \Var \left( \text{Unweighted BSI} \right) 
-    &=& \frac{1}{16} \Var \left(\frac{\sum_{i=1}^n \left(x_{i Q1} + x_{i Q2} + x_{i Q3} + x_{i Q4} \right)}{n} \right) \nonumber \\
-\end{eqnarray}
 
 The generalisation of the previous equation can be written as follow for the variance of the unweighted indicator
 
+\newpage
+\subsubsection{Generalisation}
+
+Unweighted BSI
+
 \begin{eqnarray}
-    \Var \left(\text{Unweighted BSI} \right) 
-    &=& \frac{1}{q^2} \Var \left(\frac{\sum_{i=1}^n \left( x_{i Q1} + x_{i Q2} + ... + x_{i Qq} \right)}{n} \right) \nonumber \\
-    &=& \frac{1}{q^2} \Var \big(\pi_{Q1,+} + \pi_{Q2,+} + \ldots + \pi_{Qq,+} - \pi_{Q1,-} - \pi_{Q2,-} - \ldots - \pi_{Qq,-} \big) \nonumber \\
+         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  \E \left( \text{BSI}^2\right) - \E \left( \text{BSI}\right)^2 \\ 
+         &=&  \frac{\sum^n_{i=1}[(x_{iQ1} + x_{iQ2} + \ldots + x_{iQq})/q]^2}{n} - \E (\BSI)^2 \\
+        &=&  \frac{\sum^n_{i=1}(x_{iQ1} + x_{iQ2} + \ldots + x_{iQq})^2}{q^2 n} - \E (\BSI)^2 \\
+        &=& \frac{1}{q^2} \left( \pi_{Q1,+} + \pi_{Q1,-} + \pi_{Q2,+} + \pi_{Q2,-} + \ldots + \pi_{Qq,+} + \pi_{Qq,-} \right) - \E (\BSI)^2 \nonumber \\ 
 \end{eqnarray}
 
-and as follow for the variance of the weighted indicator
+Weighted BSI
 
 \begin{eqnarray}
-    \Var \left(\text{Weighted BSI} \right) 
-    &=& \frac{1}{q^2} \Var \left( \sum_{i=1}^n \omega_i \left(x_{i Q1} + x_{i Q2} + ... + x_{i Qq} \right) \right) \nonumber \\
-    &=& \frac{1}{q^2} \Var \big(\Omega_{Q1,+} + \Omega_{Q2,+} + \ldots + \Omega_{Qq,+} - \Omega_{Q1,-} - \Omega_{Q2,-} - \ldots - \Omega_{Qq,-} \big) \nonumber \\
+         \Var(\text{BSI}) &=& E \left[ \left(\text{BSI}-E(\text{BSI}) \right)^2 \right] =  \E \left( \text{BSI}^2\right) - \E \left( \text{BSI}\right)^2 \\ 
+         &=&  \sum^n_{i=1} \left[\omega_i (x_{iQ1} + x_{iQ2} + \ldots + x_{iQq})/q \right]^2 - \E (\BSI)^2 \\
+         &=& \frac{1}{q^2} \left( \Omega_{Q1,+} + \Omega_{Q1,-} + \Omega_{Q2,+} + \Omega_{Q2,-} + \ldots + \Omega_{Qq,+} + \Omega_{Qq,-} \right) - \E (\BSI)^2 \nonumber \\ 
 \end{eqnarray}
 
 
@@ -1199,34 +1214,34 @@ The indicator of the evolution of the individual responses can be obtained by ta
 
 \begin{eqnarray}
     \E(Z) &=&  \frac{ \sum_{i=1}^n z_i}{n} \\ \nonumber \\
-        &=& \left( \frac{ \sum_{i=1}^{n_{--}} z_{--i}}{n} \right)
-     + \left( \frac{\sum_{i=1}^{n_{-0}} z_{-0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{-+}} z_{-+i}}{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{00}} z_{00i} }{n} \right) \nonumber  \\
-    &&  + \left( \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{++}} z_{++i}}{n} \right)
+        &=&  \frac{ \sum_{i=1}^{n_{--}} z_{--i}}{n} 
+     +  \frac{\sum_{i=1}^{n_{-0}} z_{-0i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{-+}} z_{-+i}}{n} 
+    +  \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{00}} z_{00i} }{n}  \nonumber \\ \nonumber \\
+    &&  +  \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} 
+    +  \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{++}} z_{++i}}{n} 
 \end{eqnarray}
 
 The formula can further be simplified since $z_{--} = z_{00} = z_{++} = 0$.
 
 \begin{eqnarray}
     \E(Z) &=&  
-     \left( \frac{\sum_{i=1}^{n_{-0}} z_{-0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{-+}} z_{-+i}}{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n} \right) \nonumber \\
-&&  + \left( \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n} \right) \\
+      \frac{\sum_{i=1}^{n_{-0}} z_{-0i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{-+}} z_{-+i}}{n} 
+    +  \frac{\sum_{i=1}^{n_{0-}} z_{0-i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{0+}} z_{0+i}}{n}  \nonumber \\ \nonumber \\
+&&  +  \frac{\sum_{i=1}^{n_{+-}} z_{+-i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{+0}} z_{+0i} }{n}  \\ \nonumber \\
     &=&  
-        \left( \frac{n_{-0}}{n} \right)
-    + 2 \left( \frac{n_{-+}}{n} \right)
-    -   \left( \frac{n_{0-}}{n} \right)
-    +   \left( \frac{n_{0+}}{n} \right) 
-    - 2 \left( \frac{n_{+-}}{n} \right)
-    -   \left( \frac{n_{+0}}{n} \right)
+         \frac{n_{-0}}{n} 
+    +   \frac{2n_{-+}}{n} 
+    -    \frac{n_{0-}}{n} 
+    +    \frac{n_{0+}}{n}  
+    -   \frac{2n_{+-}}{n} 
+    -    \frac{n_{+0}}{n} 
 \end{eqnarray}
 
 
@@ -1351,23 +1366,23 @@ While the variance of the business survey indicator is the measure of disagreeme
 
 \begin{eqnarray}
 \Var(Z) &=&  
-	E\left( Z^2\right) - E\left( Z\right)^2 \nonumber \\ \nonumber \\
-	&=& \left( \frac{ \sum_{i=1}^{n_{--}} z^2_{--i}}{n} \right)
-     + \left( \frac{\sum_{i=1}^{n_{-0}} z^2_{-0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{-+}} z^2_{-+i}}{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{0-}} z^2_{0-i} }{n} \right)\nonumber  \\
-    && + \left( \frac{\sum_{i=1}^{n_{00}} z^2_{00i} }{n} \right) 
-      + \left( \frac{\sum_{i=1}^{n_{0+}} z^2_{0+i}}{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{+-}} z^2_{+-i} }{n} \right) \nonumber \\
-    && + \left( \frac{\sum_{i=1}^{n_{+0}} z^2_{+0i} }{n} \right)
-    + \left( \frac{\sum_{i=1}^{n_{++}} z^2_{++i}}{n} \right)  
-     - \E(Z)^2 \\   
-     &=& \left(\frac{n_{-0}}{n} \right)
-    + 4 \left( \frac{n_{-+}}{n} \right)
-    + \left( \frac{n_{0-}}{n} \right) 
-    + \left(       \frac{n_{0+}}{n} \right)
-    + 4 \left( \frac{n_{+-}}{n} \right)  
-    + \left( \frac{n_{+0}}{n} \right) 
+	\E \left( Z^2\right) - \E \left( Z\right)^2 \nonumber \\ \nonumber \\
+	&=&  \frac{ \sum_{i=1}^{n_{--}} z^2_{--i}}{n} 
+     +  \frac{\sum_{i=1}^{n_{-0}} z^2_{-0i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{-+}} z^2_{-+i}}{n} 
+    +  \frac{\sum_{i=1}^{n_{0-}} z^2_{0-i} }{n} \nonumber  \\ \nonumber  \\
+    && +  \frac{\sum_{i=1}^{n_{00}} z^2_{00i} }{n}  
+      +  \frac{\sum_{i=1}^{n_{0+}} z^2_{0+i}}{n} 
+    +  \frac{\sum_{i=1}^{n_{+-}} z^2_{+-i} }{n}  \nonumber \\ \nonumber  \\
+    && +  \frac{\sum_{i=1}^{n_{+0}} z^2_{+0i} }{n} 
+    +  \frac{\sum_{i=1}^{n_{++}} z^2_{++i}}{n}   
+     - \E(Z)^2 \\  \nonumber  \\ 
+     &=& \frac{n_{-0}}{n} 
+    + 4  \frac{n_{-+}}{n} 
+    +  \frac{n_{0-}}{n}  
+    +        \frac{n_{0+}}{n} 
+    + 4  \frac{n_{+-}}{n}   
+    +  \frac{n_{+0}}{n}  
      - \E(Z)^2 \nonumber \\
 \end{eqnarray}
 
@@ -1380,7 +1395,7 @@ See \autoref{tab:EIR explanation} for the different values of $z$
 
 
 \begin{eqnarray}
-Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \nonumber \\ 
+Var(Z) &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} \nonumber \\ 
 &&    - (\pi_{0+} + \pi_{-0} - \pi_{+0} - \pi_{0-} +2\pi_{-+} -2\pi_{+-})^2  \\
 &=& \pi_{0+} + \pi_{-0} + \pi_{+0} + \pi_{0-} +4\pi_{-+} +4\pi_{+-} - E(Z)^2  \\
 &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2
@@ -1449,15 +1464,36 @@ There are here more explanatory, therefore it's not possible to plot is a was do
 
 The generalisation of the previous equation can be written as follow for the variance of the unweighted indicator
 
-\begin{eqnarray}
-    \Var \left(\text{Unweighted BSI} \right) 
-    &=& \frac{1}{q^2} \Var \left(\frac{\sum_{i=1}^n \left( z_{i Q1} + z_{i Q2} + ... + z_{i Qq} \right)}{n} \right) \nonumber \\
-\end{eqnarray}
+
+\newpage
+\subsubsection{Generalisation}
+
+\textbf{Unweighted EIR}
 
 \begin{eqnarray}
-    \Var \left(\text{Weighted BSI} \right) 
-    &=& \frac{1}{q^2} \Var \left( \sum_{i=1}^n \omega_i \left(z_{i Q1} + z_{i Q2} + ... + z_{i Qq} \right) \right) \nonumber \\
+         \Var(\text{EIR}) &=& E \left[ \left(\text{EIR}-E(\text{EIR}) \right)^2 \right] =  \E \left( \text{EIR}^2\right) - \E \left( \text{EIR}\right)^2 \\ 
+         &=&  \frac{\sum^n_{i=1}[(z_{iQ1} + z_{iQ2} + \ldots + z_{iQq})/q]^2}{n} - \E (\EIR)^2 \\
+        &=&  \frac{\sum^n_{i=1}(z_{iQ1} + z_{iQ2} + \ldots + z_{iQq})^2}{q^2 n} - \E (\EIR)^2 \\
+        &=& \frac{1}{q^2} \Large( \pi_{Q1,0+} + \pi_{Q1,-0} + \pi_{Q1,+0} + \pi_{Q1,0-} +4\pi_{Q1,-+} +4\pi_{Q1,+-} \nonumber \\ 
+        && + \pi_{Q2,0+} + \pi_{Q2,-0} + \pi_{Q2,+0} + \pi_{Q2,0-} +4\pi_{Q2,-+} +4\pi_{Q2,+-} \nonumber \\ 
+        &&  + \ldots \nonumber \\ 
+        && + \pi_{Qq,0+} + \pi_{Qq,-0} + \pi_{Qq,+0} + \pi_{Qq,0-} +4\pi_{Qq,-+} +4\pi_{Qq,+-} \Large) - \E (\EIR)^2 \nonumber \\ 
 \end{eqnarray}
+
+\textbf{Weighted EIR}
+
+\begin{eqnarray}
+         \Var(\text{EIR}) &=& \E \left[ \left( \EIR - \E(\EIR) \right)^2 \right] =  \E \left( \EIR^2\right) - \E \left( \EIR \right)^2 \\ 
+         &=&  \sum^n_{i=1} \left[\omega_i (z_{iQ1} + z_{iQ2} + \ldots + z_{iQq})/q \right]^2 - \E (\EIR)^2 \\
+        &=& \frac{1}{q^2} \Large( \Omega_{Q1,0+} + \Omega_{Q1,-0} + \Omega_{Q1,+0} + \Omega_{Q1,0-} +4\Omega_{Q1,-+} +4\Omega_{Q1,+-} \nonumber \\ 
+        && + \Omega_{Q2,0+} + \Omega_{Q2,-0} + \Omega_{Q2,+0} + \Omega_{Q2,0-} +4\Omega_{Q2,-+} +4\Omega_{Q2,+-} \nonumber \\ 
+        &&  + \ldots \nonumber \\ 
+        && + \Omega_{Qq,0+} + \Omega_{Qq,-0} + \Omega_{Qq,+0} + \Omega_{Qq,0-} +4\Omega_{Qq,-+} +4\Omega_{Qq,+-} \Large) - \E (\EIR)^2 \nonumber \\ 
+\end{eqnarray}
+
+!!
+Add interpretation that it's only a sum of changes in answers
+!!
 
 
 
@@ -1883,7 +1919,7 @@ The other observation that can be done is that the interest of the variance in t
 \autoref{tab:accuracy measures} shows some more measures of goodness-of- fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), Mean Absolute Percentage Error (MAPE) and Mean Absolute Scaled Error (MASE).
 All give similar result as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
 
-The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}.
+The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}. There is no clear best model between the two.
 
 
 \subsubsection{Diebold-Mariano Test}
@@ -1894,14 +1930,12 @@ A statistical test, called Diebold-Mariano test \cite{diebold_comparing_1995}, i
 % The Diebold-Mariano test is applied to determine whether forecasts are significantly better.
 
 The test is comparing the residuals of different models in test if a model is significantly better than the another one.
-It's modelling 
-DM = 1.2727, Forecast horizon = 1, Loss function power = 2, p-value = 0.2055
-alternative hypothesis: two.sided
 
+The parameters of the test are Forecast horizon = 1, Loss function power = 2 and alternative hypothesis: two.sided
 
 
 \begin{table}[htp!]
-    \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1}}
+    \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1} }
     \label{tab:Diebold Mariano 1}
      \centering \footnotesize
     \begin{tabular}{| r | c c c c c |}
