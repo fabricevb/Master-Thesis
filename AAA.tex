@@ -362,12 +362,12 @@ Survey Volatility -
 % A widespread method to predict the evolution of National Economies is the survey-based business indicator. Belgium have been collecting this indicator for more than 60 years. This long evolution 
 
 Each month, around 3000 companies reply to several questions of a survey that holds on one page and where questions can be answered three different ways.
-The answers are then summarised and deliver a surprisingly accurate picture of the present state of the Belgian economy and can be used in short term predictions.
+The answers are summarised in an indicator and deliver a surprisingly accurate picture of the present state of the Belgian economy and can be used in short term predictions.
 
 The Belgian business survey is 65 years old and business surveys are today widely used around the world. 
 At the European level, the European Commission started an harmonisation program in 1961 that makes it possible to compare business surveys results across the EU.
 
-This Thesis is part of a tradition of research proposing improvement and ways to add value to surveys. Different methods will be propose to add information to the Belgian business indicator, that could also be applied to others similar surveys.
+This thesis is part of a tradition of research proposing improvement and ways to add value to surveys. Different methods will be propose to add information to the Belgian business indicator, that could also be applied to others similar surveys.
 
 % This study explores the variability and the possible interest of taking it into account to make future predictions.
 
@@ -385,26 +385,21 @@ Here the dataset at hand covers the period 1988 to 2018.
 For similar reasons, the answers are obtained only for the industrial sector.
 It is the first sector that was taken into account in the business survey before it gets enlarged to trade, construction and services in the calculation of the published general indicator.
 
-Evidence shows that industry is the sector with the highest correlation with GDP 
+% Evidence shows that industry is the sector with the highest correlation with GDP and is 
 
-
-The calculation is defined as in the
 
 Four questions are taken into account, since it are the four questions that are taken today in the calculation of the industry BSI. 
-It has to be noted that before 2009, almost all the questions where taken into account for the calculation. In order to have the best comparability, only the four questions will be used for the whole period.
+It has to be noted that before 2009, almost all the questions where taken into account for the calculation. In order to have the best comparability, only the four questions will be used for the whole period. 
 
 \subsubsection{Plan of this Paper}
 
 This master thesis is divided into two main part, first a presentation/theory part (Chapter 2-4), then an empirical research part (Chapter 5-8).
 
 Chapter 2 will introduce the business survey and the business survey indicator. Explaining the history, the objectives and the methodology of the business survey. The calculation of the different business survey indicators will then be presented. The method will be the same for the other indicators/variables, first the unweighted and weighted procedure will be explained when taking one question into account. Then the method of calculation taking more than one question into account will be presented.
-
 Chapter 3 will present the variance of the business survey indicator. Starting from one questions variance when unweighted or weighted, it will then be enlarged to several questions taken into account.
-
 Chapter 4 will present the indicator of the evolution of individual responses (EIR) while Chapter 5 will present its variance. The same procedure/method as for the BSI will be applied to the EIR.
 
 Chapter 6 test for seasonal effects and explain the seasonal correction applied to the data. It will then discuss some potential issues/bias of the survey; non-responses, dropout and attrition.
-
 In Chapter 7, descriptive statistics will be made of the different variables at hand and it will be looked into correlations among the different variables.
 
 Chapter 8 applies linear regressions in order to see the potential interest of the evolution in individual responses and the different variances.
@@ -1115,7 +1110,7 @@ where $\BSI = \left(x_{i Q1} + x_{i Q2} + \ldots + x_{i Qq} \right) / q $ in the
 
 The generalisation of the previous equation can be written as follow for the variance of the unweighted indicator
 
-\newpage
+
 \subsubsection{Generalisation}
 
 Unweighted BSI
@@ -1465,7 +1460,6 @@ There are here more explanatory, therefore it's not possible to plot is a was do
 The generalisation of the previous equation can be written as follow for the variance of the unweighted indicator
 
 
-\newpage
 \subsubsection{Generalisation}
 
 \textbf{Unweighted EIR}
@@ -1495,7 +1489,7 @@ The generalisation of the previous equation can be written as follow for the var
 Add interpretation that it's only a sum of changes in answers
 !!
 
-
+Further explanation including examples to better understand the different new indicators/variables, can be found in Appendix on \autopageref{chap:appendix:explain Var BSI and EIR}
 
 
 \chapter{Non-Response, Dropout, Attrition and Seasonal Effects}
@@ -1929,7 +1923,7 @@ A statistical test, called Diebold-Mariano test \cite{diebold_comparing_1995}, i
 
 The test is comparing the residuals of different models in test if a model is significantly better than the another one.
 
-The parameters of the test are Forecast horizon = 1, Loss function power = 2 and alternative hypothesis: two.sided
+The parameters of the test are forecast horizon = 1, loss function power = 2 and alternative hypothesis: two.sided
 
 
 \begin{table}[htp!]
@@ -2031,106 +2025,7 @@ The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 
 
 
 
-\newpage
 
-\begin{table}[H] \centering \footnotesize
-  \caption{Linear Regression results for the period 1988 to 2000}
-  \label{tab:model comparaison 2000} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{3}{c}{Linear Regression} \\ 
-\cline{2-4} 
-\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
-\hline \\[-1.8ex] 
- Constant & 4.437^{***} & 0.660 & -0.519 \\ 
-  & (0.211) & (1.899) & (2.041) \\ 
-  & & & \\ 
- BSI & 17.374^{***} & 19.212^{***} & 20.327^{***} \\ 
-  & (1.547) & (1.758) & (1.813) \\ 
-  & & & \\ 
- Var(BSI) &  & 30.545^{*} & 31.371^{**} \\ 
-  &  & (15.269) & (14.992) \\ 
-  & & & \\ 
- EIR1 &  &  & -37.120^{**} \\ 
-  &  &  & (17.899) \\ 
-  & & & \\ 
- Var(EIR1) &  &  & 53.535 \\ 
-  &  &  & (52.433) \\ 
-  & & & \\ 
-\hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
-Residual Std. Error & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
-AIC & \multicolumn{1}{c}{124.714} & \multicolumn{1}{c}{122.625} & \multicolumn{1}{c}{121.622} \\ 
-BIC & \multicolumn{1}{c}{130.327} & \multicolumn{1}{c}{130.109} & \multicolumn{1}{c}{132.849} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
-\end{table} 
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{Graphs/predictions2.pdf}
-    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2000}}
-    \label{fig:predictions2}
-\end{figure}
-
-
-
-\begin{table}[H] \centering \footnotesize
-  \caption{Linear Regression results for the period 1988 to 2012}
-  \label{tab:model comparaison 2012} 
-\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
- & \multicolumn{3}{c}{Linear Regression} \\ 
-\cline{2-4} 
-\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
-\hline \\[-1.8ex]
- Constant & 3.871^{***} & -0.686 & -1.349 \\ 
-  & (0.171) & (1.054) & (1.102) \\ 
-  & & & \\ 
- BSI & 17.243^{***} & 20.939^{***} & 21.499^{***} \\ 
-  & (1.341) & (1.491) & (1.478) \\ 
-  & & & \\ 
- Var(BSI) &  & 40.466^{***} & 33.997^{***} \\ 
-  &  & (9.256) & (10.062) \\ 
-  & & & \\ 
- EIR1 &  &  & -33.401^{**} \\ 
-  &  &  & (16.292) \\ 
-  & & & \\ 
- Var(EIR1) &  &  & 71.077 \\ 
-  &  &  & (44.449) \\ 
-  & & & \\ 
-\hline \\[-1.8ex] 
-Observations & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.637} & \multicolumn{1}{c}{0.699} & \multicolumn{1}{c}{0.718} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.634} & \multicolumn{1}{c}{0.693} & \multicolumn{1}{c}{0.705} \\ 
-Residual Std. Error & \multicolumn{1}{c}{1.064} & \multicolumn{1}{c}{0.974} & \multicolumn{1}{c}{0.954} \\ 
-AIC & \multicolumn{1}{c}{288.325} & \multicolumn{1}{c}{272.383} & \multicolumn{1}{c}{270.247} \\ 
-BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1}{c}{285.633} \\ 
-\hline 
-\hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-\end{tabular} 
-\end{table} 
-
-
-
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{Graphs/predictions3.pdf}
-    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2012}}
-    \label{fig:predictions3}
-\end{figure}
 
 
 
@@ -2279,7 +2174,7 @@ Question 3 and 4 as
 
 \begin{table}[htp!] 
    \centering \footnotesize 
-  \caption{Correlation Matrix of different lags of the BSI of \textbf{question 3} with YoY GDP} 
+  \caption{Correlation Matrix of different lags of the BSI of question 3 with YoY GDP} 
   \label{tab:corr question3} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
@@ -2298,7 +2193,7 @@ lag4(BSI)  &  &  &  &  &  & $1$ \\
 
 
 \begin{table}[htp!]  \centering \footnotesize 
-    \caption{Correlation Matrix of different lags of the BSI of \textbf{question 4} with YoY GDP} 
+    \caption{Correlation Matrix of different lags of the BSI of question 4 with YoY GDP} 
   \label{tab:corr question4} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
 \\[-1.8ex]\hline 
@@ -2317,6 +2212,7 @@ lag4(BSI) &   &  &  &  &  & $1$ \\
 
 \newpage
 \section*{Further explanations regarding the variance of the BSI, EIR and the variance of the EIR}
+\label{chap:appendix:explain Var BSI and EIR}
 
 
 If we take a very simplified situation where there are only two respondents over a 2 months period and only taking one question into account. 
@@ -2331,84 +2227,84 @@ situation    & respondent 1 & respondent 2           &  BSI & Var(BSI) & EIR & V
  2 & positive $\rightarrow$ positive & negative $\rightarrow$ negative & 0 & 1 & 0 & 0 \\
  3 & positive $\rightarrow$ negative & negative $\rightarrow$ positive & 0 & 1 & 0 & 2 \\
  4 & positive $\rightarrow$ neutral & positive $\rightarrow$ neutral & 0 & 0 & -1 & 0  \\
- 4 & positive $\rightarrow$ neutral & negative $\rightarrow$ neutral & 0 & 0 & 0 & 1  \\
+ 5 & positive $\rightarrow$ neutral & negative $\rightarrow$ neutral & 0 & 0 & 0 & 1  \\
 \end{tabular}
 \end{table}
-
+%
 \begin{figure}[H]
         \centering
-     \begin{subfigure}[t]{0.4\textwidth}
+     \begin{subfigure}[t]{0.3\textwidth}
         \centering
     \begin{tikzpicture} \footnotesize
            \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
             \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
             \draw [draw=black,ultra thick] (0.5,2) -- (3.5,2);% draw the graph
-            \node [left] at (0,0.7) {negative};                % label y-intercept
-            \node [left] at (0,2) {neutral};                % label y-intercept
-            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [left] at (0,0.7) {$-$};                % label y-intercept
+            \node [left] at (0,2) {$0$};                % label y-intercept
+            \node [left] at (0,3.3) {$+$};                % label y-intercept
             \node [below] at (0.5,0) {$t-1$};               % label x-intercept
             \node [below] at (3.5,0) {$t$};               % label x-intercept
     \end{tikzpicture}
     \caption{Situation 1}
     \end{subfigure}
     ~
-        \begin{subfigure}[t]{0.4\textwidth}
+        \begin{subfigure}[t]{0.3\textwidth}
         \centering
         \begin{tikzpicture} \footnotesize
            \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
             \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
             \draw [draw=black, thick] (0.5,0.7) -- (3.5,0.7);% draw the graph
             \draw [draw=black, thick] (0.5,3.3) -- (3.5,3.3);% draw the graph  
-            \node [left] at (0,0.7) {negative};                % label y-intercept
-            \node [left] at (0,2) {neutral};                % label y-intercept
-            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [left] at (0,0.7) {$-$};                % label y-intercept
+            \node [left] at (0,2) {$0$};                % label y-intercept
+            \node [left] at (0,3.3) {$+$};                % label y-intercept
             \node [below] at (0.5,0) {$t-1$};               % label x-intercept
             \node [below] at (3.5,0) {$t$};               % label x-intercept
     \end{tikzpicture}
     \caption{Situation 2}
     \end{subfigure}
     ~
-    \begin{subfigure}[t]{0.4\textwidth}
+    \begin{subfigure}[t]{0.3\textwidth}
         \centering
         \begin{tikzpicture} \footnotesize
            \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
             \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
             \draw [draw=black, thick] (0.5,0.7) -- (3.5,3.3);% draw the graph
             \draw [draw=black, thick] (0.5,3.3) -- (3.5,0.7);% draw the graph  
-            \node [left] at (0,0.7) {negative};                % label y-intercept
-            \node [left] at (0,2) {neutral};                % label y-intercept
-            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [left] at (0,0.7) {$-$};                % label y-intercept
+            \node [left] at (0,2) {$0$};                % label y-intercept
+            \node [left] at (0,3.3) {$+$};                % label y-intercept
             \node [below] at (0.5,0) {$t-1$};               % label x-intercept
             \node [below] at (3.5,0) {$t$};               % label x-intercept
     \end{tikzpicture}
     \caption{Situation 3}
     \end{subfigure}
     ~
-    \begin{subfigure}[t]{0.4\textwidth}
+    \begin{subfigure}[t]{0.3\textwidth}
         \centering
         \begin{tikzpicture} \footnotesize
            \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
             \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
             \draw [draw=black, ultra thick] (0.5,3.3) -- (3.5,2);% draw the graph  
-            \node [left] at (0,0.7) {negative};                % label y-intercept
-            \node [left] at (0,2) {neutral};                % label y-intercept
-            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [left] at (0,0.7) {$-$};                % label y-intercept
+            \node [left] at (0,2) {$0$};                % label y-intercept
+            \node [left] at (0,3.3) {$+$};                % label y-intercept
             \node [below] at (0.5,0) {$t-1$};               % label x-intercept
             \node [below] at (3.5,0) {$t$};               % label x-intercept
     \end{tikzpicture}
     \caption{Situation 4}
     \end{subfigure}
-    
-        \begin{subfigure}[t]{0.4\textwidth}
+  ~
+        \begin{subfigure}[t]{0.3\textwidth}
         \centering
         \begin{tikzpicture} \footnotesize
            \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
             \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
             \draw [draw=black, thick] (0.5,3.3) -- (3.5,2);% draw the graph  
             \draw [draw=black, thick] (0.5,0.7) -- (3.5,2);% draw the graph  
-            \node [left] at (0,0.7) {negative};                % label y-intercept
-            \node [left] at (0,2) {neutral};                % label y-intercept
-            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [left] at (0,0.7) {$-$};                % label y-intercept
+            \node [left] at (0,2) {$0$};                % label y-intercept
+            \node [left] at (0,3.3) {$+$};                % label y-intercept
             \node [below] at (0.5,0) {$t-1$};               % label x-intercept
             \node [below] at (3.5,0) {$t$};               % label x-intercept
     \end{tikzpicture}
@@ -2520,6 +2416,103 @@ BSI=0, Var(BSI)=0, EIR=0, Var(EIR)=0
 \end{figure}
 
 
+\newpage
+
+\begin{table}[H] \centering \footnotesize
+  \caption{Linear Regression results for the period 1988 to 2000}
+  \label{tab:model comparaison 2000} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{Linear Regression} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ Constant & 4.437^{***} & 0.660 & -0.519 \\ 
+  & (0.211) & (1.899) & (2.041) \\ 
+  & & & \\ 
+ BSI & 17.374^{***} & 19.212^{***} & 20.327^{***} \\ 
+  & (1.547) & (1.758) & (1.813) \\ 
+  & & & \\ 
+ Var(BSI) &  & 30.545^{*} & 31.371^{**} \\ 
+  &  & (15.269) & (14.992) \\ 
+  & & & \\ 
+ EIR1 &  &  & -37.120^{**} \\ 
+  &  &  & (17.899) \\ 
+  & & & \\ 
+ Var(EIR1) &  &  & 53.535 \\ 
+  &  &  & (52.433) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} & \multicolumn{1}{c}{48} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.733} & \multicolumn{1}{c}{0.754} & \multicolumn{1}{c}{0.779} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.744} & \multicolumn{1}{c}{0.758} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.851} & \multicolumn{1}{c}{0.825} & \multicolumn{1}{c}{0.801} \\ 
+AIC & \multicolumn{1}{c}{124.714} & \multicolumn{1}{c}{122.625} & \multicolumn{1}{c}{121.622} \\ 
+BIC & \multicolumn{1}{c}{130.327} & \multicolumn{1}{c}{130.109} & \multicolumn{1}{c}{132.849} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/predictions2.pdf}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2000}}
+    \label{fig:predictions2}
+\end{figure}
+
+
+\begin{table}[H] \centering \footnotesize
+  \caption{Linear Regression results for the period 1988 to 2012}
+  \label{tab:model comparaison 2012} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{Linear Regression} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Year on Year GDP} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex]
+ Constant & 3.871^{***} & -0.686 & -1.349 \\ 
+  & (0.171) & (1.054) & (1.102) \\ 
+  & & & \\ 
+ BSI & 17.243^{***} & 20.939^{***} & 21.499^{***} \\ 
+  & (1.341) & (1.491) & (1.478) \\ 
+  & & & \\ 
+ Var(BSI) &  & 40.466^{***} & 33.997^{***} \\ 
+  &  & (9.256) & (10.062) \\ 
+  & & & \\ 
+ EIR1 &  &  & -33.401^{**} \\ 
+  &  &  & (16.292) \\ 
+  & & & \\ 
+ Var(EIR1) &  &  & 71.077 \\ 
+  &  &  & (44.449) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} & \multicolumn{1}{c}{96} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.637} & \multicolumn{1}{c}{0.699} & \multicolumn{1}{c}{0.718} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.634} & \multicolumn{1}{c}{0.693} & \multicolumn{1}{c}{0.705} \\ 
+Residual Std. Error & \multicolumn{1}{c}{1.064} & \multicolumn{1}{c}{0.974} & \multicolumn{1}{c}{0.954} \\ 
+AIC & \multicolumn{1}{c}{288.325} & \multicolumn{1}{c}{272.383} & \multicolumn{1}{c}{270.247} \\ 
+BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1}{c}{285.633} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graphs/predictions3.pdf}
+    \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf{1988 to 2012}}
+    \label{fig:predictions3}
+\end{figure}
 
 
 
