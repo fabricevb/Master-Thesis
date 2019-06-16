@@ -1428,7 +1428,7 @@ Again the variance can go as low as 0 but in this case can go up to 2.5. One met
 
 \begin{eqnarray}
 Var(Z) &=& 1 - \pi_{++} - \pi_{00} - \pi_{--} + 3\pi_{+-} + 3\pi_{-+} - E(Z)^2 \nonumber \\
-    &=& 1 - 0 - 0 - 0 + 3*0.5 + 3*0.5 - 0 = 2.5 \nonumber
+    &=& 1 - 0 - 0 - 0 + 3*0.5 + 3*0.5 - 0 = 2 \nonumber
 \end{eqnarray}
 
 
@@ -1718,7 +1718,7 @@ As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the corre
 The correlation between the different types of variances is also high, which can mean that they contain quite similar information.
 With this definition, it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information.
 
-\section{Autocorrelation}
+\section{? Autocorrelation (add to appendix?)}
 
 Autocorrelation, also known as serial correlation, is the correlation between an observation at time $t$ and previous observations.
 
@@ -1727,8 +1727,6 @@ In the case of the YoY GDP, one lag (X axis of the plot) is three months since t
 Several variables have high autocorrelation. The variances are highly correlated over time, as is the BSI. 
 On the other hand, YoY GDP is slightly correlated with its three previous quarter values. 
 For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the number of months taking into account for the EIR.
-
-Influence for modelling ?
 
 
 \begin{figure}[!htbp]
@@ -1743,7 +1741,7 @@ Influence for modelling ?
 
 \chapter{Linear Models}
 
-This chapter uses a linear models to test the pertinence of the variables in the short term prediction of the evolution of GDP.
+This chapter uses a linear models to test the pertinence of the different variables at hand in the short term prediction of the evolution of GDP.
 
 As mention in \autoref{sec:nowcasting}, where nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 The National Bank of Belgium for example, developed a State-Space model available in JDemetra+ \cite{de_antonio_liedo_nowcasting_2014}. Other well-known methods are ARIMA models, MIDAS and much more.
@@ -1754,7 +1752,7 @@ To achieve this objective, it's better to use a model that account easily for th
 Therefore, the linear model is preferred.
 
 This chapter will begin with proposing five different models, one simple model where only the BSI is used as regressor, and then four potential models that include other regressors.
-Several test statistics will be looked at and used to compare the different models and see if the new regressors added to the model, improve the model fit and the estimations.
+Several test statistics will be looked at and used to compare the different models and understand if the new regressors added to the model, improve the model fit and the estimations.
 A method of model selection will then by applied to see if it decides to include the new regressors into the model aside from from the BSI.
 The last part will use out-of-sample estimation to check if the results from the previous tests are robust.
 
@@ -2146,57 +2144,65 @@ BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1
 
 \chapter{Conclusion}
 
-The variance of the business survey indicator showed some interesting interpretation and properties. The fact that the data at hand is trichonomous makes the calculation of the variance
 
-The evolution of individual responses was developed and different calculation approaches were shown.
+The variance of the business survey indicator showed some interesting interpretation and properties. Because the business survey has only three possible answers per questions, the data at hand is trichonomous. It was shown that had as consequence that the variance was related to the mean and bounded between 0 and 1.
 
-The variance of the EIR
+The evolution of individual responses was developed and explained.
+It's variance was shown as also having a mean-variance relation and been bounded between 0 and 2.5.
+
+After correction the different variables and indicators for seasonal effects, the two different variances where shown to be potential indicators of dropout and/or attrition.
+
+High correlation .........
+
+The variance of the BSI, the EIR and its variance are more volatile than the business survey indicator.
 
 Considering the predictive power of the different variables, it was seen that as expected the business survey indicator is a good predictor, and that its variance would have increase the prediction accuracy.
 
-Those results have to be taken carefully since it was seen that the data at hand seems to be influenced by dropout bias and/or attrition. In this case the variance of the BSI and the variance of the EIR were very helpful to acknowledge and study the issue.
+Those results have to be taken carefully due to the potential harm of dropout bias and/or attrition.
 
 
 It was seen that if in 2000, it was decided to use linear models to do nowcasting of the YoY GDP, and that model would be used until this day, the model including the BSI, its variance, the EIR and its variance would have outperformed a model only using the BSI.
 
 
-High correlation between var(BSI) and var(EIR) - people seems to change in the same direction.
-
 
 \chapter{Discussion}
 
-The Belgian industry business survey indicator is a very good indicator of the YoY GDP.
+The Belgian industry business survey indicator was shown as very good indicator of the YoY GDP, confirming previous research.
+The present research showed that adding the variance has some potential interest in better understanding the survey, more precisely the respondents behaviour. This behaviour seems to show that dropout and attrition can have a effect on 
 
-
-
-
-\section*{Recruitment procedure and panel data}
-
-The recruitment procedure is not so usual for a survey. The particularity of the business survey, that has the ambition to capture the sentiment of companies considering the evolution is quite big, but it's realising it quite well.
+\subsubsection{Recruitment procedure and panel data}
 
 not real sampling theory
 
+The selection of new participants by waves of recruitment could be an issue. A constant recruitment of new participants could attenuated the potential bias. Literature a show that respondents behaviour changes related to the participation period. Some simple descriptive statistics seemed to confirm the theory in the case of the BSI.
+
+Further research regarding this issue would be of a great benefit to better understand and correct for those issues.
 
 
-\section*{EIR that takes more periods into account}
+
+\subsubsection{EIR that takes more periods into account}
+
+The EIR could find 
+
+
 
 The whole discussion is whether this improvement of predictions when adding the variance of the indicator into the model, is caused by its predictive power or if it can be explained by the Attrition and/or dropout bias.
 
-\section*{Limitations}
+\subsubsection{Limitations}
 
-\subsection*{Variance influence by drop-out, attrition, ...}
+\subsubsection{Variance influence by drop-out, attrition, ...}
 
-\section*{Improve the business survey}
-
-
+\subsubsection{Improve the business survey}
 
 
-\subsubsection*{Change participants}
+
+
+\subsubsection{Change participants}
 
 From a statisticians point of view, a more sampling theory Including SRS or else would be more optimal
 
 
-\section*{Further Research}
+\subsubsection{Further Research}
 
 
 Considering non-response, some other technique dans Last Observation carried forwards could be replace by multiple imputations for more accuracy. This could be interesting to look at
@@ -2271,7 +2277,7 @@ Question 3 and 4 as
 
 
 
-\begin{table}[H] 
+\begin{table}[htp!] 
    \centering \footnotesize 
   \caption{Correlation Matrix of different lags of the BSI of \textbf{question 3} with YoY GDP} 
   \label{tab:corr question3} 
@@ -2291,7 +2297,7 @@ lag4(BSI)  &  &  &  &  &  & $1$ \\
 \end{table} 
 
 
-\begin{table}[H]  \centering \footnotesize 
+\begin{table}[htp!]  \centering \footnotesize 
     \caption{Correlation Matrix of different lags of the BSI of \textbf{question 4} with YoY GDP} 
   \label{tab:corr question4} 
 \begin{tabular}{@{\extracolsep{5pt}} ccccccc} 
@@ -2309,6 +2315,125 @@ lag4(BSI) &   &  &  &  &  & $1$ \\
 \end{tabular} 
 \end{table} 
 
+\newpage
+\section*{Further explanations regarding the variance of the BSI, EIR and the variance of the EIR}
+
+
+If we take a very simplified situation where there are only two respondents over a 2 months period and only taking one question into account. 
+
+\begin{table}[H]
+    \caption{WAZAZAZAZ}
+    \label{tab:explanation of Var and BSI}
+    \centering
+\begin{tabular}{c|c c c c c c} \footnotesize
+situation    & respondent 1 & respondent 2           &  BSI & Var(BSI) & EIR & Var(EIR) \\ \hline
+ 1 & neutral $\rightarrow$ neutral & neutral $\rightarrow$ neutral & 0 & 0 & 0 & 0   \\
+ 2 & positive $\rightarrow$ positive & negative $\rightarrow$ negative & 0 & 1 & 0 & 0 \\
+ 3 & positive $\rightarrow$ negative & negative $\rightarrow$ positive & 0 & 1 & 0 & 2 \\
+ 4 & positive $\rightarrow$ neutral & positive $\rightarrow$ neutral & 0 & 0 & -1 & 0  \\
+ 4 & positive $\rightarrow$ neutral & negative $\rightarrow$ neutral & 0 & 0 & 0 & 1  \\
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+        \centering
+     \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+    \begin{tikzpicture} \footnotesize
+           \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
+            \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
+            \draw [draw=black,ultra thick] (0.5,2) -- (3.5,2);% draw the graph
+            \node [left] at (0,0.7) {negative};                % label y-intercept
+            \node [left] at (0,2) {neutral};                % label y-intercept
+            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [below] at (0.5,0) {$t-1$};               % label x-intercept
+            \node [below] at (3.5,0) {$t$};               % label x-intercept
+    \end{tikzpicture}
+    \caption{Situation 1}
+    \end{subfigure}
+    ~
+        \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture} \footnotesize
+           \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
+            \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
+            \draw [draw=black, thick] (0.5,0.7) -- (3.5,0.7);% draw the graph
+            \draw [draw=black, thick] (0.5,3.3) -- (3.5,3.3);% draw the graph  
+            \node [left] at (0,0.7) {negative};                % label y-intercept
+            \node [left] at (0,2) {neutral};                % label y-intercept
+            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [below] at (0.5,0) {$t-1$};               % label x-intercept
+            \node [below] at (3.5,0) {$t$};               % label x-intercept
+    \end{tikzpicture}
+    \caption{Situation 2}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture} \footnotesize
+           \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
+            \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
+            \draw [draw=black, thick] (0.5,0.7) -- (3.5,3.3);% draw the graph
+            \draw [draw=black, thick] (0.5,3.3) -- (3.5,0.7);% draw the graph  
+            \node [left] at (0,0.7) {negative};                % label y-intercept
+            \node [left] at (0,2) {neutral};                % label y-intercept
+            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [below] at (0.5,0) {$t-1$};               % label x-intercept
+            \node [below] at (3.5,0) {$t$};               % label x-intercept
+    \end{tikzpicture}
+    \caption{Situation 3}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture} \footnotesize
+           \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
+            \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
+            \draw [draw=black, ultra thick] (0.5,3.3) -- (3.5,2);% draw the graph  
+            \node [left] at (0,0.7) {negative};                % label y-intercept
+            \node [left] at (0,2) {neutral};                % label y-intercept
+            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [below] at (0.5,0) {$t-1$};               % label x-intercept
+            \node [below] at (3.5,0) {$t$};               % label x-intercept
+    \end{tikzpicture}
+    \caption{Situation 4}
+    \end{subfigure}
+    
+        \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture} \footnotesize
+           \draw [thin, black, ->] (0,0) -- (0,4);    % draw y-axis line
+            \draw [thin, black, ->] (0,0) -- (4,0);      % draw x-axis line
+            \draw [draw=black, thick] (0.5,3.3) -- (3.5,2);% draw the graph  
+            \draw [draw=black, thick] (0.5,0.7) -- (3.5,2);% draw the graph  
+            \node [left] at (0,0.7) {negative};                % label y-intercept
+            \node [left] at (0,2) {neutral};                % label y-intercept
+            \node [left] at (0,3.3) {positive};                % label y-intercept
+            \node [below] at (0.5,0) {$t-1$};               % label x-intercept
+            \node [below] at (3.5,0) {$t$};               % label x-intercept
+    \end{tikzpicture}
+    \caption{Situation 5}
+    \end{subfigure}
+
+      \caption{wazazaza}
+    \label{fig:explanation of Var and BSI}
+\end{figure}
+
+
+
+
+Situation one; both respondent answers neutral and they both keep the same answers the next month 
+BSI=0, Var(BSI)=0, EIR=0, Var(EIR)=0
+
+Situation two; One respondent answers positive, while the other answer negative and they both answers the same the next month
+BSI=0, Var(BSI)=1, EIR=0, Var(EIR)=0
+
+
+Situation three; One respondent answers positive, while the other answer negative and they next month they both radically change their answers to the opposite
+BSI=0, Var(BSI)=1, EIR=0, Var(EIR)=1
+
+Situation four;
+BSI=0, Var(BSI)=0, EIR=0, Var(EIR)=0
 
 
 
