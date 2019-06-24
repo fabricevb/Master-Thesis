@@ -1,27 +1,28 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Timeline of the period and the publication of the business survey indicator (BSI) and the Gross Domestic Product (GDP)\relax }}{5}{figure.caption.7}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The Business Cycle theory of GDP and year on year GDP\relax }}{6}{figure.caption.8}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Business cycles from 1975 to 2009 of the American Economy according to the NBER}}{6}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Timeline of the period and the publication of the business survey indicator (BSI) and the Gross Domestic Product (GDP)\relax }}{5}{figure.caption.4}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The Business Cycle theory of GDP and year on year GDP\relax }}{6}{figure.caption.5}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Business cycles from 1975 to 2009 of the American Economy according to the NBER}}{6}{figure.caption.6}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Plot of the possible values of the indicator (X axis) and variance (Y axis) for different values of $\pi _0$ \relax }}{15}{figure.caption.11}% 
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months earlier (EIR3), with for each of them, their variance. The yellow lines are the raw data, the blue lines the seasonally corrected data and the green line is the trend of the variable.\relax }}{27}{figure.caption.18}% 
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Correlation plot of the YoY GDP, the business survey indicator and its variance, and the evolution of individual responses for 1,2 and three months lag and its according variances\relax }}{31}{figure.caption.22}% 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Plot of the time series of YoY GDP, the BSI, the variance of the BSI and different EIR's (taking 1, 2 or 3 months differences) and their variance for the period 1988 to 2018\relax }}{32}{figure.caption.21}% 
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Autocorrelation plots for YoY GDP, the BSI, Var(BSI), EIR1, Var(EIR1), EIR2, Var(EIR2), EIR3 and Var(EIR3)\relax }}{34}{figure.caption.23}% 
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Timing of the observations\relax }}{36}{figure.caption.24}% 
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3\relax }}{39}{figure.caption.29}% 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf {1988 to 2000}\relax }}{41}{figure.caption.35}% 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from \textbf {1988 to 2012}\relax }}{42}{figure.caption.37}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Plot of the possible values of the indicator (X axis) and variance (Y axis) for different values of $\pi _0$ \relax }}{15}{figure.caption.7}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Caption\relax }}{53}{figure.caption.52}% 
-\contentsline {figure}{\numberline {2}{\ignorespaces Caption\relax }}{53}{figure.caption.53}% 
-\contentsline {figure}{\numberline {3}{\ignorespaces The Business Survey Questionnaire in Dutch for the Industrial Sector in 2018\relax }}{54}{figure.caption.54}% 
-\contentsline {figure}{\numberline {4}{\ignorespaces The Business Survey Questionnaire in Dutch for the Industrial Sector in 1990\relax }}{55}{figure.caption.55}% 
-\contentsline {figure}{\numberline {5}{\ignorespaces S-I plots for the different variables\relax }}{56}{figure.caption.56}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months earlier (EIR3), with for each of them, their variance. The yellow lines are the raw variables, the blue lines the seasonally corrected variables and the green line are the trends of the variables.\relax }}{28}{figure.caption.14}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Correlation plot of the YoY GDP, the business survey indicator and its variance, and the evolution of individual responses for 1,2 and three months lag and its according variances\relax }}{32}{figure.caption.18}% 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Plot of the time series of YoY GDP, the BSI, the variance of the BSI and different EIR's (taking 1, 2 or 3 months differences) and their variance for the period 1988 to 2018\relax }}{33}{figure.caption.17}% 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Autocorrelation plots for YoY GDP, the BSI, Var(BSI), EIR1, Var(EIR1), EIR2, Var(EIR2), EIR3 and Var(EIR3)\relax }}{35}{figure.caption.19}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Timeline of the observations of GDP and the business survey and their publication\relax }}{37}{figure.caption.20}% 
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3\relax }}{39}{figure.caption.23}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Plots of five possible situations of a simplified business survey with only two respondents over a two months period\relax }}{49}{figure.caption.41}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces participants var bsi\relax }}{50}{figure.caption.43}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces participants var eir\relax }}{51}{figure.caption.44}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces The Business Survey Questionnaire in Dutch for the Industrial Sector in 2018\relax }}{52}{figure.caption.45}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces The Business Survey Questionnaire in Dutch for the Industrial Sector in 1990\relax }}{53}{figure.caption.46}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces S-I plots for the different variables\relax }}{54}{figure.caption.47}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from 1988 to 2000\relax }}{55}{figure.caption.49}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Plot of year on year GDP and the different estimation from model 1, 2 and 3 when estimated with the data from 1988 to 2012\relax }}{56}{figure.caption.51}% 
