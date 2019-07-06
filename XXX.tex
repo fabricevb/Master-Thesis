@@ -912,7 +912,37 @@ lag4(BSI) &   &  &  &  &  & $1$ \\
 \begin{eqnarray}
     \Var \left(\frac{Z_{Q1} + Z_{Q2} + Z_{Q3} + Z_{Q4}}{4} \right) 
     &=& \frac{1}{16} \Var \left(\frac{\sum_{i=1}^n \left(z_{i Q1} + z_{i Q2} + z_{i Q3} + z_{i Q4} \right)}{n} \right) \nonumber \\
+            &=& \frac{1}{q^2} \left( \pi_{Q1,+} + \pi_{Q1,-} + \pi_{Q2,+} + \pi_{Q2,-} + \ldots + \pi_{Qq,+} + \pi_{Qq,-} \right)^2 - \E (\BSI)^2 \nonumber \\ 
+&=& \frac{1}{q^2} \left( \Omega_{Q1,+} + \Omega_{Q1,-} + \Omega_{Q2,+} + \Omega_{Q2,-} + \ldots + \Omega_{Qq,+} + \Omega_{Qq,-} \right)^2 - \E (\BSI)^2 \nonumber \\ 
+        &=& \frac{1}{q^2} \Large( \pi_{Q1,0+} + \pi_{Q1,-0} + \pi_{Q1,+0} + \pi_{Q1,0-} +4\pi_{Q1,-+} +4\pi_{Q1,+-} \nonumber \\ 
+        && + \pi_{Q2,0+} + \pi_{Q2,-0} + \pi_{Q2,+0} + \pi_{Q2,0-} +4\pi_{Q2,-+} +4\pi_{Q2,+-} \nonumber \\ 
+        &&  + \ldots \nonumber \\ 
+        && + \pi_{Qq,0+} + \pi_{Qq,-0} + \pi_{Qq,+0} + \pi_{Qq,0-} +4\pi_{Qq,-+} +4\pi_{Qq,+-} \Large) - \E (\EIR)^2 
+                &=& \frac{1}{q^2} \Large( \Omega_{Q1,0+} + \Omega_{Q1,-0} + \Omega_{Q1,+0} + \Omega_{Q1,0-} +4\Omega_{Q1,-+} +4\Omega_{Q1,+-} \nonumber \\ 
+        && + \Omega_{Q2,0+} + \Omega_{Q2,-0} + \Omega_{Q2,+0} + \Omega_{Q2,0-} +4\Omega_{Q2,-+} +4\Omega_{Q2,+-} \nonumber \\ 
+        &&  + \ldots \nonumber \\ 
+        && + \Omega_{Qq,0+} + \Omega_{Qq,-0} + \Omega_{Qq,+0} + \Omega_{Qq,0-} +4\Omega_{Qq,-+} +4\Omega_{Qq,+-} \Large) - \E (\EIR)^2
 \end{eqnarray}
 
+
+
+\section{Autocorrelation}
+
+Autocorrelation, also known as serial correlation, is the correlation between an observation at time $t$ and previous observations.
+
+The method used here is to estimate the autocorrelation function and plot it, the result can be seen in \autoref{fig:ACF}, where the correlation of a variable with its previous lags is shown. 
+In the case of the YoY GDP, one lag (X axis of the plot) is three months since the variable is quarterly, while for the other variables the lag corresponds to one month.
+Several variables have high autocorrelation. The variances are highly correlated over time, as is the BSI. 
+On the other hand, YoY GDP is slightly correlated with its three previous quarter values. 
+For EIR1, the observations are not correlated at all with their previous observations. It can be observed that the autocorrelation increases by the number of months taking into account for the EIR.
+
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale=0.75]{Graphs/ACF.pdf}
+    \caption{Autocorrelation plots for YoY GDP, the BSI, Var(BSI), EIR1, Var(EIR1), EIR2, Var(EIR2), EIR3 and Var(EIR3)}
+    \label{fig:ACF}
+\end{figure}
 
 \end{document}
