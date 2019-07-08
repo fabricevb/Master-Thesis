@@ -721,16 +721,18 @@ The procedure of weighting is then as follow
     \omega_i = \frac{ \text{weight company $i$} }{ \sum\text{company weights within globalisation} } * \text{globalisation weight} \\ \nonumber
 \end{eqnarray}
 
-where $\sum_{i=1}^{n} \omega_i = 1 $. In other words, the specific weight for each company takes two weighting procedures into account, a weight specific to the size of the company, and a weight specific to the sub-sector 
+where $\sum_{i=1}^{n} \omega_i = 1 $. In other words, the specific weight for each company are taking the two weighting procedures into account, the weight specific to the size of the company, and the weight specific to the sub-sector the company is part of.
 
 Since the characteristics taken into account during the calculation of the weight of each company aren't fixed, the weight of the companies is corrected periodically. 
 Once the new weight is calculated, the transition between the old and new weight is smoothened over a year. The difference between the new and old weights is divided by 12 and is then adapted each month for a year.
+
+The method can be written as follow
 
 \begin{eqnarray}
     \omega_{i, t} = \omega_{i, old} + \frac{t}{12} \Delta \omega_i \quad \text{ where } \Delta \omega_i = \omega_{i, new} - \omega_{i, old} 
 \end{eqnarray}
 
-Where $\Delta \omega_i$ is the difference between the previous 
+where $\omega_{i, old}$ is the previous weight, $\omega_{i, new}$ is the new weight and $\Delta \omega_i$ is the difference between the two. $t$ can take values between 1 and 12, representing a month during which the weight is adapted.
 
 \section{Calculation of the Business Survey Indicator}
 
@@ -1140,7 +1142,7 @@ When two periods are taken into account - a month ($t$) and the previous one ($t
     \end{tabular}
 \end{table}
 
-The same as for the business survey indicator, the evolution of individual responses take different values. In the case of the BSI, $x_i$ can take value -1, 0 and 1. In the case of the EIR, $z_i$ can take values -2, -1, 0, 1 and 2.
+The same as for the business survey indicator, the evolution of individual responses take different possible values. In the case of the BSI, $x_i$ can take value -1, 0 and 1. In the case of the EIR, $z_i$ can take values -2, -1, 0, 1 and 2.
 
 The EIR defers also from the BSI in the sense that it's a measure of change, so if the answer of a certain respondent is the same at a certain time and the previous answer, $z_i=0$. 
 % What's measured here is the difference in the answer.
@@ -1439,39 +1441,41 @@ The formula for the weighted variance of the EIR can be written as follow
 Further explanation including examples in order to better understand the different indicators and variances, can be found in Appendix on \autopageref{chap:appendix:explain Var BSI and EIR}.
 
 
+
+
 \chapter{Data at Hand}
 
-\subsubsection{Period}
+For the empirical research, the data at hand is the unweighted industry business survey monthly results from 1988 to 2018.
+This chapter will explain those different specificities and, to some extend, explain the different reasons while it's the data used in this paper.
 
-\subsubsection{Weighted}
+In the next chapter the seasonal correction of the different variables will be explained, the analysis will all be done with the data after seasonal correction since it's the method applied by the NBB.
+
+\section{Unweighted observations}
+
+The business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sector/activity they are a part of as explained in \autoref{sec:Weighting procedure}.
+
+In order to have a large period of time for the empirical analysis, the decision is made to take only unweighted indicators, since the weights of the different respondents are not available before the year 2008. 
+Another reason not to use weighted measures is that the weighting procedure is very complex and prone to some companies influencing largely the indicator, and with it the results of the research. 
 
 
-\subsubsection{Indicator \& Questions}
+\section{Period}
+
+The period covered is from 1988 to 2018. This 30 years long period was chosen based on the electronic availability of the data and the interest of having a long period of time including several business cycles.
 
 
-\subsubsection{Variables}
+\section{Indicator and Questions}
 
+For similar reasons as for taking only unweighted results, the answers are obtained only for the industrial sector.
+It is the first sector that was taken into account in the business survey before it gets enlarged to trade, construction and services. It is the sector with the largest amount of respondents and according to previous studies, is the sector which has the highest correlation with national growth.
 
-\subsubsection{}
-\subsubsection{}
-
-The business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sector/activity they are a part of. The method will further be explained in \autoref{sec:Weighting procedure} and the calculation of the variance of the BSI, the EIR and its variance will be presented with weighting and without.
-
-In order to have a large period of time for the empirical analysis, the decision is made to take only unweighted indicators, since the weights are not available before 2008. Another reason is that the weighting procedure is very complex and prone to some companies influencing largely the indicator. 
-
-Here the dataset at hand covers the period 1988 to 2018.
-For similar reasons, the answers are obtained only for the industrial sector.
-It is the first sector that was taken into account in the business survey before it gets enlarged to trade, construction and services. It is the largest sector with the most stable amount of participants and according to previous studies, is the sector the most correlated to economical growth.
 Four questions are taken into account, since it are the four questions that are taken today in the calculation of the industry BSI. 
-It has to be noted that before 2009, almost all the questions where taken into account for the calculation of the indicator, since the 2009 revision of the business survey (see \autoref{sec:Questionnaire}), only four question are taken into account for more accuracy. In order to have the best comparability over the whole period, only those four questions will be used for the whole period (see questions on \autopageref{Appendix: Question NS975 description}).
 
-The interest of this paper is the industry business survey indicator, which takes four questions into account (questions 18, 27, 32 and 33). The questions are translated into English on \autopageref{Appendix: Question NS975 description} and are renumbered from 1 to 4 for simplicity.
+It has to be noted that before 2009, almost all the questions where taken into account for the calculation of the indicator. Since the 2009 revision of the business survey (see \autoref{sec:Questionnaire}), only four questions are taken into account for more accuracy. In order to have the best comparability over the whole period, only those four questions will be used for the whole period (see questions on \autopageref{Appendix: Question NS975 description}).
+
 The two first questions relate to the current state of the company while the two others ask the participants there prediction for the next three months.
 The first question is about the stock of the company, 
 the second question relates to the demand of there product, 
-the third questions relate to the company's predictions of need of work forces 
-and the last question ask their predictions regarding demand.
-
+the third questions relate to the company's predictions of need of work forces and the last question ask their predictions regarding demand.
 
 In this paper, the answers and results of the industry business survey barometer will be used since 1988. Therefore it's very important to see if modifications were applied over time to the questionnaire.
 A questionnaire from 1990 can be seen in appendix (see \autopageref{Questionnaire1990}) and can be compared to a more recent version (see appendix \autopageref{Questionnaire2018}).
@@ -1481,15 +1485,28 @@ It would be interesting to have a closer look at the potential consequences of t
 What can be said, is that the influence of those changes could be limited since the respondents where mostly the same when the changes happened, so the interpretation they made from the questions could have a smaller impact.
 
 
+\section{Variables}
+
+The following research will focus on nine variables. 
+The year on year gross domestic product (YoY GDP) which is publicly available.
+
+The eight other variables are obtained with the different calculation explained in the first part of this paper.
+The business survey indicator (BSI) and its variance as explained in Chapter 2 and 3.
+The evolution of individual responses and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
+EIR1 is 
+
+For each of the three measures of the EIR, the variance is calculated and used.
+
+
 
 \chapter{Seasonal Effects, Non-Response, Dropout and Attrition}
 \label{chap:nonresponse dropout}
 
-Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and a literature review, four main effects where found as potential sources of bias. 
+Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and a literature review, five main effects where found as potential sources of bias. 
 One is due to external effects; seasonal effects
-while three are due to the survey structure and organisation.
+while four are due to the survey structure and organisation.
 First it will be looked into seasonal effects and a well known correction to the data will be applied to eliminate - as good as possible - the seasonal effects from the data.
-It will then be looked into the three survey based issues; non-response, dropout, and attrition.
+It will then be looked into the four survey based issues; non-participation, non-response, dropout, and attrition.
 
 As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, from 1988 to 2018.
 Eight variables will be used for the analysis; the business survey indicator, the variance of the BSI, the evolution of individual responses and the variance of the EIR (three variations of the EIR and its variance; taking a 1, 2 or 3 months comparison) 
@@ -1525,7 +1542,7 @@ Seasonal dummies (AMI)          & YES   & YES & YES & YES & YES & YES & YES & YE
 
 % Further explanations can be found in appendix \autopageref{sec:test for seasonality}.
 
-The different variables are seasonal correction using RJDemetra, the R package based on JDemetra+.
+The different variables are seasonally corrected using RJDemetra, the R package based on JDemetra+.
 The results are plotted in \autoref{fig:seasonal ajusted rjdemetra}.
 The method applied is called "RSA0" and is the simplest X12/X13-ARIMA method for seasonal correction; not applying log/level, outliers and calendar corrections.
 It was chosen since it's the closest to the X11 applied by the NBB to the business survey.
@@ -1556,23 +1573,26 @@ Therefore its important, for the modelling of the data - that will be done in Ch
 \end{figure}
 
 
-\section{Non-Response}
 
 % Non-response is a large domain of research when it comes to surveys. The theory converges to agree that there are three different ways non-response can be present. Responses can be missing completely at random, missing at random, or missing not at random. Missing completely at random is usually hard to assume while missing not at random can be hard to account for.
 
 % Considering the business survey, the non-response was explored, but since it's not the subject of the thesis, it will not be looked into more in dept.
 
-The non-response of the business survey can be decomposed into two; non-participation to the survey and participants not responding to the survey.
+% The non-response of the business survey can be decomposed into two parts; non-participation to the survey and participants not responding to the survey (non-monotone).
+
+\section{Refusal to participate}
 
 Non-participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study.
 There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to not motivated companies, there could be an issue.
 The potential bias would be limited since the business survey is a panel survey and is interpreted as such.
 
+\section{Non-response}
+
 Non-response of participants is another issue. 
 Since the participants, in this case, dont answer a certain month but continue the survey, it can also be called non-monotone missingness.
 The solution applied by the NBB in case of non-response, is to assume that the respondent would have answered the same as the previous month, the method is called "Last Observation Carried Forward" (LOCF). 
 The theory regarding missing observations states three different ways non-response can be present. Responses can be missing completely at random (MCAR), missing at random (MAR), or missing not at random (MNAR). Missing completely at random is usually hard to assume while missing not at random can be hard to account for.
-In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of been very simple and have more data (compared to considering the missing observations as NA's). 
+In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of been very simple and have more data (compared to considering the missing observations as missing). 
 
 There is a large effort made by the NBB to contact respondents and send them reminders to make sure that non-response is as small as possible.
 The response rate is usually around 95\%, which is quite high for a survey, therefore it can be assumed that non-response is not very important in the business survey.
@@ -1593,7 +1613,7 @@ The National Bank doesn't keep track from reasons why participants leave the sur
 This is an issue since it means that it's a certain type of company that leaves the survey. If this type of profile has a different opinion or respond differently than the remaining companies this will create bias. 
 
 
-It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would be very small for each month (but if a longer period is taken into account, then the bias would become larger). 
+It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would rather be very small for each month, but if a longer period is taken into account, the bias would become larger. 
 
 % we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
@@ -1980,7 +2000,7 @@ It can then be seen, from the plot, and even more from the DM tests, that \ref{e
 
 On the other hand, \autoref{tab:Diebold Mariano 3} shows the DM test p-values for the model estimated with the data until 2012. 
 
-???The results for the period 1988-2012 and 1988-2018 are quite similar and come to the same conclusion, \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model1}. While \ref{eq:model3} is not significantly better than \ref{eq:model2}.
+The results for the period 1988-2012 and 1988-2018 are quite similar and come to the same conclusion, \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model1}. While \ref{eq:model3} is not significantly better than \ref{eq:model2}.
 The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 2012}. 
 
 
@@ -1996,6 +2016,8 @@ The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 
  \ref{eq:model3} &   &    & 1 &   &   & 1   \\ \cline{1-7}
 \end{tabular}
 \end{table}
+
+
 
 
 \newpage
@@ -2345,35 +2367,6 @@ Situation four is a situation where the two respondents where positive the previ
 In situation five they disagreed largely the previous month but now are both neutral so only their variance of EIR is not equal to zero.
 
 This explanation shows the interest of the four different indicators that each shown a different information about the responses.
-
-\newpage
-\section{?Attrition and dropout bias?}
-
-To go slightly further in studying attrition and dropout several graphs are presented here and interpreted. 
-This part was included in appendix due to it relative large amount of subjective interpretation and it lack of theory to back its development.
-
-\autoref{fig:participants var bsi} shows the evolution of the number of participants and the variance of the BSI. As was seen in \autoref{tab:correlation attrition} the variance decreases with time. When looking at the graph its
-
-\autoref{fig:participants var eir} is quite similar to \autoref{fig:participants var bsi} with this time the var(EIR) plotted rather than var(BSI).
-
-
-?add BSI to the plot?
-
-
-\begin{figure}[htp!]
-    \centering
-    \includegraphics[scale=0.5]{Graphs/participants_var_bsi.pdf}
-    \caption{participants var bsi}
-    \label{fig:participants var bsi}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{Graphs/participants_var_eir.pdf}
-    \caption{participants var eir}
-    \label{fig:participants var eir}
-\end{figure}
-
 
 
 
