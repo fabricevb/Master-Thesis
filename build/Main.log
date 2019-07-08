@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  23 JUN 2019 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.23)  8 JUL 2019 20:58
 entering extended mode
-**./AAA.tex
-(AAA.tex
+**./Main.tex
+(Main.tex
 LaTeX2e <2018-12-01>
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fix-cm.sty"
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
@@ -1116,6 +1116,17 @@ File: tikzlibraryplotmarks.code.tex 2019/05/09 v3.1.3 (3.1.3)
 e.tex"
 File: pgflibraryplotmarks.code.tex 2019/05/09 v3.1.3 (3.1.3)
 )))
+("C:\Program Files\MiKTeX 2.9\tex/latex/draftwatermark\draftwatermark.sty"
+Package: draftwatermark 2015/02/19 1.2 Put a gray textual watermark on document
+ pages
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/everypage\everypage.sty"
+Package: everypage 2007/06/20 1.1 Hooks to run on every page
+)
+\sc@wm@hcenter=\skip70
+\sc@wm@vcenter=\skip71
+\sc@wm@fontsize=\skip72
+)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 librarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2019/05/09 v3.1.3 (3.1.3)
@@ -1136,15 +1147,15 @@ libraryintersections.code.tex"
 )) ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip70
-\f@nch@O@elh=\skip71
-\f@nch@O@erh=\skip72
-\f@nch@O@olh=\skip73
-\f@nch@O@orh=\skip74
-\f@nch@O@elf=\skip75
-\f@nch@O@erf=\skip76
-\f@nch@O@olf=\skip77
-\f@nch@O@orf=\skip78
+\f@nch@headwidth=\skip73
+\f@nch@O@elh=\skip74
+\f@nch@O@erh=\skip75
+\f@nch@O@olh=\skip76
+\f@nch@O@orh=\skip77
+\f@nch@O@elf=\skip78
+\f@nch@O@erf=\skip79
+\f@nch@O@olf=\skip80
+\f@nch@O@orf=\skip81
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\afterpage.sty"
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
@@ -1155,25 +1166,25 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
-(C:\Users\fabri\Documents\Master-Thesis\build\AAA.aux)
-\openout1 = `AAA.aux'.
+(C:\Users\fabri\Documents\Master-Thesis\build\Main.aux)
+\openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -1205,7 +1216,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring ON on input line 125.
+Package hyperref Info: Link coloring ON on input line 126.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1215,14 +1226,14 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 125.
-LaTeX Info: Redefining \pageref on input line 125.
-LaTeX Info: Redefining \nameref on input line 125.
+LaTeX Info: Redefining \ref on input line 126.
+LaTeX Info: Redefining \pageref on input line 126.
+LaTeX Info: Redefining \nameref on input line 126.
 
-(C:\Users\fabri\Documents\Master-Thesis\build\AAA.out)
-(C:\Users\fabri\Documents\Master-Thesis\build\AAA.out)
+(C:\Users\fabri\Documents\Master-Thesis\build\Main.out)
+(C:\Users\fabri\Documents\Master-Thesis\build\Main.out)
 \@outlinefile=\write5
-\openout5 = `AAA.out'.
+\openout5 = `Main.out'.
 
 \c@lstlisting=\count337
 Package caption Info: Begin \AtBeginDocument code.
@@ -1233,63 +1244,67 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.15).
 
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 139.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 144.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 142.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 147.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 142--143
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 147--148
 [][][][][][][] 
  []
 
-<Images/LogoKULeuven.png, id=186, 401.5pt x 143.53625pt>
+<Images/LogoKULeuven.png, id=221, 401.5pt x 143.53625pt>
 File: Images/LogoKULeuven.png Graphic file (type png)
 <use Images/LogoKULeuven.png>
-Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 147.
+Package pdftex.def Info: Images/LogoKULeuven.png  used on input line 152.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 162.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 167.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 195--196
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 200--201
 [][][] 
  []
 
-[1
+[1{C:/Users/fabri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-{C:/Users/fabri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Images/Lo
-goKULeuven.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 216.
+ <./Images/LogoKULeuven.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 221.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 221.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--219
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
-[1] [2
-
-
-] ("C:\Program Files\MiKTeX 2.9\tex/latex/ucs\uni-0.def"
+[1] ("C:\Program Files\MiKTeX 2.9\tex/latex/ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [3
+) [2
 
-] [4]
-[5
 
-] (C:\Users\fabri\Documents\Master-Thesis\build\AAA.toc [6
+] [3
+
+]
+Overfull \hbox (3.12755pt too wide) in paragraph at lines 312--314
+[]\OT1/cmr/m/n/12 Naast de voor-spel-lende kracht kun-nen de vari-antie van de 
+con-junc-tu-urenqu^ete-indicator
+ []
+
+[4] [5
+
+] (C:\Users\fabri\Documents\Master-Thesis\build\Main.toc [6
 
 ])
 \tf@toc=\write6
-\openout6 = `AAA.toc'.
+\openout6 = `Main.toc'.
 
  [7]
 Chapter 1.
@@ -1297,66 +1312,56 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.370 
+l.401 
        [1
 
 ] [2]
 Chapter 2.
 
 Package natbib Warning: Citation `european_commission_joint_2016' on page 3 und
-efined on input line 416.
+efined on input line 425.
 
 
 Package natbib Warning: Citation `rhoads_euroland_1999' on page 3 undefined on 
-input line 419.
+input line 428.
 
 
 Package natbib Warning: Citation `vanhaelen_belgian_2000' on page 3 undefined o
-n input line 421.
+n input line 430.
 
 [3
 
 ] [4]
 
 Package natbib Warning: Citation `mitchell_measuring_1946' on page 5 undefined 
-on input line 510.
+on input line 519.
 
 
 Package natbib Warning: Citation `juglar_crises_1862' on page 5 undefined on in
-put line 583.
+put line 592.
 
 
 Package natbib Warning: Citation `mitchell_measuring_1946' on page 5 undefined 
-on input line 584.
+on input line 593.
 
 [5]
 
 Package natbib Warning: Citation `de_greef_national_2009' on page 6 undefined o
-n input line 640.
+n input line 650.
 
 [6] [7] [8] [9] [10] [11] [12]
 Chapter 3.
 
 Package natbib Warning: Citation `alcaniz_calculation_2006' undefined on input 
-line 893.
+line 899.
 
 [13
 
-] [14] [15]
-Overfull \hbox (19.21053pt too wide) in alignment at lines 1073--1078
- [][][] []
- []
-
-
-Overfull \hbox (33.77693pt too wide) in alignment at lines 1082--1086
- [][][] []
- []
-
-[16] [17]
+] [14] [15] [16] [17]
 Chapter 4.
 
 Package natbib Warning: Citation `caron_estimation_1996' on page 18 undefined o
-n input line 1120.
+n input line 1123.
 
 [18
 
@@ -1364,295 +1369,309 @@ n input line 1120.
 Chapter 5.
 [22
 
-] [23]
-Overfull \hbox (24.21039pt too wide) in alignment at lines 1423--1428
- [][][] []
- []
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1448.
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1451.
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1459.
-
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 1462.
-
-[24] [25]
+] [23] [24]
 Chapter 6.
+[25
 
-Overfull \hbox (31.98451pt too wide) in paragraph at lines 1497--1507
+] [26]
+Chapter 7.
+
+Overfull \hbox (31.98451pt too wide) in paragraph at lines 1531--1541
  [][] 
  []
 
-[26
+[27
 
 ]
-<Graphs/RJDemetra_plots.pdf, id=505, 614.295pt x 794.97pt>
+<Graphs/RJDemetra_plots.pdf, id=554, 614.295pt x 794.97pt>
 File: Graphs/RJDemetra_plots.pdf Graphic file (type pdf)
 <use Graphs/RJDemetra_plots.pdf>
-Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1534.
+Package pdftex.def Info: Graphs/RJDemetra_plots.pdf  used on input line 1571.
 (pdftex.def)             Requested size: 454.58055pt x 588.28073pt.
- [27] [28 <./Graphs/RJDemetra_plots.pdf>]
+ [28] [29 <./Graphs/RJDemetra_plots.pdf>]
+
+Package natbib Warning: Citation `warren_panel_2012' undefined on input line 16
+26.
+
 
 Package natbib Warning: Citation `priyana_hardjawidjaksana_investigating_2019' 
-on page 29 undefined on input line 1584.
+on page 30 undefined on input line 1629.
 
-[29] [30]
-Chapter 7.
-[31
+[30] [31]
+Chapter 8.
+[32
 
 ]
-<Graphs/variables.pdf, id=546, 597.23125pt x 844.15375pt>
+<Graphs/variables.pdf, id=595, 597.23125pt x 844.15375pt>
 File: Graphs/variables.pdf Graphic file (type pdf)
 <use Graphs/variables.pdf>
-Package pdftex.def Info: Graphs/variables.pdf  used on input line 1659.
+Package pdftex.def Info: Graphs/variables.pdf  used on input line 1704.
 (pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
 
 
-Package natbib Warning: Citation `de_greef_national_2009' on page 32 undefined 
-on input line 1670.
+Package natbib Warning: Citation `de_greef_national_2009' on page 33 undefined 
+on input line 1715.
 
-<Graphs/corr_indicators.pdf, id=547, 844.15375pt x 597.23125pt>
+<Graphs/corr_indicators.pdf, id=596, 844.15375pt x 597.23125pt>
 File: Graphs/corr_indicators.pdf Graphic file (type pdf)
 <use Graphs/corr_indicators.pdf>
-Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1674.
+Package pdftex.def Info: Graphs/corr_indicators.pdf  used on input line 1719.
 (pdftex.def)             Requested size: 422.07584pt x 298.61488pt.
-[32 <./Graphs/corr_indicators.pdf>] [33 <./Graphs/variables.pdf>]
-<Graphs/ACF.pdf, id=571, 597.23125pt x 844.15375pt>
-File: Graphs/ACF.pdf Graphic file (type pdf)
-<use Graphs/ACF.pdf>
-Package pdftex.def Info: Graphs/ACF.pdf  used on input line 1706.
-(pdftex.def)             Requested size: 447.92233pt x 633.11375pt.
- [34] [35 <./Graphs/ACF.pdf>]
-Chapter 8.
+[33 <./Graphs/corr_indicators.pdf>] [34 <./Graphs/variables.pdf>] [35]
+Chapter 9.
 
 Package natbib Warning: Citation `de_antonio_liedo_nowcasting_2014' on page 36 
-undefined on input line 1718.
+undefined on input line 1745.
 
 [36
 
 ] [37pdfTeX warning (ext4): destination with the same identifier (name{equation
-.8.2.2}) has been already used, duplicate ignored
+.9.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1813 \end{equation}
+l.1836 \end{equation}
                      pdfTeX warning (ext4): destination with the same identifie
-r (name{equation.8.2.2}) has been already used, duplicate ignored
+r (name{equation.9.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1813 \end{equation}
-                     ] [38pdfTeX warning (ext4): destination with the same iden
-tifier (name{equation.8.2.2}) has been already used, duplicate ignored
+l.1836 \end{equation}
+                     ]pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.9.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1838 \begin{equation}
+                        \tag{Model 5} [38pdfTeX warning (ext4): destination wit
+h the same identifier (name{equation.9.2.2}) has been already used, duplicate i
+gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1870 
-       pdfTeX warning (ext4): destination with the same identifier (name{equati
-on.8.2.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1870 
+l.1897 
        ]
-<Graphs/predictions1.pdf, id=626, 867.24pt x 433.62pt>
+<Graphs/predictions1.pdf, id=662, 867.24pt x 433.62pt>
 File: Graphs/predictions1.pdf Graphic file (type pdf)
 <use Graphs/predictions1.pdf>
-Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1901.
+Package pdftex.def Info: Graphs/predictions1.pdf  used on input line 1923.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
 
 Package natbib Warning: Citation `diebold_comparing_1995' on page 39 undefined 
-on input line 1908.
+on input line 1930.
 
 [39 <./Graphs/predictions1.pdf>] [40] [41]
-Chapter 9.
-[42
+<Graphs/predictions2.pdf, id=748, 867.24pt x 433.62pt>
+File: Graphs/predictions2.pdf Graphic file (type pdf)
+<use Graphs/predictions2.pdf>
+Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 2068.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+ [42 <./Graphs/predictions2.pdf>]
+<Graphs/predictions3.pdf, id=759, 867.24pt x 433.62pt>
+File: Graphs/predictions3.pdf Graphic file (type pdf)
+<use Graphs/predictions3.pdf>
+Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 2117.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-]
+[43 <./Graphs/predictions3.pdf>]
 Chapter 10.
-[43
+[44
+
+]
+Chapter 11.
+
+Package natbib Warning: Citation `seiler_microdata_2013' on page 45 undefined o
+n input line 2171.
+
+[45
 
 ]
 
-Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 44 undefin
-ed on input line 2103.
+Package natbib Warning: Citation `das_nonparametric_2011' on page 46 undefined 
+on input line 2179.
 
 
-Package natbib Warning: Citation `bialowolski_bayesian_nodate' on page 44 undef
-ined on input line 2107.
+Package natbib Warning: Citation `van_landeghem_test_2014' on page 46 undefined
+ on input line 2180.
 
-No file AAA.bbl.
-[44] (C:\Users\fabri\Documents\Master-Thesis\build\AAA.lof [45
+
+Package natbib Warning: Citation `hamilton_new_1989' on page 46 undefined on in
+put line 2191.
+
+
+Package natbib Warning: Citation `bardaji_constructing_2009' on page 46 undefin
+ed on input line 2191.
+
+
+Package natbib Warning: Citation `duprey_how_2017' on page 46 undefined on inpu
+t line 2192.
+
+
+Package natbib Warning: Citation `de_haan-rietdijk_use_2017' on page 46 undefin
+ed on input line 2193.
+
+
+Package natbib Warning: Citation `bialowolski_bayesian_2014' on page 46 undefin
+ed on input line 2199.
+
+
+Package natbib Warning: Citation `foroni_comparison_2014' undefined on input li
+ne 2203.
+
+
+Package natbib Warning: Citation `binder_business_1995' undefined on input line
+ 2207.
+
+
+Package natbib Warning: Citation `dresse_survey_2008' undefined on input line 2
+208.
+
+
+Package natbib Warning: Citation `lemasson_enquete_2017' undefined on input lin
+e 2209.
+
+
+Package natbib Warning: Citation `mevik_uncertainty_2004' undefined on input li
+ne 2210.
+
+No file Main.bbl.
+[46] (C:\Users\fabri\Documents\Master-Thesis\build\Main.lof [47
 
 ])
 \tf@lof=\write7
-\openout7 = `AAA.lof'.
+\openout7 = `Main.lof'.
 
- [46]
-(C:\Users\fabri\Documents\Master-Thesis\build\AAA.lot)
+ [48]
+(C:\Users\fabri\Documents\Master-Thesis\build\Main.lot)
 \tf@lot=\write8
-\openout8 = `AAA.lot'.
+\openout8 = `Main.lot'.
 
- [47
+ [49
 
-] [48
+]pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2223 \chapter{Appendix}
+                         
+Appendix A.
+[50
 
 ]
-Overfull \hbox (7.32169pt too wide) in paragraph at lines 2161--2161
-[][]\OT1/cmr/bx/n/17.28 Further ex-pla-na-tions re-gard-ing the vari-ance of th
-e busi-
- []
-
-
-Overfull \hbox (8.81961pt too wide) in paragraph at lines 2176--2184
+Overfull \hbox (8.81961pt too wide) in paragraph at lines 2270--2278
  [][] 
  []
 
-[49]
-<Graphs/participants_var_bsi.pdf, id=832, 722.7pt x 433.62pt>
-File: Graphs/participants_var_bsi.pdf Graphic file (type pdf)
-<use Graphs/participants_var_bsi.pdf>
-Package pdftex.def Info: Graphs/participants_var_bsi.pdf  used on input line 22
-97.
-(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
-<Graphs/participants_var_eir.pdf, id=833, 722.7pt x 433.62pt>
-File: Graphs/participants_var_eir.pdf Graphic file (type pdf)
-<use Graphs/participants_var_eir.pdf>
-Package pdftex.def Info: Graphs/participants_var_eir.pdf  used on input line 23
-04.
-(pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
- [50 <./Graphs/participants_var_bsi.pdf>] [51 <./Graphs/participants_var_eir.pd
-f>]
+[51] [52]
 
 pdfTeX warning: pdflatex (file ./Images/IndustryN.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<Images/IndustryN.pdf, id=853, 597.55246pt x 845.19763pt>
+<Images/IndustryN.pdf, id=878, 597.55246pt x 845.19763pt>
 File: Images/IndustryN.pdf Graphic file (type pdf)
 <use Images/IndustryN.pdf>
-Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2315.
+Package pdftex.def Info: Images/IndustryN.pdf  used on input line 2377.
 (pdftex.def)             Requested size: 448.16324pt x 633.89667pt.
-<Images/4100N_v1990.pdf, id=854, 597.432pt x 844.83629pt>
+<Images/4100N_v1990.pdf, id=879, 597.432pt x 844.83629pt>
 File: Images/4100N_v1990.pdf Graphic file (type pdf)
 <use Images/4100N_v1990.pdf>
-Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2322.
+Package pdftex.def Info: Images/4100N_v1990.pdf  used on input line 2384.
 (pdftex.def)             Requested size: 448.0729pt x 633.62567pt.
-[52 <./Images/IndustryN.pdf>]
-<Graphs/S-I_1.pdf, id=883, 794.97pt x 578.16pt>
+[53 <./Images/IndustryN.pdf>]
+<Graphs/S-I_1.pdf, id=909, 794.97pt x 578.16pt>
 File: Graphs/S-I_1.pdf Graphic file (type pdf)
 <use Graphs/S-I_1.pdf>
-Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2332.
+Package pdftex.def Info: Graphs/S-I_1.pdf  used on input line 2394.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_2.pdf, id=884, 794.97pt x 578.16pt>
+<Graphs/S-I_2.pdf, id=910, 794.97pt x 578.16pt>
 File: Graphs/S-I_2.pdf Graphic file (type pdf)
 <use Graphs/S-I_2.pdf>
-Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2337.
+Package pdftex.def Info: Graphs/S-I_2.pdf  used on input line 2399.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_3.pdf, id=885, 794.97pt x 578.16pt>
+<Graphs/S-I_3.pdf, id=911, 794.97pt x 578.16pt>
 File: Graphs/S-I_3.pdf Graphic file (type pdf)
 <use Graphs/S-I_3.pdf>
-Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2342.
+Package pdftex.def Info: Graphs/S-I_3.pdf  used on input line 2404.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_4.pdf, id=886, 794.97pt x 578.16pt>
+<Graphs/S-I_4.pdf, id=912, 794.97pt x 578.16pt>
 File: Graphs/S-I_4.pdf Graphic file (type pdf)
 <use Graphs/S-I_4.pdf>
-Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2347.
+Package pdftex.def Info: Graphs/S-I_4.pdf  used on input line 2409.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_5.pdf, id=887, 794.97pt x 578.16pt>
+<Graphs/S-I_5.pdf, id=913, 794.97pt x 578.16pt>
 File: Graphs/S-I_5.pdf Graphic file (type pdf)
 <use Graphs/S-I_5.pdf>
-Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2352.
+Package pdftex.def Info: Graphs/S-I_5.pdf  used on input line 2414.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_6.pdf, id=888, 794.97pt x 578.16pt>
+<Graphs/S-I_6.pdf, id=914, 794.97pt x 578.16pt>
 File: Graphs/S-I_6.pdf Graphic file (type pdf)
 <use Graphs/S-I_6.pdf>
-Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2357.
+Package pdftex.def Info: Graphs/S-I_6.pdf  used on input line 2419.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_7.pdf, id=889, 794.97pt x 578.16pt>
+<Graphs/S-I_7.pdf, id=915, 794.97pt x 578.16pt>
 File: Graphs/S-I_7.pdf Graphic file (type pdf)
 <use Graphs/S-I_7.pdf>
-Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2362.
+Package pdftex.def Info: Graphs/S-I_7.pdf  used on input line 2424.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
-<Graphs/S-I_8.pdf, id=890, 794.97pt x 578.16pt>
+<Graphs/S-I_8.pdf, id=916, 794.97pt x 578.16pt>
 File: Graphs/S-I_8.pdf Graphic file (type pdf)
 <use Graphs/S-I_8.pdf>
-Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2367.
+Package pdftex.def Info: Graphs/S-I_8.pdf  used on input line 2429.
 (pdftex.def)             Requested size: 182.09831pt x 132.43585pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2330--2370
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2392--2432
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2330--2370
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2392--2432
 []$ $[]$
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2330--2370
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 2392--2432
 []$ $[]$ 
  []
 
-[53 <./Images/4100N_v1990.pdf>] [54 <./Graphs/S-I_1.pdf> <./Graphs/S-I_2.pdf> <
+[54 <./Images/4100N_v1990.pdf>] [55 <./Graphs/S-I_1.pdf> <./Graphs/S-I_2.pdf> <
 ./Graphs/S-I_3.pdf> <./Graphs/S-I_4.pdf> <./Graphs/S-I_5.pdf> <./Graphs/S-I_6.p
-df> <./Graphs/S-I_7.pdf> <./Graphs/S-I_8.pdf>]
-<Graphs/predictions2.pdf, id=953, 867.24pt x 433.62pt>
-File: Graphs/predictions2.pdf Graphic file (type pdf)
-<use Graphs/predictions2.pdf>
-Package pdftex.def Info: Graphs/predictions2.pdf  used on input line 2419.
-(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
- [55 <./Graphs/predictions2.pdf>]
-<Graphs/predictions3.pdf, id=963, 867.24pt x 433.62pt>
-File: Graphs/predictions3.pdf Graphic file (type pdf)
-<use Graphs/predictions3.pdf>
-Package pdftex.def Info: Graphs/predictions3.pdf  used on input line 2468.
-(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
-[56 <./Graphs/predictions3.pdf>] [57
+df> <./Graphs/S-I_7.pdf> <./Graphs/S-I_8.pdf>] [56
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2517.
-<Images/sedes.png, id=984, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 2482.
+<Images/sedes.png, id=989, 402.5439pt x 683.6742pt>
 File: Images/sedes.png Graphic file (type png)
 <use Images/sedes.png>
-Package pdftex.def Info: Images/sedes.png  used on input line 2526.
+Package pdftex.def Info: Images/sedes.png  used on input line 2491.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 2530--2531
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 2495--2496
 [][][] 
  []
 
 
 Package natbib Warning: There were undefined citations.
 
-[58 <./Images/sedes.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2535.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2535.
- (C:\Users\fabri\Documents\Master-Thesis\build\AAA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2535.
+[57 <./Images/sedes.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2500.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2500.
 
-Package rerunfilecheck Info: File `AAA.out' has not changed.
-(rerunfilecheck)             Checksum: C6D9707FEE062DF93F2F20B03748736C;3404.
+(C:\Users\fabri\Documents\Master-Thesis\build\Main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2500.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2500.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2535.
+Package rerunfilecheck Info: File `Main.out' has not changed.
+(rerunfilecheck)             Checksum: 9DE3C2DBA5468275FB089E3A2395EAE4;4092.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2500.
  ) 
 Here is how much of TeX's memory you used:
- 43615 strings out of 492895
- 965565 string characters out of 3133479
- 1506132 words of memory out of 3000000
- 46688 multiletter control sequences out of 15000+200000
- 555956 words of font info for 75 fonts, out of 3000000 for 9000
+ 43654 strings out of 492895
+ 966192 string characters out of 3133479
+ 1506670 words of memory out of 3000000
+ 46729 multiletter control sequences out of 15000+200000
+ 556255 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,19n,119p,936b,2320s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,19n,119p,937b,2320s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1674,22 +1693,22 @@ ts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 mi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy
-10.pfb>
-Output written on C:\Users\fabri\Documents\Master-Thesis\build\AAA.pdf (66 page
-s, 1675596 bytes).
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helveti
+c/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
+Output written on C:\Users\fabri\Documents\Master-Thesis\build\Main.pdf (65 pag
+es, 1659367 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 490 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1115 PDF objects out of 1200 (max. 8388607)
+ 215 named destinations out of 1000 (max. 500000)
+ 547 words of extra memory for PDF output out of 10000 (max. 10000000)
 

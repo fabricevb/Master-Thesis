@@ -700,7 +700,6 @@ It is divided into two part:
 The business survey indicator is also called the confidence indicator, since its a measure of how confidence companies are in the Belgian economy.
 Almost all the questions have only three possible answers that can be interpreted as a negative, neutral or positive answer.
 
-\newpage
 \subsection{Weighting Procedure}
 \label{sec:Weighting procedure}
 
@@ -1273,6 +1272,7 @@ The formula can be interpreted the same way as for the unweighted indicator.
 
 
 \section{Generalisation for Different Period Lags}
+\label{sec:EIR lg longer period into account}
 
 Changes in the economy are usually taking several months to influence all the companies. There can be some lag of effects on for example larger companies, of a very specific sector.
 The idea of only taking a certain month and the previous month can seem non-sufficient, it can be relevant to take a larger period into account.
@@ -1466,7 +1466,7 @@ The period covered is from 1988 to 2018. This 30 years long period was chosen ba
 \section{Indicator and Questions}
 
 For similar reasons as for taking only unweighted results, the answers are obtained only for the industrial sector.
-It is the first sector that was taken into account in the business survey before it gets enlarged to trade, construction and services. It is the sector with the largest amount of respondents and according to previous studies, is the sector which has the highest correlation with national growth.
+It is the first sector that was taken into account in the business survey before it gets enlarged to trade, construction and services. It is the sector with the largest amount of respondents and according to previous exploratory analysis and previous research, is the sector which has the highest correlation with national growth.
 
 Four questions are taken into account, since it are the four questions that are taken today in the calculation of the industry BSI. 
 
@@ -1493,9 +1493,9 @@ The year on year gross domestic product (YoY GDP) which is publicly available.
 The eight other variables are obtained with the different calculation explained in the first part of this paper.
 The business survey indicator (BSI) and its variance as explained in Chapter 2 and 3.
 The evolution of individual responses and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
-EIR1 is 
+EIR1 is when taking the difference in answer between a month and the month before while EIR2 uses a lag of two months and EIR3 a lag of three months. The reasons for taking a larger period into account where explained in \autoref{sec:EIR lg longer period into account}.
 
-For each of the three measures of the EIR, the variance is calculated and used.
+For each of the three measures of the EIR, the variance is calculated and will further be studied.
 
 
 
@@ -1580,7 +1580,7 @@ Therefore its important, for the modelling of the data - that will be done in Ch
 
 % The non-response of the business survey can be decomposed into two parts; non-participation to the survey and participants not responding to the survey (non-monotone).
 
-\section{Refusal to participate}
+\section{Refusal to Participate}
 
 Non-participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study.
 There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to not motivated companies, there could be an issue.
@@ -1617,7 +1617,7 @@ It could be argued that the bias is very diffused, due to the small number of co
 
 % we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
-Since it isn't the subject of this work, it will not be further look into this bias, but it will be recommend to have a closer look into this for future research.
+Since it isn't the subject of this work, it will not be further look into it, but it will be recommend to have a closer look into this for future research.
 
 \subsection{Attrition}
 
@@ -1633,7 +1633,7 @@ In the case of the industry business survey, it's harder to test for it since th
 
 
 \begin{table}[htp!]  \centering \footnotesize 
-  \caption{Correlation of time with different indicators} 
+  \caption{Correlation of time with different industry business survey variables from 1988 to 2018} 
   \label{tab:correlation attrition} 
 \begin{tabular}{@{\extracolsep{5pt}} cccccc} 
 \\[-1.8ex]\hline 
@@ -1690,22 +1690,13 @@ Var(EIR3)   & 372       & 0.123 & 0.019 & 0.075 & 0.109 & 0.137 & 0.166 \\
 
 The variables at hand are obtained from the industry business survey and take into account the four questions available on \autopageref{Appendix: Question NS975 description}, as explained in \autoref{sec:Questionnaire}.
 The different variables are unweighted, seasonally corrected (see \autoref{sec:seasonal correction}) and is obtained for 30 years, from 1988 to 2018.
-The year on year GDP calculation was explained from GDP byt the calculation in \autoref{eq:YoY GDP} and is here obtained for the Belgian economy.
+The year on year GDP calculation was explained from GDP by the calculation in \autoref{eq:YoY GDP} and is here obtained for the Belgian economy.
 
 The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as many observations as the other variables since it's a quarterly measure, while the survey is monthly. 
 The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never went higher than 0.037 and never lower than -0.321.
 
 The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follows quite well the evolution of YoY GDP. 
 The other variables, seem to react to major changes in GDP but are more volatile.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[scale=0.75]{Graphs/variables.pdf}
-    \caption{Plot of the time series of YoY GDP, the BSI, the variance of the BSI and different EIR's (taking 1, 2 or 3 months differences) and their variance
-    for the period 1988 to 2018}
-    \label{plot:variables}
-\end{figure}
-
 
 
 \section{Correlation Analysis}
@@ -1723,16 +1714,20 @@ Belgian industry claims 25\% of the labour force in Belgium and was shown as a g
 \autoref{fig:corr indicators} shows the correlation matrix and plots of the different variables at hand. 
 Several observations can be done.
 First, it can be seen that the correlation between the business survey indicator and YoY GDP is very high while other variables have a rather small correlation with YoY GDP.
-
-The correlation between the BSI and its variance is also high, this can be explained to some extent by the different observations done in \autoref{sec:properties variance}, concerning the mean-variance relation of the indicator.
+The correlation between the BSI and its variance is also high, this can be explained to some extent by the different properties explained in \autoref{sec:properties variance}, concerning the mean-variance relation of the indicator.
 The same can not be said about the correlation between the EIR and its variance since their correlation is small for the three different measures of EIR.
-
-As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high. There calculation and data used been quite close.
-
+As could be foreseen, the correlations between EIR1, EIR2 and EIR3 and the correlations between Var(EIR1), Var(EIR2) and Var(EIR3) are high. Their calculation and data used are quite close.
 The correlation between the different types of variances is also high, which can mean that they contain quite similar information.
 With this definition, it's interesting to look at the correlation between the BSI and the EIR since it's almost equal to zero. This can be interpreted as the two variables containing different information.
 
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[scale=0.7]{Graphs/variables.pdf}
+    \caption{Plot of the time series of YoY GDP, the BSI, the variance of the BSI and different EIR's (taking 1, 2 or 3 months differences) and their variance
+    for the period 1988 to 2018}
+    \label{plot:variables}
+\end{figure}
 
 
 
@@ -1804,7 +1799,7 @@ The linear regression can be written as follow
 
 Where $\beta_{0}$ is the intercept, $\beta_{i}$ are the different regression coefficients of the monthly predictors ($X_{t}$) and $\epsilon_t$ is the error term.
 
-This model is a good example of basic nowcasting, since it's modelling data that's happening at the same time, but since there is a lag of a month in the publication of GDP, it can be used to predict a month in advance, the published GDP.
+This model is a good example of basic nowcasting, since it's modelling data that's happening at the same time, but since there is a lag of one month in the publication of GDP, it can be used to predict one month in advance, the published GDP.
 
 It can also be used to estimate GDP monthly. Ones a linear model is obtained, based only on quarterly data, it can then be applied to all the available data, and a prediction can be done for each month.
 In real life, this means that at the end of January, when the results of GDP are published for the last semester of the previous year, the linear model can predict GDP for the month of January. Therefore it's not forecasting, since it doesn't predict the future, but predicts the actual state of the economy.
