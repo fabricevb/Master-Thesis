@@ -1449,19 +1449,16 @@ For each of the three measures of the EIR, the variance is calculated and will b
 \label{chap:nonresponse dropout}
 
 Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and a literature review, five main effects where found as potential sources of bias. 
-One is due to external effects; seasonal effects
-while four are due to the survey structure and organisation.
-First it will be looked into seasonal effects and a well known correction to the data will be applied to eliminate - as good as possible - the seasonal effects from the data.
+One is due to external effects; seasonal effects while four are due to the survey structure and organisation.
+First seasonal effects will be studied and a well known correction to the data will be applied to eliminate - as well as possible - the seasonal effects from the data.
 It will then be looked into the four survey based issues; non-participation, non-response, dropout, and attrition.
 
-As already mentioned before, for this analysis the data at hand is the unweighted indicators of the industry business survey, from 1988 to 2018.
-Eight variables will be used for the analysis; the business survey indicator, the variance of the BSI, the evolution of individual responses and the variance of the EIR (three variations of the EIR and its variance; taking a 1, 2 or 3 months comparison) 
 
 \section{Seasonal Correction}
 \label{sec:seasonal correction}
 
 The National Bank, before publishing the business survey indicator, applies an X11 seasonal correction.
-The literature about seasonal effects is very rich and variate. Without going too much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA developed by the US Census Bureau and TRAMO/SEATS developed at the Bank of Spain. 
+The literature about seasonal effects is very rich and varied. Without going too much into details, there are today two methods which are the most widely used and recommended which are X12/X13-ARIMA developed by the US Census Bureau and TRAMO/SEATS developed by the Bank of Spain. 
 
 The Department of Research and Development of the NBB developed JDemetra+, a statistical program which is recommended by the European Central Bank (ECB) and Eurostat for analysing seasonal effect and applying seasonal corrections. 
 
@@ -1498,23 +1495,23 @@ It was chosen since it's the closest to the X11 applied by the NBB to the busine
 %for constancy and simplicity, the observations for the 30 years is used 
 
 
-The seasonal-irregular (S-I) ratio charts that can be seen in appendix, on \autopageref{fig:S-I seasonal correction RJDemetra}, are interesting to look at to better understand the seasonal effect influencing the different variables.
+The seasonal-irregular (S-I) ratio charts, which can be seen in the appendix on \autopageref{fig:S-I seasonal correction RJDemetra}, are interesting to look at to better understand the seasonal effect influencing the different variables.
 The business survey indicator is usually higher in August and September, and lower in November and December. 
-Seems like respondents are more optimist during and slightly after summer holidays, or is that the economy doing better during those holidays, it's difficult to know.
+It seems that respondents are more optimistic during and slightly after summer holidays, or whether the economy is doing better during those holidays is difficult to know.
 
-The S-I ratio chart for the variance of the indicator shows that the variance is lowest in August and September while its peak is in October. In other words, respondents agree the most at the beginning of the year or the last month of summer holidays, while the largest disagreement is in October.
-The evolution of individual responses indicators (taking 1, 2 or 3 months lag into account) have a quite similar monthly behaviour as the business survey indicator.
+The S-I ratio chart for the variance of the indicator shows that the variance is lowest in August and September while its peak is in October. In other words, respondents agree the most at the beginning of the year or the last month of the summer holidays, while the largest disagreement is in October.
+The evolution of individual responses indicators (taking 1, 2 or 3 months lag into account) has a quite similar monthly behaviour as the business survey indicator.
 On the other hand, the variance of the EIR's seems to be less monthly influenced. The Var(EIR1) is smaller in June, while Var(EIR2) and Var(EIR3) are smaller during summer holidays.
 
 It's important to notice that year on year GDP is, by definition, corrected for it's seasonal effects. Its formula (\autoref{eq:YoY GDP}) eliminates all of GDP's seasonality.
 This was confirmed when running the seasonality tests, non of the test showed significant seasonal effects.
-Therefore its important, for the modelling of the data - that will be done in Chapter 9 - to correct the different variables for seasonal effects.
+Therefore its important, for the modelling of the data - which will be done in Chapter 9 - to correct the different variables for seasonal effects.
 
  
 \begin{figure}[htp!]
     \centering
     \includegraphics[scale=0.74]{Graphs/RJDemetra_plots.pdf}
-    \caption{Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months earlier (EIR3), with for each of them, their variance. The yellow lines are the raw variables, the blue lines the seasonally corrected variables and the green line are the trends of the variables.}
+    \caption{Plot of the industry business survey indicator (NS975), the indicator of the evolution of individual responses with the previous month (EIR1), two months (EIR2) and three months earlier (EIR3), with for each of them, their variance. The yellow lines are the raw variables, the blue lines the seasonally corrected variables and the green lines are the trends of the variables.}
     \label{fig:seasonal ajusted rjdemetra}
 \end{figure}
 
@@ -1528,17 +1525,17 @@ Therefore its important, for the modelling of the data - that will be done in Ch
 
 \section{Refusal to Participate}
 
-Non-participation to the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study.
-There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to not motivated companies, there could be an issue.
+Non-participation in the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study.
+There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to non motivated companies, there could be an issue.
 The potential bias would be limited since the business survey is a panel survey and is interpreted as such.
 
 \section{Non-response}
 
 Non-response of participants is another issue. 
-Since the participants, in this case, dont answer a certain month but continue the survey, it can also be called non-monotone missingness.
+Since the participants, in this case, don't answer a certain month but continue the survey, it can also be called non-monotone missingness.
 The solution applied by the NBB in case of non-response, is to assume that the respondent would have answered the same as the previous month, the method is called "Last Observation Carried Forward" (LOCF). 
 The theory regarding missing observations states three different ways non-response can be present. Responses can be missing completely at random (MCAR), missing at random (MAR), or missing not at random (MNAR). Missing completely at random is usually hard to assume while missing not at random can be hard to account for.
-In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of been very simple and have more data (compared to considering the missing observations as missing). 
+In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of being very simple and having more data (compared to considering the missing observations as missing). 
 
 There is a large effort made by the NBB to contact respondents and send them reminders to make sure that non-response is as small as possible.
 The response rate is usually around 95\%, which is quite high for a survey, therefore it can be assumed that non-response is not very important in the business survey.
@@ -1546,24 +1543,22 @@ The response rate is usually around 95\%, which is quite high for a survey, ther
 % Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the year on year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
 
 
-
-
 \section{Dropout and Attrition}
 
 Dropout and Attrition are related to the structure and organisation of the survey. 
-As explain in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create a bias (dropout) and companies change of answering behaviour over time (attrition).
+As explained in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create a bias (dropout) and companies change their answering behaviour over time (attrition).
 
 \subsection{Dropout}
 
-The National Bank doesn't keep track from reasons why participants leave the survey. From discussions with the responsible persons for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
-This is an issue since it means that it's a certain type of company that leaves the survey. If this type of profile has a different opinion or respond differently than the remaining companies this will create bias. 
+The National Bank doesn't keep track of reasons why participants leave the survey. From discussions with the persons responsible for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
+This is an issue since it means that it's a certain type of company that leaves the survey. If this type of profile has a different opinion or responds differently from the remaining companies, this will create bias. 
 
 
-It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would rather be very small for each month, but if a longer period is taken into account, the bias would become larger. 
+It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would be rather small for each month, but if a longer period is taken into account, the bias would become larger. 
 
 % we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
-Since it isn't the subject of this work, it will not be further look into it, but it will be recommend to have a closer look into this for future research.
+Since it isn't the subject of this work, it will not be further studied, but it will be recommended to have a closer look into this for future research.
 
 \subsection{Attrition}
 
@@ -1575,7 +1570,7 @@ A very interesting master thesis was done about the Belgian labour force survey,
 The Belgian labour force survey was convenient to test for attrition since the survey is answered by participants exactly four times with a lag of six months.
 It was shown that indeed attrition was present in the survey.
 
-In the case of the industry business survey, it's harder to test for it since their were only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and around 2000 with some companies been recruited outside those periods. Other sectors have the same issue.
+In the case of the industry business survey, it's harder to test for since their were only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and around 2000 with some companies been recruited outside those periods. Other sectors have the same issue.
 
 
 \begin{table}[htp!]  \centering \footnotesize 
@@ -1591,16 +1586,16 @@ Time & $-0.339$ & $0.133$ & $-0.807$ & $0.039$ & $-0.705$ \\
 \end{table} 
 
 An interesting approach to explore attrition and dropout is by looking at the correlations of the variances over time.
-In \autoref{tab:correlation attrition} it can be seen that there is a very large negative correlation between time and the variance of the BSI and the variance of the EIR. This can be interpreted as companies agreeing more and more over time and changing less and less there answers.
-Without making any conclusions, the variance of BSI and the variance of EIR seems to show the presence of dropout bias and/or attrition.
+In \autoref{tab:correlation attrition} it can be seen that there is a very large negative correlation between time and the variance of the BSI and the variance of the EIR. This can be interpreted as companies agreeing more and more over time and changing less and less their answers.
+Without making any conclusions, the variance of BSI and the variance of EIR seem to show the presence of dropout bias and/or attrition.
 
-Same can be observed in Var(BSI) and Var(EIR) plots in \autoref{fig:seasonal ajusted rjdemetra} where, aside of the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of the variance of the BSI and the different variances of EIR after the beginning of the century, the last time there was a large recruitment done.
+The same can be observed in Var(BSI) and Var(EIR) plots in \autoref{fig:seasonal ajusted rjdemetra} where, aside from the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of the variance of the BSI and the different variances of EIR after the beginning of the century, the last time there was a large recruitment.
 
 The variance shows here an interest, it can be used to better understand the survey and the behaviour of respondents.
 When looking at only the evolution of the business survey indicator, it's not possible to measure the vivacity of the survey.
 
 It would be interesting to dive more into these issues, but this will be left for further research. 
-In the context of this paper, it's important to notice the potential importance of attrition and dropout in the industry business survey and the importance of the variances to account for it.
+In the context of this paper, it's important to notice the potential importance of attrition and dropout in the industry business survey and the importance of the variances which could account for it.
 
 
 
