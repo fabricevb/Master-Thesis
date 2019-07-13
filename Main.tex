@@ -403,7 +403,7 @@ Since then, the sector coverage of the program has widened to account for the di
 The harmonisation program and the large implication of the EC, make it possible to compare BSI around the European Union.
 More information can be found in the \textit{"The Joint Harmonised EU Programme of Business and Consumer Surveys User Guide"} \cite{european_commission_joint_2016}.
 
-Over time, the business survey barometer became well known for being a very informative and useful indicator. 
+Over time, the business survey barometer became well-known for being a very informative and useful indicator. 
 In an article published in the Wall Street Journal titled \textit{"Euroland Discovers A Surprise Indicator: Belgian Confidence"} \citep{rhoads_euroland_1999}, the BSI is described as an important and accurate measure of the evolution of the Belgian economy. 
 It also suggested that it could be a good indicator for the European Union. 
 This hypothesis was tested for the period between 1985-2000 in \cite{vanhaelen_belgian_2000} and the conclusion was very flattering for the BSI. 
@@ -1433,21 +1433,21 @@ What can be said, is that the influence of those changes could be limited since 
 \section{Variables}
 
 The following research will focus on nine variables. 
-The year on year gross domestic product (YoY GDP) which is publicly available and the most used measure of national growth. As seen in \autoref{section:Objective}, it's only accounting for growth and the evolution of it. What is at interest in this research.
+The year on year gross domestic product (YoY GDP) which is publicly available and the most used measure of national growth. As seen in \autoref{section:Objective}, it's only accounting for growth and the evolution of it, what is at interest in this research.
 The eight other variables are obtained with the different calculations explained in the first part of this paper.
-The business survey indicator (BSI) and its variance as explained in Chapter 2 and 3.
-The evolution of individual responses and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
+The well-known business survey indicator (BSI) as explained in Chapter 2 and its less-known variance as explained in and 3.
+The evolution of individual responses (EIR) and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
 EIR1 is when taking the difference in answer between a month and the month before while EIR2 uses a lag of two months and EIR3 a lag of three months. The reasons for taking a larger period into account were explained in \autoref{sec:EIR lg longer period into account}.
 For each of the three measures of the EIR, the variance is calculated and will be studied further.
 
 
 
-\chapter{Seasonal Effects, Non-Response, Dropout and Attrition}
+\chapter{Seasonal Effects, Refusal to Participate, Non-Response, Dropout and Attrition}
 \label{chap:nonresponse dropout}
 
 Before modelling the data, it's important to look at the different effects that could mislead the outcome of the analysis. After exploring the data and a literature review, five main effects where found as potential sources of bias. 
 One is due to external effects; seasonal effects while four are due to the survey structure and organisation.
-First seasonal effects will be studied and a well known correction to the data will be applied to eliminate - as well as possible - the seasonal effects from the data.
+First seasonal effects will be studied and a well-known correction to the data will be applied to eliminate - as well as possible - the seasonal effects from the data.
 It will then be looked into the four survey based issues; non-participation, non-response, dropout, and attrition.
 
 
@@ -1543,7 +1543,7 @@ The response rate is usually around 95\%, which is quite high for a survey, ther
 \section{Dropout and Attrition}
 
 Dropout and Attrition are related to the structure and organisation of the survey. 
-As explained in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: companies who leave the survey create a bias (dropout) and companies change their answering behaviour over time (attrition).
+As explained in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: potential bias due to companies leaving the survey (dropout) and potential bias due to companies change their answering behaviour over time (attrition).
 
 \subsection{Dropout}
 
@@ -1552,8 +1552,6 @@ This is an issue since it means that it's a certain type of company that leaves 
 
 
 It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would be rather small for each month, but if a longer period is taken into account, the bias would become larger. 
-
-% we are only comparing month to month evolution, and when the business survey is published, the 3-4 last year are showed.
 
 Since it isn't the subject of this work, it will not be further studied, but it will be recommended to have a closer look into this for future research.
 
@@ -1598,9 +1596,9 @@ In the context of this paper, it's important to notice the potential importance 
 
 \chapter{Exploratory Analysis}
 
-The previous chapter already did some of the exploratory analysis.
-Further observations of the different variables at hand will be done is a short descriptive statistics section.
-In the second part, correlations among the variables will be looked at, and the last part will focus on autocorrelation.
+The previous chapter did some exploratory analysis.
+Further observations of the different variables at hand will be done in this chapter starting with a short descriptive statistics section.
+In a second part, correlations among the variables will be looked at.
 
 
 \section{Descriptive Statistics}
@@ -1631,7 +1629,7 @@ The different variables are unweighted, seasonally corrected (see \autoref{sec:s
 The year on year GDP calculation was explained from GDP by the calculation in \autoref{eq:YoY GDP} and is here obtained for the Belgian economy.
 
 The different variables at hand are summarised in \autoref{tab:descriptive statistics}. The YoY GDP has only one third as many observations as the other variables since it's a quarterly measure, while the survey is monthly. 
-The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never went higher than 0.037 and never lower than -0.321.
+The table shows the scale of the different variables, for example, the industry BSI, over 30 years, never went up more than 0.037 and never lower than -0.321.
 
 The different variables are plotted in \autoref{plot:variables}, where it can be seen that the business survey indicator follows quite well the evolution of YoY GDP. 
 The other variables, seem to react to major changes in GDP but are more volatile.
@@ -1644,7 +1642,7 @@ Belgian industry claims 25\% of the labour force in Belgium and was shown as a g
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Graphs/corr_indicators.pdf}
+    \includegraphics[scale=0.52]{Graphs/corr_indicators.pdf}
     \caption{Correlation plot of the YoY GDP, the business survey indicator and its variance, and the evolution of individual responses for 1,2 and three months lag and its according variances}
     \label{fig:corr indicators}
 \end{figure}
@@ -1671,18 +1669,18 @@ With this definition, it's interesting to look at the correlation between the BS
 
 \chapter{Predictive Power}
 
-This chapter uses a linear models to test the pertinence of the different variables at hand in the short term prediction of the evolution of GDP.
+This chapter uses linear models to test the pertinence of the different variables at hand in the short term prediction of the evolution of GDP.
 
-As mention in \autoref{sec:nowcasting}, where nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
+As mentioned in \autoref{sec:nowcasting}, where nowcasting was discussed, there exists a large variety of different predictive models used in econometrics to predict the National Growth based on some explanatory variables.
 The National Bank of Belgium for example, developed a State-Space model available in JDemetra+ \citep{de_antonio_liedo_nowcasting_2014}. 
-Other well-known methods are Autoregressive integrated moving average (ARIMA), Auto- Distributed Lag Models (ARDL), Mixed Data Sampling Regression (MIDAS) and much more.
+Other well-known methods are Autoregressive integrated moving average (ARIMA), Auto- Distributed Lag Models (ARDL), Mixed Data Sampling Regression (MIDAS) and many more.
 
 The interest of the research at hand, is to explore the short-term predictive power of the variance of the business survey indicator, the evolution of individual responses and its variance.
-To achieve this objective, it's more adequate to use a model that account easily for the interest of each variable. The idea here is not to find the best model but rather to see if including the new indicators in a certain model will improve predictions.
+To achieve this objective, it's better to use a model that account easily for the interest of each variable. The idea here is not to find the best model but rather to see if including the new indicators in a certain model will improve predictions.
 Therefore, the linear model is preferred.
 
 This chapter will begin with presenting the methodology applied for the modelling.
-It will then proposing five different models, one simple model where only the BSI is used as regressor, and then four potential models that include other regressors.
+It will then propose five different models, one simple model where only the BSI is used as regressor, and then four potential models that include other regressors.
 Several test statistics will be looked at and used to compare the different models and understand if the new regressors added to the model, improve the model fit and the estimations.
 A method of model selection will then be applied to see if it decides to include the new regressors into the model aside from the BSI.
 The last part will use out-of-sample estimation to check if the results from the previous tests are robust.
@@ -1728,7 +1726,7 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 
 \section{Linear Models}
 
-The linear regression can be written as follow
+The linear regression can be written as follows
 
 \begin{eqnarray}
     \text{YoY GDP}_{t} = \beta_0 + \sum^n_{i = 1}
@@ -1757,7 +1755,7 @@ A model that takes the business survey indicator and its variance as regressors
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t} + \beta_{2} \Var(\BSI)_{t} + \epsilon_t \label{eq:model2}
 \end{equation}
 
-And three different models where the three evolution of individual responses with their variances are each time added to the previous model
+And three different models where the three different evolution of individual responses with each their variances are added to the previous model
 
 \begin{equation} \tag{Model 3}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{3} \EIR1_{t}  + \beta_{4} \Var(\EIR1)_{t} + \epsilon_t \label{eq:model3}
@@ -1827,8 +1825,7 @@ Those first results show the limited interest of EIR2 and EIR3 since the model w
 
 The other observation that can be done is that the interest of the variance in the prediction seems significant since adding - next to the information of the business survey - its variance, increases the Adjusted R$^2$ by 0.151. The model is also better according to Akaike's Information Criterion (AIC) and Bayesian Information Criterion (BIC) results.
 
-
-\begin{table}[!htbp]
+\begin{table}[H]
     \centering \footnotesize
     \caption{Accuracy Measures}
     \label{tab:accuracy measures}
@@ -1844,13 +1841,13 @@ The other observation that can be done is that the interest of the variance in t
     \end{tabular}
 \end{table}
 
-\autoref{tab:accuracy measures} shows some more measures of goodness-of-fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), the Mean Absolute Percentage Error (MAPE) and the Mean Absolute Scaled Error (MASE).
-The different measures of accuracy give similar result as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
+\autoref{tab:accuracy measures} shows some more measures of goodness of fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), the Mean Absolute Percentage Error (MAPE) and the Mean Absolute Scaled Error (MASE).
+The different measures of accuracy give similar results as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
 The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}. There is no clear best model between the two.
 
 In \autoref{fig:predictions1}, the prediction of YoY GDP according to the three first models are shown for the whole period. It can be seen that model 2 and 3 are better performing that model 1, while model 2 and 3 deliver quite similar predictions.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Graphs/predictions1.pdf}
     \caption{Plot of year on year GDP and the different estimation from model 1, 2 and 3}
@@ -1859,7 +1856,7 @@ In \autoref{fig:predictions1}, the prediction of YoY GDP according to the three 
 
 % \subsubsection{Diebold-Mariano Test}
 
-The Diebold-Mariano statistical (DM) test \citep{diebold_comparing_1995} is well known for comparing forecast accuracy of different models. 
+The Diebold-Mariano statistical (DM) test \citep{diebold_comparing_1995} is well-known for comparing forecast accuracy of different models. 
 It determines whether forecasts of a specific model are significantly better than another model by using the residuals.
 
 %The parameters of the test are forecast horizon = 1, loss function power = 2 and alternative hypothesis: two.sided and 
@@ -1886,11 +1883,11 @@ The results can be seen in \autoref{tab:Diebold Mariano 1}, the predictions of m
 % \subsubsection{Model Selection}
 
 
-Since there are a large among of different possible models when having eight different regressors - 255 possible combinations - some procedure needs to be chosen to look for the best model.
+Since there are a large amount of different possible models when having eight different regressors - 255 possible combinations -, some procedure needs to be chosen to look for the best model.
 
 The method applied here is a step procedure where AIC is used to select the best model.
 Three different selection algorithms will be applied; (1) forward, (2) backward and (3) both as defined in the step() procedure in R. 
-The three methods are all based on Akaike's information criterion (AIC) as a measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and adds one by one the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mixed of the two previous methods.
+The three methods are all based on Akaike's information criterion (AIC) as a measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and one by one adds the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mix of the two previous methods.
 
 The results of the three different methods converge to the model already proposed refered to as \ref{eq:model3}, where BSI, Var(BSI), EIR1 and Var(EIR1) are the regressors that explain the YoY GDP.
 
@@ -1903,8 +1900,8 @@ Following those results, there are two good candidates; \autoref{eq:model2} and 
 \section{Out-of-Sample Performances}
 
 To know if the results from the linear model are robust, two out-of-sample estimation will be performed for model 1, 2 and 3.
-The first will use the period 1988 to 2000 to estimate the model, and its predictions for that period and for the period 1988 to 2018. The results will be compared using Diebold-Mariano test.
-The period was chose since it's only 12 years long, and will have to be accurate for the next 18 years. The situation it's representing, is if, since January 2000, the three models where used to make prediction, which would deliver the best results.
+The first will use the period 1988 to 2000 to estimate the model, and its predictions for that period and for the period 1988 to 2018. The results will be compared using the Diebold-Mariano test.
+The period was chose since it's only 12 years long, and will have to be accurate for the next 18 years. The situation it is representing, is if, since January 2000, the three models where used to make predictions, which would deliver the best results.
 
 % See if attrition and dropout, who could be assumed as been more present after 2000, since that was the last recruitment period (see graphs appendix)
 
@@ -1925,19 +1922,17 @@ The same will then be done for the period 1988 until 2012. The year 2012 was cho
 \end{tabular}
 \end{table}
 
-\autoref{tab:Diebold Mariano 2} shows that the models, estimated with the data from 1988 to 2000, there predictions aren't significantly different from each others, while if the model is applied to the whole period of 1988 to 2018, \ref{eq:model3} is significantly better than \ref{eq:model1} and \ref{eq:model2}.
-The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 2000}.
+\autoref{tab:Diebold Mariano 2} shows that the models, estimated with the data from 1988 to 2000, their predictions aren't significantly different from each others, while if the model is applied to the whole period of 1988 to 2018, \ref{eq:model3} is significantly better than \ref{eq:model1} and 2.
+The estimates and fitted plot can be seen in \autoref{tab:model comparaison 2000} and \autoref{fig:predictions2}.
 If exclusively the period 1988-2000 is taken into account, \ref{eq:model2} and \ref{eq:model3} are only slightly better than \ref{eq:model1} according to most of the statistics.
 It can then be seen, from the plot, and even more from the DM tests, that \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model3} after that period, even if the data used for the estimation of the model only uses the data available before 2000.
 
-
-On the other hand, \autoref{tab:Diebold Mariano 3} shows the DM test p-values for the model estimated with the data until 2012. 
-
+On the other hand, \autoref{tab:Diebold Mariano 3} shows the DM tests results (p-value) for the model estimated with the data until 2012. 
 The results for the period 1988-2012 and 1988-2018 are quite similar and come to the same conclusion, \ref{eq:model2} and \ref{eq:model3} outperform \ref{eq:model1}. While \ref{eq:model3} is not significantly better than \ref{eq:model2}.
-The estimates and fitted plot can be seen on \autopageref{tab:model comparaison 2012}. 
+The estimates and fitted plot can be seen in \autoref{tab:model comparaison 2012} and \autoref{fig:predictions3}. 
 
 
-\begin{table}[htp!]
+\begin{table}[H]
     \caption{Diebold-Mariano tests for the models estimated with the data from 1988 to 2012, applied to the data from 1988-2012 and 1988-2018 with the estimates from \autoref{tab:model comparaison 2012}}
     \label{tab:Diebold Mariano 3}
      \centering \footnotesize
@@ -2057,7 +2052,7 @@ BIC & \multicolumn{1}{c}{296.018} & \multicolumn{1}{c}{282.641} & \multicolumn{1
 \chapter{Conclusion}
 
 After presenting the business survey and the business survey indicator, it was seen that the variance of the business survey indicator showed some interesting interpretation and properties. 
-Since the business survey has only three possible answers per questions, the variance is related to the mean and bounded between 0 and 1.
+Since the business survey has only three possible answers per question, the variance is related to the mean and bounded between 0 and 1.
 
 The evolution of individual responses was developed and explained.
 It's variance was shown as also having a mean-variance relation and been bounded between 0 and 2.
@@ -2067,11 +2062,10 @@ After correcting the different variables and indicators for seasonal effects, th
 The correlation analysis confirmed the relation between the indicator and its variance since there correlation is quite high. 
 It was also seen that none of the new indicators had a high correlation with YoY GDP while the industry BSI has a correlation slightly higher than 0.7 with the measure of growth.
 
-The variance of the BSI, the EIR and its variance are more volatile than the business survey indicator when looking at there evolution over time.
+The variance of the BSI, the EIR and its variance are more volatile than the business survey indicator when looking at there evolution over time and there graphical representation is less explanatory than the business survey indicator.
 
-Considering the predictive power of the different variables, it was seen that as expected the business survey indicator is a good predictor, and that its variance would have increase the prediction accuracy.
+Considering the predictive power of the different variables, it was seen that as expected, the business survey indicator is a good predictor, and its variance would increased prediction accuracy.
 It was seen that if in 2000, it was decided to use linear models to do nowcasting of the YoY GDP, and that model would be used until this day, the model including the BSI, its variance, the EIR and its variance would have outperformed a model using only the BSI.
-
 
 
 \chapter{Discussion}
@@ -2085,31 +2079,31 @@ The Belgian industry business survey indicator was shown as very good indicator 
 The recruitment of respondents to the survey was explained and reasons where given for not using a random sampling method. Nevertheless this decision has several implications that could be further studied.
 
 The selection of new participants by waves of recruitment is an issue if it's assumed that there is attrition and dropout bias.
-A constant recruitment of new participants, would attenuated the potential bias. 
-Literature has shown that respondents behaviour changes related to the participation period and some simple descriptive statistics from the business survey seemed to confirm the presence the previous assumption. For those reasons,further research regarding this issue would be of a great benefit to better understand and correct for those issues.
+A constant recruitment of new participants, would attenuate the potential bias. 
+Literature has shown that respondents behaviour changes related to the participation period and some simple descriptive statistics from the business survey seemed to confirm the presence of the previous assumption. For those reasons,further research regarding this issue would be of a great benefit to better understand and correct for those issues.
 
-\subsubsection{Develop indicator by taking to different question into account that are linked}
+\subsubsection{Develop indicator by taking two different questions into account that are linked}
 
 % \subsubsection{EIR that takes more periods into account}
 
 Regarding the indicator of the evolution of individual responses (EIR), further research and development could take two forms. 
 One is to develop an indicator that can take more than two months into account. This was explored but a consistent and interpretable indicator could not be found. 
-Another method is to use different questions to obtain an indicator. In the business survey some questions are linked between each other; questions concern the level of production in the past, some the present and other questions relate to there predictions for the following months. 
+Another method is to use different questions to obtain an indicator. In the business survey some questions are linked; questions concern the level of production in the past, some the present and other questions relate to there predictions for the following months. 
 A new indicator could be a measure of the accuracy of the predictions of the respondents and could be used to compare the different participants or different periods.
 
 
 \subsubsection{LOCF or other non-response methods}
-Considering non-response, some other technique than "Last Observation Carried Forwards" could be used. 
+Considering non-response, an other technique than "Last Observation Carried Forwards" could be used. 
 Multiple Imputations would be an interesting approach to handle non-response in the business survey as was done for the German business survey in \cite{seiler_microdata_2013}. 
 Since it could decrease the bias and increase accuracy, it would be interesting to explore different corrections.
 
 
 \subsubsection{Variance predictive power or correction for dropout and attrition}
 
-The linear regression showed the significant importance of the variance. the out-of-sample tests showed that the importance of variance is mostly for the period after 2012. Which coincide with the period where no new recruitment's where done for the industry indicator. During that period there was most probably attrition and dropout bias, which the variance of the indicator is a kind of measure of. The question that can not be answered here but should further be looked at is whether the variance has a predictive power or if it acts as a correction for the attrition and/or dropout bias in the survey.
+The linear regression showed the significant importance of the variance. the out-of-sample tests showed that the importance of variance is mostly for the period after 2012. Which coincide with the period where no new recruitment was done for the industry indicator. During that period there was most probably attrition and dropout bias, which the variance of the indicator is a kind of measure of. The question that can not be answered here but should further be looked at is whether the variance has a predictive power or if it acts as a correction for the attrition and/or dropout bias in the survey.
 
 Nonparametric tests of attrition bias as proposed in \cite{das_nonparametric_2011} could be adapted and applied to the case of the Belgian business survey.
-A further step to study attrition would be to use panel refreshments to test for presence of attrition as proposed in \cite{van_landeghem_test_2014}.
+A further step to study attrition would be to use panel refreshments to test for presence of attrition as proposed in \citep{van_landeghem_test_2014}.
 
 
 %The linear regression also showed that the indicator of the evolution of individual responses and its variance slightly improve the model. The interpretation of those that can be done is very interesting, those two indicators would be recommended to better understand how respondents respond in a survey.
@@ -2122,7 +2116,7 @@ A further step to study attrition would be to use panel refreshments to test for
 The next step considering predictive power of the new indicators is including them in other nowcasting models and compare performances. 
 Markov Switching (MS) models \citep{hamilton_new_1989} are an interesting modelling approach regarding business cycles. An example is the MS model applied to the French business survey \cite{bardaji_constructing_2009}.
 Another approach is the MS modelling proposed in \cite{duprey_how_2017}, which is using variables in the estimation of the probability of change of regime. The modelling technique is then close to a logistic regression. 
-Another approach could be to combine mixed models and Markov Chain for Panel Data as done in \cite{de_haan-rietdijk_use_2017}.
+Another approach could be to combine mixed models and Markov Chain for Panel Data as done in \citep{de_haan-rietdijk_use_2017}.
 
 State-Space models, which are already implemented at the NBB, would be interesting to test the importance of the new variables in the short term prediction of GDP.
 Other possible modelling procedures are Auto-Regressive Distributed Lag Models (ARDL), 
@@ -2141,6 +2135,7 @@ and more.
 \nocite{lemasson_enquete_2017}
 \nocite{mevik_uncertainty_2004}
 
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{apa}
 \bibliography{references}
  
@@ -2148,23 +2143,31 @@ and more.
 
 \appendix  
 
-  \listoffigures
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+
+
   \listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\renewcommand\thesection{\Roman{section}}
 
 
-\chapter{Appendix}
+\chapter*{Appendix }
 
+\addcontentsline{toc}{chapter}{Appendix}
 
 \section{Questions taken into account for the calculation of the industry business survey}
 \label{Appendix: Question NS975 description}
 
-originally numbered question 18, 27, 32 and 33 (see \autopageref{Questionnaire2018}), for simplicity numbered here as 1, 2, 3 and 4.
-Note that the first question is interpreted in the opposite way from the three other. Having a higher stock than normal is considered a "negative" answer while lower stock is considered "positive".
+Originally numbered question 18, 27, 32 and 33 (see \autopageref{Questionnaire2018}), for simplicity numbered here as 1, 2, 3 and 4.
+Note that the first question is interpreted in the opposite way from the three others. Having a higher stock than normal is considered a "negative" answer while lower stock is considered "positive".
 
 
 \subsubsection*{Course and assessment}
 \begin{enumerate}
-    \item Your current stock of this product will you consider, for the season, as: \\
+    \item You would consider your current stock of this product, for the season, as: \\
     $\Square$ higher than normal (too high) $\Square$ normal (sufficient) $\Square$ lower than normal (too low)
     
     \item Your current aggregate order position for this product is what you consider to be: \\
@@ -2187,13 +2190,13 @@ Note that the first question is interpreted in the opposite way from the three o
 
 
 \newpage
-\section{Further explanations regarding the variance of the BSI, the EIR and its variance}
+\section{Further explanations regarding the variance of the BSI, the EIR and the variance  of the EIR}
 \label{chap:appendix:explain Var BSI and EIR}
 
 When taking a very simplified situation where there are only two respondents over a 2 months period and only taking one question into account. 
-Five different situations are taken that will help to further understand and interpret the business survey indicator, the evolution of individual responses and there respective variances.
-The five different situation have all a BSI equal to zero at time t, while different Var(BSI), EIR and Var(EIR). 
-By looking at \autoref{tab:explanation of Var and BSI} and \autoref{fig:explanation of Var and BSI} it can be seen that in situation one everyone is neutral which means that all the indicators are equal to one.
+Five different situations are taken that will help to further understand and interpret the business survey indicator, the evolution of individual responses and their respective variances.
+The five different situations all have a BSI equal to zero at time t, while different Var(BSI), EIR and Var(EIR). 
+
 
 \begin{table}[H]
     \caption{Five possible situations of a simplified business survey with only two respondents over a two months period}
@@ -2293,13 +2296,13 @@ situation    & respondent 1 & respondent 2           &  BSI & Var(BSI) & EIR & V
     \label{fig:explanation of Var and BSI}
 \end{figure}
 
-
-Situation two is slightly different since the two respondents hardly disagree and keep the same answer over at $t-1$ and at $t$.
-Situation three is again a situation where respondents disagree but now also change radically there answer over a two months period. So the two variances are at there highest.
-Situation four is a situation where the two respondents where positive the previous month and are now both neutral. There variances are equal to zero since they both agree and they changed there answer the same but EIR is equal to -1 since compare to previous month they decreased there answer.
+By looking at \autoref{tab:explanation of Var and BSI} and \autoref{fig:explanation of Var and BSI} it can be seen that in situation one everyone is neutral which means that all the indicators are equal to one.
+Situation two is slightly different, since the two respondents hardly disagree and keep the same answer over at $t-1$ and at $t$.
+Situation three is again a situation where respondents disagree but now also change radically their answer over a two months period. So the two variances are at their highest.
+Situation four is a situation where the two respondents were positive the previous month and are now both neutral. Their variances are equal to zero since they both agree and they changed their answer the same but EIR is equal to -1 since compared to the previous month they decreased their answer.
 In situation five they disagreed largely the previous month but now are both neutral so only their variance of EIR is not equal to zero.
 
-This explanation shows the interest of the four different indicators that each shown a different information about the responses.
+This explanation shows the interest of the four different indicators that each show different information about the responses.
 
 
 
