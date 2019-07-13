@@ -1271,7 +1271,7 @@ and the weighted formula of the EIR when taking different questions into account
 
 \chapter{The Variance of the Evolution of Individual Responses} \label{Chapter:Var Z}
 
-The evolution of individual responses has a variance that has an interesting interpretation.
+The evolution of individual responses has a variance with an interesting interpretation.
 While the EIR is a measure of the direction companies change their answers, the variance of the EIR can be understood as the measure of changes in answers.
 From there, the variance of the EIR can be seen as the volatility of the indicator, in the sense that the variance of the EIR accounts for the dispersion of the difference in answers over two periods.
 
@@ -1280,8 +1280,7 @@ While the variance of the business survey indicator is the measure of disagreeme
 
 \section{Variance of the Unweighted Evolution of Individual Responses}
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+The calculation of the variance of the EIR for one question is the following
 
 \begin{eqnarray}
 \Var(Z) &=&  
@@ -1295,15 +1294,14 @@ While the variance of the business survey indicator is the measure of disagreeme
     +  \frac{\sum_{i=1}^{n_{+-}} z^2_{+-i} }{n}  \nonumber \\ \nonumber  \\
     && +  \frac{\sum_{i=1}^{n_{+0}} z^2_{+0i} }{n} 
     +  \frac{\sum_{i=1}^{n_{++}} z^2_{++i}}{n}   
-     - \E(Z)^2 \\  \nonumber  \\ 
-     &=& \frac{n_{-0}}{n} 
-    + 4  \frac{n_{-+}}{n} 
-    +  \frac{n_{0-}}{n}  
-    +        \frac{n_{0+}}{n} 
-    + 4  \frac{n_{+-}}{n}   
-    +  \frac{n_{+0}}{n}  
-     - \E(Z)^2 \nonumber \\
+     - \E(Z)^2 
 \end{eqnarray}
+
+The method of simplification is quite similar to the method applied for the variance of the BSI in order to write the equation with proportions of responses.
+
+\begin{eqnarray}
+    \Var(Z) &=& \frac{n_{-0}}{n} + 4  \frac{n_{-+}}{n} +  \frac{n_{0-}}{n} + \frac{n_{0+}}{n} + 4  \frac{n_{+-}}{n} +  \frac{n_{+0}}{n} - \E(Z)^2 
+\end{eqnarray}{}
 
 See \autoref{tab:values EIR} for the different values of $z$. As done before, simplification of the previous equation can be done knowing that the equation contains proportions, and the sum of all the proportions ($\pi$) is equal to one.
 
@@ -1322,7 +1320,7 @@ This has as main consequence that the variance formula also have two proportions
 
 \section{Variance of the Weighted Evolution of Individual Responses}
 
-When taking different 
+As in the case of the variance of the BSI, the equation of the variance of the weighted EIR is very similar to the equation of the unweighted EIR with different symbols. The formula can be written as follows 
 
 
 \begin{eqnarray}
@@ -1397,7 +1395,7 @@ This chapter will explain those different specificities and, to some extend, exp
 
 In the next chapter the seasonal correction of the different variables will be explained, the analysis will all be done with the data after seasonal correction since it's the method applied by the NBB.
 
-\section{Unweighted observations}
+\section{Unweighted Observations}
 
 The business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sector/activity they are a part of as explained in \autoref{sec:Weighting procedure}.
 
@@ -1405,9 +1403,9 @@ In order to have a large period of time for the empirical analysis, the decision
 Another reason not to use weighted measures is that the weighting procedure is very complex and prone to some companies largely influencing the indicator, and with it the results of the research. 
 
 
-\section{Period}
+%\section{Period}
 
-The period covered is from 1988 to 2018. This 30 year long period was chosen, based on the electronic availability of the data and the interest of having a long period of time, including several business cycles.
+%The period covered is from 1988 to 2018. This 30 year long period was chosen, based on the electronic availability of the data and the interest of having a long period of time, including several business cycles.
 
 
 \section{Indicator and Questions}
@@ -1435,8 +1433,7 @@ What can be said, is that the influence of those changes could be limited since 
 \section{Variables}
 
 The following research will focus on nine variables. 
-The year on year gross domestic product (YoY GDP) which is publicly available.  !!!!!!!!!!!!!!!!!!!!!!!!!
-
+The year on year gross domestic product (YoY GDP) which is publicly available and the most used measure of national growth. As seen in \autoref{section:Objective}, it's only accounting for growth and the evolution of it. What is at interest in this research.
 The eight other variables are obtained with the different calculations explained in the first part of this paper.
 The business survey indicator (BSI) and its variance as explained in Chapter 2 and 3.
 The evolution of individual responses and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
