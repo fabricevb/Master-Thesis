@@ -1,10 +1,4 @@
 
-% 
-
-% Zotero Bialowolski 2014
-
-% https://ec.europa.eu/eurostat/cros/system/files/Jdemetra_%20release.pdf
-
 % ----------- Cover Master Thesis Faculty of Sciences ---------------
 % This document should be compiled with pdflatex.  If you want to use
 % latex to compile to dvi/ps, you have to convert the images to (e)ps
@@ -71,8 +65,6 @@
 \usepackage[firstpage]{draftwatermark}
 \SetWatermarkText{FINAL DRAFT}
 \SetWatermarkScale{0.8}
-
-    % sections \FloatBarrier
     
 \newcommand{\ImageWidth}{11cm}
 \usepackage{tikz}
@@ -214,8 +206,7 @@ Academic year 2018-2019
 
 
 \newpage
-\setcounter{page}{0}
-\pagenumbering{roman}
+\pagenumbering{gobble} 
 
 \begin{bottompar}
 \copyright \ Copyright by KU Leuven \\ \\
@@ -223,7 +214,9 @@ Without written permission of the promotors and the authors, it is forbidden to 
 A written permission of the promotor is also required to use the methods, products, schematics and programs described in this work for industrial or commercial use, and for submitting this publication in scientific contests.
 \end{bottompar}
 
-
+\newpage
+\setcounter{page}{0}
+\pagenumbering{roman}
 
 \chapter*{Acknowledgement}
 
