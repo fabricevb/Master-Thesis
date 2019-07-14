@@ -126,9 +126,6 @@
 
 \begin{document}
 
-SetWatermarkText{DRAFT}
-SetWatermarkScale{2}
-SetWatermarkColor[gray]{.9}
 
 % ----------------------- Cover --------------------------------------
 % Please fill in:
@@ -425,7 +422,7 @@ The three objectives have all in common the importance and the necessity of only
 This will be looked into in \autoref{chap:nonresponse dropout} where seasonal effects, dropout, non-response, and attrition will be discussed.
 
 
-\subsection{National and Sector-Specific Short-Term Information}
+\subsection{National and sector-specific short-term information}
 
 The business survey indicators are published at the end of each month (around the 21 - 25 of the month) and give a quick overview of the evolution of the Belgian economy over the past months.
 The data is available on \href{http://stat.nbb.be/Index.aspx?DataSetCode=BUSSURVM&Lang=en}{stat.nbb.be} and a press release is published on \href{http://www.nbb.be/doc/dq/e/conj.htm}{nbb.be}. 
@@ -489,7 +486,7 @@ Nowcasting became a catch-all word and includes a variety of predictive models a
 Indicators that can be used aside from the business survey are average weekly work hours, factory orders for goods, housing permits and stock prices index of consumer expectations, average weekly claims for unemployment insurance and the interest rate and more.
 
 
-\subsection{Business Cycles}
+\subsection{Business cycles}
 \label{sec:Business Cycles}
 
 In 1946, \citeauthor{mitchell_measuring_1946} defined a business cycles as a recursive fluctuations, affecting macroeconomics variables. Since then a lot of variables where used to model business cycles but it's commonly admitted that Growth Domestic Product (GDP) is the most important of them. 
@@ -625,7 +622,7 @@ Three main methodology revisions have taken place since the launch of the busine
 The most significant changes brought in 2009 were the number of questions taken into the calculation of the BSI, which was reduced to 3-4 questions, depending on the sector, for more simplicity and accuracy.
 Other improvements where the inclusion of the sector of services in the calculation of the global indicator and a new, simple method of smoothing the indicator.
 
-\subsection{Sampling Method}
+\subsection{Sampling method}
 \label{sec:Recruitment of participants}
 
 The Belgian business survey - as most of the business surveys around the world - has the particularity of not using random sampling. 
@@ -661,11 +658,10 @@ This recruitment method could be called "non-random stratification", as opposed 
 The second reason, the most import one, is that the value of the business survey indicator is of no interest on its own. Indeed having a BSI equal to 0.5 or 0.1 doesn't mean much, but what's important is the evolution of the indicator. If it was equal to 0.3 last month and this month it's equal to 0.5, it means that the economy is most probably growing and that an increase of GDP over the month can be forecast. On the other hand, if it's now equal to 0.1, it means a decrease in economic confidence among businesses and a deceleration or decline of the economy over the month can be anticipated.
 
 
-
 \subsection{Questionnaire}
 \label{sec:Questionnaire}
 
-The questionnaire exists in two languages, French and Dutch (see Appendix \autopageref{Questionnaire2018}). It can be answered by mail, email, over the phone or by fax.
+The questionnaire exists in two languages, French and Dutch (see Appendix \autoref{Questionnaire2018} on \autopageref{Questionnaire2018} for the Dutch version). It can be answered by mail, email, over the phone or by fax.
 It is divided into two part:
 (1) questions concerning current production and level of activity (\textit{"verloop en beoordeling"}) and
 (2) questions concerning predictions, expectation of the level of activity over the next three months ("\textit{vooruitzichten voor de volgende drie maanden}").
@@ -673,7 +669,7 @@ It is divided into two part:
 The business survey indicator is also called the confidence indicator, since its a measure of how confident companies are in the Belgian economy.
 Almost all the questions have only three possible answers that can be interpreted as a negative, neutral or positive answer.
 
-\subsection{Weighting Procedure}
+\subsection{Weighting procedure}
 \label{sec:Weighting procedure}
 
 The different companies participating in the business survey have all a specific weight based on (1) the size of the company and (2) the size of the sector branch, which the company is part of.
@@ -714,7 +710,7 @@ First, the unweighted calculation of the indicator taking one question into acco
 The last part will present how different questions are combined together to obtain a business survey indicator.
 
 
-\subsection{Unweighted Business Survey Indicator}
+\subsection{Unweighted business survey indicator}
 
 The calculation of the unweighted indicator for a specific question at a specific time is the mean of the responses and can be written as follow;
 
@@ -752,7 +748,7 @@ where $\pi_+$ and $\pi_-$ are the proportion of respondents answering positive a
 $\pi$ was chosen as symbol here since it can be interpreted as a probability: if it's assumed that all the respondents have the same probability of giving a certain answer, $\pi$ is the probability that a respondent answers positive ($\pi_+$), negative ($\pi_-$) or neutral ($\pi_0$) to the question. 
 
 
-\subsection{Weighted Business Survey Indicator}
+\subsection{Weighted business survey indicator}
 
 As described in \autoref{sec:Weighting procedure}, each respondent has two different weighting procedures: one according to its size and one according to the size of the sector it's part of. Those weights are then combined and end up with a specific weight $\omega_i$.
 The business survey indicator is then obtained with the following equation 
@@ -790,7 +786,7 @@ $\Omega$ can also be interpreted in a probabilistic way, as it is the weighted p
 
 From \autoref{eq: BSI Unweighted} and \ref{eq: BSI Weighted} it can be seen that the weighted and unweighted indicators are bounded between -1 and 1. In the two cases, the indicator is the smallest if all respondents have a negative answer and is the largest when every answer is positive.
 
-\subsection{Taking Different Questions Into Account}
+\subsection{Taking different questions into account}
 
 The previous calculations were specific to one question. The published indicators are usually taking different survey questions into account. For example, the industry indicator, that will be at interest, is composed of four questions:
 
@@ -799,7 +795,7 @@ The previous calculations were specific to one question. The published indicator
 \end{equation}
 
 where 
-$\E(X_{Q1})$, $\E(X_{Q2})$, $\E(X_{Q3})$ and $\E(X_{Q4})$ are the different averages for question 1, 2, 3 and 4 (see \autopageref{Appendix: Question NS975 description}). The averages can be weighted or unweighted.
+$\E(X_{Q1})$, $\E(X_{Q2})$, $\E(X_{Q3})$ and $\E(X_{Q4})$ are the different averages for question 1, 2, 3 and 4 (see Appendix \autoref{Appendix: Question NS975 description} on \autopageref{Appendix: Question NS975 description}). The averages can be weighted or unweighted.
 
 The equation can also be written as follows for the unweighted indicator\footnote{Assuming the respondents that answered, answered to all the questions.}
 
@@ -1023,7 +1019,7 @@ Another approach to better understand the variance of the business survey barome
 It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example, an indicator of 0.5 can only have a variance between 0.25 and 0.75.
 It's also interesting to notice that to know that with two of the three variables ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. 
 In other words, the three variables are related. 
-See appendix \autopageref{chap:appendix:explain Var BSI and EIR} for further interpretation.
+See Appendix \autoref{chap:appendix:explain Var BSI and EIR} for further interpretation.
 
 \section{Taking Different Questions Into Account}
 
@@ -1383,7 +1379,7 @@ The formula for the weighted variance of the EIR can be written as follows
 \end{eqnarray}
 
 
-Further explanation including examples in order to better understand the different indicators and variances, can be found in Appendix on \autopageref{chap:appendix:explain Var BSI and EIR}.
+Further explanation including examples in order to better understand the different indicators and variances, can be found in Appendix \autoref{chap:appendix:explain Var BSI and EIR}.
 
 
 
@@ -1415,7 +1411,7 @@ It is the first sector that was taken into account in the business survey before
 
 Four questions are taken into account, since it are the four questions that are taken today in the calculation of the industry BSI. 
 
-It has to be noted that before 2009, almost all the questions where taken into account for the calculation of the indicator. Since the 2009 revision of the business survey (see \autoref{sec:Questionnaire}), only four questions are taken into account for more accuracy. In order to have the best comparability over the whole period, only those four questions will be used for the whole period (see questions on \autopageref{Appendix: Question NS975 description}).
+It has to be noted that before 2009, almost all the questions where taken into account for the calculation of the indicator. Since the 2009 revision of the business survey (see \autoref{sec:Questionnaire}), only four questions are taken into account for more accuracy. In order to have the best comparability over the whole period, only those four questions will be used for the whole period (see questions in Appendix  \autoref{Appendix: Question NS975 description}).
 
 The first two questions relate to the current state of the company while the two others ask the participants their prediction for the next three months.
 The first question is about the stock of the company, 
@@ -1423,7 +1419,7 @@ the second question relates to the demand of their products,
 the third question relates to the company's predictions of the need for work forces and the last question asks about their predictions regarding demand.
 
 In this paper, the answers and results of the industry business survey barometer will be used since 1988. Therefore it's very important to see if modifications were applied over time to the questionnaire.
-A questionnaire from 1990 can be seen in the appendix (see \autopageref{Questionnaire1990}) and can be compared to a more recent version (see appendix \autopageref{Questionnaire2018}).
+A questionnaire from 1990 can be seen in Appendix (see \autoref{Questionnaire1990} on \autopageref{Questionnaire1990}) and can be compared to a more recent version (see \autoref{Questionnaire2018} on \autopageref{Questionnaire2018}).
 
 The layout was modified, and the phrasing of the questions slightly evolved over this long period. Before questions were asked in the first person while it's now phrased in the third person. Aside from those small changes, the survey kept the same questions and order.
 It might be interesting to have a closer look at the potential consequences of those changes over time. The layout, the phrasing and the method of answering can potentially influence the answers. Nevertheless, since it's not the subject of this paper, this study will be left for future research.
@@ -1492,7 +1488,7 @@ It was chosen since it's the closest to the X11 applied by the NBB to the busine
 %for constancy and simplicity, the observations for the 30 years is used 
 
 
-The seasonal-irregular (S-I) ratio charts, which can be seen in the appendix on \autopageref{fig:S-I seasonal correction RJDemetra}, are interesting to look at to better understand the seasonal effect influencing the different variables.
+The seasonal-irregular (S-I) ratio charts, which can be seen in Appendix \autoref{fig:S-I seasonal correction RJDemetra} on \autopageref{fig:S-I seasonal correction RJDemetra}, are interesting to look at to better understand the seasonal effect influencing the different variables.
 The business survey indicator is usually higher in August and September, and lower in November and December. 
 It seems that respondents are more optimistic during and slightly after summer holidays, or whether the economy is doing better during those holidays is difficult to know.
 
@@ -2152,7 +2148,7 @@ and more.
 \renewcommand\thesection{\Roman{section}}
 
 
-\chapter*{Appendix }
+\chapter*{Appendix}
 
 \addcontentsline{toc}{chapter}{Appendix}
 
@@ -2372,19 +2368,19 @@ This explanation shows the interest of the four different indicators that each s
 
 
 \chapter*{Code}
-\subsection*{R code for Seasonal Adjustments}
+\subsection*{R code for seasonal adjustments}
 
 \href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Seasonal Correction model data.R}{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Seasonal Correction model data.R}
 
 
-\subsection*{R code for Correlation Analysis}
+\subsection*{R code for correlation analysis}
 
 \href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Correlations.R}{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Correlations.R}
 
 
 
 
-\subsection*{R code for Linear Models}
+\subsection*{R code for linear models}
 
 \href{https://github.com/fabricevb/Master-Thesis/blob/master/R Code/Linear Models.R}{https://github.com/fabricevbMaster-Thesis/blob/master/R Code/Linear Models.R}
 
