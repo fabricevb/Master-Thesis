@@ -69,6 +69,8 @@
 
 
 \usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{FINAL DRAFT}
+\SetWatermarkScale{0.8}
 
     % sections \FloatBarrier
     
@@ -333,8 +335,7 @@ De nieuwe indicator en de varianties vertonen interessante interpretatie-eigensc
   MPE 		& Mean Percentage Error \\
   MS        & Markov Switching \\
   NBB       & The National Bank of Belgium \\
-  NBER      & The National Bureau of Economic Research (US) \\
-  NSI       & National Statistics Institutes \\
+  NBER      & The National Bureau of Economic Research (US) \\ 
   RMSE 		& Root Mean Squared Error \\
   S-I       & Seasonal-Irregular \\
   Var       & Variance \\
@@ -607,7 +608,7 @@ It can be noted that periods of economic growth, usually last longer than econom
         \addplot[mark=none, dashed] coordinates {(2514, -1.5) (2514, -1)}; 
         \end{axis}
     \end{tikzpicture}
-      \caption[Business cycles from 1975 to 2009 of the American Economy according to the NBER]{Business cycles from 1975 to 2009 of the American economy according to the NBER\footnotemark}
+      \caption[Business cycles from 1975 to 2009 of the American economy according to the NBER]{Business cycles from 1975 to 2009 of the American economy according to the NBER\footnotemark}
     \label{fig:NBER BS}
 \end{figure}
 
@@ -701,6 +702,7 @@ This method can be written as follows
 \end{eqnarray}
 
 where $\omega_{i, old}$ is the previous weight, $\omega_{i, new}$ is the new weight and $\Delta \omega_i$ is the difference between the two. $t$ can take values between 1 and 12, representing a month during which the weight is adapted.
+$\omega_{i, t}$ is then the monthly weight of a certain company during that one year adaptation period that increases linearly from the first to the last month.
 
 \section{Calculation of the Business Survey Indicator}
 
@@ -1393,7 +1395,7 @@ In the next chapter the seasonal correction of the different variables will be e
 
 \section{Unweighted Observations}
 
-The business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sector/activity they are a part of as explained in \autoref{sec:Weighting procedure}.
+The business survey indicator published monthly uses a complex method of weighting that takes into account the size of the companies and the size of the specific sub-sector they are part of as explained in \autoref{sec:Weighting procedure}.
 
 In order to have a large period of time for the empirical analysis, the decision is made to take only unweighted indicators, since the weights of the different respondents are not available before the year 2008. 
 Another reason not to use weighted measures is that the weighting procedure is very complex and prone to some companies largely influencing the indicator, and with it the results of the research. 
@@ -1431,7 +1433,7 @@ What can be said, is that the influence of those changes could be limited since 
 The following research will focus on nine variables. 
 The year on year gross domestic product (YoY GDP) which is publicly available and the most used measure of national growth. As seen in \autoref{section:Objective}, it's only accounting for growth and the evolution of it, what is at interest in this research.
 The eight other variables are obtained with the different calculations explained in the first part of this paper.
-The well-known business survey indicator (BSI) as explained in Chapter 2 and its less-known variance as explained in and 3.
+The well-known business survey indicator (BSI) as explained in Chapter 2 and its less-known variance as explained in Chapter 3.
 The evolution of individual responses (EIR) and its variance as explained in Chapter 4 and 5, where three different measures are proposed, referred later as EIR1, EIR2 and EIR3. 
 EIR1 is when taking the difference in answer between a month and the month before while EIR2 uses a lag of two months and EIR3 a lag of three months. The reasons for taking a larger period into account were explained in \autoref{sec:EIR lg longer period into account}.
 For each of the three measures of the EIR, the variance is calculated and will be studied further.
@@ -1520,18 +1522,17 @@ Therefore its important, for the modelling of the data - which will be done in C
 
 Non-participation in the survey is difficult to study since not much trace is kept of the companies refusing to participate in the survey. As explained in the first chapter, the selection of participants uses stratification to account for the population at study.
 There is a bias that can come from the selection procedure since the survey is voluntary based, which means that if companies more prompt and motivated to participate are companies with a different profile compared to non motivated companies, there could be an issue.
-The potential bias would be limited since the business survey is a panel survey and is interpreted as such.
 
-\section{Non-response}
 
-Non-response of participants is another issue. 
-Since the participants, in this case, don't answer a certain month but continue the survey, it can also be called non-monotone missingness.
+\section{Non-Response}
+
+Participants not answering a certain month but continue the survey, is called non-response or non-monotone missingness and can bias the estimates.
 The solution applied by the NBB in case of non-response, is to assume that the respondent would have answered the same as the previous month, the method is called "Last Observation Carried Forward" (LOCF). 
 The theory regarding missing observations states three different ways non-response can be present. Responses can be missing completely at random (MCAR), missing at random (MAR), or missing not at random (MNAR). Missing completely at random is usually hard to assume while missing not at random can be hard to account for.
-In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of being very simple and having more data (compared to considering the missing observations as missing). 
+In the case of the business survey, the LOCF technique assumes that observations are missing completely at random. This method is not the most efficient and unbiased but has the advantage of being very simple and results in more data (compared to considering the missing observations as missing). 
 
 There is a large effort made by the NBB to contact respondents and send them reminders to make sure that non-response is as small as possible.
-The response rate is usually around 95\%, which is quite high for a survey, therefore it can be assumed that non-response is not very important in the business survey.
+The response rate is usually around 95\%, which is quite high for a survey, therefore it will be assumed that non-response is not critical in the business survey.
 
 % Before concluding it, since the mean study is the evolution rather than the indicator in itself, we plotted the non-response with the evolution of the year on year GDP to see if there seems to be a relation between the two. For example, we could expect more or less non-response during crises or in certain economic situations. Since the main interest of the BSI is to explain business cycles,
 
@@ -1539,15 +1540,14 @@ The response rate is usually around 95\%, which is quite high for a survey, ther
 \section{Dropout and Attrition}
 
 Dropout and Attrition are related to the structure and organisation of the survey. 
-As explained in \autoref{sec:Recruitment of participants}, one's participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: potential bias due to companies leaving the survey (dropout) and potential bias due to companies change their answering behaviour over time (attrition).
+As explained in \autoref{sec:Recruitment of participants}, once participants are recruited to participate in the business survey, they stay as long as they want. This brings two potential issues: potential bias due to companies leaving the survey (dropout) and potential bias due to companies change their answering behaviour over time (attrition).
 
 \subsection{Dropout}
 
-The National Bank doesn't keep track of reasons why participants leave the survey. From discussions with the persons responsible for the survey at the NBB, the two mean reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
+The National Bank doesn't keep track of reasons why participants leave the survey. From discussions with the persons responsible for the survey at the NBB, the two main reasons companies are leaving the survey are; (1) the company going bankrupt, acquired or merged and (2) the responsible person at the company leaves his job and the new contact person doesn't see the interest in participating in the survey.
 This is an issue since it means that it's a certain type of company that leaves the survey. If this type of profile has a different opinion or responds differently from the remaining companies, this will create bias. 
 
-
-It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. Again the fact that it's the evolution of the BSI that is important, means that the bias would be rather small for each month, but if a longer period is taken into account, the bias would become larger. 
+It could be argued that the bias is very diffused, due to the small number of companies leaving the survey each month. The fact that it's the evolution of the BSI that is important, means that the bias would be rather small for each month, but if a longer period is taken into account, the bias would become larger.
 
 Since it isn't the subject of this work, it will not be further studied, but it will be recommended to have a closer look into this for future research.
 
@@ -1556,12 +1556,12 @@ Since it isn't the subject of this work, it will not be further studied, but it 
 
 \nocite{warren_panel_2012}
 
-Attrition, also called Panel Conditioning, is present when participants change there behaviour between different rounds of surveys. 
+Attrition, also called panel conditioning, is present when participants change there behaviour between different rounds of surveys. 
 A very interesting master thesis was done about the Belgian labour force survey, where attrition was found to be significant \citep{priyana_hardjawidjaksana_investigating_2019}.
 The Belgian labour force survey was convenient to test for attrition since the survey is answered by participants exactly four times with a lag of six months.
-It was shown that indeed attrition was present in the survey.
+It was shown that indeed attrition was present in the survey, a general respondents behaviour change between the different rounds of responses.
 
-In the case of the industry business survey, it's harder to test for since their were only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and around 2000 with some companies been recruited outside those periods. Other sectors have the same issue.
+In the case of the industry business survey, it's harder to test for since their were only two major periods of recruitment for the period at interest (1988 - 2018); in the early 1990 and around 2000 with some companies been recruited outside those periods. The other sectors have the same issue.
 
 
 \begin{table}[htp!]  \centering \footnotesize 
@@ -1578,7 +1578,7 @@ Time & $-0.339$ & $0.133$ & $-0.807$ & $0.039$ & $-0.705$ \\
 
 An interesting approach to explore attrition and dropout is by looking at the correlations of the variances over time.
 In \autoref{tab:correlation attrition} it can be seen that there is a very large negative correlation between time and the variance of the BSI and the variance of the EIR. This can be interpreted as companies agreeing more and more over time and changing less and less their answers.
-Without making any conclusions, the variance of BSI and the variance of EIR seem to show the presence of dropout bias and/or attrition.
+Without making any conclusions, the variance of BSI and the variance of EIR seem to show the presence of attrition and/or dropout bias.
 
 The same can be observed in Var(BSI) and Var(EIR) plots in \autoref{fig:seasonal ajusted rjdemetra} where, aside from the peak of variance during the economic crises of 2008, there is a general tendency of decreasing of the variance of the BSI and the different variances of EIR after the beginning of the century, the last time there was a large recruitment.
 
@@ -1722,7 +1722,7 @@ text depth=.5ex] at (\x,-.3) {$\descr$};
 
 \section{Linear Models}
 
-The linear regression can be written as follows
+A linear regression can be written as follows
 
 \begin{eqnarray}
     \text{YoY GDP}_{t} = \beta_0 + \sum^n_{i = 1}
@@ -1764,6 +1764,33 @@ And three different models where the three different evolution of individual res
 \begin{equation} \tag{Model 5}
     \text{YoY GDP}_{t} = \beta_0 + \beta_{1} \BSI_{t}  + \beta_{2} \Var(\BSI)_{t} + \beta_{7} \EIR3_{t}  + \beta_{8} \Var(\EIR3)_{t} + \epsilon_t  \label{eq:model5}
 \end{equation}
+
+
+
+The estimates can be seen in \autoref{tab:models comparaison 1} for the five regressions. Some goodness of fit measures are also available. 
+Those first results show the limited interest of EIR2 and EIR3 since the model with EIR1 and its variance (\ref{eq:model3}) is better performing according to all the results than the two other models (\ref{eq:model4} and \ref{eq:model5}).
+
+The other observation that can be done is that the interest of the variance in the prediction seems significant since adding - next to the information of the business survey - its variance, increases the Adjusted R$^2$ by 0.151. The model is also better according to Akaike's Information Criterion (AIC) and Bayesian Information Criterion (BIC) results.
+
+\begin{table}[H]
+    \centering \footnotesize
+    \caption{Accuracy measures}
+    \label{tab:accuracy measures}
+\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+                 & RMSE & MAE & MPE & MAPE & MASE \\ \hline
+\ref{eq:model1} & 1.103 &0.93 &-27.657 & 86.696 & 0.764 \\
+\ref{eq:model2} & 0.878 &0.697 & -10.923 & 61.185 & 0.573 \\
+\ref{eq:model3} & 0.848 &0.674 & -12.455 & 55.698 & 0.554 \\
+\ref{eq:model4} & 0.875 &0.699 & -12.757 & 62.707 & 0.574 \\
+\ref{eq:model5} & 0.873 &0.689 & -9.83 & 59.311 & 0.566 \\ \hline
+    \end{tabular}
+\end{table}
+
+\autoref{tab:accuracy measures} shows some more measures of goodness of fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), the Mean Absolute Percentage Error (MAPE) and the Mean Absolute Scaled Error (MASE).
+The different measures of accuracy give similar results as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
+The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}. There is no clear best model between the two.
 
 \begin{table}[htbp!] \centering \footnotesize
   \caption{Linear Regression Results for the period 1988 to 2018} 
@@ -1816,34 +1843,9 @@ BIC & \multicolumn{1}{c}{390.753} & \multicolumn{1}{c}{338.980} & \multicolumn{1
 \end{tabular} 
 \end{table} 
 
-The estimates can be seen in \autoref{tab:models comparaison 1} for the five regressions. Some goodness of fit measures are also available. 
-Those first results show the limited interest of EIR2 and EIR3 since the model with EIR1 and its variance (\ref{eq:model3}) is better performing according to all the results than the two other models (\ref{eq:model4} and \ref{eq:model5}).
-
-The other observation that can be done is that the interest of the variance in the prediction seems significant since adding - next to the information of the business survey - its variance, increases the Adjusted R$^2$ by 0.151. The model is also better according to Akaike's Information Criterion (AIC) and Bayesian Information Criterion (BIC) results.
-
-\begin{table}[H]
-    \centering \footnotesize
-    \caption{Accuracy measures}
-    \label{tab:accuracy measures}
-\begin{tabular}{@{\extracolsep{5pt}} cccccccc} 
-\\[-1.8ex]\hline 
-\hline \\[-1.8ex] 
-                 & RMSE & MAE & MPE & MAPE & MASE \\ \hline
-\ref{eq:model1} & 1.103 &0.93 &-27.657 & 86.696 & 0.764 \\
-\ref{eq:model2} & 0.878 &0.697 & -10.923 & 61.185 & 0.573 \\
-\ref{eq:model3} & 0.848 &0.674 & -12.455 & 55.698 & 0.554 \\
-\ref{eq:model4} & 0.875 &0.699 & -12.757 & 62.707 & 0.574 \\
-\ref{eq:model5} & 0.873 &0.689 & -9.83 & 59.311 & 0.566 \\ \hline
-    \end{tabular}
-\end{table}
-
-\autoref{tab:accuracy measures} shows some more measures of goodness of fit; the Root Mean Squared Error (RMSE), the Mean Absolute Error (MAE), the Mean Percentage Error (MPE), the Mean Absolute Percentage Error (MAPE) and the Mean Absolute Scaled Error (MASE).
-The different measures of accuracy give similar results as before, \ref{eq:model3} is performing best according to all the measures except in MPE.
-The results for \ref{eq:model2} are quite close to the results of \ref{eq:model3}. There is no clear best model between the two.
-
 In \autoref{fig:predictions1}, the prediction of YoY GDP according to the three first models are shown for the whole period. It can be seen that model 2 and 3 are better performing that model 1, while model 2 and 3 deliver quite similar predictions.
 
-\begin{figure}[H]
+\begin{figure}[htbp!]
     \centering
     \includegraphics[scale=0.5]{Graphs/predictions1.pdf}
     \caption{Plot of year on year GDP and the different estimations from model 1, 2 and 3}
@@ -1860,7 +1862,7 @@ It determines whether forecasts of a specific model are significantly better tha
 The results can be seen in \autoref{tab:Diebold Mariano 1}, the predictions of model 1 are significantly outperformed by all the other regressions. While there is no clear winner between the other regressions; Model 3 is not significantly better than Model 2.
 
 
-\begin{table}[H]
+\begin{table}[htbp!]
     \caption{Diebold-Mariano tests for the models referred to in \ \autoref{tab:models comparaison 1} }
     \label{tab:Diebold Mariano 1}
      \centering \footnotesize
@@ -1880,7 +1882,6 @@ The results can be seen in \autoref{tab:Diebold Mariano 1}, the predictions of m
 
 
 Since there are a large amount of different possible models when having eight different regressors - 255 possible combinations -, some procedure needs to be chosen to look for the best model.
-
 The method applied here is a step procedure where AIC is used to select the best model.
 Three different selection algorithms will be applied; (1) forward, (2) backward and (3) both as defined in the step() procedure in R. 
 The three methods are all based on Akaike's information criterion (AIC) as a measure of goodness of fit. They differ in the sense that the first (1) starts from a model with no regressors and one by one adds the regressors that improve the most the model fit, the second (2) does the opposite, it starts with the full model and takes out the variables that don't improve the model fit and the last (3) is a mix of the two previous methods.
