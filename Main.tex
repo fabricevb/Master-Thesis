@@ -9,10 +9,13 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[british]{babel}
 
+%\usepackage[firstpage]{draftwatermark}
+%\SetWatermarkText{FINAL DRAFT}
+%\SetWatermarkScale{0.8}
 
 % ------------------------- Load packages ---------------------------
 % You can eventually add these while you load other packages
-% in case you want to integrate the titlepage with the rest of your thesis
+% in case you want to integrate the title page with the rest of your thesis
 % -------------------------------------------------------------------
 \usepackage{graphicx,xcolor,textpos}
 \usepackage{helvet}
@@ -61,10 +64,6 @@
 
 \usepackage[font=small]{caption}
 
-
-\usepackage[firstpage]{draftwatermark}
-\SetWatermarkText{FINAL DRAFT}
-\SetWatermarkScale{0.8}
     
 \newcommand{\ImageWidth}{11cm}
 \usepackage{tikz}
@@ -923,6 +922,26 @@ Again the variance can be written in different ways
 \section{Properties}
     \label{sec:properties variance}
 
+
+Based on the previous development of the equation of the variance of the indicator, some observations can be made.
+
+First of all, the variance is bounded between 0 and 1. 
+A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. 
+An interesting approach is to take \autoref{eq:var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values since $\pi_0$ is a proportion and $\E(X)^2$ is squared. 
+Both variables have a minus sign in the equation, so the highest results are obtained when both variables are equal to zero.
+In other words, the highest variance is obtained when no respondent answers "neutral" and the BSI is equal to 0. 
+This happens when there are as many negative as positive answers (50-50).
+This corresponds to the interpretation described before, since it's the situation with the highest disagreement among respondents.
+On the other hand, if all participants answer the same ("negative", "neutral" or "positive"), the variance is equal to zero.
+It corresponds to the situation where the agreement among respondents is the highest.
+
+Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{eq:var3} or \autoref{eq:var3 weighted}. The results can be seen in \autoref{fig:var properties}.
+It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example, an indicator of 0.5 can only have a variance between 0.25 and 0.75.
+It's also interesting to notice that to know that with two of the three variables ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. 
+In other words, the three variables are related. 
+See Appendix \autoref{chap:appendix:explain Var BSI and EIR} for further interpretation.
+
+
 \begin{figure}[hbt!]
      \centering \footnotesize
     \begin{tikzpicture}  \footnotesize
@@ -997,24 +1016,6 @@ Again the variance can be written in different ways
     \label{fig:var properties}
 \end{figure}
 
-
-Based on the previous development of the equation of the variance of the indicator, some observations can be made.
-
-First of all, the variance is bounded between 0 and 1. 
-A variance can't be negative since it's a sum of squares, so the lower bound shouldn't surprise anyone. On the other hand, the upper bound is more unusual. 
-An interesting approach is to take \autoref{eq:var3} and see that $\pi_0$ and $\E(X)^2$ can only take positive values since $\pi_0$ is a proportion and $\E(X)^2$ is squared. 
-Both variables have a minus sign in the equation, so the highest results are obtained when both variables are equal to zero.
-In other words, the highest variance is obtained when no respondent answers "neutral" and the BSI is equal to 0. 
-This happens when there are as many negative as positive answers (50-50).
-This corresponds to the interpretation described before, since it's the situation with the highest disagreement among respondents.
-On the other hand, if all participants answer the same ("negative", "neutral" or "positive"), the variance is equal to zero.
-It corresponds to the situation where the agreement among respondents is the highest.
-
-Another approach to better understand the variance of the business survey barometer, is to plot the different possible values of $\Var(X)$, $\pi_0$ and $\E(X)$ from \autoref{eq:var3} or \autoref{eq:var3 weighted}. The results can be seen in \autoref{fig:var properties}.
-It's interesting to see from the plot that each $\E(X)$ can only have a certain amount of possible variance, in other words, there is a specific upper and lower bound for each indicator. For example, an indicator of 0.5 can only have a variance between 0.25 and 0.75.
-It's also interesting to notice that to know that with two of the three variables ($\Var(X)$, $\pi_0$ and $\E(X)$), it's very easy to calculate the third. 
-In other words, the three variables are related. 
-See Appendix \autoref{chap:appendix:explain Var BSI and EIR} for further interpretation.
 
 \section{Taking Different Questions Into Account}
 
