@@ -6,24 +6,24 @@
 
 
 # load libraries
-library(readxl)
-library(shiny)
-library(ggplot2)
-library(GGally)
-library(stargazer)
 library(dplyr)
-library(tidyr)
-library(reshape2)
-library(pracma)
-library(scales)
-library(ggfortify)
 library(forecast)
-library(GGally)
-library(lattice)
-library(survival)
 library(Formula)
+library(GGally)
+library(GGally)
+library(ggfortify)
+library(ggplot2)
 library(Hmisc)
-library(forecast)
+library(lattice)
+library(pracma)
+library(readxl)
+library(reshape2)
+library(scales)
+library(shiny)
+library(stargazer)
+library(survival)
+library(tidyr)
+
 
 
 # upload data
