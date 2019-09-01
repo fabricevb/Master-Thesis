@@ -19,7 +19,7 @@ library(tseries)
 
  
 # data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
-# data <- read_excel("Master-Thesis/Datasets/data_sa.xlsx")
+data <- read_excel("~/Master-Thesis/Datasets/data_sa.xlsx")
 
 # number the columns
 data$Obs = 1:nrow(data)
@@ -77,6 +77,8 @@ stargazer(cor(na.omit(data[c("GDP_year", "E", "Var", "Z","Var_Z", "Z2","Var_Z2",
 ggpairs(data[c("GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa", "Z2_sa","Var_Z2_sa", "Z3_sa","Var_Z3_sa")], upper = list(continuous = wrap("cor", size = 6)), 
         columnLabels = c("YoY GDP", "BSI", "Var(BSI)", "EIR1", "Var(EIR1)", "EIR2", "Var(EIR2)", "EIR3", "Var(EIR3)"))  + theme_bw()
 
+ggpairs(data[c("GDP_year", "E_sa", "Var_sa", "Z_sa","Var_Z_sa")], upper = list(continuous = wrap("cor", size = 6)), 
+        columnLabels = c("YoY GDP", "BSI", "Var(BSI)", "EIR", "Var(EIR)"))  + theme_bw()
 
 # Correlation Matrix check Question 3 and 4 if true what they say
 # Question 3
@@ -90,18 +92,18 @@ stargazer(cor(na.omit(data2[c("GDP", "GDP_year", "E_4", "E_4_lag1","E_4_lag2","E
 ### participants and variances #
 ################################
 
-scaleFactor <- max(data$Respondents) / max(data$Var)
+scaleFactor <- max(data$Respondents) / max(data$Var_sa)
 ggplot(data, aes(x=date)) +
-        geom_line(aes(y=Respondents), col="dodgerblue") +
-        geom_line(aes(y=Var * scaleFactor), col="#D55E00") +
+        geom_line(aes(y=Respondents), col="dodgerblue2") +
+        geom_line(aes(y=Var_sa * scaleFactor), col="tomato3") +
         scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
         scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Var(BSI)")) + 
         theme_bw() +   theme(legend.position = "none",axis.text.x = element_text(angle=45, hjust = 1))
 
-scaleFactor <- max(data$Respondents) / max(data$Var_Z)
+scaleFactor <- max(data$Respondents) / max(data$Var_Z_sa)
 ggplot(data, aes(x=date)) +
-        geom_line(aes(y=Respondents), col="dodgerblue") +
-        geom_line(aes(y=Var_Z * scaleFactor), col="#D55E00") +
+        geom_line(aes(y=Respondents), col="dodgerblue2") +
+        geom_line(aes(y=Var_Z_sa * scaleFactor), col="tomato3") +
         scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
         scale_y_continuous(name="Respondents", sec.axis=sec_axis(~./scaleFactor, name="Var(EIR)")) +         
         theme_bw() +   theme(legend.position = "none",axis.text.x = element_text(angle=45, hjust = 1))
